@@ -1,0 +1,43 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "SRA_zeta_crisis_core_blue_mesh"
+		file = "gfx/models/ships/SRA_zeta_crisis/SRA_zeta_crisis_core.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_zeta_crisis_core_idle_animation" }
+
+		meshsettings = {
+			name = "core_sphereShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_crisis_blue_diffuse.dds"
+			texture_normal = "shroud_solid_normal.dds"
+			texture_specular = "shroud_solid_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_zeta_crisis_psionic_storm_large_core_mesh"
+		file = "gfx/models/effects/psi_storm_core.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "SRA_zeta_crisis_psionic_storm_large_core_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_zeta_crisis_psionic_storm_large_pink_core_mesh"
+		file = "gfx/models/effects/psi_storm_core.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "SRA_zeta_crisis_psionic_storm_large_pink_core_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+}

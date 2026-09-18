@@ -1,0 +1,20 @@
+####
+#	Technology categories
+#
+#	weight_modifier = {
+#		factor = 1
+#		modifier = {
+#			add = 10
+#			OR = {
+#				has_government = "military_dictatorship"
+#				has_government = "martial_empire"
+#			}
+#		}
+#	}
+####
+SRA_category = {
+	icon = "gfx/interface/icons/governments/civics/SRAtechnology.dds"
+}
+SRA_SD_category = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}

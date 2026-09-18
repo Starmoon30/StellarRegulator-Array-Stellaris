@@ -1,0 +1,79 @@
+
+category = {
+	name = "Effects"
+	soundeffects = {
+		SRA_ancient_ship_massive_idle_01
+		SRA_ancient_ship_massive_idle_02
+		SRA_ancient_ship_combat_idle
+		SRA_ancient_ship_large_idle
+		SRA_ancient_ship_small_idle
+		SRA_ancient_station_small_idle
+	}
+}
+
+soundeffect = {
+	name = SRA_ancient_ship_massive_idle_01
+	sounds = { sound = ancient_space_station_idle_01 }
+	volume = 0.5
+	loop = yes
+	falloff = falloff_leviathan
+	is3d = yes
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume_random_offset = { -0.05 0.05}
+}
+soundeffect = {
+	name = SRA_ancient_ship_massive_idle_02
+	sounds = { sound = ancient_space_station_idle_02 }
+	volume = 0.5
+	loop = yes
+	falloff = falloff_leviathan
+	is3d = yes
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume_random_offset = { -0.05 0.05}
+}
+soundeffect = {
+	name = SRA_ancient_ship_combat_idle
+	sounds = { sound = amb_event_ship_02_idle_01 } 
+	volume = 0.70
+	loop = yes
+	falloff = falloff_leviathan
+	is3d = yes
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume_random_offset = { -0.05 0.05 }
+}
+soundeffect = {
+	name = SRA_ancient_ship_large_idle
+	sounds = { sound = amb_gatebuilder_01_mothership_01 }
+	volume = 0.45
+	loop = yes
+	falloff = falloff_leviathan
+	is3d = yes
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume_random_offset = { -0.05 0.05}
+}
+soundeffect = {
+	name = SRA_ancient_ship_small_idle
+	sounds = { sound = amb_gatebuilder_01_cruiser_01 }
+	volume = 0.45
+	loop = yes
+	falloff = falloff_leviathan
+	is3d = yes
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume_random_offset = { -0.05 0.05}
+}
+soundeffect = {
+	name = SRA_ancient_station_small_idle
+	sounds = { sound = amb_gatebuilder_01_space_station_01 }
+	volume = 0.45
+	loop = yes
+	falloff = falloff_leviathan
+	is3d = yes
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume_random_offset = { -0.05 0.05}
+}

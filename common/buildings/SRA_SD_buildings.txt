@@ -1,0 +1,423 @@
+building_SRA_SD_energy = {
+	base_buildtime = 1
+	icon = building_SRA_SD_energy
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	category = resource
+	planet_limit = 1
+	position_priority = 1
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+    planet_modifier = {
+        #基础载荷
+		mod_building_SRA_SD_energy_load_give = 60
+        SRA_SD_core_building_category_produces_mult = 10
+    }
+    triggered_planet_modifier = {
+        SRA_SD_productive_category_produces_mult = 0.1
+        mult = value:SRA_SD_energy_building_buff|districts|district_SRA_SD_energy|
+    }
+    triggered_planet_modifier = {
+        SRA_SD_productive_category_upkeep_mult = 0.1
+        mult = value:SRA_SD_energy_building_buff|districts|district_SRA_SD_energy|
+    }
+    triggered_planet_modifier = {
+        SRA_SD_core_building_category_produces_mult = 10
+        mult = value:SRA_engery_effective_load_3
+    }
+    resources = {
+        category = SRA_SD_core_building_category #不吃一些奇奇怪怪的循环和科技加成 你可以自己起一个category
+        produces = {
+            #base产出
+            energy = 6
+            mult = value:SRA_SD_energy_building|Income|10|districts|district_SRA_SD_energy|BaseProduction|1|
+        }
+        upkeep = {
+            #base维护
+            minerals = 2
+            mult = value:SRA_SD_energy_building|Income|-15|Income_MAX_P|80|districts|district_SRA_SD_energy|BaseMaintenance|1|Income_MAX_D|590|Offset_point|150|
+        }
+        upkeep = {
+            #载荷维护
+            alloys = 1
+            mult = value:SRA_engery_effective_upkeep
+        }
+        # produces = {
+        #     #消耗暗物质产出 你写点决议开
+        #     trigger = {
+        #         has_planet_flag = 开了暗物质增产
+        #     }
+        #     energy = 20
+        #     mult = value:SRA_SD_energy_building|Income|10|districts|district_SRA_SD_energy|BaseProduction|1|
+
+        # }
+        # produces = {
+        #     #消耗星界产出 你写点决议开
+        #     trigger = {
+        #         has_planet_flag = 开了星界丝缕
+        #     }
+        #     energy = 20
+        #     mult = value:SRA_SD_energy_building|Income|10|districts|district_SRA_SD_energy|BaseProduction|1|
+        # }
+        # produces = {
+        #     trigger = {
+        #         has_planet_flag = 开了稀有增产
+        #     }
+        #     energy = 21
+        #     mult = value:SRA_SD_energy_building|Income|10|districts|district_SRA_SD_energy|BaseProduction|1|
+        # }
+        # upkeep = {
+        #     #消耗暗物质维护 你写点决议开
+        #     trigger = {
+        #         has_planet_flag = 开了暗物质增产
+        #     }
+        #     sr_dark_matter = 1
+        #     mult = value:SRA_SD_energy_building|Income|-15|Income_MAX_P|80|districts|district_SRA_SD_energy|BaseMaintenance|1|Income_MAX_D|590|Offset_point|150|
+
+        # }
+        # upkeep = {
+        #     #消耗星界维护 你写点决议开
+        #     trigger = {
+        #         has_planet_flag = 开了星界丝缕
+        #     }
+        #     astral_threads = 1
+        #     mult = value:SRA_SD_energy_building|Income|-15|Income_MAX_P|80|districts|district_SRA_SD_energy|BaseMaintenance|1|Income_MAX_D|590|Offset_point|150|
+        # }
+        # UPKEEP = {
+        #     #稀有维护
+        #     trigger = {
+        #         has_planet_flag = 开了稀有增产
+        #     }
+        #     exotic_gases = 0.1
+        #     rare_crystals = 0.1
+        #     volatile_motes = 0.1
+        #     mult = value:SRA_SD_energy_building|Income|-15|Income_MAX_P|80|districts|district_SRA_SD_energy|BaseMaintenance|1|Income_MAX_D|590|Offset_point|150|
+        # }
+        #每一个非自生建筑都会减少发电量 提高载荷  {载荷 ：额外维护费用 和星球buff}
+        #每一个发电区划都会增加发电量 减少载荷   {载荷越高 额外的建筑合金维护费用越高  提供的星球建设速度等buff越低}
+    }
+	ai_weight = {
+		weight = 0
+	}
+}
+building_SRA_SD_mineral = {
+	base_buildtime = 1
+	icon = building_SRA_SD_mineral
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+	category = resource
+	planet_limit = 1
+	position_priority = 2
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+    resources = {
+        category = SRA_SD_productive_category
+        produces = {
+            minerals = 4
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_mineral|BaseProduction|1|
+        }
+        upkeep = {
+            energy = 6
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_mineral|BaseMaintenance|1|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 10
+    }
+	ai_weight = {
+		weight = 0
+	}
+}
+building_SRA_SD_food = {
+	base_buildtime = 1
+	icon = building_SRA_SD_food
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+	category = resource
+	planet_limit = 1
+	position_priority = 2
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+    resources = {
+        category = SRA_SD_productive_category
+        produces = {
+            food = 6
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_food|BaseProduction|1|
+        }
+        upkeep = {
+            energy = 6
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_food|BaseMaintenance|1|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 10
+    }
+	ai_weight = {
+		weight = 0
+	}
+}
+building_SRA_SD_alloys = {
+	base_buildtime = 1
+	icon = building_SRA_SD_alloys
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+	category = manufacturing
+	planet_limit = 1
+	position_priority = 2
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+    resources = {
+        category = SRA_SD_productive_category
+        produces = {
+            alloys = 3
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_alloys|BaseProduction|1|
+        }
+        upkeep = {
+            minerals = 3
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_alloys|BaseMaintenance|1|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 10
+    }
+	ai_weight = {
+		weight = 0
+	}
+}
+building_SRA_SD_consumer_goods = {
+	base_buildtime = 1
+	icon = building_SRA_SD_consumer_goods
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+	category = manufacturing
+	planet_limit = 1
+	position_priority = 2
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+    resources = {
+        category = SRA_SD_productive_category
+        produces = {
+            consumer_goods = 6
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_consumer_goods|BaseProduction|1|
+        }
+        upkeep = {
+            food = 4
+            minerals = 3
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_consumer_goods|BaseMaintenance|1|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 10
+    }
+	ai_weight = {
+		weight = 0
+	}
+}
+building_SRA_SD_research = {
+	base_buildtime = 1
+	icon = building_SRA_SD_research
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+	category = research
+	planet_limit = 1
+	position_priority = 2
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+    resources = {
+        category = SRA_SD_productive_category
+        produces = {
+            society_research = 3
+            physics_research = 3
+            engineering_research = 3
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_research|BaseProduction|1|
+        }
+        upkeep = {
+            consumer_goods = 2
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_research|BaseMaintenance|1|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 10
+    }
+	ai_weight = {
+		weight = 0
+	}
+}
+building_SRA_SD_unity = {
+	base_buildtime = 1
+	icon = building_SRA_SD_unity
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+	category = unity
+	planet_limit = 1
+	position_priority = 2
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+	ai_weight = {
+		weight = 0
+	}
+}
+building_SRA_SD_rare = {
+	base_buildtime = 1
+	icon = building_SRA_SD_rare
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+	category = manufacturing
+	planet_limit = 1
+	position_priority = 2
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+    resources = {
+        category = SRA_SD_productive_category
+        produces = {
+            exotic_gases = 1
+            rare_crystals = 1
+            volatile_motes = 1
+            sr_living_metal = 0.5
+            nanites = 0.5
+            sr_zro = 0.5
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_rare|BaseProduction|1|
+        }
+        upkeep = {
+            minerals = 45
+            mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_rare|BaseMaintenance|1|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 10
+    }
+	ai_weight = {
+		weight = 0
+	}
+}
+building_SRA_SD_explore = {
+	base_buildtime = 1
+	icon = building_SRA_SD_explore
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = yes
+	category = government
+	planet_limit = 1
+	position_priority = 2
+	destroy_trigger = { always = no }
+	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	#prerequisites = { tech_SRA_T4_hidden_tech }
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+# building_SRA_SD_astral_threads = {
+# 	base_buildtime = 1
+# 	icon = building_SRA_SD_rare
+# 	can_build = no
+# 	can_demolish = no
+# 	can_be_ruined = no
+# 	can_be_disabled = yes
+# 	category = manufacturing
+# 	planet_limit = 1
+# 	position_priority = 2
+# 	destroy_trigger = { always = no }
+# 	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+# 	inline_script = "buildings/SRA_building_sets_all"
+# 	#prerequisites = { tech_SRA_T4_hidden_tech }
+#     resources = {
+#         category = SRA_SD_productive_category
+#         produces = {
+#             astral_threads = 1
+#             mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_astral_threads|BaseProduction|1|
+#         }
+#         upkeep = {
+#             energy = 10
+#             exotic_gases = 0.4
+#             mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_astral_threads|BaseMaintenance|1|
+#         }
+#     }
+#     planet_modifier = {
+# 		mod_building_SRA_SD_energy_load_use = 10
+#     }
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }
+
+# building_SRA_SD_dark_matter = {
+# 	base_buildtime = 1
+# 	icon = building_SRA_SD_rare
+# 	can_build = no
+# 	can_demolish = no
+# 	can_be_ruined = no
+# 	can_be_disabled = yes
+# 	category = manufacturing
+# 	planet_limit = 1
+# 	position_priority = 2
+# 	destroy_trigger = { always = no }
+# 	potential = { uses_district_set = SRA_SD_chaos_star_habitable }
+	
+# 	inline_script = "buildings/SRA_building_sets_all"
+# 	#prerequisites = { tech_SRA_T4_hidden_tech }
+#     resources = {
+#         category = SRA_SD_productive_category
+#         produces = {
+#             sr_dark_matter = 1
+#             mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_dark|BaseProduction|1|
+#         }
+#         upkeep = {
+#             energy = 10
+#             volatile_motes = 0.2
+#             rare_crystals = 0.2
+#             mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_dark|BaseMaintenance|1|
+#         }
+#     }
+#     planet_modifier = {
+# 		mod_building_SRA_SD_energy_load_use = 10
+#     }
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }

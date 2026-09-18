@@ -1,0 +1,17 @@
+ap_SRA_world_machine = {
+	on_enabled = {
+		custom_tooltip = ap_SRA_world_machine_custom_tooltip
+	}
+	modifier = {
+	}
+	potential = {
+		NOR = {
+			has_ascension_perk = ap_SRA_world_machine
+		}
+		OR = {
+			has_civic = civic_SRAtechnology
+		}
+		is_ai = no
+	}
+	ai_weight = { factor = 0 }
+}

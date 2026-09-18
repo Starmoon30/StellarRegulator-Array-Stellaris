@@ -1,0 +1,490 @@
+SRA_RE_research_situation = {
+	picture = GFX_evt_astral_rift_vortex
+	situation_log_category = developments
+
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_unknown
+	fail_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_outcome_meh
+	desc = {
+		text = SRA_RE_Rocivia_SP_1_desc
+		trigger = { has_situation_flag = SRA_RE_Rocivia_SP_1 }
+	}
+	on_progress_complete = {
+		if = {
+			limit = { has_situation_flag = SRA_RE_Rocivia_SP_1 }
+			custom_tooltip = SRA_RE_Rocivia_SP_1_approach
+			hidden_effect = {
+				owner = {
+					country_event = {
+						id = SRA_RE_Rocivia.3023
+					}
+				}
+			}
+		}
+		destroy_situation = this
+	}
+	stages = {
+		sra_re_research_situation_stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 50
+			custom_tooltip = sra_re_research_situation_stage_1_effects
+		}
+		sra_re_research_situation_stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+			on_first_enter = {
+				if = {
+					limit = { has_situation_flag = SRA_RE_Rocivia_SP_1 }
+					if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_physics }
+						owner = { country_event = { id = SRA_RE_Rocivia.3003 } }
+					}
+					else_if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_society }
+						owner = { country_event = { id = SRA_RE_Rocivia.3005 } }
+					}
+					else_if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_engineering }
+						owner = { country_event = { id = SRA_RE_Rocivia.3007 } }
+					}
+				}
+			}
+			custom_tooltip = sra_re_research_situation_stage_2_effects
+		}
+		sra_re_research_situation_stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 150
+			on_first_enter = {
+				if = {
+					limit = { has_situation_flag = SRA_RE_Rocivia_SP_1 }
+					if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_physics }
+						owner = { country_event = { id = SRA_RE_Rocivia.3010 } }
+					}
+					else_if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_society }
+						owner = { country_event = { id = SRA_RE_Rocivia.3012 } }
+					}
+					else_if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_engineering }
+						owner = { country_event = { id = SRA_RE_Rocivia.3014 } }
+					}
+				}
+			}
+			custom_tooltip = sra_re_research_situation_stage_3_effects
+		}
+		sra_re_research_situation_stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 200
+			on_first_enter = {
+				if = {
+					limit = { has_situation_flag = SRA_RE_Rocivia_SP_1 }
+					if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_physics }
+						owner = { country_event = { id = SRA_RE_Rocivia.3017 } }
+					}
+					else_if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_society }
+						owner = { country_event = { id = SRA_RE_Rocivia.3019 } }
+					}
+					else_if = {
+						limit = { current_situation_approach = SRA_RE_research_situation_engineering }
+						owner = { country_event = { id = SRA_RE_Rocivia.3021 } }
+					}
+				}
+			}
+			custom_tooltip = sra_re_research_situation_stage_4_effects
+		}
+	}
+	#物理学
+	approach = {
+		name = "SRA_RE_research_situation_physics"
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+			category = situations
+			upkeep = {
+				trigger = {}
+				physics_research = 10000
+				energy = 1000
+				consumer_goods = 400
+			}
+		}
+		on_select = { custom_tooltip = SRA_RE_research_situation_physics_tooltip }
+	}
+	#社会学
+	approach = {
+		name = "SRA_RE_research_situation_society"
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+			category = situations
+			upkeep = {
+				trigger = {}
+				society_research = 10000
+				energy = 500
+				consumer_goods = 200
+			}
+		}
+		on_select = { custom_tooltip = SRA_RE_research_situation_society_tooltip }
+	}
+	#工程学
+	approach = {
+		name = "SRA_RE_research_situation_engineering"
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+			category = situations
+			upkeep = {
+				trigger = {}
+				engineering_research = 10000
+				energy = 1000
+				alloys = 400
+			}
+		}
+		on_select = { custom_tooltip = SRA_RE_research_situation_engineering_tooltip }
+	}
+	#暂停
+	approach = {
+		name = "SRA_RE_research_situation_stop"
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_yellow
+		resources = {
+			category = situations
+			upkeep = {
+			}
+		}
+		on_select = { custom_tooltip = SRA_RE_research_situation_stop_tooltip }
+	}
+	monthly_progress = {
+		base = 10
+		modifier = {
+			add = -10
+			desc = "SRA_RE_research_situation_stop"
+			current_situation_approach = SRA_RE_research_situation_stop
+		}
+	}
+	on_monthly = {
+		events = {
+			SRA_RE_Rocivia.3000
+		}
+	}
+	abort_trigger = {
+		always = no
+		# OR = {
+		# 	NOT = { exists = target.owner }
+		# 	target.owner = { NOT = { is_same_value = root.owner } }
+		# }
+	}
+}
+
+
+####永劫不复
+SRA_RE_End_2_situation = {
+	picture = GFX_evt_black_hole
+	situation_log_category = crises
+
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_unknown
+	fail_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_outcome_negative
+	on_progress_complete = {
+		if = {
+			limit = { always = yes }
+			custom_tooltip = SRA_RE_End_2_situation_approach
+			hidden_effect = {
+				owner = { country_event = { id = SRA_RE_End.2108 } }
+				destroy_situation = this
+			}
+		}
+	}
+	stages = {
+		sra_re_end_2_situation_stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+			custom_tooltip = sra_re_end_2_situation_stage_1_effects
+		}
+		sra_re_end_2_situation_stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 200
+			on_first_enter = {
+				owner = { country_event = { id = SRA_RE_End.2100 } }
+			}
+			custom_tooltip = sra_re_end_2_situation_stage_2_effects
+		}
+		sra_re_end_2_situation_stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 300
+			on_first_enter = {
+				owner = { country_event = { id = SRA_RE_End.2101 } }
+			}
+			custom_tooltip = sra_re_end_2_situation_stage_3_effects
+		}
+		sra_re_end_2_situation_stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 400
+			on_first_enter = {
+				owner = { country_event = { id = SRA_RE_End.2102 } }
+			}
+			custom_tooltip = sra_re_end_2_situation_stage_4_effects
+		}
+		sra_re_end_2_situation_stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_blue
+			end = 500
+			on_first_enter = {
+				owner = { country_event = { id = SRA_RE_End.2103 } }
+			}
+			custom_tooltip = sra_re_end_2_situation_stage_5_effects
+		}
+		sra_re_end_2_situation_stage_6 = {
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_blue
+			end = 600
+			on_first_enter = {
+				owner = { country_event = { id = SRA_RE_End.2104 } }
+			}
+			custom_tooltip = sra_re_end_2_situation_stage_6_effects
+		}
+		sra_re_end_2_situation_stage_7 = {
+			icon = GFX_situation_stage_7
+			icon_background = GFX_situation_stage_frame_blue
+			end = 700
+			on_first_enter = {
+				owner = { country_event = { id = SRA_RE_End.2105 } }
+			}
+			custom_tooltip = sra_re_end_2_situation_stage_7_effects
+		}
+		sra_re_end_2_situation_stage_8 = {
+			icon = GFX_situation_stage_8
+			icon_background = GFX_situation_stage_frame_blue
+			end = 800
+			on_first_enter = {
+				owner = { country_event = { id = SRA_RE_End.2106 } }
+			}
+			custom_tooltip = sra_re_end_2_situation_stage_8_effects
+		}
+		sra_re_end_2_situation_stage_9 = {
+			icon = GFX_situation_stage_9
+			icon_background = GFX_situation_stage_frame_blue
+			end = 900
+			on_first_enter = {
+				owner = { country_event = { id = SRA_RE_End.2107 } }
+			}
+			custom_tooltip = sra_re_end_2_situation_stage_9_effects
+		}
+	}
+	approach = {
+		name = "SRA_RE_End_2_situation_continue"
+		icon = GFX_SRA_situation_approach_time
+		icon_background = GFX_situation_approach_bg_red
+		resources = {
+			category = situations
+			upkeep = {
+			}
+		}
+		on_select = { custom_tooltip = SRA_RE_End_2_situation_continue_tooltip }
+	}
+	monthly_progress = {
+		base = 10
+		modifier = {
+			add = -10
+			desc = "SRA_RE_End_2_situation_stop"
+			current_stage = sra_re_end_2_situation_stage_8
+		}
+		modifier = {
+			add = 100
+			desc = "SRA_RE_End_2_situation_speed_up"
+			owner = { has_country_flag = SRA_RE_End_2_situation_speed_up }
+		}
+	}
+	abort_trigger = {
+		always = no
+		# OR = {
+		# 	NOT = { exists = target.owner }
+		# 	target.owner = { NOT = { is_same_value = root.owner } }
+		# }
+	}
+}
+SRA_RE_Chief_Crisis_situation_1 = {
+	picture = GFX_evt_black_hole
+	situation_log_category = crises
+
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_positive
+	fail_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_outcome_bankrupcy
+	on_progress_complete = {
+		custom_tooltip = SRA_RE_Chief_Crisis_situation_1_progress_complete
+		if = {
+			limit = { always = yes }
+			hidden_effect = {
+				owner = {
+					country_event = {
+						id = SRA_Chief.218
+					}
+				}
+				destroy_situation = this
+			}
+		}
+	}
+	
+	on_fail = {
+		custom_tooltip = SRA_RE_Chief_Crisis_situation_1_fail
+	}
+	stages = {
+		sra_re_chief_crisis_situation_1_stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+			custom_tooltip = sra_re_chief_crisis_situation_1_stage_1_effects
+		}
+	}
+	#常规
+	approach = {
+		name = "SRA_RE_Chief_Crisis_situation_1_charge"
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+			category = situations
+			upkeep = {
+			}
+		}
+		on_select = { custom_tooltip = SRA_RE_Chief_Crisis_situation_1_charge_tooltip }
+	}
+	monthly_progress = {
+		base = 10
+	}
+	on_monthly = {
+		events = {
+		}
+	}
+	abort_trigger = {
+		always = no
+		# OR = {
+		# 	NOT = { exists = target.owner }
+		# 	target.owner = { NOT = { is_same_value = root.owner } }
+		# }
+	}
+}
+
+
+
+
+SRA_RE_Chief_Crisis_2_situation = {
+	picture = GFX_evt_SRA_Chaos_event_picture
+	situation_log_category = crises
+
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_revolt
+	fail_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_exploding_planet
+	on_start = {
+		save_global_event_target_as = SRA_RE_Chief_Crisis_2_situation
+		add_situation_progress = 200
+	}
+	on_progress_complete = {
+		custom_tooltip = SRA_RE_Chief_Crisis_2_situation_approach
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = SRA_Chief.620
+				}
+			}
+		event_target:SRA_Rokia_country? = {
+			every_controlled_fleet = {
+				destroy_fleet = this
+			}
+		}
+		destroy_situation = this
+	}
+	}
+	
+	on_fail = {
+		custom_tooltip = SRA_RE_Chief_Crisis_2_situation_fail
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = SRA_Chief.610
+				}
+			}
+		event_target:SRA_Rokia_country? = {
+			every_controlled_fleet = {
+				delete_fleet = this
+			}
+		}
+			destroy_situation = this
+		}
+	}
+	stages = {
+		sra_re_chief_crisis_2_situation_stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			custom_tooltip = sra_re_chief_crisis_2_situation_stage_1_effects
+		}
+		sra_re_chief_crisis_2_situation_stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 200
+			custom_tooltip = sra_re_chief_crisis_2_situation_stage_2_effects
+		}
+		sra_re_chief_crisis_2_situation_stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 300
+			custom_tooltip = sra_re_chief_crisis_2_situation_stage_3_effects
+		}
+		sra_re_chief_crisis_2_situation_stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 400
+			custom_tooltip = sra_re_chief_crisis_2_situation_stage_4_effects
+		}
+		sra_re_chief_crisis_2_situation_stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_green
+			end = 500
+			custom_tooltip = sra_re_chief_crisis_2_situation_stage_5_effects
+		}
+	}
+	#常规
+	approach = {
+		name = "SRA_RE_Chief_Crisis_2_situation_continue"
+		icon = GFX_situation_approach_astral
+		icon_background = GFX_situation_approach_bg_red
+		resources = {
+			category = situations
+			upkeep = {
+			}
+		}
+		on_select = { custom_tooltip = SRA_RE_Chief_Crisis_2_situation_continue_tooltip }
+	}
+	monthly_progress = {
+		base = -5
+	}
+	on_monthly = {
+		events = {
+		}
+	}
+	abort_trigger = {
+		always = no
+		# OR = {
+		# 	NOT = { exists = target.owner }
+		# 	target.owner = { NOT = { is_same_value = root.owner } }
+		# }
+	}
+}
+
+
+
+

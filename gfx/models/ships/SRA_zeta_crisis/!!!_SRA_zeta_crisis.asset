@@ -1,0 +1,70 @@
+@SRA_zeta_crisis_core_bloom_factor = 5.32
+@SRA_zeta_crisis_ship_hull_bloom_factor = 0.30
+
+entity = {
+	name = "SRA_zeta_crisis_psionic_storm_large_core_entity"
+	pdxmesh = "SRA_zeta_crisis_psionic_storm_large_core_mesh"
+	cull_radius = 2000.0
+	
+	game_data = {
+		bloom_factor			= 2.0
+		uv_animation_speed 		= 0.10
+		uv_animation_direction 	= { -0.2 -1 }
+	}
+}
+entity = {
+	name = "SRA_zeta_crisis_psionic_storm_large_entity"
+	cull_radius = 2000.0
+	
+	scale = 45.0
+	
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	default_state = "idle"
+	state = { name = "idle" 		state_time = 5
+		event = { time = 0 node = "root" particle = "SRA_psionic_storm_golden" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "root" particle = "SRA_psionic_storm_golden_clouds" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes  sound = { soundeffect = "SRA_psionic_storm_base" }  }
+		start_event = { trigger_once = yes  sound = { soundeffect = "SRA_psionic_storm_lightning" }  }
+    }
+	
+	attach = { root = "SRA_zeta_crisis_psionic_storm_large_core_entity" }
+	
+	game_data = {
+		emissive_recolor_crunch = 0.0
+	}
+}
+entity = {
+	name = "SRA_zeta_crisis_psionic_storm_large_pink_core_entity"
+	pdxmesh = "SRA_zeta_crisis_psionic_storm_large_pink_core_mesh"
+	cull_radius = 2000.0
+	
+	game_data = {
+		bloom_factor			= 2.0
+		uv_animation_speed 		= 0.10
+		uv_animation_direction 	= { -0.2 -1 }
+	}
+}
+entity = {
+	name = "SRA_zeta_crisis_psionic_storm_large_pink_entity"
+	cull_radius = 2000.0
+	
+	scale = 45.0
+	
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	default_state = "idle"
+	state = { name = "idle" 		state_time = 5
+		event = { time = 0 node = "root" particle = "SRA_psionic_storm_golden" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "root" particle = "SRA_psionic_storm_golden_clouds" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes  sound = { soundeffect = "SRA_psionic_storm_base" }  }
+		start_event = { trigger_once = yes  sound = { soundeffect = "SRA_psionic_storm_lightning" }  }
+    }
+	
+	attach = { root = "SRA_zeta_crisis_psionic_storm_large_pink_core_entity" }
+	
+	game_data = {
+		emissive_recolor_crunch = 0.0
+	}
+}
+

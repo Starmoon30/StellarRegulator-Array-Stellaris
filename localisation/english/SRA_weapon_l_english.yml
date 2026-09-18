@@ -1,0 +1,292 @@
+﻿l_english:
+###############################
+###特殊武器###
+ SRA_T_weapon_supreme:0 "§BSRA - Universal Collapse§!"
+ SRA_T_weapon_supreme_DESC:0 "Damage: §RApprox. 64000000.00§!\nCooldown: §YApprox. 32.00£time£§!\nOn hit: Apply 8.00£time£ of ['modifier:SRA_T_weapon_supreme_buff'] to target's fleet\n§BMain gun of Spear_Of_Galaxy_Zenith. Direct hit from devastating Star-Killer Plane-Tearing Weapon will \"banish\" hit existence and create a dazzling nova; energy release sufficient to shake surrounding celestial bodies, even shattering spatial structure within a certain range.§!\n"
+
+ SRA_Crisis_G_weapon_collision:0 "§BCollision§!"
+ SRA_Crisis_G_weapon_collision_DESC:0 "Damage: §RApprox. 20480000.00§!\nCooldown: §YApprox. 6.40£time£§!\n§BHighly active ['concept_SRA_Stellarcrystal_Fractal'] will dissociate contacted matter and absorb it.§!"
+
+ SRA_Crisis_G_weapon_kind_laser:0 "§BSRA - Annihilation of Thousand Stars§!"
+ SRA_Crisis_G_weapon_kind_laser_DESC:0 "Damage: §RApprox. 64000000.00§!\nCooldown: §YApprox. 320.00£time£§!\n§BSpecialized Annihilation Main Weapon, directly docking with energy storage array. One fire can deplete nearly all energy reserves. Direct hit from this devastating Star-Killer Plane-Tearing Weapon will \"banish\" hit existence and create a dazzling nova; energy release sufficient to shake surrounding celestial bodies, even shattering spatial structure within a certain range.§!\n"
+ SRA_T_weapon_supreme_buff:0 "§BPhase Disintegration§!"
+ #歼星
+
+ SRA_T4_weapon_planet_killer:0 "§BSRA - Nova Termination§!"
+ SRA_T4_weapon_planet_killer_DESC:0 "§BThis weapon can use directional plane tearing to destroy the plane itself at target coordinates. Directly hit targets will be \"banished\", while massive energy released simultaneously will severely destroy nearby spacetime and tear apart any macroscopic structure.§!§YWill adjust output based on different targets. Its star-killer attack can completely shatter planets and ring worlds, wipe out outer atmosphere of gas giants, completely destroy orbital habitats. If targeting a star, guided energy burst will destroy the entire star system; the star itself will collapse into a black hole in a dazzling supernova explosion.§!"
+ SRA_T4_weapon_planet_killer_ACTION:0 "Attack with §B\"Nova Termination\"§!"
+ SRA_T4_weapon_planet_killer_ACTION_DESC:0 "Use Star-Killer Plane-Tearing Weapon §B\"Nova Termination\"§! to attack target; damage effect on target depends on target type."
+ MESSAGE_DESC_FOR_SRA_T4_weapon_planet_killer:0 "Destroyed"
+ FLEETORDER_DESTROY_PLANET_WITH_SRA_T4_weapon_planet_killer:0 "Attack $PLANET|Y$ with Star-Killer Plane-Tearing Weapon §B\"Nova Termination\"§!"
+ message_SRA_T4_weapon_pk_weapon_killed_star_desc:0 "$SRA_target_planet|Y$ was completely destroyed by Star-Killer Plane-Tearing Weapon attack from $SRA_attacker|Y$'s $SRA_attacker_ship|Y$; $SRA_target_system|Y$ star system was destroyed in a dazzling supernova explosion."
+ message_SRA_T4_weapon_pk_weapon_killed_planet_desc:0 "$SRA_target_planet|Y$ was completely destroyed by Star-Killer Plane-Tearing Weapon attack from $SRA_attacker|Y$'s $SRA_attacker_ship|Y$."
+ message_SRA_T4_weapon_pk_weapon_swept_planet_desc:0 "Intelligent life on $SRA_target_planet|Y$ was completely wiped out by Star-Killer Plane-Tearing Weapon attack from $SRA_attacker|Y$'s $SRA_attacker_ship|Y$."
+
+ SRA_T4_weapon_planet_killer_L_Laser:0 "§BSRA - Nova Termination§!"
+ SRA_T4_weapon_planet_killer_L_Laserr_DESC:0 "This devastating plane tearing beam originates from activated Star-Killer Plane-Tearing Weapon §B\"Nova Termination\"§!. Phase Space Projection constructed by Spacetime Phase Engine can fire extremely powerful attacks, rapidly obliterating all targets within range."
+
+
+ SRA_planet_killer.11.name:0 "Annihilate Star"
+ SRA_planet_killer.11.desc:0 "As Star-Killer Plane-Tearing Weapon on §H[From.From.GetName]§! completed its task of annihilating the star, brightness of §H[From.GetName]§! instantly increased hundreds of times, then gradually dimmed. Sensors indicate this star has collapsed into a singularity. Most energy overflowing from plane rift completely destroyed §H[From.GetName]§!, while the rest destroyed other celestial bodies in §H[From.solar_system.GetName]§! system together."
+ SRA_planet_killer.11.a:0 "It fell silent."
+ SRA_planet_killer.11.b:0 "Another monument!"
+
+ SRA_planet_killer.12.name:0 "Destroy Planet"
+ SRA_planet_killer.12.desc:0 "As Star-Killer Plane-Tearing Weapon on §H[From.From.GetName]§! completed its task of destroying the planet, §H[From.GetName]§! also broke apart in a violent explosion, becoming one of countless celestial bodies floating in the sea of stars unable to support intelligent life. Whatever wealth it once possessed vanished into ashes with the destruction of §H[From.GetName]§!."
+ SRA_planet_killer.12.a:0 "Bloom, then end."
+ SRA_planet_killer.12.b:0 "So, where is the next one?"
+
+ SRA_planet_killer.13.name:0 "Sweep World"
+ SRA_planet_killer.13.desc:0 "As Star-Killer Plane-Tearing Weapon on §H[From.From.GetName]§! completed its task of sweeping the world, our life sensors can no longer capture any intelligent life signals on §H[From.GetName]§!. Whether organic creatures, rocks, or machines cast in steel, they have all disappeared forever in the gentle wipe of the plane tearing weapon."
+ SRA_planet_killer.13.a:0 "So quiet."
+ SRA_planet_killer.13.b:0 "Now they finally shut up."
+
+ SRA_requires_no_compact_star_star_killer:0 "§RTarget cannot be a compact celestial body.§!"
+ SRA_requires_outside_border_star_killer:0 "§RTarget cannot be within own borders.§!"
+ SRA_requires_a_star_star_killer:0 "§RTarget must correspond to configured attack mode.§!"
+ SRA_requires_declares_war_star_killer:0 "§RWe need to configure weapon mode first.§!"
+ SRA_requires_no_pacifist_star_killer:0 "§ROur §Y$ethic_pacifist$§! governing ethics do not allow us to use this weapon.§!"
+ SRA_requires_no_ancient_system:0 "§RAncient defense system prevents us from attacking this star system.§!"
+ SRA_requires_no_zeta_crisis_system:0 "§RPsionic activity of Shroud invasion army prevents us from attacking this star system.§!"
+ SRA_requires_no_exd_system:0 "§RPsionic activity of Extradimensional Invaders prevents us from attacking this star system.§!"
+ SRA_requires_no_contingency_system:0 "§RContingency defense system prevents us from attacking this star system.§!"
+ SRA_requires_no_special_system:0 "§RFor some unknown reasons, we cannot attack this target.§!"
+ SRA_requires_no_is_cloaked:0 "§RWe need to decloak to use star-killer weapons.§!"
+
+
+
+ SRA_Rokia_dragon_weapon_planet_killer_ACTION:0 "Attack with §R\"Desolation Drive\"§!"
+ SRA_Rokia_dragon_weapon_planet_killer_ACTION_DESC:0 "Use Star-Killer Weapon §R\"Desolation Drive\"§! to attack target, destroying the resistance will of the entire world, making them directly submit to us."
+ FLEETORDER_SRA_Rokia_dragon_weapon_planet_killer_ACTION_DESC:0 "Use Star-Killer Weapon §R\"Desolation Drive\"§! to attack target, destroying the resistance will of the entire world, making them directly submit to us."
+ MESSAGE_DESC_FOR_SRA_Rokia_dragon_weapon_planet_killer:0 "Dominated"
+ FLEETORDER_DESTROY_PLANET_WITH_SRA_Rokia_dragon_weapon_planet_killer:0 "Directly dominate $PLANET|Y$ with Star-Killer Weapon §R\"Desolation Drive\"§!"
+ message_SRA_Rokia_dragon_weapon_planet_killer_desc:0 "Resistance will of intelligent life on $SRA_target_planet|Y$ was destroyed by §R\"Desolation Drive\"§! attack from $SRA_attacker|Y$'s $SRA_attacker_ship|Y$."
+
+ SRA_planet_killer.14.name:0 "Dominate World"
+ SRA_planet_killer.14.desc:0 "As §R\"Desolation Drive\"§! on §H[From.From.GetName]§! completed its task, we have received news that §H[From.GetName]§! has been brought under domination. Whether organic creatures, rocks, or machines cast in steel, their resistance consciousness has disappeared forever in the gentle wipe of terrifying power."
+ SRA_planet_killer.14.a:0 "Interesting."
+ SRA_planet_killer.14.b:0 "They were lucky to escape death."
+#####可调整####
+###不可设计###
+
+ SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-Tuned§!"
+ SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-Tuned§!"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-Tuned§!" 
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-Tuned§!" 
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+
+ SRA_T4_weapon_L_Particle_Launcher_Adjust_Event:0 "$SRA_T4_weapon_L_Particle_Launcher$§B-Tuned§!"
+ SRA_T4_weapon_L_Particle_Launcher_Adjust_Event_DESC:0 "$SRA_T4_weapon_L_Particle_Launcher_DESC$"
+ SRA_T4_weapon_L_Laser_Adjust_Event:0 "$SRA_T4_weapon_L_Laser$§B-Tuned§!"
+ SRA_T4_weapon_L_Laser_Adjust_Event_DESC:0 "$SRA_T4_weapon_L_Laser_DESC$"
+
+ SRA_T4_weapon_X_Laser_Adjust_Event:0 "$SRA_T4_weapon_X_Laser$§B-Tuned§!"
+ SRA_T4_weapon_X_Laser_Adjust_Event_DESC:0 "$SRA_T4_weapon_X_Laser_DESC$"
+
+ SRA_T4_weapon_T_Laser_Adjust_Event:0 "$SRA_T4_weapon_T_Laser$§B-Tuned§!"
+ SRA_T4_weapon_T_Laser_Adjust_Event_DESC:0 "$SRA_T4_weapon_T_Laser_DESC$"
+
+ SRA_T4_weapon_H_Adjust_Event:0 "$SRA_T4_weapon_H$§B-Tuned§!"
+ SRA_T4_weapon_H_Adjust_Event_DESC:0 "$SRA_T4_weapon_H_DESC$"
+
+ SRA_T4_weapon_H_DEM_Adjust_Event:0 "$SRA_T4_weapon_H_DEM$§B-Tuned§!"
+ SRA_T4_weapon_H_DEM_Adjust_Event_DESC:0 "$SRA_T4_weapon_H_DEM_DESC$"
+
+ SRA_T4_weapon_G_Adjust_Event:0 "$SRA_T4_weapon_G$§B-Tuned§!"
+ SRA_T4_weapon_G_Adjust_Event_DESC:0 "$SRA_T4_weapon_G_DESC$"
+
+ SRA_T4_weapon_P_Adjust_Event:0 "$SRA_T4_weapon_P$§B-Tuned§!"
+ SRA_T4_weapon_P_Adjust_Event_DESC:0 "$SRA_T4_weapon_P_DESC$"
+
+#####可调整
+ SRA_T4_weapon_SML_Mass_Drivers_Adjust:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-Tuned§!"
+ SRA_T4_weapon_SML_Mass_Drivers_Adjust_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-Tuned§!"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-Tuned§!" 
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-Tuned§!" 
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+
+ SRA_T4_weapon_L_Particle_Launcher_Adjust:0 "$SRA_T4_weapon_L_Particle_Launcher$§B-Tuned§!"
+ SRA_T4_weapon_L_Particle_Launcher_Adjust_DESC:0 "$SRA_T4_weapon_L_Particle_Launcher_DESC$"
+ SRA_T4_weapon_L_Laser_Adjust:0 "$SRA_T4_weapon_L_Laser$§B-Tuned§!"
+ SRA_T4_weapon_L_Laser_Adjust_DESC:0 "$SRA_T4_weapon_L_Laser_DESC$"
+
+ SRA_T4_weapon_X_Laser_Adjust:0 "$SRA_T4_weapon_X_Laser$§B-Tuned§!"
+ SRA_T4_weapon_X_Laser_Adjust_DESC:0 "$SRA_T4_weapon_X_Laser_DESC$"
+
+ SRA_T4_weapon_T_Laser_Adjust:0 "$SRA_T4_weapon_T_Laser$§B-Tuned§!"
+ SRA_T4_weapon_T_Laser_Adjust_DESC:0 "$SRA_T4_weapon_T_Laser_DESC$"
+
+ SRA_T4_weapon_H_Adjust:0 "$SRA_T4_weapon_H$§B-Tuned§!"
+ SRA_T4_weapon_H_Adjust_DESC:0 "$SRA_T4_weapon_H_DESC$"
+
+ SRA_T4_weapon_H_DEM_Adjust:0 "$SRA_T4_weapon_H_DEM$§B-Tuned§!"
+ SRA_T4_weapon_H_DEM_Adjust_DESC:0 "$SRA_T4_weapon_H_DEM_DESC$"
+
+ SRA_T4_weapon_G_Adjust:0 "$SRA_T4_weapon_G$§B-Tuned§!"
+ SRA_T4_weapon_G_Adjust_DESC:0 "$SRA_T4_weapon_G_DESC$"
+
+ SRA_T4_weapon_P_Adjust:0 "$SRA_T4_weapon_P$§B-Tuned§!"
+ SRA_T4_weapon_P_Adjust_DESC:0 "$SRA_T4_weapon_P_DESC$"
+
+#####T4
+ SRA_T4_weapon_SML_Mass_Drivers:0 "§BSRA - Star Arc Shatterer§!"
+ SRA_T4_weapon_SML_Mass_Drivers_DESC:0 "§BThis highly versatile dual-mount rapid-fire cannon is flexible and precise, capable of handling almost all uses. The short bursts of energy beams it fires possess powerful penetration, difficult to block by shields or armor.§!"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers:0 "§BSRA - Star Arc Shatterer§!"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers:0 "§BSRA - Star Arc Shatterer§!" 
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers:0 "§BSRA - Star Arc Shatterer§!" 
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+
+ SRA_T4_weapon_L_Particle_Launcher:0 "§BSRA - Void Render§!"
+ SRA_T4_weapon_L_Particle_Launcher_DESC:0 "§BThis heavy particle cluster artillery is heavy and powerful. Its projectile causes matter erasure effects with excellent penetration and triggers powerful secondary damage, even briefly affecting the stability of spatial structure itself.§!\n\n§YThis weapon is a specialized Large Weapon, achieving superior performance compared to conventional Large Weapons by maximizing the potential of the Large Weapon slot, at the cost of having no Small/Medium models and high expense.§!"
+ SRA_T4_weapon_L_Laser:0 "§BSRA - Spear of Destiny§!"
+ SRA_T4_weapon_L_Laser_DESC:0 "§BThis heavy space tearing weapon fires extremely precise death rays, destroying spatial structure along the line instantly upon firing, immediately destroying any hit ordered structure and creating dazzling light bursts.§!\n\n§YThis weapon is a specialized Large Weapon, achieving superior performance compared to conventional Large Weapons by maximizing the potential of the Large Weapon slot, at the cost of having no Small/Medium models and high expense.§!"
+
+ SRA_T4_weapon_X_Laser:0 "§BSRA - Light of Return to Void§!"
+ SRA_T4_weapon_X_Laser_DESC:0 "§BThis weapon can destroy spacetime structure in the target direction. Matter along the line will be directly converted to pure energy and cause secondary damage to surroundings; matter not directly hit will be torn to pieces in spacetime turbulence.§!"
+
+ SRA_T4_weapon_T_Laser:0 "§BSRA - Star of Dawn§!"
+ SRA_T4_weapon_T_Laser_DESC:0 "§BThis weapon tears a slit in the plane. Matter along the path will disappear into chaotic space outside the plane; meanwhile, massive energy pouring in will cause huge destruction to surroundings. Due to the plane's self-stability, this slit will close quickly, thus not causing long-term plane structural damage.§!"
+
+ SRA_T4_weapon_H:0 "§BSRA - Hunt of Deep Universe§!"
+ SRA_T4_weapon_H_DESC:0 "§BThese wandering hunters travel between stars, arming themselves with particle jets and energy missiles. As guards of warships, they are killers attacking from enemy ship weak points, and even more so nightmares of enemy missiles and strike craft.§!"
+
+ SRA_T4_weapon_H_DEM:0 "§BSRA - Instant Flash Light§!"
+ SRA_T4_weapon_H_DEM_DESC:0 "§BRather than calling it a strike craft, better to consider it a disposable energy torrent launcher. These specialized drones can be rapidly deployed at the start of engagement and immediately release powerful long-range attacks. Limited by size, this drone basically cannot fire multiple times during engagement, only waiting to be recovered and re-prepared after battle.§!"
+
+ SRA_T4_weapon_G:0 "§BSRA - Universal Tracking Fire§!"
+ SRA_T4_weapon_G_DESC:0 "§BMissile system used by StellarRegulator Array. Complex effects occurring after this type of energy torpedo hits the target will cause spatial structure distortion or even tearing within a small range, possessing quite powerful damage capability against various types of targets, and difficult to intercept.§!"
+
+ SRA_T4_weapon_P:0 "§BSRA - Crown of Radiance§!"
+ SRA_T4_weapon_P_DESC:0 "§BThis advanced point defense system watches out for any incoming enemy. Pulse beam rapid fire can easily destroy incoming missiles or strike craft, and even has considerable threat capability against warships.§!"
+
+######T3
+ SRA_T3_weapon_SML_Plasma:0 "§YLattice - Source Crystal Ravager§!"
+ SRA_T3_weapon_SML_Plasma_DESC:0 "§YCSC-191-LMS Lattice Aggregation Launcher\nArtillery group built using ['concept_SRA_Composite_Crystal_Lattice'] technology, releasing unique energy clusters capable of penetrating shields and main armor, directly damaging the hull.§!"
+ SMALL_SRA_T3_weapon_SML_Plasma:0 "§YLattice - Source Crystal Ravager§!"
+ SMALL_SRA_T3_weapon_SML_Plasma_DESC:0 "§YCSC-191-S Lattice Aggregation Launcher\nArtillery group built using ['concept_SRA_Composite_Crystal_Lattice'] technology, releasing unique energy clusters capable of penetrating shields and main armor, directly damaging the hull.§!"
+ MEDIUM_SRA_T3_weapon_SML_Plasma:0 "§YLattice - Source Crystal Ravager§!" 
+ MEDIUM_SRA_T3_weapon_SML_Plasma_DESC:0 "§YCSC-191-M Lattice Aggregation Launcher\nArtillery group built using ['concept_SRA_Composite_Crystal_Lattice'] technology, releasing unique energy clusters capable of penetrating shields and main armor, directly damaging the hull.§!"
+ LARGE_SRA_T3_weapon_SML_Plasma:0 "§YLattice - Source Crystal Ravager§!" 
+ LARGE_SRA_T3_weapon_SML_Plasma_DESC:0 "§YCSC-191-L Lattice Aggregation Launcher\nArtillery group built using ['concept_SRA_Composite_Crystal_Lattice'] technology, releasing unique energy clusters capable of penetrating shields and main armor, directly damaging the hull.§!"
+
+ SRA_T3_weapon_X_Laser:0 "§YLattice - Annihilation Flow Carrier Cannon§!"
+ SRA_T3_weapon_X_Laser_DESC:0 "§YCSC-07-X Lattice Tearing Beam\nLarge beam weapon built using ['concept_SRA_Composite_Crystal_Lattice'] technology, capable of causing energy level drop on trajectory, making hit matter structure disintegrate and release large amounts of energy, causing severe secondary damage.§!"
+
+ SRA_T3_weapon_T_Laser:0 "§YLattice - Celestial Shine Flow§!"
+ SRA_T3_weapon_T_Laser_DESC:0 "§YCSC-83-T Lattice Tearing Lance\nGiant beam weapon built using ['concept_SRA_Composite_Crystal_Lattice'] technology, capable of causing spatial structure tearing on trajectory. Such attacks will directly annihilate matter and create dazzling light bursts, producing extremely powerful secondary destruction.§!"
+
+ SRA_T3_weapon_H:0 "§YLattice - Derivation Shine Sky Blade§!"
+ SRA_T3_weapon_H_DESC:0 "§YCSC-117-H Lattice Strike Craft Group\nStrike craft group built using ['concept_SRA_Composite_Crystal_Lattice'] technology, using miniaturized structure disruption beams to attack enemy hull weak points.§!"
+
+ SRA_T3_weapon_G:0 "§YLattice - Fallen Sun Photovoltaic§!"
+ SRA_T3_weapon_G_DESC:0 "§YCSC-38-G §YLattice Particle Missile System§!\nMissile system built using ['concept_SRA_Composite_Crystal_Lattice'] technology, firing missiles composed of high-energy particle clusters, causing severe spatial disruption effects upon impact to destroy hostile ships.§!"
+
+ SRA_T3_weapon_P:0 "§YLattice - Photon Rift Strike§!"
+ SRA_T3_weapon_P_DESC:0 "§YCSC-1130-P Lattice Point Defense System\nPoint defense system built using ['concept_SRA_Composite_Crystal_Lattice'] technology, using miniaturized structure disruption beams to precisely intercept incoming missiles and strike craft.§!"
+
+#####T2
+ SRA_T2_weapon_SML_Laser:0 "Stellarcrystal Laser"
+ SRA_T2_weapon_SML_Laser_DESC:0 "Laser built using mature Stellarcrystal Technology, having excellent damage effects on various targets."
+ SMALL_SRA_T2_weapon_SML_Laser:0 "Stellarcrystal Laser"
+ SMALL_SRA_T2_weapon_SML_Laser_DESC:0 "Laser built using mature Stellarcrystal Technology, having excellent damage effects on various targets."
+ MEDIUM_SRA_T2_weapon_SML_Laser:0 "Stellarcrystal Laser" 
+ MEDIUM_SRA_T2_weapon_SML_Laser_DESC:0 "Laser built using mature Stellarcrystal Technology, having excellent damage effects on various targets."
+ LARGE_SRA_T2_weapon_SML_Laser:0 "Stellarcrystal Laser" 
+ LARGE_SRA_T2_weapon_SML_Laser_DESC:0 "Laser built using mature Stellarcrystal Technology, having excellent damage effects on various targets."
+
+ SRA_T2_weapon_X_Laser:0 "Stellarcrystal Lance"
+ SRA_T2_weapon_X_Laser_DESC:0 "Large beam weapon built using mature Stellarcrystal Technology, capable of providing massive energy output and destructive power."
+
+ SRA_T2_weapon_T_Laser:0 "Focused Stellarcrystal Lance"
+ SRA_T2_weapon_T_Laser_DESC:0 "Giant beam weapon built using mature Stellarcrystal Technology, capable of providing massive energy output and destructive power. This model greatly increased power."
+
+ SRA_T2_weapon_H:0 "Stellarcrystal Strike Craft Group"
+ SRA_T2_weapon_H_DESC:0 "Strike craft group built using mature Stellarcrystal Technology, using Miniaturized Stellarcrystal Lasers to attack enemy hull weak points."
+
+ SRA_T2_weapon_G:0 "Stellarcrystal Particle Missile System"
+ SRA_T2_weapon_G_DESC:0 "Missile system built using mature Stellarcrystal Technology, firing missiles composed of high-energy particle clusters, releasing high-energy explosions."
+
+ SRA_T2_weapon_P:0 "Stellarcrystal Point Defense System"
+ SRA_T2_weapon_P_DESC:0 "Point defense system built using mature Stellarcrystal Technology, using Miniaturized Stellarcrystal Lasers to precisely intercept incoming missiles and strike craft."
+
+#####T1
+ SRA_T1_weapon_SML_Space_Whale_Weapon:0 "Prototype Crystal Energy Discharger"
+ SRA_T1_weapon_SML_Space_Whale_Weapon_DESC:0 "Experimental energy weapon built using Stellarcrystal Technology, capable of releasing destructive energy beams."
+ SMALL_SRA_T1_weapon_SML_Space_Whale_Weapon:0 "Prototype Crystal Energy Discharger"
+ SMALL_SRA_T1_weapon_SML_Space_Whale_Weapon_DESC:0 "Experimental energy weapon built using Stellarcrystal Technology, capable of releasing destructive energy beams."
+ MEDIUM_SRA_T1_weapon_SML_Space_Whale_Weapon:0 "Prototype Crystal Energy Discharger" 
+ MEDIUM_SRA_T1_weapon_SML_Space_Whale_Weapon_DESC:0 "Experimental energy weapon built using Stellarcrystal Technology, capable of releasing destructive energy beams."
+ LARGE_SRA_T1_weapon_SML_Space_Whale_Weapon:0 "Prototype Crystal Energy Discharger" 
+ LARGE_SRA_T1_weapon_SML_Space_Whale_Weapon_DESC:0 "Experimental energy weapon built using Stellarcrystal Technology, capable of releasing destructive energy beams."
+
+ SRA_T1_weapon_X_Laser:0 "Prototype Crystal Lance"
+ SRA_T1_weapon_X_Laser_DESC:0 "Experimental large beam weapon built using Stellarcrystal Technology, more effective against shields compared to conventional lance weapons."
+
+ SRA_T1_weapon_T_Laser:0 "Focused Prototype Crystal Lance"
+ SRA_T1_weapon_T_Laser_DESC:0 "Experimental giant beam weapon built using Stellarcrystal Technology, more effective against shields compared to conventional lance weapons. This model greatly increased power."
+
+ SRA_T1_weapon_H:0 "Prototype Crystal Strike Craft Group"
+ SRA_T1_weapon_H_DESC:0 "Experimental strike craft group built using Stellarcrystal Technology, using experimental Miniaturized Stellarcrystal Lasers to attack enemy hull weak points."
+
+ SRA_T1_weapon_G:0 "Prototype Crystal Particle Missile System"
+ SRA_T1_weapon_G_DESC:0 "Experimental missile system built using Stellarcrystal Technology, firing experimental missiles composed of high-energy particle clusters, releasing high-energy explosions."
+
+ SRA_T1_weapon_P:0 "Prototype Crystal Point Defense System"
+ SRA_T1_weapon_P_DESC:0 "Experimental point defense system built using Stellarcrystal Technology, using experimental Miniaturized Stellarcrystal Lasers to precisely intercept incoming missiles and strike craft."
+
+
+######帝国线
+#科尔先驱
+ SRA_RE_Core_weapon_L_Particle_Launcher:0 "CORE Eradicator"
+ SRA_RE_Core_weapon_L_Particle_Launcher_DESC:0 "Powerful weapon applying space tearing technology; energy clusters it projects produce devastating space tearing effects on hit targets."
+ SRA_RE_Core_weapon_L_Laser:0 "CORE Dissociator"
+ SRA_RE_Core_weapon_L_Laser_DESC:0 "Powerful weapon applying space tearing technology; it tears spatial structure in its direction, thereby destroying all entities on it."
+
+ SRA_RE_Core_weapon_X_Cannon:0 "CORE Ripper"
+ SRA_RE_Core_weapon_X_Cannon_DESC:0 "Massive and advanced kinetic weapon; although seemingly ordinary, its energy level can directly overload most shields and penetrate armor and hull."
+
+ SRA_RE_Core_weapon_T_Laser:0 "CORE Annihilator Cannon"
+ SRA_RE_Core_weapon_T_Laser_DESC:0 "Legendary ship main gun, designed to penetrate and destroy any type of target. Every firing means destruction, and its firing never stops."
+
+ SRA_RE_Core_weapon_H:0 "CORE Sentinel"
+ SRA_RE_Core_weapon_H_DESC:0 "Carrier-based drone, used for maintenance and close defense tasks, can also interfere with or even suppress hostile ships."
+
+ SRA_RE_Core_weapon_G:0 "CORE Storm Torpedo"
+ SRA_RE_Core_weapon_G_DESC:0 "Energy torpedo using space distortion technology, capable of causing large-scale chain destruction."
+
+ SRA_RE_Core_weapon_P:0 "CORE Gladius"
+ SRA_RE_Core_weapon_P_DESC:0 "Point defense system with excellent performance."
+
+#耀红黑星
+ SRA_Rokia_dragon_weapon_planet_killer:0 "Desolation Drive"
+ SRA_Rokia_dragon_weapon_planet_killer_DESC:0 "Thoughts shattered, all beings submit."
+ SRA_Rokia_dragon_weapon_L_Particle_Launcher:0 "Remnant Star Shatter"
+ SRA_Rokia_dragon_weapon_L_Particle_Launcher_DESC:0 "Hunter wrapped in terrifying energy; where its power touches, reality corrodes into boundless chaos."
+ SRA_Rokia_dragon_weapon_L_Particle_Launcher_buff:0 "§RGestalt Disintegration§!"
+ SRA_Rokia_dragon_weapon_L_Laser:0 "Hesitant Touch Trace"
+ SRA_Rokia_dragon_weapon_L_Laser_DESC:0 "Light touch of annihilation; where its will gazes, continuity is crushed into powder."
+ SRA_Rokia_dragon_weapon_L_Laser_on_hit:0 "§R['concept_SRA_set_terrified_3', §RFear.§!]§!"
+ SRA_Rokia_dragon_weapon_P:0 "Dawn Glimpse"
+ SRA_Rokia_dragon_weapon_P_DESC:0 "Gentle light brushes past; where its will passes, time shatters into emptiness."
+
+#龙翼之影
+
+ SRA_SD_weapon_L_Laser:0 "Heart-Devouring Madness"
+ SRA_SD_weapon_L_Laser_DESC:0 "This spell array releases a vast filthy energy torrent, disintegrating hit targets and extracting their Source Essence components, used to build temporary protective layers on damaged hull, forming an effect similar to self-repair."
+
+ SRA_SD_weapon_L_accuracy:0 "Anti-Deflection Array"
+ SRA_SD_weapon_L_accuracy_DESC:0 "This spell array guides all types of attacks, correcting their trajectories to ensure accurate hits on targets, capable of countering Deflection Effect Fields.\nThe spell array itself can also release weaker attacks.\n\n§YEffects of multiple Anti-Deflection Arrays can stack to counter higher intensity Deflection Effect Fields.§!"
+
+ SRA_SD_weapon_L_Repair:0 "Melting Reconstruction"
+ SRA_SD_weapon_L_Repair_DESC:0 "This spell array works under ship engagement state, repairing damage to ship armor and hull, and randomly dissipating energy arcs causing small amount of damage.\n\n§YWhen ship hit capability is severely interfered with, the operation efficiency of this spell array will decrease.§!"
+
+ SRA_SD_Abyss_Hostile_Ship_main_weapon:0 "§RMetabyss - Abyss Selection§!"
+ SRA_SD_Abyss_Hostile_Ship_main_weapon_DESC:0 "Damage: §RApprox. 6400000.00§!\nCooldown: §YApprox. 32.00£time£§!\nOn hit: Apply 32.00£time£ of §RDoomed End§! to target's fleet, making it immune to all effects of §RAbsurd Hero§!.\n\n"

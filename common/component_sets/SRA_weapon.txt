@@ -1,0 +1,331 @@
+##############
+#####武器正常,weapon小写,
+###特殊武器###
+component_set = {
+	key = "SRA_T_weapon_supreme"
+	
+	icon = "GFX_SRA_T4_weapon_planet_killer"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_Crisis_G_weapon_collision"
+	
+	icon = "GFX_SRA_Crisis_G_weapon_collision"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_Crisis_G_weapon_kind_laser"
+	
+	icon = "GFX_SRA_T4_weapon_planet_killer"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_T4_weapon_G_supreme"
+	
+	icon = "GFX_SRA_T4_weapon_G_supreme"
+	icon_frame = 1	
+}
+###可调节###
+component_set = {
+	key = "SRA_T4_weapon_SML_Mass_Drivers_Adjust"
+	
+	icon = "GFX_SRA_T4_weapon_SML_Mass_Drivers"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_T4_weapon_L_Particle_Launcher_Adjust"
+	
+	icon = "GFX_SRA_T4_weapon_L_Particle_Launcher"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_L_Laser_Adjust"
+	
+	icon = "GFX_SRA_T4_weapon_L_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_X_Laser_Adjust"
+	
+	icon = "GFX_SRA_T4_weapon_X_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_T_Laser_Adjust"
+	
+	icon = "GFX_SRA_T4_weapon_T_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_H_Adjust"
+	
+	icon = "GFX_SRA_T4_weapon_H"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_G_Adjust"
+	
+	icon = "GFX_SRA_T4_weapon_G"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_P_Adjust"
+	
+	icon = "GFX_SRA_T4_weapon_P"
+	icon_frame = 1	
+}
+
+###T4###
+component_set = {
+	key = "SRA_T4_weapon_SML_Mass_Drivers"
+	
+	icon = "GFX_SRA_T4_weapon_SML_Mass_Drivers"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_T4_weapon_L_Particle_Launcher"
+	
+	icon = "GFX_SRA_T4_weapon_L_Particle_Launcher"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_L_Laser"
+	
+	icon = "GFX_SRA_T4_weapon_L_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_X_Laser"
+	
+	icon = "GFX_SRA_T4_weapon_X_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_T_Laser"
+	
+	icon = "GFX_SRA_T4_weapon_T_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_H"
+	
+	icon = "GFX_SRA_T4_weapon_H"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_G"
+	
+	icon = "GFX_SRA_T4_weapon_G"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_weapon_P"
+	
+	icon = "GFX_SRA_T4_weapon_P"
+	icon_frame = 1	
+}
+###T3###
+component_set = {
+	key = "SRA_T3_weapon_SML_Plasma"
+	
+	icon = "GFX_SRA_T3_weapon_SML_Plasma"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_weapon_X_Laser"
+	
+	icon = "GFX_SRA_T3_weapon_X_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_weapon_T_Laser"
+	
+	icon = "GFX_SRA_T3_weapon_T_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_weapon_H"
+	
+	icon = "GFX_SRA_T3_weapon_H"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_weapon_G"
+	
+	icon = "GFX_SRA_T3_weapon_G"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_weapon_P"
+	
+	icon = "GFX_SRA_T3_weapon_P"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_T2_weapon_SML_Laser"
+	
+	icon = "GFX_SRA_T2_weapon_SML_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T2_weapon_X_Laser"
+	
+	icon = "GFX_SRA_T2_weapon_X_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T2_weapon_T_Laser"
+	
+	icon = "GFX_SRA_T2_weapon_T_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T2_weapon_H"
+	
+	icon = "GFX_SRA_T2_weapon_H"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T2_weapon_G"
+	
+	icon = "GFX_SRA_T2_weapon_G"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T2_weapon_P"
+	
+	icon = "GFX_SRA_T2_weapon_P"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_T1_weapon_SML_Space_Whale_Weapon"
+	
+	icon = "GFX_SRA_T1_weapon_SML_Space_Whale_Weapon"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T1_weapon_X_Laser"
+	
+	icon = "GFX_SRA_T1_weapon_X_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T1_weapon_T_Laser"
+	
+	icon = "GFX_SRA_T1_weapon_T_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T1_weapon_H"
+	
+	icon = "GFX_SRA_T1_weapon_H"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T1_weapon_G"
+	
+	icon = "GFX_SRA_T1_weapon_G"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T1_weapon_P"
+	
+	icon = "GFX_SRA_T1_weapon_P"
+	icon_frame = 1	
+}
+
+###科尔先驱###
+component_set = {
+	key = "SRA_RE_Core_weapon_L_Particle_Launcher"
+	
+	icon = "GFX_SRA_T3_weapon_SML_Plasma"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_RE_Core_weapon_L_Laser"
+	
+	icon = "GFX_SRA_T3_weapon_L_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_RE_Core_weapon_X_Cannon"
+	
+	icon = "GFX_SRA_T3_weapon_X_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_RE_Core_weapon_T_Laser"
+	
+	icon = "GFX_SRA_T3_weapon_T_Laser"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_RE_Core_weapon_H"
+	
+	icon = "GFX_SRA_T3_weapon_H"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_RE_Core_weapon_G"
+	
+	icon = "GFX_SRA_T3_weapon_G"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_RE_Core_weapon_P"
+	
+	icon = "GFX_SRA_T3_weapon_P"
+	icon_frame = 1	
+}
+
+
+component_set = {
+	key = "SRA_SD_weapon_L_Laser"
+	
+	icon = "GFX_SRA_SD_weapon_L_Laser"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_weapon_L_accuracy"
+	
+	icon = "GFX_SRA_SD_weapon_L_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_weapon_L_Repair"
+	
+	icon = "GFX_SRA_SD_weapon_L_Repair"
+	icon_frame = 1	
+}

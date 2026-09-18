@@ -1,0 +1,198 @@
+
+#To use one of them, refer to them elsewhere in script via "value:<value>" e.g. value:example_value
+#IMPORTANT NOTE: Be mindful of performance when using these in triggers that are checked often!
+
+# example_value = {
+# 	base = 10 #default: 0
+
+# 	# List of valid mathematical operations:
+# 	# 	Numerical (modifying by a number):
+# 	# 	- set/weight (both do the same, replaces the current result with this value)
+# 	# 	- add
+# 	# 	- subtract
+# 	# 	- factor/mult/multiply ("multiply" fits the name scheme of the rest better, but the other two were kept for historical reasons)
+# 	# 	- divide
+# 	# 	- modulo
+# 	# 	- round_to (rounds to nearest of that value, e.g. 10.7 round_to 5 gives you 10)
+# 	# 	- max (sets to specified value if currently above it)
+# 	# 	- min (sets to specified value if currently below it)
+# 	# 	- pow (value is multiplied by itself to the power of x; be careful, you can get overflows if you are not careful)
+# 	# 	Simple (do not need a number, but just "yes", e.g. "round = yes")
+# 	# 	- round (sets to nearest full number)
+# 	# 	- ceiling (rounds up)
+# 	# 	- floor (rounds down)
+# 	# 	- abs (multiply by -1 if negative)
+# 	# 	- square (multiply by itself)
+# 	# 	- square_root
+
+# 	#All mathematical operations except weight and factor can be used inline e.g.
+# 	add = 100
+# 	multiply = value:some_other_script_value
+# 	round = yes
+# 	#(Note: weight and factor will instead overwrite the base value - use set, mult or multiply instead)
+
+# 	#They can also be used in modifier = {} fields, which lets you only apply them if triggers are true
+# 	modifier = {
+# 		max = owner.max_example_variable 					#Variable set by set_variable
+# 		owner = { is_variable_set = max_example_variable }	#Only applied if this trigger is true
+# 	}
+# 	# What works for right hand side values of mathematical operations? See events/00_how_to_use_variables for full list.
+
+# 	complex_trigger_modifier = { 	#This lets you get the value of a trigger that you can't use in one-liners because it uses {}
+# 		trigger = count_owned_planet
+# 		trigger_scope = owner 		#Lets you get the result of the trigger on a different scope. Default is "this"
+# 		parameters = { 				#Stick any further information necessary in here, like you'd do within the {} of the trigger normally
+# 			limit = { sapient_pop_amount > 10 }
+# 		}
+# 		mode = add 					#Allows all numerical operations
+# 		mult = 5 					#Multiplies the outcome by this. In this example, this means adding 5 for each planet with more than 10 pops
+# 	}
+# }
+
+# Final note: script_values use the same metascript system as scripted_triggers and scripted_effects
+# This means that you can input parameters into them, in a similar fashion as described in scripted_effects/99_advanced_documentation.txt
+# For format for doing so is value:my_value|PARAM1|value1|PARAM2|value2|.
+# Then you can use $PARAM1$ in the script value and it will replace it with value1
+
+
+#星规深渊产业链
+###通用深渊污染影响 抛物线函数  给区划挂上记得排除下电站
+SRA_SD_chaos_star_habitable_vitality ={
+    base = 10
+    mult = $Income|10$ #收益倍率
+    mult = value:SRA_SD_chaos_star_habitable_vitality_2|Income_MAX_P|$Income_MAX_P|600$|Income_MAX_D|$Income_MAX_D|400$|
+    add =  $Offset_point|120$
+}
+SRA_SD_chaos_star_habitable_vitality_2 ={
+    base = 1
+    subtract = value:SRA_SD_chaos_star_habitable_vitality_3|Income_MAX_P|$Income_MAX_P|600$|Income_MAX_D|$Income_MAX_D|400$|
+}
+SRA_SD_chaos_star_habitable_vitality_3 ={
+    base = 0
+    add = planet.pc_SRA_SD_chaos_star_habitable_vitality #污染度
+    subtract = $Income_MAX_P|600$  #最佳收益点
+    divide =$Income_MAX_D|400$  #max和收益点的差值 越小曲线弧度越极端
+    pow = 2
+}
+
+#通用建筑区划效果
+SRA_planet_districts_modifier ={
+    base = 1
+    [[districts]
+        complex_trigger_modifier = {
+            trigger_scope = planet
+            trigger = num_districts
+            parameters = {
+                type = $districts$
+            }
+            mode = set
+        }
+    ]
+    [[BaseProduction]  #产出
+        #square_root = yes
+        mult = $ProductionScaleFactor|1.5$ #缩放倍率
+        pow = $MaintenancePower|2$
+        add = 1
+        mult = $BaseProduction|1$  #基础值
+        mult = 0.1
+    ]
+    [[BaseMaintenance]  #维护
+        mult = $MaintenanceGrowthFactor|0.1$
+        pow = $MaintenancePower|3$
+        add = 2
+        mult = $BaseMaintenance|1$
+    ]
+    min = 1
+}
+
+#载荷效果
+SRA_engery_effective_load ={
+    base = 0
+    #add = $base_effective|5$  #基础载荷
+    add = modifier:mod_building_SRA_SD_energy_load_give  #载荷增加buff
+    min = 0
+}
+
+SRA_engery_effective_load_2 ={ #负荷百分比
+    base = 0
+    set = modifier:mod_building_SRA_SD_energy_load_use  #使用的载荷
+    divide =value:SRA_engery_effective_load
+}
+
+SRA_engery_effective_load_3 ={ #核心产能加成
+    base = 0
+    add = value:SRA_engery_effective_load_2
+    pow = 2
+    subtract = 1 
+    mult = -1
+}
+SRA_engery_effective_load_4 ={ #其他产能加成
+    base = 1
+    subtract = value:SRA_engery_effective_load_2
+    mult = 2
+    pow = 2
+    subtract = 16
+    mult = -0.25
+}
+
+
+SRA_engery_effective_upkeep = {
+    base = 0
+    set = value:SRA_engery_effective_load_2
+    modifier = {
+        check_variable_arithmetic = {
+            which = value:SRA_engery_effective_load_2
+            value < 1
+        }
+        mult = 50000
+        add =  0.5
+    }
+    modifier = {
+        check_variable_arithmetic = {
+            which = value:SRA_engery_effective_load_2
+            value > 1
+        }
+        subtract = $MAX|2$
+        pow = 2
+        mult = -1.5
+        add = 2.5
+    }
+    min = 0
+}
+
+#大电塔的产出维护
+SRA_SD_energy_building = {
+    base = 0
+    add = value:SRA_SD_chaos_star_habitable_vitality|Income|$Income|10$|Income_MAX_P|$Income_MAX_P|600$|Income_MAX_D|$Income_MAX_D|400$|Offset_point|$Offset_point|120$|
+        [[BaseProduction]
+        mult = value:SRA_planet_districts_modifier|districts|$districts$|BaseProduction|$BaseProduction|1$|ProductionScaleFactor|$ProductionScaleFactor|1.5$|
+            ]
+        [[BaseMaintenance]
+        mult = value:SRA_planet_districts_modifier|districts|$districts$|BaseMaintenance|$BaseMaintenance|2$|MaintenanceGrowthFactor|$MaintenanceGrowthFactor|0.11$|MaintenancePower|$MaintenancePower|2.1$|
+            ]
+    # modifier = {
+    #     check_variable_arithmetic = {
+    #         which = value:SRA_engery_effective_upkeep
+    #         value > 0
+    #     }
+    #     mult = value:SRA_engery_effective_upkeep
+    # }
+    min = 1
+}
+
+SRA_SD_energy_building_buff = {
+    base = 0
+    add = value:SRA_planet_districts_modifier|districts|$districts$|
+    pow = 0.8
+    mult = value:SRA_SD_chaos_star_habitable_vitality|Income|$Income|10$|Income_MAX_P|$Income_MAX_P|600$|Income_MAX_D|$Income_MAX_D|400$|Offset_point|$Offset_point|120$|
+    mult = value:SRA_engery_effective_load_4
+    min = 1
+}
+
+
+SRA_SD_chaos_star_habitable_max_districts_add ={
+    base = 0
+    add = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+    mult = 10
+}
+

@@ -1,0 +1,53 @@
+origin_SRA_Rokia = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_SRA_Rokia.dds"
+	picture = GFX_origin_SRA_Rokia
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_SRAtechnology
+			}
+			NOT = {
+				value = civic_SRARociviaEmpire
+			}
+		}
+	}
+	flags = { origin_SRA_Rokia_flag }
+
+	description = "origin_tooltip_SRA_Rokia_effects"
+	negative_description = "origin_tooltip_SRA_Rokia_negative_effects"
+
+	advanced_start = yes
+
+	max_once_global = yes
+	
+	random_weight = {
+		base = 0
+	}
+}
+# origin_SRA_Rokia_2 = {
+# 	is_origin = yes
+# 	icon = "gfx/interface/icons/origins/origin_SRA_Rokia.dds"
+# 	picture = GFX_origin_SRA_Rokia_2
+# 	possible = {
+# 		civics = {
+# 			NOT = {
+# 				value = civic_SRAtechnology
+# 			}
+# 			NOT = {
+# 				value = civic_SRARociviaEmpire
+# 			}
+# 		}
+# 	}
+# 	flags = { origin_SRA_Rokia_flag }
+
+# 	description = "origin_tooltip_SRA_Rokia_2_effects"
+
+# 	advanced_start = yes
+
+# 	max_once_global = yes
+	
+# 	random_weight = {
+# 		base = 0
+# 	}
+# }

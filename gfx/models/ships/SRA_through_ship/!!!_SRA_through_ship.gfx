@@ -1,0 +1,37 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_ancient_large_ship_frame_mesh"
+		file = "gfx/models/ships/SRA_through_ship/SRA_ancient_large_ship_frame.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_ancient_large_ship_frame_idle_animation" }
+		animation = { id = "death1" type = "SRA_ancient_large_ship_frame_death1_animation" }
+		animation = { id = "death2" type = "SRA_ancient_large_ship_frame_death2_animation" }
+		animation = { id = "death3" type = "SRA_ancient_large_ship_frame_death3_animation" }
+
+		meshsettings = {
+			name = "pCubeShape1"
+			index = 0
+			texture_diffuse = "SRA_dummy_diffuse.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "SRA_ancient_small_ship_frame_mesh"
+		file = "gfx/models/ships/SRA_through_ship/SRA_ancient_small_ship_frame.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_ancient_small_ship_frame_idle_animation" }
+		animation = { id = "death1" type = "SRA_ancient_small_ship_frame_death1_animation" }
+		animation = { id = "death2" type = "SRA_ancient_small_ship_frame_death2_animation" }
+		animation = { id = "death3" type = "SRA_ancient_small_ship_frame_death3_animation" }
+
+		meshsettings = {
+			name = "pCubeShape1"
+			index = 0
+			texture_diffuse = "SRA_dummy_diffuse.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

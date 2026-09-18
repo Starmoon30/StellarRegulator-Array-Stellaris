@@ -1,0 +1,6 @@
+SRA_SR = {
+	species_trait_points = 50
+	species_max_traits = 20
+	robotic = yes
+	uses_modifiers = no
+}

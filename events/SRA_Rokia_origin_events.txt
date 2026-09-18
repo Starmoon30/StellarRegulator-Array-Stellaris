@@ -1,0 +1,311 @@
+namespace = SRA_Rokia_origin
+
+country_event = {
+	id = SRA_Rokia_origin.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		force_add_civic = civic_SRAtechnology
+		set_country_flag = origin_SRA_Rokia_country
+		set_country_flag = has_encountered_psionic_auras
+		# give_technology = { tech = tech_gravity_wells message = no }
+		# give_technology = { tech = tech_alien_cloning message = no }
+		# give_technology = { tech = tech_thrusters_bio_integration message = no }
+		# give_technology = { tech = tech_hyper_drive_bio_integration message = no }
+		# give_technology = { tech = tech_sensors_bio_integration message = no }
+		# give_technology = { tech = tech_combat_computers_bio_integration message = no }
+
+		give_technology = { tech = tech_gateway_activation message = no }
+		give_technology = { tech = tech_gateway_construction message = no }
+
+		give_technology = { tech = tech_SRA_T3_Composite_Crystal_Lattice message = no }
+		give_technology = { tech = tech_SRA_T4_weapon_TX_Laser message = no }
+		give_technology = { tech = tech_SRA_T4_weapon_SML_Mass_Drivers message = no }
+		give_technology = { tech = tech_SRA_T4_weapon_HGP_weapon message = no }
+		give_technology = { tech = tech_SRA_T4_ship_Part message = no }
+		give_technology = { tech = tech_SRA_T4_Armies message = no }
+		give_technology = { tech = tech_SRA_nano_shipyard message = no }
+		give_technology = { tech = tech_SRA_starbase_turret message = no }
+		give_technology = { tech = tech_SRA_Barrier_megastructure_0 message = no }
+
+		give_dna = { ship_category = space_amoeba rarity = exceptional }
+		give_dna = { ship_category = tiyanki rarity = exceptional }
+		give_dna = { ship_category = crystalline_entity rarity = exceptional }
+		give_dna = { ship_category = voidworm rarity = exceptional }
+		give_dna = { ship_category = cutholoid rarity = exceptional }
+
+		give_specimen = { key = SRA_specimen_metabyss_special_drinks origin = "SRA_specimen_metabyss_special_drinks_origin" }
+
+		copy_techs_from = { 
+			target = event_target:SRA_Chief_country
+		}
+		country_event = {
+			id = SRA_Start.9
+		}
+		country_event = {
+			id = SRA_Rokia_origin.2 days = 5
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia_origin.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:SRA_Chief_country = {
+			every_owned_fleet = {
+				set_owner = root
+			}
+			every_owned_planet = {
+				set_owner = root
+			}
+			every_owned_megastructure = {
+				set_owner = root
+			}
+		}
+		country_event = {
+			id = SRA_Rokia_origin.3 days = 26
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia_origin.3
+	title = SRA_Rokia_origin.3.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_Rokia_origin.3.desc"
+	immediate = {
+		event_target:SRA_Chief_colony_1_system_Main_Station = {
+			set_owner = ROOT
+			while = {
+				count = 25
+				add_district = district_SRA_GZ_science
+			}
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+			set_name = "NAME_SRA_Chief_colony_1_system_Main_Station"
+			add_building = building_system_capital
+			add_building = building_SRA_Fortress
+		}
+		if = {
+			limit = { is_ai = yes }
+			change_dominant_species = { species = root change_all = yes }
+			every_owned_pop_group = { change_species = root }
+		}
+	}
+	option = {
+		name = SRA_Rokia_origin.3.a
+		custom_tooltip =  SRA_Rokia_origin.3.a.tooltip
+		is_dialog_only = yes
+		response_text = SRA_Rokia_origin.3.a.desc
+		hidden_effect = {
+			every_owned_ship = {
+				limit = {
+					is_ship_size = starbase_SRA_1
+				}
+				delete_ship = this
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia_origin.3.b
+		custom_tooltip =  SRA_Rokia_origin.3.b.tooltip
+		is_dialog_only = yes
+		response_text = SRA_Rokia_origin.3.b.desc
+		hidden_effect = {
+			event_target:SRA_Chief_colony_1_system = {
+				every_neighbor_system = {
+					limit = {
+						NOR = {
+							has_star_flag = SRA_Chief_colony_1_system
+							has_star_flag = SRA_Chief_colony_2_system
+							has_star_flag = SRA_Chief_colony_3_system
+							has_star_flag = SRA_Chief_capital_system
+						}
+					}
+					remove_hyperlane = {
+						from = THIS
+						to = prev
+					}
+				}
+			}
+			event_target:SRA_Chief_colony_2_system = {
+				every_neighbor_system = {
+					limit = {
+						NOR = {
+							has_star_flag = SRA_Chief_colony_1_system
+							has_star_flag = SRA_Chief_colony_2_system
+							has_star_flag = SRA_Chief_colony_3_system
+							has_star_flag = SRA_Chief_capital_system
+						}
+					}
+					remove_hyperlane = {
+						from = THIS
+						to = prev
+					}
+				}
+			}
+			event_target:SRA_Chief_colony_3_system = {
+				every_neighbor_system = {
+					limit = {
+						NOR = {
+							has_star_flag = SRA_Chief_colony_1_system
+							has_star_flag = SRA_Chief_colony_2_system
+							has_star_flag = SRA_Chief_colony_3_system
+							has_star_flag = SRA_Chief_capital_system
+						}
+					}
+					remove_hyperlane = {
+						from = THIS
+						to = prev
+					}
+				}
+			}
+			event_target:SRA_Chief_capital_system = {
+				every_neighbor_system = {
+					limit = {
+						NOR = {
+							has_star_flag = SRA_Chief_colony_1_system
+							has_star_flag = SRA_Chief_colony_2_system
+							has_star_flag = SRA_Chief_colony_3_system
+							has_star_flag = SRA_Chief_capital_system
+						}
+					}
+					remove_hyperlane = {
+						from = THIS
+						to = prev
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia_origin.3.c
+		is_dialog_only = yes
+		response_text = SRA_Rokia_origin.3.c.desc
+		hidden_effect = {
+			change_dominant_species = { species = event_target:SRA_Chief_species change_all = yes }
+		}
+	}
+	option = {
+		name = SRA_Rokia_origin.3.d
+		is_dialog_only = yes
+		response_text = SRA_Rokia_origin.3.d.desc
+		hidden_effect = {
+			change_dominant_species = { species = root change_all = yes }
+			every_owned_pop_group = { change_species = root }
+		}
+	}
+	option = {
+		name = SRA_Rokia_origin.3.e
+		is_dialog_only = yes
+		custom_tooltip =  SRA_Rokia_origin.3.e.tooltip
+		response_text = SRA_Rokia_origin.3.e.desc
+		hidden_effect = {
+			every_owned_planet = {
+				remove_building = building_SRA_databank
+				remove_building = building_SRA_foundry
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia_origin.3.z
+		country_event = {
+			id = SRA_Rokia_origin.4 days = 15
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia_origin.4
+	title = SRA_Chief
+	desc = "SRA_Rokia_origin.4.desc"
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		set_variable = { which = SRA_diplomacy_bg value = 1 }
+	}
+	option = {
+		name = SRA_Rokia_origin.4.a
+		add_modifier = { modifier = SRA_Chief_Buff_0 days = 7200 }
+	}
+}
+country_event = {
+	id = SRA_Rokia_origin.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			is_same_value = event_target:SRA_Chief_country
+		}
+		has_country_flag = origin_SRA_Rokia_country
+	}
+	immediate = {
+		change_variable = {
+			which = origin_SRA_Rokia_country_talk_1
+			value = 1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = origin_SRA_Rokia_country_talk_1
+					value = 7
+				}
+			}
+			country_event = {
+				id = SRA_Rokia_origin.6
+			}
+			from = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia_origin.6
+	title = SRA_Chief
+	desc = "SRA_Rokia_origin.6.desc"
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		set_variable = { which = SRA_diplomacy_bg value = 1 }
+	}
+	option = {
+		name = SRA_Rokia_origin.6.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.1
+			}
+			country_event = {
+				id = SRA_Rokia.8000 days = 3600
+			}
+		}
+	}
+}

@@ -1,0 +1,138 @@
+###狡猾帝国联动-星光二号###
+#################领袖特质##################
+
+leader_trait_SRA_ag_StarLightII_sci1 = {
+	cost = 0
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = no
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = scientist			# governor, scientist, admiral, general
+		SRA_background = GFX_SRA_r_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_ag_StarLightII_sci1
+		SRA_tier = none
+	}
+	modifier = {
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+	
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+leader_trait_SRA_ag_StarLightII_sci2 = {
+	cost = 0
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = no
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = scientist			# governor, scientist, admiral, general
+		SRA_background = GFX_SRA_r_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_ag_StarLightII_sci2
+		SRA_tier = none
+	}
+	modifier = {
+		ship_archaeological_site_clues_add = 2
+		ship_archaeological_site_excavation_speed_mult = 1
+		ship_anomaly_research_speed_mult = 0.45
+		ship_anomaly_generation_chance_mult = 0.25
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_SRA_ag_StarLightII_adm1 = {
+	cost = 0
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = no
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = commander			# governor, scientist, admiral, general
+		SRA_background = GFX_SRA_r_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_ag_StarLightII_sci1
+		SRA_tier = none
+	}
+	modifier = {
+		damage_vs_country_type_ag_ancient_beta_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_beta_signal_station_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_gamma_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_delta_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_delta_guardian_passive_mult = 2
+		damage_vs_country_type_ag_epsilon_fallen_empire_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_epsilon_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_epsilon_obelisk_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_iota_enclave_mult = 2
+		damage_vs_country_type_ag_ancient_primitive_crisis_mult = 2
+		damage_vs_country_type_ag_ancient_primitive_monitor_mult = 2
+		damage_vs_country_type_ag_ancient_zeta_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_guardian_aggressive_mult = 2
+		damage_vs_country_type_ag_ancient_guardian_passive_mult = 2
+		damage_vs_country_type_ag_ancient_guardian_aggressive_auto_delete_mult = 2
+		damage_vs_country_type_ag_ancient_guardian_passive_auto_delete_mult = 2
+		damage_vs_country_type_ag_ancient_psi_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_wanderer_country_mult = 2
+		damage_vs_country_type_ag_ancient_anchor_station_country_mult = 2
+		damage_vs_country_type_ag_lost_ancient_ship_country_mult = 2
+		damage_vs_country_type_ag_ancient_molten_planet_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_eta_guardian_mult = 2
+		damage_vs_country_type_ag_ancient_eta_guardian_passive_mult = 2
+		damage_vs_country_type_ag_ancient_eta_gateway_guardian_mult = 2
+		damage_vs_country_type_ag_kuat_invasion_country_mult = 2
+		damage_vs_country_type_ag_kae_ge_invasion_country_mult = 2
+	}
+	custom_tooltip = leader_trait_SRA_ag_StarLightII_adm1_custom_tooltip
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+leader_trait_SRA_ag_StarLightII_adm2 = {
+	cost = 0
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = no
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = commander			# governor, scientist, admiral, general
+		SRA_background = GFX_SRA_r_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_ag_StarLightII_sci2
+		SRA_tier = none
+	}
+	modifier = {
+		ship_tracking_mult = 0.1
+		ship_accuracy_mult = 0.1
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.2
+		weapon_type_gravity_weapon_damage_mult = 0.8
+		weapon_type_gravity_weapon_fire_rate_mult = 0.8
+		weapon_type_psionic_weapon_damage_mult = 0.8
+		weapon_type_psionic_weapon_fire_rate_mult = 0.8
+		weapon_type_anti_psionic_weapon_damage_mult = 0.8
+		weapon_type_anti_psionic_weapon_fire_rate_mult = 0.8
+		ship_weapon_range_mult = 0.1
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}

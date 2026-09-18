@@ -1,0 +1,7 @@
+
+#领袖出身伪岗位
+
+SRA_StellarRegulator_job = { icon = fe_hedonist possible = { always = no } }
+SRA_RE_Rocivia_job = { icon = fe_hedonist possible = { always = no } }
+SRA_RE_Hidra_job = { icon = fe_hedonist possible = { always = no } }
+SRA_Bard_of_Metarbor_job = { icon = fe_hedonist possible = { always = no } }

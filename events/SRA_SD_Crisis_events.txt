@@ -1,0 +1,304 @@
+namespace = SRA_SD_Crisis
+
+#入侵开始
+country_event = {
+	id = SRA_SD_Crisis.1000
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		set_update_modifiers_batch = begin
+		stop_crisis_sound = yes
+		set_global_flag = SRA_SD_Crisis_2_start
+		save_global_event_target_as = SRA_SD_player
+		every_system_within_border = {
+			limit = {
+				NOT = {
+					is_capital_system = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:SRA_SD_Crisis_2_target_system_1
+					}
+				}
+				save_global_event_target_as = SRA_SD_Crisis_2_target_system_1
+				SRA_SD_Crisis_Pathfinder_Initialize = { TARGET = SRA_SD_Crisis_2_target_system_1 }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = event_target:SRA_SD_Crisis_2_target_system_2
+					}
+				}
+				save_global_event_target_as = SRA_SD_Crisis_2_target_system_2
+				SRA_SD_Crisis_Pathfinder_Initialize = { TARGET = SRA_SD_Crisis_2_target_system_2 }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						exists = event_target:SRA_SD_Crisis_2_target_system_3
+					}
+				}
+				save_global_event_target_as = SRA_SD_Crisis_2_target_system_3
+				SRA_SD_Crisis_Pathfinder_Initialize = { TARGET = SRA_SD_Crisis_2_target_system_3 }
+			}
+		}
+		every_playable_country = {
+			begin_event_chain = {
+				event_chain = "SRA_SD_Crisis_2_chain"
+				target = ROOT
+			}
+			create_point_of_interest = {
+				id = SRA_SD_Crisis_2_poi.1
+				name = "SRA_SD_Crisis_2_1_poi"
+				desc = "SRA_SD_Crisis_2_1_poi_desc"
+				event_chain = "SRA_SD_Crisis_2_chain"
+				location = event_target:SRA_SD_Crisis_2_target_system_1
+			}
+			create_point_of_interest = {
+				id = SRA_SD_Crisis_2_poi.2
+				name = "SRA_SD_Crisis_2_2_poi"
+				desc = "SRA_SD_Crisis_2_2_poi_desc"
+				event_chain = "SRA_SD_Crisis_2_chain"
+				location = event_target:SRA_SD_Crisis_2_target_system_2
+			}
+			create_point_of_interest = {
+				id = SRA_SD_Crisis_2_poi.3
+				name = "SRA_SD_Crisis_2_3_poi"
+				desc = "SRA_SD_Crisis_2_3_poi_desc"
+				event_chain = "SRA_SD_Crisis_2_chain"
+				location = event_target:SRA_SD_Crisis_2_target_system_3
+			}
+		}
+		create_country = {
+			name = "NAME_SRA_SD_Crisis_2_country_1"
+			type = faction_SRA_RE_Crisis_country_1
+			species = random
+			name_list = SRA_Rocivia_Empire
+			flag = {
+				icon= {
+					category="SRA_flags"
+					file="SRA_flags_Calamitisease.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "double_triangles.dds"
+				}
+				colors={
+					"red"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = protected_from_queen_storm
+				set_country_flag = SRA_SD_Crisis_2_country_1
+				set_country_flag = community_mod_rules_trigger
+				set_country_flag = community_can_orbital_bombard_ture
+				SRA_enable_crisis_country_orbital_bombardment = yes
+				save_event_target_as = SRA_SD_Crisis_2_country_1
+				save_global_event_target_as = SRA_SD_Crisis_2_country_1
+				set_global_flag = has_SRA_SD_Crisis_2_country_1
+				#add_modifier = { modifier = SRA_RE_Crisis_Buff_0 days = -1 }
+				country_event = {
+					id = SRA_SD_Crisis.1100
+				}
+				country_event = {
+					id = SRA_SD_Crisis.1111 days = 30
+				}
+			}
+		}
+		create_country = {
+			name = "NAME_SRA_SD_Crisis_2_country_2"
+			type = "faction_SRA_Crisis_country"
+			species = event_target:SRA_StellarRegulator_species
+			name_list = SRA_Rocivia_Empire
+			flag = {
+				icon= {
+					category="SRA_flags"
+					file="SRA_flags_Rocivia.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "double_triangles.dds"
+				}
+				colors={
+					"blue"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = protected_from_queen_storm
+				set_country_flag = SRA_SD_Crisis_2_country_2
+				set_country_flag = community_mod_rules_trigger
+				set_country_flag = community_can_orbital_bombard_ture
+				SRA_enable_crisis_country_orbital_bombardment = yes
+				save_event_target_as = SRA_SD_Crisis_2_country_2
+				save_global_event_target_as = SRA_SD_Crisis_2_country_2
+				set_global_flag = has_SRA_SD_Crisis_2_country_2
+				#add_modifier = { modifier = SRA_RE_Crisis_Buff_0 days = -1 }
+				country_event = {
+					id = SRA_SD_Crisis.1101
+				}
+				country_event = {
+					id = SRA_SD_Crisis.1111 days = 30
+				}
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+#刷船
+country_event = {
+	id = SRA_SD_Crisis.1100
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_country_flag = SRA_SD_Crisis_2_country_1 }
+	immediate = {
+		if = {
+			limit = {
+				event_target:SRA_SD_Crisis_2_target_system_1 = {
+					count_fleet_in_system = {
+						count < 5 limit = { owner = { is_same_value = root } } 
+					}
+				}  
+			}
+			random_system = {
+				while = {
+					count = 5
+					create_SRA_SD_Crisis_2_fleet_1 = yes
+					last_created_fleet = {
+						set_fleet_flag = SRA_SD_Crisis_2_target_system_1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				event_target:SRA_SD_Crisis_2_target_system_2 = {
+					count_fleet_in_system = {
+						count < 5 limit = { owner = { is_same_value = root } } 
+					}
+				}  
+			}
+			random_system = {
+				while = {
+					count = 5
+					create_SRA_SD_Crisis_2_fleet_1 = yes
+					last_created_fleet = {
+						set_fleet_flag = SRA_SD_Crisis_2_target_system_2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				event_target:SRA_SD_Crisis_2_target_system_3 = {
+					count_fleet_in_system = {
+						count < 5 limit = { owner = { is_same_value = root } } 
+					}
+				}  
+			}
+			random_system = {
+				while = {
+					count = 5
+					create_SRA_SD_Crisis_2_fleet_1 = yes
+					last_created_fleet = {
+						set_fleet_flag = SRA_SD_Crisis_2_target_system_3
+					}
+				}
+			}
+		}
+		country_event = { id = SRA_SD_Crisis.1100 days = 360 }
+	}
+}
+country_event = {
+	id = SRA_SD_Crisis.1101
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_country_flag = SRA_SD_Crisis_2_country_2 }
+	immediate = {
+		if = {
+			limit = {
+				event_target:SRA_SD_Crisis_2_target_system_1 = {
+					count_fleet_in_system = {
+						count < 5 limit = { owner = { is_same_value = root } } 
+					}
+				}  
+			}
+			random_system = {
+				while = {
+					count = 2
+					create_SRA_SD_Crisis_2_fleet_2 = yes
+					last_created_fleet = {
+						set_fleet_flag = SRA_SD_Crisis_2_target_system_1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				event_target:SRA_SD_Crisis_2_target_system_2 = {
+					count_fleet_in_system = {
+						count < 5 limit = { owner = { is_same_value = root } } 
+					}
+				}  
+			}
+			random_system = {
+				while = {
+					count = 2
+					create_SRA_SD_Crisis_2_fleet_2 = yes
+					last_created_fleet = {
+						set_fleet_flag = SRA_SD_Crisis_2_target_system_2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				event_target:SRA_SD_Crisis_2_target_system_3 = {
+					count_fleet_in_system = {
+						count < 5 limit = { owner = { is_same_value = root } } 
+					}
+				}  
+			}
+			random_system = {
+				while = {
+					count = 2
+					create_SRA_SD_Crisis_2_fleet_2 = yes
+					last_created_fleet = {
+						set_fleet_flag = SRA_SD_Crisis_2_target_system_3
+					}
+				}
+			}
+		}
+		country_event = { id = SRA_SD_Crisis.1101 days = 360 }
+	}
+}
+country_event = {
+	id = SRA_SD_Crisis.1111
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_controlled_fleet = {
+			switch = {
+				trigger = has_fleet_flag
+				SRA_SD_Crisis_2_target_system_1 = {
+					SRA_SD_Crisis_Pathfinder = { TARGET = SRA_SD_Crisis_2_target_system_1 }
+				}
+				SRA_SD_Crisis_2_target_system_2 = {
+					SRA_SD_Crisis_Pathfinder = { TARGET = SRA_SD_Crisis_2_target_system_2 }
+				}
+				SRA_SD_Crisis_2_target_system_3 = {
+					SRA_SD_Crisis_Pathfinder = { TARGET = SRA_SD_Crisis_2_target_system_3 }
+				}
+			}
+		}
+		country_event = { id = SRA_SD_Crisis.1111 days = 30 }
+	}
+}

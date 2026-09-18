@@ -1,0 +1,229 @@
+#foundry
+automate_SRA_foundry = {
+	emergency = yes
+	category = "planet_automation_SRA_building"
+	available = {
+		has_designation = col_SRA_auto_foundry
+	}
+	
+	prio_districts = {
+		district_city
+		district_hive
+		district_nexus
+		district_arcology_housing
+		district_rw_city
+		district_hab_housing
+		district_SRA_GZ_foundry
+		district_SRA_city_housing
+	}
+	
+	# prio_zones = {
+	# 	zone_fortress
+	# 	zone_urban
+	# }
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = { always = yes }
+		}
+
+		1 = {
+			building = building_SRA_RE_core
+		}
+
+		2 = {
+			building = building_mineral_purification_plant
+		}
+
+		3 = {
+			building = building_energy_grid
+		}
+		4 = {
+			building = building_SRA_RE_foundry
+		}
+	}
+}
+#science
+automate_SRA_science = {
+	emergency = yes
+	category = "planet_automation_SRA_building"
+	available = {
+		has_designation = col_SRA_auto_research
+	}
+
+	prio_districts = {
+		district_city
+		district_hive
+		district_nexus
+		district_arcology_housing
+		district_rw_city
+		district_hab_housing
+		district_SRA_GZ_foundry
+		district_SRA_city_housing
+	}
+	
+	# prio_zones = {
+	# 	zone_fortress
+	# 	zone_urban
+	# }
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+
+		1 = {
+			building = building_SRA_RE_core
+		}
+
+		2 = {
+			building = building_institute
+			available = {
+				NOR = {
+					owner = { has_authority = auth_hive_mind }
+					owner = { has_authority = auth_machine_intelligence }
+				}
+			}
+		}
+
+		2 = {
+			building = building_supercomputer
+			available = {
+				OR = {
+					owner = { has_authority = auth_hive_mind }
+					owner = { has_authority = auth_machine_intelligence }
+				}
+			}
+		}
+
+		3 = {
+			building = building_SRA_RE_research_institute
+		}
+	}
+}
+
+#alloys
+automate_SRA_alloys = {
+	emergency = yes
+	category = "planet_automation_SRA_building"
+	available = {
+		has_designation = col_SRA_auto_alloys
+	}
+
+	prio_districts = {
+		district_city
+		district_hive
+		district_nexus
+		district_arcology_housing
+		district_rw_city
+		district_hab_housing
+		district_SRA_GZ_foundry
+		district_SRA_city_housing
+	}
+	
+	# prio_zones = {
+	# 	zone_fortress
+	# 	zone_urban
+	# }
+
+	buildings = {
+		1 = {
+			building = building_capital
+		}
+
+		1 = {
+			building = building_SRA_RE_core
+		}
+
+		2 = {
+			building = building_foundry_upkeep_1
+		}
+
+		3 = {
+			building = building_ministry_production
+		}
+
+		4 = {
+			building = building_production_center
+		}
+		5 = {
+			building = building_SRA_RE_alloys
+		}
+	}
+}
+
+#factory
+automate_SRA_factory = {
+	emergency = yes
+	category = "planet_automation_SRA_building"
+	available = {
+		has_designation = col_SRA_auto_factory
+	}
+
+	prio_districts = {
+		district_city
+		district_hive
+		district_nexus
+		district_arcology_housing
+		district_rw_city
+		district_hab_housing
+		district_SRA_GZ_foundry
+		district_SRA_city_housing
+	}
+	
+	# prio_zones = {
+	# 	zone_fortress
+	# 	zone_urban
+	# }
+
+	buildings = {
+		1 = {
+			building = building_capital
+		}
+
+		1 = {
+			building = building_SRA_RE_core
+		}
+		
+		2 = {
+			building = building_factory_upkeep_1
+		}
+
+		3 = {
+			building = building_ministry_production
+		}
+
+		4 = {
+			building = building_production_center
+		}
+		5 = {
+			building = building_SRA_RE_factory
+		}
+	}
+}
+
+automate_SRA_T3_Recovery_Nest = {
+	available = {
+		OR = {
+			free_amenities <= 1000
+			free_housing <= 1000
+			planet_crime > 1
+		}
+		owner = {
+			has_technology = tech_SRA_T3_Crystal_Node
+		}
+	}
+
+	emergency = yes
+	category = "planet_automation_SRA_building"
+
+	buildings = {
+		SRA_T3_Recovery_Nest = {
+			building = building_SRA_T3_Recovery_Nest
+		}
+	}
+}

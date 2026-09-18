@@ -1,0 +1,425 @@
+district_SRA_SD_energy ={
+    icon = district_hab_energy
+    base_buildtime = 1
+    # is_capped_by_modifier = no
+    #default_starting_district = yes
+	show_on_uncolonized = {
+		exists = from
+        uses_district_set = SRA_SD_chaos_star_habitable
+	}
+	potential = {
+		exists = owner
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+    zone_slots = {
+        slot_city_government
+        slot_SRA_SD
+        slot_SRA_SD
+    }
+    conversion_ratio = 1
+    resources = {
+        category = SRA_SD_productive_category
+        cost = {
+            # minerals = 500
+            # alloys = 10
+        }
+        upkeep = {
+            # alloys = 0.2
+            # energy = 1
+            #mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_energy|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_give = 5
+    }
+}
+
+district_SRA_SD_mineral ={
+    icon = district_hab_mining
+    base_buildtime = 1
+    # is_capped_by_modifier = no
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+	potential = {
+		exists = owner
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+    zone_slots = {
+        slot_SRA_SD
+    }
+    conversion_ratio = 1
+    resources = {
+        category = SRA_SD_productive_category
+        cost = {
+            # minerals = 500
+            # alloys = 10
+        }
+        upkeep = {
+            # alloys = 0.2
+            # energy = 1
+            #mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_mineral|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 1
+    }
+}
+
+district_SRA_SD_food ={
+    icon = district_farming
+    base_buildtime = 1
+    # is_capped_by_modifier = no
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+	potential = {
+		exists = owner
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+    zone_slots = {
+        slot_SRA_SD
+    }
+    conversion_ratio = 1
+    resources = {
+        category = SRA_SD_productive_category
+        cost = {
+            # minerals = 500
+            # alloys = 10
+        }
+        upkeep = {
+            # alloys = 0.2
+            # energy = 1
+            #mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_food|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 1
+    }
+}
+
+district_SRA_SD_alloys = {
+    icon = district_arcology_industrial
+    base_buildtime = 1
+    # is_capped_by_modifier = no
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+	potential = {
+		exists = owner
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+    zone_slots = {
+        slot_SRA_SD
+    }
+    conversion_ratio = 1
+    resources = {
+        category = SRA_SD_productive_category
+        cost = {
+            # minerals = 500
+            # alloys = 10
+        }
+        upkeep = {
+            # alloys = 0.2
+            # energy = 1
+            #mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_alloys|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 1
+    }
+}
+
+district_SRA_SD_consumer_goods ={
+    icon = district_arcology_civilian_industry
+    base_buildtime = 1
+    # is_capped_by_modifier = no
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+	potential = {
+		exists = owner
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+    zone_slots = {
+        slot_SRA_SD
+    }
+    conversion_ratio = 1
+    resources = {
+        category = SRA_SD_productive_category
+        cost = {
+            # minerals = 500
+            # alloys = 10
+        }
+        upkeep = {
+            # alloys = 0.2
+            # energy = 1
+            #mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_consumer_goods|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 1
+    }
+}
+
+district_SRA_SD_research ={
+    icon = district_cosmogenesis_world_science
+    base_buildtime = 1
+    # is_capped_by_modifier = no
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+	potential = {
+		exists = owner
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+    zone_slots = {
+        slot_SRA_SD
+    }
+    conversion_ratio = 1
+    resources = {
+        category = SRA_SD_productive_category
+        cost = {
+            # minerals = 500
+            # alloys = 10
+        }
+        upkeep = {
+            # alloys = 0.2
+            # energy = 1
+            #mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_research|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 1
+    }
+}
+
+district_SRA_SD_rare ={
+    icon = district_SRA_SD_rare
+    base_buildtime = 1
+    # is_capped_by_modifier = no
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+	potential = {
+		exists = owner
+		uses_district_set = SRA_SD_chaos_star_habitable
+	}
+    zone_slots = {
+        slot_SRA_SD
+    }
+    conversion_ratio = 1
+    resources = {
+        category = SRA_SD_productive_category
+        cost = {
+            # minerals = 500
+            # alloys = 10
+        }
+        upkeep = {
+            # alloys = 0.2
+            # energy = 1
+            #mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_rare|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+        }
+    }
+    planet_modifier = {
+		mod_building_SRA_SD_energy_load_use = 1
+    }
+}
+
+# district_SRA_SD_astral_threads ={
+#     icon = district_nexus
+#     base_buildtime = 1
+#     # is_capped_by_modifier = no
+# 	show_on_uncolonized = {
+# 		exists = from
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+# 	potential = {
+# 		exists = owner
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+#     conversion_ratio = 1
+#     resources = {
+#         category = SRA_SD_productive_category
+#         cost = {
+#             minerals = 500
+#             alloys = 10
+#         }
+#         upkeep = {
+#             alloys = 1
+#             energy = 1
+#             mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_astral_threads|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+#         }
+#     }
+#     planet_modifier = {
+# 		mod_building_SRA_SD_energy_load_use = 1
+#     }
+# }
+
+# district_SRA_SD_dark ={
+#     icon = district_nexus
+#     base_buildtime = 1
+#     # is_capped_by_modifier = no
+# 	show_on_uncolonized = {
+# 		exists = from
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+# 	potential = {
+# 		exists = owner
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+#     conversion_ratio = 1
+#     resources = {
+#         category = SRA_SD_productive_category
+#         cost = {
+#             minerals = 500
+#             alloys = 10
+#         }
+#         upkeep = {
+#             alloys = 1
+#             energy = 1
+#             mult = value:SRA_planet_districts_modifier|districts|district_SRA_SD_dark|BaseMaintenance|2|MaintenanceGrowthFactor|0.08|MaintenancePower|1.8|
+#         }
+#     }
+#     planet_modifier = {
+# 		mod_building_SRA_SD_energy_load_use = 1
+#     }
+# }
+# #龙翼之影
+# district_SRA_RE_star_tower = {
+# 	base_buildtime = 1
+# 	is_capped_by_modifier = yes
+# 	icon = district_cosmogenesis_world_science
+# 	show_on_uncolonized = {
+# 		exists = from
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+
+# 	potential = {
+# 		exists = owner
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+	
+# 	conversion_ratio = 1
+# 	resources = {
+# 		category = planet_researchers
+# 		cost = {
+# 			alloys = 360
+# 		}
+# 		produces = {
+# 			physics_research = 0.25
+# 			society_research = 0.25
+# 			engineering_research = 0.25
+# 			multiplier = value:district_SRA_RE_star_vitality_value
+# 		}
+# 		upkeep = {
+# 			alloys = 0.25
+# 			consumer_goods = 0.1
+# 			multiplier = value:district_SRA_RE_star_vitality_value
+# 		}
+# 	}
+	
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = { is_gestalt = yes }
+# 		}
+# 		modifier = {
+# 			job_SRA_SD_chaos_explorer_drone_add = 4
+# 		}
+# 	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = {
+# 				is_gestalt = no
+# 				is_fallen_empire_spiritualist = no
+# 			}
+# 		}
+# 		modifier = {
+# 			job_SRA_SD_chaos_explorer_add = 4
+# 		}
+# 	}
+# 	triggered_desc = {
+# 		trigger = {
+# 			exists = owner
+# 			owner = { is_gestalt = no }
+# 		}
+# 		text = job_SRA_SD_chaos_explorer_effect_desc
+# 	}
+# 	triggered_desc = {
+# 		trigger = {
+# 			exists = owner
+# 			owner = { is_gestalt = yes }
+# 		}
+# 		text = job_SRA_SD_chaos_explorer_drone_effect_desc
+# 	}
+# }
+
+# district_SRA_RE_star_inner_ring = {
+# 	base_buildtime = 1
+# 	is_capped_by_modifier = yes
+# 	icon = district_nexus
+# 	show_on_uncolonized = {
+# 		exists = from
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+
+# 	potential = {
+# 		exists = owner
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+	
+# 	conversion_ratio = 1
+# 	resources = {
+# 		category = planet_metallurgists
+# 		cost = {
+# 			minerals = 720
+# 		}
+# 		produces = {
+# 			minerals = 0.1
+# 			alloys = 0.25
+# 			consumer_goods = 0.1
+# 			multiplier = value:district_SRA_RE_star_vitality_value
+# 		}
+# 		upkeep = {
+# 			energy = 0.25
+# 			minerals = 0.25
+# 			multiplier = value:district_SRA_RE_star_vitality_value
+# 		}
+# 	}
+# }
+# district_SRA_RE_star_outer_ring = {
+# 	base_buildtime = 1
+# 	# is_capped_by_modifier = no
+# 	icon = district_hab_housing
+# 	show_on_uncolonized = {
+# 		exists = from
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+# 	potential = {
+# 		exists = owner
+# 		uses_district_set = SRA_SD_chaos_star_habitable
+# 	}
+	
+# 	conversion_ratio = 1
+# 	resources = {
+# 		category = planet_farmers
+# 		cost = {
+# 			minerals = 720
+# 		}
+# 		produces = {
+# 			energy = 40
+# 			minerals = 40
+# 			food = 40
+# 			consumer_goods = 10
+# 			unity = 40
+# 		}
+# 	}
+# }

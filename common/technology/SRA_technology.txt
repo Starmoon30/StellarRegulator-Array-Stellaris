@@ -1,0 +1,1322 @@
+#####
+####???????????????####
+
+tech_SRA_T4_hidden_tech = {
+    icon = tech_SRA_T4_ship_Part
+	cost = @SRA_tier4cost1
+	area = engineering
+	tier = 0
+	category = { SRA_category }
+	weight = 0
+	is_reverse_engineerable = no
+
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T4_hidden_tech$"
+			desc = "$SRA_T4_hidden_tech_desc$"
+		}
+	}
+	ai_weight = {
+		factor = 0
+	}
+	potential = {
+		has_country_flag = SRA_Crisis_country
+	}
+}
+
+tech_SRA_RE_Core_tech = {
+    icon = tech_SRA_T4_ship_Part
+	cost = @SRA_tier4cost1
+	area = engineering
+	tier = 0
+	category = { SRA_category }
+	weight = 0
+	is_reverse_engineerable = no
+
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_RE_Core_tech$"
+			desc = "$SRA_RE_Core_tech_desc$"
+		}
+	}	
+	
+	
+	ai_weight = {
+		factor = 0
+	}
+	potential = {
+		has_country_flag = SRA_Crisis_country
+	}
+}
+###帝国线专属内容
+
+tech_SRA_GZ_repair = {
+    icon = anti_gravity_tech
+	cost = @SRA_tier3cost2
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$tech_SRA_GZ_repair$"
+			desc = "$tech_SRA_GZ_repair_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			has_civic = civic_SRARociviaEmpire
+		}		
+	}
+	
+	modifier = {
+	}
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		has_civic = civic_SRARociviaEmpire
+	}
+}
+
+#星规T4技术
+tech_SRA_T4_weapon_SML_Mass_Drivers = {
+    icon = tech_SRA_T4_weapon_SML_Mass_Drivers
+	cost = @SRA_tier4cost1
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 50
+	is_reverse_engineerable = no
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T4_weapon_SML_Mass_Drivers$"
+			desc = "$SRA_T4_weapon_SML_Mass_Drivers_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				end_game_years_passed < 0
+				NOT = { has_global_flag = SRA_AI_world_machine_oblivion }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_T4_tech_permit
+			}
+		}
+	}
+}
+
+tech_SRA_T4_weapon_TX_Laser = {
+    icon = tech_SRA_T4_weapon_T_Laser 
+	cost = @SRA_tier4cost1
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 50
+	is_reverse_engineerable = no
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T4_weapon_TX_Laser$"
+			desc = "$SRA_T4_weapon_TX_Laser_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				end_game_years_passed < 0
+				NOT = { has_global_flag = SRA_AI_world_machine_oblivion }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_T4_tech_permit
+			}
+		}
+	}
+}
+
+
+tech_SRA_T4_weapon_HGP_weapon = {
+    icon = tech_SRA_T4_weapon_HGP_weapon
+	cost = @SRA_tier4cost1
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 50
+	is_reverse_engineerable = no
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T4_weapon_HGP_weapon$"
+			desc = "$SRA_T4_weapon_HGP_weapon_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				end_game_years_passed < 0
+				NOT = { has_global_flag = SRA_AI_world_machine_oblivion }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_T4_tech_permit
+			}
+		}
+	}
+}
+
+tech_SRA_T4_ship_Part = {
+    icon = tech_SRA_T4_ship_Part
+	cost = @SRA_tier4cost1
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 50
+	is_reverse_engineerable = no
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T4_ship_Part$"
+			desc = "$SRA_T4_ship_Part_desc$"
+		}
+	}	
+	
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+
+	modifier = {
+		country_resource_max_add = 500000
+		command_limit_add = 300
+		country_resource_max_astral_threads_add = 320000
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				end_game_years_passed < 0
+				NOT = { has_global_flag = SRA_AI_world_machine_oblivion }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_T4_tech_permit
+			}
+		}
+	}
+}
+
+tech_SRA_T4_Armies = {
+    icon = tech_SRA_T4_Armies
+	cost = @SRA_tier4cost1
+	area = society
+	tier = 5
+	category = { SRA_category }
+	weight = 50
+	is_reverse_engineerable = no
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T4_Armies$"
+			desc = "$SRA_T4_Armies_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				end_game_years_passed < 0
+				NOT = { has_global_flag = SRA_AI_world_machine_oblivion }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_T4_tech_permit
+			}
+		}
+	}
+}
+tech_SRA_nano_shipyard = {
+    icon = tech_assembly_pattern
+	cost = @SRA_tier4cost1
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 50
+	is_reverse_engineerable = no
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$tech_SRA_nano_shipyard$"
+			desc = "$tech_SRA_nano_shipyard$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				end_game_years_passed < 0
+				NOT = { has_global_flag = SRA_AI_world_machine_oblivion }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_T4_tech_permit
+			}
+		}
+	}
+}
+tech_SRA_starbase_turret = {
+    icon = tech_SRA_T4_weapon_SML_Mass_Drivers
+	cost = @SRA_tier4cost1
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 50
+	is_reverse_engineerable = no
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$tech_SRA_starbase_turret$"
+			desc = "$tech_SRA_starbase_turret$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				end_game_years_passed < 0
+				NOT = { has_global_flag = SRA_AI_world_machine_oblivion }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_T4_tech_permit
+			}
+		}
+	}
+}
+tech_SRA_Barrier_megastructure_0 = {
+    icon = tech_SRA_T4_ship_Part
+	cost = @SRA_tier4cost1
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$tech_SRA_Barrier_megastructure_0$"
+			desc = "$tech_SRA_Barrier_megastructure_0_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				end_game_years_passed < 0
+				NOT = { has_global_flag = SRA_AI_world_machine_oblivion }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_T4_tech_permit
+			}
+		}
+	}
+}
+####限制级技术#####
+
+tech_SRA_T3_Wide_Area_Mind_Control = {
+    icon = tech_telepathy
+	cost = @SRA_tier3cost1
+	area = society
+	tier = 5
+	category = { psionics }
+	weight = 10
+	
+	prerequisites = { "tech_SRA_T3_Composite_Crystal_Lattice" "tech_mine_zro"}
+	is_dangerous = yes
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_Wide_Area_Mind_Control$"
+			desc = "$SRA_T3_Wide_Area_Mind_Control_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		has_country_flag = StellarRegulator_Array_restricted_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+tech_SRA_T3_Directional_Thinking_Patterns_Erase = {
+    icon = tech_collective_self
+	cost = @SRA_tier3cost1
+	area = society
+	tier = 5
+	category = { biology }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_Composite_Crystal_Lattice" "tech_synthetic_thought_patterns"}
+	is_dangerous = yes
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_Directional_Thinking_Patterns_Erase$"
+			desc = "$SRA_T3_Directional_Thinking_Patterns_Erase_desc$"
+		}
+	}	
+	modifier = {
+		pop_slave_bonus_workforce_mult = 0.2
+		pop_slave_political_power = -10
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		has_country_flag = StellarRegulator_Array_restricted_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+tech_SRA_Erlius_trait = {
+    icon = tech_collective_self
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { biology }
+	weight = 0
+
+	prerequisites = { }
+	is_dangerous = yes
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$tech_SRA_Erlius_trait$"
+			desc = "$tech_SRA_Erlius_trait_desc$"
+		}
+	}	
+	modifier = {
+		
+	}
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		always = no
+		has_country_flag = StellarRegulator_Array_restricted_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+####T3复合晶格技术####
+tech_SRA_T3_Composite_Crystal_Lattice = {
+    icon = tech_mine_teldar
+	cost = @SRA_tier3cost2
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_Composite_Crystal_Lattice$"
+			desc = "$SRA_T3_Composite_Crystal_Lattice_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			OR = {
+				has_civic = civic_SRAtechnology
+				AND = {
+					has_civic = civic_SRARociviaEmpire
+					has_country_flag = SRA_RE_Rocivia_SP_2_Finished
+				}
+		    }	
+		}		
+	}
+	
+	modifier = {
+		command_limit_add = 300
+		#country_government_civic_points_add = 2
+		add_base_country_intel = 20
+		country_resource_max_astral_threads_add = 40000
+	}
+	ai_weight = {
+		factor = 1000
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+tech_SRA_T3_Crystal_Node = {
+    icon = tech_SRA_T3_Crystal_Node
+	cost = @SRA_tier3cost1
+	area = society
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_Composite_Crystal_Lattice" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_Crystal_Node$"
+			desc = "$SRA_T3_Crystal_Node_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+tech_SRA_T3_Planet_Mobilization = {
+    icon = tech_deep_scan
+	cost = @SRA_tier3cost1
+	area = society
+	tier = 5
+	category = { new_worlds }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_Composite_Crystal_Lattice" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_Planet_Mobilization$"
+			desc = "$SRA_T3_Planet_Mobilization_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+tech_SRA_T3_Recovery_Nest = {
+    icon = tech_SRA_T3_Recovery_Nest
+	cost = @SRA_tier3cost1
+	area = society
+	tier = 5
+	category = { biology }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_Composite_Crystal_Lattice" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_Recovery_Nest$"
+			desc = "$SRA_T3_Recovery_Nest_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+tech_SRA_T3_Singularity_Gravitation_Control = {
+    icon = tech_wormhole_stabilization
+	cost = @SRA_tier3cost1
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_Composite_Crystal_Lattice" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_Singularity_Gravitation_Control$"
+			desc = "$SRA_T3_Singularity_Gravitation_Control_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+tech_SRA_T3_weapon_SML_Plasma = {
+    icon = tech_SRA_T3_weapon_SML_Plasma
+	cost = @SRA_tier3cost1
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+
+	ai_update_type = all
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_weapon_SML_Plasma$"
+			desc = "$SRA_T3_weapon_SML_Plasma_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+tech_SRA_T3_weapon_TX_Laser = {
+    icon = tech_SRA_T3_weapon_T_Laser
+	cost = @SRA_tier3cost1
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_weapon_TX_Laser$"
+			desc = "$SRA_T3_weapon_TX_Laser_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+tech_SRA_T3_weapon_HGP_weapon = {
+    icon = tech_SRA_T3_weapon_HGP_weapon
+	cost = @SRA_tier3cost1
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_weapon_HGP_weapon$"
+			desc = "$SRA_T3_weapon_HGP_weapon_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+tech_SRA_T3_ship_Part = {
+    icon = tech_SRA_T3_ship_Part
+	cost = @SRA_tier3cost1
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T3_Composite_Crystal_Lattice" }
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T3_ship_Part$"
+			desc = "$SRA_T3_ship_Part_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+######T2星辉水晶技术#######
+tech_SRA_T2_weapon_SML_Laser = {
+    icon = tech_SRA_T2_weapon_SML_Laser
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T2_weapon_SML_Plasma$"
+			desc = "$SRA_T2_weapon_SML_Plasma_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+tech_SRA_T2_weapon_TX_Laser = {
+    icon = tech_SRA_T2_weapon_T_Laser
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T2_weapon_TX_Laser$"
+			desc = "$SRA_T2_weapon_TX_Laser_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+tech_SRA_T2_weapon_HGP_weapon = {
+    icon = tech_SRA_T2_weapon_HGP_weapon
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T2_weapon_HGP_weapon$"
+			desc = "$SRA_T2_weapon_HGP_weapon_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+tech_SRA_T2_ship_Part = {
+    icon = tech_SRA_T2_ship_Part
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T2_ship_Part$"
+			desc = "$SRA_T2_ship_Part_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+
+######T1水晶初型技术#####
+tech_SRA_T1_weapon_SML_Space_Whale_Weapon = {
+    icon = tech_SRA_T1_weapon_SML_Space_Whale_Weapon
+	cost = @tier3cost3
+	area = physics
+	tier = 4
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T1_weapon_SML_Space_Whale_Weapon$"
+			desc = "$SRA_T1_weapon_SML_Space_Whale_Weapon_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+tech_SRA_T1_weapon_TX_Laser = {
+    icon = tech_SRA_T1_weapon_T_Laser
+	cost = @tier3cost3
+	area = physics
+	tier = 4
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T1_weapon_TX_Laser$"
+			desc = "$SRA_T1_weapon_TX_Laser_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+tech_SRA_T1_weapon_HGP_weapon = {
+    icon = tech_SRA_T1_weapon_HGP_weapon
+	cost = @tier3cost3
+	area = engineering
+	tier = 4
+	category = { SRA_category }
+	weight = 10
+
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T1_weapon_HGP_weapon$"
+			desc = "$SRA_T1_weapon_HGP_weapon_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}
+
+tech_SRA_T1_ship_Part = {
+    icon = tech_SRA_T1_ship_Part
+	cost = @tier3cost3
+	area = engineering
+	tier = 4
+	category = { SRA_category }
+	weight = 10
+
+
+	prerequisites = { "tech_zero_point_power" }
+	prereqfor_desc = {
+		diplo_action = {
+			title = "$SRA_T1_ship_Part$"
+			desc = "$SRA_T1_ship_Part_desc$"
+		}
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}			
+		}		
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			AND = {
+				has_country_flag = SRA_RE_Rocivia_SP_1_Finished
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+		OR = {
+			is_ai = no
+			has_global_flag = SRA_AI_tech_permit
+		}
+	}
+}
+
+
+
+
+#树海之艺
+tech_SRA_SD_ship_Part = {
+    icon = tech_SRA_SD_ship_Part
+	cost = @SRA_tier4cost1
+	area = physics
+	tier = 5
+	category = { SRA_SD_category }
+	weight = 50
+	is_reverse_engineerable = no
+
+	prerequisites = { "tech_zero_point_power" }
+
+	ai_update_type = all
+
+	prereqfor_desc = {
+	}	
+	
+	weight_modifier = {
+		modifier = {
+			factor = 100
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+	potential = {
+		OR = {
+			AND = {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+			}
+		}
+	}
+}

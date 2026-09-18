@@ -1,0 +1,268 @@
+create_SRA_Crisis_Fort = {
+	optimize_memory
+    create_ship = {
+        name = random
+        design = "NAME_SRA_Crisis_Fort"
+        effect = { 
+            set_ship_flag = SRA_Crisis_Fort
+        }
+    }
+}
+create_SRA_Crisis_Mark = {
+	optimize_memory
+    create_ship = {
+        name = random
+        design = "NAME_SRA_Crisis_Mark"
+        effect = { 
+            set_ship_flag = SRA_Crisis_Mark
+        }
+    }
+}
+
+
+# scope = fleet (portal)
+SRA_spawn_fleets_insane_1 = {
+	optimize_memory
+    while = { count = 3
+	country_event = { id = SRA_Crisis.3040 days = 40 }
+    }
+    country_event = { id = SRA_Crisis.3040 days = 360 } 
+    country_event = { id = SRA_Crisis.3040 days = 480 } 
+    country_event = { id = SRA_Crisis.3040 days = 600 }
+    country_event = { id = SRA_Crisis.3040 days = 720 }
+    country_event = { id = SRA_Crisis.3040 days = 840 }
+}
+SRA_spawn_fleets_insane_2 = {
+	optimize_memory
+    while = { count = 3
+        country_event = { id = SRA_Crisis.3041 days = 40 }
+    }
+    country_event = { id = SRA_Crisis.3041 days = 360 } 
+    country_event = { id = SRA_Crisis.3041 days = 480 } 
+    country_event = { id = SRA_Crisis.3041 days = 600 }
+    country_event = { id = SRA_Crisis.3041 days = 720 }
+    country_event = { id = SRA_Crisis.3041 days = 840 }
+}
+
+SRA_spawn_fleets_insane_3 = {
+	optimize_memory
+    while = { count = 3
+        country_event = { id = SRA_Crisis.3042 days = 40 }
+    }
+    country_event = { id = SRA_Crisis.3042 days = 360 } 
+    country_event = { id = SRA_Crisis.3042 days = 480 } 
+    country_event = { id = SRA_Crisis.3042 days = 600 }
+    country_event = { id = SRA_Crisis.3042 days = 720 }
+    country_event = { id = SRA_Crisis.3042 days = 840 }
+}
+
+SRA_spawn_fleets_insane_4 = {
+	optimize_memory
+    while = { count = 3
+        country_event = { id = SRA_Crisis.3043 days = 40 }
+    }
+    country_event = { id = SRA_Crisis.3043 days = 360 } 
+    country_event = { id = SRA_Crisis.3043 days = 480 } 
+    country_event = { id = SRA_Crisis.3043 days = 600 }
+    country_event = { id = SRA_Crisis.3043 days = 720 }
+    country_event = { id = SRA_Crisis.3043 days = 840 }
+}
+
+SRA_spawn_fleets_insane_5 = {
+	optimize_memory
+    while = { count = 3
+        country_event = { id = SRA_Crisis.3044 days = 40 }
+    }
+    country_event = { id = SRA_Crisis.3044 days = 360 } 
+    country_event = { id = SRA_Crisis.3044 days = 480 } 
+    country_event = { id = SRA_Crisis.3044 days = 600 }
+    country_event = { id = SRA_Crisis.3044 days = 720 }
+    country_event = { id = SRA_Crisis.3044 days = 840 }
+}
+
+SRA_spawn_fleets_insane_6 = {
+    while = { count = 3
+        country_event = { id = SRA_Crisis.3045 days = 40 }
+    }
+    country_event = { id = SRA_Crisis.3045 days = 360 } 
+    country_event = { id = SRA_Crisis.3045 days = 480 } 
+    country_event = { id = SRA_Crisis.3045 days = 600 }
+    country_event = { id = SRA_Crisis.3045 days = 720 }
+    country_event = { id = SRA_Crisis.3045 days = 840 }
+}
+SRA_spawn_fleets_insane_7 = {
+	optimize_memory
+    while = { count = 3
+        country_event = { id = SRA_Crisis.3046 days = 40 }
+    }
+    country_event = { id = SRA_Crisis.3046 days = 360 } 
+    country_event = { id = SRA_Crisis.3046 days = 480 } 
+    country_event = { id = SRA_Crisis.3046 days = 600 }
+    country_event = { id = SRA_Crisis.3046 days = 720 }
+    country_event = { id = SRA_Crisis.3046 days = 840 }
+}
+
+# scope = country
+SRA_enable_crisis_country_orbital_bombardment = {
+	optimize_memory
+	set_country_flag = UGRC_flg_cntr_RULE_can_bomb
+}
+
+
+initialize_SRA_Crisis_system_select = {
+	optimize_memory
+	every_system = {
+		limit = { 
+			OR = {
+				any_country = {
+					is_country_type = default
+					capital_scope = {
+						solar_system = {
+							is_same_value = PREVPREVPREV
+						}
+					}
+				}
+			}
+		}
+		set_timed_star_flag = { flag = forbit_spawn_system days = 1 }
+	}
+	every_system = {
+		limit = {
+			NOT = { has_star_flag = forbit_spawn_system }
+			OR = { #狡猾人老家		
+				has_star_flag = Kuat_empire_system
+				has_star_flag = kuat_initial_system
+				has_star_flag = Kuat_system_int
+				has_star_flag = Kuat_system_int_1
+				has_star_flag = Kuat_system_int_2
+				has_star_flag = Kuat_system_int_3
+				has_star_flag = Kuat_system_int_4	
+				has_star_flag = ag_kae_e_area_system 
+				has_star_flag = starkiller_system
+				has_star_flag = ag_no_jump_in_system
+				has_star_flag = eternal_origin_starbase_megastructure_in_system
+				closest_system = {
+					max_steps = 3
+					limit = {
+						has_star_flag = forbit_spawn_system
+					}
+				}
+			}
+		}
+		set_timed_star_flag = { flag = forbit_spawn_system days = 1 }
+	}
+}
+
+initialize_SRA_second_portal_system_select = {
+	optimize_memory
+	every_system = {
+		limit = {
+			NOT = { has_star_flag = forbit_spawn_system }
+			closest_system = {
+				max_steps = 10
+				has_star_flag = SRA_first_portal_system
+			}
+		}
+		set_timed_star_flag = { flag = forbit_spawn_system days = 1 }
+	}
+}
+
+initialize_SRA_third_portal_system_select = {
+	optimize_memory
+	every_system = {
+		limit = {
+			NOT = { has_star_flag = forbit_spawn_system }
+			closest_system = {
+				max_steps = 10
+				OR = {
+					has_star_flag = SRA_first_portal_system
+					has_star_flag = SRA_second_portal_system
+				}
+			}
+		}
+		set_timed_star_flag = { flag = forbit_spawn_system days = 1 }
+	}
+}
+
+
+initialize_SRA_fourth_portal_system_select = {
+	optimize_memory
+	every_system = {
+		limit = {
+			NOT = { has_star_flag = forbit_spawn_system }
+			closest_system = {
+				max_steps = 10
+				OR = {
+					has_star_flag = SRA_first_portal_system
+					has_star_flag = SRA_second_portal_system
+					has_star_flag = SRA_third_portal_system
+				}
+			}
+		}
+		set_timed_star_flag = { flag = forbit_spawn_system days = 1 }
+	}
+}
+
+
+initialize_SRA_fifth_portal_system_select = {
+	optimize_memory
+	every_system = {
+		limit = {
+			NOT = { has_star_flag = forbit_spawn_system }
+			closest_system = {
+				max_steps = 10
+				OR = {
+					has_star_flag = SRA_first_portal_system
+					has_star_flag = SRA_second_portal_system
+					has_star_flag = SRA_third_portal_system
+					has_star_flag = SRA_fourth_portal_system
+				}
+			}
+		}
+		set_timed_star_flag = { flag = forbit_spawn_system days = 1 }
+	}
+}
+
+
+initialize_SRA_sixth_portal_system_select = {
+	optimize_memory
+	every_system = {
+		limit = {
+			NOT = { has_star_flag = forbit_spawn_system }
+			closest_system = {
+				max_steps = 10
+				OR = {
+					has_star_flag = SRA_first_portal_system
+					has_star_flag = SRA_second_portal_system
+					has_star_flag = SRA_third_portal_system
+					has_star_flag = SRA_fourth_portal_system
+					has_star_flag = SRA_fifth_portal_system
+				}
+			}
+		}
+		set_timed_star_flag = { flag = forbit_spawn_system days = 1 }
+	}
+}
+
+
+initialize_SRA_seventh_portal_system_select = {
+	optimize_memory
+	every_system = {
+		limit = {
+			NOT = { has_star_flag = forbit_spawn_system }
+			closest_system = {
+				max_steps = 10
+				OR = {
+					has_star_flag = SRA_first_portal_system
+					has_star_flag = SRA_second_portal_system
+					has_star_flag = SRA_third_portal_system
+					has_star_flag = SRA_fourth_portal_system
+					has_star_flag = SRA_fifth_portal_system
+					has_star_flag = SRA_sixth_portal_system
+				}
+			}
+		}
+		set_timed_star_flag = { flag = forbit_spawn_system days = 1 }
+	}
+}
+

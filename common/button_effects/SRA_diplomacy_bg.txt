@@ -1,0 +1,192 @@
+#######################################################################
+# 
+# 此mod附带的背景均为公共素材,可随意使用
+# 
+#######################################################################
+SRA_diplomacy_button_log_effect = {
+	potential = { always = no }
+	allow = { always = no }
+	effect = {
+
+	}
+}
+SRA_diplomacy_title = {
+	potential = { }
+	allow = { always = yes }
+	effect = {}
+}
+#######################
+# 背景
+#######################
+# 背景大小为1468*780,可用dtx3压缩
+# 在gfx编写sprite时需加上 masking_texture = "gfx/interface/SRA_diplomacy/gal_bg_mask.dds"
+# 背景使用变量SRA_diplomacy_bg更改,新增背景后请在gui加上新增的背景,最好不要修改变量名
+# 具体增加方法为：
+# 0. 在ps里导出上述大小的背景图
+# 1. 在gfx里按照上述格式写好sprite
+# 2. 复制以下任一项button effect并更改名字和变量判断的数值
+# 3. 于00_SRA_diplomacy.gui和00_SRA_diplomacy_no_option.gui文件的背景处复制加上一项effect button type
+# 4. 将复制的effect button type的quadTextureSprite修改为在gfx文件里写好的sprite
+# 5. 将复制的effect button type的effect修改为在本文件新增的button effect
+# 6. 若你使用自定义立绘,请最好直接复制并修改上述两个gui文件,并将立绘的effect button type清空替换至你的button effect
+# 同时最好也复制修改背景和立绘的button effect和控制变量以防与本mod内容冲突
+
+# SRA_alien_city 其他星球城市
+SRA_diplomacy_bg1_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 1 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_signal_city 星规阵列城市
+SRA_diplomacy_bg2_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 2 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_command_center 指挥中心
+SRA_diplomacy_bg3_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 3 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_Calamitisease_bg 灾疫背景
+SRA_diplomacy_bg4_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 4 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_Calamitisease_bule_bg 灾疫蓝色背景
+SRA_diplomacy_bg5_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 5 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_paragon_azaryn_room 一堆树
+SRA_diplomacy_bg6_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 6 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_paragon_keides_room 星空舱室
+SRA_diplomacy_bg7_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 6 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_paragon_skrand_room 舰桥
+SRA_diplomacy_bg8_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 8 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_salvagers_room 军工厂
+SRA_diplomacy_bg9_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 9 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_shroud_room 虚境
+SRA_diplomacy_bg10_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 10 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_shroudwalkers_room 蓝色虚境导师背景
+SRA_diplomacy_bg11_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 11 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_solarpunk_01_city 太阳朋克城市
+SRA_diplomacy_bg12_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 12 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_solarpunk_room 太阳朋克房间
+SRA_diplomacy_bg13_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 13 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_specialist_prospectorium_room 地理学房间
+SRA_diplomacy_bg14_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 14 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# SRA_specialist_scholarium_room 普通科学家房间
+SRA_diplomacy_bg15_effect = {
+	potential = {
+		FROM = { check_variable = { which = SRA_diplomacy_bg value = 15 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+#认知滤网
+SRA_diplomacy_name_cognitive_filtration_effect = {
+	potential = {
+		FROM = {
+			OR = {
+				has_country_flag = SRA_diplomacy_name_cognitive_filtration_flag_1
+			}
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_nothing_effect = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_ESCAPE_effect = {
+	potential = {
+		NOT = {
+			has_country_flag = SRA_SD_Story_event.3.b_flag
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_focus_button_effect = {
+	potential = {
+		from = {
+			OR = {
+				has_country_flag = SRA_lost_capital
+			}
+		}
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = SRA_Rokia.8199.b.tooltip
+	}
+}

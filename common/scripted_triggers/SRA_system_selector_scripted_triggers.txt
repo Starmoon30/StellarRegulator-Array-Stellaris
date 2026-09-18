@@ -1,0 +1,951 @@
+# SRA_T4_weapon_planet_killer_selector_trigger = {
+# 	optimize_memory
+# 	OR = {
+# 		hidden_trigger = { root = { NOT = { has_country_flag = SRA_enabled_SRA_T4_weapon_planet_killer_selector } } }
+# 		AND = {
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_a_star_star_killer"
+# 				event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = { NOT = { is_star_class = sc_ag_void } }
+# 			}
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_no_compact_star_star_killer"
+# 				event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = { NOT = { is_star_class = sc_black_hole } }
+# 			}
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_outside_border_star_killer"
+# 				event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = { NAND = {
+# 					is_inside_border = root
+# 					any_system_planet = {
+# 						OR = {
+# 							is_colony = yes
+# 							is_under_colonization = yes
+# 						}
+# 					}
+# 				} }
+# 			}
+# 			# custom_tooltip = {
+# 			# 	fail_text = "SRA_requires_declares_war_star_killer"
+# 			# 	event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = { OR = {
+# 			# 		is_inside_border = root
+# 			# 		NOT = { exists = space_owner }
+# 			# 		AND = { exists = space_owner space_owner = { is_hostile = root } }
+# 			# 	} }
+# 			# }
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_no_ancient_system"
+# 				event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = {
+# 					SRA_is_ancient_system = no
+# 					NOT = { any_ship_in_system = { OR = {
+# 						is_ship_size = ag_gamma_station_hostile
+# 						is_ship_size = ag_gamma_station_small_hostile
+# 						is_ship_size = ag_gamma_station_small_moving_hostile
+# 					} } }
+# 				}
+# 			}
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_no_zeta_crisis_system"
+# 				event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = { NOT = {
+# 					any_ship_in_system = { OR = {
+# 						is_ship_size = ag_zeta_crisis_portal
+# 						is_ship_size = ag_zeta_crisis_psionic_storm
+# 						is_ship_size = ag_zeta_crisis_psionic_singularity
+# 					} }
+# 				} }
+# 			}
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_no_exd_system"
+# 				event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = { NOT = {
+# 					any_ship_in_system = { is_ship_size = dimensional_portal_ed }
+# 				} }
+# 			}
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_no_contingency_system"
+# 				event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = { NOT = {
+# 					any_system_planet = {
+# 						is_planet_class = pc_ai
+# 						exists = owner
+# 						owner = { is_country_type = ai_empire }
+# 					}
+# 				} }
+# 			}
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_no_special_system"
+# 				event_target:SRA_system_selector_marked_system_[[SRA_system_seq]$SRA_system_seq$] = { SRA_is_special_system = no }
+# 			}
+# 			custom_tooltip = {
+# 				fail_text = "SRA_requires_no_too_many_targets"
+# 				OR = {
+# 					SRA_system_selector_system_selected_trigger = { SRA_system_seq = $SRA_system_seq$ }
+# 					root = { check_variable = { which = SRA_num_system_selector_selected_systems value < 5 } }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+#
+#
+# SRA_system_selector_allowance_check = {
+# 	optimize_memory
+# 	SRA_T4_weapon_planet_killer_selector_trigger = { SRA_system_seq = $SRA_system_seq$ }
+# }
+#
+# SRA_countries_list_selected_trigger = {
+# 	optimize_memory
+# 	OR = {
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 1 }
+# 			has_country_flag = SRA_countries_list_selected_1_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 2 }
+# 			has_country_flag = SRA_countries_list_selected_2_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 3 }
+# 			has_country_flag = SRA_countries_list_selected_3_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 4 }
+# 			has_country_flag = SRA_countries_list_selected_4_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 5 }
+# 			has_country_flag = SRA_countries_list_selected_5_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 6 }
+# 			has_country_flag = SRA_countries_list_selected_6_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 7 }
+# 			has_country_flag = SRA_countries_list_selected_7_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 8 }
+# 			has_country_flag = SRA_countries_list_selected_8_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 9 }
+# 			has_country_flag = SRA_countries_list_selected_9_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 10 }
+# 			has_country_flag = SRA_countries_list_selected_10_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 11 }
+# 			has_country_flag = SRA_countries_list_selected_11_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 12 }
+# 			has_country_flag = SRA_countries_list_selected_12_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 13 }
+# 			has_country_flag = SRA_countries_list_selected_13_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 14 }
+# 			has_country_flag = SRA_countries_list_selected_14_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 15 }
+# 			has_country_flag = SRA_countries_list_selected_15_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 16 }
+# 			has_country_flag = SRA_countries_list_selected_16_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 17 }
+# 			has_country_flag = SRA_countries_list_selected_17_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 18 }
+# 			has_country_flag = SRA_countries_list_selected_18_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 19 }
+# 			has_country_flag = SRA_countries_list_selected_19_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 20 }
+# 			has_country_flag = SRA_countries_list_selected_20_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 21 }
+# 			has_country_flag = SRA_countries_list_selected_21_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 22 }
+# 			has_country_flag = SRA_countries_list_selected_22_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 23 }
+# 			has_country_flag = SRA_countries_list_selected_23_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 24 }
+# 			has_country_flag = SRA_countries_list_selected_24_$SRA_country_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_countries_page value = 25 }
+# 			has_country_flag = SRA_countries_list_selected_25_$SRA_country_seq$
+# 		}
+# 	}
+# }
+# SRA_star_classes_list_selected_trigger = {
+# 	optimize_memory
+# 	OR = {
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_star_classes_page value = 1 }
+# 			has_country_flag = SRA_star_classes_list_selected_1_$SRA_sc_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_star_classes_page value = 2 }
+# 			has_country_flag = SRA_star_classes_list_selected_2_$SRA_sc_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_star_classes_page value = 3 }
+# 			has_country_flag = SRA_star_classes_list_selected_3_$SRA_sc_seq$
+# 		}
+# 		AND = {
+# 			check_variable = { which = SRA_system_selector_star_classes_page value = 4 }
+# 			has_country_flag = SRA_star_classes_list_selected_4_$SRA_sc_seq$
+# 		}
+# 	}
+# }
+#
+# SRA_is_sc_void = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_SRA_void
+# 		NOT = { exists = star }
+# 	}
+# }
+# SRA_is_sc_a = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_a
+# 		AND = {
+# 			has_global_flag = "has_real_space_mod"
+# 			is_star_class = sc_a_super
+# 		}
+# 	}
+# }
+# SRA_is_sc_b = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_b
+# 		AND = {
+# 			has_global_flag = "has_real_space_mod"
+# 			is_star_class = sc_b_super
+# 		}
+# 	}
+# }
+# SRA_is_sc_f = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_f
+# 		AND = {
+# 			has_global_flag = "has_real_space_mod"
+# 			is_star_class = sc_f_super
+# 		}
+# 	}
+# }
+# SRA_is_sc_g = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_g
+# 		AND = {
+# 			has_global_flag = "has_real_space_mod"
+# 			OR = {
+# 				is_star_class = sc_g_giant
+# 				is_star_class = sc_g_super
+# 			}
+# 		}
+# 	}
+# }
+# SRA_is_sc_k = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_k
+# 		AND = {
+# 			has_global_flag = "has_real_space_mod"
+# 			OR = {
+# 				is_star_class = sc_k_giant
+# 				is_star_class = sc_k_super
+# 			}
+# 		}
+# 	}
+# }
+# SRA_is_sc_m = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_m
+# 		is_star_class = sc_m_giant
+# 		AND = {
+# 			has_global_flag = "has_real_space_mod"
+# 			OR = {
+# 				is_star_class = sc_m_super
+# 				is_star_class = sc_m_hyper
+# 			}
+# 		}
+# 	}
+# }
+# SRA_is_sc_t = { is_star_class = sc_t }
+# SRA_is_sc_pulsar = { is_star_class = sc_pulsar }
+# SRA_is_sc_neutron = { is_star_class = sc_neutron_star }
+# SRA_is_sc_black_hole = { is_star_class = sc_black_hole }
+# SRA_is_sc_bi = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_binary_1
+# 		is_star_class = sc_binary_2
+# 		is_star_class = sc_binary_3
+# 		is_star_class = sc_binary_4
+# 		is_star_class = sc_binary_5
+# 		is_star_class = sc_binary_6
+# 		is_star_class = sc_binary_7
+# 		is_star_class = sc_binary_8
+# 		is_star_class = sc_binary_9
+# 		is_star_class = sc_binary_10
+# 		AND = {
+# 			has_global_flag = "has_real_space_mod"
+# 			OR = {
+# 				is_star_class = sc_binary_pl_pl
+# 				is_star_class = sc_binary_pl_n
+# 				is_star_class = sc_binary_o_o
+# 				is_star_class = sc_binary_o_b
+# 				is_star_class = sc_binary_o_a
+# 				is_star_class = sc_binary_os_o
+# 				is_star_class = sc_binary_os_b
+# 				is_star_class = sc_binary_os_a
+# 				is_star_class = sc_binary_b_a
+# 				is_star_class = sc_binary_b_f
+# 				is_star_class = sc_binary_bs_b
+# 				is_star_class = sc_binary_a_a
+# 				is_star_class = sc_binary_a_g
+# 				is_star_class = sc_binary_a_k
+# 				is_star_class = sc_binary_a_m
+# 				is_star_class = sc_binary_as_a
+# 				is_star_class = sc_binary_as_b
+# 				is_star_class = sc_binary_as_f
+# 				is_star_class = sc_binary_f_f
+# 				is_star_class = sc_binary_fs_b
+# 				is_star_class = sc_binary_fs_a
+# 				is_star_class = sc_binary_fs_f
+# 				is_star_class = sc_binary_g_g
+# 				is_star_class = sc_binary_g_k
+# 				is_star_class = sc_binary_gg_g
+# 				is_star_class = sc_binary_gg_k
+# 				is_star_class = sc_binary_gg_f
+# 				is_star_class = sc_binary_gs_gg
+# 				is_star_class = sc_binary_gs_mg
+# 				is_star_class = sc_binary_k_k
+# 				is_star_class = sc_binary_k_m
+# 				is_star_class = sc_binary_kg_a
+# 				is_star_class = sc_binary_kg_k
+# 				is_star_class = sc_binary_kg_g
+# 				is_star_class = sc_binary_kg_m
+# 				is_star_class = sc_binary_ks_b
+# 				is_star_class = sc_binary_kg_gg
+# 				is_star_class = sc_binary_ks_kg
+# 				is_star_class = sc_binary_ks_mg
+# 				is_star_class = sc_binary_m_m
+# 				is_star_class = sc_binary_mg_mg
+# 				is_star_class = sc_binary_mg_m
+# 				is_star_class = sc_binary_mg_g
+# 				is_star_class = sc_binary_mg_k
+# 				is_star_class = sc_binary_ms_gg
+# 				is_star_class = sc_binary_ms_mg
+# 				is_star_class = sc_binary_o_l
+# 				is_star_class = sc_binary_b_l
+# 				is_star_class = sc_binary_a_l
+# 				is_star_class = sc_binary_f_l
+# 				is_star_class = sc_binary_g_l
+# 				is_star_class = sc_binary_k_l
+# 				is_star_class = sc_binary_m_l
+# 				is_star_class = sc_binary_o_t
+# 				is_star_class = sc_binary_b_t
+# 				is_star_class = sc_binary_f_t
+# 				is_star_class = sc_binary_g_t
+# 				is_star_class = sc_binary_m_t
+# 				is_star_class = sc_binary_o_y
+# 				is_star_class = sc_binary_b_y
+# 				is_star_class = sc_binary_f_y
+# 				is_star_class = sc_binary_g_y
+# 				is_star_class = sc_binary_k_y
+# 				is_star_class = sc_binary_m_y
+# 				is_star_class = sc_binary_o_d
+# 				is_star_class = sc_binary_b_d
+# 				is_star_class = sc_binary_a_d
+# 				is_star_class = sc_binary_f_d
+# 				is_star_class = sc_binary_g_d
+# 				is_star_class = sc_binary_k_d
+# 				is_star_class = sc_binary_m_d
+# 				is_star_class = sc_binary_ms_d
+# 			}
+# 		}
+# 	}
+# }
+# SRA_is_sc_tri = {
+# 	optimize_memory
+# 	OR = {
+# 		is_star_class = sc_trinary_1
+# 		is_star_class = sc_trinary_2
+# 		is_star_class = sc_trinary_3
+# 		is_star_class = sc_trinary_4
+# 		AND = {
+# 			has_global_flag = "has_real_space_mod"
+# 			OR = {
+# 				is_star_class = sc_trinary_o_b_b
+# 				is_star_class = sc_trinary_o_b_a
+# 				is_star_class = sc_trinary_os_b_b
+# 				is_star_class = sc_trinary_b_b_b
+# 				is_star_class = sc_trinary_b_a_a
+# 				is_star_class = sc_trinary_b_b_f
+# 				is_star_class = sc_trinary_b_f_g
+# 				is_star_class = sc_trinary_b_k_m
+# 				is_star_class = sc_trinary_b_m_m
+# 				is_star_class = sc_trinary_bs_b_b
+# 				is_star_class = sc_trinary_bs_b_g
+# 				is_star_class = sc_trinary_bs_kg_m
+# 				is_star_class = sc_trinary_a_a_a
+# 				is_star_class = sc_trinary_a_f_g
+# 				is_star_class = sc_trinary_a_a_m
+# 				is_star_class = sc_trinary_as_k_m
+# 				is_star_class = sc_trinary_as_gg_m
+# 				is_star_class = sc_trinary_f_f_f
+# 				is_star_class = sc_trinary_f_k_k
+# 				is_star_class = sc_trinary_f_k_m
+# 				is_star_class = sc_trinary_fs_f_f
+# 				is_star_class = sc_trinary_fs_kg_m
+# 				is_star_class = sc_trinary_g_m_m
+# 				is_star_class = sc_trinary_g_g_g
+# 				is_star_class = sc_trinary_g_k_k
+# 				is_star_class = sc_trinary_gg_f_m
+# 				is_star_class = sc_trinary_gg_mg_k
+# 				is_star_class = sc_trinary_gs_gg_m
+# 				is_star_class = sc_trinary_gs_f_k
+# 				is_star_class = sc_trinary_k_k_m
+# 				is_star_class = sc_trinary_k_k_k
+# 				is_star_class = sc_trinary_ks_gg_m
+# 				is_star_class = sc_trinary_ks_b_a
+# 				is_star_class = sc_trinary_ks_m_m
+# 				is_star_class = sc_trinary_m_m_m
+# 				is_star_class = sc_trinary_mg_g_k
+# 				is_star_class = sc_trinary_mg_a_f
+# 				is_star_class = sc_trinary_ms_b_a
+# 				is_star_class = sc_trinary_ms_kg_b
+# 				is_star_class = sc_trinary_ms_mg_mg
+# 				is_star_class = sc_trinary_b_l_t
+# 				is_star_class = sc_trinary_b_t_y
+# 				is_star_class = sc_trinary_a_l_t
+# 				is_star_class = sc_trinary_a_t_y
+# 				is_star_class = sc_trinary_f_l_t
+# 				is_star_class = sc_trinary_f_t_y
+# 				is_star_class = sc_trinary_g_l_t
+# 				is_star_class = sc_trinary_g_t_t
+# 				is_star_class = sc_trinary_g_t_y
+# 				is_star_class = sc_trinary_k_l_t
+# 				is_star_class = sc_trinary_k_t_t
+# 				is_star_class = sc_trinary_k_t_y
+# 				is_star_class = sc_trinary_m_l_t
+# 				is_star_class = sc_trinary_m_t_t
+# 				is_star_class = sc_trinary_m_t_y
+# 				is_star_class = sc_trinary_b_a_d
+# 				is_star_class = sc_trinary_bs_mg_d
+# 				is_star_class = sc_trinary_a_f_d
+# 				is_star_class = sc_trinary_as_g_d
+# 				is_star_class = sc_trinary_f_k_d
+# 				is_star_class = sc_trinary_g_k_d
+# 				is_star_class = sc_trinary_gs_mg_d
+# 				is_star_class = sc_trinary_k_m_d
+# 				is_star_class = sc_trinary_ks_kg_d
+# 				is_star_class = sc_trinary_m_m_d
+# 				is_star_class = sc_trinary_mg_a_d
+# 				is_star_class = sc_trinary_ms_f_d
+# 			}
+# 		}
+# 	}
+# }
+# SRA_is_sc_paired = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	OR = {
+# 		is_star_class = sc_paired_b_b_a_a
+# 		is_star_class = sc_paired_bs_b_k_m
+# 		is_star_class = sc_paired_a_a_f_f
+# 		is_star_class = sc_paired_g_g_k_k
+# 		is_star_class = sc_paired_g_k_m_m
+# 		is_star_class = sc_paired_kg_gg_m_m
+# 		is_star_class = sc_paired_as_o_k_t
+# 		is_star_class = sc_paired_f_f_m_l
+# 		is_star_class = sc_paired_fs_g_m_y
+# 		is_star_class = sc_paired_g_k_k_t
+# 	}
+# }
+# SRA_is_sc_o = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	OR = {
+# 		is_star_class = sc_o
+# 		is_star_class = sc_o_super
+# 		is_star_class = sc_o_hyper
+# 	}
+# }
+# SRA_is_sc_l = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_l
+# }
+# SRA_is_sc_y = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_y
+# }
+# SRA_is_sc_d = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_d
+# }
+# SRA_is_sc_c = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_c_giant
+# }
+# SRA_is_sc_s = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_s_giant
+# }
+# SRA_is_sc_w = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	OR = {
+# 		is_star_class = sc_w_azure
+# 		is_star_class = sc_w_red
+# 		is_star_class = sc_w_green
+# 		is_star_class = sc_w_purple
+# 	}
+# }
+# SRA_is_sc_nova = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	OR = {
+# 		is_star_class = sc_nova_1
+# 		is_star_class = sc_nova_2
+# 	}
+# }
+# SRA_is_sc_collapsar = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_collapsar
+# }
+# SRA_is_sc_protostar = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_protostar
+# }
+# SRA_is_sc_lbv = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	OR = {
+# 		is_star_class = sc_lbv_blue
+# 		is_star_class = sc_lbv_green
+# 		is_star_class = sc_lbv_red
+# 	}
+# }
+# SRA_is_sc_tt = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	OR = {
+# 		is_star_class = sc_tt_red
+# 		is_star_class = sc_tt_orange
+# 		is_star_class = sc_tt_white
+# 	}
+# }
+# SRA_is_sc_ae = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_ae
+# }
+# SRA_is_sc_pn = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	OR = {
+# 		is_star_class = sc_p_purple
+# 		is_star_class = sc_p_green
+# 		is_star_class = sc_p_red
+# 	}
+# }
+# SRA_is_sc_magnetar = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_magnetar
+# }
+# SRA_is_sc_microquasar = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	OR = {
+# 		is_star_class = sc_microquasar_1
+# 		is_star_class = sc_microquasar_2
+# 	}
+# }
+# SRA_is_sc_fu = {
+# 	optimize_memory
+# 	has_global_flag = "has_real_space_mod"
+# 	is_star_class = sc_fu
+# }
+#
+# SRA_star_classes_check = {
+# 	optimize_memory
+# 	OR = {
+# 		prev = { has_country_flag = SRA_system_selector_disable_star_classes_triggers }
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_1 }
+# 			SRA_is_sc_void = no SRA_is_sc_a = no SRA_is_sc_b = no
+# 			SRA_is_sc_f = no SRA_is_sc_g = no SRA_is_sc_k = no
+# 			SRA_is_sc_m = no SRA_is_sc_t = no SRA_is_sc_a = no
+# 			SRA_is_sc_pulsar = no SRA_is_sc_neutron = no SRA_is_sc_black_hole = no
+# 			SRA_is_sc_bi = no SRA_is_sc_tri = no SRA_is_sc_paired = no
+# 			SRA_is_sc_o = no SRA_is_sc_l = no SRA_is_sc_y = no
+# 			SRA_is_sc_d = no SRA_is_sc_c = no SRA_is_sc_s = no
+# 			SRA_is_sc_w = no SRA_is_sc_nova = no SRA_is_sc_collapsar = no
+# 			SRA_is_sc_protostar = no SRA_is_sc_lbv = no SRA_is_sc_tt = no
+# 			SRA_is_sc_ae = no SRA_is_sc_pn = no SRA_is_sc_magnetar = no
+# 			SRA_is_sc_microquasar = no SRA_is_sc_fu = no
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_2 }
+# 			SRA_is_sc_void = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_3 }
+# 			SRA_is_sc_a = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_4 }
+# 			SRA_is_sc_b = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_5 }
+# 			SRA_is_sc_f = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_6 }
+# 			SRA_is_sc_g = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_7 }
+# 			SRA_is_sc_k = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_8 }
+# 			SRA_is_sc_m = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_1_9 }
+# 			SRA_is_sc_t = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_1 }
+# 			SRA_is_sc_pulsar = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_2 }
+# 			SRA_is_sc_neutron = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_3 }
+# 			SRA_is_sc_black_hole = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_4 }
+# 			SRA_is_sc_bi = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_5 }
+# 			SRA_is_sc_tri = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_6 }
+# 			SRA_is_sc_paired = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_7 }
+# 			SRA_is_sc_o = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_8 }
+# 			SRA_is_sc_l = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_2_9 }
+# 			SRA_is_sc_y = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_1 }
+# 			SRA_is_sc_d = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_2 }
+# 			SRA_is_sc_c = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_3 }
+# 			SRA_is_sc_s = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_4 }
+# 			SRA_is_sc_w = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_5 }
+# 			SRA_is_sc_nova = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_6 }
+# 			SRA_is_sc_collapsar = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_7 }
+# 			SRA_is_sc_protostar = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_8 }
+# 			SRA_is_sc_lbv = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_3_9 }
+# 			SRA_is_sc_tt = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_4_1 }
+# 			SRA_is_sc_ae = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_4_2 }
+# 			SRA_is_sc_pn = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_4_3 }
+# 			SRA_is_sc_magnetar = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_4_4 }
+# 			SRA_is_sc_microquasar = yes
+# 		}
+# 		AND = {
+# 			prev = { has_country_flag = SRA_star_classes_list_selected_4_5 }
+# 			SRA_is_sc_fu = yes
+# 		}
+# 	}
+# }
+#
+# SRA_system_selector_system_selected_trigger = {
+# 	optimize_memory
+# 	OR = {
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 1 } has_country_flag = SRA_system_selected_1_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 2 } has_country_flag = SRA_system_selected_2_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 3 } has_country_flag = SRA_system_selected_3_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 4 } has_country_flag = SRA_system_selected_4_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 5 } has_country_flag = SRA_system_selected_5_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 6 } has_country_flag = SRA_system_selected_6_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 7 } has_country_flag = SRA_system_selected_7_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 8 } has_country_flag = SRA_system_selected_8_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 9 } has_country_flag = SRA_system_selected_9_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 10 } has_country_flag = SRA_system_selected_10_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 11 } has_country_flag = SRA_system_selected_11_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 12 } has_country_flag = SRA_system_selected_12_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 13 } has_country_flag = SRA_system_selected_13_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 14 } has_country_flag = SRA_system_selected_14_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 15 } has_country_flag = SRA_system_selected_15_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 16 } has_country_flag = SRA_system_selected_16_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 17 } has_country_flag = SRA_system_selected_17_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 18 } has_country_flag = SRA_system_selected_18_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 19 } has_country_flag = SRA_system_selected_19_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 20 } has_country_flag = SRA_system_selected_20_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 21 } has_country_flag = SRA_system_selected_21_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 22 } has_country_flag = SRA_system_selected_22_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 23 } has_country_flag = SRA_system_selected_23_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 24 } has_country_flag = SRA_system_selected_24_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 25 } has_country_flag = SRA_system_selected_25_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 26 } has_country_flag = SRA_system_selected_26_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 27 } has_country_flag = SRA_system_selected_27_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 28 } has_country_flag = SRA_system_selected_28_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 29 } has_country_flag = SRA_system_selected_29_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 30 } has_country_flag = SRA_system_selected_30_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 31 } has_country_flag = SRA_system_selected_31_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 32 } has_country_flag = SRA_system_selected_32_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 33 } has_country_flag = SRA_system_selected_33_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 34 } has_country_flag = SRA_system_selected_34_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 35 } has_country_flag = SRA_system_selected_35_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 36 } has_country_flag = SRA_system_selected_36_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 37 } has_country_flag = SRA_system_selected_37_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 38 } has_country_flag = SRA_system_selected_38_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 39 } has_country_flag = SRA_system_selected_39_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 40 } has_country_flag = SRA_system_selected_40_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 41 } has_country_flag = SRA_system_selected_41_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 42 } has_country_flag = SRA_system_selected_42_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 43 } has_country_flag = SRA_system_selected_43_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 44 } has_country_flag = SRA_system_selected_44_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 45 } has_country_flag = SRA_system_selected_45_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 46 } has_country_flag = SRA_system_selected_46_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 47 } has_country_flag = SRA_system_selected_47_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 48 } has_country_flag = SRA_system_selected_48_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 49 } has_country_flag = SRA_system_selected_49_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 50 } has_country_flag = SRA_system_selected_50_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 51 } has_country_flag = SRA_system_selected_51_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 52 } has_country_flag = SRA_system_selected_52_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 53 } has_country_flag = SRA_system_selected_53_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 54 } has_country_flag = SRA_system_selected_54_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 55 } has_country_flag = SRA_system_selected_55_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 56 } has_country_flag = SRA_system_selected_56_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 57 } has_country_flag = SRA_system_selected_57_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 58 } has_country_flag = SRA_system_selected_58_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 59 } has_country_flag = SRA_system_selected_59_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 60 } has_country_flag = SRA_system_selected_60_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 61 } has_country_flag = SRA_system_selected_61_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 62 } has_country_flag = SRA_system_selected_62_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 63 } has_country_flag = SRA_system_selected_63_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 64 } has_country_flag = SRA_system_selected_64_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 65 } has_country_flag = SRA_system_selected_65_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 66 } has_country_flag = SRA_system_selected_66_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 67 } has_country_flag = SRA_system_selected_67_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 68 } has_country_flag = SRA_system_selected_68_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 69 } has_country_flag = SRA_system_selected_69_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 70 } has_country_flag = SRA_system_selected_70_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 71 } has_country_flag = SRA_system_selected_71_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 72 } has_country_flag = SRA_system_selected_72_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 73 } has_country_flag = SRA_system_selected_73_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 74 } has_country_flag = SRA_system_selected_74_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 75 } has_country_flag = SRA_system_selected_75_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 76 } has_country_flag = SRA_system_selected_76_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 77 } has_country_flag = SRA_system_selected_77_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 78 } has_country_flag = SRA_system_selected_78_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 79 } has_country_flag = SRA_system_selected_79_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 80 } has_country_flag = SRA_system_selected_80_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 81 } has_country_flag = SRA_system_selected_81_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 82 } has_country_flag = SRA_system_selected_82_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 83 } has_country_flag = SRA_system_selected_83_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 84 } has_country_flag = SRA_system_selected_84_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 85 } has_country_flag = SRA_system_selected_85_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 86 } has_country_flag = SRA_system_selected_86_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 87 } has_country_flag = SRA_system_selected_87_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 88 } has_country_flag = SRA_system_selected_88_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 89 } has_country_flag = SRA_system_selected_89_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 90 } has_country_flag = SRA_system_selected_90_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 91 } has_country_flag = SRA_system_selected_91_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 92 } has_country_flag = SRA_system_selected_92_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 93 } has_country_flag = SRA_system_selected_93_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 94 } has_country_flag = SRA_system_selected_94_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 95 } has_country_flag = SRA_system_selected_95_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 96 } has_country_flag = SRA_system_selected_96_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 97 } has_country_flag = SRA_system_selected_97_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 98 } has_country_flag = SRA_system_selected_98_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 99 } has_country_flag = SRA_system_selected_99_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 100 } has_country_flag = SRA_system_selected_100_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 101 } has_country_flag = SRA_system_selected_101_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 102 } has_country_flag = SRA_system_selected_102_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 103 } has_country_flag = SRA_system_selected_103_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 104 } has_country_flag = SRA_system_selected_104_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 105 } has_country_flag = SRA_system_selected_105_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 106 } has_country_flag = SRA_system_selected_106_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 107 } has_country_flag = SRA_system_selected_107_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 108 } has_country_flag = SRA_system_selected_108_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 109 } has_country_flag = SRA_system_selected_109_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 110 } has_country_flag = SRA_system_selected_110_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 111 } has_country_flag = SRA_system_selected_111_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 112 } has_country_flag = SRA_system_selected_112_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 113 } has_country_flag = SRA_system_selected_113_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 114 } has_country_flag = SRA_system_selected_114_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 115 } has_country_flag = SRA_system_selected_115_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 116 } has_country_flag = SRA_system_selected_116_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 117 } has_country_flag = SRA_system_selected_117_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 118 } has_country_flag = SRA_system_selected_118_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 119 } has_country_flag = SRA_system_selected_119_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 120 } has_country_flag = SRA_system_selected_120_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 121 } has_country_flag = SRA_system_selected_121_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 122 } has_country_flag = SRA_system_selected_122_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 123 } has_country_flag = SRA_system_selected_123_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 124 } has_country_flag = SRA_system_selected_124_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 125 } has_country_flag = SRA_system_selected_125_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 126 } has_country_flag = SRA_system_selected_126_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 127 } has_country_flag = SRA_system_selected_127_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 128 } has_country_flag = SRA_system_selected_128_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 129 } has_country_flag = SRA_system_selected_129_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 130 } has_country_flag = SRA_system_selected_130_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 131 } has_country_flag = SRA_system_selected_131_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 132 } has_country_flag = SRA_system_selected_132_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 133 } has_country_flag = SRA_system_selected_133_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 134 } has_country_flag = SRA_system_selected_134_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 135 } has_country_flag = SRA_system_selected_135_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 136 } has_country_flag = SRA_system_selected_136_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 137 } has_country_flag = SRA_system_selected_137_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 138 } has_country_flag = SRA_system_selected_138_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 139 } has_country_flag = SRA_system_selected_139_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 140 } has_country_flag = SRA_system_selected_140_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 141 } has_country_flag = SRA_system_selected_141_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 142 } has_country_flag = SRA_system_selected_142_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 143 } has_country_flag = SRA_system_selected_143_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 144 } has_country_flag = SRA_system_selected_144_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 145 } has_country_flag = SRA_system_selected_145_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 146 } has_country_flag = SRA_system_selected_146_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 147 } has_country_flag = SRA_system_selected_147_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 148 } has_country_flag = SRA_system_selected_148_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 149 } has_country_flag = SRA_system_selected_149_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 150 } has_country_flag = SRA_system_selected_150_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 151 } has_country_flag = SRA_system_selected_151_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 152 } has_country_flag = SRA_system_selected_152_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 153 } has_country_flag = SRA_system_selected_153_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 154 } has_country_flag = SRA_system_selected_154_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 155 } has_country_flag = SRA_system_selected_155_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 156 } has_country_flag = SRA_system_selected_156_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 157 } has_country_flag = SRA_system_selected_157_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 158 } has_country_flag = SRA_system_selected_158_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 159 } has_country_flag = SRA_system_selected_159_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 160 } has_country_flag = SRA_system_selected_160_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 161 } has_country_flag = SRA_system_selected_161_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 162 } has_country_flag = SRA_system_selected_162_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 163 } has_country_flag = SRA_system_selected_163_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 164 } has_country_flag = SRA_system_selected_164_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 165 } has_country_flag = SRA_system_selected_165_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 166 } has_country_flag = SRA_system_selected_166_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 167 } has_country_flag = SRA_system_selected_167_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 168 } has_country_flag = SRA_system_selected_168_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 169 } has_country_flag = SRA_system_selected_169_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 170 } has_country_flag = SRA_system_selected_170_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 171 } has_country_flag = SRA_system_selected_171_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 172 } has_country_flag = SRA_system_selected_172_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 173 } has_country_flag = SRA_system_selected_173_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 174 } has_country_flag = SRA_system_selected_174_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 175 } has_country_flag = SRA_system_selected_175_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 176 } has_country_flag = SRA_system_selected_176_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 177 } has_country_flag = SRA_system_selected_177_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 178 } has_country_flag = SRA_system_selected_178_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 179 } has_country_flag = SRA_system_selected_179_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 180 } has_country_flag = SRA_system_selected_180_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 181 } has_country_flag = SRA_system_selected_181_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 182 } has_country_flag = SRA_system_selected_182_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 183 } has_country_flag = SRA_system_selected_183_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 184 } has_country_flag = SRA_system_selected_184_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 185 } has_country_flag = SRA_system_selected_185_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 186 } has_country_flag = SRA_system_selected_186_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 187 } has_country_flag = SRA_system_selected_187_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 188 } has_country_flag = SRA_system_selected_188_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 189 } has_country_flag = SRA_system_selected_189_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 190 } has_country_flag = SRA_system_selected_190_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 191 } has_country_flag = SRA_system_selected_191_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 192 } has_country_flag = SRA_system_selected_192_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 193 } has_country_flag = SRA_system_selected_193_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 194 } has_country_flag = SRA_system_selected_194_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 195 } has_country_flag = SRA_system_selected_195_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 196 } has_country_flag = SRA_system_selected_196_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 197 } has_country_flag = SRA_system_selected_197_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 198 } has_country_flag = SRA_system_selected_198_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 199 } has_country_flag = SRA_system_selected_199_$SRA_system_seq$ }
+# 		AND = { check_variable = { which = SRA_system_selector_marked_page value = 200 } has_country_flag = SRA_system_selected_200_$SRA_system_seq$ }
+# 	}
+# }

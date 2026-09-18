@@ -1,0 +1,276 @@
+################################################
+###				Tech
+################################################
+@SRA_tier3cost1 = 160000
+@SRA_tier3cost2 = 320000
+
+@SRA_tier4cost1 = 640000
+################################################
+###				Weapon(unused)
+################################################
+
+@SRA_t_weapon_hull_damage = 2.75
+@SRA_t_weapon_shield_damage = 1.0
+@SRA_t_weapon_shield_penetration = 2.0
+@SRA_t_weapon_shield_penetration_op = 5.0
+@SRA_t_weapon_armor_damage = 1.0
+@SRA_t_weapon_armor_penetration = 2.0
+@SRA_t_weapon_armor_penetration_op = 5.0
+@SRA_t_weapon_range = 350.0
+@SRA_t_weapon_range_min = 40.0
+@SRA_t_weapon_range_min_station = 35.0
+@SRA_t_weapon_accuracy = 1.0
+@SRA_t_weapon_tracking = 1.0
+@SRA_t_weapon_windup_min = 25.0
+@SRA_t_weapon_windup_max = 50.0
+@SRA_t_weapon_firing_arc = 5.0
+@SRA_t_weapon_firing_arc_large = 25.0
+
+@SRA_xl_weapon_hull_damage = 2.5
+@SRA_xl_weapon_shield_damage = 1.0
+@SRA_xl_weapon_shield_penetration = 1.5
+@SRA_xl_weapon_armor_damage = 1.0
+@SRA_xl_weapon_armor_penetration = 1.5
+@SRA_xl_weapon_range = 250.0
+@SRA_xl_weapon_range_min = 30.0
+@SRA_xl_weapon_range_min_station = 25.0
+@SRA_xl_weapon_accuracy = 0.95
+@SRA_xl_weapon_tracking = 0.10
+@SRA_xl_weapon_windup_min = 15.0
+@SRA_xl_weapon_windup_max = 30.0
+@SRA_xl_weapon_firing_arc = 35.0
+
+@SRA_l_weapon_hull_damage = 1.75
+@SRA_l_weapon_shield_damage = 1.0
+@SRA_l_weapon_shield_penetration = 1.25
+@SRA_l_weapon_armor_damage = 1.0
+@SRA_l_weapon_armor_penetration = 1.25
+@SRA_l_weapon_range = 180.0
+@SRA_l_weapon_range_min = 20.0
+@SRA_l_weapon_range_min_station = 15.0
+@SRA_l_weapon_accuracy = 0.95
+@SRA_l_weapon_tracking = 0.20
+@SRA_l_weapon_windup_min = 5.0
+@SRA_l_weapon_windup_max = 20.0
+@SRA_l_weapon_firing_arc = 60.0
+
+@SRA_m_weapon_hull_damage = 1.50
+@SRA_m_weapon_shield_damage = 1.0
+@SRA_m_weapon_shield_penetration = 1.0
+@SRA_m_weapon_armor_damage = 1.0
+@SRA_m_weapon_armor_penetration = 1.0
+@SRA_m_weapon_range = 130.0
+@SRA_m_weapon_range_min = 0.0
+@SRA_m_weapon_range_min_station = 0.0
+@SRA_m_weapon_accuracy = 0.95
+@SRA_m_weapon_tracking = 0.40
+@SRA_m_weapon_windup_min = 1.0
+@SRA_m_weapon_windup_max = 15.0
+@SRA_m_weapon_firing_arc = 90.0
+
+@SRA_s_weapon_hull_damage = 1.25
+@SRA_s_weapon_shield_damage = 1.0
+@SRA_s_weapon_shield_penetration = 1.0
+@SRA_s_weapon_armor_damage = 1.0
+@SRA_s_weapon_armor_penetration = 1.0
+@SRA_s_weapon_range = 85.0
+@SRA_s_weapon_range_min = 0.0
+@SRA_s_weapon_range_min_station = 0.0
+@SRA_s_weapon_accuracy = 0.95
+@SRA_s_weapon_tracking = 0.60
+@SRA_s_weapon_windup_min = 1.0
+@SRA_s_weapon_windup_max = 10.0
+@SRA_s_weapon_firing_arc = 120.0
+
+@SRA_pd_weapon_hull_damage = 1.0
+@SRA_pd_weapon_shield_damage = 1.0
+@SRA_pd_weapon_shield_penetration = 1.0
+@SRA_pd_weapon_armor_damage = 1.0
+@SRA_pd_weapon_armor_penetration = 1.0
+@SRA_pd_weapon_range = 65.0
+@SRA_pd_weapon_range_min = 0.0
+@SRA_pd_weapon_range_min_station = 0.0
+@SRA_pd_weapon_accuracy = 0.95
+@SRA_pd_weapon_tracking = 0.90
+@SRA_pd_weapon_windup_min = 1.0
+@SRA_pd_weapon_windup_max = 5.0
+@SRA_pd_weapon_firing_arc = 150.0
+
+@SRA_t_torpedo_weapon_hull_damage = 1.25
+@SRA_t_torpedo_weapon_shield_damage = 1.0
+@SRA_t_torpedo_weapon_shield_penetration = 10.0
+@SRA_t_torpedo_weapon_armor_damage = 1.0
+@SRA_t_torpedo_weapon_armor_penetration = 5.0
+@SRA_t_torpedo_weapon_range = 400.0
+@SRA_t_torpedo_weapon_range_min = 40.0
+@SRA_t_torpedo_weapon_range_min_station = 35.0
+@SRA_t_torpedo_weapon_accuracy = 1.0
+@SRA_t_torpedo_weapon_tracking = 1.0
+@SRA_t_torpedo_weapon_windup_min = 30.0
+@SRA_t_torpedo_weapon_windup_max = 60.0
+@SRA_t_torpedo_weapon_firing_arc = 5.0
+
+@SRA_torpedo_weapon_hull_damage = 1.5
+@SRA_torpedo_weapon_shield_damage = 1.0
+@SRA_torpedo_weapon_shield_penetration = 10.0
+@SRA_torpedo_weapon_armor_damage = 2.0
+@SRA_torpedo_weapon_armor_penetration = 0.75
+@SRA_torpedo_weapon_range = 215.0
+@SRA_torpedo_weapon_range_min = 5.0
+@SRA_torpedo_weapon_range_min_station = 1.0
+@SRA_torpedo_weapon_accuracy = 0.75
+@SRA_torpedo_weapon_tracking = 0.50
+@SRA_torpedo_weapon_windup_min = 1.0
+@SRA_torpedo_weapon_windup_max = 30.0
+@SRA_torpedo_weapon_firing_arc = 150.0
+@SRA_torpedo_weapon_size_damage_factor = 1.0
+@SRA_torpedo_weapon_size_damage_factor_alt = 1.25
+
+@SRA_fighter_weapon_hull_damage = 1.25
+@SRA_fighter_weapon_shield_damage = 1.0
+@SRA_fighter_weapon_shield_penetration = 1.0
+@SRA_fighter_weapon_armor_damage = 1.25
+@SRA_fighter_weapon_armor_penetration = 1.0
+@SRA_fighter_weapon_range = 100.0
+@SRA_fighter_weapon_accuracy = 1.0
+@SRA_fighter_weapon_tracking = 0.50
+@SRA_num_fighters = 1.0
+@SRA_fighter_regeneration_per_day = 0.25
+@SRA_fighter_launch_time = 0.2
+@SRA_fighter_cooldown = 4.0
+@SRA_fighter_evasion = 0.90
+@SRA_fighter_speed = 750
+@SRA_fighter_rotation_speed = 1.0
+@SRA_fighter_acceleration = 1.0
+
+@SRA_bomber_weapon_hull_damage = 1.5
+@SRA_bomber_weapon_shield_damage = 1.0
+@SRA_bomber_weapon_shield_penetration = 10.0
+@SRA_bomber_weapon_armor_damage = 1.5
+@SRA_bomber_weapon_armor_penetration = 2.5
+@SRA_bomber_weapon_range = 75.0
+@SRA_bomber_weapon_accuracy = 1.0
+@SRA_bomber_weapon_tracking = 0.25
+@SRA_num_bombers = 1.0
+@SRA_bomber_regeneration_per_day = 0.5
+@SRA_bomber_launch_time = 0.2
+@SRA_bomber_cooldown = 6.5
+@SRA_bomber_evasion = 0.80
+@SRA_bomber_speed = 700
+@SRA_bomber_rotation_speed = 1.0
+@SRA_bomber_acceleration = 1.0
+
+
+
+################################################
+###				ship weapon
+################################################
+
+@SRA_weapon_penetration_1 = 1
+@SRA_weapon_penetration_2 = 2
+@SRA_weapon_penetration_3 = 3
+@SRA_weapon_penetration_4 = 4
+@SRA_weapon_penetration_5 = 8
+@SRA_weapon_penetration_6 = 16
+@SRA_weapon_penetration_7 = 32
+
+
+################################################
+###				ship part
+################################################
+
+@SRA_ship_part_hull_add_1 = 250
+@SRA_ship_part_hull_add_2 = 500
+@SRA_ship_part_hull_add_3 = 1000
+@SRA_ship_part_hull_add_4 = 2000
+@SRA_ship_part_hull_add_5 = 4000
+@SRA_ship_part_hull_add_6 = 8000
+@SRA_ship_part_hull_add_7 = 16000
+@SRA_ship_part_hull_add_8 = 32000
+@SRA_ship_part_hull_regen_add_static_1 = 5
+@SRA_ship_part_hull_regen_add_static_2 = 10
+@SRA_ship_part_hull_regen_add_static_3 = 20
+@SRA_ship_part_hull_regen_add_static_4 = 40
+@SRA_ship_part_hull_regen_add_static_5 = 80
+@SRA_ship_part_hull_regen_add_static_6 = 160
+@SRA_ship_part_hull_regen_add_static_7 = 320
+@SRA_ship_part_hull_regen_add_static_8 = 640
+@SRA_ship_part_hull_regen_add_static_9 = 1280
+@SRA_ship_part_hull_regen_add_static_10 = 2560
+@SRA_ship_part_damage_reduction_add_1 = 1
+@SRA_ship_part_damage_reduction_add_2 = 2
+@SRA_ship_part_damage_reduction_add_3 = 4
+@SRA_ship_part_damage_reduction_add_4 = 8
+@SRA_ship_part_damage_reduction_add_5 = 16
+@SRA_ship_part_damage_reduction_add_6 = 32
+@SRA_ship_part_damage_reduction_add_7 = 64
+@SRA_ship_part_damage_reduction_add_8 = 128
+@SRA_ship_part_damage_reduction_add_9 = 256
+@SRA_ship_part_damage_reduction_add_10 = 512
+@SRA_ship_part_hardening_add_1 = 0.05
+@SRA_ship_part_hardening_add_2 = 0.1
+@SRA_ship_part_hardening_add_3 = 0.5 # aux
+@SRA_ship_part_hardening_add_4 = 1 # aux
+
+
+
+@SRA_ship_hull_add_1 = 128000
+@SRA_ship_hull_add_2 = 256000
+@SRA_ship_hull_add_3 = 512000
+@SRA_ship_hull_add_4 = 4352000
+@SRA_ship_hull_regen_add_static_1 = 2560
+@SRA_ship_hull_regen_add_static_2 = 5120
+@SRA_ship_hull_regen_add_static_3 = 10240
+@SRA_ship_hull_regen_add_static_4 = 87040
+@SRA_ship_damage_reduction_add_1 = 512
+@SRA_ship_damage_reduction_add_2 = 1024
+@SRA_ship_damage_reduction_add_3 = 2048
+@SRA_ship_damage_reduction_add_4 = 17408
+@SRA_ship_damage_reduction_add_5 = 25600 # abyss ship
+@SRA_ship_damage_reduction_add_6 = 51200 # abyss ship
+
+@SRA_ship_damage_reduction_add_10 = 2560000 # almost invincible
+@SRA_ship_damage_reduction_add_11 = 80000000000000 # invincible,maybe
+
+@SRA_ship_hardening_add_1 = 1.6 # + 16*0.1 = 3.2
+@SRA_ship_hardening_add_2 = 1.6 # + 32*0.1 = 4.8
+@SRA_ship_hardening_add_3 = 1.6 # + 48*0.1 = 6.4
+@SRA_ship_hardening_add_4 = 8.0 # + 48*0.1 = 12.8
+@SRA_ship_hardening_add_5 = 25.6 # abyss ship
+
+@SRA_size_multiplier_verysmall = 0.01
+@SRA_size_multiplier_small = 1
+@SRA_size_multiplier_destroyer = 10
+@SRA_size_multiplier_cruiser = 20
+@SRA_size_multiplier_battleship = 40
+@SRA_size_multiplier_flagship = 80
+@SRA_size_multiplier_supership = 320
+
+
+
+################################################
+###				cost
+################################################
+@SRA_global_ship_upkeep_energy_factor = 0.01
+@SRA_global_ship_upkeep_alloys_factor = 0.002
+
+@SRA_global_ship_cost_factor = 1
+@SRA_ship_cost_1 = 4000
+@SRA_ship_cost_2 = 8000
+@SRA_ship_cost_3 = 16000 # SRA_Cruiser
+@SRA_ship_cost_4 = 32000 # SRA_Executor
+@SRA_ship_cost_5 = 64000 # SRA_Adjudicator
+@SRA_ship_cost_6 = 128000
+@SRA_ship_cost_7 = 256000 # SRA_Spear_Of_Galaxy_Zenith
+@SRA_ship_cost_8 = 512000
+
+@SRA_global_ship_part_cost_factor = 1
+@SRA_ship_part_cost_1 = 20
+@SRA_ship_part_cost_2 = 40
+@SRA_ship_part_cost_3 = 80
+@SRA_ship_part_cost_4 = 160
+@SRA_ship_part_cost_5 = 320
+@SRA_ship_part_cost_6 = 640
+@SRA_ship_part_cost_7 = 1280
+@SRA_ship_part_cost_8 = 2560
+@SRA_ship_part_cost_9 = 5120

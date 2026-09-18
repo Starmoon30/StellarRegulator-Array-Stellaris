@@ -1,0 +1,96 @@
+
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_zeta_core_sphere_type2_mesh"
+		file = "gfx/models/ships/SRA_GZ_Core/SRA_zeta_core_sphere_type2.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" 			type = "SRA_zeta_core_sphere_type2_idle_animation" }
+
+		meshsettings = {
+			name = "sphere_topShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_sphere2_white_diffuse.dds"
+			texture_normal = "SRA_zeta_sphere2_normal.dds"
+			texture_specular = "SRA_zeta_sphere2_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "SRA_zeta_military_station_small_frame_mesh"
+		file = "gfx/models/ships/SRA_GZ_Core/SRA_zeta_military_station_small_frame.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_zeta_military_station_small_frame_idle_animation" }
+		animation = { id = "death1" type = "SRA_zeta_military_station_small_frame_death1_animation" }
+		animation = { id = "death2" type = "SRA_zeta_military_station_small_frame_death2_animation" }
+		animation = { id = "death3" type = "SRA_zeta_military_station_small_frame_death3_animation" }
+
+		meshsettings = {
+			name = "pCubeShape1"
+			index = 0
+			texture_diffuse = "SRA_dummy_diffuse.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_zeta_military_station_small_mesh"
+		file = "gfx/models/ships/SRA_GZ_Core/SRA_zeta_military_station_small.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" 			type = "SRA_zeta_military_station_small_idle_animation" }
+		animation = { id = "death" 			type = "SRA_zeta_military_station_small_death_animation" }
+
+		meshsettings = {
+			name = "pillar_top_1Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_pillar_type1_white_diffuse.dds"
+			texture_normal = "SRA_zeta_pillar_type1_normal.dds"
+			texture_specular = "SRA_zeta_pillar_type1_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "core_pillar_topShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_core_section_diffuse.dds"
+			texture_normal = "SRA_zeta_core_section_normal.dds"
+			texture_specular = "SRA_zeta_core_section_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	##### SRA_GZ_Core #####
+	pdxmesh = {
+		name = "SRA_zeta_military_station_large_mesh"
+		file = "gfx/models/ships/SRA_GZ_Core/SRA_zeta_military_station_large.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" 			type = "SRA_zeta_military_station_large_idle_animation" }
+		animation = { id = "death" 			type = "SRA_zeta_military_station_large_death_animation" }
+
+		meshsettings = {
+			name = "military_station_large_top_1Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_military_station_large_white_diffuse.dds"
+			texture_normal = "SRA_zeta_military_station_large_normal.dds"
+			texture_specular = "SRA_zeta_military_station_large_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "pillar_top_1Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_pillar_type1_white_diffuse.dds"
+			texture_normal = "SRA_zeta_pillar_type1_normal.dds"
+			texture_specular = "SRA_zeta_pillar_type1_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "core_pillar_topShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_core_section_diffuse.dds"
+			texture_normal = "SRA_zeta_core_section_normal.dds"
+			texture_specular = "SRA_zeta_core_section_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

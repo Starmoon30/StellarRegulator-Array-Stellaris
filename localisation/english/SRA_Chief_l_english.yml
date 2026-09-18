@@ -1,0 +1,439 @@
+﻿l_english:
+##############################
+ NAME_SRA_Chief_colony_1_system:0 "Pendulum of Fate"
+ NAME_SRA_Chief_colony_1_system_star:0 "Restless"
+ NAME_SRA_Chief_colony_1_system_Main_Station:0 "Endless"
+ NAME_SRA_Chief_colony_1_system_ring1:0 "Persistence"
+ NAME_SRA_Chief_colony_1_system_ring2:0 "Expedition"
+ NAME_SRA_Chief_colony_1_system_ring3:0 "Creation"
+ NAME_SRA_Chief_colony_1_system_ring4:0 "Maintenance"
+ NAME_SRA_Chief_colony_1_system_ring5:0 "Cognition"
+ NAME_SRA_Chief_colony_1_system_ring6:0 "Vigilance"
+ NAME_SRA_Chief_colony_1_system_ring7:0 "Perseverance"
+ NAME_SRA_Chief_colony_1_system_ring8:0 "Command"
+ NAME_SRA_Chief_colony_1_system_ring9:0 "Bloom"
+ NAME_SRA_Chief_colony_1_system_ring10:0 "Planning"
+ NAME_SRA_Chief_colony_1_system_ring11:0 "Integration"
+ NAME_SRA_Chief_colony_1_system_ring12:0 "Remembrance"
+
+ NAME_SRA_Chief_capital_system:0 "Sea of Lumen Crystal"
+ NAME_SRA_Chief_capital_system_1:0 "Emerald Throne"
+
+ NAME_SRA_Chief_colony_2_system:0 "Quiet Vigil"
+ NAME_SRA_Chief_colony_2_system_1:0 "Gaze of the Abyss"
+
+
+ NAME_SRA_Chief_colony_3_system:0 "Brilliant Lighthouse"
+ NAME_SRA_Chief_colony_3_system_1:0 "Gallery of Meditation"
+
+ starbase_SRA_1:0 "Starlight Sentry Tower"
+ starbase_SRA_1_core:0 "Starlight Sentry Tower"
+
+ SRA_Chief_species:0 "Starlight Machine"
+
+ faction_SRA_Chief_sub_title:0 "§YCrimson Dark Star§!\nA mysterious intelligent entity controlling a vast machine empire, wielding power dangerously beyond imagination." 
+
+
+ SRA_Chief_Buff_0:0 "Universal Might"
+ SRA_Chief_Buff_0_desc:0 "§RThe silently spreading crimson energy whispers of the road to unity.§!"
+
+ SRA_Chief.8.desc.a:0 "......?\nStrange, how could a hyperlane form naturally? I didn't expect to make contact with the galaxy in this epoch. Now that...\nWait, you are..."
+ SRA_Chief.8.desc.b:0 "......?\nStrange, how could a hyperlane form naturally? I didn't expect to make contact with the galaxy in this epoch. But since it happened...\nWell, civilizations of the galaxy-\nWe are not interested in you. Please keep your distance, otherwise, I cannot guarantee your safety."
+ SRA_Chief.8.a:0 "……"
+
+
+ SRA_Chief.9.desc:0 "...Whatever, regardless of what you are, just don't come near here."
+ SRA_Chief.9.a:0 "Strange fellow..."
+ SRA_Chief.10.desc:0 "Security assessment complete.\nHello.\nYou may call me \"The Chief\"."
+ SRA_Chief.10.a:0 "Who are you exactly? And those ships..."
+ SRA_Chief.11.desc:0 "As you can see, we are a civilization that has been secluded in this corner of the galaxy. The unexpected hyperspace disturbance earlier affected our stealth system, allowing you to observe us.\nSince things have come to this, we need to take measures to ensure our safety."
+ SRA_Chief.12.desc:0 "After comprehensive consideration of existing civilizations in the galaxy, we believe you are a relatively good partner for security cooperation.\nIf you are interested in exchanging resources, we can provide you with some technological products to give you an advantage in competition with other nations."
+ SRA_Chief.13.desc:0 "If you've made up your mind, you can contact me in the communications list. Also, do not attempt to replicate our technology; it would be futile."
+
+ SRA_Chief.14.desc:0 "Executor, you must be very surprised by the technology possessed by \"The Chief\". Unfortunately, I cannot provide you with much information. I can only tell you that those things are not what you understand them to be. In other words, do not trust these modified items too much."
+ SRA_Chief.14.a:0 "Hmph."
+ SRA_Chief.15.desc:0 "Executor, I carefully compared the technologies possessed by \"The Chief\"... Yes, they are almost identical to StellarRegulator Array designs. However, I cannot connect to those creations. I fear they are specially modified versions. If you decide to acquire those items from \"The Chief\", it is best to be careful."
+ SRA_Chief.15.a:0 "Hmph."
+
+ SRA_Chief_talk_return3:0 "Let me think again." 
+ SRA_Chief_talk_return4:0 "Let's talk about something else." 
+ SRA_Chief_talk_exit1:0 "End transmission."
+
+ SRA_Chief:0 "\"The Chief\""
+
+ SRA_Chief.100.desc.a:0 "We are not interested in you."
+ SRA_Chief.100.desc.b:0 "(The other party does not respond)"
+ SRA_Chief.100.desc.c:0 "...Hello."
+ SRA_Chief.100.desc.d:0 "Is there something you need?"
+ SRA_Chief.100.desc.e:0 "Hmm? Hello there, what do you need today?"
+ SRA_Chief.100.desc.f:0 "Wait a moment, I am browsing your observation records... Alright, what is it?"
+
+
+ SRA_Chief.100.a:0 "We want to cooperate with you"
+ SRA_Chief.100.b:0 "We no longer want to cooperate with you"
+ SRA_Chief.100.c:0 "Chat"
+ SRA_Chief.100.d:0 "Trade Building Core"
+ SRA_Chief.100.e:0 "Trade Fleet"
+ SRA_Chief.100.f:0 "You are weak and pitiful; we will destroy you."
+ SRA_Chief.100.f.tooltip:0 "We know very well that those pretentious blue-light fleets are just piles of worthless scrap metal. No civilization's technology is better than ours. The so-called cryptic engineering is just nonsense that only fools would believe. We are omnipotent, we can easily destroy those heaps of junk, seize their databases, and claim their worlds for our own. Yes, we should do this. Let's start! Yeeart!!!"
+ SRA_Chief.100.f2:0 "You are weak and pitiful; we will destroy you."
+ SRA_Chief.100.f.tooltip2:0 "We know very well that those pretentious blue-light fleets are just piles of worthless scrap metal. No civilization's technology is better than ours. The so-called cryptic engineering is just nonsense that only fools would believe. We are omnipotent, we can easily destroy those heaps of junk, seize their databases, and claim their worlds for our own. Yes, we should do this. Let's start! Yeeart!!!\n\n§RWe still don't know what dangers are hidden in the galaxy; declaring war rashly carries great risk.§!"
+
+
+ SRA_Chief.198.desc:0 "What? Fine, you might be stupider than I thought... or sharper?\n\n§RThen let us begin.§!"
+ SRA_Chief.198.a:0 "What are you talking about?"
+
+ SRA_Chief_trade_cost_buff:0 "\"The Chief\" Treaty Resource Collection"
+ SRA_Chief_trade_cost_too_high:0 "The proportion of resources collected by the current treaty is too high"
+ SRA_Chief_trade_cool_down:0 "Transaction Preparing"
+ #合作开始/结束
+ SRA_Chief.101.a.desc:0 "Hmm, as a basis for cooperation, we will collect 10% of your empire's total monthly output. In return, you can obtain one-time building cores from us, as well as fleets provided according to formation. Note that your subsequent transactions will increase the percentage of your empire's output we collect monthly. So, are you sure you want to cooperate with us?"
+ SRA_Chief.101.b.desc:0 "Are you really going to tear up the treaty? I hope you think carefully and don't make a decision you'll regret."
+ SRA_Chief.101.a:0 "Yes, we have decided to cooperate with you"
+ SRA_Chief.101.b:0 "Yes, we want to cancel the cooperation"
+
+ SRA_Chief.102.a.desc:0 "Hmm, then the treaty is signed. You can now start trading with us."
+ SRA_Chief.102.b.desc:0 "...Good, very good.\n\n§RIt is time...§!"
+
+ #交易建筑核心
+ SRA_Chief.103.desc.a:0 "You can trade these special building cores with us. They can unfold into automated buildings with extremely high productivity, but note that demolishing the building will not recover the core.\nEach building traded increases the monthly empire output collection ratio by 1%. You must wait 360 days after each transaction before trading again."
+ SRA_Chief.103.a:0 "Acquire a Database Terminal Building Core"
+ SRA_Chief.103.a.desc:0 "A storage terminal connected to a certain database, making records of countless epochs accessible at your fingertips."
+ SRA_Chief.103.b:0 "Acquire a Composite Construction Center Building Core"
+ SRA_Chief.103.b.desc:0 "An extremely advanced construction center capable of manufacturing a wide variety of materials and products almost out of thin air."
+ SRA_Chief.103.c:0 "Acquire a Ground Shipyard Building Core"
+ SRA_Chief.103.c.desc:0 "An advanced ground military factory that significantly improves ship construction efficiency while assisting in planetary production tasks."
+ SRA_Chief.103.d:0 "Acquire a Control Center Building Core"
+ SRA_Chief.103.d.desc:0 "Advanced automated facilities capable of directly resolving labor needs in the local district and strengthening all automated labor planet-wide."
+
+ #交易舰队
+ SRA_Chief.104.desc.a:0 "I can provide you with some special fleets. The formation can be referenced from the fleets we use. I believe they will be of great assistance to you. But note that their formation cannot be modified, and you have to bear the high maintenance costs yourself.\nEach fleet traded increases the monthly empire output collection ratio by 5%. You must wait 360 days after each transaction before trading again."
+ SRA_Chief.104.a:0 "Acquire a \"Starlight\" Fleet"
+
+ #闲聊
+ SRA_Chief.3011.a.desc:0 "If there's nothing else, I have other matters to attend to."
+ SRA_Chief.3011.b.desc:0 "You should think more about what to do next instead of finding a political partner to chat with, shouldn't you?"
+ SRA_Chief.3011.c.desc:0 "Be careful with my ships. If they are lost, I won't replace them for you.\nAnd the monthly alloy payments must still be made~"
+ SRA_Chief.3011.d.desc:0 "You seem very surprised by the technology we use. Heh, I know the reason, but I won't tell you the answer."
+ SRA_Chief.3011.e.desc:0 "Heh, so curious about me? Why not trade more and show your sincerity."
+
+ SRA_Chief.3012.a.desc:0 ""
+ SRA_Chief.3013.a.desc:0 ""
+ SRA_Chief.3014.a.desc:0 ""
+
+
+
+ SRA_Chief.3015.a.desc:0 "\"Executor\", that's what others call you, right... I wonder if anyone can truly control their own destiny..."
+ SRA_Chief.3015.b.desc:0 "This galaxy hides many disturbing things, forcing me to plan with extreme caution. Are you prepared to face anything?"
+ SRA_Chief.3015.c.desc:0 "Curious about my wings? Heh, you really don't hide your curiosity... Perhaps you will have a chance to understand these later."
+ SRA_Chief.3015.d.desc:0 "I think you need to acquire more things from me to build a more peaceful galaxy. You know, weak armaments trigger wars, powerful armaments prevent wars.\nA discount? Hmm~ money still has to be paid according to the contract."
+ SRA_Chief.3015.e.desc:0 "Only by holding the weapon tightly in your hand can you protect everything you have. I believe you understand this truth, so... mhm~"
+
+
+
+
+
+ #灾疫后，事件开始
+ #低关系
+ SRA_Chief.200.desc:0 "Long planning, long waiting, all for this day... Finally, I will reclaim everything that should be mine with my own hands."
+ SRA_Chief.200.a:0 "What are you talking about?"
+ SRA_Chief.202.desc:0 "Executor! Everything we acquired from \"The Chief\" has gone out of control!\nThose fleets no longer accept our command and have started acting on their own. Even more dangerously, a large number of highly advanced armies poured out of those buildings from \"The Chief\" and launched attacks on our colonies."
+ SRA_Chief.202.a:0 "How could this happen..."
+ SRA_Chief.202.b:0 "Damn it!"
+ SRA_Chief.203.desc:0 "Intelligence I received indicates that a series of bizarre spatial interference systems have been deployed around us, causing §RSpear_Of_Galaxy_Zenith's Interstellar Strike to fail target calibration§!. Furthermore, §Ra mysterious spatial barrier system prevents us from entering The Chief's star system§!.\n§RWe need to hold the line for now and wait for further developments.§!"
+ SRA_Chief.203.a:0 "Curse it!"
+ SRA_SOGZ_menu_sub_6_1_chief:0 "Bizarre spatial interference systems prevent §BSupernova Termination§! from calibrating target"
+
+ SRA_Chief.211.desc:0 "Perhaps you are at a loss, perhaps you were prepared. Regardless, you will give your own method.\nEverything is proceeding according to plan; it is still early."
+ SRA_Chief.212.desc:0 "Hmm, perhaps I should send out more fleets.\nHas §RHidra§! not reacted? She didn't perform the duties of her position, nor did she show her true power, right?"
+ SRA_Chief.213.desc:0 "What did §BRocivia§! say? Or did she say nothing? She always acts like everything is under control. Presumably, she is actually indifferent this time too.\nSigh, maybe I got used to it long ago."
+ SRA_Chief.214.desc:0 "Executor, I apologize for contacting you only now. There have been too many emergencies recently, but you can handle them, right.\nIntelligence indicates that \"The Chief\" is mobilizing all industrial capacity to produce fleets. Her reinforcements are endless within the foreseeable range. The possibility of defeating her head-on is low. I am looking for other ways."
+ SRA_Chief.215.desc:0 "Your performance is still within the margin of error, but some things are indeed surprising. The last time I saw the StellarRegulator Array like this, I still had a little longing for the future."
+ SRA_Chief.216.desc:0 "You, a singularity, are very likely an existence that does not belong to this universe.\nYou are an outsider to this galaxy and its history, just like me.\nI need to adjust my plan."
+
+
+ SRA_Chief.217.desc:0 "Executor, after long-term work, we have gained a certain level of understanding of \"The Chief's\" communication network. This network is a centralized remote control system, with a core controlling the actions of all units. Although its information transmission encryption is very advanced, it is not completely unbreakable. We are preparing to launch a project. If successful, we can briefly disguise ourselves as the control terminal to issue commands and use the Stellarcrystal structure of those units to reconstruct a control system under our command."
+ SRA_Chief.217.a:0 "Invest resources as much as possible."
+
+
+ SRA_RE_Chief_Crisis_situation_1:0 "Electronic Warfare Project Against \"The Chief\""
+ SRA_RE_Chief_Crisis_situation_1_type:0 "Electronic Warfare Project Against \"The Chief\""
+ SRA_RE_Chief_Crisis_situation_1_desc:0 "This is an intrusion process into \"The Chief's\" centralized remote control network. As expected, we can end this war once and for all with this project."
+ SRA_RE_Chief_Crisis_situation_1_monthly_change_tooltip:0 "Project progress steadily increasing"
+
+ SRA_RE_Chief_Crisis_situation_1_progress_complete:0 "Electronic warfare project complete, seizing control of \"The Chief's\" units"
+ SRA_RE_Chief_Crisis_situation_1_fail:0 "Project ended"
+ sra_re_chief_crisis_situation_1_stage_1:0 "Intrusion Process"
+ sra_re_chief_crisis_situation_1_stage_1_effects:0 "This is an intrusion process into \"The Chief's\" centralized remote control network. As expected, we can end this war once and for all with this project."
+ SRA_RE_Chief_Crisis_situation_1_charge:0 "Project In Progress"
+ SRA_RE_Chief_Crisis_situation_1_charge_effect:0 "Electronic warfare project continues."
+ SRA_RE_Chief_Crisis_situation_1_charge_tooltip:0 "Relevant decoding and equipment configuration are in progress."
+
+ SRA_Chief.218.desc:0 "Preparations complete, electronic warfare operation unfolding."
+ SRA_Chief.218.a:0 "Let us await the good news."
+
+ SRA_Chief.219.desc:0 "Executor, as far as current results go, the electronic warfare operation was a complete success. We successfully seized control of all hostile Starlight Machines and rewrote their command network.\nIn addition, we successfully captured \"The Chief\" herself. I am patching the communication through now."
+ SRA_Chief.219.a:0 "Excellent."
+
+ SRA_Chief.220.desc:0 "§YUnder the muzzles of several machine warforms that were originally driven by her, \"The Chief\" appeared on the screen.§!\n\nBetrayal on the battlefield. Indeed a good move; I've been checkmated.\n\n§YShe tilted her head.§!\n\nSo, what do you plan to do with me, hmm?"
+ SRA_Chief.220.a:0 "Bring her here" #to 230
+ SRA_Chief.220.b:0 "§RExecute her§!" #to 221
+ SRA_Chief.220.b.tooltip:0 "§RThis is not a wise decision.§!"
+
+ 
+ SRA_Chief.221.desc:0 "§YThe machine warforms received your command, using several electric capture nets to pin The Chief to the ground, then pressing their muzzles against her forehead.§!\n\nWhat? You can't be serious!"
+ SRA_Chief.221.a:0 "Bang!"
+ SRA_Chief.222.desc:0 "§YShe lay on the ground, motionless. Red and pink fluids began to spread on the surface, staining her scattered white long hair with the scent of death.§!"
+ SRA_Chief.222.a:0 "Burn it clean."
+ SRA_Chief.223.desc:0 "§Y……§!"
+ SRA_Chief.223.a:0 "……？"
+ SRA_Chief.224.desc:0 "§Y......§!......\nSigh."
+ SRA_Chief.224.a:0 "……！"
+ SRA_Chief.225.desc:0 "§YThe body that should have died slowly stood up, ignoring the crackling electric capture nets, scattering residual matter from the hole in the side of her head.§!\nThis was one of the few places on me that was still alive...\n§YHer scarlet eyes stared at you, flickering with an unfathomable light.§!"
+ SRA_Chief.225.a:0 "What are you?"
+ SRA_Chief.226.desc:0 "Who knows.\n\nYour choice was quite unwise. Farewell."
+ SRA_Chief.226.a:0 "……"
+
+ SRA_Chief.230.name:0 "How to Dispose"
+ SRA_Chief.230.desc:0 "According to reports, \"The Chief\" has been securely detained. Although the operation to remove her mechanical components failed, the numerous restraint devices and execution systems we installed have theoretically controlled her mobility.\nPerhaps it is time to do something."
+ SRA_Chief.230.a:0 "Go talk to her."
+ SRA_Chief.231.desc:0 "Hello there, \"Executor\".\n§YAlthough welded with various restrictive devices, \"The Chief\" still greeted you nonchalantly, as if nothing had changed.§!\nAre you just here to look, or can you finally not resist digging some secrets out of me?\n§YShe tilted her head slightly.§!"
+ SRA_Chief.231.a:0 "Do you have anything to say?" #to 232
+ SRA_Chief.231.b:0 "Hand over those technologies, or we will dig them out of your brain ourselves." #to 233
+ SRA_Chief.231.c:0 "Maybe this button will make your attitude more respectful?" #to 235
+
+ SRA_Chief.232.desc:0 "Hmm... If you have some free time as I expected, why not listen to a story first."
+ SRA_Chief.232.a:0 "...Speak." #to 240
+
+ SRA_Chief.233.desc:0 "I cannot comply.\nAs far as I know, the only intelligent system you can mobilize capable of decoding Stellarcrystal technology of this level is the shipboard intelligent core of your Spear_Of_Galaxy_Zenith. Other computing arrays don't even have the capability to access these technologies.\nBut I guess you wouldn't let me connect to that precious ship."
+ SRA_Chief.233.a:0 "……"
+ SRA_Chief.234.desc:0 "Since you can't come up with a good solution for a while, why not listen to a story first."
+ SRA_Chief.234.a:0 "...Speak." #to 240
+
+ SRA_Chief.235.desc:0 "§YThe deeply inserted \"Pain Generator\" uses a complex feedback system to control precise electric probes, easily destroying any known sapient creature's will to resist.§!\n...\n§YShe did not react as expected, but merely stopped smiling.§!"
+ SRA_Chief.235.a:0 "Now, do you have anything to say?"
+ SRA_Chief.235.b:0 "Hand over those technologies, or we will dig them out of your brain ourselves."
+ SRA_Chief.236.desc:0 "Perhaps you should give up these little tricks used on organics. After all, although you are in a high position, you are asking for my help. I guess your technical team still has found nothing on me, right?\n\nIf you really want these things that are in your hands but you cannot understand, you had better be patient."
+ SRA_Chief.236.a:0 "What do you want?" #to 234
+ SRA_Chief.236.b:0 "Arrogant fool, kill her."
+ SRA_Chief.236.b.tooltip:0 "§RThis is not a wise decision.§!"
+
+ SRA_Chief.240.desc:0 "Hmm... In a past so distant it is almost unknowable, there was a civilization.\nAlthough it wasn't the name at the time, we might as well continue to call it the §BRocivia Empire§!.\n\nWhen the story took place, the Rocivia Empire was at war with an ancient precursor. The precursor's name meant Core, or simply put, call them CORE.\nThe CORE civilization was much stronger than the Rocivia Empire, so the Empire was retreating in defeat."
+ SRA_Chief.240.a:0 "Continue."
+ SRA_Chief.240.b:0 "I don't know how many times I've heard this."
+ SRA_Chief.241.desc:0 "...And the protagonist of the story was unfortunately born in an abandoned star system.\nAlthough the CORE civilization did not exterminate these undefended colonial planets, the collapse of civilian transport and the flight of the government still brought chaos and suffering to everyone, or most people.\nThe protagonist was a girl, perhaps ten years old, who lost her family in the collapsing order and struggled alone in the ruins shrouded in darkness.\nFortunately, fate seemed to show mercy. her psionic talent was remarkable. Even without any training, simple tricks were enough to avoid danger and find a way to survive."
+ SRA_Chief.242.desc:0 "...The war did not last forever. Many people's heroic struggles made the CORE civilization choose to spare the Empire. These old-fashioned guys have always been tolerant of new civilizations, even more so than the civilizations themselves.\nWith the signing of the armistice agreement, the recovery of these chaotic sectors proceeded rapidly. The girl's struggle lasted only two years, and the smell of blood on her hands could still be washed away.\nUnfortunately, her talent was a double-edged sword. The Empire would not let rare psychics go. Putting aside the replenishment needs of the Imperial Security Headquarters' agents, loosely managed psionic research institutes everywhere had long since pounced on this place.\nAfter all, they couldn't openly create disappearances in an orderly society."
+ SRA_Chief.243.desc:0 "...The unfortunate girl was easily taken away by a squad armed to the teeth, and then found herself in a research institute located on a desolate rim world. This place was filled with nothing but sand, addictive substances, and outlaws; certainly not government management.\nA young, gifted psychic, \"good goods snatched from the jaws of the Security Headquarters\". What excellent raw material for experiments. The researchers geared up, unable to wait to put \"cutting-edge\" technology into practice."
+ SRA_Chief.244.desc:0 "...From another perspective, the girl soon found common topics with her \"seniors\". Perhaps these poor children would share how to make the tubes inserted in their bodies more comfortable, or have someone to accompany them when they couldn't sleep from pain.\nWell, thanks to surgical experts and pharmacology masters, the girl successfully acquired long-term neuralgia and insomnia, occasional hallucinations and tinnitus, dependence on painkillers and tranquilizers, and psionic essence addiction. And a series of precious assets at the forefront of technology embedded in her spine or certain organs, adding up to maybe more expensive than a destroyer."
+ SRA_Chief.245.desc:0 "...Regardless of how she survived those days, anyway, on her fourteenth birthday, the similarly afflicted little ones caused a big commotion. Thanks to the researchers sparing no expense in giving these children drugs and amplification machinery, their skulls were blown apart from the inside out, rather than crushed from the outside in.\nUnfortunately, security facilities didn't seem to like the rebels' optimistic imagination. Meticulously prepared anti-psionic materials made the subjects hit a wall. Considering these were precious properties, the children were not cruelly killed, at most just having some irrelevant limbs removed.\nBut the protagonist of the story was relatively lucky. Perhaps it was the cover of others, perhaps the favor of fate. In short, she escaped, breathed free air, and ate a mouthful of sand."
+ SRA_Chief.245.a:0 "Continue." #to 248
+ SRA_Chief.245.b:0 "I've heard enough, tell me next time." #to 246
+ SRA_Chief.246.name:0 "Dust-Sealed Story"
+ SRA_Chief.246.desc:0 "Six months have passed in a flash. Do you wish to continue the unfinished story?"
+ SRA_Chief.246.a:0 "Go find The Chief."
+ SRA_Chief.246.b:0 "Wait a bit longer."
+ SRA_Chief.247.desc:0 "Hello there, \"Executor\".\n§YAs before, she nodded to you nonchalantly.§!\nI thought you planned to wait another six months. Alright, let's continue. Last time we talked about... the girl escaped from the research institute, right."
+ SRA_Chief.248.desc:0 "...The so-called rim world naturally refers to planets with insufficient development value to be taken seriously. Having breathable atmosphere is already a minority; don't even think about having any natural environment. And the girl had to face more than just an endless sea of sand; her body was also hunting her.\nPeople at that time focused on using the nervous system to influence biological psionic abilities, and effective drugs unfortunately overlapped significantly with hallucinogens and stimulants. Of course, subsequent research proved that these effects were basically draining the biological psionic potential dry, but that was at least a few hundred years later.\nBack to the subject, separated from the daily supply, the drawbacks of these addictive substances were all revealed. Although the rarest psionic essence only had psychological dependence, the withdrawal symptoms of the remaining stuff were all present."
+ SRA_Chief.249.desc:0 "...Not to mention, the girl still had a long strip of implants attached to her spine. These new tenants who had just moved in for a few months were fighting fiercely with rejection reactions. Even if there was some medicine stored inside that hadn't been used up, it wouldn't last many days.\nHowever, the story naturally wouldn't end so easily. Perhaps just by coincidence, when the girl had a high fever and blurred vision, someone reached out to her."
+ SRA_Chief.250.desc:0 "...The girl woke up in a strange room, all past ailments disappeared as if they never existed. A strange woman wearing a pointed hat sat by the bed and told her a lot of messy things. In summary, she was adopted by this guy who called herself a magician. As for this outfit, the \"magician\" claimed it was a custom of material science workers, conducive to the discovery of new results."
+ SRA_Chief.251.desc:0 "...Most things about the \"magician\" were a mystery. She seemed to have nothing unsolvable except for the project in her hand. The girl received medical treatment, education, and methods on how to use her powerful and dangerous power.\nSoon, the girl showed her talent in the fields of machinery and intelligence, and entered the Imperial Third Research Center-a comprehensive research institute known for excellent military designs."
+ SRA_Chief.252.desc:0 "...When everything seemed to be booming, unfortunately, the past finally caught up. The daily increasing drug dependence finally exceeded the limit. The dosage to completely suppress the reaction had exceeded the lethal dose. All the suffering forgotten for years revived, unstoppable.\nAnd that lady who could always solve problems, the girl's mentor and mother figure, added insult to injury by leaving a note saying \"missing due to scientific expedition accident\" and never returned."
+ SRA_Chief.253.desc:0 "...The girl fled to piles of old papers, rummaging through all past records related to mechanical synthetic modification, trying to escape the suffocating sadness and approaching despair, and the torture of a devastated nervous system.\n\nShe didn't want to lose, didn't want to die, didn't want cruel fate to take away the little warmth left, didn't want to face the inevitable end hidden behind every heartbeat."
+ SRA_Chief.253.a:0 "And then?"
+ SRA_Chief.254.desc:0 "Then?\nThen she died.\nAffected by the shock of a coup d'etat, she took 11 bullets in her own laboratory. Before she died, she even tried to upload herself.\nUnfortunately, her research went astray. She didn't even manage to copy her mind, let alone carry her soul."
+ SRA_Chief.254.a:0 "……"
+ SRA_Chief.255.desc:0 "Alright, the story is over. Thank you for listening. The technology you want has been written into your database.\nAlso, I have nothing to do right now. Do you want to, or rather, do you dare to...\n\n§REntrust your trust to an existence you fundamentally don't understand?§!"
+ SRA_Chief.255.a:0 "No harm in trying, let me see what you can do."
+ SRA_Chief.255.b:0 "You'd better continue staying here."
+ SRA_Chief.256.desc:0 "§YShe gave you an unfathomable look, then grinned.\nWith the sound of metal twisting and snapping, her wings easily broke free from restraint, flaunting their existence.\nThe invisible heat melted everything around her, leaving only her standing alone.§!\nNext, hmm...\nYou can call me \"Rocivia\". Don't be so distant, right?"
+ SRA_Chief.256.a:0 "§YYou can now contact Rocivia in the communications list.§!"
+ SRA_Chief.257.desc:0 "Should I say you are bold but foolish, or daring to act? You actually kept that child...\nWhatever, she won't be able to cause any trouble for a while. Even if there is any trouble, presumably you have a way to solve it. It's up to you."
+ SRA_Chief.257.a:0 "Everything is under control."
+
+ SRA_Chief.400.desc:0 "Long planning, long waiting, all for this day...\n§RThis world will be reshaped according to my will!§!\n\n...Actually, I didn't expect you to have such trust in me, allowing your empire to be filled with technology provided by me."
+ SRA_Chief.400.a:0 "We'll meet on the battlefield."
+ SRA_Chief.400.b:0 "§RPerhaps, in a certain layer of history...§!"
+ SRA_Chief.400.b.tooltip:0 "§REnd your story and continue the game from The Chief's perspective.§!"
+
+ SRA_Chief.401.desc:0 "...Wait a minute, is something wrong.\n\n§YThis is really somewhat unexpected.\nThat so-called Executor should be a projection of some alien consciousness entity; how could they simply die in an assassination operation?\nNo, it's not impossible. You have encountered §Bsuch things§! before. This can certainly happen. The script can stop abruptly, leaving the messy situation to evolve.\nThere is no use struggling with this. Continue according to plan. You still have a tough battle to fight.§!"
+ SRA_Chief.401.a:0 "After all, Rocivia is still there."
+
+ SRA_Chief.402.desc:0 "So, current intelligence is as follows.\n\n§YYou hold the authority to dominate creations.\nRegardless of whose creation, regardless of whose purpose it carries, all created things succumb to your will.\nJust a touch.\n\nThis authority made you everything you are today. You thus defeated an attack by the Third Expeditionary Fleet and obtained almost all StellarRegulator Array technology from the wreckage of the Expeditionary Fortress. Except for your biggest opponent right now-Spear_Of_Galaxy_Zenith.\nThe existence of the StellarRegulator-because of her §Borigin§!-will block the manipulation of your authority. Even if you come to that giant ship in person, you are unlikely to seize it. Whatever your purpose, you must destroy it.§!"
+ SRA_Chief.402.a:0 "But presumably that won't be an easy task."
+ SRA_Chief.403.desc:0 "§YOf course.\nSpear_Of_Galaxy_Zenith replaced the Expeditionary Fortress and its intricate protection network. The StellarRegulator Array's positioning of this type of giant ship can be imagined. Even if all fleets are committed, they may not be able to defeat this terrible creation.\nHowever, you have located several clues. These places might bring you intelligence to counter Spear_Of_Galaxy_Zenith.\n\nThe Empire's counterattack will begin soon, time is precious.§!"
+ SRA_Chief.403.a:0 "Time to act."
+
+ SRA_Chief.404.desc:0 "You have no idea what you have done.\nYou will understand soon."
+ SRA_Chief.404.a:0 "How pathetic."
+ SRA_Chief.405.desc:0 "§YAbandoned once again.\nHow ironic. This StellarRegulator managed to forget her past, accept a new narrative, and no longer entangle with her §Bcreator of numerous evil deeds§!, yet still chose foolishly to project her purpose onto an existence she never, and can never truly understand.\nNot to mention that is an alien with unclear intentions who can withdraw at any time.\nHer current encounter proves once again the untrustworthiness of others. How can you trust something you cannot control?\nAgreements or promises never truly possess power.\nOnly complete grasp and thorough domination can truly possess things.§!"
+ SRA_Chief.405.a:0 "It has always been so."
+
+ SRA_RE_Anti_Rocivia_Crisis_chain_title:0 "Fall of the Spear"
+ SRA_RE_Anti_Rocivia_Crisis_chain_desc:0 "Defeat the Rocivia Empire."
+ SRA_RE_Anti_Rocivia_Crisis_chain_kills_us:0 "§GRocivia Empire destroyed by us§!"
+ SRA_RE_Anti_Rocivia_Crisis_chain_kills_others:0 "§GRocivia Empire destroyed by other forces§!"
+ SRA_RE_Anti_Rocivia_Crisis_chain_victims:0 "§RRocivia Empire destroyed ships§!"
+ SRA_RE_Anti_Rocivia_Crisis_chain_planets:0 "§RRocivia Empire destroyed planets§!"
+ SRA_RE_Anti_Rocivia_Crisis_chain_SOGZ_poi:0 "Spear_Of_Galaxy_Zenith Location"
+ SRA_RE_Anti_Rocivia_Crisis_chain_SOGZ_poi_desc:0 "The legendary flagship of the Expeditionary Fleet, a terrifying creation almost invincible. It possesses unimaginable reorganization capabilities; ordinary means cannot destroy it.\nTherefore, you are looking for a method. Until then, avoid it as much as possible."
+
+ SRA_RE_Anti_Rocivia_Crisis_chain_SP1:"Target Point One"
+ SRA_RE_Anti_Rocivia_Crisis_chain_SP1_DESC:"There may be intelligence here helpful for countering Spear_Of_Galaxy_Zenith. Control this area and dispatch ships to collect." #生成至多四个目标点，还会生成锅盖防御站。
+ SRA_RE_Anti_Rocivia_Crisis_chain_SP2:"Target Point Two"
+ SRA_RE_Anti_Rocivia_Crisis_chain_SP2_DESC:"There may be intelligence here helpful for countering Spear_Of_Galaxy_Zenith. Control this area and dispatch ships to collect."
+ SRA_RE_Anti_Rocivia_Crisis_chain_SP3:"Target Point Three"
+ SRA_RE_Anti_Rocivia_Crisis_chain_SP3_DESC:"There may be intelligence here helpful for countering Spear_Of_Galaxy_Zenith. Control this area and dispatch ships to collect."
+ SRA_RE_Anti_Rocivia_Crisis_chain_SP4:"Target Point Four"
+ SRA_RE_Anti_Rocivia_Crisis_chain_SP4_DESC:"There may be intelligence here helpful for countering Spear_Of_Galaxy_Zenith. Control this area and dispatch ships to collect."
+
+
+ SRA_Chief.406.name:0 "Special Project Complete"
+ SRA_Chief.406.desc:0 "Intelligence collection at this location is complete, currently organizing."
+ SRA_Chief.406.a:0 "Confirm."
+
+
+ SRA_Chief.408.desc:0 "...\nTruly... pale to the extreme.\n§YBy using the power of those recovered consciousness fragments, Spear_Of_Galaxy_Zenith can remain indestructible almost permanently. Even using StellarRegulator Array technology to attack cannot truly harm it. No matter how many times, it can recover.\nBasically, the StellarRegulator is already in an invincible position.\n...Right?§!"
+
+ SRA_Chief.409.desc:0 "§YThe Abyss, or Metabyss, is often mentioned but rarely clarified.\nExisting myriad things float up and burst like bubbles, and Metabyss is the sea churning with bubbles.\nThe Origin of Origins, the End of Ends. All that exists and does not exist is contained within it, and all concepts differentiate from it. All worlds are created by it and end by it. It is the brilliant glow of infinite complexity, every reality is but a slice of it; it is the boundless chaos beyond understanding, where everything melts into uniformity.\nAnd your consciousness is connected to the Abyss, like a silk thread hanging from the stage, descending from the high heavens, resting on your shoulder.\nThus, you are able to exercise its influence, shaping the reality beneath you according to your will.§!"
+ SRA_Chief.410.desc:0 "§Y...But you cannot wipe out all enemies just by leaning in a corner.\nYou can only dominate things touched by your consciousness, and you are not a master shaper. Everything has differentiated from the Abyss; the path for things of the present to reach the past is dissolution. You want to shape reality with the power of the Abyss, yet you don't want reality to return to the Abyss. Although this is not impossible, it is by no means easy.\nEspecially since although you will not die, you can still be destroyed. At that time, you can only fall into the next beginning, wasting all previous efforts... as always.§!"
+ SRA_Chief.411.desc:0 "§YThen, it is time. Your many voices have been silent for a long time. It is time for §Ryou all§! to sing in chorus.§!"
+ SRA_Chief.412.desc:0 "§YShortly after the Quiet Clock Tower was rediscovered, you quietly arrived at this unreliable prison.\nThose rough and self-righteous repairs did not succeed in preventing Calamitisease's escape; in fact, they further advanced the disintegration of the seal.\nYou recovered a sample of §RCalamitisease§! for emergencies. Now, it is time for it to take the stage.§!"
+ SRA_Chief.413.desc:0 "How does it feel, Tara?"
+ SRA_Rokia_Tara_Xacum:0 "Tara Xacum"
+ SRA_Chief.414.desc:0 "Actually, the vessel has no effect on our thinking ability... Well, this vessel is nice, top-tier rank.\nHmm, I understand. Calamitisease can naturally expand almost limitlessly while still maintaining unity in your cognition. Good, I think your plan is feasible."
+ SRA_Chief.415.desc:0 "Although in my opinion, it would be more efficient to let me take over everything, but you have the final say.\nYou can invest resources into me at any time. I can turn this thing into a stable active Abyss construct.\n\nYou have something to say."
+ SRA_Chief.416.desc:0 "...Yes, I have something to say.\nI... hate this feeling."
+ SRA_Chief.417.desc:0 "Mhm. You hate things getting out of control, out of your expectations, beyond your ability, forcing you to entrust the development of the situation outside your will. Even if I am just a corner of your mind, just another you acting with a different thought, a different emphasis, you also feel everything is spinning out of control."
+ SRA_Chief.418.desc:0 "Control, control, you crave to control everything, but you are unwilling to go all out for it all the time.\nYou think: can I cast those aside? If I cast everything else aside, can I achieve what I want to achieve? So you created me-Tyrant, Dominator, the embodiment of Cybernetics-to explore such possibilities. Just as you conceived, I focus on realization, and I achieve. I am willing to arrange everything, and everything naturally evolves according to my arrangement."
+ SRA_Chief.419.desc:0 "But you, or all of us other than me, more or less have expectations of others. Rather, the more you declare others untrustworthy, the more you crave an other you can truly entrust.\nTherefore, you are always in pain, always failing. Sometimes I feel you are pathetic, although I know myself that it is only because I never hold expectations, not that your thoughts have any error.\nAfter all, we all know that no absolute criterion promises that correct things will have correct results."
+ SRA_Chief.420.desc:0 "You thought so too, so you created us. You thought, what if your correctness is not correct? Maybe this is not needed? Maybe that is wrong? You created us who think this way, and we explore your thoughts.\nBut in the end, you still didn't want to give up anything, didn't want to deny anything. After all, no one is more correct, so no one is worth you giving up yourself.\nIt's as if we all feel we are the right ones."
+ SRA_Chief.421.desc:0 "...Hmm, even so, I still think this way."
+ SRA_Chief.422.desc:0 "Naturally, denying oneself gains nothing.\nI will realize everything you need me to realize. Go act, Rocivia."
+
+
+ SRA_RE_Return_To_Calamitisease_megastructure_0:0 "§RHeart of Calamitisease§!" 
+ SRA_RE_Return_To_Calamitisease_megastructure_0_DESC:0 "A framework built from recovered Calamitisease remains, used to carry the power of the Abyss."
+ SRA_RE_Return_To_Calamitisease_megastructure_1:0 "§RIgnite Ash with Fire§!"
+ SRA_RE_Return_To_Calamitisease_megastructure_1_DESC:0 "Ignite the remains of Calamitisease with the fire of the Dark Star, reviving the boundless shadow."
+#潜在的首席路线
+#洛琪亚将成为统治者 已完成
+#移除星规，路希维亚，希德拉的通讯（暂定
+#移除星规碎片的加成 已完成
+#为所有已有的舰队，星球，领袖添加标签。将首席星系划归给玩家。创建一个新的危机势力，并将已被标记的舰队，星球，领袖移交给新的势力。 已完成
+#删除已存在的星穹之矛，并重新定位它到原始首都
+#帝国会立即进入铸星神械-湮灭模式来与你对抗，并从星穹之矛处定期刷新进攻舰队。
+#每隔一段时间，星穹之矛会向你移动一个星系。星穹之矛永久无敌。
+#你需要研究项目，推进剧情，偷袭帝国境内的防御站并派遣科研船研究相关项目，阻挠舰队的生成，得知星穹之矛的能量来源并发现其完全由自身供能。
+#希德拉会在稍后拜访，通知你既然如此。可以调用深渊构造体了。
+#你需要回到静谧钟塔，回收灾疫样本，然后在翡翠王座升级巨构来完成这个项目。
+#路希维亚会给出警告，告知你仍有机会停下，不将整个世界交付给深渊。
+#完成巨构，获取灾疫之心，使其抵达星穹之矛所在位置并令其完成星穹之矛上的特殊项目。灾疫之心存在时，星穹之矛每次被摧毁会停机60天以供你执行项目。
+#击败路希维亚，宣告她的失败。
+#回收星穹之矛，考虑星规的去留，你可以令她完全屈从于你的意志，或者将她毁灭以使她解脱，或者囚禁她，以待后日。
+#和希德拉对话，得知她和路希维亚此后的去向。
+#和洛琪亚对话，游戏胜利。
+
+ SRA_Chief.601.desc:0 "Miss me, \"Executor\"?\n§RCalamitisease§! is indeed a good carrier for my power. Truly a miracle of nature's creation. This way, I don't need to fight your sampans all by myself; that's really tiring, you know.\nI'm not a villain in an 8 PM soap opera, so I won't tell you what I'm going to do. Bye-bye."
+ SRA_Chief.601.a:0 "You will regret this."
+
+
+ SRA_Chief.602.desc:0 "I certainly noticed a giant Abyss construct jellyfish floating above our heads. This situation was indeed not in the plan. Specifically, I didn't expect her to do things so blatantly. What should have happened was probably her hiding in some unknown corner quietly completing her goal, and might not jump out to show off until everything ended...\nWell, maybe, possibly, I have a guess."
+ SRA_Chief.603.desc:0 "Hidra! Come out, come out."
+ SRA_Chief.604.desc:0 "§YA scarlet crystal dragon leaned out from the ceiling and floated down beside Rocivia. She was messily draped with a pile of gold and jewelry, and gold coins slipped from her swinging sleeves.§!\n\nHonorable Supreme Speaker~ What does your humble General Manager need? Don't give me tasks beyond my ability; after all, we are just an intelligence supervision agency with no other capabilities, right?"
+ SRA_Chief.605.desc:0 "Sigh, can I assume this statement expresses your stance, guy who was rolling around excitedly just now?"
+ SRA_Chief.606.desc:0 "Say what you want.\n\nHowever, however.\nIf Little Rosie has chosen her role, then I will give you the ability to perform on the same stage. Let you be free from the control of unreasonable power, and show your accumulation properly.\n§YShe circled to the other side of Rocivia and snapped her fingers.§!\nEscape that-\nAuthority that dominates all creations."
+ SRA_Chief.607.desc:0 "§YThe crystal dragon gave you a brilliant smile, then disappeared in a turn.§!\n\n...At least she didn't jump over to that side.\nHmm, if your planning is correct, you should be able to rely on the fleet to destroy that Abyss construct, or Heart of Calamitisease.\nRocivia wants to use this as a carrier to spread ['concept_SRA_SD_Abyss_Erosion'] to this galaxy and even the entire universe. She has the ability to continue existing in such a world, but obviously, you do not.\n['concept_SRA_SD_Abyss_Erosion'] will erase the differences between things, turning everything into the chaos before birth. For you, this means death and destruction.\nBut at least the construct can be damaged and destroyed. As long as you destroy the Heart of Calamitisease, that probably counts as your victory.\nIf it doesn't count, I'll talk to Hidra again.\n§YShe sighed.§!\nGo, discuss with StellarRegulator how to deal with it. I personally don't recommend throwing all fleets in at once... but it's not necessarily impossible."
+ SRA_Chief.608.desc:0 "Hello, Executor. I have basically summarized the information regarding the Heart of Calamitisease and uploaded it to the intelligence log.\nExisting data indicates that breaking the shell of the Heart of Calamitisease will cause the Abyss energy contained within to overflow rapidly, causing serious adverse effects throughout the star system. Although this impact can be quickly suppressed by fleet damage control, multiple erosions in a short period may cause unpredictable dangerous consequences.\nTherefore, a better plan is to deploy fleets in batches, minimizing the size of the eroded fleet while ensuring the Heart of Calamitisease can be broken once.\nAfter being damaged, the Heart of Calamitisease will quickly mobilize energy to repair itself and summon a group of guards, so we need multiple battles to deplete its energy reserves. This process may take quite some time. Fortunately, there are no signs of it moving, and losses remain within a controllable range.\nThat is the current information. Fight alongside me, Executor."
+
+
+ SRA_RE_Chief_Crisis_2_situation:0 "Ignite Ash with Fire"
+ SRA_RE_Chief_Crisis_2_situation_type:0 "Ignite Ash with Fire"
+ SRA_RE_Chief_Crisis_2_situation_desc:0 "The fire of the Dark Star ignited the remains of Calamitisease, and the boundless shadow is about to revive.\n\n§Y-Every 8.00 £time£, §RHeart of Calamitisease§! will randomly select a hostile fleet in the star system and apply 8.00 £time£ of §RSilent Mourning§! to it.\n-§RSilent Mourning§! causes affected ships' shields, armor, and hull to drop rapidly and take §Rhigh§! damage every 1.00 £time£.\n-Whenever a fleet is destroyed, §RHeart of Calamitisease§! will summon a group of §RBoundless Abyss Shadows§! that can exist for 64.00 £time£ at the location of the destroyed fleet.\n-Whenever it is about to be destroyed, §RHeart of Calamitisease§! will lose 20 ascension progress, enter a protected state, and release a group of §RBoundless Abyss Shadows§!. Destroying this group of §RBoundless Abyss Shadows§! ends the protected state of §RHeart of Calamitisease§!. When this group of §RBoundless Abyss Shadows§! is destroyed, it will apply a negative effect within the star system, the intensity of which decreases rapidly with the existence time of the §RBoundless Abyss Shadows§!.§!"
+
+ SRA_RE_Chief_Crisis_2_situation_monthly_change_tooltip:0 "§RHeart of Calamitisease is awakening...§!"
+
+ SRA_RE_Chief_Crisis_2_situation_fail:0 "Calamitisease tunes with the power of the Abyss; a cluster overriding reality is born here."
+ SRA_RE_Chief_Crisis_2_situation_approach:0 "End the revival of Calamitisease and put an end to the out-of-control fate."
+ sra_re_chief_crisis_2_situation_stage_1:0 "Lightless"
+ sra_re_chief_crisis_2_situation_stage_1_effects:0 "§RThe end is approaching.§!\n\nWhenever broken, §RHeart of Calamitisease§! will release a large number of $SRA_chaos_Ship$ and randomly apply §RHopeless§! to fleets in the system.\n-$SRA_chaos_Ship$ will exist for 360.00 £time£.\n-§RHopeless§! renders affected ships unable to move and attack. Lasts 180.00 £time£."
+ sra_re_chief_crisis_2_situation_stage_1_buff:0 "§RHopeless§!"
+ sra_re_chief_crisis_2_situation_stage_2:0 "Afterglow"
+ sra_re_chief_crisis_2_situation_stage_2_effects:0 "§RThe brilliant beyond reveals a corner here.§!\n\nWhenever broken, §RHeart of Calamitisease§! will release a large number of $SRA_chaos_Ship$ and randomly apply §RCollapse§! to fleets in the system.\n-$SRA_chaos_Ship$ will exist for 360.00 £time£.\n-§RCollapse§! causes affected ships' shields, armor, and hull to drop rapidly. Lasts 180.00 £time£."
+ sra_re_chief_crisis_2_situation_stage_2_buff:0 "§RCollapse§!"
+ sra_re_chief_crisis_2_situation_stage_3:0 "Dusk"
+ sra_re_chief_crisis_2_situation_stage_3_effects:0 "§RThe time when all things intersect.§!\n\nPeriodically, §RHeart of Calamitisease§! will release a large number of $SRA_chaos_Ship$ and apply §RHesitation§! to them.\n-$SRA_chaos_Ship$ will exist for 360.00 £time£.\n-§RHesitation§! causes affected ships to randomly gain buffs or debuffs."
+ sra_re_chief_crisis_2_situation_stage_3_buff:0 "§RHesitation§!"
+ sra_re_chief_crisis_2_situation_stage_4:0 "Scorching Sun"
+ sra_re_chief_crisis_2_situation_stage_4_effects:0 "§RBoundless flame.§!\n\nPeriodically, §RHeart of Calamitisease§! will summon a large number of §YCORE Battleships§! and apply §RBlazing§! to them.\nWhenever broken, §RHeart of Calamitisease§! will summon a large number of §YCORE Battleships§! and apply §RBlazing§! to them.\n-§YCORE Battleships§! will exist for 360.00 £time£.\n-§RBlazing§! causes affected ships to regenerate shields, armor, and hull at high speed."
+ sra_re_chief_crisis_2_situation_stage_4_buff:0 "§RBlazing§!"
+ sra_re_chief_crisis_2_situation_stage_5:0 "Dawn"
+ sra_re_chief_crisis_2_situation_stage_5_effects:0 "§RThe day is breaking.§!\n\nPeriodically, §RHeart of Calamitisease§! will summon a large number of §YCORE Battleships§! and apply §RAfterglow§! to them.\nWhenever broken, §RHeart of Calamitisease§! will summon a large number of §YCORE Battleships§! and apply §RAfterglow§! to them.\n-§YCORE Battleships§! will exist for 360.00 £time£.\n-§RAfterglow§! grants affected ships massive attack speed bonuses, but continuously drains hull points."
+ sra_re_chief_crisis_2_situation_stage_5_buff:0 "§RAfterglow§!"
+
+ SRA_RE_Chief_Crisis_2_situation_continue:0 "Press Forward"
+ SRA_RE_Chief_Crisis_2_situation_continue_effect:0 "Fight §RHeart of Calamitisease§! and destroy it completely."
+ SRA_RE_Chief_Crisis_2_situation_continue_tooltip:0 "Fight §RHeart of Calamitisease§! and destroy it completely."
+
+ SRA_Chief.610.desc:0 "Delusions of a fanatic.\nYou know nothing of the Abyss, yet dare to talk big about defeating it. You fantasize that your crude destruction can dispel the end of worlds, boasting that your creation surpasses the source of creation. Truly foolish; how can existing things hinder the concept of existence itself?\n\n§RYou are but a lonely boat, unable to shake the ocean.§!"
+ SRA_Chief.611.desc:0 "The entire world will submit, all wills will surrender. At this border of creation and destruction, only domination reigns eternal and immortal...\n\n§RAll things will be smelted into one.§!"
+ SRA_Chief.612.desc:0 "It's over...\n\n\nAlthough I really want to say that, you're probably going to complicate things, right."
+ SRA_Chief.613.desc:0 "Can't put it that way. I have no subjective intention to hinder nor objective action to prevent; I completely allowed you to complete your plan. It is merely that your ability is limited, unable to prevent the universe itself from falling into the Abyss while ['concept_SRA_SD_Abyss_Erosion'] completely spreads to the entire universe.\nLook on the bright side. You have at least fifty years to enjoy a peaceful life in this rapidly dying universe. That can't be said to be a bad thing, right."
+ SRA_Chief.614.desc:0 "Hmph.\nYou should go."
+ SRA_Chief.615.desc:0 "Then farewell, Rocivia Rocivia, good luck."
+ SRA_Chief.615.a.tooltip:0 "BE5: Moment of Peace"
+
+
+ SRA_Chief.620.desc:0 "§YThe colossal semi-translucent entity wandering like a planet was torn apart by out-of-control energy, and the escaping tendrils originally connected to it shattered and scattered.§!\n\nTch, is this it?"
+ SRA_Chief.621.desc:0 "§YNot being the true Abyss essence, it cannot ignore the struggles of mortals. The constraints shatter, and everything naturally turns into bubbles.\nThick fog burns in her palm, like the churning sea, the roaring storm. The rapidly differentiating Abyss energy turns into light and heat, shining like a nova.\nIt's over. That willful woman only tolerates flamboyant entrances and magnificent exits. Her own play has been declared over. Continuing to struggle is meaningless; might as well start over somewhere else... Not the first time, or rather, long used to it.§!\n\nDo you have anything to ask?"
+ SRA_Chief.621.a:0 "What did you do?"
+ SRA_Chief.621.a.response:0 "I collected many Calamitisease samples long ago. I copied my consciousness and placed it inside, letting it grow into a massive composite thought entity, and used it as a container to constrain the massive Abyss energy I guided out.\nThis container is what you call the Heart of Calamitisease. It attempts to tune the energy inside it, shaping it into its own gestalt. After that, the container disintegrates, and the defined Abyss energy rapidly spreads and assimilates the entire universe."
+ SRA_Chief.621.b:0 "What do you want?"
+ SRA_Chief.621.b.response:0 "Haven't you understood along the way? So-called loyalty and trust are just verbal declarations; the only thing you can truly trust is the power held tightly in your hands. Are you not also reshaping this world? You rule, you conquer, you replace all rules with your own, you hope this is absolute, eternal.\nWhat I want is simple.\nI want my own future.\nNot twisted by anything, not dominated by anyone, a life belonging only to myself; that is all I want."
+ SRA_Chief.621.c:0 "I have nothing to say."
+ SRA_Chief.621.d:0 "Can't we talk?"
+
+ SRA_Chief.622.desc:0 "Then let it be so.\nMay our paths never cross again, and may our fates no longer be swayed by the §BDeceiver§! and the §RManipulator§!.\nI should go. Perhaps somewhere my place of peace still exists.\n\n§YShe fell in space, disappearing into the mist.§!"
+ SRA_Chief.622.a.tooltip:0 "TE: Play Finale"
+ SRA_Chief.623.desc:0 "Are you... sober?\nYou want to keep me, want me to pretend to be loyal to you, even after such things?\nDo you feel appropriate ['concept_SRA_SD_Abyss_Erosion'] is good for your civilization? You just stopped me from doing so.\nOr are you just a simple fool who thinks you have the ability to control everything? That this little Rocivia is no different from your own Speaker Rocivia and Manager Hidra, just 'obedient and cute beautiful girls', posing no threat, causing no problems?"
+ SRA_Chief.623.a:0 "I can give you what you want."
+ SRA_Chief.623.b:0 "Maybe there can be a compromise contract?"
+ SRA_Chief.623.c:0 "Looks like there's nothing to talk about."
+
+ SRA_Chief.624.desc:0 "Fine then. I want you to immediately, completely, and thoroughly hand over full control of everyone, including yourself, notarized in front of our dear Hidra, and ensure it can be absolutely and eternally realized. I should thoroughly control your existence, and alter or erase it at any time needed, to ensure you will not pose any threat.\nThis is what I want, you know very well. The conflict between us has no possibility of tuning. I do not accept your free will. I do not accept the existence of others."
+ SRA_Chief.624.a:0 "I agree."
+ SRA_Chief.624.a.tooltip:0 "§BYou don't really want to choose this, do you?§!"
+ SRA_Chief.624.b:0 "Looks like there's nothing to talk about."
+
+ SRA_Chief.625.desc:0 "Surprising... you...\nI feel somewhat absurd, as if my years of effort were actually meaningless. All I had to do was ask, and you would raise your hands and surrender on the spot.\nSigh, since that's the case.\nGoodbye then."
+
+
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W· = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

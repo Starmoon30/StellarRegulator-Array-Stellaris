@@ -1,0 +1,32 @@
+
+SRA_patron_Hidra = {
+	category = minor_patron
+	color = { 0 0 0 1 }
+	text_color_code = "R"
+	first_contact_event = SRA_RE_Hidra.500
+	pre_communications_name_format = "{$code_name_SRA_patron_Hidra$}"
+	potential = {
+		OR = {
+			AND	= {
+				has_civic = civic_SRARociviaEmpire
+				has_country_flag = SRA_RE_Hidra_500
+			}
+			AND	= {
+				has_civic = civic_SRAtechnology
+				has_country_flag = SRA_StellarRegulator_Cloth_3
+			}
+		}
+	}
+	position = { x = -0.6 y = 0.9 }
+	passive_accord = {
+		name = SRA_patron_Hidra
+		hide_desc = yes
+		triggered_modifier = {
+            custom_tooltip = SRA_patron_Hidra_passive_accord_modifier
+		}
+		on_unlock = {
+			custom_tooltip = SRA_patron_Hidra_passive_accord_effect
+			set_country_flag = SRA_patron_Hidra_passive_accord_unlocked
+		}
+	}
+}

@@ -1,0 +1,51 @@
+spriteTypes = {
+
+	#Megastructures
+	spriteType = {
+		name = "GFX_SRA_Barrier_megastructure_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/ring_world.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Barrier_megastructure_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/ring_world.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Barrier_megastructure_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/ring_world.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Barrier_megastructure_3_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/ring_world.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Barrier_megastructure_4_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/ring_world.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Barrier_megastructure_ruined_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/ring_world_ruined.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Barrier_megastructure_repair_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/ring_world_ruined.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_GZ_Core_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/spy_orb.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_GZ_Core_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/spy_orb.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_GZ_Core_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/spy_orb.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_GZ_Core_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/spy_orb.dds"
+	}
+}
+
+
+

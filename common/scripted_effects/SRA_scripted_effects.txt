@@ -1,0 +1,900 @@
+
+# SRA_hostile_kill_counter = { ... }
+# A counter on Victim's country to count how many ships belong to this country were destroyed, different ship class has different weight.
+# this: Victim(Country Scope), owner of distroyed ship.
+# prev: Victim(Ship Scope), distroyed ship.
+# Parameters: 
+# SRA_variable_name: Name of the variable that used as the counter, can't be empty.
+# SRA_effect_corvette_class: Scripted effects that triggered when the victim ship belongs to the corvette class, default is do nothing.
+# SRA_effect_destroyer_class: Scripted effects that triggered when the victim ship belongs to the destroyer class, default is do nothing.
+# SRA_effect_cruiser_class: Scripted effects that triggered when the victim ship belongs to the cruiser class, default is do nothing.
+# SRA_effect_battleship_class: Scripted effects that triggered when the victim ship belongs to the battleship class, default is do nothing.
+# SRA_effect_titan_class: Scripted effects that triggered when the victim ship belongs to the titan class, default is do nothing.
+# SRA_effect_colossus_class: Scripted effects that triggered when the victim ship belongs to the colossus class, default is do nothing.
+# SRA_effect_ancient_class: Scripted effects that triggered when the victim ship is an ancient ship in this mod, default is do nothing.
+# SRA_effect_constructor_class: Scripted effects that triggered when the victim ship belongs to the constructor class, default is do nothing.
+# SRA_effect_colonizer_class: Scripted effects that triggered when the victim ship belongs to the colonizer class, default is do nothing.
+# SRA_effect_science_class: Scripted effects that triggered when the victim ship belongs to the science class, default is do nothing.
+# SRA_effect_transport_class: Scripted effects that triggered when the victim ship belongs to the transport class, default is do nothing.
+# SRA_effect_defensive_station_class: Scripted effects that triggered when the victim ship belongs to the defensive_station class, default is do nothing.
+# SRA_effect_starbase_class: Scripted effects that triggered when the victim ship belongs to the starbase class, default is do nothing.
+# SRA_effect_civilian_station_class: Scripted effects that triggered when the victim ship belongs to the civilian_station class, default is do nothing.
+
+#######################################
+###			Special Effects
+#######################################
+
+SRA_eta_titan_system_portal_effect = {
+	optimize_memory
+	create_ambient_object = {
+		type = SRA_eta_titan_system_portal
+		location = this
+		duration = 30
+		
+		use_3d_location = yes
+		
+		entity_offset = { min = 0 max = 0 }
+		entity_offset_angle = { min = 0 max = 0 }
+		entity_offset_height = { min = 0 max = 0 }
+		
+		#entity_scale_to_size = yes
+		scale = 5
+	}
+}
+SRA_nemesis_system_effect_1_effect = {
+	optimize_memory
+	create_ambient_object = {
+		type = SRA_nemesis_system_effect_1
+		location = this
+		duration = 30
+		
+		use_3d_location = yes
+		
+		entity_offset = { min = 0 max = 0 }
+		entity_offset_angle = { min = 0 max = 0 }
+		entity_offset_height = { min = 0 max = 0 }
+		
+		scale = 1
+	}
+}
+SRA_nemesis_system_effect_2_effect = {
+	optimize_memory
+	create_ambient_object = {
+		type = SRA_nemesis_system_effect_2
+		location = this
+		duration = 30
+		
+		use_3d_location = yes
+		
+		entity_offset = { min = 0 max = 0 }
+		entity_offset_angle = { min = 0 max = 0 }
+		entity_offset_height = { min = 0 max = 0 }
+		
+		scale = 1
+	}
+}
+SRA_nemesis_system_effect_3_effect = {
+	optimize_memory
+	create_ambient_object = {
+		type = SRA_nemesis_system_effect_3
+		location = this
+		duration = 30
+		
+		use_3d_location = yes
+		
+		entity_offset = { min = 0 max = 0 }
+		entity_offset_angle = { min = 0 max = 0 }
+		entity_offset_height = { min = 0 max = 0 }
+		
+		scale = 1
+	}
+}
+
+SRA_planet_killer_windup_star_effect = {
+	optimize_memory
+	create_ambient_object = {
+		type = SRA_T4_weapon_planet_killer_star_windup_in_range
+		location = this
+		duration = -1
+		use_3d_location = yes
+		entity_offset = { min = 0 max = 0 }
+		entity_offset_angle = { min = 0 max = 0 }
+		entity_offset_height = { min = 0 max = 0 }
+		#entity_scale_to_size = yes
+		scale = 10
+	}
+}
+SRA_planet_killer_hit_star_effect = {
+	optimize_memory
+	create_ambient_object = {
+		type = SRA_T4_weapon_planet_killer_star_hit_in_range
+		location = this
+		duration = 10
+		use_3d_location = yes
+		entity_offset = { min = 0 max = 0 }
+		entity_offset_angle = { min = 0 max = 0 }
+		entity_offset_height = { min = 0 max = 0 }
+		#entity_scale_to_size = yes
+		scale = 10
+	}
+}
+SRA_T4_weapon_planet_killer_hit_explosion_entity = {
+	optimize_memory
+	create_ambient_object = {
+		type = SRA_T4_weapon_planet_killer_hit_explosion
+		location = this
+		duration = 30
+		
+		use_3d_location = yes
+		
+		entity_offset = { min = 0 max = 0 }
+		entity_offset_angle = { min = 0 max = 0 }
+		entity_offset_height = { min = 0 max = 0 }
+		
+		entity_scale_to_size = yes
+		scale = 10
+	}
+}
+SRA_spawn_explosion_effect = {
+	optimize_memory
+	if = {
+		limit = { NOT = { has_global_flag = ag_ancient_empire_mod_no_particle_effect } }
+		create_ambient_object = {
+			type = SRA[[SRA_scale]_$SRA_scale$]_explosion[[SRA_color]_$SRA_color$]
+			play_animation_once = yes
+			location = this
+			duration = 10
+			use_3d_location = yes
+			entity_offset = { min = 0 max = 0 }
+			entity_offset_angle = { min = 0 max = 0 }
+			entity_offset_height = { min = 0 max = 0 }
+			entity_scale_to_size = yes
+			scale = 0.2
+		}
+	}
+}
+
+
+SRA_destroy_ambient_object = {
+	optimize_memory
+	every_system_ambient_object = {
+		if = {
+			limit = {
+				NOR = {
+					has_ambient_object_flag = ag_ancient_station
+					has_ambient_object_flag = ag_beta_station_1
+					has_ambient_object_flag = ag_beta_station_2
+					has_ambient_object_flag = ag_beta_station_3
+					has_ambient_object_flag = ag_beta_station_source_1
+					has_ambient_object_flag = ag_beta_station_source_2
+					has_ambient_object_flag = ag_beta_station_source_3
+					has_ambient_object_flag = ag_gamma_station_dirty
+					has_ambient_object_flag = ag_gamma_station_active
+					has_ambient_object_flag = ag_gamma_station_small_1
+					has_ambient_object_flag = ag_gamma_station_small_2
+					has_ambient_object_flag = ag_gamma_station_small_3
+					has_ambient_object_flag = ag_ancient_delta_platform
+					has_ambient_object_flag = ag_ancient_zeta_research_station
+					is_ambient_object_type = ag_psionic_portal_stabled_object
+					is_ambient_object_type = ag_beta_psionic_structure_object
+					is_ambient_object_type = ag_beta_psionic_system_effect_1
+					is_ambient_object_type = ag_beta_psionic_system_effect_2
+					is_ambient_object_type = ag_beta_psionic_system_effect_3
+					is_ambient_object_type = ag_beta_drone_type2_psi_object
+				}
+			}
+			destroy_ambient_object = this
+		}
+	}
+}
+SRA_destroy_megastructure = {
+	optimize_memory
+	every_system_megastructure = {
+		limit = { exists = this }
+		if = {
+			limit = {
+				OR = {
+					is_megastructure_type = dyson_sphere_0
+					is_megastructure_type = dyson_sphere_1
+					is_megastructure_type = dyson_sphere_2
+					is_megastructure_type = dyson_sphere_3
+					is_megastructure_type = dyson_sphere_4
+					is_megastructure_type = dyson_sphere_5
+					is_megastructure_type = dyson_sphere_ruined
+					is_megastructure_type = dyson_sphere_restored
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = dyson_sphere_built }
+					remove_star_flag = dyson_sphere_built
+				}
+				if = {
+					limit = {
+						prev = {
+							OR = {
+								is_megastructure_type = dyson_sphere_5
+								is_megastructure_type = dyson_sphere_restored
+							}
+						}
+					}
+					spawn_megastructure = { type = "dyson_sphere_ruined" coords_from = prev }
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { has_country_flag = built_dyson_sphere }
+				}
+				owner = { remove_country_flag = built_dyson_sphere }
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = spy_orb_0
+					is_megastructure_type = spy_orb_1
+					is_megastructure_type = spy_orb_2
+					is_megastructure_type = spy_orb_3
+					is_megastructure_type = spy_orb_4
+					is_megastructure_type = spy_orb_ruined
+					is_megastructure_type = spy_orb_restored
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = spy_orb_built }
+					remove_star_flag = spy_orb_built
+				}
+				if = {
+					limit = {
+						prev = {
+							OR = {
+								is_megastructure_type = spy_orb_4
+								is_megastructure_type = spy_orb_restored
+							}
+						}
+					}
+					spawn_megastructure = { type = "spy_orb_permanently_ruined" coords_from = prev.planet }
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { has_country_flag = built_spyorb }
+				}
+				owner = { remove_country_flag = built_spyorb }
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = think_tank_0
+					is_megastructure_type = think_tank_1
+					is_megastructure_type = think_tank_2
+					is_megastructure_type = think_tank_3
+					is_megastructure_type = think_tank_4
+					is_megastructure_type = think_tank_ruined
+					is_megastructure_type = think_tank_restored
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = think_tank_built }
+					remove_star_flag = think_tank_built
+				}
+				if = {
+					limit = {
+						prev = {
+							OR = {
+								is_megastructure_type = think_tank_3
+								is_megastructure_type = think_tank_4
+								is_megastructure_type = think_tank_restored
+							}
+						}
+					}
+					spawn_megastructure = { type = "think_tank_permanently_ruined" coords_from = prev.planet }
+				}
+			}
+			planet = {
+				if = {
+					limit = { has_planet_flag = has_megastructure }
+					remove_planet_flag = has_megastructure
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { has_country_flag = built_think_tank }
+				}
+				owner = { remove_country_flag = built_think_tank }
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = matter_decompressor_0
+					is_megastructure_type = matter_decompressor_1
+					is_megastructure_type = matter_decompressor_2
+					is_megastructure_type = matter_decompressor_3
+					is_megastructure_type = matter_decompressor_4
+					is_megastructure_type = matter_decompressor_ruined
+					is_megastructure_type = matter_decompressor_restored
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = matter_decompressor_built }
+					remove_star_flag = matter_decompressor_built
+				}
+				if = {
+					limit = {
+						prev = {
+							OR = {
+								is_megastructure_type = matter_decompressor_4
+								is_megastructure_type = matter_decompressor_restored
+							}
+						}
+					}
+					spawn_megastructure = { type = "matter_decompressor_permanently_ruined" coords_from = prev.planet }
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { has_country_flag = built_matter_decompressor_site }
+				}
+				owner = { remove_country_flag = built_matter_decompressor_site }
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = strategic_coordination_center_0
+					is_megastructure_type = strategic_coordination_center_1
+					is_megastructure_type = strategic_coordination_center_2
+					is_megastructure_type = strategic_coordination_center_3
+					is_megastructure_type = strategic_coordination_center_ruined
+					is_megastructure_type = strategic_coordination_center_restored
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = strategic_coordination_center_built }
+					remove_star_flag = strategic_coordination_center_built
+				}
+				if = {
+					limit = {
+						prev = {
+							OR = {
+								is_megastructure_type = strategic_coordination_center_3
+								is_megastructure_type = strategic_coordination_center_restored
+							}
+						}
+					}
+					spawn_megastructure = { type = "strategic_coordination_center_permanently_ruined" coords_from = prev.planet }
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { has_country_flag = built_strategic_coordination_center_site }
+				}
+				owner = { remove_country_flag = built_strategic_coordination_center_site }
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = mega_art_installation_0
+					is_megastructure_type = mega_art_installation_1
+					is_megastructure_type = mega_art_installation_2
+					is_megastructure_type = mega_art_installation_3
+					is_megastructure_type = mega_art_installation_4
+					is_megastructure_type = mega_art_installation_ruined
+					is_megastructure_type = mega_art_installation_restored
+					is_megastructure_type = mega_art_installation_restored_2
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = mega_art_installation_built }
+					remove_star_flag = mega_art_installation_built
+				}
+				if = {
+					limit = {
+						prev = {
+							OR = {
+								is_megastructure_type = mega_art_installation_3
+								is_megastructure_type = mega_art_installation_4
+								is_megastructure_type = mega_art_installation_restored
+								is_megastructure_type = mega_art_installation_restored_2
+							}
+						}
+					}
+					spawn_megastructure = { type = "mega_art_installation_permanently_ruined" coords_from = prev.planet }
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { has_country_flag = built_mega_art_installation_site }
+				}
+				owner = { remove_country_flag = built_mega_art_installation_site }
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = interstellar_assembly_0
+					is_megastructure_type = interstellar_assembly_1
+					is_megastructure_type = interstellar_assembly_2
+					is_megastructure_type = interstellar_assembly_3
+					is_megastructure_type = interstellar_assembly_4
+					is_megastructure_type = interstellar_assembly_ruined
+					is_megastructure_type = interstellar_assembly_restored
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = interstellar_assembly_built }
+					remove_star_flag = interstellar_assembly_built
+				}
+				if = {
+					limit = {
+						prev = {
+							OR = {
+								is_megastructure_type = interstellar_assembly_4
+								is_megastructure_type = interstellar_assembly_restored
+							}
+						}
+					}
+					spawn_megastructure = { type = "interstellar_assembly_permanently_ruined" coords_from = prev.planet }
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { has_country_flag = built_interstellar_assembly_site }
+				}
+				owner = { remove_country_flag = built_interstellar_assembly_site }
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = mega_shipyard_0
+					is_megastructure_type = mega_shipyard_1
+					is_megastructure_type = mega_shipyard_2
+					is_megastructure_type = mega_shipyard_3
+					is_megastructure_type = mega_shipyard_ruined
+					is_megastructure_type = mega_shipyard_restored
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = mega_shipyard_built }
+					remove_star_flag = mega_shipyard_built
+				}
+				if = {
+					limit = {
+						prev = {
+							OR = {
+								is_megastructure_type = mega_shipyard_3
+								is_megastructure_type = mega_shipyard_restored
+							}
+						}
+					}
+					spawn_megastructure = { type = "mega_shipyard_permanently_ruined" coords_from = prev.planet }
+				}
+			}
+			if = {
+				limit = {
+					exists = owner
+					owner = { has_country_flag = built_mega_shipyard_site }
+				}
+				owner = { remove_country_flag = built_mega_shipyard_site }
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				is_megastructure_type = ring_world_1
+				is_megastructure_type = ring_world_2
+				is_megastructure_type = ring_world_ruined
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			solar_system = {
+				if = {
+					limit = { has_star_flag = ring_world_built }
+					remove_star_flag = ring_world_built
+				}
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = gateway_0
+					is_megastructure_type = gateway_final
+					is_megastructure_type = gateway_ruined
+					is_megastructure_type = gateway_restored
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = ag_beta_station_type2_megastructure
+					is_megastructure_type = ag_delta_titan_megastructure_0
+					is_megastructure_type = ag_delta_titan_megastructure_1
+					is_megastructure_type = ag_gamma_station_megastructure_0
+					is_megastructure_type = ag_gamma_station_megastructure_1
+					is_megastructure_type = ag_gamma_station_megastructure_2
+					is_megastructure_type = ag_gamma_station_megastructure_3
+					is_megastructure_type = ag_gamma_station_megastructure_4
+					is_megastructure_type = ag_gamma_station_megastructure_5
+					is_megastructure_type = ag_gamma_station_megastructure_6
+					is_megastructure_type = ag_gamma_station_megastructure_7
+					is_megastructure_type = ag_gamma_station_megastructure_8
+					is_megastructure_type = ag_gamma_station_megastructure_9
+					is_megastructure_type = ag_gamma_station_megastructure_10
+					is_megastructure_type = ag_gamma_station_megastructure_11
+					is_megastructure_type = ag_gamma_station_megastructure_12
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = red }
+			solar_system = {
+				every_system_planet = {
+					if = {
+						limit = { has_planet_flag = ag_using_ancient_construction_section_system }
+						remove_planet_flag = ag_using_ancient_construction_section_system
+					}
+					if = {
+						limit = { has_planet_flag = has_megastructure }
+						remove_planet_flag = has_megastructure
+					}
+				}
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_megastructure_type = ag_ancient_anchor_station_0
+					is_megastructure_type = ag_ancient_anchor_station_1
+					is_megastructure_type = ag_ancient_anchor_station_2
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = red }
+			if = {
+				limit = {
+					is_megastructure_type = ag_ancient_anchor_station_1
+					exists = event_target:ag_ancient_wandering_ship_fleet
+				}
+				event_target:ag_ancient_wandering_ship_fleet = {
+					change_variable = {
+						which = ag_num_disabled_anchor_stations
+						value = 1
+					}
+				}
+			}
+			every_country = {
+				limit = { has_event_chain = ag_ancient_anchor_station_chain }
+				add_event_chain_counter = {
+					event_chain = ag_ancient_anchor_station_chain
+					counter = ag_ancient_anchor_station
+					amount = -1
+				}
+				if = {
+					limit = { prev = { is_megastructure_type = ag_ancient_anchor_station_2 } }
+					add_event_chain_counter = {
+						event_chain = ag_ancient_anchor_station_chain
+						counter = ag_ancient_anchor_station_modified
+						amount = -1
+					}
+				}
+			}
+			solar_system = {
+				remove_star_flag = ag_ancient_anchor_system
+				if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_1 }
+					remove_star_flag = ag_ancient_anchor_system_1
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_2 }
+					remove_star_flag = ag_ancient_anchor_system_2
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_3 }
+					remove_star_flag = ag_ancient_anchor_system_3
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_4 }
+					remove_star_flag = ag_ancient_anchor_system_4
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_5 }
+					remove_star_flag = ag_ancient_anchor_system_5
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_6 }
+					remove_star_flag = ag_ancient_anchor_system_6
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_7 }
+					remove_star_flag = ag_ancient_anchor_system_7
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_8 }
+					remove_star_flag = ag_ancient_anchor_system_8
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_9 }
+					remove_star_flag = ag_ancient_anchor_system_9
+				}
+				else_if = {
+					limit = { has_star_flag = ag_ancient_anchor_system_10 }
+					remove_star_flag = ag_ancient_anchor_system_10
+				}
+				random_system_planet = {
+					limit = { has_planet_flag = ag_ancient_anchor_planet }
+					remove_planet_flag = ag_ancient_anchor_planet
+				}
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = { is_megastructure_type = ag_ancient_construction_section }
+			ag_spawn_explosion_effect = { ag_scale = xl ag_color = red }
+			solar_system = {
+				random_system_planet = {
+					limit = { is_primary_star = yes }
+					subtract_variable = {
+						which = ag_construction_section_counter
+						value = 1
+					}
+				}
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = { is_megastructure_type = ag_ancient_eta_gateway_control_megastructure_4 }
+			ag_spawn_explosion_effect = { ag_scale = xl ag_color = red }
+			if = {
+				limit = { exists = event_target:ag_eta_gateway_controller }
+				event_target:ag_eta_gateway_controller = { ag_eta_gateway_flags_cleans_up_effect = { ag_clear_global_event_target = no } }
+				clear_global_event_target = ag_eta_gateway_controller
+			}
+			remove_megastructure = this
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					is_megastructure_type = ag_psionic_portal_megastructure
+					is_megastructure_type = ag_psionic_portal_stabled_megastructure
+					is_megastructure_type = ag_ancient_anchor_station_0
+					is_megastructure_type = ag_ancient_anchor_station_1
+					is_megastructure_type = ag_ancient_anchor_station_2
+					is_megastructure_type = ag_ancient_astronomy_station
+					is_megastructure_type = lgate_base
+				}
+			}
+			remove_megastructure = this
+		}
+	}
+	every_system_planet = {
+		limit = {
+			OR = {
+				is_planet_class = pc_ringworld_seam
+				is_planet_class = pc_ringworld_tech
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_ringworld_seam
+					AND = {
+						is_planet_class = pc_ringworld_tech
+						has_planet_flag = SRA_ancient_resource_section_0
+					}
+				}
+			}
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			change_pc = pc_ringworld_seam_damaged
+			if = {
+				limit = { has_planet_flag = ag_ancient_resource_section_0 }
+				remove_planet_flag = ag_ancient_resource_section_0
+			}
+		}
+		else = {
+			SRA_spawn_explosion_effect = { SRA_scale = xl SRA_color = orange }
+			change_pc = pc_ringworld_tech_damaged
+			if = {
+				limit = { has_planet_flag = ag_ancient_construction_section_0 }
+				remove_planet_flag = ag_ancient_construction_section_0
+			}
+			if = {
+				limit = { has_planet_flag = ag_ancient_construction_section }
+				remove_planet_flag = ag_ancient_construction_section
+			}
+		}
+	}
+}
+SRA_destroy_fleet = {
+	optimize_memory
+	every_owned_ship = {
+		destroy_ship = this
+		fire_on_action = {
+			on_action = on_ship_disabled
+			scopes = { from = $SRA_killer_ship$ }
+		}
+		owner = {
+			fire_on_action = {
+				on_action = on_ship_destroyed_victim
+				scopes = {
+					from = $SRA_killer_country$
+					fromfrom = prev
+					fromfromfrom = $SRA_killer_ship$
+				}
+			}
+		}
+		$SRA_killer_country$ = {
+			fire_on_action = {
+				on_action = on_ship_destroyed_perp
+				scopes = {
+					from = prev.owner
+					fromfrom = $SRA_killer_ship$
+					fromfromfrom = prev
+				}
+			}
+		}
+	}
+	owner = {
+		fire_on_action = {
+			on_action = on_fleet_destroyed_victim
+			scopes = {
+				from = $SRA_killer_country$
+				fromfrom = prev
+				fromfromfrom = $SRA_killer_fleet$
+			}
+		}
+	}
+	$SRA_killer_country$ = {
+		fire_on_action = {
+			on_action = on_fleet_destroyed_perp
+			scopes = {
+				from = prev.owner
+				fromfrom = $SRA_killer_fleet$
+				fromfromfrom = prev
+			}
+		}
+	}
+}
+SRA_destroy_ship = {
+	optimize_memory
+	if = {
+		limit = { exists = fleet fleet = { num_ships = 1 } }
+		destroy_ship = this
+		fire_on_action = {
+			on_action = on_ship_disabled
+			scopes = { from = $SRA_killer_ship$ }
+		}
+		owner = {
+			fire_on_action = {
+				on_action = on_ship_destroyed_victim
+				scopes = {
+					from = $SRA_killer_country$
+					fromfrom = prev
+					fromfromfrom = $SRA_killer_ship$
+				}
+			}
+		}
+		$SRA_killer_country$ = {
+			fire_on_action = {
+				on_action = on_ship_destroyed_perp
+				scopes = {
+					from = prev.owner
+					fromfrom = $SRA_killer_ship$
+					fromfromfrom = prev
+				}
+			}
+		}
+		owner = {
+			fire_on_action = {
+				on_action = on_fleet_destroyed_victim
+				scopes = {
+					from = $SRA_killer_country$
+					fromfrom = prev.fleet
+					fromfromfrom = $SRA_killer_ship$.fleet
+				}
+			}
+		}
+		$SRA_killer_country$ = {
+			fire_on_action = {
+				on_action = on_fleet_destroyed_perp
+				scopes = {
+					from = prev.owner
+					fromfrom = $SRA_killer_ship$.fleet
+					fromfromfrom = prev.fleet
+				}
+			}
+		}
+	}
+	else = {
+		destroy_ship = this
+		fire_on_action = {
+			on_action = on_ship_disabled
+			scopes = { from = $SRA_killer_ship$ }
+		}
+		owner = {
+			fire_on_action = {
+				on_action = on_ship_destroyed_victim
+				scopes = {
+					from = $SRA_killer_country$
+					fromfrom = prev
+					fromfromfrom = $SRA_killer_ship$
+				}
+			}
+		}
+		$SRA_killer_country$ = {
+			fire_on_action = {
+				on_action = on_ship_destroyed_perp
+				scopes = {
+					from = prev.owner
+					fromfrom = $SRA_killer_ship$
+					fromfromfrom = prev
+				}
+			}
+		}
+	}
+}
+
+SRA_destroy_habitable_ringworld = {
+	optimize_memory
+	if = {
+		limit = {
+			is_planet_class = pc_ringworld_tech 
+		}
+		change_pc = pc_ringworld_tech_damaged  
+	}
+	else_if = {
+		limit = {
+			is_planet_class = pc_ringworld_seam
+		}
+		change_pc = pc_ringworld_seam_damaged   
+	}
+	else = {
+		change_pc = pc_ringworld_habitable_damaged 
+		if = {
+			limit = {
+				OR = {
+						has_planet_flag = ag_ancient_ringworld_blue
+				        has_planet_flag = ag_ancient_ringworld_red
+				        has_planet_flag = ag_ancient_ringworld_violet
+					}
+				}
+				set_planet_entity = { entity = ag_ancient_ringworld_habitable_damaged_entity }
+			}
+		else = {
+			set_planet_entity = { entity = ringworld_habitable_damaged_entity }
+		}
+    }
+}

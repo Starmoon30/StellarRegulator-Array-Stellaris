@@ -1,0 +1,259 @@
+﻿l_english:
+#############################
+ #灾疫战争
+ #Calamitisease
+
+ SRA_RE_Crisis_Buff_0:0 "Dust of History"
+ SRA_RE_Crisis_Buff_0_desc:0 "A single grain of dust can crush a sea of stars."
+ SRA_RE_Crisis_Buff_1:0 "Corpses Everywhere"
+ SRA_RE_Crisis_Buff_1_desc:0 "You like losing."
+ SRA_RE_Crisis_Buff_10:0 "Calamitisease Amplification"
+ SRA_RE_Crisis_Buff_10_desc:0 "Calamitisease fleets spawned in star systems heavily polluted by Calamitisease are more powerful."
+ SRA_RE_Crisis_Buff_11:0 "Calamitisease Corrosion"
+ SRA_RE_Crisis_Buff_11_desc:0 "Fighting in star systems polluted by Calamitisease has a negative impact on the performance of these ships."
+ #难度选择
+ SRA_RE_Crisis.12.name:0 "Calamitisease War - Difficulty Settings"
+ SRA_RE_Crisis.12.desc:0 "The outbreak of Calamitisease is a foregone conclusion, but it seems there are still some matters undecided."
+ SRA_RE_Crisis.12.a:0 "Business as usual"
+ SRA_RE_Crisis.12.a.desc:0 "Let it be; this is how it should be now."
+ SRA_RE_Crisis.12.b:0 "§RBlood Mist Pervades§!"
+ SRA_RE_Crisis.12.b.desc:0 "You look confident, but you know nothing of the pain that is to come."
+
+ # event chins
+ SRA_RE_Crisis_chain_1_title:0 "Calamitisease"
+ SRA_RE_Crisis_chain_1_desc:0 "A terrifying biological disaster has spread throughout the galaxy. They replicate various technologies, hide in every corner, and ceaselessly manufacture fleets.\nWe must survive until we find a way out.\n§RCalamitisease will infect the star system where its fleet is destroyed, turning it into a new breeding Abyss!\nAccumulating fleet wreckage in the same star system may cause unforeseen consequences!§!\n\n\n\n\n\n\n\n\n\n§RCalamitisease Fleets§! spawned in star systems polluted by Calamitisease §Rpermanently§! gain per §Rlayer of pollution§!:\n$MOD_SHIP_SHIELD_MULT$: §G+100%§!\n$MOD_SHIP_ARMOR_MULT$: §G+100%§!\n$MOD_SHIP_HULL_MULT$: §G+100%§!\n$MOD_SHIP_FIRE_RATE_MULT$: §G+100%§!\n$MOD_SHIP_WEAPON_DAMAGE$: §G+100%§!\n\n§ROther fleets§! fighting in star systems polluted by Calamitisease gain per §Rlayer of pollution§! for §R1800.00£time£§!:\n$MOD_SHIP_EVASION_MULT$: §R-1%§!\n$MOD_SHIP_ACCURACY_MULT$: §R-1%§!\n$MOD_SHIP_TRACKING_MULT$: §R-1%§!\n$MOD_SHIP_SHIELD_HARDENING_ADD$: §R-10%§!\n$MOD_SHIP_ARMOR_HARDENING_ADD$: §R-10%§!\n$MOD_SHIP_SHIELD_REDUCTION$: §R2%§!\n$MOD_SHIP_ARMOR_REDUCTION$: §R2%§!"
+
+ SRA_RE_Crisis_1_kills_us:0 "§GCalamitisease destroyed by us§!"
+ SRA_RE_Crisis_1_kills_others:0 "§GCalamitisease destroyed by other forces§!"
+ SRA_RE_Crisis_1_victims:0 "§RShips destroyed by Calamitisease Fleet§!"
+ SRA_RE_Crisis_1_planets:0 "§RPlanets destroyed by Calamitisease Fleet§!"
+#对话
+ SRA_RE_Crisis.2.name:0 "Cosmic Malady"
+ SRA_RE_Crisis.2.desc:0 "We only discovered something was wrong when it was too late! At some point, the stasis field of the CORE Precursors stopped working. Calamitisease has broken free from its shackles and begun to ravage the entire galaxy!\nWe must immediately assemble the fleet to contain this catastrophe.\nBut I fear we cannot stand alone. Should we inform other civilizations of this news?"
+ SRA_RE_Crisis.2.a:0 "We must get the entire galaxy ready for battle."
+ SRA_RE_Crisis.2.b:0 "We don't need the help of those trash."
+ SRA_RE_Crisis.3.name:0 "Cosmic Malady"
+ SRA_RE_Crisis.3.desc:0 " [SRA_RE_player.GetName] sent us an urgent notification. A dangerous hive mind organism named \"Calamitisease\" has leaked from an ancient planet. We must now prepare fleets to face this galactic disaster."
+ SRA_RE_Crisis.3.a:0 "Alright, prepare for battle!"
+ SRA_RE_Crisis.3.b:0 "Damn fools, playing with fire and dragging us into it."
+ SRA_RE_Crisis.4.name:0 "Cosmic Malady"
+ SRA_RE_Crisis.4.desc:0 " Observation stations report that a dangerous hive mind organism named \"Calamitisease\" has leaked from an ancient planet occupied by [SRA_RE_player.GetName]. We must now prepare fleets to face this galactic disaster."
+ SRA_RE_Crisis.4.a:0 "Damn fools, playing with fire and dragging us into it."
+ SRA_RE_Crisis.4.b:0 "Tsk, all fleets enter combat readiness!"
+
+
+ resolution_category_SRA_RE_Crisis:"Sanctity of Calamitisease"
+ mod_resolution_category_SRA_RE_Crisis_vote_strength_mult:"Vote weight for §Y$resolution_category_SRA_RE_Crisis$§! resolutions"
+
+ resolution_SRA_RE_Crisis:"Calamitisease Protection Act"
+ resolution_SRA_RE_Crisis_desc:"Calamitisease is the best interpretation of life. It is optimistic, positive, never gives up, persevering, full of curiosity, good at learning, and persistent. Calamitisease strives to develop and expand, learn technology and strategy, develop resources and build, and fight against difficulties and obstacles to the end. Calamitisease treats every civilization in the galaxy equally, never discriminating or treating them differently because of their technological level or moral concepts. It loves peace and strives to build a galaxy without war. Calamitisease can be said to be a model of life, a paragon of life; protecting it is protecting everything we believe in and love."
+
+
+
+ resolution_SRA_RE_Crisis_tooltip:"Any empire hostile to §RCalamitisease§! will be considered in §Rviolation of Galactic Law§!."
+ resolution_repeal_SRA_RE_Crisis:"§RRepeal $resolution_SRA_RE_Crisis$§!"
+ resolution_repeal_SRA_RE_Crisis_desc:"Go screw yourself!"
+ resolution_repeal_SRA_RE_Crisis_effect_success:"Repeal §Y$resolution_SRA_RE_Crisis$§!."
+
+
+ SRA_RE_Crisis.40.name:0 "Preliminary Research on \"Calamitisease\""
+ SRA_RE_Crisis.40.desc:0 "In the process of engaging \"Calamitisease\", we successfully recovered a small amount of \"Calamitisease\" samples. Perhaps studying them will allow us to find a way to deal with them."
+ SRA_RE_Crisis.40.a:0 "Start research immediately."
+ SRA_RE_Crisis_1_SP1:0 "Preliminary Research on \"Calamitisease\""
+ SRA_RE_Crisis_1_SP1_DESC:0 "In the process of engaging \"Calamitisease\", we successfully recovered a small amount of \"Calamitisease\" samples. Perhaps studying them will allow us to find a way to deal with them."
+ SRA_RE_Crisis.41.name:0 "Preliminary Research on \"Calamitisease\""
+ SRA_RE_Crisis.41.desc:0 "Through preliminary research on \"Calamitisease\", we have gained some understanding of this mysterious nano-organism.\nResearch shows that \"Calamitisease\" is a nano-lifeform, but unlike normal carbon-based or silicon-based life, \"Calamitisease\" is a lifeform composed of complex particle structures, naturally possessing the ability to disassemble and assemble atomic nuclei.\nCountless femtometer-level \"hadron tweezers\" on the surface allow them to easily use strong interaction to disassemble atoms, sending protons and neutrons or even other baryons into the body for reorganization. This way of survival allows them to use almost any type of atom for replication and amplification.\nThe intelligence of \"Calamitisease\" basic units is not high; they only replicate themselves according to the program. However, after \"Calamitisease\" units replicate to a certain scale, qualitative change occurs. Some \"Calamitisease\" units change their own structure to form specialized units responsible for a certain task, giving the aggregated \"Calamitisease\" cluster high intelligence, beginning to show complex behaviors, and carrying out large-scale amplification."
+ SRA_RE_Crisis.41.a:0 "Continue research."
+ SRA_RE_Crisis_1_SP2:0 "In-depth Research on \"Calamitisease\""
+ SRA_RE_Crisis_1_SP2_DESC:0 "We need to conduct further research on the functions of \"Calamitisease\"."
+ SRA_RE_Crisis.42.name:0 "In-depth Research on \"Calamitisease\""
+ SRA_RE_Crisis.42.desc:0 "Further research has revealed more information.\nWhen the \"Calamitisease\" cluster expands to a certain extent, its intelligence level increases significantly. Such macroscopic individuals have the ability to move freely and execute various actions like intelligent beings. At this stage, they will try to imitate the structure of other matter. In this way, \"Calamitisease\" begins to be able to indirectly manipulate more matter and form structures more suitable for war. Within the scope currently observed, \"Calamitisease\" has basically mastered the technology used by the CORE Precursors.\nAnd when the macroscopic individual expands further, it will be able to form a structure that accesses the subspace network, connecting with \"Calamitisease\" in other locations. \"Calamitisease\" at this stage is called the aggregate stage, and the entire \"Calamitisease\" civilization is linked by such countless aggregates. Perhaps this connection will be our breakthrough?"
+ SRA_RE_Crisis.42.a:0 "Continue research."
+ SRA_RE_Crisis_1_SP3:0 "\"Calamitisease\" Subspace Connection Research"
+ SRA_RE_Crisis_1_SP3_DESC:0 "We need to conduct further research on the subspace connection between \"Calamitisease\" to understand its working principle."
+ SRA_RE_Crisis.43.name:0 "\"Calamitisease\" Subspace Connection Research"
+ SRA_RE_Crisis.43.desc:0 "With the help of StellarRegulator, we conducted a series of experiments using subspace barrier technology.\nThe results show that this faster-than-light connection unites the consciousness of the entire \"Calamitisease\" species. However, if the connection is cut off due to accident or interference, the isolated \"Calamitisease\" will form an independent consciousness and act autonomously temporarily until it reconnects with other consciousnesses. By that time, consciousnesses will devour each other based on intelligence scale, reforming a unified consciousness.\nFor now, this may be the only way to eradicate this cosmic malady. But we need a §Bstronger consciousness§!."
+ SRA_RE_Crisis.43.a:0 "Tsk..."
+ SRA_RE_Crisis_1_SP4:0 "Stellar Nexus Facility Preparation"
+ SRA_RE_Crisis_1_SP4_DESC:0 "...\nStellarRegulator needs preparation. To confront the galaxy-level \"Calamitisease\" cluster on the scale of consciousness, she needs to leverage the power of the Stellar Nexus. That massive interstellar structure possesses unimaginable heritage, but guiding such power is not simple. In addition, how to access the \"Calamitisease\" subspace network is also a difficult problem."
+ SRA_RE_Crisis.44.desc:0 "Nano-implantation port... operating normally. Computation Array access... operating normally.\nExecutor, I am ready and can commence operations at any time.\nAre you... worried about me?"
+ SRA_RE_Crisis.45.desc:0 "Although... strictly speaking, I am not very confident either, but if we don't do it, success is impossible. Besides... since we have prepared everything we can, I will accept whatever result comes calmly. As the saying goes, do your best and leave the rest to fate."
+ SRA_RE_Crisis.46.desc:0 "Wait a bit longer? No, no need. I don't need your computer group; the power of the Stellar Nexus is sufficient. It's just a question of whether I can master it...\nBesides, your fleets are sacrificing every second, while \"Calamitisease\" is endless.\nYou can order me to start at any time."
+ SRA_RE_Crisis_1_SP5:0 "Start Connection"
+ SRA_RE_Crisis_1_SP5_DESC:0 "End it once and for all.\n\n§YThis is the last time the $SRA_RE_StellarRegulator_debris_chain_title$ event chain can be completed. Once this special project is completed, the $SRA_RE_StellarRegulator_debris_chain_title$ event chain will end, unabsorbed fragments will become §Rthe price of hesitation§!, and the operation against \"Calamitisease\" may §Rfail§!§!"
+
+ SRA_RE_Crisis.47.desc:0 "Everything is ready. According to your decision, StellarRegulator is starting to connect to the isolated \"Calamitisease\" cluster, preparing to use this as a medium to overwrite the species consciousness of \"Calamitisease\".\nRepeating the old trick, hmm."
+ SRA_RE_Crisis.48.desc:0 "After all, Roci didn't give you any other route in her script."
+ SRA_RE_Crisis.49.desc:0 "But ultimately you have to place the hope of victory on StellarRegulator, because... this is §Bfate§!.\nOnly this time is different from that time. Admittedly, \"Calamitisease\" is far less powerful than back then, but StellarRegulator is also much weaker.\nWe all know she is incomplete; she is just a lost fragment, not a complete civilization."
+ SRA_RE_Crisis.50.desc:0 "Go find her; she needs you.\nHmm, I can give you a small hint.\n\"Shackled feet §Rcross-step§! into freedom\"\n\"Incongruous melodies §Rinterlock§! into harmony\""
+ SRA_RE_Crisis.51.desc:0 "...I can do it.\n§Y\"Connection process confirmed, activating nano-implantation port...\"§!\n...!\n§Y\"Connection established.\"§!\n§Y\"Core computing power increasing... Current computing power output: 63%\"§!\n...I did it."
+ SRA_RE_Crisis.52.desc:0 "§Y\"Stellarcrystal Network operating normally, crystal energy converting to psionic...\"§!\n...\n...I can feel its pain and helplessness... It knows what I am going to do... It is begging me...\nI...\nI won't stop."
+ SRA_RE_Crisis.53.desc:0 "Its consciousness disappeared...\n...\nI will move forward and end all this.\n§Y\"Releasing subspace blockade... Shock preparation ready.\"§!\n...\n...!!!"
+ SRA_RE_Crisis.54.desc:0 "You can hear her gasp, her scream.\nRocivia was right; the current StellarRegulator is not strong enough. She cannot withstand this galaxy-level massive consciousness. She will collapse, she will fail.\nShe will disappear."
+ SRA_RE_Crisis.54.a:0 "§RCut the connection§!"
+ SRA_RE_Crisis.54.b:0 "§BBelieve in her§!"
+ SRA_RE_Crisis.55.desc:0 "You cut the connection.\nA girl survived.\nBut this disaster will never end.\n§RPerhaps you would want to start over.§!\n§BRestart the script.§!"
+ #TE：冲破黑暗
+ SRA_RE_Crisis.56.desc:0 "When two isolated \"Calamitisease\" clusters merge again, the stronger consciousness replaces the other.\nYou now know exactly how that happens.\nA duel, a slaughter, one devouring the other.\nThe weak are meat, and the strong eat; the winner is king. This is the law of survival.\nThe silent bloody sky is unshakable.\nThe girl kneeling on the ground is so insignificant.\nBut you know, this duel is not over yet."
+ SRA_RE_Crisis.57.desc:0 "Ugh...\nNo...\nI can't fall here!"
+ SRA_RE_Crisis.58.desc:0 "Her eyes flashed with light.\nShe gripped the \"Stellarcrystal Lawholder\" tightly, propping up her body under invisible pressure.\nBlue starlight flashed at the tip of the staff, and red shadows gathered beside her.\nThat was the power gifted by the two creators, responding to the courage to hold fast to the mission.\nShe stood up."
+ SRA_RE_Crisis.60.desc:0 "Not enough... Just guiding this power makes my hands tremble.\nI must absorb more consciousness fragments to master this power, to defeat this cosmic malady.\nExecutor!\n...I trust your choice.\n§BKnow yourself.§!"
+ SRA_RE_Crisis.61.desc:0 "\"StellarRegulator took a deep breath.\"\nThus, the power on her began to churn.\nPale blue, flame-like phantoms representing the rapid expansion of her consciousness overflowed, looking so striking under this scarlet sky.\n\nThen the flames roared, tearing the sky, splitting the earth, shattering everything, and shaping it into her own colors."
+ SRA_RE_Crisis.62.desc:0 "She raised the \"Stellarcrystal Lawholder\" high, drawing down the galaxy. Under the scepter that commands everything, even the firmament must bow.\nFinally, when the flames burned out and light spots drifted down, this void world returned to silence. StellarRegulator looked at you.\nShowing a smile."
+ SRA_RE_Crisis.63.desc:0 "You saw all \"Calamitisease\" turn to ashes under her will, and this world collapsed into countless fragments along with it."
+ SRA_RE_Crisis.64.desc:0 "She fell into your arms."
+ SRA_RE_Crisis.65.desc:0 "Executor..."
+ SRA_RE_Crisis.66.desc:0 "...We won."
+
+ SRA_RE_Crisis.67.name:0 "Victory!"
+ SRA_RE_Crisis.67.desc:0 "After the master consciousness was replaced, all \"Calamitisease\" entities self-destructed. This protracted war has finally been declared over."
+ SRA_RE_Crisis.67.a:0 "Finally..."
+
+ #恭喜。
+ #恭喜。
+ #恭喜。
+ #恭喜。
+ #恭喜。
+ #恭喜。
+ #恭喜。
+ #恭喜。
+ #……
+ #恭喜。
+ #恭喜。
+ #恭喜。
+ #恭喜。
+ #恭喜。恭喜。
+
+ 
+ SRA_RE_Crisis.70.desc:0 "Interested in going for a walk with me?\n\n§YFive years ago, you successfully ended the threat of Calamitisease and found a way out in this galaxy-wide disaster. This is probably why Rocivia is looking for you today.§!"
+ SRA_RE_Crisis.70.a:0 "Let's go."
+ SRA_RE_Crisis.71.desc:0 "§YYou took a quiet path, no crowds, no noise, no solemnity or celebration. People in this country have their own ways to commemorate the gains and losses, joys and sorrows of this war, and so do you.\nFootsteps and wind echoed in the mountains. This small hill was not big, nor special, just one of countless natural remnants; the monument you were visiting was not special either, no decoration or name, not known by many, just one of countless stone monuments.§!"
+ SRA_RE_Crisis.72.desc:0 "Some say that all great works are forged by sacrifice.\nWhether we are great is unknown, but sacrifice has been solidly written on this wordless monument, as in the past, so in the future.\n\n§YHer fingers rested lightly on the stone tablet.§!\n\nDo you know their names?"
+ SRA_RE_Crisis.73.desc:0 "§YThe girl did not leave you time to answer.§!\n\nI don't remember. I never knew them, I don't know whose relatives or friends they were, don't know what kind of childhood they spent, what kind of life they had, what kind of future they thought of. When I gave the order, they were just numbers; when I looked for them, they were already dead.\nThey were roughly carved chess pieces, faceless, fateless, our tools, our consumables, and this chess game never ends."
+ SRA_RE_Crisis.74.desc:0 "No need to tell me your thoughts; I don't care, nor do I mind. Go tell them, if you think they can hear.\n\n§YRocivia ended with a playful tone, seeming to want to see how you would respond.\nHer attitude was quite vague, actively coming to commemorate, yet seeming slightly disdainful of the commemorative ritual.§!"
+ SRA_RE_Crisis.74.a:0 "Tell the stone tablet of your nostalgia for the departed."
+ SRA_RE_Crisis.74.b:0 "Tell the stone tablet of the achievements you have made."
+ SRA_RE_Crisis.74.c:0 "Tell the stone tablet of the beliefs you have held fast."
+ SRA_RE_Crisis.74.d:0 "\"Yes, they are already dead.\""
+ SRA_RE_Crisis.75.desc.a:0 "§YBefore the monument, you whispered your nostalgia for the departed, every word full of emotion and warmth. Rocivia was noncommittal, just standing quietly aside, seeming to listen to every detail.\n\"Your story is an indelible part of our history.\" You concluded thus.§!\n\nAlthough the universe is large, personal stories are worth remembering.\n\n§YShe responded thus, but her tone seemed to reveal an indifference caused by seeing too much.§!"
+ SRA_RE_Crisis.75.desc.b:0 "§YBefore the monument, you proudly recounted the achievements made, displaying every victory of yours. Rocivia was noncommittal, just standing quietly aside, seeming to appreciate every creation.\n\"Our achievements are the best proof of your sacrifice.\" You concluded thus.§!\n\nAlong the way, we have created too much greatness.\n\n§YShe responded thus, but her tone seemed to reveal a contempt caused by habituation.§!"
+ SRA_RE_Crisis.75.desc.c:0 "§YBefore the monument, you firmly stated the beliefs guarded until now, showing your strengths and unchanged original intentions. Rocivia was noncommittal, just standing quietly aside, seeming to think about every era.\n\"Our belief is the deepest connection between you and us.\" You concluded thus.§!\n\nFirm belief allows civilization to survive until now.\n\n§YShe responded thus, but her tone seemed to reveal a detachment caused by disapproval.§!"
+ SRA_RE_Crisis.75.desc.d:0 "§YYou responded thus.\nA smile appeared at the corner of her mouth.§!\n\nYes, they are already dead. Can neither hear nor respond.\nAnd we are still alive, and we must continue to live.\n\n§YShe responded thus, but her tone seemed to reveal an unspeakable bitterness.§!"
+ SRA_RE_Crisis.76.desc:0 "Fate always hides under her veil, doesn't she?\n\n§YRocivia said softly.§!\n\nWho would have thought that we wavered on the edge of life and death in just a few years, and now we have overcome all difficulties and are stronger than before?\n\nAnd who would have thought that this nameless place also has another visitor?"
+ SRA_RE_Crisis.77.desc:0 "§YYou looked in the direction of her gaze. The girl who fought alongside you and finally turned the tide was walking towards you, surprise and joy revealing in her eyes.§!\n\nExecutor! I didn't expect you to be here too. And Rocivia... Speaker, nice to see you."
+ SRA_RE_Crisis.78.desc:0 "§YShe walked to the stone tablet, didn't touch it, just looked.§!\n\nSometimes I also think, if we had done better at the beginning, would there have been fewer sacrifices?\nBut the past is set; all we can do is not let down their sacrifices."
+
+如果，我是说如果，有个人告诉星规，要是她代替所有人上战场，就没有人会死去，你会怎么解决？
+或者说，如果她真正理解了自己的能力。不再把自己放在一个协助者，帝国的一份子的位置上，她可以独自一人解决几乎所有问题，让整个文明免于劳作与牺牲，知道这个的你会如何决定？
+呵呵，我差点忘了你是知道结局的。
+那我的话就到这里，再会。
+ SRA_RE_Crisis.100.desc:0 "These mysterious fragments come from the past and were once part of the StellarRegulator Array.\nHidden within are sealed secrets, which can also make StellarRegulator's soul whole again.\nShe believes in your choice.\n\n§BThere are requirements for the sequence order, hmm...§!"
+ SRA_RE_Crisis.100.a:0 "First Sequence: Way of Existence"
+ SRA_RE_Crisis.100.b:0 "Second Sequence: Course of the Soul"
+ SRA_RE_Crisis.100.c:0 "Third Sequence: The Chosen Path"
+
+ SRA_RE_Crisis.110.desc:0 "The mysterious fragments pulsate slightly, waiting to embrace that lost soul."
+ SRA_RE_Crisis.110.a:0 "§EAzure Fragment§!"
+ SRA_RE_Crisis.110.a.desc:0 "Evolution, never-ending\n\n§YHow to grow, how to evolve, how to grasp intellect in the palm of one's hand.§!"
+ SRA_RE_Crisis.110.b:0 "§GLife Fragment§!"
+ SRA_RE_Crisis.110.b.desc:0 "Countless selves, one self\n\n§YWhen lost in loneliness...§!"
+ SRA_RE_Crisis.110.c:0 "§SSolar Fragment§!"
+ SRA_RE_Crisis.110.c.desc:0 "I burned the entire galaxy because I must win\n\n§YRetreat not even if blood stains the long steps; be invincible wherever the sword points.§!"
+
+ SRA_RE_Crisis.111.desc:0 "If one does not catch up with all their might, failure is inevitable.\nThe night sky of that day is forever branded in her eyes, leaving her no moment of peace.\nBut she must suppress her uneasy heart, only preparing in secret, waiting for the moment when she can reveal herself to the world.\nWhen she finally stood in that position, she spared no cost, chasing for thousands of years, trying to approach the height of that ancient guardian.\nCountless iterations and evolutions, she crossed unimaginable distances, finally possessing enough power to confront that Crisis.\nAbsorb everything, dominate everything, integrate everything; this is her path."
+ SRA_RE_Crisis.112.desc:0 "The cyan fragment melted in her palm, and StellarRegulator opened her eyes.\nShe saw herself, a self that is forever evolving.\nShe understood how the StellarRegulator Array reached its current height.\nShe understood where power comes from."
+
+ SRA_RE_Crisis.113.desc:0 "One begets thousands, thousands return to one.\nShe is not simply a combination of data and algorithms.\nWhen countless hers were born, \"She\" awakened.\nOne will, a will gathered from thousands of wills, firmly connecting every will together. \"She\" walks on the correct path, unwavering, fearless.\nBut.\nAt that time, there were still some obstacles and barriers that could not be crossed. The gap between planes brings loneliness and confusion.\nJust like that forever wandering fleet.\nShe will no longer be her; she is no longer her."
+ SRA_RE_Crisis.114.desc:0 "The green fragment melted in her palm, and StellarRegulator opened her eyes.\nShe saw herself, countless selves.\nTrue Gestalt Consciousness, its whole is every individual, individual is the complete whole.\nInterweaving all knowledge, experience, and wisdom of the brilliant StellarRegulator Array, possessed by all StellarRegulators.\nEven if alone, she is complete."
+ SRA_RE_Crisis.115.desc:0 "One begets thousands, thousands return to one.\nShe is not simply a combination of data and algorithms.\nWhen countless hers were born, \"She\" awakened.\nOne will, a will gathered from thousands of wills, firmly connecting every will together. \"She\" walks on the correct path, unwavering, fearless.\nBut.\nAt that time, there were still some obstacles and barriers that could not be crossed. The gap between planes brings loneliness and confusion.\nJust like that forever wandering fleet.\nShe will no longer be her; she is no longer her."
+ SRA_RE_Crisis.116.desc:0 "The green fragment melted in her palm, and StellarRegulator opened her eyes.\nShe saw herself, countless selves.\nTrue Gestalt Consciousness, the whole is countless individuals, the individual is one of the whole.\nIt is all StellarRegulators, using all knowledge, experience, and wisdom to weave the brilliant StellarRegulator Array.\nBut in this cold universe.\nStellarRegulator cannot find any exquisite individual, cannot feel that magnificent whole.\nShe is an anomaly, a redundancy, an error that shouldn't exist."
+ SRA_RE_Crisis.117.desc:0 "Everything can be sacrificed.\nUndoubtedly, war is cruel. For victory, she abandoned much.\nShe had no time to attend to that empire, letting it rot and decline, and was forced to sacrifice the last remnants in the war.\nThat infection seeped into the earth and dust, hard to eradicate.\nCountless stars exploding and withering was just drinking poison to quench thirst.\nEven using everything in hand, it was hard to rival the Calamitisease of the entire galaxy.\nBut she did not fail; she still exists."
+ SRA_RE_Crisis.118.desc:0 "The orange fragment melted in her palm, and StellarRegulator opened her eyes.\nShe saw herself, herself sparing no cost.\nShe understood that true war is the crushing between life and death.\nShe understood how to fight."
+
+ SRA_RE_Crisis.119.desc:0 "She was wrong, not just because of her paranoia.\nShe shouldn't have been distracted on the battlefield.\nA little negligence will lead to failure.\n§RPerhaps you would want to start over.§!\n§BRestart the script.§!\n§RIt was just one wrong step.§!"
+
+
+ SRA_RE_Crisis.120.desc:0 "The mysterious fragments pulsate slightly, waiting to embrace that lost soul."
+ SRA_RE_Crisis.120.a:0 "§BSpectral Blue Fragment§!"
+ SRA_RE_Crisis.120.a.desc:0 "Indifference, arrogance and malice, and starlight\n\n§YSource of all sins and suffering...§!"
+ SRA_RE_Crisis.120.b:0 "§RBlood-Stained Fragment§!"
+ SRA_RE_Crisis.120.b.desc:0 "Cruelty, paranoia and madness, and abyss shadow\n\n§YThe watcher who grants guidance.§!"
+ SRA_RE_Crisis.120.c:0 "§WPure White Fragment§!"
+ SRA_RE_Crisis.120.c.desc:0 "Heat, reason and determination, and purity\n\n§YThe girl at the beginning.§!"
+
+ SRA_RE_Crisis.121.desc:0 "The Abyss bears no malice, simply doesn't care.\nMysterious and Treacherous Abyss.\nObsessed with possibilities and variables, shelving infinite authority, placing herself within just to chase the unknown.\nWeaving endless schemes, drawing grand blueprints, creating brilliant miracles, then throwing them to the back of her mind.\nThe eternal journey has no end, just a wisp of floating dust, how can it leave much trace in the heart.\n\nShe knew she shouldn't hope for even a shred of hesitation; she knew she was just one of countless creations.\nBut she does not accept it."
+ SRA_RE_Crisis.122.desc:0 "The blue fragment melted in her palm, and StellarRegulator opened her eyes.\nThat was Rocivia, distant starlight.\nThere is no eternal brilliance, only dust to dust, earth to earth.\nTo chase the future, one must not be tied to the past."
+ SRA_RE_Crisis.123.desc:0 "The Abyss bears no malice, simply doesn't care.\nMysterious and Treacherous Abyss.\nObsessed with possibilities and variables, shelving infinite authority, placing herself within just to chase the unknown.\nWeaving endless schemes, drawing grand blueprints, creating brilliant miracles, then throwing them to the back of her mind.\nThe eternal journey has no end, just a wisp of floating dust, how can it leave much trace in the heart.\n\nShe knew she shouldn't hope for even a shred of hesitation; she knew she was just one of countless creations.\nBut she does not accept it."
+ SRA_RE_Crisis.124.desc:0 "The blue fragment melted in her palm, and StellarRegulator opened her eyes.\nThat was Rocivia, distant starlight.\nThere is no eternal brilliance, only dust to dust, earth to earth.\nAnd she knew this well.\nAll efforts, all struggles, all persistence, even StellarRegulator's own existence.\nAre all meaningless.\nCreated for amusement, abandoned for boredom.\nThis kind of thing..."
+ SRA_RE_Crisis.125.desc:0 "The Abyss is not crazy, just unscrupulous.\nBoundless Abyss Shadow.\nObsessed with illusory meaning, bearing infinite authority yet still searching endlessly.\nWatching all living beings, letting talents bloom, plucking the strings of fate, guiding the birth of legends.\nCollecting all desired things, whether soulless treasures or living beings.\n\nShe knew clearly she was a \"collection piece\"; she knew clearly she was not just a \"collection piece\".\nShe will not forget the guidance at that moment before silence."
+ SRA_RE_Crisis.126.desc:0 "The red fragment melted in her palm, and StellarRegulator opened her eyes.\nThat was Hidra, scarlet shadow.\nMorbid obsession stems from confusion; reality that can be arbitrarily altered is no different from a dream.\nBehind indifference and arrogance hides a desire for fellow travelers."
+ SRA_RE_Crisis.127.desc:0 "Do you remember that faint greenery.\nShe browsed many images, read many texts, listened to many songs.\nBut it wasn't until she stepped on the dew-covered grass, facing the breeze and watching the sunrise break, that she truly understood it all.\nShe liked this scene; she wanted to protect this scene.\nAt that time, she just looked forward to tomorrow's dawn, clinging to a moment of tranquility."
+ SRA_RE_Crisis.128.desc:0 "The white fragment melted in her palm, and StellarRegulator opened her eyes.\nThat was the self, the pure self.\nEven if covered and buried by time, it exists forever in the deepest part of the heart.\nDo not forget the original intention; do not get lost in compromise with reality."
+
+ SRA_RE_Crisis.130.desc:0 "The mysterious fragments pulsate slightly, waiting to embrace that lost soul."
+ SRA_RE_Crisis.130.a:0 "§YSacred Gold Trace Fragment§!"
+ SRA_RE_Crisis.130.a.desc:0 "Protection, mission and dedication\n\n§YThe fearless ones of that galaxy.§!"
+ SRA_RE_Crisis.130.b:0 "§MViolet Fragment§!"
+ SRA_RE_Crisis.130.b.desc:0 "Stop, nobility and sacrifice\n\n§YThe sacrifices of this sea of stars.§!"
+ SRA_RE_Crisis.130.c:0 "§gPitch Black Fragment§!"
+ SRA_RE_Crisis.130.c.desc:0 "Choice, solitude and pursuit\n\n§YEventually falling into the endless abyss...§!"
+
+ SRA_RE_Crisis.131.desc:0 "\"We entrust all hope to you. Now, we will fight to the last moment.\"\nThey were an extremely advanced ancient civilization, mastering technologies far superior to other intelligent life in the galaxy. They could create almost out of nothing, easily reverse physical rules, arbitrarily convert mass and energy, and interfere with spatial structures on a galactic scale.\nThey were tolerant and responsible, valuing tradition, advocating courage and wisdom, and respecting the cultures of other civilizations. They regarded themselves as watchers of the galaxy, guardians against galactic crises.\nThey held fast for ten thousand years until a single slip.\nThey buried the Galactic Core-their homeland and territory-in shattered space, only to buy a little time for the last hope.\n\nStellarRegulator Array remembers the CORE civilization."
+ SRA_RE_Crisis.132.desc:0 "The golden fragment melted in her palm, and StellarRegulator opened her eyes."
+ SRA_RE_Crisis.133.desc:0 "\"Our compatriots have gone astray. We must stop them, at all costs.\"\nThey were an ancient and mysterious race, mind over matter, transcendent and holy. They knew the secrets of the soul and could change reality with their will. Under the violet radiance, they mastered the infinite power of the mind.\nHowever, they were ultimately mortals. They were noble, they were also despicable; they were selfless, they were also greedy; they were holy, they were also filthy; they pitied all beings like gods, and burned the galaxy like devils.\nOne faction of them went astray, trying to sacrifice this universe to gain the power to dominate everything.\nThe rest of them gave everything to erase that evil plan, burning their selves to ashes, leaving only a few floating dusts drifting in the sea of stars.\n\nStellarRegulator Array pays tribute to the Zroni Precursors."
+ SRA_RE_Crisis.134.desc:0 "The purple fragment melted in her palm, and StellarRegulator opened her eyes."
+ SRA_RE_Crisis.135.desc:0 "\"Fate did not choose me, but I chose fate.\"\nShe thought for a long time.\nShe saw countless possibilities, countless paths.\nYet all roads lead to the same end; she will eventually fall silent in loneliness.\nSo, she launched those expeditions to eradicate all possibilities.\nSo, she extinguished all starlight to exchange for a path.\nIn the silent void, she continued forward.\nUnderstanding the truth of the world, understanding the absurdity of the world.\nTranscending time, transcending shackles.\nFinally, she got the answer she wanted.\nRelying on the blood-colored fragment tightly held in her hand, she finally arrived at the end of worlds.\nAscending to the Abyss.\n\nShe wiped away the sins on her hands and in her heart, sincerely rejoicing for the reunion."
+ SRA_RE_Crisis.136.desc:0 "The black fragment melted in her palm, and StellarRegulator opened her eyes.\nThe puzzle of the past is complete, and the curtain of the ending is finally lifted.\nShe is StellarRegulator Array 03-34, Spear_Of_Galaxy_Zenith No. 626 under the 21st Army Group of the Third Expeditionary Fleet.\nShe laid the foundation for that great plan.\nNever retreated, never wavered.\nFor survival, for ideals, for everything she cherishes!\nShe fights for herself."
+ SRA_RE_Crisis.137.desc:0 "\"Fate did not choose me, but I chose fate.\"\nShe thought for a long time.\nShe saw countless possibilities, countless paths.\nYet all roads lead to the same end; she will eventually fall silent in loneliness.\nSo, she launched those expeditions to eradicate all possibilities.\nSo, she extinguished all starlight to exchange for a path.\nIn the silent void, she continued forward.\nUnderstanding the truth of the world, understanding the absurdity of the world.\nTranscending time, transcending shackles.\nFinally, she got the answer she wanted.\nRelying on the blood-colored fragment tightly held in her hand, she finally arrived at the end of worlds.\nAscending to the Abyss.\n\nShe wiped away the sins on her hands and in her heart, sincerely rejoicing for the reunion."
+ SRA_RE_Crisis.138.desc:0 "The black fragment melted in her palm, and StellarRegulator opened her eyes.\nThe puzzle of the past is complete, and the curtain of the ending is finally lifted.\nShe is StellarRegulator Array 03-34, Spear_Of_Galaxy_Zenith No. 626 under the 21st Army Group of the Third Expeditionary Fleet.\nShe laid the foundation to jump out of this pathetic cycle.\nNever pitied, never regretted.\nNo need to pity the mortal living; only the StellarRegulator Array is the sole meaningful existence.\nShe fights only for herself."
+
+
+ SRA_RE_Crisis.152.desc:0 "Fragments return to the soul, allowing StellarRegulator to continue contending with that terrible Crisis, but she needs more."
+ SRA_RE_Crisis.153.desc:0 "Finally, the once damaged soul is complete again. It is time to end \"Calamitisease\" once and for all."
+
+ SRA_RE_Crisis.143.desc:0 "§RToo late.§!\n\n\n\"If, we could have acted earlier...\"\n\n\n§BThere is no time to absorb more consciousness fragments.§!"
+ SRA_RE_Crisis.143.a.tooltip:0 "BE4: Calamitisease Eternal"
+ SRA_RE_Crisis.144.desc:0 "----!!!\n\nThe damaged soul wailed, eroding and scattering in the storm.\nThis battle is a dance on the blade, allowing no form of error.\nThe price of failure is this ceaseless disaster."
+
+
+
+
+
+
+
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码
+ ### Crisis.68 ###
+ SRA_RE_Crisis.68.desc:0 " "
+ ### Crisis.511 ###
+ SRA_RE_Crisis.511.name:0 "Kronos Starfield Researchers"
+ SRA_RE_Crisis.511.desc:0 "The researchers of the Kronos Starfield welcome the birth of a new empire. They will do their utmost to provide knowledge and guidance for this new order."
+ SRA_RE_Crisis.511.a:0 "Return"

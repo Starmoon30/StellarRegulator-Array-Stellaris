@@ -1,0 +1,127 @@
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_weapon_range = {
+	icon = "GFX_arkship_aura_range"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_aura_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	equipped_component = SRA_SOGZ_Ark_SHIP_AURA_RANGE
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_remove_hangar_bay = {
+	icon = "GFX_arkship_aura_bombardment"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_utility_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+		NOT = { has_starbase_module = SRA_Spear_Of_Galaxy_Zenith_Ark_hangar_bay }
+		NOT = { has_starbase_building = SRA_Spear_Of_Galaxy_Zenith_Ark_hull_hangar_bay }
+	}
+
+	station_modifier = {
+		strike_craft_regeneration_mult = -40
+		ship_armor_regen_mult = 0.5
+		ship_hull_regen_mult = 0.5
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_hull_hangar_bay = {
+	icon = "GFX_orbitalring_maintenance_hub"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_utility_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+		NOT = { has_starbase_building = SRA_Spear_Of_Galaxy_Zenith_Ark_remove_hangar_bay }
+	}
+	triggered_station_modifier = {
+		strike_craft_shield_mult = 1
+		mult = ship.modifier:ship_shield_mult
+	}
+	triggered_station_modifier = {
+		strike_craft_armor_mult = 1
+		mult = ship.modifier:ship_armor_mult
+	}
+	triggered_station_modifier = {
+		strike_craft_hull_mult = 1
+		mult = ship.modifier:ship_hull_mult
+	}
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_regen_add_static = {
+	icon = "GFX_arkship_shield_hardener"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_utility_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+		NOT = { has_starbase_building = SRA_Spear_Of_Galaxy_Zenith_Ark_remove_hangar_bay }
+	}
+	triggered_station_modifier = {
+		ship_shield_regen_add_static = 102400
+		mult = ship.modifier:ship_shield_mult
+	}
+	triggered_station_modifier = {
+		ship_armor_regen_add_static = 102400
+		mult = ship.modifier:ship_armor_mult
+	}
+	triggered_station_modifier = {
+		ship_hull_regen_add_static = 102400
+		mult = ship.modifier:ship_hull_mult
+	}
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

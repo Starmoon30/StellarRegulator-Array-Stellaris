@@ -1,0 +1,741 @@
+namespace = SRA_SD_Story_event
+
+country_event = {
+	id = SRA_SD_Story_event.1
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.1.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.2 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.2
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.2.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.3 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.3
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.3.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.4 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.4
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.4.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.5 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.5
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.5.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.6 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.6
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.6.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.7 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.7
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.7.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 76 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.8 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.8
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.8.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.9 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.9
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.9.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 77 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.10 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.10
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.10.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.11 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.11
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.11.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = SRA_SD_Story_event.11.a
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.12 }}
+	}
+	option = {
+		name = SRA_SD_Story_event.11.b
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.13 }}
+	}
+	option = {
+	    name = SRA_SD_Story_event.11.c
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.14 }}
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.12
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.12.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.15 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.13
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.13.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.15 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.14
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.14.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 72 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.11 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.15
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.15.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.16 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.16
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.16.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.17 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.17
+	title = SRA_RE_no_title
+	desc = "SRA_SD_Story_event.17.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.18 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.18
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.18.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.19 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.19
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.19.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 72 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.20 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.20
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.20.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = SRA_SD_Story_event.20.a
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.23 }}
+	}
+	option = {
+		name = SRA_SD_Story_event.20.b
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.23 }}
+	}
+	option = {
+	    name = SRA_SD_Story_event.20.c
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.21 }}
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.21
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.21.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 77 }
+    }
+	option = {
+		name = SRA_SD_Story_event.21.a
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.22 }}
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.22
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.22.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.23 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.23
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.23.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 77 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.24 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.24
+	title = SRA_Ezernal
+	desc = "SRA_SD_Story_event.24.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_SD_Story_event.25 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_SD_Story_event.25
+	title = SRA_RE_Rocivia
+	desc = "SRA_SD_Story_event.25.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+    }
+	after = {
+		hidden_effect = {
+			country_event = { id = SRA_SD_event.19 days = 5 }
+		}
+		set_variable = { which = SRA_SD_element_forge_value value = 1 }
+		set_variable = { which = SRA_SD_element_edge_value value = 1 }
+		set_variable = { which = SRA_SD_element_stone_value value = 1 }
+		set_variable = { which = SRA_SD_element_lantern_value value = 1 }
+		set_variable = { which = SRA_SD_element_chalice_value value = 1 }
+		set_variable = { which = SRA_SD_element_secret_value value = 1 }
+		start_situation = {
+			type = SRA_BoM_main_situation
+		}
+		#country_event = { id = SRA_SD_Story_event.26 days = 30 }
+	}
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}

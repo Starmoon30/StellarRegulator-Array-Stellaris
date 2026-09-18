@@ -1,0 +1,14 @@
+if = {
+	limit = {
+		leader_class = scientist
+	}
+	add_trait = { trait = leader_trait_SRA_ag_StarLightII_sci1 show_message = no }
+	add_trait = { trait = leader_trait_SRA_ag_StarLightII_sci2 show_message = no }
+}
+else_if = {
+	limit = {
+		leader_class = admiral
+	}
+	add_trait = { trait = leader_trait_SRA_ag_StarLightII_adm1 show_message = no }
+	add_trait = { trait = leader_trait_SRA_ag_StarLightII_adm2 show_message = no }
+}

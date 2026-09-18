@@ -1,0 +1,4209 @@
+namespace = SRA_Mutation
+
+#x编号事件为操作区
+#1xx编号事件为预设组合
+#2xx编号事件为随机选择代码组
+#事件结构：总触发器按照on_action分配，此处检测危机是否存在（突变是否开始），随后if检测是否为危机舰队/是否为玩家舰队/是否对敌为危机舰队，随后if检测对应突变是否开启，是否无突变刚刚触发flag，随后导向对应突变的效果事件
+#event编号分配：xxxx，第一位为触发器类型，如1000为交战开始总触发，第二位为突变等级，如x2xx为二级突变，后两位为突变编号，按顺序排列
+#1xxx：交战开始触发
+#2xxx：交战结束触发
+#3xxx：进入星系触发
+#4xxx：危机开启触发（时间型循环事件或危机开启事件）
+#5xxx：特殊事件触发（如航标被摧毁等危机中原有事件）
+#交战事件等添加2天的flag防止多次触发
+#四级突变不会被纳入随机列表
+
+#主界面
+country_event = {
+	id = SRA_Mutation.1
+	title = SRA_Mutation.1.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_Mutation.1.desc"
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		hidden_effect = { 
+			set_country_flag = SRA_Mutation_engaged
+		}
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Mutation_engaged
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.a
+	}
+	option = {
+		name = SRA_Mutation.1.b.1
+		custom_tooltip = SRA_Mutation.1.b.1.desc	
+	    trigger = {
+			NOT = {
+				has_global_flag = SRA_Mutation_Start
+			}
+	    }
+		hidden_effect = { 
+			set_global_flag = SRA_Mutation_Start
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.b.2
+		custom_tooltip = SRA_Mutation.1.b.2.desc	
+	    trigger = {
+			has_global_flag = SRA_Mutation_Start
+	    }
+		hidden_effect = { 
+			remove_global_flag = SRA_Mutation_Start
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.c
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.2
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.d
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.3
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.e
+		custom_tooltip = SRA_Mutation.1.e.desc	
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.201
+			}
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.f
+		custom_tooltip = SRA_Mutation.1.f.desc
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.202
+			}
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.g
+		custom_tooltip = SRA_Mutation.1.g.desc
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.203
+			}
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.h
+		custom_tooltip = SRA_Mutation.1.h.desc
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.101
+			}
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.i
+		custom_tooltip = SRA_Mutation.1.i.desc
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.102
+			}
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.j
+		custom_tooltip = SRA_Mutation.1.j.desc
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.103
+			}
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.1.z
+		custom_tooltip = SRA_Mutation.1.z.desc
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.199
+			}
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+}
+
+#浏览当前设置
+country_event = {
+	id = SRA_Mutation.2
+	title = SRA_Mutation.2.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_Mutation.2.desc"
+	trigger = {
+	}
+	immediate = {
+		hidden_effect = { 
+			set_country_flag = SRA_Mutation_engaged
+		}
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Mutation_engaged
+		}
+	}
+	option = {
+		name = SRA_Mutation.2.a
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.2.b
+		custom_tooltip = SRA_Mutation.2.b.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_1101
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_1101
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.c
+		custom_tooltip = SRA_Mutation.2.c.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_1102
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_1102
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.d
+		custom_tooltip = SRA_Mutation.2.d.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2101
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2101
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.e
+		custom_tooltip = SRA_Mutation.2.e.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_1103
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_1103
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.f
+		custom_tooltip = SRA_Mutation.2.f.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2102
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2102
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.g
+		custom_tooltip = SRA_Mutation.2.g.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_3101
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_3101
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.h
+		custom_tooltip = SRA_Mutation.2.h.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2103
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2103
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.i
+		custom_tooltip = SRA_Mutation.2.i.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2104
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2104
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.j
+		custom_tooltip = SRA_Mutation.2.j.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4101
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4101
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.k
+		custom_tooltip = SRA_Mutation.2.k.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_1104
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_1104
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.l
+		custom_tooltip = SRA_Mutation.2.l.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_3201
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_3201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.m
+		custom_tooltip = SRA_Mutation.2.m.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4201
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.n
+		custom_tooltip = SRA_Mutation.2.n.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_5301
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_5301
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.o
+		custom_tooltip = SRA_Mutation.2.o.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_5201
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_5201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.p
+		custom_tooltip = SRA_Mutation.2.p.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2201
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.q
+		custom_tooltip = SRA_Mutation.2.q.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_5202
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_5202
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.r
+		custom_tooltip = SRA_Mutation.2.r.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4301
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4301
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.s
+		custom_tooltip = SRA_Mutation.2.s.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4302
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4302
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.t
+		custom_tooltip = SRA_Mutation.2.t.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_1201
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_1201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.u
+		custom_tooltip = SRA_Mutation.2.u.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_1301
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_1301
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.v
+		custom_tooltip = SRA_Mutation.2.v.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2202
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2202
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.w
+		custom_tooltip = SRA_Mutation.2.w.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2105
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2105
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.x
+		custom_tooltip = SRA_Mutation.2.x.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2301
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2301
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.y
+		custom_tooltip = SRA_Mutation.2.y.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2203
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2203
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.z
+		custom_tooltip = SRA_Mutation.2.z.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4303
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4303
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.aa
+		custom_tooltip = SRA_Mutation.2.aa.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4304
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4304
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ab
+		custom_tooltip = SRA_Mutation.2.ab.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_3202
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_3202
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ac
+		custom_tooltip = SRA_Mutation.2.ac.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4305
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4305
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ad
+		custom_tooltip = SRA_Mutation.2.ad.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2302
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2302
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ae
+		custom_tooltip = SRA_Mutation.2.ae.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4306
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4306
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.af
+		custom_tooltip = SRA_Mutation.2.af.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4307
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4307
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ag
+		custom_tooltip = SRA_Mutation.2.ag.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_1302
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_1302
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ah
+		custom_tooltip = SRA_Mutation.2.ah.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4308
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4308
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ai
+		custom_tooltip = SRA_Mutation.2.ai.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2303
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2303
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.aj
+		custom_tooltip = SRA_Mutation.2.aj.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2304
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2304
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ak
+		custom_tooltip = SRA_Mutation.2.ak.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2106
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2106
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.al
+		custom_tooltip = SRA_Mutation.2.al.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2305
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2305
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.am
+		custom_tooltip = SRA_Mutation.2.am.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_5302
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_5302
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.an
+		custom_tooltip = SRA_Mutation.2.an.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_5303
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_5303
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ao
+		custom_tooltip = SRA_Mutation.2.ao.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_2306
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_2306
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ap
+		custom_tooltip = SRA_Mutation.2.ap.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4202
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4202
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.aq
+		custom_tooltip = SRA_Mutation.2.aq.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.2.desc
+	    trigger = {
+			has_global_flag = SRA_Mutation_4309
+	    }
+	    hidden_effect = { 
+			remove_global_flag = SRA_Mutation_4309
+	    }
+	}
+}
+
+
+#自定义突变
+country_event = {
+	id = SRA_Mutation.3
+	title = SRA_Mutation.3.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_Mutation.3.desc"
+	immediate = {
+		hidden_effect = { 
+			set_country_flag = SRA_Mutation_engaged
+		}
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Mutation_engaged
+		}
+	}
+	option = {
+		name = SRA_Mutation.2.a
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Mutation.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.2.b
+		custom_tooltip = SRA_Mutation.2.b.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_1101 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_1101
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.c
+		custom_tooltip = SRA_Mutation.2.c.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_1102 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_1102
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.d
+		custom_tooltip = SRA_Mutation.2.d.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2101 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2101
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.e
+		custom_tooltip = SRA_Mutation.2.e.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_1103 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_1103
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.f
+		custom_tooltip = SRA_Mutation.2.f.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2102 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2102
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.g
+		custom_tooltip = SRA_Mutation.2.g.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_3101 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_3101
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.h
+		custom_tooltip = SRA_Mutation.2.h.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2103 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2103
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.i
+		custom_tooltip = SRA_Mutation.2.i.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2104 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2104
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.j
+		custom_tooltip = SRA_Mutation.2.j.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4101 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4101
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.k
+		custom_tooltip = SRA_Mutation.2.k.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_1104 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_1104
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.l
+		custom_tooltip = SRA_Mutation.2.l.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_3201 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_3201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.m
+		custom_tooltip = SRA_Mutation.2.m.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4201 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.n
+		custom_tooltip = SRA_Mutation.2.n.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_5301 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_5301
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.o
+		custom_tooltip = SRA_Mutation.2.o.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_5201 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_5201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.p
+		custom_tooltip = SRA_Mutation.2.p.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2201 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.q
+		custom_tooltip = SRA_Mutation.2.q.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_5202 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_5202
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.r
+		custom_tooltip = SRA_Mutation.2.r.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4301 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4301
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.s
+		custom_tooltip = SRA_Mutation.2.s.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4302 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4302
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.t
+		custom_tooltip = SRA_Mutation.2.t.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_1201 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_1201
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.u
+		custom_tooltip = SRA_Mutation.2.u.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_1301 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_1301
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.v
+		custom_tooltip = SRA_Mutation.2.v.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2202 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2202
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.w
+		custom_tooltip = SRA_Mutation.2.w.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2105 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2105
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.x
+		custom_tooltip = SRA_Mutation.2.x.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2301 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2301
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.y
+		custom_tooltip = SRA_Mutation.2.y.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2203 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2203
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.z
+		custom_tooltip = SRA_Mutation.2.z.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4303 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4303
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.aa
+		custom_tooltip = SRA_Mutation.2.aa.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4304 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4304
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ab
+		custom_tooltip = SRA_Mutation.2.ab.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_3202 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_3202
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ac
+		custom_tooltip = SRA_Mutation.2.ac.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4305 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4305
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ad
+		custom_tooltip = SRA_Mutation.2.ad.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2302 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2302
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ae
+		custom_tooltip = SRA_Mutation.2.ae.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4306 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4306
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.af
+		custom_tooltip = SRA_Mutation.2.af.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4307 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4307
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ag
+		custom_tooltip = SRA_Mutation.2.ag.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_1302 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_1302
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ah
+		custom_tooltip = SRA_Mutation.2.ah.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4308 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4308
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ai
+		custom_tooltip = SRA_Mutation.2.ai.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2303 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2303
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.aj
+		custom_tooltip = SRA_Mutation.2.aj.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2304 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2304
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ak
+		custom_tooltip = SRA_Mutation.2.ak.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2106 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2106
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.al
+		custom_tooltip = SRA_Mutation.2.al.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_2305 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2305
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.am
+		custom_tooltip = SRA_Mutation.2.am.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			always = no
+			NOT = { has_global_flag = SRA_Mutation_5302 }
+	    }
+	    hidden_effect = { 
+			# set_global_flag = SRA_Mutation_5302
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.an
+		custom_tooltip = SRA_Mutation.2.an.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			always = no
+			NOT = { has_global_flag = SRA_Mutation_5303 }
+	    }
+	    hidden_effect = { 
+			# set_global_flag = SRA_Mutation_5303
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ao
+		custom_tooltip = SRA_Mutation.2.ao.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			always = no
+			NOT = { has_global_flag = SRA_Mutation_2306 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_2306
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.ap
+		custom_tooltip = SRA_Mutation.2.ap.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4202 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4202
+	    }
+	}
+	option = {
+		name = SRA_Mutation.2.aq
+		custom_tooltip = SRA_Mutation.2.aq.desc
+		is_dialog_only = yes
+		response_text = SRA_Mutation.3.desc
+	    allow = {
+			NOT = { has_global_flag = SRA_Mutation_4309 }
+	    }
+	    hidden_effect = { 
+			set_global_flag = SRA_Mutation_4309
+	    }
+	}
+}
+
+############################
+###操作区结束，以下为预设区###
+############################
+#究极黑暗
+country_event = {
+	id = SRA_Mutation.199
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = SRA_Mutation_1101
+		set_global_flag = SRA_Mutation_1102
+		set_global_flag = SRA_Mutation_2101
+		set_global_flag = SRA_Mutation_1103
+		set_global_flag = SRA_Mutation_2102
+		set_global_flag = SRA_Mutation_3101
+		set_global_flag = SRA_Mutation_2103
+		set_global_flag = SRA_Mutation_2104
+		set_global_flag = SRA_Mutation_4101
+		set_global_flag = SRA_Mutation_1104
+		set_global_flag = SRA_Mutation_3201
+		set_global_flag = SRA_Mutation_4201
+		set_global_flag = SRA_Mutation_5301
+		set_global_flag = SRA_Mutation_5201
+		set_global_flag = SRA_Mutation_2201
+		set_global_flag = SRA_Mutation_5202
+		set_global_flag = SRA_Mutation_4301
+		set_global_flag = SRA_Mutation_4302
+		set_global_flag = SRA_Mutation_1201
+		set_global_flag = SRA_Mutation_1301
+		set_global_flag = SRA_Mutation_2202
+		set_global_flag = SRA_Mutation_2105
+		set_global_flag = SRA_Mutation_2301
+		set_global_flag = SRA_Mutation_2203
+		set_global_flag = SRA_Mutation_4303
+		set_global_flag = SRA_Mutation_4304
+		set_global_flag = SRA_Mutation_3202
+		set_global_flag = SRA_Mutation_4305
+		set_global_flag = SRA_Mutation_2302
+		set_global_flag = SRA_Mutation_4306
+		set_global_flag = SRA_Mutation_4307
+		set_global_flag = SRA_Mutation_1302
+		set_global_flag = SRA_Mutation_4308
+		set_global_flag = SRA_Mutation_2303
+		set_global_flag = SRA_Mutation_2304
+		set_global_flag = SRA_Mutation_2106
+		set_global_flag = SRA_Mutation_2305
+		# set_global_flag = SRA_Mutation_5302
+		# set_global_flag = SRA_Mutation_5303
+		#set_global_flag = SRA_Mutation_2306
+		set_global_flag = SRA_Mutation_4202
+		set_global_flag = SRA_Mutation_4309
+	}
+}
+country_event = {
+	id = SRA_Mutation.101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = SRA_Mutation_4101
+		set_global_flag = SRA_Mutation_1104
+		set_global_flag = SRA_Mutation_3201
+		set_global_flag = SRA_Mutation_4201
+		set_global_flag = SRA_Mutation_5301
+		set_global_flag = SRA_Mutation_4306
+	}
+}
+#末世浩劫
+country_event = {
+	id = SRA_Mutation.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = SRA_Mutation_1101
+		set_global_flag = SRA_Mutation_1102
+		set_global_flag = SRA_Mutation_2101
+		set_global_flag = SRA_Mutation_1103
+		set_global_flag = SRA_Mutation_2102
+		set_global_flag = SRA_Mutation_2103
+		set_global_flag = SRA_Mutation_2104
+		set_global_flag = SRA_Mutation_5201
+		set_global_flag = SRA_Mutation_2201
+		set_global_flag = SRA_Mutation_5202
+		set_global_flag = SRA_Mutation_1201
+		set_global_flag = SRA_Mutation_2105
+		set_global_flag = SRA_Mutation_2203
+		set_global_flag = SRA_Mutation_2106
+		set_global_flag = SRA_Mutation_4202
+	}
+}
+country_event = {
+	id = SRA_Mutation.103
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = SRA_Mutation_3101
+		set_global_flag = SRA_Mutation_4301
+		set_global_flag = SRA_Mutation_4302
+		set_global_flag = SRA_Mutation_4303
+		set_global_flag = SRA_Mutation_4304
+		set_global_flag = SRA_Mutation_3202
+		set_global_flag = SRA_Mutation_4305
+		set_global_flag = SRA_Mutation_4307
+		set_global_flag = SRA_Mutation_4308
+	}
+}
+
+############################
+###预设区结束，以下为随机区###
+############################
+
+country_event = {
+	id = SRA_Mutation.201
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random = { chance = 20 set_global_flag = SRA_Mutation_1101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1102 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1103 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2102 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_3101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2103 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2104 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1104 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2105 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2106 }
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.202
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random = { chance = 20 set_global_flag = SRA_Mutation_1101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1102 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1103 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2102 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_3101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2103 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2104 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1104 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_3201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_5201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_5202 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2202 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2105 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2203 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_3202 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2106 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4202 }
+	}
+}
+country_event = {
+	id = SRA_Mutation.203
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random = { chance = 20 set_global_flag = SRA_Mutation_1101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1102 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1103 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2102 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_3101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2103 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2104 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4101 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1104 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_3201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_5301 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_5201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_5202 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4301 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4302 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1201 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1301 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2202 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2105 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2301 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2203 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4303 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4304 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_3202 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4305 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2302 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4306 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4307 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_1302 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4308 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2303 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2304 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2106 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_2305 }
+		#random = { chance = 20 set_global_flag = SRA_Mutation_5302 }
+		#random = { chance = 20 set_global_flag = SRA_Mutation_5303 }
+		#random = { chance = 20 set_global_flag = SRA_Mutation_2306 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4202 }
+		random = { chance = 20 set_global_flag = SRA_Mutation_4309 }
+	}
+}
+
+
+
+############################
+###随机区结束，以下为总触发区#
+############################
+#交战开始触发
+country_event = {
+	id = SRA_Mutation.1000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			is_country_type = faction_SRA_Crisis_country
+		}
+		FromFrom = { NOT = { has_fleet_flag = SRA_Mutation_Blocked } }
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_1101
+			    FromFrom = { NOT = { has_fleet_flag = SRA_Mutation_1101_happened } }
+		    }
+			FromFrom = { 
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_1101_happened days = 1
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = { chance = 4 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = { chance = 4 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					random = { chance = 8 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+			 }
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_1102
+			    FromFrom = { NOT = { has_fleet_flag = SRA_Mutation_1102_happened } }
+		    }
+			FromFrom = { 
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_1102_happened days = 1
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = { chance = 20 add_modifier = { modifier = SRA_Mutation_1102 days = 10 } }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = { chance = 20 add_modifier = { modifier = SRA_Mutation_1102 multiplier = 2 days = 15 } }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					random = { chance = 80 add_modifier = { modifier = SRA_Mutation_1102 multiplier = 8 days = 10 } }
+				}
+			 }
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_1103
+			    FromFrom = { NOT = { has_fleet_flag = SRA_Mutation_1103_happened } }
+			FromFromFrom = {
+				leader? = { leader_class = commander }
+			}
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = { chance = 20 
+				clone_leader = {
+					class = commander
+					target = FROMFROMFROM.leader
+					effect = { save_event_target_as = SRA_Mutation_1103_leader }
+				}
+				FromFrom = { 
+					set_timed_fleet_flag = {
+						flag = SRA_Mutation_1103_happened days = 1
+					} assign_leader = event_target:SRA_Mutation_1103_leader }
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = { chance = 40 
+				clone_leader = {
+					class = commander
+					target = FROMFROMFROM.leader
+					effect = { save_event_target_as = SRA_Mutation_1103_leader }
+				}
+				FromFrom = { 
+					set_timed_fleet_flag = {
+						flag = SRA_Mutation_1103_happened days = 1
+					} assign_leader = event_target:SRA_Mutation_1103_leader }
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random = { chance = 90
+				clone_leader = {
+					class = commander
+					target = FROMFROMFROM.leader
+					effect = { save_event_target_as = SRA_Mutation_1103_leader }
+				}
+				FromFrom = { 
+					set_timed_fleet_flag = {
+						flag = SRA_Mutation_1103_happened days = 1
+					} assign_leader = event_target:SRA_Mutation_1103_leader }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_1104
+			    FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_1104_happened } }
+		    }
+			FromFromFrom = { 
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_1104_happened days = 180
+				}
+				if = {
+					limit = { has_modifier = SRA_Mutation_1104 }
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						random = {
+							chance = 30
+							change_variable = { which = SRA_Mutation_1104_variable value = 1 }
+							add_modifier = { modifier = SRA_Mutation_1104 multiplier = SRA_Mutation_1104_variable days = 180 }
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						random = {
+							chance = 45
+							change_variable = { which = SRA_Mutation_1104_variable value = 2 }
+							add_modifier = { modifier = SRA_Mutation_1104 multiplier = SRA_Mutation_1104_variable days = 180 }
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_lunatic }
+						change_variable = { which = SRA_Mutation_1104_variable value = 4 }
+						add_modifier = { modifier = SRA_Mutation_1104 multiplier = SRA_Mutation_1104_variable days = 360 }
+					}
+				}
+				else = {
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						random = {
+							chance = 30
+							set_variable = { which = SRA_Mutation_1104_variable value = 1 }
+							add_modifier = { modifier = SRA_Mutation_1104 multiplier = SRA_Mutation_1104_variable days = 180 }
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						random = {
+							chance = 45
+							set_variable = { which = SRA_Mutation_1104_variable value = 2 }
+							add_modifier = { modifier = SRA_Mutation_1104 multiplier = SRA_Mutation_1104_variable days = 180 }
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_lunatic }
+						set_variable = { which = SRA_Mutation_1104_variable value = 4 }
+						add_modifier = { modifier = SRA_Mutation_1104 multiplier = SRA_Mutation_1104_variable days = 360 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_1201
+			    FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_1201_happened } }
+		    }
+			FromFromFrom = { 
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_1201_happened days = 1
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = { chance = 10 
+					random_list = {
+						7 = { add_modifier = { modifier = SRA_Mutation_1201 days = 1 } }
+						2 = { add_modifier = { modifier = SRA_Mutation_1201 days = 2 } }
+						1 = { add_modifier = { modifier = SRA_Mutation_1201 days = 3 } }
+					} }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = { chance = 20
+					random_list = {
+						4 = { add_modifier = { modifier = SRA_Mutation_1201 days = 1 } }
+						4 = { add_modifier = { modifier = SRA_Mutation_1201 days = 2 } }
+						5 = { add_modifier = { modifier = SRA_Mutation_1201 days = 3 } }
+					} }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					random = { chance = 80
+					random_list = {
+						1 = { add_modifier = { modifier = SRA_Mutation_1201 days = 1 } }
+						6 = { add_modifier = { modifier = SRA_Mutation_1201 days = 2 } }
+						3 = { add_modifier = { modifier = SRA_Mutation_1201 days = 3 } }
+					} }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_1301
+			    FromFromFrom = {
+					NOT = { has_fleet_flag = SRA_Mutation_1301_happened }
+					exists = leader
+				}
+		    }
+			FromFromFrom = { 
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_1301_happened days = 1
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = { chance = 2  kill_leader = { show_notification = no }
+					save_event_target_as = SRA_Mutation_1301_fleet
+					leader = {
+						save_event_target_as = SRA_Mutation_1301_leader
+					}
+					root.from = {
+						create_message = {
+							type = "LEADER_DEATH"
+							localization = "SRA_Mutation_1301_message_desc"
+							days = 30
+							target = root.fromfromfrom
+							variable = {
+								type = name
+								localization = "SRA_Mutation_1301_fleet"
+								scope = root.fromfromfrom
+							}
+							variable = {
+								type = name
+								localization = "SRA_Mutation_1301_leader"
+								scope = event_target:SRA_Mutation_1301_leader
+							}
+						}
+					}  }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = { chance = 4 kill_leader = { show_notification = no }
+					save_event_target_as = SRA_Mutation_1301_fleet
+					leader = {
+						save_event_target_as = SRA_Mutation_1301_leader
+					}
+					root.from = {
+						create_message = {
+							type = "LEADER_DEATH"
+							localization = "SRA_Mutation_1301_message_desc"
+							days = 30
+							target = root.fromfromfrom
+							variable = {
+								type = name
+								localization = "SRA_Mutation_1301_fleet"
+								scope = root.fromfromfrom
+							}
+							variable = {
+								type = name
+								localization = "SRA_Mutation_1301_leader"
+								scope = event_target:SRA_Mutation_1301_leader
+							}
+						}
+					}  }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					random = { chance = 16 kill_leader = { show_notification = no }
+					save_event_target_as = SRA_Mutation_1301_fleet
+					leader = {
+						save_event_target_as = SRA_Mutation_1301_leader
+					}
+					root.from = {
+						create_message = {
+							type = "LEADER_DEATH"
+							localization = "SRA_Mutation_1301_message_desc"
+							days = 30
+							target = root.fromfromfrom
+							variable = {
+								type = name
+								localization = "SRA_Mutation_1301_fleet"
+								scope = root.fromfromfrom
+							}
+							variable = {
+								type = name
+								localization = "SRA_Mutation_1301_leader"
+								scope = event_target:SRA_Mutation_1301_leader
+							}
+						}
+					}  }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_1302
+			    FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_1302_happened } }
+				From = { is_ai = yes }
+		    }
+			FromFrom = { 
+				random_owned_ship = {
+					ship_event = {
+						id = SRA_Spear_Of_Galaxy_Zenith.1043
+					}
+				}
+			}
+			FromFromFrom = { 
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_1302_happened days = 1
+				}
+				add_modifier = { modifier = SRA_Mutation_1201 days = 360 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2304
+			    FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_2304_happened } }
+		    }
+			FromFromFrom = { 
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_2304_happened days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				FromFrom = {
+					is_same_value = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_4_1_cool_down } }
+				FromFrom = {
+					solar_system = {
+						every_fleet_in_system = {
+							limit = {
+								owner = {
+									is_hostile = root
+								}
+							}
+							add_modifier = { modifier = "SRA_SOGZ_menu_sub_4_2_buff" days = 30 } 
+						}
+					}
+					random_owned_ship = {
+						limit = {
+							SRA_is_SOGZ_ship_size = yes
+						}
+						ship_event = {
+							id = SRA_Spear_Of_Galaxy_Zenith.1041
+						}
+						ship_event = {
+							id = SRA_Spear_Of_Galaxy_Zenith.1043
+						}
+					}
+				}
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_4_1_cool_down days = 45 }
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_6_2_cool_down } }
+				FromFrom = {
+					add_modifier = { modifier = "SRA_Spear_Of_Galaxy_Zenith_Buff_1" days = 60 } 
+				}
+				set_timed_country_flag = { flag = SRA_Spear_Of_Galaxy_Zenith_burst days = 60 }
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_2_cool_down days = 180 }
+			}
+		}
+	}
+}
+
+#远征舰队被击毁
+country_event = {
+	id = SRA_Mutation.2000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			is_country_type = faction_SRA_Crisis_country
+		}
+		FromFrom = { NOT = { has_fleet_flag = SRA_Mutation_Blocked } }
+		from = { is_ai = no }
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2101
+		    }
+			ROOT = {
+				if = {
+					limit = { has_modifier = SRA_Mutation_2101 }
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						change_variable = { which = SRA_Mutation_2101_variable value = 1 }
+						add_modifier = { modifier = SRA_Mutation_2101 multiplier = SRA_Mutation_2101_variable days = 90 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						change_variable = { which = SRA_Mutation_2101_variable value = 2 }
+						add_modifier = { modifier = SRA_Mutation_2101 multiplier = SRA_Mutation_2101_variable days = 135 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_lunatic }
+						change_variable = { which = SRA_Mutation_2101_variable value = 8 }
+						add_modifier = { modifier = SRA_Mutation_2101 multiplier = SRA_Mutation_2101_variable days = 180 }
+					}
+				}
+				else = {
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						set_variable = { which = SRA_Mutation_2101_variable value = 1 }
+						add_modifier = { modifier = SRA_Mutation_2101 multiplier = SRA_Mutation_2101_variable days = 90 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						set_variable = { which = SRA_Mutation_2101_variable value = 2 }
+						add_modifier = { modifier = SRA_Mutation_2101 multiplier = SRA_Mutation_2101_variable days = 135 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_lunatic }
+						set_variable = { which = SRA_Mutation_2101_variable value = 8 }
+						add_modifier = { modifier = SRA_Mutation_2101 multiplier = SRA_Mutation_2101_variable days = 180 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2102
+		    }
+			FromFrom = {
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = { chance = 4 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = { chance = 8 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					random = { chance = 16 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2202
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = { chance = 3
+				create_fleet = {
+					name = "NAME_SRA_Mutation_Boom_2"
+					effect = {
+						set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+						set_owner = Root
+						create_ship = {
+							name = random
+							design = "NAME_SRA_Mutation_Boom_2"
+							upgradable = no
+						}			
+						set_location = {
+							target = prev.FromFrom
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_event_locked = yes
+						fleet_event = {
+							id = SRA_Mutation.99999 days = 1
+						}
+					}
+				}}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = { chance = 6 
+				create_fleet = {
+					name = "NAME_SRA_Mutation_Boom_2"
+					effect = {
+						set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+						set_owner = Root
+						create_ship = {
+							name = random
+							design = "NAME_SRA_Mutation_Boom_2"
+							upgradable = no
+						}			
+						set_location = {
+							target = prev.FromFrom
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_event_locked = yes
+						fleet_event = {
+							id = SRA_Mutation.99999 days = 1
+						}
+					}
+				}}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random = { chance = 12 
+				create_fleet = {
+					name = "NAME_SRA_Mutation_Boom_2"
+					effect = {
+						set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+						set_owner = Root
+						create_ship = {
+							name = random
+							design = "NAME_SRA_Mutation_Boom_2"
+							upgradable = no
+						}			
+						set_location = {
+							target = prev.FromFrom
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_event_locked = yes
+						fleet_event = {
+							id = SRA_Mutation.99999 days = 1
+						}
+					}
+				}}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2105
+			    FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_2105_happened } }
+		    }
+			FromFromFrom = { 
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_2105_happened days = 1
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					add_modifier = { modifier = SRA_Mutation_2105 days = 30 }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					add_modifier = { modifier = SRA_Mutation_2105 multiplier = 2 days = 45 }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					add_modifier = { modifier = SRA_Mutation_2105 multiplier = 8 days = 60 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2203
+		    }
+			From = {
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = {
+						chance = 30
+						change_variable = { which = SRA_Mutation_2203_variable value = 1 }
+					}
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = {
+						chance = 45
+						change_variable = { which = SRA_Mutation_2203_variable value = 2 }
+					}
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					change_variable = { which = SRA_Mutation_2203_variable value = 8 }
+				}
+				set_timed_country_flag = {
+					flag = SRA_Mutation_2203_time days = 15
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2301
+				FromFromFrom = {
+					solar_system = {
+						NOT = {
+							has_star_flag = SRA_Mutation_2301_happened
+						}
+					}
+				}
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = { chance = 1
+				FromFromFrom = {
+					solar_system = {
+						save_event_target_as = SRA_Mutation_23011_system
+						set_timed_star_flag = {
+							flag = SRA_Mutation_2301_happened days = 60
+						}
+					}
+					owner = {
+						country_event = {
+							id = SRA_Mutation.23012
+						}
+					}
+					star = {
+						create_fleet = {
+							name = "NAME_SRA_Mutation_Boom_0"
+							effect = {
+								set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+								set_owner = Root
+								create_ship = {
+									name = random
+									design = "NAME_SRA_Mutation_Boom_0"
+									upgradable = no
+									effect = {
+										ship_event = {
+											id = SRA_Mutation.23011 days = 30
+										}
+									}
+								}		
+								set_location = {
+									target = prev
+									distance = 0
+									angle = random
+								}
+								set_fleet_stance = aggressive
+								set_event_locked = yes
+							}
+						}
+					}
+				}
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = { chance = 2
+				FromFromFrom = {
+					solar_system = {
+						save_event_target_as = SRA_Mutation_23011_system
+						set_timed_star_flag = {
+							flag = SRA_Mutation_2301_happened days = 60
+						}
+					}
+					owner = {
+						country_event = {
+							id = SRA_Mutation.23012
+						}
+					}
+					star = {
+						create_fleet = {
+							name = "NAME_SRA_Mutation_Boom_0"
+							effect = {
+								set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+								set_owner = Root
+								create_ship = {
+									name = random
+									design = "NAME_SRA_Mutation_Boom_0"
+									upgradable = no
+									effect = {
+										ship_event = {
+											id = SRA_Mutation.23011 days = 30
+										}
+									}
+								}			
+								set_location = {
+									target = prev
+									distance = 0
+									angle = random
+								}
+								set_fleet_stance = aggressive
+								set_event_locked = yes
+							}	
+						}
+					}
+				}}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random = { chance = 4
+				FromFromFrom = {
+					solar_system = {
+						save_event_target_as = SRA_Mutation_23011_system
+						set_timed_star_flag = {
+							flag = SRA_Mutation_2301_happened days = 60
+						}
+					}
+					owner = {
+						country_event = {
+							id = SRA_Mutation.23012
+						}
+					}
+					star = {
+						create_fleet = {
+							name = "NAME_SRA_Mutation_Boom_0"
+							effect = {
+								set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+								set_owner = Root
+								create_ship = {
+									name = random
+									design = "NAME_SRA_Mutation_Boom_0"
+									upgradable = no
+									effect = {
+										ship_event = {
+											id = SRA_Mutation.23011 days = 30
+										}
+									}
+								}			
+								set_location = {
+									target = prev
+									distance = 0
+									angle = random
+								}
+								set_fleet_stance = aggressive
+								set_event_locked = yes
+							}
+						}
+					}
+				}}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2302
+				FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_2302_happened } }
+		    }
+			FromFromFrom = {
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_2302_happened days = 1
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = { chance = 1 random_system = { star = { save_event_target_as = SRA_Mutation_2302_star } }
+					set_location = event_target:SRA_Mutation_2302_star }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = { chance = 2 random_system = { star = { save_event_target_as = SRA_Mutation_2302_star } }
+					set_location = event_target:SRA_Mutation_2302_star }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					random = { chance = 8 random_system = { star = { save_event_target_as = SRA_Mutation_2302_star } }
+					set_location = event_target:SRA_Mutation_2302_star }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2303
+				FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_2303_happened } }
+		    }
+			FromFromFrom = {
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_2303_happened days = 1
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = { chance = 1 add_modifier = { modifier = SRA_Mutation_2303 days = 3600 } }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = { chance = 2 add_modifier = { modifier = SRA_Mutation_2303 multiplier = 20 days = 3600 } }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					random = { chance = 8 add_modifier = { modifier = SRA_Mutation_2303 multiplier = 400000 days = 3600 } }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2304
+				FromFromFrom = { has_fleet_flag = SRA_Mutation_2304_happened }
+		    }
+			FromFromFrom = {
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					set_mia = mia_return_home
+					set_mia_return_delay = 30
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					set_mia = mia_return_home
+					set_mia_return_delay = 180
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					set_mia = mia_return_home
+					set_mia_return_delay = 1800
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2306
+		    }
+			FromFromFrom = {
+				fleet_event = {
+					id = SRA_Mutation.2306
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4309
+				FromFrom = {
+					has_fleet_flag = SRA_Mutation_4309_target_fleet
+				}
+		    }
+			country_event = {
+				id = SRA_Mutation.43091
+			}
+		}
+	}
+}
+fleet_event = {
+	id = SRA_Mutation.2306
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_2306
+	}
+	immediate = {
+		every_controlled_ship = {
+			limit = {
+				is_ship_class = shipclass_military
+				is_designable = yes
+			}
+			if = {
+				limit = {
+					is_ship_size = SRA_Adjudicator
+					owner = { has_existing_ship_design = SRA_Executor }
+				}
+				set_ship_design = { random_existing_design = SRA_Executor }
+			}
+			else_if = {
+				limit = {
+					is_ship_size = SRA_Executor
+					owner = { has_existing_ship_design = SRA_Cruiser }
+				}
+				set_ship_design = { random_existing_design = SRA_Cruiser }
+			}
+			else_if = {
+				limit = {
+					is_ship_size = SRA_Cruiser
+				}
+			}
+			else_if = {
+				limit = {
+					ship_size_multiplier > 40
+					OR = {
+						owner = { has_existing_ship_design = battleship }
+						owner = { has_existing_ship_design = stinger_stage_1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_existing_ship_design = battleship } }
+					set_ship_design = { random_existing_design = battleship }
+				}
+				else_if = {
+					limit = { owner = { has_existing_ship_design = stinger_stage_1 } }
+					set_ship_design = { random_existing_design = stinger_stage_1 }
+				}
+			}
+			else_if = {
+				limit = {
+					ship_size_multiplier > 20
+					ship_size_multiplier <= 40
+					OR = {
+						owner = { has_existing_ship_design = cruiser }
+						owner = { has_existing_ship_design = harbinger_stage_1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_existing_ship_design = cruiser } }
+					set_ship_design = { random_existing_design = cruiser }
+				}
+				else_if = {
+					limit = { owner = { has_existing_ship_design = harbinger_stage_1 } }
+					set_ship_design = { random_existing_design = harbinger_stage_1 }
+				}
+			}
+			else_if = {
+				limit = {
+					ship_size_multiplier > 10
+					ship_size_multiplier <= 20
+					OR = {
+						owner = { has_existing_ship_design = destroyer }
+						owner = { has_existing_ship_design = stinger_stage_1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_existing_ship_design = destroyer } }
+					set_ship_design = { random_existing_design = destroyer }
+				}
+				else_if = {
+					limit = { owner = { has_existing_ship_design = mauler_stage_1 } }
+					set_ship_design = { random_existing_design = mauler_stage_1 }
+				}
+			}
+			else_if = {
+				limit = {
+					ship_size_multiplier > 5
+					ship_size_multiplier <= 10
+					OR = {
+						owner = { has_existing_ship_design = corvette }
+						owner = { has_existing_ship_design = stinger_stage_1 }
+					}
+				}
+				if = {
+					limit = { owner = { has_existing_ship_design = corvette } }
+					set_ship_design = { random_existing_design = corvette }
+				}
+				else_if = {
+					limit = { owner = { has_existing_ship_design = mauler_stage_1 } }
+					set_ship_design = { random_existing_design = mauler_stage_1 }
+				}
+			}
+			else = {
+				set_ship_design = { design = "NAME_Reaver" }
+			}
+		}
+	}
+}
+#远征舰队击毁对方
+#FromFromFrom为远征舰队
+country_event = {
+	id = SRA_Mutation.2001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			From = {
+				is_country_type = faction_SRA_Crisis_country
+			}
+		}
+		FromFrom = { NOT = { has_fleet_flag = SRA_Mutation_Blocked } }
+		FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_Blocked } }
+	}
+	immediate = {
+		FromFrom = {
+			set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2103
+			    FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_2103_happened } }
+		    }
+			FromFromFrom = {
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_2103_happened days = 1
+				}
+				if = {
+					limit = { has_modifier = SRA_Mutation_2103 }
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						random = {
+							chance = 30
+							change_variable = { which = SRA_Mutation_2103_variable value = 1 }
+							add_modifier = { modifier = SRA_Mutation_2103 multiplier = SRA_Mutation_2103_variable days = 30 }
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						random = {
+							chance = 45
+							change_variable = { which = SRA_Mutation_2103_variable value = 2 }
+							add_modifier = { modifier = SRA_Mutation_2103 multiplier = SRA_Mutation_2103_variable days = 60 }
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_lunatic }
+						change_variable = { which = SRA_Mutation_2103_variable value = 8 }
+						add_modifier = { modifier = SRA_Mutation_2103 multiplier = SRA_Mutation_2103_variable days = 180 }
+					}
+				}
+				else = {
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						random = {
+							chance = 30
+							set_variable = { which = SRA_Mutation_2103_variable value = 1 }
+							add_modifier = { modifier = SRA_Mutation_2103 multiplier = SRA_Mutation_2103_variable days = 30 }
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						random = {
+							chance = 45
+							set_variable = { which = SRA_Mutation_2103_variable value = 2 }
+							add_modifier = { modifier = SRA_Mutation_2103 multiplier = SRA_Mutation_2103_variable days = 60 }
+						}
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_lunatic }
+						set_variable = { which = SRA_Mutation_2103_variable value = 8 }
+						add_modifier = { modifier = SRA_Mutation_2103 multiplier = SRA_Mutation_2103_variable days = 180 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2104
+			    FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_2104_happened } }
+		    }
+			FromFromFrom = {
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_2104_happened days = 1
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					random = { chance = 6 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					random = { chance = 12 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					random = { chance = 24 create_SRA_Crisis_fleet_and_admiral = yes }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2201
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = {
+					chance = 10
+					change_variable = { which = SRA_Mutation_2201_variable value = 1 }
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = {
+					chance = 20
+					change_variable = { which = SRA_Mutation_2201_variable value = 2 }
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				change_variable = { which = SRA_Mutation_2201_variable value = 8 }
+			}
+			set_timed_country_flag = {
+				flag = SRA_Mutation_2201_time days = 15
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2106
+			    FromFromFrom = { NOT = { has_fleet_flag = SRA_Mutation_2106_happened } }
+		    }
+			FromFromFrom = {
+				set_timed_fleet_flag = {
+					flag = SRA_Mutation_2106_happened days = 1
+				}
+			}
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = { chance = 20
+					create_fleet = {
+							name = "NAME_SRA_Crisis_GZ_Platform"
+							settings = { spawn_debris = no }
+							effect = {
+								set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+								set_owner = prev.From
+								create_ship = {
+									name = "NAME_SRA_Crisis_GZ_Platform"
+									design = "NAME_SRA_Crisis_GZ_Platform"
+									prefix = no
+								}
+								set_location = {
+									target = prev.fromfrom
+									distance = 0
+									angle = 0
+								}
+							}
+						}
+					}
+				}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = { chance = 40
+					create_fleet = {
+						name = "NAME_SRA_Crisis_GZ_Platform"
+						settings = { spawn_debris = no }
+						effect = {
+							set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+							set_owner = prev.From
+							create_ship = {
+								name = "NAME_SRA_Crisis_GZ_Platform"
+								design = "NAME_SRA_Crisis_GZ_Platform"
+								prefix = no
+							}
+							set_location = {
+								target = prev.fromfrom
+								distance = 0
+								angle = 0
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				create_fleet = {
+					name = "NAME_SRA_Crisis_GZ_Platform"
+					settings = { spawn_debris = no }
+					effect = {
+						set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+						set_owner = prev.From
+						create_ship = {
+							name = "NAME_SRA_Crisis_GZ_Platform"
+							design = "NAME_SRA_Crisis_GZ_Platform"
+							prefix = no
+						}
+						set_location = {
+							target = prev.fromfrom
+							distance = 0
+							angle = 0
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2305
+			    FromFromFrom = { has_fleet_flag = SRA_Mutation_2305_happened }
+		    }
+			FromFromFrom = {
+				every_owned_ship = {
+					remove_ship_flag = SRA_on_ship_disabled_repair
+					if = {
+						limit = {
+							NOR = {
+								is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+								is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+								is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+							}
+						}
+						set_disable_at_health = -1
+						set_disabled = no
+					}
+				}
+			}
+		}
+	}
+}
+
+#进入星系触发
+# Scope = Fleet
+# From = System
+fleet_event = {
+	id = SRA_Mutation.3000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		owner = {
+			is_ai = no
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_3101
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = { chance = 10 add_modifier = { modifier = SRA_Mutation_3101 days = 5 } }
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = { chance = 20 add_modifier = { modifier = SRA_Mutation_3101 multiplier = 2 days = 10 } }
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random = { chance = 80 add_modifier = { modifier = SRA_Mutation_3101 multiplier = 3 days = 15 } }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_3201
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = { chance = 5
+				    owner = {
+						add_resource = {
+							energy = -500
+							minerals = -500
+							food = -250
+							alloys = -500
+							consumer_goods = -100
+							rare_crystals = -50
+							exotic_gases = -50
+							volatile_motes = -50
+						}
+				    }
+			    }
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = { chance = 10
+				    owner = {
+						add_resource = {
+							energy = -1000
+							minerals = -1000
+							food = -500
+							alloys = -1000
+							consumer_goods = -200
+							rare_crystals = -100
+							exotic_gases = -100
+							volatile_motes = -100
+						}
+				    }
+			    }
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random = { chance = 40
+				    owner = {
+						add_resource = {
+							energy = -4000
+							minerals = -4000
+							food = -1000
+							alloys = -4000
+							consumer_goods = -800
+							rare_crystals = -400
+							exotic_gases = -400
+							volatile_motes = -400
+						}
+				    }
+			    }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_3202
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = { chance = 2 create_SRA_Crisis_fleet_and_admiral = yes }
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = { chance = 4 create_SRA_Crisis_fleet_and_admiral = yes }
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random = { chance = 16 create_SRA_Crisis_fleet_and_admiral = yes }
+			}
+		}
+	}
+}
+
+#危机开始触发
+country_event = {
+	id = SRA_Mutation.4000
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_Start
+		    }
+			every_playable_country = {
+				country_event = {
+					id = SRA_Mutation.4001
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4101
+		    }
+			country_event = {
+				id = SRA_Mutation.4101
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4201
+		    }
+			country_event = {
+				id = SRA_Mutation.4201
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4301
+		    }
+			country_event = {
+				id = SRA_Mutation.4301
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4302
+		    }
+			country_event = {
+				id = SRA_Mutation.4302
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4303
+		    }
+			country_event = {
+				id = SRA_Mutation.4303
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4304
+		    }
+			country_event = {
+				id = SRA_Mutation.4304
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4305
+		    }
+			country_event = {
+				id = SRA_Mutation.4305
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4306
+		    }
+			country_event = {
+				id = SRA_Mutation.4306
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4307
+		    }
+			country_event = {
+				id = SRA_Mutation.4307
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4308
+		    }
+			country_event = {
+				id = SRA_Mutation.4308
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4201
+		    }
+			country_event = {
+				id = SRA_Mutation.4201
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_4309
+		    }
+			country_event = {
+				id = SRA_Mutation.4309
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.4001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2201
+			}
+			add_modifier = { modifier = SRA_Mutation_2201 multiplier = SRA_Mutation_2201_variable days = 5 }
+			if = {
+				limit = { NOT = { has_country_flag = SRA_Mutation_2201_time } }
+				set_variable = { which = SRA_Mutation_2201_variable value = 0 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_2203
+			}
+			add_modifier = { modifier = SRA_Mutation_2203 multiplier = SRA_Mutation_2203_variable days = 5 }
+			if = {
+				limit = { NOT = { has_country_flag = SRA_Mutation_2203_time } }
+				set_variable = { which = SRA_Mutation_2203_variable value = 0 }
+			}
+		}
+		country_event = {
+			id = SRA_Mutation.4001 days = 5
+		}
+	}
+}
+
+
+country_event = {
+	id = SRA_Mutation.4101
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_resource = {
+					energy = -8000
+					minerals = -8000
+					food = -4000
+					alloys = -8000
+					consumer_goods = -4000
+					rare_crystals = -1000
+					exotic_gases = -1000
+					volatile_motes = -1000
+					sr_dark_matter = -400
+					sr_living_metal = -100
+					sr_zro = -100
+					nanites = -100
+					astral_threads = -400
+				}
+			}
+			country_event = { id = SRA_Mutation.4101 days = 360 random = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_resource = {
+					energy = -16000
+					minerals = -16000
+					food = -8000
+					alloys = -16000
+					consumer_goods = -8000
+					rare_crystals = -2000
+					exotic_gases = -2000
+					volatile_motes = -2000
+					sr_dark_matter = -800
+					sr_living_metal = -200
+					sr_zro = -200
+					nanites = -200
+					astral_threads = -800
+				}
+			}
+			country_event = { id = SRA_Mutation.4101 days = 140 random = 240 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_resource = {
+					energy = -640000
+					minerals = -640000
+					food = -320000
+					alloys = -640000
+					consumer_goods = -320000
+					rare_crystals = -80000
+					exotic_gases = -80000
+					volatile_motes = -80000
+					sr_dark_matter = -32000
+					sr_living_metal = -8000
+					sr_zro = -8000
+					nanites = -8000
+					astral_threads = -32000
+				}
+			}
+			country_event = { id = SRA_Mutation.4101 days = 180 random = 180 }
+		}
+	}
+}
+
+
+country_event = {
+	id = SRA_Mutation.4201
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4201 days = 180 }
+			}
+			country_event = { id = SRA_Mutation.4201 days = 180 random = 180 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4201 multiplier = 2 days = 360 }
+			}
+			country_event = { id = SRA_Mutation.4201 days = 120 random = 120 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4201 multiplier = 8 days = 540 }
+			}
+			country_event = { id = SRA_Mutation.4201 days = 90 random = 90 }
+		}
+	}
+}
+
+
+country_event = {
+	id = SRA_Mutation.4301
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Spear_Of_Galaxy_Zenith_Buff_2 days = 20 }
+			}
+			country_event = { id = SRA_Mutation.4301 days = 720 random = 180 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Spear_Of_Galaxy_Zenith_Buff_2 days = 20 }
+			}
+			country_event = { id = SRA_Mutation.4301 days = 600 random = 180 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Spear_Of_Galaxy_Zenith_Buff_2 days = 20 }
+			}
+			country_event = { id = SRA_Mutation.4301 days = 480 random = 180 }
+		}
+	}
+}
+country_event = {
+	id = SRA_Mutation.4302
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		set_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+		set_country_flag = SRA_SOGZ_menu_sub_1_1
+		set_country_flag = SRA_SOGZ_menu_sub_1_3
+		set_country_flag = SRA_SOGZ_menu_sub_3_1
+		set_country_flag = SRA_SOGZ_menu_sub_3_3
+		set_country_flag = SRA_SOGZ_menu_sub_5_1
+		set_country_flag = SRA_SOGZ_menu_sub_5_2
+		set_country_flag = SRA_SOGZ_menu_sub_5_3
+		#重刷
+		country_event = { id = SRA_Mutation.43021 days = 30 }
+		#其他技能
+		country_event = { id = SRA_Mutation.43022 days = 45 }
+	}
+}
+country_event = {
+	id = SRA_Mutation.43021
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = { exists = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet }
+			}
+			create_fleet = {
+				name = "NAME_SRA_Crisis_Bright_Galaxy"
+				effect = {
+					save_global_event_target_as = SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet
+					set_owner = event_target:SRA_Crisis_country
+					create_ship = {
+						name = random
+						design = "NAME_SRA_Crisis_Bright_Galaxy"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+							save_global_event_target_as = SRA_Crisis_Spear_Of_Galaxy_Zenith_ship
+							ship_event = {
+								id = SRA_Spear_Of_Galaxy_Zenith.5023
+							}
+						}
+					}
+					while = { count = 4 create_ship = { design = "NAME_SRA_Crisis_Adjudicator" } }		
+					while = { count = 32 create_ship = { design = "NAME_SRA_Crisis_Executor" } }
+					while = { count = 64 create_ship = { design = "NAME_SRA_Crisis_Cruiser" } }	
+					set_fleet_stance = aggressive
+					set_fleet_bombardment_stance = SRA_doom2
+					set_aggro_range_measure_from = self
+					set_aggro_range = 500
+					set_fleet_flag = SRA_attack_fleet
+            		fleet_event = { id = SRA_Crisis.40 days = 5 }
+					#补船
+					fleet_event = { id = SRA_Mutation.43023 days = 720 }
+					event_target:SRA_Crisis_country = { change_variable = { which = "fleet_id" value = 1 }}
+					set_variable = { which = "fleet_id" value = event_target:SRA_Crisis_country.fleet_id }
+					solar_system = { set_variable = { which = SRA_Crisis_fleet_id value = prev.fleet_id } }
+					set_location = {
+						target = event_target:first_SRA_Crisis_Fort
+						distance = 0
+						angle = random
+					}
+					set_fleet_stance = aggressive
+				}
+				settings = { 
+					can_upgrade = no 
+					uses_naval_capacity = no
+					can_change_leader = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+					is_ultra_boss = yes
+				}
+			}
+		}
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			country_event = { id = SRA_Mutation.43021 days = 720 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			country_event = { id = SRA_Mutation.43021 days = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			country_event = { id = SRA_Mutation.43021 days = 180 }
+		}
+	}
+}
+country_event = {
+	id = SRA_Mutation.43022
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet = {
+			change_variable = { which = SRA_Crisis_country_fleet_none_target_var value = 100 }
+			create_SRA_Crisis_fleet_and_admiral = yes
+		}
+		event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_ship = {
+			save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+		}
+		create_fleet = {
+			name = "NAME_SRA_Barrier_Guard_Station_fleet"
+			effect = {
+				set_owner = root
+				set_location = {
+					target = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_ship
+					distance = 0
+					angle = random
+				}
+				while = {
+					count = 32
+					create_ship = {
+						design = NAME_SRA_Barrier_Guard_Cruiser
+					}
+				}
+				while = {
+					count = 4
+					create_ship = {
+						design = NAME_SRA_Barrier_Guard_Titan
+					}
+				}
+				create_ship = {
+					name = "NAME_SRA_Barrier_Guard_Station_Name_1"
+					design = "NAME_SRA_Barrier_Guard_Station"
+					prefix = no
+				}
+			}
+			settings = { 
+				can_upgrade = no 
+				uses_naval_capacity = no
+				can_change_composition = no
+				spawn_debris = no
+			}
+		}
+		every_country = {
+			limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+			add_modifier = { modifier = SRA_Spear_Of_Galaxy_Zenith_Buff_2 days = 20 }
+		}
+		country_event = { id = SRA_Mutation.43022 days = 180  }
+	}
+}
+fleet_event = {
+	id = SRA_Mutation.43023
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			while = { count = 16 create_ship = { design = "NAME_SRA_Crisis_Executor" } }
+			while = { count = 32 create_ship = { design = "NAME_SRA_Crisis_Cruiser" } }	
+			fleet_event = { id = SRA_Mutation.43023 days = 480 random = 240 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			while = { count = 16 create_ship = { design = "NAME_SRA_Crisis_Executor" } }
+			while = { count = 32 create_ship = { design = "NAME_SRA_Crisis_Cruiser" } }	
+			fleet_event = { id = SRA_Mutation.43023 days = 140 random = 120 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			while = { count = 32 create_ship = { design = "NAME_SRA_Crisis_Executor" } }
+			while = { count = 64 create_ship = { design = "NAME_SRA_Crisis_Cruiser" } }	
+			fleet_event = { id = SRA_Mutation.43023 days = 120 random = 60 }
+		}
+	}
+}
+country_event = {
+	id = SRA_Mutation.4303
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4303 days = 180 }
+			}
+			country_event = { id = SRA_Mutation.4303 days = 180 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4303 multiplier = 2 days = 180 }
+			}
+			country_event = { id = SRA_Mutation.4303 days = 180 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4303 multiplier = 3 days = 180 }
+			}
+			country_event = { id = SRA_Mutation.4303 days = 180 }
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.4304
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			every_country = {
+				limit = { is_ai = no }
+				random_owned_fleet = {
+					solar_system = {
+						random_system_planet = {
+							create_fleet = {
+								name = "NAME_SRA_fire_target_0"
+								effect = {
+									set_owner = ROOT
+									create_ship = {
+										name = random
+										design = "NAME_SRA_fire_target_0"
+										upgradable = no
+										effect = {
+											set_timed_ship_flag = {
+												flag = SRA_on_ship_disabled_repair days = 45
+											}
+											set_disable_at_health = 0.01
+										}
+									}			
+									set_location = {
+										target = prev
+										distance = 0
+										angle = random
+									}
+									set_event_locked = yes
+									fleet_event = {
+										id = SRA_Mutation.43041 days = 30
+									}
+									fleet_event = {
+										id = SRA_Mutation.99999 days = 45
+									}
+									set_fleet_stance = aggressive
+								}
+					    	}
+					    }
+					}
+				}
+			}
+			country_event = { id = SRA_Mutation.4306 days = 360 random = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			every_country = {
+				limit = { is_ai = no }
+				random_owned_fleet = {
+					solar_system = {
+						random_system_planet = {
+							create_fleet = {
+								name = "NAME_SRA_fire_target_0"
+								effect = {
+									set_owner = ROOT
+									create_ship = {
+										name = random
+										design = "NAME_SRA_fire_target_0"
+										upgradable = no
+										effect = {
+											set_disable_at_health = 0.01
+										}
+									}			
+									set_location = {
+										target = prev
+										distance = 0
+										angle = random
+									}
+									set_event_locked = yes
+									fleet_event = {
+										id = SRA_Mutation.43041 days = 30
+									}
+									fleet_event = {
+										id = SRA_Mutation.99999 days = 45
+									}
+									set_fleet_stance = aggressive
+								}
+					    	}
+					    }
+					}
+				}
+			}
+			country_event = { id = SRA_Mutation.4306 days = 360 random = 180 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			every_country = {
+				limit = { is_ai = no }
+				random_owned_fleet = {
+					solar_system = {
+						random_system_planet = {
+							create_fleet = {
+								name = "NAME_SRA_fire_target_0"
+								effect = {
+									set_owner = ROOT
+									create_ship = {
+										name = random
+										design = "NAME_SRA_fire_target_0"
+										upgradable = no
+										effect = {
+											set_disable_at_health = 0.01
+										}
+									}			
+									set_location = {
+										target = prev
+										distance = 0
+										angle = random
+									}
+									set_event_locked = yes
+									fleet_event = {
+										id = SRA_Mutation.43041 days = 30
+									}
+									fleet_event = {
+										id = SRA_Mutation.99999 days = 45
+									}
+									set_fleet_stance = aggressive
+								}
+					    	}
+					    }
+					}
+				}
+			}
+			country_event = { id = SRA_Mutation.4306 days = 180 random = 180 }
+		}
+	}
+}
+country_event = {
+	id = SRA_Mutation.4305
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		every_country = {
+			limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+			add_modifier = { modifier = SRA_Mutation_4305 days = 180 }
+			set_timed_country_flag = {
+				flag = community_mod_rules_trigger days = 180
+			}
+			set_timed_country_flag = {
+				flag = community_can_jump_drive_false days = 180
+			}
+		country_event = { id = SRA_Mutation.4305 days = 180 }
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.4306
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4306 days = 180 }
+			}
+			country_event = { id = SRA_Mutation.4306 days = 360 random = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4306 multiplier = 2 days = 360 }
+			}
+			country_event = { id = SRA_Mutation.4306 days = 360 random = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			every_country = {
+				limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
+				add_modifier = { modifier = SRA_Mutation_4306 multiplier = 3 days = 540 }
+			}
+			country_event = { id = SRA_Mutation.4306 days = 360 random = 360 }
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.4307
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			every_country = {
+				limit =  { is_ai = no }
+				capital_scope = {
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+				}
+			}
+			country_event = { id = SRA_Mutation.4307 days = 360 random = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			every_country = {
+				limit =  { is_ai = no }
+				capital_scope = {
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+				}
+			}
+			country_event = { id = SRA_Mutation.4307 days = 360 random = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			every_country = {
+				limit =  { is_ai = no }
+				capital_scope = {
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+					create_SRA_Crisis_fleet_and_admiral = yes
+				}
+			}
+			country_event = { id = SRA_Mutation.4307 days = 360 random = 360 }
+		}
+	}
+}
+country_event = {
+	id = SRA_Mutation.4308
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			every_country = {
+				limit =  { is_ai = no }
+				random_owned_fleet = {
+					solar_system = {
+						random_system_planet = {
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+						}
+					}
+				}
+			}
+			country_event = { id = SRA_Mutation.4308 days = 360 random = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			every_country = {
+				limit =  { is_ai = no }
+				random_owned_fleet = {
+					solar_system = {
+						random_system_planet = {
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+						}
+					}
+				}
+			}
+			country_event = { id = SRA_Mutation.4308 days = 360 random = 360 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			every_country = {
+				limit =  { is_ai = no }
+				random_owned_fleet = {
+					solar_system = {
+						random_system_planet = {
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+							create_SRA_Crisis_fleet_and_admiral = yes
+						}
+					}
+				}
+			}
+			country_event = { id = SRA_Mutation.4308 days = 360 random = 360 }
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.4202
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			add_modifier = { modifier = SRA_Mutation_4202 multiplier = 1 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			add_modifier = { modifier = SRA_Mutation_4202 multiplier = 100 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_lunatic }
+			add_modifier = { modifier = SRA_Mutation_4202 multiplier = 10000 }
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.4309
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		has_global_flag = SRA_Mutation_4309
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				is_ai = no
+			}
+			random_owned_ship = {
+				limit = {
+					is_ship_class = shipclass_military
+					is_designable = yes
+					NOT = { design = { has_design_flag = SRA_Mutation_4309_target } }
+				}
+				design = {
+					save_global_event_target_as = SRA_Mutation_4309_target
+					set_design_flag = SRA_Mutation_4309_target
+				}
+			}
+			event_target:SRA_portrait_leader_StellarRegulator = {
+				set_variable = { which = SRA_portrait_clothes_var value = 001 }
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_StellarRegulator
+				localization =  SRA_Mutation.4309.MESSAGE_SRA_StellarRegulator
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_StellarRegulator
+				variable = {
+					type = name
+					localization = SRA_StellarRegulator
+					scope = event_target:SRA_portrait_leader_StellarRegulator
+				}
+				variable = {
+					type = name
+					localization = "SRA_Mutation_4309_target"
+					scope = event_target:SRA_Mutation_4309_target
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_Mutation_4309_target_fleet"
+			effect = {
+				save_global_event_target_as = SRA_Mutation_4309_target_fleet
+				set_fleet_flag = SRA_Mutation_4309_target_fleet
+				set_owner = event_target:SRA_Crisis_country
+				create_ship = {
+					name = "NAME_SRA_Mutation_4309_target_fleet"
+					design = event_target:SRA_Mutation_4309_target
+					upgradable = no
+				}
+				set_fleet_stance = aggressive
+				set_fleet_bombardment_stance = SRA_doom2
+				set_aggro_range_measure_from = self
+				set_aggro_range = 500
+				set_fleet_flag = SRA_attack_fleet
+           		fleet_event = { id = SRA_Crisis.40 days = 5 }
+				fleet_event = {
+					id = SRA_Mutation.43092 days = 720
+				}
+				set_location = {
+					target = event_target:first_SRA_Crisis_Fort
+					distance = 0
+					angle = random
+				}
+				event_target:SRA_Crisis_country = { change_variable = { which = "fleet_id" value = 1 }}
+				set_variable = { which = "fleet_id" value = event_target:SRA_Crisis_country.fleet_id }
+				solar_system = { set_variable = { which = SRA_Crisis_fleet_id value = prev.fleet_id } }
+				set_fleet_stance = aggressive
+
+			}
+			settings = { 
+				can_upgrade = no 
+				uses_naval_capacity = no
+				can_change_leader = no
+				can_change_composition = no
+				can_disband = no
+				spawn_debris = no
+				ai_ignore_strength = yes
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = SRA_Crisis_normal
+			}
+			country_event = {
+				id = SRA_Mutation.4309 days = 1440
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = SRA_Crisis_hard
+			}
+			country_event = {
+				id = SRA_Mutation.4309 days = 720
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = SRA_Crisis_lunatic
+			}
+			country_event = {
+				id = SRA_Mutation.4309 days = 360
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.43091
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_4309
+	}
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = {
+					is_country_type = faction_SRA_Crisis_country
+				}
+			}
+			every_controlled_ship = {
+				limit = {
+					design = {
+						has_design_flag = SRA_Mutation_4309_target
+					}
+				}
+				destroy_ship = this
+			}
+		}
+	}
+}
+fleet_event = {
+	id = SRA_Mutation.43092
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		remove_fleet_flag = SRA_Mutation_4309_target_fleet
+		every_owned_ship = {
+			design = {
+				remove_design_flag = SRA_Mutation_4309_target
+			}
+		}
+		delete_fleet = This
+	}
+}
+
+ship_event = {
+	id = SRA_Mutation.23011
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		fleet = {
+			set_name = "NAME_SRA_Mutation_Boom_1"
+			create_ship = {
+				name = random
+				design = "NAME_SRA_Mutation_Boom_1"
+				upgradable = no
+			}
+			fleet_event = {
+				id = SRA_Mutation.99999 days = 30
+			}
+		}
+		destroy_ship = this
+	}
+}
+
+fleet_event = {
+	id = SRA_Mutation.23051
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { has_global_flag = SRA_Mutation_2305 }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random = {
+					chance = 2
+					set_fleet_flag = SRA_Mutation_2305_happened
+					every_owned_ship = {
+						set_ship_flag = SRA_on_ship_disabled_repair
+						set_disable_at_health = 0.01
+					}
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random = {
+					chance = 4
+					set_fleet_flag = SRA_Mutation_2305_happened
+					every_owned_ship = {
+						set_ship_flag = SRA_on_ship_disabled_repair
+						set_disable_at_health = 0.01
+					}
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random = {
+					chance = 8
+					set_fleet_flag = SRA_Mutation_2305_happened
+					every_owned_ship = {
+						set_ship_flag = SRA_on_ship_disabled_repair
+						set_disable_at_health = 0.01
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Mutation.23012
+	title = "SRA_Mutation.23012.name"
+	desc = "SRA_Mutation.23012.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	option = {
+		name = SRA_Mutation.23012.a
+    }
+}
+fleet_event = {
+	id = SRA_Mutation.43041
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_event_locked = no
+		# solar_system = {
+		# 	every_fleet_in_system = {
+		# 		limit = {
+		# 			owner = {
+		# 				is_hostile = root.owner
+		# 			}
+		# 		}
+		# 		add_modifier = { modifier = "SRA_fire_target_Buff_0" days = 15 }
+		# 	}
+		# }
+	}
+}
+
+ship_event = {
+	id = SRA_Mutation.5302
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		has_global_flag = SRA_Mutation_5302
+		from = {
+			is_paused = yes
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		from = {
+			random_list = {
+				55 = {
+					country_event = {
+						id = SRA_Mutation.53022
+					}
+				}
+				35 = {
+					country_event = {
+						id = SRA_Mutation.53023
+					}
+				}
+				10 = {
+					country_event = {
+						id = SRA_Mutation.53024
+					}
+				}
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = SRA_Mutation.5303
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = SRA_Mutation_Start
+		OR = {
+			has_global_flag = SRA_Mutation_5303
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_invasion_happened
+				NOT = {
+					has_global_flag = SRA_invasion_end
+				}
+			}
+		}
+	}
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					has_global_flag = SRA_Mutation_5303
+					is_on_galaxy_map = yes
+				}
+				random_list = {
+					70 = {
+						country_event = {
+							id = SRA_Mutation.53032
+						}
+					}
+					25 = {
+						country_event = {
+							id = SRA_Mutation.53033
+						}
+					}
+					5 = {
+						country_event = {
+							id = SRA_Mutation.53034
+						}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Mutation.53022
+	title = "SRA_Mutation.53022.name"
+	desc = "SRA_Mutation.53022.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	immediate = {
+		random_owned_colony = {
+			limit = {
+				exists = planet
+			}
+			planet = {
+				reset_planet = yes
+				if = {
+					limit = {
+						has_planet_flag = phaseshifting_active
+					}
+					remove_planet_flag = phaseshifting_active
+					remove_modifier = phaseshifted
+				}
+				if = {
+					limit = { is_ringworld = yes }
+					spawn_ringworld_cracker_effect = yes
+					SRA_destroy_habitable_ringworld = yes
+				}
+				else_if = {
+					limit = {
+						SRA_is_habitat = yes
+					}
+					remove_planet = yes
+				}
+				else = {
+					change_pc = pc_shattered
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.53022.a
+    }
+}
+country_event = {
+	id = SRA_Mutation.53023
+	title = "SRA_Mutation.53022.name"
+	desc = "SRA_Mutation.53022.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	immediate = {
+		random_owned_planet = {
+			solar_system = { destroy_star_system = yes }
+		}
+	}
+	option = {
+		name = SRA_Mutation.53022.b
+    }
+}
+country_event = {
+	id = SRA_Mutation.53024
+	title = "SRA_Mutation.53022.name"
+	desc = "SRA_Mutation.53022.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	immediate = {
+		random_owned_planet = {
+			sector = {
+				every_system_within_border = { destroy_star_system = yes }
+			}
+			solar_system = { destroy_star_system = yes }
+		}
+	}
+	option = {
+		name = SRA_Mutation.53022.c
+    }
+}
+country_event = {
+	id = SRA_Mutation.53032
+	title = "SRA_Mutation.53032.name"
+	desc = "SRA_Mutation.53032.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	immediate = {
+		random_owned_colony = {
+			limit = {
+				exists = planet
+			}
+			planet = {
+				reset_planet = yes
+				if = {
+					limit = {
+						has_planet_flag = phaseshifting_active
+					}
+					remove_planet_flag = phaseshifting_active
+					remove_modifier = phaseshifted
+				}
+				if = {
+					limit = { is_ringworld = yes }
+					spawn_ringworld_cracker_effect = yes
+					SRA_destroy_habitable_ringworld = yes
+				}
+				else_if = {
+					limit = {
+						SRA_is_habitat = yes
+					}
+					remove_planet = yes
+				}
+				else = {
+					change_pc = pc_shattered
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Mutation.53032.a
+    }
+}
+country_event = {
+	id = SRA_Mutation.53033
+	title = "SRA_Mutation.53032.name"
+	desc = "SRA_Mutation.53032.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	immediate = {
+		random_owned_planet = {
+			solar_system = { destroy_star_system = yes }
+		}
+	}
+	option = {
+		name = SRA_Mutation.53032.b
+    }
+}
+country_event = {
+	id = SRA_Mutation.53034
+	title = "SRA_Mutation.53032.name"
+	desc = "SRA_Mutation.53032.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_super_explosion
+	is_triggered_only = yes
+	immediate = {
+		random_owned_planet = {
+			sector = {
+				every_system_within_border = { destroy_star_system = yes }
+			}
+			solar_system = { destroy_star_system = yes }
+		}
+	}
+	option = {
+		name = SRA_Mutation.53032.c
+    }
+}
+
+fleet_event = {
+	id = SRA_Mutation.99999
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		destroy_fleet = This
+	}
+}

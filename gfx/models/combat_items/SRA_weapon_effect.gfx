@@ -1,0 +1,50 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_T4_weapon_planet_killer_hit_effect_mesh"
+		file = "gfx/models/combat_items/SRA_T4_weapon_planet_killer_hit_effect.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"	type = "SRA_T4_weapon_planet_killer_hit_effect_idle_animation" }
+
+		meshsettings = {
+			name = "pCubeShape1"
+			index = 0
+			texture_diffuse = "nodiffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_psionic_well_hit_mesh"
+		file = "gfx/models/combat_items/SRA_psionic_well_hit.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"	type = "SRA_psionic_well_hit_idle_animation" }
+
+		meshsettings = {
+			name = "polySurface1_polySurface2_polySurfaceShape"
+			index = 0
+			texture_diffuse = "ag_zeta_crisis_psionic_storm_core_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_exd_potential_well_hit_mesh"
+		file = "gfx/models/combat_items/SRA_psionic_well_hit.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"	type = "SRA_psionic_well_hit_idle_animation" }
+
+		meshsettings = {
+			name = "polySurface1_polySurface2_polySurfaceShape"
+			index = 0
+			texture_diffuse = "SRA_exd_potential_well_core_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+}

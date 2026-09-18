@@ -1,0 +1,116 @@
+﻿l_simp_chinese:
+###############################
+ SRA_ag_StarLightII_species:0 "古代人工智能"
+ SRA_ag_StarLightII:0 "星光二号"
+ SRA_ag_StarinAurora:0 "曙光之星"
+ SRA_ag_Illustelia:0 "幻星一号"
+ SRA_ag_StarLightII_back:0 "回到上一级"
+ SRA_ag_StarLightII_cancel:0 "结束通讯"
+ leader_trait_SRA_ag_StarLightII_sci1:0 "§P古代文明资料库§!"
+ leader_trait_SRA_ag_StarLightII_sci1_desc:0 "§P这位领袖拥有记载了古代文明大量科研资料的数据库，在参与古代文明相关的研究项目时，能取得更多的进展。\n§Y在这位领袖参与古代文明相关的研究项目时，项目研究员和首席科学家的研究项目有效等级§G+1§!。§!§!"
+ leader_trait_SRA_ag_StarLightII_sci2:0 "§P星光二号§!"
+ leader_trait_SRA_ag_StarLightII_sci2_desc:0 "§P作为来自古代文明的先进人工智能，星光二号在科研领域表现的相当优秀，而且尤为擅长科考探索。§!"
+ leader_trait_SRA_ag_StarLightII_adm1:0 "§P古代文明资料库§!"
+ leader_trait_SRA_ag_StarLightII_adm1_custom_tooltip:0 "对古代文明造物和虚境侵军伤害:§G+200%§!\n对永恒舰队伤害:§G+200%§!"
+ leader_trait_SRA_ag_StarLightII_adm1_desc:0 "§P这位领袖拥有记载了古代文明大量军事资料的数据库，在对抗某些敌人时能取得更大优势，而且不会因某些特殊武器阵亡。§!"
+ leader_trait_SRA_ag_StarLightII_adm2:0 "§P星光二号§!"
+ leader_trait_SRA_ag_StarLightII_adm2_desc:0 "§P作为来自古代文明的先进人工智能，星光二号在舰队指挥领域表现的相当优秀，而且尤为擅长指挥古代战舰。§!"
+
+
+ SRA_ag_StarLightII.1.name:0 "意外收获"
+ SRA_ag_StarLightII.1.desc:0 "星光二号来到我们的文明也有些时日了，这位来自古代文明的智能星舰如今广受欢迎。尽管比起那些强大的古代泰坦，战列舰等级的星光二号并不长于纵横疆场，但作为辉煌的古代文明遗留的唯一一个愿意分享知识的AI，她的每一条见解都是无价之宝。\n近日，我们注意到某个蓝色的身影时不时出现在星光二号的舰体内，似乎在交流些什么，也许您可以去问一问？"
+ SRA_ag_StarLightII.1.a:0 "有意思"
+ SRA_ag_StarLightII.1.b:0 "什么，终于要变了吗？"
+
+#以下为技术线文案
+ SRA_ag_StarLightII.2.desc:0 "啊，您来了。\n我想也是时候了，如果您没有过来的话，估计就是我去找您谈这件事了。\n什么事？\n您就别明知故问了，当然是星光二号的事情。"
+ SRA_ag_StarLightII.3.desc:0 "一直以来，星光二号的智能都处于一种微妙的不稳定状态，虽然不会有什么不良影响，但她偶尔会有一种难以言喻的感觉，就好像，缺了点什么。\n所以这段时间，我一直在根据星光二号提供的数据库进行溯源搜索，尝试着从各路古代文明残存资料中找到一些有关星光二号或人工智能系统的东西。"
+ SRA_ag_StarLightII.4.desc:0 "所以收获就是这个，“复合型人工智能交互系统”。\n尽管这一项目被古代文明所废弃，但其大部分工作已经完成。\n根据资料，这种系统能够大幅度增强人工智能的行为能力和交互性，其学习和智能演化速率比普通的高23.3%，然而因为人格模型不稳定的问题一直无法解决，这一项目最终被搁置。"
+ SRA_ag_StarLightII.5.desc:0 "星光二号的智能上的相关接口并未被移除，因此她才会感觉有所缺失。\n如果您想的话，我可以完善这一机制，这样一来，星光二号就可以使用人形终端的形态来行动，并能为您提供额外的帮助。\n当然，您也可以不这么做，我会移除星光二号智能上的相关接口，这样一来她就不会感到不适了。"
+ SRA_ag_StarLightII.5.a:0 "给我变！"
+ SRA_ag_StarLightII.5.b:0 "不要纸片人，不要纸片人"
+
+ SRA_AG_STARLIGHTII:0 "星光二号机制完善"
+ SRA_AG_STARLIGHTII_DESC:0 "星规告诉你，星光二号身上有一个……啥啥机制的，反正就是能变成美少女形态，嗯。\n变啊！"
+
+ SRA_ag_StarLightII.26.name:0 "项目完成"
+ SRA_ag_StarLightII.26.desc:0 "在四个月的摸鱼后，星规终于完成了对那个古代文明项目的补完工作。在向你进行了简单的汇报之后，她就结束了通讯：“啊，算算时间那位也要向你发起通讯了，我就先溜了~”"
+ SRA_ag_StarLightII.26.a:0 "啊这"
+
+ SRA_ag_StarLightII.27.desc:0 "……不是，星规，我完全没有检测到通讯干扰啊，为什么还没有接通，是不是你动了什么手脚？\n什么，我后面？\n（转身）\n……"
+ SRA_ag_StarLightII.27.a:0 "（微笑）"
+ SRA_ag_StarLightII.28.desc:0 "……\n……您……您好？"
+ SRA_ag_StarLightII.28.a:0 "好久不见了，星光二号。"
+ SRA_ag_StarLightII.29.desc:0 "嗯……最近都在忙这个嘛…\n啊，那个……\n我看起来怎么样？"
+ SRA_ag_StarLightII.29.a:0 "挺好的，很适合你。"
+ SRA_ag_StarLightII.30.desc:0 "那就好……这个形象是一位古代文明的工程师设计的，说实话，这位代号“滑稽”的工程师设计的那些古代设施真的很狡猾，不过看来这会他总算做了一件善良事。\n那么，我的舰体和这个崭新的姿态，会继续为您效力。\n§Y如果星光二号在未安装应急修复系统的情况下损毁，可以通过联系她来发起重建的特殊项目。§!"
+ SRA_ag_StarLightII.30.a:0 "合作愉快。"
+
+ SRA_ag_StarLightII.31.b:0 "特殊项目：H星域破解"
+ SRA_ag_StarLightII.31.b.desc:0 "§P警告，特殊项目需要收集全部古代舰船-旋涡之灵特征才能成功完成。§!"
+ SRA_ag_StarLightII.31.c:0 "特殊获取：孤星华光舰载数据库记录"
+ SRA_ag_StarLightII.31.c.desc:0 "§P星光二号会花一段时间尝试获取孤星华光舰载数据库中的其他记录条目信息。§!"
+
+
+
+
+ SRA_ag_StarLightII.39.a:0 "重构星光二号"
+
+ SRA_AG_STARLIGHTII_REPAIR:0 "星光二号重构"
+ SRA_AG_STARLIGHTII_REPAIR_DESC:0 "尽管已经完全损毁，但星光二号依然可以在星规的帮助下借助备份数据重构自己，只不过，这需要不少的时间。"
+
+ SRA_ag_StarLightII.117.name:0 "特殊项目：H星域破解"
+ SRA_ag_StarLightII.117.desc:0 "在得知了我们所面临的问题后，星光二号提出了一种理论上能破解古代安全系统，稳定关闭古代星门的方法，不需要依赖与使用控制符来获得古代空间站的权限，在古代文明数据库的支持下，这一项目仅需一个月就能完成。"
+ SRA_ag_StarLightII.117.a:0 "不错的提议，开始行动吧。"
+ SRA_ag_StarLightII.117.b:0 "还是算了。"
+
+ SRA_ag_StarLightII_eta_gateway_event_overwrite_project:0 "§PH星域：破解古代空间站§!"
+ SRA_ag_StarLightII_eta_gateway_event_overwrite_project_DESC:0 "我们借助星光二号的帮助设计了一种能够破解$ag_ancient_eta_gateway_control_megastructure_name$的系统而不依赖于向其提供控制符的操作方式。"
+
+
+ SRA_ag_StarLightII.118.name:0 "特殊获取：孤星华光舰载数据库记录"
+ SRA_ag_StarLightII.118.desc:0 "啊，您好，收到您的命令后，我在星规的协助下进行了一系列涉及复杂灵能效应的操作，分批次获取了孤星华光舰载数据库中的部分记录条目。您可以现在去审阅一下内容了。"
+ SRA_ag_StarLightII.118.a:0 "非常感谢你的帮助。"
+
+
+ SRA_ag_StarLightII.1001.name:0 "有样学样"
+ SRA_ag_StarLightII.1001.desc:0 "在完成了星光二号的改造项目后，我们对古代AI的构成方式得到了更深的了解，也许“复合型人工智能交互系统”可以应用在其他的古代AI之上，比如说……"
+ SRA_ag_StarLightII.1001.a:0 "曙光之星？"
+ SRA_ag_StarLightII.1001.b:0 "幻星一号？"
+ SRA_ag_StarLightII.1001.z:0 "还是算了。"
+ SRA_ag_StarLightII.1001.z.tooltip:0 "§R这将取消后续的所有古代AI改造项目。§!"
+ SRA_ag_StarLightII.1002.name:0 "危险人物"
+ SRA_ag_StarLightII.1002.desc:0 "显然，与随和的星光二号不同，曙光之星的AI相当的……性格鲜明。无论是长期未受维护导致的模拟人格偏移，还是确实受到古代文明毁灭的影响，总之，曙光之星的性格具有一定程度的危险性。\n虽然我们通过交流获取了她的信任，但我们无法确认她对非古代文明更改自身代码的态度。\n我们可以选择向她开诚布公，或者暗中更改她的代码并调整相关数据使其接受更改结果。"
+ SRA_ag_StarLightII.1002.a:0 "跟她当面提出，"
+ SRA_ag_StarLightII.1002.b:0 "暗中进行改造。"
+
+ SRA_ag_StarLightII.1003.desc:0 "……检索数据库中……无相关记录……\n\n……你们……什么意思……\n\n……星光系列……未完成技术？\n\n……可信度低……"
+ SRA_ag_StarLightII.1003.a:0 "你不妨自己去了解一下星光二号身上的变化"
+
+ SRA_ag_StarLightII.1004.desc:0 "……奇特技术……核心星系为什么要做这种东西……\n\n……考量收益……可以接受……"
+ SRA_ag_StarLightII.1004.a:0 "很好，让我们开始吧"
+
+ SRA_ag_epsilon_titan:0 "曙光之星机制完善"
+ SRA_ag_epsilon_titan_DESC:0 "基于先前改造星光二号的经验，我们可以尝试在曙光之星身上复现这一过程。考虑到某位古代文明的工程师也为曙光之星设计了形象，这项工程应该不会有什么问题。"
+
+ SRA_ag_StarLightII.1005.desc:0 "……奇怪的姿态……额外的开销……\n\n……希望物有所值……\n\n……"
+ SRA_ag_StarLightII.1005.a:0 "相信我，没问题的"
+
+ SRA_ag_StarLightII.1006.desc:0 "……你们对我……做了什么……\n\n……"
+ SRA_ag_StarLightII.1006.a:0 "这是古代文明优化ai的技术，星光二号已经参与这个项目了"
+
+ SRA_ag_StarLightII.1007.desc:0 "……自检无异常……潜在的优化……\n\n……核心星域的奇怪设计……不可理喻……\n\n……"
+ SRA_ag_StarLightII.1007.a:0 "相信我，没问题的"
+
+
+ SRA_ag_StarLightII.1101.name:0 "幻星遗存"
+ SRA_ag_StarLightII.1101.desc:0 "幻星一号作为留存至今的古代计算机管理智能，在大多数时候表现的平静而淡然。她大概不会对这份改造方案有什么意见，或者我们最好还是征求一下她的意见？"
+ SRA_ag_StarLightII.1101.a:0 "跟她讲讲，"
+ SRA_ag_StarLightII.1102.desc:0 "我不记得有这种项目，但数据包签名又没什么问题，真是奇怪。\n\n好吧，我没什么意见，这个项目我可以接受。"
+ SRA_ag_StarLightII.1102.a:0 "很好。"
+
+ SRA_ag_kappa_computer:0 "幻星一号机制完善"
+ SRA_ag_kappa_computer_DESC:0 "基于先前改造星光二号的经验，我们可以尝试在幻星一号身上复现这一过程。考虑到某位古代文明的工程师也为幻星一号设计了形象，这项工程应该不会有什么问题。"
+
+ SRA_ag_StarLightII.1103.desc:0 "……\n自检结果表明相关性能并没有可观改进。\n我有理由怀疑这只是单纯对外观的改动，出于某些人奇怪的个人兴趣……\n我不讨厌，但下次请你直接一点。"
+ SRA_ag_StarLightII.1103.a:0 "嗯。"

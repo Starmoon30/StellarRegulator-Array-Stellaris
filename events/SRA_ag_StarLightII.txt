@@ -1,0 +1,686 @@
+namespace = SRA_ag_StarLightII
+country_event = {
+	id = SRA_ag_StarLightII.1
+	title = SRA_ag_StarLightII.1.name
+	is_triggered_only = yes
+	force_open = yes	
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_window"
+	custom_gui_option = "ag_ancient_event_option"
+	picture_event_data = { room = ag_event_space_station_room }
+	desc = "SRA_ag_StarLightII.1.desc"
+	trigger = {
+		is_ai = no
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+		exists = event_target:ag_starlight_2_ship
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_ag_StarLightII.2
+			}
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.1.b
+		hidden_effect = {
+			country_event = {
+				id = SRA_ag_StarLightII.2
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = SRA_ag_StarLightII.2
+	title = SRA_StellarRegulator
+	desc = SRA_ag_StarLightII.2.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_ag_StarLightII.3 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_ag_StarLightII.5 }}
+		
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.3
+	title = SRA_StellarRegulator
+	desc = SRA_ag_StarLightII.3.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_ag_StarLightII.4 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_ag_StarLightII.5 }}
+		
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.4
+	title = SRA_StellarRegulator
+	desc = SRA_ag_StarLightII.4.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_ag_StarLightII.5 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_ag_StarLightII.5 }}
+		
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.5
+	title = SRA_StellarRegulator
+	desc = SRA_ag_StarLightII.5.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	option = {
+		name = SRA_ag_StarLightII.5.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_AG_STARLIGHTII
+				owner = ROOT
+			}
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.5.b
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.26
+	title = SRA_ag_StarLightII.26.name
+	is_triggered_only = yes
+	picture = GFX_evt_ship_travel
+	desc = "SRA_ag_StarLightII.26.desc"
+	trigger = {
+	}
+	immediate = {
+		set_country_flag = SRA_ag_StarLightII_changed
+		ag_lost_ancient_ship_diplo_portrait_check = yes
+	}
+	option = {
+		name = SRA_ag_StarLightII.26.a
+		hidden_effect = {
+			country_event = { 
+				id = SRA_ag_StarLightII.27
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = SRA_ag_StarLightII.27
+	title = SRA_ag_StarLightII
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+	
+	picture_event_data = {
+		room = ag_ancient_ai_red_room
+		portrait = event_target:ag_lost_ancient_ship_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.27.desc"
+	immediate = {
+		event_target:ag_lost_ancient_ship_diplo_portrait = {
+			set_variable = { which = ag_anim_StarlightII_clothes_diff value = 1 }
+			set_variable = { which = ag_anim_StarlightII_face_diff value = 1 }
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.27.a
+		hidden_effect = {
+			country_event = { 
+				id = SRA_ag_StarLightII.28
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.28
+	title = SRA_ag_StarLightII
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+	
+	picture_event_data = {
+		room = ag_ancient_ai_red_room
+		portrait = event_target:ag_lost_ancient_ship_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.28.desc"
+	immediate = {
+		event_target:ag_lost_ancient_ship_diplo_portrait = {
+			set_variable = { which = ag_anim_StarlightII_clothes_diff value = 1 }
+			set_variable = { which = ag_anim_StarlightII_face_diff value = 1 }
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.28.a
+		hidden_effect = {
+			country_event = { 
+				id = SRA_ag_StarLightII.29
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.29
+	title = SRA_ag_StarLightII
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+	
+	picture_event_data = {
+		room = ag_ancient_ai_red_room
+		portrait = event_target:ag_lost_ancient_ship_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.29.desc"
+	immediate = {
+		event_target:ag_lost_ancient_ship_diplo_portrait = {
+			set_variable = { which = ag_anim_StarlightII_clothes_diff value = 1 }
+			set_variable = { which = ag_anim_StarlightII_face_diff value = 1 }
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.29.a
+		hidden_effect = {
+			country_event = { 
+				id = SRA_ag_StarLightII.30
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.30
+	title = SRA_ag_StarLightII
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+	
+	picture_event_data = {
+		room = ag_ancient_ai_red_room
+		portrait = event_target:ag_lost_ancient_ship_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.30.desc"
+	immediate = {
+		country_event = {
+			id = SRA_ag_StarLightII.1000 days = 1800
+		}
+		event_target:ag_lost_ancient_ship_diplo_portrait = {
+			set_variable = { which = ag_anim_StarlightII_clothes_diff value = 1 }
+			set_variable = { which = ag_anim_StarlightII_face_diff value = 2 }
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.30.a
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = {
+	id = SRA_ag_StarLightII.9999
+	title = "ag_subsystem.26.name"
+	desc = "ag_subsystem.26.desc"
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_window"
+	custom_gui_option = "ag_ancient_event_option"
+	picture_event_data = { room = ag_event_space_station_room }
+	show_sound = event_dyson_sphere_build_complete
+	location = root
+	is_triggered_only = yes
+	
+	option = {
+		name = "ag_subsystem.26.a"
+		hidden_effect = {
+			capital_scope = {
+					save_event_target_as = ag_ship_spawn_loc
+			}
+			owner = {
+				if = {
+					limit = { has_country_flag = ag_lost_ancient_ship_science_ship_form_active }
+					ag_spawn_lost_ancient_ship_via_tech = { ag_is_battleship = no ag_location_target = event_target:ag_ship_spawn_loc }
+				}
+				else = { ag_spawn_lost_ancient_ship_via_tech = { ag_is_battleship = yes ag_location_target = event_target:ag_ship_spawn_loc } }
+				remove_country_flag = ag_lost_ancient_ship_locked
+				change_variable = { which = ag_lost_ancient_ship_subsystem_repaired value = 1 }
+				set_timed_country_flag = { flag = ag_lost_ancient_ship_subsystem_repaired_recent days = 30 }
+			}
+		}
+	}
+}
+
+###特殊项目：H星域破解###
+country_event = {
+	id = SRA_ag_StarLightII.117
+	title = "SRA_ag_StarLightII.117.name"
+	desc = "SRA_ag_StarLightII.117.desc"
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_window"
+	custom_gui_option = "ag_ancient_event_option"
+	picture_event_data = { room = ag_event_fleet_evil_room }
+	show_sound = event_red_alert
+	location = event_target:ag_ancient_eta_star
+	is_triggered_only = yes
+	immediate = { set_country_flag = ag_eta_117_fired }
+	option = {
+		name = "SRA_ag_StarLightII.117.a"
+		hidden_effect = {
+			set_country_flag = SRA_ag_StarLightII_117_started
+		}
+		event_target:ag_ancient_eta_star = { enable_special_project = {
+			name = "SRA_ag_StarLightII_eta_gateway_event_overwrite_project"
+			location = this
+			owner = root
+		} }
+	}
+	option = {
+		name = "SRA_ag_StarLightII.117.b"
+	}
+}
+###特殊项目：A星域舰载数据库记录###
+country_event = {
+	id = SRA_ag_StarLightII.118
+	title = "SRA_ag_StarLightII.118.name"
+	desc = "SRA_ag_StarLightII.118.desc"
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+	picture_event_data = {
+		room = ag_ancient_ai_red_room
+		portrait = event_target:ag_lost_ancient_ship_diplo_portrait
+	}
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = ag_alpha_titan_record_1_flag
+		set_country_flag = ag_alpha_titan_record_2_flag
+		set_country_flag = ag_alpha_titan_record_3_flag
+		set_country_flag = ag_alpha_titan_record_4_flag
+		set_country_flag = ag_alpha_titan_record_5_flag
+		set_country_flag = ag_alpha_titan_record_6_flag
+		set_country_flag = ag_alpha_titan_record_7_flag
+	}
+	option = {
+		name = "SRA_ag_StarLightII.118.a"
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.1000
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					#曙光之星
+					AND = {
+						OR = {
+							has_country_flag = ag_epsilon_titan_leader_admiral_active
+							has_country_flag = ag_epsilon_titan_leader_governor_active
+						}
+						NOT = {
+							has_country_flag = SRA_ag_StarinAurora_started
+						}
+					}
+					#幻星一号
+					AND = {
+						has_country_flag = ag_kappa_124_fired
+						NOT = {
+							has_country_flag = SRA_ag_Illustelia_started
+						}
+					}
+				}
+			}
+			country_event = {
+				id = SRA_ag_StarLightII.1001
+			}
+		}
+		country_event = {
+			id = SRA_ag_StarLightII.1000 days = 1800
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.1001
+	title = SRA_ag_StarLightII.1001.name
+	is_triggered_only = yes
+	force_open = yes	
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_window"
+	custom_gui_option = "ag_ancient_event_option"
+	picture_event_data = { room = ag_event_space_station_room }
+	desc = "SRA_ag_StarLightII.1001.desc"
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1001.a
+		trigger = {
+			OR = {
+				has_country_flag = ag_epsilon_titan_leader_admiral_active
+				has_country_flag = ag_epsilon_titan_leader_governor_active
+			}
+			NOT = {
+				has_country_flag = SRA_ag_StarinAurora_started
+			}
+		}
+		hidden_effect = {
+			set_country_flag = SRA_ag_StarinAurora_started
+			country_event = {
+				id = SRA_ag_StarLightII.1002
+			}
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.1001.b
+		trigger = {
+			has_country_flag = ag_kappa_124_fired
+			NOT = {
+				has_country_flag = SRA_ag_Illustelia_started
+			}
+		}
+		hidden_effect = {
+			set_country_flag = SRA_ag_Illustelia_started
+			country_event = {
+				id = SRA_ag_StarLightII.1101
+			}
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.1001.z
+		custom_tooltip = SRA_ag_StarLightII.1001.z.tooltip
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = {
+	id = SRA_ag_StarLightII.1002
+	title = SRA_ag_StarLightII.1002.name
+	is_triggered_only = yes
+	force_open = yes	
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_window"
+	custom_gui_option = "ag_ancient_event_option"
+	picture_event_data = { room = ag_event_space_station_room }
+	desc = "SRA_ag_StarLightII.1002.desc"
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1002.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_ag_StarLightII.1003
+			}
+		}
+	}
+	option = {
+		name = SRA_ag_StarLightII.1002.b
+		hidden_effect = {
+			set_country_flag = SRA_ag_StarLightII.1002.a
+			enable_special_project = {
+				name = SRA_ag_epsilon_titan
+				owner = this
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_ag_StarLightII.1003
+	title = SRA_ag_StarinAurora
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+
+	picture_event_data = {
+		room = ag_ancient_ship_room
+		portrait = event_target:ag_epsilon_titan_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.1003.desc"
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1003.a
+		hidden_effect = {
+			country_event = { 
+				id = SRA_ag_StarLightII.1004
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_ag_StarLightII.1004
+	title = SRA_ag_StarinAurora
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+
+	picture_event_data = {
+		room = ag_ancient_ship_room
+		portrait = event_target:ag_epsilon_titan_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.1004.desc"
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1004.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_ag_epsilon_titan
+				owner = this
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_ag_StarLightII.1005
+	title = SRA_ag_StarinAurora
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+
+	picture_event_data = {
+		room = ag_ancient_ship_room
+		portrait = event_target:ag_epsilon_titan_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.1005.desc"
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1005.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.1006
+	title = SRA_ag_StarinAurora
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+
+	picture_event_data = {
+		room = ag_ancient_ship_room
+		portrait = event_target:ag_epsilon_titan_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.1006.desc"
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1006.a
+		hidden_effect = {
+			country_event = { 
+				id = SRA_ag_StarLightII.1007
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.1007
+	title = SRA_ag_StarinAurora
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+
+	picture_event_data = {
+		room = ag_ancient_ship_room
+		portrait = event_target:ag_epsilon_titan_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.1007.desc"
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1007.a
+		hidden_effect = {
+		}
+	}
+}
+#幻星一号
+country_event = {
+	id = SRA_ag_StarLightII.1101
+	title = SRA_ag_StarLightII.1101.name
+	is_triggered_only = yes
+	force_open = yes	
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_window"
+	custom_gui_option = "ag_ancient_event_option"
+	picture_event_data = { room = ag_event_space_station_room }
+	desc = "SRA_ag_StarLightII.1101.desc"
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1101.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_ag_StarLightII.1102
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.1102
+	title = SRA_ag_Illustelia
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+
+	picture_event_data = {
+		room = ag_ancient_ship_room
+		portrait = event_target:ag_kappa_computer_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.1102.desc"
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1102.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_ag_kappa_computer
+				owner = this
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_ag_StarLightII.1103
+	title = SRA_ag_Illustelia
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "ag_ancient_event_diplomacy_window"
+	custom_gui_option = "ag_ancient_event_diplomacy_option"
+
+	picture_event_data = {
+		room = ag_ancient_ship_room
+		portrait = event_target:ag_kappa_computer_diplo_portrait
+	}
+	
+	desc = "SRA_ag_StarLightII.1103.desc"
+	immediate = {
+	}
+	option = {
+		name = SRA_ag_StarLightII.1103.a
+	}
+}

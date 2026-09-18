@@ -1,0 +1,50 @@
+civic_SRAtechnology = {
+	#cost = 0
+	icon = "gfx/interface/icons/governments/civics/SRAtechnology.dds"
+	description = civic_SRAtechnology_effects
+	negative_description = civic_SRAtechnology_negative_effects
+	potential = { 
+		civics = {
+			NOT = {
+				value = civic_SRARociviaEmpire
+			}
+		}
+	}
+	possible={}
+	random_weight = {
+		base = 0
+	}
+	ai_weight = {
+		base = 0
+	}
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+	
+}
+civic_SRARociviaEmpire = {
+	#cost = 0
+	icon = "gfx/interface/icons/governments/civics/SRARociviaEmpire.dds"
+	modification = no
+	description = civic_SRARociviaEmpire_effects
+	negative_description = civic_SRARociviaEmpire_negative_effects
+	potential = { 
+		civics = {
+			NOT = {
+				value = civic_SRAtechnology
+			}
+		}
+	}
+	possible={ }
+	random_weight = {
+		base = 0
+	}
+	ai_weight = {
+		base = 0
+	}
+	ai_playable = { always = no }
+	modifier = {
+		country_government_civic_points_add = 1
+		# election_term_years_add = 1123
+	}
+}

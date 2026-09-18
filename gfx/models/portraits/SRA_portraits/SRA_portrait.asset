@@ -1,0 +1,2 @@
+@SRA_portrait_scale = 2.47
+entity = { name = "SRA_portrait_entity" pdxmesh = "SRA_portrait_mesh" scale = @SRA_portrait_scale }

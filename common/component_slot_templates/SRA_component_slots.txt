@@ -1,0 +1,27 @@
+
+SRA_point_defence_weapon = { size = point_defence component = weapon }
+SRA_small_weapon = { size = small component = weapon }
+SRA_medium_weapon = { size = medium component = weapon }
+SRA_large_weapon = { size = large component = weapon }
+SRA_torpedo_weapon = { size = torpedo component = weapon }
+SRA_extra_large_weapon = { size = extra_large component = weapon }
+SRA_titanic_weapon = { size = titanic component = weapon }
+SRA_planet_killer_weapon = { size = planet_killer component = weapon }
+SRA_engulf_weapon = { size = engulf component = weapon }
+
+#是否为基准槽位↓
+SRA_point_defence_weapon_fixed = { size = point_defence component = weapon is_fixed = yes }
+SRA_small_weapon_fixed = { size = small component = weapon is_fixed = yes }
+SRA_medium_weapon_fixed = { size = medium component = weapon is_fixed = yes }
+SRA_large_weapon_fixed = { size = large component = weapon is_fixed = yes }
+SRA_torpedo_weapon_fixed = { size = torpedo component = weapon is_fixed = yes }
+SRA_extra_large_weapon_fixed = { size = extra_large component = weapon is_fixed = yes }
+SRA_titanic_weapon_fixed = { size = titanic component = weapon is_fixed = yes }
+SRA_planet_killer_weapon_fixed = { size = planet_killer component = weapon is_fixed = yes }
+SRA_engulf_weapon_fixed = { size = engulf component = weapon is_fixed = yes }
+
+
+SRA_small_utility = { size = small component = utility }
+SRA_medium_utility = { size = medium component = utility }
+SRA_large_utility = { size = large component = utility }
+SRA_aux_utility = { size = aux component = utility }

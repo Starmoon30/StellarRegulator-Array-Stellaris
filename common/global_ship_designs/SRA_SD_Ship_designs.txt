@@ -1,0 +1,65 @@
+ship_design = {
+	name = "NAME_SRA_SD_Metabyss_Hostile_Ship"
+	ship_size = SRA_SD_Abyss_Hostile_Ship
+	is_event_design = yes
+
+	section = {
+		template = "SRA_SD_Abyss_Hostile_Ship_mid"
+		slot = "mid"
+	
+		component = {
+			slot = "t_weapon_01"
+			template = "SRA_SD_Abyss_Hostile_Ship_main_weapon"
+		}
+		component = {
+			slot = "l_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_05"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_06"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_07"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_08"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+	}
+	required_component = "SRA_SD_Abyss_Hostile_Ship_Reactor"
+	required_component = "SRA_SD_Abyss_Hostile_Ship_Aura"
+}

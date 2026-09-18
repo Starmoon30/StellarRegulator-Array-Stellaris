@@ -1,0 +1,233 @@
+﻿l_english:
+###############################
+
+ SRA_RE_Rocivia_talk_exit1:0 "End communication."
+ SRA_RE_Rocivia_talk_exit3:0 "Terminate Research"
+ SRA_RE_Rocivia_talk_return2:0 "Very well, let me think about what else is there." 
+ SRA_RE_Rocivia_talk_return3:0 "Forget it." 
+ SRA_RE_Rocivia_talk_return4:0 "Let's talk about something else." 
+ 
+
+ SRA_RE_Rocivia.2.desc:0 "Welcome, Executor. Have you had an in-depth exchange with little StellarRe? Not yet? As expected...\nCough cough, as you can see, as the Supreme Speaker, I command the Empire's Supreme Council and wield the highest power of this country... Why are there so many \"Supremes\"...\nUh, I also directly govern the Imperial Academy of Sciences and supervise the general research direction of this group of scientists.\nIf you want to propose a few bills in the council, or let the Academy of Sciences engage in some big projects, come to me."
+ SRA_RE_Rocivia.1.desc:0 "Hello, what do you want today?"
+ SRA_RE_Rocivia.1.desc.b:0 "Ciallo～(∠・ω< )⌒★"
+ SRA_RE_Rocivia.1.a:0 "Provide Help"
+ SRA_RE_Rocivia.1.b:0 "Issue Project to Academy of Sciences"
+ SRA_RE_Rocivia.1.c:0 "Chat"
+ SRA_RE_Rocivia.1.d:0 "Let Rocivia Return to Leadership"
+
+
+ SRA_RE_Rocivia.3011.a.desc:0 "The technology of these wedge-shaped ships with stupid bridges is not that unfathomable, although their unique combat systems can run stably regardless of what enemy they face... Obviously, some cunning thing is influencing it."
+ SRA_RE_Rocivia.3011.b.desc:0 "Starbases are unreliable: most ships will regard this conspicuous space building as the primary attack target, and once the starbase is captured, the defense platforms attached to it will defect.\nIn addition, when the starbase is destroyed, the surrounding defense platforms will also self-destruct.\nTherefore, piling up static defense is not as good as preparing a few more defense fleets."
+ SRA_RE_Rocivia.3011.c.desc:0 "Isolated star clusters are not as safe as most people imagine. You cannot enter some star systems by jump drive, but some crisis forces can.\nKeeping a conventional channel open can instead control their behavior patterns."
+ SRA_RE_Rocivia.3011.d.desc:0 "Those red and black ring worlds belong to an ancient civilization that was once extremely prosperous. Some of the technologies therein cannot be restored even by you.\nIt should be noted that the ancient warships you obtain are almost identical in strength to when they were hostile: the stronger the enemy faced, the richer the harvest naturally."
+ SRA_RE_Rocivia.3011.e.desc:0 "According to the setting, I am working. Most of your orders are issued by me. And the leader bonus also means that my work can make state institutions and the like operate with higher efficiency... It can't be that everyone carries my photo and, when exhausted, takes it out for a look to be revitalized and throw themselves into work again."
+ SRA_RE_Rocivia.3011.f.desc:0 "I'm thinking about whether to add a pair of cat ears... or fox ears on my head. I always feel that something in my character setting has been deleted."
+ SRA_RE_Rocivia.3011.g.desc:0 "Don't let the chains of mercy entangle you, don't let the enemy's tears blind your own eyes."
+ SRA_RE_Rocivia.3011.h.desc:0 "Do not waste your sympathy on the enemy. Using thunderous means shows a merciful heart."
+ SRA_RE_Rocivia.3011.i.desc:0 "Some strange civilization dedicated to recycling mass-energy is active... It is hard to imagine that in such a leaky material universe, there are still people worried about the loss of mass-energy."
+ SRA_RE_Rocivia.3011.j.desc:0 "It seems that there are some artificial intelligences in this sector who like to share technology, or rather, database management systems?\n\nI will probably see a scene where everyone is using the same data packet, and there are some old things that don't even know how to use data packets."
+ SRA_RE_Rocivia.3011.k.desc:0 "Tests, tests again. Is giving power to the winner after a test a popular project circulating among civilizations?\n\nI suggest you touch those glowing gold stargates after completing most of your goals."
+ SRA_RE_Rocivia.3011.l.desc:0 "Oh my god, ship girls, this is too anime.\n\nI will probably see a scene of a large number of sea ships going to space."
+ SRA_RE_Rocivia.3011.m.desc:0 "Super-ancient, super-ancient, super-ancient, why is this prefix everywhere on the street? Is this some archaeological center?"
+ SRA_RE_Rocivia.3011.n.desc:0 "Must these semi-organic machines design special mechanisms on every ship component?"
+ SRA_RE_Rocivia.3011.o.desc:0 "Why is your technology system stagnant in the development of the galactic center? Clearly another similar megastructure system has long been tampering with the central celestial body.\n\nIt can't be because of a lack of suitable appearance design plans."
+
+
+
+ SRA_RE_Rocivia.3012.a.desc:0 "I have traveled through many worlds and guided many civilizations, many of which crowned themselves with my name. But the most impressive one is still the \"Rocivia Empire\" you know. As for why... probably because of a certain little guy."
+ SRA_RE_Rocivia.3012.b.desc:0 "The only time that can be spent without risk is \"yesterday.\" Things that have become the past tense and cannot be changed are always boring. Anticipating what will happen in the future, everything is interconnected, and a gentle pluck can stir the tides... Just thinking about it makes one's heart surge!"
+
+ SRA_RE_Rocivia.3013.a.desc:0 "History both repeats itself and is different, both ended and endless."
+ SRA_RE_Rocivia.3013.b.desc:0 "I think there is one thing we all agree on: violence begets violence, and in the end, it can only be so.\nHowever, when blood is spilled on the earth and the wheel of destruction rolls over, perhaps the seeds of change will finally sprout."
+
+ SRA_RE_Rocivia.3014.a.desc:0 "Is there a possibility, just a guess, that is, my dialogue is actually designed, and you only need to press enter or click the mouse lightly to watch me talking to myself here."
+
+ SRA_RE_Rocivia.100.desc:0 "Ah, I can provide you with some help, but there are not many help options to choose from at the moment."
+ SRA_RE_Rocivia.100.a:0 "Cast Spell"
+
+ SRA_RE_Rocivia.101.desc:0 "Okay, let's see what spells are rotated in the spell slot today.\nMagic, yes, magic, is it strange? I am a legendary mage renowned in all realms after all. As long as you provide the spellcasting materials, I can cast some spells that can affect a large range, strengthening us or weakening the enemy. Very simple and easy to understand, right.\nIf you don't want it, normally, my spell slots are updated once every three months, um, the spell cooldown is also three months.\nWhat, casting with a mana bar? No no, how could there be such a thing? I have never-heard of it~."
+ SRA_RE_Rocivia.101.a:0 "True Sight"
+ SRA_RE_Rocivia.101.a.desc:0 "This spell allows the affected to foresee the outcome of operations when performing certain actions, so your fleet's hit rate will be greatly improved, achieving one hundred percent accuracy in most cases. This effect lasts for 90 days."
+ SRA_RE_Rocivia.101.b:0 "Burst of Inspiration"
+ SRA_RE_Rocivia.101.b.desc:0 "This spell allows the affected to better summarize what they know and engage in creative activities, which increases the research speed of new technologies for all our scientific researchers. This effect lasts for 90 days."
+ SRA_RE_Rocivia.101.c:0 "Speed of Gale"
+ SRA_RE_Rocivia.101.c.desc:0 "This spell allows the affected to gain a magical boost in movement, which increases the mobility of our fleet. This effect lasts for 90 days."
+ SRA_RE_Rocivia.101.d:0 "Blessing of Swordfire"
+ SRA_RE_Rocivia.101.d.desc:0 "This spell allows the affected to deal greater damage in combat and become more powerful. This effect lasts for 90 days."
+ SRA_RE_Rocivia.101.e:0 "Order of Mountains and Rivers"
+ SRA_RE_Rocivia.101.e.desc:0 "This spell makes the existing order more stable and social cohesion stronger. This effect lasts for 90 days."
+
+
+ SRA_RE_Rocivia.102.desc:0 "Okay, then the spellcasting is complete.\nHmm? Isn't chanting-free and guidance-free casting a skill that every mage should master?\nEh, is it difficult?"
+ SRA_RE_Rocivia_Magic_cool_down:0 "Spell Cooldown"
+ SRA_RE_Rocivia_Magic_1:0 "True Sight"
+ SRA_RE_Rocivia_Magic_1_desc:0 "This spell allows the affected to foresee the outcome of operations when performing certain actions, so your fleet's hit rate will be greatly improved, achieving one hundred percent accuracy in most cases."
+ SRA_RE_Rocivia_Magic_2:0 "Burst of Inspiration"
+ SRA_RE_Rocivia_Magic_2_desc:0 "This spell allows the affected to better summarize what they know and engage in creative activities, which increases the research speed of new technologies for all our scientific researchers."
+ SRA_RE_Rocivia_Magic_3:0 "Speed of Gale"
+ SRA_RE_Rocivia_Magic_3_desc:0 "This spell allows the affected to gain a magical boost in movement, which increases the mobility of our fleet."
+ SRA_RE_Rocivia_Magic_4:0 "Blessing of Swordfire"
+ SRA_RE_Rocivia_Magic_4_desc:0 "This spell allows the affected to deal greater damage in combat and become more powerful."
+ SRA_RE_Rocivia_Magic_5:0 "Order of Mountains and Rivers"
+ SRA_RE_Rocivia_Magic_5_desc:0 "This spell makes the existing order more stable and social cohesion stronger."
+
+
+
+ SRA_RE_Rocivia.401.desc:0 "Um, you see, if something like an election or an event kill causes me to unfortunately disappear from the leadership position, you can let me go back here.\nOr just let me take a vacation at home? That's fine too."
+ SRA_RE_Rocivia.401.a:0 "Hurry back like lightning ()"
+ SRA_RE_Rocivia.401.b:0 "Alright, just let you slack off for a few more days"
+
+
+ SRA_RE_Rocivia.3:0 "Academy of Sciences"
+ SRA_RE_Rocivia.3.desc:0 "Welcome to the Academy of Sciences. This is the forefront of the Empire's scientific research and exploration. Our best minds gather here just to unveil the mysterious veil of this world.\nYou can issue §YResearch Projects§! here.\n§YResearch Projects§! are a series of complex and costly studies. To make progress in those areas, you must invest a lot of resources and efforts in the right direction, and sometimes even if the direction is correct, failure is inevitable.\nIn any case, please ensure that the treasury has sufficient resource reserves before the project begins."
+ SRA_RE_Rocivia.3.a:0 "Stellarcrystal Application Research"
+
+ #星辉水晶Stellarcrystal
+ SRA_RE_Rocivia.3001:0 "Stellarcrystal Application Research"
+ SRA_RE_Rocivia.3001.desc:0 "Stellarcrystal, a programmable material that seems to have walked out of a sci-fi novel. These crystals, constructed completely differently from conventional matter, can change their structure and properties according to a special \"instruction\".\nHowever, until today, our understanding of this magical substance is limited to StellarRe's few words. The few applications also rely on StellarRe's connection ability to these crystals.\nIt is time. We must overcome this difficulty and grasp the mysteries of Stellarcrystal with our own hands."
+ SRA_RE_Rocivia.3001.a:0 "Start Research"
+
+ SRA_RE_Rocivia.3002:0 "Phase I: Site Preparation"
+ SRA_RE_Rocivia.3002.desc:0 "Research on Stellarcrystal is not something that can be done in a laboratory. We must build a sufficiently large and fully equipped experimental site."
+ SRA_RE_Rocivia.3002.a:0 "Assign Physics Team"
+ SRA_RE_Rocivia.3002.b:0 "Assign Society Team"
+ SRA_RE_Rocivia.3002.c:0 "Assign Engineering Team"
+
+ SRA_RE_Rocivia_SP1:0 "Phase I: Site Preparation"
+ SRA_RE_Rocivia_SP1_DESC:0 "Research on Stellarcrystal is not something that can be done in a laboratory. We must build a sufficiently large and fully equipped experimental site."
+ SRA_RE_Rocivia_SP2:0 "Phase I: Site Preparation"
+ SRA_RE_Rocivia_SP2_DESC:0 "Research on Stellarcrystal is not something that can be done in a laboratory. We must build a sufficiently large and fully equipped experimental site."
+ SRA_RE_Rocivia_SP3:0 "Phase I: Site Preparation"
+ SRA_RE_Rocivia_SP3_DESC:0 "Research on Stellarcrystal is not something that can be done in a laboratory. We must build a sufficiently large and fully equipped experimental site."
+
+
+ SRA_RE_Rocivia.3003:0 "Physics Success"
+ SRA_RE_Rocivia.3003.desc:0 "A complete research site has been prepared, and various equipment is ready. We can start the next step of research."
+ SRA_RE_Rocivia.3003.a:0 "Excellent"
+ SRA_RE_Rocivia.3004:0 "Physics Failure"
+ SRA_RE_Rocivia.3004.desc:0 "Our physics team made a mistake in judgment. Those accelerators and reactors are obviously not suitable for conducting such research. We have to prepare again."
+ SRA_RE_Rocivia.3004.a:0 "Maybe should try again"
+ SRA_RE_Rocivia.3005:0 "Society Success"
+ SRA_RE_Rocivia.3005.desc:0 "It is hard to imagine that our sociology team really completed the task. This \"borrowed\" experimental site is quite suitable. We can start the next step of research."
+ SRA_RE_Rocivia.3005.a:0 "Amazing..."
+ SRA_RE_Rocivia.3006:0 "Society Failure"
+ SRA_RE_Rocivia.3006.desc:0 "As expected, we shouldn't expect these experts to complete tasks outside their capabilities. We suspect this task is no different from a paid vacation. It's better to re-choose the direction."
+ SRA_RE_Rocivia.3006.a:0 "Indeed"
+ SRA_RE_Rocivia.3007:0 "Engineering Success"
+ SRA_RE_Rocivia.3007.desc:0 "A fully equipped and strictly protected experimental site has been prepared. With such a safe and excellent experimental environment, we can start the next step of research."
+ SRA_RE_Rocivia.3007.a:0 "Good"
+ SRA_RE_Rocivia.3008:0 "Engineering Failure"
+ SRA_RE_Rocivia.3008.desc:0 "Our engineering team may not have fully understood the requirements of the task. Now this site can even withstand antimatter weapon experiments, but not much is prepared for our research project. We have to prepare again."
+ SRA_RE_Rocivia.3008.a:0 "Maybe should think again"
+
+ SRA_RE_Rocivia.3009:0 "Phase II: Property Research"
+ SRA_RE_Rocivia.3009.desc:0 "The site is ready. It is time to conduct complete research on the various properties of Stellarcrystal."
+ SRA_RE_Rocivia.3009.a:0 "Assign Physics Team"
+ SRA_RE_Rocivia.3009.b:0 "Assign Society Team"
+ SRA_RE_Rocivia.3009.c:0 "Assign Engineering Team"
+
+ SRA_RE_Rocivia_SP4:0 "Phase II: Property Research"
+ SRA_RE_Rocivia_SP4_DESC:0 "The site is ready. It is time to conduct complete research on the various properties of Stellarcrystal."
+ SRA_RE_Rocivia_SP5:0 "Phase II: Property Research"
+ SRA_RE_Rocivia_SP5_DESC:0 "The site is ready. It is time to conduct complete research on the various properties of Stellarcrystal."
+ SRA_RE_Rocivia_SP6:0 "Phase II: Property Research"
+ SRA_RE_Rocivia_SP6_DESC:0 "The site is ready. It is time to conduct complete research on the various properties of Stellarcrystal."
+
+ SRA_RE_Rocivia.3010:0 "Physics Success"
+ SRA_RE_Rocivia.3010.desc:0 "A series of complex property tests and analyses have been completed, and relevant data has been compiled. The report states the essence of this substance is completely different from conventional matter: what constitutes Stellarcrystal is not any microscopic particle currently discovered or theoretically predicted; it is something specious compared to conventional matter."
+ SRA_RE_Rocivia.3010.a:0 "Interesting"
+ SRA_RE_Rocivia.3011:0 "Physics Failure"
+ SRA_RE_Rocivia.3011.desc:0 "This is simply a disaster. No theory can explain this weird substance. It is not a wave, not a particle, not a string or membrane or anything else. It is a cat that ordered Dread Encampment, a demon playing with automatic doors, a galaxy rotating around the earth, a thing made up by irresponsible creators to explain unscientific technology.\nI think I should drink some ZUN beer and sleep well."
+ SRA_RE_Rocivia.3011.a:0 "Magic Stellaris?"
+ SRA_RE_Rocivia.3012:0 "Society Success"
+ SRA_RE_Rocivia.3012.desc:0 "After finishing off two boxes of skewers and a cart of beer, a big and green sociology expert peeked into the mysteries of Stellarcrystal from two wrestling blurry figures.\nThis thing seems to respond to metaphysical powers like psionics or the Force, and then the information we need was waaghed out as if someone checked an encyclopedia."
+ SRA_RE_Rocivia.3012.a:0 "Oh, Merlin's beard"
+ SRA_RE_Rocivia.3013:0 "Society Failure"
+ SRA_RE_Rocivia.3013.desc:0 "Sausages, beer, cheese, and tattered old robes didn't help. Sociology experts totally unsuitable for this kind of work only reached one conclusion:\nA fake wizard cannot turn a person into a frog with a wooden stick tied with a crystal."
+ SRA_RE_Rocivia.3013.a:0 "It seems magic doesn't exist... Where did I put my recall scroll?"
+ SRA_RE_Rocivia.3014:0 "Engineering Success"
+ SRA_RE_Rocivia.3014.desc:0 "The experiment ended successfully, and relevant information has been summarized. Various tests show that when the microstructure of Stellarcrystal changes slightly, its exhibited properties change drastically. But at the same time, its microstructure exhibits a special stable state. Neither impact, high temperature, nor strong radiation can change its properties."
+ SRA_RE_Rocivia.3014.a:0 "Truly magical..."
+ SRA_RE_Rocivia.3015:0 "Engineering Failure"
+ SRA_RE_Rocivia.3015.desc:0 "Huge failure.\nWe totally didn't understand what this thing is.\nThese Stellarcrystals... some are indestructible, some shatter at a touch; some are as dense as a star core, some can float in the air; some are pushed around by electric fields, some ignore gravity...\nSure enough, the power of science has limits-"
+ SRA_RE_Rocivia.3015.a:0 "Stop stop stop..."
+
+ SRA_RE_Rocivia.3016:0 "Phase III: Application Exploration"
+ SRA_RE_Rocivia.3016.desc:0 "The properties of Stellarcrystal have been archived. Based on these materials, we can try to use Stellarcrystal.\nWe already know that the properties of Stellarcrystal change due to some reason, and StellarRe revealed its diversity and complexity to us-from energy containers to computer groups, from field manipulation to space distortion, countless possibilities are contained within Stellarcrystal."
+ SRA_RE_Rocivia.3016.a:0 "Assign Physics Team"
+ SRA_RE_Rocivia.3016.b:0 "Assign Society Team"
+ SRA_RE_Rocivia.3016.c:0 "Assign Engineering Team"
+
+ SRA_RE_Rocivia_SP7:0 "Phase III: Application Exploration"
+ SRA_RE_Rocivia_SP7_DESC:0 "The properties of Stellarcrystal have been archived. It is time to try to use Stellarcrystal based on these materials."
+ SRA_RE_Rocivia_SP8:0 "Phase III: Application Exploration"
+ SRA_RE_Rocivia_SP8_DESC:0 "The properties of Stellarcrystal have been archived. It is time to try to use Stellarcrystal based on these materials."
+ SRA_RE_Rocivia_SP9:0 "Phase III: Application Exploration"
+ SRA_RE_Rocivia_SP9_DESC:0 "The properties of Stellarcrystal have been archived. It is time to try to use Stellarcrystal based on these materials."
+
+
+
+ SRA_RE_Rocivia.3017:0 "Physics Success"
+ SRA_RE_Rocivia.3017.desc:0 "Countless failures forge the cornerstone of success. Finally, we mastered the future.\nStellarcrystal, it is a \"programmable\" material. Primitive Stellarcrystal accepts a special energy fluctuation and changes itself following this fluctuation.\nThis change contains mechanisms of unimaginable complexity, allowing us to change almost everything about it: from modifying physical properties to creating structures with unique effects, and even changing the input forms responded to thereafter-like setting a password for your computer.\nA brand new era has arrived."
+ SRA_RE_Rocivia.3017.a:0 "Rejoice"
+ SRA_RE_Rocivia.3018:0 "Physics Failure"
+ SRA_RE_Rocivia.3018.desc:0 "Success is not achieved overnight. Exploring in such cutting-edge fields, failure is normal.\nThe mystery of Stellarcrystal is still hidden behind the veil, but we firmly believe that we are on the right path."
+ SRA_RE_Rocivia.3018.a:0 "Let's try again"
+ SRA_RE_Rocivia.3019:0 "Society Success"
+ SRA_RE_Rocivia.3019.desc:0 "Do you believe in gravity?\nI think there is such a kind of person in the universe: once the Galatron is issued, the L-Gate is always Gray Tempest, seeing the Circle God at a glance in the Shroud, and the Omnissiah always succeeds greatly.\nSo-called randomness, so-called probability, so-called random_list, so-called mtth, are all but playthings in the palm.\nJust like today, the secret of Stellarcrystal was written down by a sleepwalker."
+ SRA_RE_Rocivia.3019.a:0 "§RIf it's a first-time success, you can go buy a lottery ticket.§!"
+ SRA_RE_Rocivia.3020:0 "Society Failure"
+ SRA_RE_Rocivia.3020.desc:0 "Is this a meaningless struggle?\nIn a trance, I saw mysterious light screens shackling the galaxy, single-threaded code building the universe, indescribable existences manipulating our civilization... Is free will just a lie, and this world is just a game?\nWhen I woke up, an answer emerged from the chaos.\nSociologists are not suitable for studying this."
+ SRA_RE_Rocivia.3020.a:0 "Alright..."
+ SRA_RE_Rocivia.3021:0 "Engineering Success"
+ SRA_RE_Rocivia.3021.desc:0 "Attempts again and again will eventually bring the dawn of victory. We are writing a legend.\nWhen a Stellarcrystal really gathered the light beam as we hoped, words cannot describe our joy.\nAll the efforts all along have not been in vain.\nOur instructions can finally be received by Stellarcrystal, like a computer starting to run a beginner's simple code.\nThe ability it shows is like an exquisite machine, with infinite potential waiting for us to explore."
+ SRA_RE_Rocivia.3021.a:0 "Good"
+ SRA_RE_Rocivia.3022:0 "Engineering Failure"
+ SRA_RE_Rocivia.3022.desc:0 "The internal mechanism of Stellarcrystal is still hidden in the mist. The efforts we made are far from enough.\nMost of the previous experiments went astray. Maybe we should change our thinking?"
+ SRA_RE_Rocivia.3022.a:0 "Keep working hard"
+ SRA_RE_Rocivia.3023:0 "Summary"
+ SRA_RE_Rocivia.3023.desc:0 "The preliminary research on Stellarcrystal has successfully concluded. The basic theoretical framework has been laid, and what is needed is application.\nOur scientists keenly noted its strong potential in military technology. Perhaps the blueprints for the first batch of Stellarcrystal armaments will appear soon."
+ SRA_RE_Rocivia.3023.a:0 "A Glorious Victory"
+
+
+
+ ###### 局势 ######
+ SRA_RE_research_situation:0 "Stellarcrystal Research Project"
+ SRA_RE_research_situation_type:0 "Stellarcrystal Research Project"
+ SRA_RE_Rocivia_SP_1_desc:0 "§BStellarcrystal Application Research§!\n\nStellarcrystal, a programmable material that seems to have walked out of a sci-fi novel. These crystals, constructed completely differently from conventional matter, can change their structure and properties according to a special \"instruction\".\nHowever, until today, our understanding of this magical substance is limited to StellarRe's few words. The few applications also rely on StellarRe's connection ability to these crystals.\nIt is time. We must overcome this difficulty and grasp the mysteries of Stellarcrystal with our own hands."
+ SRA_RE_research_situation_monthly_change_tooltip:0 "The progress of this §YSituation§! depends on our country's research point output, research on relevant technologies, and advances unstably due to the chosen approach."
+ SRA_RE_Rocivia_SP_1_approach:0 "Complete preliminary research on Stellarcrystal technology and unlock relevant military industry technologies."
+
+ sra_re_research_situation_stage_1:0 "Phase I"
+ sra_re_research_situation_stage_1_effects:0 "Phase I of the project."
+ sra_re_research_situation_stage_2:0 "Phase II"
+ sra_re_research_situation_stage_2_effects:0 "Phase II of the project."
+ sra_re_research_situation_stage_3:0 "Phase III"
+ sra_re_research_situation_stage_3_effects:0 "Phase III of the project."
+ sra_re_research_situation_stage_4:0 "Final Phase: Project Wrap-up"
+ sra_re_research_situation_stage_4_effects:0 "Organize project results and complete this research."
+
+ SRA_RE_research_situation_physics:0 "Assign Physics Team"
+ SRA_RE_research_situation_physics_tooltip:0 "Assign the physics team to participate in the research of this project."
+ SRA_RE_research_situation_society:0 "Assign Society Team"
+ SRA_RE_research_situation_society_tooltip:0 "Assign the society team to participate in the research of this project."
+ SRA_RE_research_situation_engineering:0 "Assign Engineering Team"
+ SRA_RE_research_situation_engineering_tooltip:0 "Assign the engineering team to participate in the research of this project."
+ SRA_RE_research_situation_stop:0 "Pause Research"
+ SRA_RE_research_situation_stop_tooltip:0 "Temporarily stop research. The project will stay at the current progress."
+
+##########################字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§R H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+##§! 结束
+##########################字体颜色代码

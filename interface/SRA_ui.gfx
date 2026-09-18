@@ -1,0 +1,304 @@
+spriteTypes = {
+	spriteType = { name = "GFX_SRA_arrow_up" textureFile = "gfx/interface/SRA_misc_ui/SRA_arrow_up.dds" }
+	spriteType = { name = "GFX_SRA_arrow_down" textureFile = "gfx/interface/SRA_misc_ui/SRA_arrow_down.dds" }
+	spriteType = { name = "GFX_SRA_arrow_left" textureFile = "gfx/interface/SRA_misc_ui/SRA_arrow_left.dds" }
+	spriteType = { name = "GFX_SRA_arrow_right" textureFile = "gfx/interface/SRA_misc_ui/SRA_arrow_right.dds" }
+	
+	spriteType = {
+		name = "GFX_SRA_button_180_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_180_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_button_180_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_180_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 180.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = { name = "GFX_SRA_button_180_selected_bg" textureFile = "gfx/interface/SRA_misc_ui/SRA_button_180_selected.dds" }
+	spriteType = {
+		name = "GFX_SRA_button_420_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_420_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_button_420_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_420_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 180.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = { name = "GFX_SRA_button_420_selected_bg" textureFile = "gfx/interface/SRA_misc_ui/SRA_button_420_selected.dds" }
+	spriteType = {
+		name = "GFX_SRA_button_452_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_452_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_button_452_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_452_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 180.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_button_520_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_520_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_button_520_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_520_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 180.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	corneredTileSpriteType = {
+		name = "GFX_SRA_tile_large_bg"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_tile_large_bg.dds"
+		borderSize = { x=330 y=296 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_SRA_planet_view_hex_bg"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_planet_view_hex_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_line_long"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_line_long.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_line_extra_long"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_line_extra_long.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_button_focus_on"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_focus_on.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_close_button"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_close_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_SRA_diplomacy_shadow_frame"
+		masking_texture = "gfx/interface/SRA_misc_ui/SRA_diplomacy_portrait_mask.dds"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_diplomacy_shadow_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_stripes"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_stripes.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_diplomacy_portrait_mask2.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_diplomacy_texture4.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 30.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			#animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_diplomacy_portrait_frame"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_diplomacy_portrait_frame.dds"
+	}
+	flSRASpriteType = {
+		name = "GFX_SRA_empire_flag_128_frame"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_empire_flag_128_frame.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/SRA_misc_ui/SRA_empire_flag_128_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+		
+		bg_position = { x = 10 y = 10 }
+		bg_size = { width = 111 height = 111 }
+		symbol_position = { x = 24 y = 24 }
+		symbol_size = { width = 83 height = 83 }
+	}
+	spriteType = {
+		name = "GFX_SRA_button_420_32_bg"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_420_24_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_button_520_32_bg"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_520_24_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_button_option_background"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_option_background.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_SRA_tile_outliner_bg"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_outliner_tile.dds"
+		borderSize = { x=80 y=80 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_SRA_tiles_dark_area_cut_8"
+		textureFile = "gfx/interface/SRA_misc_ui/SRA_dark_area_cut_8.dds"
+		borderSize = { x=8 y=8 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_SRA_event_frame"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_event_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_event_stripes_1"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_event_stripes.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_event_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_event_stripes_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 160.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			#animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_debug_mode_button_alt"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_debug_mode_button_alt.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = { name = "GFX_SRA_line_extra_long_alt" textureFile = "gfx/interface/SRA_misc_ui/SRA_line_extra_long_alt.dds" }
+	spriteType = { name = "GFX_SRA_quest_button_alt" textureFile = "gfx/interface/SRA_misc_ui/SRA_quest_button_alt.dds" }
+	spriteType = {
+		name = "GFX_SRA_button_first_60_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_first_60_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_button_60_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_60_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_button_previous_60_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_previous_60_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_button_60_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_60_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_button_last_60_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_last_60_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_button_60_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_60_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_button_next_60_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_button_next_60_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_button_60_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_60_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationframes = { 1 2 3 }
+		}
+	}
+	
+	spriteType = {
+		name = "GFX_SRA_close_button"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_close_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+}

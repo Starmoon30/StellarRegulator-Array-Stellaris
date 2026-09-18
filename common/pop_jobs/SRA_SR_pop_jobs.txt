@@ -1,0 +1,945 @@
+@standard_promotion_time = 180
+
+SRA_world_machine_job = {
+	category = ruler
+	swappable_data = {
+		default = {
+			building_icon = building_SRA_world_machine
+			icon = fe_hedonist
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+	}
+	weight = {
+		weight = 30000
+	}
+}
+SRA_world_machine_drone = {
+	category = complex_drone
+	swappable_data = {
+		default = {
+			building_icon = building_SRA_world_machine
+			icon = fe_hedonist
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+	}
+	weight = {
+		weight = 30000
+	}
+}
+#星规寰宇岗位
+SRA_databan_specialist = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_SRA_databank
+			icon = calculator
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+	}
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 32
+			engineering_research = 32
+			society_research = 32
+			unity = 8
+		}
+		upkeep = {
+			energy = 8
+			consumer_goods = 4
+		}
+	}
+	
+	weight = {
+		weight = 10
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+SRA_foundry_specialist = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_SRA_produce_centre
+			icon = gas_refiner
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+	}
+	
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			energy = 32
+			minerals = 32
+			food = 8
+			trade = 4
+			consumer_goods = 8
+			rare_crystals = 0.5
+			exotic_gases = 0.5
+			volatile_motes = 0.5
+			sr_dark_matter = 0.1
+			sr_living_metal = 0.1
+			sr_zro = 0.1
+			nanites = 0.1
+			astral_threads = 0.1
+		}
+		upkeep = {
+		}
+	}
+	
+	weight = {
+		weight = 10
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_alloys_specialist = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_SRA_foundry
+			icon = foundry
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+	}
+	
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 32
+		}
+		upkeep = {
+			minerals = 32
+		}
+	}
+	
+	weight = {
+		weight = 10
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_databan_drone = {
+	category = complex_drone
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_SRA_databank
+			icon = brain_drone
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 32
+			engineering_research = 32
+			society_research = 32
+			unity = 8
+		}
+		upkeep = {
+			energy = 8
+			minerals = 4
+		}
+	}
+
+	weight = {
+		weight = 10
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_foundry_drone = {
+	category = complex_drone
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_SRA_produce_centre
+			icon = gas_refiner
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			energy = 36
+			minerals = 36
+			food = 8
+			trade = 4
+			consumer_goods = 1
+			rare_crystals = 0.5
+			exotic_gases = 0.5
+			volatile_motes = 0.5
+			sr_dark_matter = 0.1
+			sr_living_metal = 0.1
+			sr_zro = 0.1
+			nanites = 0.1
+			astral_threads = 0.1
+		}
+		upkeep = {
+		}
+	}
+
+	weight = {
+		weight = 10
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_alloys_drone = {
+	category = complex_drone
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_SRA_foundry
+			icon = foundry		
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 32
+		}
+		upkeep = {
+			minerals = 32
+		}
+	}
+
+	weight = {
+		weight = 10
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+SRA_RE_research_institute_specialist = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_SRA_RE_research_institute
+			icon = calculator
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+	}
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 8
+			engineering_research = 8
+			society_research = 8
+			unity = 2
+		}
+		upkeep = {
+			energy = 4
+			consumer_goods = 4
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			physics_research = 8
+			engineering_research = 8
+			society_research = 8
+			unity = 2
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			energy = 4
+			consumer_goods = 4
+		}
+	}
+	
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+SRA_RE_foundry_specialist = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_SRA_RE_foundry
+			icon = gas_refiner
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+	}
+	
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 16
+			food = 4
+			rare_crystals = 0.2
+			exotic_gases = 0.2
+			volatile_motes = 0.2
+		}
+		upkeep = {
+			energy = 32
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			minerals = 16
+			food = 4
+			rare_crystals = 0.2
+			exotic_gases = 0.2
+			volatile_motes = 0.2
+			sr_dark_matter = 0.05
+			sr_living_metal = 0.05
+			sr_zro = 0.05
+			nanites = 0.05
+			astral_threads = 0.05
+		}
+	}
+	
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_RE_alloys_specialist = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_SRA_RE_alloys
+			icon = foundry
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+	}
+	
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 8
+		}
+		upkeep = {
+			minerals = 8
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			alloys = 8
+		}
+	}
+	
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+SRA_RE_factory_specialist = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_SRA_RE_factory
+			icon = artisan
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible_precalc = can_fill_specialist_job
+	possible = {
+	}
+	
+	resources = {
+		category = planet_artisans
+		produces = {
+			consumer_goods = 16
+		}
+		upkeep = {
+			minerals = 8
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			consumer_goods = 16
+		}
+	}
+	
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_RE_research_institute_drone = {
+	category = complex_drone
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_SRA_RE_research_institute
+			icon = calculator
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 8
+			engineering_research = 8
+			society_research = 8
+			unity = 2
+		}
+		upkeep = {
+			energy = 4
+			minerals = 4
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			physics_research = 8
+			engineering_research = 8
+			society_research = 8
+			unity = 2
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			energy = 4
+			minerals = 4
+		}
+	}
+
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_RE_foundry_drone = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_SRA_RE_foundry
+			icon = gas_refiner
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_chemists
+		produces = {
+			minerals = 16
+			food = 4
+			rare_crystals = 0.2
+			exotic_gases = 0.2
+			volatile_motes = 0.2
+		}
+		upkeep = {
+			energy = 16
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			minerals = 16
+			food = 4
+			rare_crystals = 0.2
+			exotic_gases = 0.2
+			volatile_motes = 0.2
+		}
+	}
+
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_RE_alloys_drone = {
+	category = complex_drone
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_SRA_RE_alloys
+			icon = foundry
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 8
+		}
+		upkeep = {
+			minerals = 8
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			alloys = 8
+		}
+	}
+
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+SRA_RE_factory_drone = {
+	category = complex_drone
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_SRA_RE_factory
+			icon = artisan
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_artisans
+		produces = {
+			consumer_goods = 16
+		}
+		upkeep = {
+			minerals = 8
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			consumer_goods = 16
+		}
+	}
+
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+SRA_RE_technician = {
+	category = specialist
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_energy_grid
+			icon = technician		
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 12
+			trade = 2
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			energy = 12
+			trade = 2
+		}
+	}
+
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+SRA_RE_technician_drone = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_energy_grid
+			icon = technician	
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 16
+			trade = 2
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+			energy = 16
+			trade = 2
+		}
+	}
+
+	weight = {
+		weight = 40
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+SRA_SD_chaos_explorer = {
+	category = specialist
+	can_be_automated = no
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_SRA_SD_explore
+			icon = fe_archivist
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+
+	resources = {
+		category = SRA_SD_productive_category
+		produces = {
+			unity = 1
+			astral_threads = 0.1
+		}
+	}
+
+	weight = {
+		weight = 2
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+SRA_SD_chaos_explorer_drone = {
+	category = complex_drone
+	can_be_automated = no
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_SRA_SD_explore
+			icon = fe_archivist
+		}
+	}
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = { NOT = { has_trait = trait_nerve_stapled } }
+	resources = {
+		category = SRA_SD_productive_category
+		produces = {
+			unity = 1
+			astral_threads = 0.1
+		}
+	}
+
+	weight = {
+		weight = 2
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+

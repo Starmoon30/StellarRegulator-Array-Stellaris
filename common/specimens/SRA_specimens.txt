@@ -1,0 +1,65 @@
+SRA_specimen_metabyss_special_drinks = {
+	icon = "GFX_SRA_specimen_metabyss_special_drinks"
+	type = xeno_geology
+	rarity = exceptional
+	resources = {
+		category = specimens
+		upkeep = {
+		}
+	}
+	triggered_country_modifier = {
+		
+	}
+}
+SRA_specimen_Rocivia_Legacy_1 = {
+	icon = "GFX_specimen_unfinished_manifesto"
+	type = historical_item
+	rarity = exceptional
+	resources = {
+		category = specimens
+		upkeep = {
+		}
+	}
+	triggered_country_modifier = {
+		
+	}
+}
+SRA_specimen_Rocivia_Legacy_2 = {
+	icon = "GFX_specimen_unfinished_manifesto"
+	type = historical_item
+	rarity = exceptional
+	resources = {
+		category = specimens
+		upkeep = {
+		}
+	}
+	triggered_country_modifier = {
+		
+	}
+}
+SRA_specimen_Rocivia_Legacy_3 = {
+	icon = "GFX_specimen_unfinished_manifesto"
+	type = historical_item
+	rarity = exceptional
+	resources = {
+		category = specimens
+		upkeep = {
+		}
+	}
+	triggered_country_modifier = {
+		
+	}
+}
+SRA_specimen_Rocivia_Legacy_4 = {
+	icon = "GFX_specimen_unfinished_manifesto"
+	type = historical_item
+	rarity = exceptional
+	resources = {
+		category = specimens
+		upkeep = {
+		}
+	}
+	triggered_country_modifier = {
+		
+	}
+}

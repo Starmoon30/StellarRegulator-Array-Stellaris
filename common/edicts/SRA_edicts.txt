@@ -1,0 +1,168 @@
+SRA_Produce_1 = {
+	length = -1
+	icon = "GFX_edict_SRA"
+	resources = {
+		category = edicts
+		cost = {
+		}
+	}
+
+	modifier = {
+		ship_starting_experience_add = 10000
+		ascension_perks_add = 12
+		country_resource_max_add = 500000
+		planet_jobs_produces_mult = 1
+		country_naval_cap_mult = 2
+		command_limit_add = 500
+		country_admin_cap_mult = 2
+		megastructure_build_speed_mult = 20
+		planet_building_build_speed_mult = 20
+		planet_decision_enact_speed_mult = 20
+	}
+	potential = {
+		has_country_flag = StellarRegulator_Array_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+SRA_Shipyard_Reduce_1 = {
+	length = -1
+	icon = "GFX_edict_SRA"
+	resources = {
+		category = edicts
+		cost = {
+		}
+	}
+
+	modifier = {
+		starbase_shipyard_capacity_add = -20
+	}
+	potential = {
+		is_ai = no
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+SRA_Diplomacy_1 = {
+	length = -1
+	icon = "GFX_edict_SRA"
+	resources = {
+		category = edicts
+		cost = {
+		}
+	}
+	modifier = {
+		envoys_add = 12
+		intel_decryption_add = 12
+		intel_encryption_add = 12
+		add_base_country_intel = 100
+	}
+	potential = {
+		has_country_flag = StellarRegulator_Array_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = SRA_Start.21
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+SRA_election_term = {
+	length = -1
+	icon = "GFX_edict_SRA"
+	resources = {
+		category = edicts
+		cost = {
+		}
+	}
+	modifier = {
+		election_term_years_add = 1123
+	}
+	potential = {
+		OR = {
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+
+	effect = {
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+SRA_Setting = {
+	icon = "GFX_edict_SRA"
+	length = 1
+	resources = {
+		category = edicts
+		cost = {
+		}
+	}
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = SRA_Start.2
+			}
+		}
+	}
+	potential = {
+		is_ai = no
+	}
+}
+SRA_Weapon_Adjust = {
+	icon = "GFX_edict_SRA"
+	length = 1
+	resources = {
+		category = edicts
+		cost = {
+		}
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { 
+					NOT = {
+						has_country_flag = SRA_Weapon_Adjust
+					}
+				 }
+			    country_event = {
+				     id = SRA_Weapon_Adjust.1
+			    }
+			    country_event = {
+				     id = SRA_Weapon_Adjust.2
+			    }
+			}
+			else = {
+			    country_event = {
+				     id = SRA_Weapon_Adjust.2
+			    }
+			}
+		}
+	}
+	potential = {
+		has_country_flag = StellarRegulator_Array_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}

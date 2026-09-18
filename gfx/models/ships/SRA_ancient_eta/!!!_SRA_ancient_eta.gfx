@@ -1,0 +1,40 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "SRA_eta_gateway_0_mesh"
+		file = "gfx/models/ships/SRA_ancient_eta/SRA_eta_gateway.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_eta_gateway_idle_animation" }
+		animation = { id = "opening" type = "SRA_eta_gateway_opening_animation" }
+		animation = { id = "idle2" type = "SRA_eta_gateway_idle2_animation" }
+		animation = { id = "closing" type = "SRA_eta_gateway_closing_animation" }
+		animation = { id = "death1" type = "SRA_eta_gateway_death1_animation" }
+		animation = { id = "death2" type = "SRA_eta_gateway_death2_animation" }
+		animation = { id = "death3" type = "SRA_eta_gateway_death3_animation" }
+		animation = { id = "death4" type = "SRA_eta_gateway_death4_animation" }
+
+		meshsettings = {
+			name = "UpperPyramidShape"
+			index = 0
+			texture_diffuse = "SRA_ancient_eta_station_0_diffuse.dds"
+			texture_normal = "SRA_ancient_eta_station_normal.dds"
+			texture_specular = "SRA_ancient_eta_station_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_eta_gateway_damaged_mesh"
+		file = "gfx/models/ships/SRA_ancient_eta/SRA_eta_gateway_damaged.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "UpperPyramidShape"
+			index = 0
+			texture_diffuse = "SRA_ancient_eta_station_damaged_diffuse.dds"
+			texture_normal = "SRA_ancient_eta_station_damaged_normal.dds"
+			texture_specular = "SRA_ancient_eta_station_damaged_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

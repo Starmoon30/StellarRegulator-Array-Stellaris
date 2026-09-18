@@ -1,0 +1,11 @@
+#SRA_common_trait_template
+inline_script = { script = trait/subtitle/council_$SRA_council$ RARITY = $SRA_rarity$ CLASS = $SRA_class$ }	# 原版的，展示一段描述，不用改
+icon = {
+	inline_script = trait/icon_element/rarity_$SRA_rarity$	# 稀有度图标，不用改
+	layer = { icon = $SRA_background$ }	# 背景，需要在interface里注册
+	layer = { icon = $SRA_icon$ }	# 除去背景外的图标，需要在interface里注册
+	inline_script = { script = trait/icon_element/council_$SRA_council$ CLASS = $SRA_class$ } 	# 议会图标，不用改
+	layer = { icon = GFX_trait_tier_$SRA_tier$ visible = { has_paragon_dlc = yes } } 	# 等级角标，不用改
+}
+leader_trait_rarity = $SRA_rarity$	# 稀有度
+sorting_priority = 800	# 自动排序

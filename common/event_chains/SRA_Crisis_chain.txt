@@ -1,0 +1,17 @@
+
+
+SRA_invasion_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	situation_log_category = crises
+	picture = GFX_evt_SRA_event_01
+	counter = {
+		SRA_invastor_kills_us = {
+		}
+		SRA_invastor_kills_others = {
+		}
+		SRA_invastor_victims = {
+		}
+		SRA_invastor_planets = {
+		}
+	}
+}

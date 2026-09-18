@@ -1,0 +1,1016 @@
+
+animation = { name = "SRA_T4_weapon_planet_killer_hit_effect_idle_animation" file = "SRA_T4_weapon_planet_killer_hit_effect_idle.anim" }
+animation = { name = "SRA_psionic_well_hit_idle_animation" file = "SRA_psionic_well_hit_idle.anim" }
+
+################################################################
+#####							windup
+################################################################
+
+#####	blue	#####
+
+entity = {
+	name = "SRA_t_weapon_0_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "SRA_titan_laser_windup_02" } }
+	
+		event = { time = 0.0 use_parent_nodes = yes node = primary_weapon particle = "SRA_t_weapon_0_windup_particle" trigger_once = yes keep_particle = yes }
+	}
+}
+entity = {
+	name = "SRA_xl_weapon_0_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "SRA_titan_laser_windup_02" } }
+	
+		event = { time = 0.0 use_parent_nodes = yes node = primary_weapon particle = "SRA_xl_weapon_0_windup_particle" trigger_once = yes keep_particle = yes }
+	}
+}
+
+#####	red	#####
+
+entity = {
+	name = "SRA_t_weapon_1_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "SRA_titan_laser_windup_02" } }
+	
+		event = { time = 0.0 use_parent_nodes = yes node = primary_weapon particle = "SRA_t_weapon_1_windup_particle" trigger_once = yes keep_particle = yes }
+	}
+}
+entity = {
+	name = "SRA_xl_weapon_1_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "SRA_titan_laser_windup_02" } }
+	
+		event = { time = 0.0 use_parent_nodes = yes node = primary_weapon particle = "SRA_xl_weapon_1_windup_particle" trigger_once = yes keep_particle = yes }
+	}
+}
+
+################################################################
+#####							muzzle
+################################################################
+
+#####	blue	#####
+
+entity = {
+	name = "SRA_t_weapon_0_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "SRA_t_weapon_0_muzzle_particle" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "SRA_titan_laser_fire_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarites_fire_beam" } }
+		
+	}
+}
+entity = {
+	name = "SRA_xl_weapon_0_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "SRA_xl_weapon_0_muzzle_particle" keep_particle = yes sound = { soundeffect = SRA_tachyon_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_fire" } }
+	}
+}
+entity = {
+	name = "SRA_l_weapon_0_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "SRA_l_weapon_0_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_m_weapon_0_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "SRA_m_weapon_0_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_s_weapon_0_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "SRA_s_weapon_0_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_pd_weapon_0_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "SRA_pd_weapon_0_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+entity = {
+	name = "SRA_sc_weapon_0_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "SRA_sc_weapon_0_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+entity = {
+	name = "SRA_torpedo_0_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "SRA_torpedo_0_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } } 
+	}
+}
+
+#####	red	#####
+
+entity = {
+	name = "SRA_t_weapon_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "SRA_t_weapon_1_muzzle_particle" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "SRA_titan_laser_fire_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarites_fire_beam" } }
+		
+	}
+}
+entity = {
+	name = "SRA_xl_weapon_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "SRA_xl_weapon_1_muzzle_particle" keep_particle = yes sound = { soundeffect = SRA_tachyon_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_fire" } }
+	}
+}
+entity = {
+	name = "SRA_l_weapon_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "SRA_l_weapon_1_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_m_weapon_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "SRA_m_weapon_1_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_s_weapon_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "SRA_s_weapon_1_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_pd_weapon_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "SRA_pd_weapon_1_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+entity = {
+	name = "SRA_sc_weapon_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "SRA_sc_weapon_1_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+entity = {
+	name = "SRA_torpedo_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "SRA_torpedo_1_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } } 
+	}
+}
+
+#####	orange	#####
+
+entity = {
+	name = "SRA_t_weapon_orange_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "SRA_t_weapon_orange_muzzle_particle" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "dimensional_horror_laser_attack" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_dimensional_horror_laser_attack" } }
+	}
+}
+entity = {
+	name = "SRA_xl_weapon_orange_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "SRA_xl_weapon_orange_muzzle_particle" keep_particle = yes sound = { soundeffect = dimensional_horror_laser_attack } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_dimensional_horror_laser_attack" } }
+	}
+}
+entity = {
+	name = "SRA_l_weapon_orange_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "SRA_l_weapon_orange_muzzle_particle" keep_particle = yes sound = { soundeffect = dimensional_horror_laser_attack } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_dimensional_horror_laser_attack" } }
+	}
+}
+entity = {
+	name = "SRA_t_weapon_orange_beta_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "SRA_t_weapon_orange_beta_muzzle_particle" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "dimensional_horror_laser_attack" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_dimensional_horror_laser_attack" } }
+	
+		event = { time = 0.0 use_parent_nodes = yes node = "primary_weapon_windup" particle = "ag_beta_t_psi_weapon_windup_core_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0.3 use_parent_nodes = yes node = "primary_weapon_windup" particle = "ag_beta_t_psi_weapon_windup_beam_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+#####	violet	#####
+
+entity = {
+	name = "SRA_t_weapon_violet_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5.0 looping = no
+		event = { time = 0 particle = "SRA_t_weapon_violet_muzzle_particle" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "tachyon_lance_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_fire" } }
+		
+	}
+}
+entity = {
+	name = "SRA_xl_weapon_violet_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5.0 looping = no
+		event = { time = 0 particle = "SRA_xl_weapon_violet_muzzle_particle" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "tachyon_lance_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_fire" } }
+	}
+}
+entity = {
+	name = "SRA_l_weapon_violet_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "SRA_l_weapon_violet_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_m_weapon_violet_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 3 looping = no
+		event = { time = 0 particle = "SRA_m_weapon_violet_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_s_weapon_violet_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { time = 0 particle = "SRA_s_weapon_violet_muzzle_particle" keep_particle = yes sound = { soundeffect = stellarite_attack_plasma } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_stellarite_attack_plasma" } }
+	}
+}
+entity = {
+	name = "SRA_pd_weapon_violet_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 particle = "SRA_pd_weapon_violet_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_fire" } }
+	}
+}
+entity = {
+	name = "SRA_torpedo_violet_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "SRA_torpedo_violet_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } } 
+	}
+}
+
+################################################################
+#####						hit effects
+################################################################
+
+#####	blue	#####
+
+entity = {
+	name = "SRA_t_weapon_0_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { particle = "SRA_t_weapon_0_hit_effect" keep_particle = yes sound = { soundeffect = SRA_titan_laser_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_xl_weapon_0_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "SRA_xl_weapon_0_hit_effect" keep_particle = yes sound = { soundeffect = SRA_tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_l_weapon_0_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_l_weapon_0_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_m_weapon_0_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_m_weapon_0_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_s_weapon_0_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_s_weapon_0_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_torpedo_0_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "SRA_torpedo_0_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+#####	red	#####
+
+entity = {
+	name = "SRA_t_weapon_1_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { particle = "SRA_t_weapon_1_hit_effect" keep_particle = yes sound = { soundeffect = SRA_titan_laser_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_xl_weapon_1_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "SRA_xl_weapon_1_hit_effect" keep_particle = yes sound = { soundeffect = SRA_tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_l_weapon_1_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_l_weapon_1_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_m_weapon_1_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_m_weapon_1_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_s_weapon_1_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_s_weapon_1_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_torpedo_1_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "SRA_torpedo_1_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+#####	orange	#####
+
+entity = {
+	name = "SRA_t_weapon_orange_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { particle = "SRA_t_weapon_orange_hit_effect" keep_particle = yes sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_xl_weapon_orange_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "SRA_xl_weapon_orange_hit_effect" keep_particle = yes sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_l_weapon_orange_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_l_weapon_orange_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#####	violet	#####
+
+entity = {
+	name = "SRA_t_weapon_violet_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		event = { particle = "SRA_t_weapon_violet_hit_effect" keep_particle = yes sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_xl_weapon_violet_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "SRA_xl_weapon_violet_hit_effect" keep_particle = yes sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_l_weapon_violet_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_l_weapon_violet_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_m_weapon_violet_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_m_weapon_violet_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_s_weapon_violet_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_s_weapon_violet_hit_effect sound = { soundeffect = tachyon_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_tachyon_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_torpedo_violet_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "SRA_torpedo_violet_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+#####	special	#####
+
+entity = {
+	name = "SRA_psionic_well_hit_entity"
+	pdxmesh = "SRA_psionic_well_hit_mesh"
+	scale = 1.1
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" looping = no
+		event = { time = 0 node = "effect_loc" particle = "SRA_psionic_well_hit_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "effect_loc" particle = "SRA_psionic_well_hit_clouds" keep_particle = yes trigger_once = yes }
+		event = { sound = { soundeffect = "wraith_death" } }
+	}
+}
+
+################################################################
+#####					shield hit effects
+################################################################
+
+#####	blue	#####
+
+entity = {
+	name = "SRA_t_weapon_0_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "SRA_t_weapon_0_hit_effect" sound = { soundeffect = SRA_titan_laser_hit } }
+		start_event = { particle = "SRA_t_weapon_0_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_xl_weapon_0_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "SRA_xl_weapon_0_hit_effect" sound = { soundeffect = SRA_tachyon_lance_hit } }
+		start_event = { particle = "SRA_xl_weapon_0_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_l_weapon_0_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_l_weapon_0_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_l_weapon_0_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_m_weapon_0_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_m_weapon_0_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_m_weapon_0_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_s_weapon_0_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_s_weapon_0_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_s_weapon_0_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_torpedo_0_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "SRA_torpedo_0_hit_effect" }
+		event = { time = 0.0 particle = "SRA_xl_weapon_0_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+#####	red	#####
+
+entity = {
+	name = "SRA_t_weapon_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "SRA_t_weapon_1_hit_effect" sound = { soundeffect = SRA_titan_laser_hit } }
+		start_event = { particle = "SRA_t_weapon_1_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_xl_weapon_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "SRA_xl_weapon_1_hit_effect" sound = { soundeffect = SRA_tachyon_lance_hit } }
+		start_event = { particle = "SRA_xl_weapon_1_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_l_weapon_1_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_l_weapon_1_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_l_weapon_1_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_m_weapon_1_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_m_weapon_1_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_m_weapon_1_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_s_weapon_1_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_s_weapon_1_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_s_weapon_1_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_torpedo_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "SRA_torpedo_1_hit_effect" }
+		event = { time = 0.0 particle = "SRA_xl_weapon_1_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+#####	orange	#####
+
+entity = {
+	name = "SRA_t_weapon_orange_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "SRA_t_weapon_orange_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "SRA_t_weapon_orange_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_xl_weapon_orange_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "SRA_xl_weapon_orange_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "SRA_xl_weapon_orange_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_l_weapon_orange_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_l_weapon_orange_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_l_weapon_orange_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+#####	violet	#####
+
+entity = {
+	name = "SRA_t_weapon_violet_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "SRA_t_weapon_violet_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "SRA_t_weapon_violet_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_xl_weapon_violet_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "SRA_xl_weapon_violet_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "SRA_xl_weapon_violet_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_l_weapon_violet_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_l_weapon_violet_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_l_weapon_violet_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_m_weapon_violet_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_m_weapon_violet_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_m_weapon_violet_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_s_weapon_violet_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = SRA_s_weapon_violet_hit_effect sound = { soundeffect = shield_hit } }
+		start_event = { particle = SRA_s_weapon_violet_shield_hit_effect }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_torpedo_violet_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "SRA_torpedo_violet_hit_effect" }
+		event = { time = 0.0 particle = "SRA_xl_weapon_violet_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+################################################################
+#####							torpedo
+################################################################
+
+entity = {
+	name = "SRA_torpedo_0_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "SRA_torpedo_0_particle" keep_particle = yes }
+	}
+}
+entity = {
+	name = "SRA_torpedo_1_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "SRA_torpedo_1_particle" keep_particle = yes }
+	}
+}
+entity = {
+	name = "SRA_torpedo_violet_entity"
+	cull_radius = 3.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "SRA_torpedo_violet_particle" keep_particle = yes }
+	}
+}
+
+################################################################
+#####							planet killer
+################################################################
+
+entity = {
+	name = "SRA_T4_weapon_planet_killer_windup_effect_entity"
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = no state_time = 0.1
+		event = { time = 0.0 particle = "SRA_T4_weapon_planet_killer_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "neutron_windup_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "neutron_windup_layer_2" } }
+	}
+}
+entity = {
+	name = "SRA_T4_weapon_planet_killer_muzzle_effect_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "SRA_T4_weapon_planet_killer_muzzle" keep_particle = yes trigger_once = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "neutron_fire_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "neutron_fire_layer_2" } }
+		event = { trigger_once = yes sound = { soundeffect = "neutron_fire_layer_3" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_fire_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_fire_layer_2" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_fire_layer_3" } }
+		event = { trigger_once = yes sound = { soundeffect = "colossus_neutron_beam" stop_on_state_change = yes } }
+	}	
+}
+entity = {
+	name = "SRA_T4_weapon_planet_killer_hit_effect_entity"
+	locator = { name = "root" 	position = { 0 0 24 } }
+	attach = { "root" = "SRA_T4_weapon_planet_killer_hit_effect_alt2_entity" }
+}
+entity = {
+	name = "SRA_T4_weapon_planet_killer_hit_effect_alt2_entity"
+	pdxmesh = "SRA_T4_weapon_planet_killer_hit_effect_mesh"
+	default_state = "idle"
+	state = { name = "idle" looping = yes animation = "idle" animation_speed = 2.5
+		start_event = { particle = "SRA_T4_weapon_planet_killer_hit_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "particle_1" particle = "SRA_T4_weapon_planet_killer_paricles_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "particle_2" particle = "SRA_T4_weapon_planet_killer_paricles_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "particle_3" particle = "SRA_T4_weapon_planet_killer_paricles_effect" keep_particle = yes trigger_once = yes }
+
+		event = { trigger_once = yes sound = { soundeffect = "neutron_hit_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "neutron_hit_layer_2" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_hit_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_hit_layer_2" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+entity = {
+	name = "SRA_T4_weapon_planet_killer_hit_effect_alt_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no
+		start_event = { particle = "SRA_T4_weapon_planet_killer_hit_effect" keep_particle = yes }
+
+		event = { trigger_once = yes sound = { soundeffect = "neutron_hit_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "neutron_hit_layer_2" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_hit_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_hit_layer_2" } }
+	}	
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "SRA_T4_weapon_planet_killer_star_hit_in_range_entity"
+	pdxmesh = "locator_mesh"
+	locator = { name = "effect_locator" 	position = { 0 24 0 } rotation = { 0 90 0 } }
+	attach = { "effect_locator" = "SRA_T4_weapon_planet_killer_star_hit_in_range_hull_entity" }
+}
+entity = {
+	name = "SRA_T4_weapon_planet_killer_star_hit_in_range_hull_entity"
+	pdxmesh = "SRA_T4_weapon_planet_killer_hit_effect_mesh"
+	locator = { name = "portal_locator" 	position = { 0 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "beam_hit_locator" 	position = { 0 0 -80 } rotation = { 180 0 0 } }
+	default_state = "idle"
+	state = { name = "idle" looping = yes animation = "idle" animation_speed = 2.5
+		start_event = { particle = "SRA_T4_weapon_planet_killer_hit_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "portal_locator" particle = "SRA_T4_weapon_planet_killer_portal" keep_particle = yes trigger_once = yes }
+		start_event = { node = "beam_hit_locator" particle = "SRA_T4_weapon_planet_killer_muzzle_windup_effect_small" keep_particle = yes trigger_once = yes }
+		start_event = { node = "beam_hit_locator" particle = "SRA_T4_weapon_planet_killer_muzzle_small" keep_particle = yes trigger_once = yes }
+		start_event = { node = "beam_hit_locator" particle = "SRA_T4_weapon_planet_killer_beam" keep_particle = yes trigger_once = yes }
+
+		event = { trigger_once = yes sound = { soundeffect = "neutron_hit_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "neutron_hit_layer_2" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_hit_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_neutron_hit_layer_2" } }
+	}
+}
+entity = {
+	name = "SRA_T4_weapon_planet_killer_star_windup_in_range_entity"
+	pdxmesh = "locator_mesh"
+	locator = { name = "effect_locator" 	position = { 0 24 0 } rotation = { 0 90 0 } }
+	attach = { "effect_locator" = "SRA_T4_weapon_planet_killer_star_windup_in_range_hull_entity" }
+}
+entity = {
+	name = "SRA_T4_weapon_planet_killer_star_windup_in_range_hull_entity"
+	pdxmesh = "locator_mesh"
+	locator = { name = "portal_locator" 	position = { 0 0 0 } rotation = { 0 0 0 } }
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		start_event = { node = "portal_locator" particle = "SRA_T4_weapon_planet_killer_portal_spawn" keep_particle = yes trigger_once = yes }
+	}
+}

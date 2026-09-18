@@ -1,0 +1,279 @@
+building_SRA_world_machine_chaos = {
+	base_buildtime = 480
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	icon = building_SRA_world_machine
+	capital_tier = -1
+	potential = {
+		is_planet_class = pc_SRA_chaos_star_habitable
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	prerequisites = { tech_SRA_T4_hidden_tech }
+	resources = {
+		category = planet_jobs
+		produces = {
+			energy = 20000
+			minerals = 20000
+			food = 20000
+			trade = 2000
+			alloys = 80000
+			consumer_goods = 40000
+			rare_crystals = 8000
+			exotic_gases = 8000
+			volatile_motes = 8000
+			sr_dark_matter = 5000
+			sr_living_metal = 5000
+			sr_zro = 5000
+			nanites = 5000
+			astral_threads = 5000
+			physics_research = 80000
+			society_research = 80000
+			engineering_research = 80000
+			unity = 40000
+		}
+	}
+	planet_modifier = {
+		# planet_max_buildings_add = -1000
+		planet_max_districts_mult = -10
+	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		NOR = {
+	# 			owner = { is_hive_empire = yes }
+	# 			owner = { is_machine_empire = yes }
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_SRA_world_machine_job_add = 10000
+	# 	}
+	# }
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		OR = {
+	# 			owner = { is_hive_empire = yes }
+	# 			owner = { is_machine_empire = yes }
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_SRA_world_machine_drone_add = 10000
+	# 	}
+	# }
+	convert_to = {
+		building_hive_major_capital
+		building_machine_major_capital
+		building_major_capital
+	}
+	country_modifier = {
+		country_naval_cap_add = 10000
+		country_resource_max_add = 8000000
+	}
+	upgrades = { }
+}
+building_SRA_world_machine = {
+	base_buildtime = 480
+	#capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	icon = building_SRA_world_machine
+	potential = {
+		exists = owner
+	}
+	inline_script = "buildings/SRA_building_sets_all"
+	prerequisites = { tech_SRA_T4_hidden_tech }
+	planet_modifier = {
+		# planet_max_buildings_add = -1000
+		planet_max_districts_mult = -10
+	    # pop_growth_speed = -20
+		planet_resettlement_unemployed_mult = 2.00
+	}
+	country_modifier = {
+		country_naval_cap_add = 100
+		country_resource_max_add = 80000
+	}
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 16
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			alloys = 16
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	upgrades = { }
+}
+building_SRA_world_machine_A = {
+	base_buildtime = 480
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+	category = government
+	icon = building_SRA_world_machine
+	potential = {
+		exists = owner
+	}
+	inline_script = "buildings/SRA_building_sets_all"
+	prerequisites = { tech_SRA_T4_hidden_tech }
+	planet_modifier = {
+		pop_amenities_usage_mult = -1
+		pop_housing_usage_mult = -1
+		planet_pops_upkeep_mult = -1
+		pop_happiness = 1
+		planet_crime_mult = -1
+		planet_crime_add = -1000
+		planet_amenities_add = 100000
+		planet_stability_add = 1000
+		planet_housing_add = 100000
+	}
+	resources = {
+		category = planet_artisans
+		produces = {
+			consumer_goods = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			consumer_goods = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	resources = {
+		category = planet_chemists
+		produces = {
+			rare_crystals = 0.1
+			exotic_gases = 0.1
+			volatile_motes = 0.1
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			rare_crystals = 0.1
+			exotic_gases = 0.1
+			volatile_motes = 0.1
+			sr_dark_matter = 0.1
+			sr_living_metal = 0.1
+			sr_zro = 0.1
+			nanites = 0.1
+			astral_threads = 0.1
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 8
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			minerals = 8
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			food = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 16
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			energy = 16
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	upgrades = { }
+}
+building_SRA_world_machine_B = {
+	base_buildtime = 480
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 2
+	category = government
+	icon = building_SRA_world_machine
+	potential = {
+		exists = owner
+	}
+	inline_script = "buildings/SRA_building_sets_all"
+	prerequisites = { tech_SRA_T4_hidden_tech }
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+		planet_army_build_speed_mult = 1
+		planet_defense_armies_add = 10
+	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		NOR = {
+	# 			owner = { is_hive_empire = yes }
+	# 			owner = { is_machine_empire = yes }
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_SRA_world_machine_job_add = 1000
+	# 	}
+	# }
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		OR = {
+	# 			owner = { is_hive_empire = yes }
+	# 			owner = { is_machine_empire = yes }
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_SRA_world_machine_drone_add = 1000
+	# 	}
+	# }
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 16
+			society_research = 16
+			engineering_research = 16
+			unity = 4
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			physics_research = 16
+			society_research = 16
+			engineering_research = 16
+			unity = 4
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	upgrades = { }
+}
+

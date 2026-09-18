@@ -1,0 +1,8 @@
+#图片大小1024*1027
+portraits = {
+	SRA_portrait = { entity = "SRA_portrait_entity"	clothes_selector = "SRA_portrait_clothes" attachment_selector = "SRA_portrait_attachment" custom_attachment_label = "HAIR_TITLE" }
+	
+	SRA_ai_crisis		= {	entity = "SRA_ai_crisis_room_entity"		clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "mammalian_01_greetings" }
+}
+# 使用的时候引用SRA_portrait给领袖。
+# 例： change_leader_portrait = 使用的时候引用SRA_portrait给领袖。

@@ -1,0 +1,82 @@
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		SRA_Crisis.10
+	}
+}
+
+
+on_game_start_country = {
+	events = {
+		#SRA_Crisis.1
+	}
+}
+
+on_country_destroyed = {
+	events = {
+		SRA_Crisis.50
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		SRA_Crisis.11
+		SRA_Crisis.44
+		SRA_RE_Crisis.20
+	}	
+}
+
+on_ship_destroyed_perp = {
+	events = {
+		SRA_Crisis.45
+		SRA_RE_Crisis.21
+	}
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		SRA_Crisis.46
+		SRA_RE_Crisis.30
+		SRA_Chief.1001
+		SRA_Chief.1003
+		SRA_Crisis.2000
+	}
+}
+
+on_ship_disabled = {
+	events = {
+		SRA_Chief.1002
+	}
+}
+on_monthly_pulse_country = {
+	events = {
+	}
+}
+
+on_custom_diplomacy = {
+	events = {
+		SRA_Crisis.3000
+	}
+}
+
+
+on_space_battle_won = {
+	events = {
+	}
+}
+
+on_single_player_save_game_load = {
+	events = {
+		SRA_Crisis.1002
+	}
+}

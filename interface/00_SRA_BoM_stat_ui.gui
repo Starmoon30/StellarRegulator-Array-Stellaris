@@ -1,0 +1,399 @@
+@SRA_invisible_position = 23333
+@SRA_option_list_x_pos = 497
+@SRA_option_list_slider_x_pos = 8
+@SRA_option_list_slider_y_pos = 9
+
+guiTypes = {
+	containerWindowType = {
+		name = "SRA_event_diplomacy_option"
+		position = { x=0 y=0 }
+		size = { width = 300 height = 57 }
+		moveable = no
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_button"
+			position = { x=0 y=0 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+	containerWindowType = {
+		name = "SRA_BoM_stat_ui"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1600 height = 900 }
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_SRA_event_diplomacy_background" 
+		}
+
+		@SRA_event_diplomacy_portrait_x = 30
+		@SRA_event_diplomacy_portrait_y = 50
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_1"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_alien_city"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg1_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_2"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_signal_city"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg2_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_3"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_command_center"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg3_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_4"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_Calamitisease_bg"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg4_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_5"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_Calamitisease_blue_bg"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg5_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_6"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_paragon_azaryn_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg6_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_7"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_paragon_keides_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg7_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_8"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_paragon_skrand_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg8_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_9"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_salvagers_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg9_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_10"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_shroud_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg10_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_11"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_shroudwalkers_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg11_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_12"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_solarpunk_01_city"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg12_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_13"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_solarpunk_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg13_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_14"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_specialist_prospectorium_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg14_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_15"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_specialist_scholarium_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg14_effect"
+		}
+		###########################
+		# 人物立绘
+		###########################
+
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_62"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_62"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff62_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_66"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_66"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff66_effect"
+		}
+
+		### PORTRAIT ###
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = 30 y = 5000 }
+			size = { width = 1200 height = 800 }
+			clipping = no
+			iconType = {
+				name = "portrait"
+				position = { x = 600 y = 0 }
+				spriteType = "GFX_SRA_diplomacy_portrait_mask"
+				scale = 1
+			}	
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 30 y = 5000 }
+			size = { width = 1200 height = 800 }
+			clipping = yes
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_SRA_diplomacy_portrait_mask"
+				alwaysTransparent = yes
+				scale = 1
+			}
+		}
+		containerWindowType = {
+			name = "portrait_locator"
+			position = { x = 30 y = 5000 }
+			size = { width = 1024 height = 1027 }
+			clipping = yes
+		}
+		# buttonType = {
+		# 	name = "close"
+		# 	quadTextureSprite = "GFX_SRA_text_close_button"
+		# 	position = { x= -45 y = 16 }
+		# 	Orientation = "UPPER_RIGHT"
+		# 	# shortcut = "ESCAPE"
+		# 	clicksound = "back_click"
+		# }
+		instantTextBoxType = {
+			name = "heading"
+			font = "malgun_goth_24"
+			text = "DIPLOMACY"
+			position = { x = 20 y = @SRA_invisible_position }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "alien_message_background"
+			size = { x = 1228 y = 830 }
+			position = { x = 30 y = 50 }
+			spriteType = "GFX_SRA_event_diplomacy_text"
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "alien_message_background_2"
+			size = { x = 1175 y = 325 }
+			position = { x = 50 y = 530 }
+			spriteType = "GFX_SRA_event_diplomacy_text_2"
+			#alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			position = { x = 80 y = 580 }
+			maxWidth = 1100
+			maxHeight = 250
+			format = left
+			scrollbartype = "SRA_text_desc_standardlistbox_slider"
+			#text_color_code = "E"
+		}
+		
+		### EVENT DIPLO ###
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			size = { width=563 height=250 }
+			moveable = no
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 100 y = 550 }
+				maxWidth = 520
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				Orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = {
+				name = "option_list"
+				position = { x = 1245 y = 300 }
+				size = { x = 350 y = 550 }
+				spacing = 1
+				offset = { x = @SRA_option_list_slider_x_pos y = @SRA_option_list_slider_y_pos }
+				scrollbartype = "SRA_text_standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+		
+        #按钮规格
+        @SRA_button_x_size = 200
+        @SRA_button_y_size = 60
+        #行间按钮间隔
+        #@SRA_button_x_size = 20
+        #行间距
+        @SRA_button_y_left = 70
+        
+        @SRA_button_x_1 = 100
+        @SRA_button_x_2 = 320
+        @SRA_button_x_3 = 540
+        @SRA_button_x_4 = 760
+        @SRA_button_x_5 = 980
+        @SRA_button_y_1_line = 640
+
+        @SRA_button_y_2_line = 720
+		
+        effectButtonType = {
+            name = "SRA_BoM_stat_a"
+            quadTextureSprite = "GFX_SRA_setting_button"
+            position = { x = @SRA_button_x_1 y = @SRA_button_y_1_line }
+			clicksound = select_click
+            font = "malgun_goth_24"
+            text = "SRA_BoM_stat_a"
+            effect = "SRA_BoM_stat_a_effect"
+        }
+		effectButtonType = {
+			name = "SRA_BoM_stat_a_box"
+			quadTextureSprite = "GFX_SRA_setting_button_box"
+			Orientation = "UPPER_LEFT"
+            position = { x = @SRA_button_x_1 y = @SRA_button_y_1_line }
+			effect = "SRA_BoM_stat_a_box_effect"
+		}
+        effectButtonType = {
+            name = "SRA_BoM_stat_b"
+            quadTextureSprite = "GFX_SRA_setting_button"
+            position = { x = @SRA_button_x_2 y = @SRA_button_y_1_line }
+			clicksound = select_click
+            font = "malgun_goth_24"
+            text = "SRA_BoM_stat_b"
+            effect = "SRA_BoM_stat_b_effect"
+        }
+		effectButtonType = {
+			name = "SRA_BoM_stat_b_box"
+			quadTextureSprite = "GFX_SRA_setting_button_box"
+			Orientation = "UPPER_LEFT"
+            position = { x = @SRA_button_x_2 y = @SRA_button_y_1_line }
+			effect = "SRA_BoM_stat_b_box_effect"
+		}
+        effectButtonType = {
+            name = "SRA_BoM_stat_c"
+            quadTextureSprite = "GFX_SRA_setting_button"
+            position = { x = @SRA_button_x_3 y = @SRA_button_y_1_line }
+			clicksound = select_click
+            font = "malgun_goth_24"
+            text = "SRA_BoM_stat_c"
+            effect = "SRA_BoM_stat_c_effect"
+        }
+		effectButtonType = {
+			name = "SRA_BoM_stat_c_box"
+			quadTextureSprite = "GFX_SRA_setting_button_box"
+			Orientation = "UPPER_LEFT"
+            position = { x = @SRA_button_x_3 y = @SRA_button_y_1_line }
+			effect = "SRA_BoM_stat_c_box_effect"
+		}
+        effectButtonType = {
+            name = "SRA_BoM_stat_d"
+            quadTextureSprite = "GFX_SRA_setting_button"
+            position = { x = @SRA_button_x_1 y = @SRA_button_y_2_line }
+			clicksound = select_click
+            font = "malgun_goth_24"
+            text = "SRA_BoM_stat_d"
+            effect = "SRA_BoM_stat_d_effect"
+        }
+		effectButtonType = {
+			name = "SRA_BoM_stat_d_box"
+			quadTextureSprite = "GFX_SRA_setting_button_box"
+			Orientation = "UPPER_LEFT"
+            position = { x = @SRA_button_x_1 y = @SRA_button_y_2_line }
+			effect = "SRA_BoM_stat_d_box_effect"
+		}
+        effectButtonType = {
+            name = "SRA_BoM_stat_e"
+            quadTextureSprite = "GFX_SRA_setting_button"
+            position = { x = @SRA_button_x_2 y = @SRA_button_y_2_line }
+			clicksound = select_click
+            font = "malgun_goth_24"
+            text = "SRA_BoM_stat_e"
+            effect = "SRA_BoM_stat_e_effect"
+        }
+		effectButtonType = {
+			name = "SRA_BoM_stat_e_box"
+			quadTextureSprite = "GFX_SRA_setting_button_box"
+			Orientation = "UPPER_LEFT"
+            position = { x = @SRA_button_x_2 y = @SRA_button_y_2_line }
+			effect = "SRA_BoM_stat_e_box_effect"
+		}
+        effectButtonType = {
+            name = "SRA_BoM_stat_f"
+            quadTextureSprite = "GFX_SRA_setting_button"
+            position = { x = @SRA_button_x_3 y = @SRA_button_y_2_line }
+			clicksound = select_click
+            font = "malgun_goth_24"
+            text = "SRA_BoM_stat_f"
+            effect = "SRA_BoM_stat_f_effect"
+        }
+		effectButtonType = {
+			name = "SRA_BoM_stat_f_box"
+			quadTextureSprite = "GFX_SRA_setting_button_box"
+			Orientation = "UPPER_LEFT"
+            position = { x = @SRA_button_x_3 y = @SRA_button_y_2_line }
+			effect = "SRA_BoM_stat_f_box_effect"
+		}
+
+		effectButtonType = {
+			name = "SRA_diplomacy_name_cognitive_filtration"
+			quadTextureSprite = "GFX_SRA_diplomacy_name_cognitive_filtration"
+			Orientation = "UPPER_LEFT"
+			position = { x = 50 y = 510 }
+			text = "[From.GetScriptedSRA_diplomacy_name_cognitive_filtration_desc]"
+			font = "malgun_goth_24"
+			format = left
+			effect = "SRA_diplomacy_name_cognitive_filtration_effect"
+		}
+	}
+}

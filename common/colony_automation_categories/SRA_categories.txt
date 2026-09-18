@@ -1,0 +1,15 @@
+#Lists the categories of planetary automation that you can select in the planet interface
+#Available trigger governs whether it is shown in the list.
+
+planet_automation_SRA_building = {
+	available = {
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+

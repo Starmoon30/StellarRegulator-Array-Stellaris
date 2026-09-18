@@ -1,0 +1,711 @@
+@SRA_invisible_position = 23333
+@SRA_option_list_x_pos = 497
+@SRA_option_list_slider_x_pos = 8
+@SRA_option_list_slider_y_pos = 9
+
+guiTypes = {
+	containerWindowType = {
+		name = "SRA_event_diplomacy_option"
+		position = { x=0 y=0 }
+		size = { width = 300 height = 57 }
+		moveable = no
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_button"
+			position = { x=0 y=0 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+	containerWindowType = {
+		name = "SRA_event_diplomacy_window"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1600 height = 900 }
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_SRA_event_diplomacy_background" 
+		}
+
+		@SRA_event_diplomacy_portrait_x = 30
+		@SRA_event_diplomacy_portrait_y = 50
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_1"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_alien_city"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg1_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_2"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_signal_city"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg2_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_3"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_command_center"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg3_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_4"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_Calamitisease_bg"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg4_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_5"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_Calamitisease_blue_bg"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg5_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_6"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_paragon_azaryn_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg6_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_7"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_paragon_keides_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg7_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_8"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_paragon_skrand_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg8_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_9"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_salvagers_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg9_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_10"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_shroud_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg10_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_11"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_shroudwalkers_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg11_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_12"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_solarpunk_01_city"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg12_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_13"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_solarpunk_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg13_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_14"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_specialist_prospectorium_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg14_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_bg_15"
+			quadTextureSprite = "GFX_SRA_event_diplomacy_bg_SRA_specialist_scholarium_room"
+			orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_bg15_effect"
+		}
+		###########################
+		# 人物立绘
+		###########################
+
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_00"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_00"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff00_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_01"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff01_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_02"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff02_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_03"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_03"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff03_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_04"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff04_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_05"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff05_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_06"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_06"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff06_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_07"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_07"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff07_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_11"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_11"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff11_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_12"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_12"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff12_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_13"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_13"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff13_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_14"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_14"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff14_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_15"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_15"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff15_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_16"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_16"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff16_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_17"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_17"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff17_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_18"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_18"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff18_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_19"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_19"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff19_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_21"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_21"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff21_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_22"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_22"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff22_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_23"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_23"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff23_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_2399"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_2399"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff2399_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_25"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_25"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff25_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_26"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_26"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff26_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_27"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_27"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff27_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_28"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_28"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff28_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_29"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_29"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff29_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_32"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_32"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff32_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_33"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_33"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff33_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_3399"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_3399"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff3399_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_35"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_35"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff35_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_36"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_36"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff36_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_37"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_37"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff37_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_38"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_38"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff38_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_42"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_42"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff42_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_43"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_43"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff43_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_45"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_45"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff45_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_46"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_46"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff46_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_47"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_47"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff47_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_52"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_52"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff52_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_53"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_53"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff53_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_55"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_55"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff55_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_56"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_56"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff56_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_57"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_57"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff57_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_61"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_61"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff61_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_62"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_62"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff62_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_63"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_63"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff63_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_64"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_64"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff64_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_65"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_65"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff65_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_66"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_66"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff66_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_67"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_67"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff67_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_68"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_68"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff68_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_69"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_69"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff69_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_71"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_71"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff71_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_72"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_72"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff72_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_73"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_73"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff73_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_74"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_74"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff74_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_75"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_75"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff75_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_76"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_76"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff76_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_77"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_77"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff77_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_78"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_78"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff78_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_1001"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_1001"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff1001_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_1005"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_1005"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff1005_effect"
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_SRA_portrait_1006"
+			quadTextureSprite = "GFX_SRA_event_portrait_diff_1006"
+			Orientation = "UPPER_LEFT"
+			position = { x = @SRA_event_diplomacy_portrait_x y = @SRA_event_diplomacy_portrait_y }
+			effect = "SRA_diplomacy_SRA_portrait_diff1006_effect"
+		}
+
+		### PORTRAIT ###
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = 30 y = 5000 }
+			size = { width = 1200 height = 800 }
+			clipping = no
+			iconType = {
+				name = "portrait"
+				position = { x = 600 y = 0 }
+				spriteType = "GFX_SRA_diplomacy_portrait_mask"
+				scale = 1
+			}	
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 30 y = 5000 }
+			size = { width = 1200 height = 800 }
+			clipping = yes
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_SRA_diplomacy_portrait_mask"
+				alwaysTransparent = yes
+				scale = 1
+			}
+		}
+		containerWindowType = {
+			name = "portrait_locator"
+			position = { x = 30 y = 5000 }
+			size = { width = 1024 height = 1027 }
+			clipping = yes
+		}
+		# buttonType = {
+		# 	name = "close"
+		# 	quadTextureSprite = "GFX_SRA_text_close_button"
+		# 	position = { x= -45 y = 16 }
+		# 	Orientation = "UPPER_RIGHT"
+		# 	# shortcut = "ESCAPE"
+		# 	clicksound = "back_click"
+		# }
+		instantTextBoxType = {
+			name = "heading"
+			font = "malgun_goth_24"
+			text = "DIPLOMACY"
+			position = { x = 20 y = @SRA_invisible_position }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "alien_message_background"
+			size = { x = 1228 y = 830 }
+			position = { x = 30 y = 50 }
+			spriteType = "GFX_SRA_event_diplomacy_text"
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "alien_message_background_2"
+			size = { x = 1175 y = 325 }
+			position = { x = 50 y = 530 }
+			spriteType = "GFX_SRA_event_diplomacy_text_2"
+			#alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			position = { x = 80 y = 580 }
+			maxWidth = 1100
+			maxHeight = 250
+			format = left
+			scrollbartype = "SRA_text_desc_standardlistbox_slider"
+			#text_color_code = "E"
+		}
+		
+		### EVENT DIPLO ###
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			size = { width=563 height=250 }
+			moveable = no
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 100 y = 550 }
+				maxWidth = 520
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				Orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = {
+				name = "option_list"
+				position = { x = 1245 y = 300 }
+				size = { x = 350 y = 550 }
+				spacing = 1
+				offset = { x = @SRA_option_list_slider_x_pos y = @SRA_option_list_slider_y_pos }
+				scrollbartype = "SRA_text_standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+		effectButtonType = {
+			name = "SRA_diplomacy_name_cognitive_filtration"
+			quadTextureSprite = "GFX_SRA_diplomacy_name_cognitive_filtration"
+			Orientation = "UPPER_LEFT"
+			position = { x = 100 y = 530 }
+			text = "[From.GetScriptedSRA_diplomacy_name_cognitive_filtration_desc]"
+			font = "malgun_goth_24"
+			format = left
+			effect = "SRA_diplomacy_name_cognitive_filtration_effect"
+		}
+	}
+}

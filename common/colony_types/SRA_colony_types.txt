@@ -1,0 +1,129 @@
+#星辉世界机械
+col_SRA_world_machine = {
+	icon = GFX_SRA_colony_type_world_machine
+	potential = {
+		exists = owner_or_space_owner
+		OR = {
+			has_deposit = d_SRA_world_machine
+		}
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+	weight_modifier = {
+		base = 10000
+	}
+}
+#星规寰宇世界
+col_ringworld_habitable_SRA_GZ = {
+	icon = GFX_colony_type_urban
+
+	potential = {
+		exists = owner_or_space_owner
+		SRA_is_SRA_planet = yes
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.2
+		planet_building_build_speed_mult = 0.2
+		planet_decision_enact_speed_mult = 0.2
+	}
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+#星辉稀有
+col_SRA_auto_foundry = {
+	icon = GFX_colony_type_industrial
+
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = {
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+				has_civic = civic_SRAtechnology
+			}
+		}
+		NOT = { owner_or_space_owner = { has_country_flag = SRA_RE_building_hidden } }
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_building_build_speed_mult = 0.1
+		planet_decision_enact_speed_mult = 0.1
+	}
+	weight_modifier = { 
+		base = 200
+	}
+}
+
+#星辉科研
+col_SRA_auto_research = {
+	icon = GFX_colony_type_research
+
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = {
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+				has_civic = civic_SRAtechnology
+			}
+		}
+		NOT = { owner_or_space_owner = { has_country_flag = SRA_RE_building_hidden } }
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_building_build_speed_mult = 0.1
+		planet_decision_enact_speed_mult = 0.1
+	}
+	weight_modifier = { 
+		base = 200
+	}
+}
+
+#星辉合金
+col_SRA_auto_alloys = {
+	icon = GFX_colony_type_foundry
+
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = {
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+				has_civic = civic_SRAtechnology
+			}
+		}
+		NOT = { owner_or_space_owner = { has_country_flag = SRA_RE_building_hidden } }
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_building_build_speed_mult = 0.1
+		planet_decision_enact_speed_mult = 0.1
+	}
+	weight_modifier = { 
+		base = 200
+	}
+}
+
+#星辉消费品
+col_SRA_auto_factory = {
+	icon = GFX_colony_type_factory
+
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = {
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+				has_civic = civic_SRAtechnology
+			}
+		}
+		NOT = { owner_or_space_owner = { has_country_flag = SRA_RE_building_hidden } }
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_building_build_speed_mult = 0.1
+		planet_decision_enact_speed_mult = 0.1
+	}
+	weight_modifier = { 
+		base = 200
+	}
+}

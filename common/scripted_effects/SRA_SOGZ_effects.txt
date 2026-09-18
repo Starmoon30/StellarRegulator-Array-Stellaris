@@ -1,0 +1,393 @@
+SRA_SOGZ_sub_energy_choose_prepare_effect = {
+	optimize_memory
+	#选项初始化
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_1 }
+		set_country_flag = SRA_SOGZ_menu_sub_1_1_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_2 }
+		set_country_flag = SRA_SOGZ_menu_sub_1_2_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_3 }
+		set_country_flag = SRA_SOGZ_menu_sub_1_3_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_1 }
+		set_country_flag = SRA_SOGZ_menu_sub_2_1_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_2 }
+		set_country_flag = SRA_SOGZ_menu_sub_2_2_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_3 }
+		set_country_flag = SRA_SOGZ_menu_sub_2_3_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_1 }
+		set_country_flag = SRA_SOGZ_menu_sub_3_1_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_2 }
+		set_country_flag = SRA_SOGZ_menu_sub_3_2_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_3 }
+		set_country_flag = SRA_SOGZ_menu_sub_3_3_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_1 }
+		set_country_flag = SRA_SOGZ_menu_sub_4_1_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_2 }
+		set_country_flag = SRA_SOGZ_menu_sub_4_2_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_3 }
+		set_country_flag = SRA_SOGZ_menu_sub_4_3_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1 }
+		set_country_flag = SRA_SOGZ_menu_sub_5_1_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_2 }
+		set_country_flag = SRA_SOGZ_menu_sub_5_2_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_3 }
+		set_country_flag = SRA_SOGZ_menu_sub_5_3_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_1 }
+		set_country_flag = SRA_SOGZ_menu_sub_6_1_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_2 }
+		set_country_flag = SRA_SOGZ_menu_sub_6_2_choose
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_3 }
+		set_country_flag = SRA_SOGZ_menu_sub_6_3_choose
+	}
+	#能量分配初始化
+	set_variable = { which = SRA_SOGZ_sub_energy_choose value = SRA_SOGZ_sub_energy }
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+}
+SRA_SOGZ_sub_energy_choose_check_effect = {
+	optimize_memory
+	#能量分配初始化
+	set_variable = { which = SRA_SOGZ_sub_energy_choose value = SRA_SOGZ_sub_energy }
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_1_choose }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_2_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -100 }
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_3_choose }
+		change_variable = { which = SRA_SOGZ_sub_energy_choose value = -200 }
+	}
+}
+SRA_SOGZ_sub_energy_choose_confirm_effect = {
+	optimize_memory
+	#选项初始化
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_1_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_1_1
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_1_1
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_2_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_1_2
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_1_2
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_1_3_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_1_3
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_1_3
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_1_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_2_1
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_2_1
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_2_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_2_2
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_2_2
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_2_3_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_2_3
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_2_3
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_1_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_3_1
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_3_1
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_2_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_3_2
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_3_2
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_3_3_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_3_3
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_3_3
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_1_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_4_1
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_4_1
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_2_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_4_2
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_4_2
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_4_3_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_4_3
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_4_3
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_5_1
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_5_1
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_2_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_5_2
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_5_2
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_5_3_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_5_3
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_5_3
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_1_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_6_1
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_6_1
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_2_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_6_2
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_6_2
+	}
+	if = {
+		limit = { has_country_flag = SRA_SOGZ_menu_sub_6_3_choose }
+		set_country_flag = SRA_SOGZ_menu_sub_6_3
+	}
+	else = {
+		remove_country_flag = SRA_SOGZ_menu_sub_6_3
+	}
+}
+SRA_SOGZ_sub_energy_choose_over_effect = {
+	optimize_memory
+	#选项结束判断
+	remove_country_flag = SRA_SOGZ_menu_sub_1_1_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_1_2_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_1_3_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_2_1_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_2_2_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_2_3_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_3_1_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_3_2_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_3_3_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_4_1_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_4_2_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_4_3_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_5_1_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_5_2_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_5_3_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_6_1_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_6_2_choose
+	remove_country_flag = SRA_SOGZ_menu_sub_6_3_choose
+}
+SRA_SOGZ_buff_effect = {
+	#optimize_memory
+	#星穹之矛buff初始化
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = SRA_SOGZ_menu_sub_5_2
+			}
+		}
+		add_modifier = { modifier = SRA_SOGZ_menu_sub_5_2_Buff days = -1 }
+	}
+	else = {
+		remove_modifier = SRA_SOGZ_menu_sub_5_2_Buff
+	}
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = SRA_SOGZ_menu_sub_5_3
+			}
+		}
+		add_modifier = { modifier = SRA_SOGZ_menu_sub_5_3_Buff days = -1 }
+	}
+	else = {
+		remove_modifier = SRA_SOGZ_menu_sub_5_3_Buff
+	}
+}

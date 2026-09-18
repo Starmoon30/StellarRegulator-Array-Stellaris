@@ -1,0 +1,163 @@
+####ship小写,装备正常
+###T4###
+component_set = {
+	key = "SRA_T4_ship_Part"
+	
+	icon = "GFX_SRA_T4_ship_Part"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_Armor_Intensifier"
+	
+	icon = "GFX_SRA_T4_Armor_Intensifier"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_Weapon_Intensifier"
+	
+	icon = "GFX_SRA_T4_Weapon_Intensifier"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T4_Auxiliarm_Motor"
+	
+	icon = "GFX_SRA_T4_Auxiliarm_Motor"
+	icon_frame = 1	
+}
+
+###T3###
+component_set = {
+	key = "SRA_T3_ship_Part_Shield"
+	
+	icon = "GFX_SRA_T3_ship_Part"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_ship_Part_Armor"
+	
+	icon = "GFX_SRA_T3_Armor"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_ship_Part_Reactor"
+	
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_Armor_Intensifier"
+	
+	icon = "GFX_SRA_T3_Armor_Intensifier"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T3_Weapon_Intensifier"
+	
+	icon = "GFX_SRA_T3_Weapon_Intensifier"
+	icon_frame = 1	
+}
+
+
+###T2###
+
+component_set = {
+	key = "SRA_T2_ship_Part_Shield"
+	
+	icon = "GFX_SRA_T2_ship_Part"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T2_ship_Part_Armor"
+	
+	icon = "GFX_SRA_T2_Armor"
+	icon_frame = 1	
+}
+
+
+###T1###
+
+component_set = {
+	key = "SRA_T1_ship_Part_Shield"
+	
+	icon = "GFX_SRA_T1_ship_Part"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_T1_ship_Part_Armor"
+	
+	icon = "GFX_SRA_T1_Armor"
+	icon_frame = 1	
+}
+
+
+
+component_set = {
+	key = "SRA_SD_ship_Part_Shield"
+	
+	icon = "GFX_SRA_SD_ship_Part_Shield"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "SRA_SD_Anti_accuracy_1"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_Anti_accuracy_2"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_Anti_accuracy_3"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_Anti_accuracy_4"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_Anti_accuracy_5"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_Anti_accuracy_6"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_Anti_accuracy_7"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_Anti_accuracy_8"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}
+component_set = {
+	key = "SRA_SD_Anti_accuracy_9"
+	
+	icon = "GFX_SRA_SD_Anti_accuracy"
+	icon_frame = 1	
+}

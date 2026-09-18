@@ -1,0 +1,1669 @@
+namespace = SRA_RE_SOGZ
+
+country_event = {
+	id = SRA_RE_SOGZ.1
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.1.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.2 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.3 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.2
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.2.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.3 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.3 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.3
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.3.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		enable_special_project = {
+			name = SRA_RE_Start_SP4
+			owner = root
+		}
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.4
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.4.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.5 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.5 } }
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = SRA_RE_SOGZ.5
+	title = SRA_RE_SOGZ.5
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.5.desc"
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+		set_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+		capital_scope = {
+			save_global_event_target_as = SRA_Spear_Of_Galaxy_Zenith_capital_location
+		}
+		save_global_event_target_as = SRA_Spear_Of_Galaxy_Zenith_own_country
+		add_modifier = {
+			modifier = SRA_Weapon_Adjust_Buff_0
+			multiplier = -100
+		}
+		add_modifier = {
+			modifier = SRA_RE_SOGZ_Upkeep
+		}
+		start_situation = {
+			type = SRA_SOGZ_main_situation
+		}
+		if = {
+			limit = {
+				has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+				NOT = {
+					any_owned_ship ={
+						SRA_is_SOGZ_ship_size = yes
+					}
+				}
+			}
+			create_fleet = {
+				name = "NAME_SRA_Spear_Of_Galaxy_Zenith"
+				effect = {
+					set_owner = event_target:SRA_Spear_Of_Galaxy_Zenith_own_country
+					create_ship = {
+						name = random
+						design = "NAME_SRA_Bright_Galaxy_Adjust"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+						}
+					}			
+					set_location = {
+						target = event_target:SRA_Spear_Of_Galaxy_Zenith_capital_location
+						distance = 0
+						angle = random
+					}
+					set_fleet_stance = aggressive
+				}	
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_SOGZ.5.a
+		hidden_effect = {
+			country_event = { id = SRA_RE_SOGZ.6 }
+			end_event_chain = SRA_RE_SOGZ_repair_chain
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.6
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.6.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.7 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.13 days = 30 } }
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = SRA_RE_SOGZ.7
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.7.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 18 }
+		set_country_flag = SRA_StellarRegulator_Cloth_1
+    }
+	option = {
+		name = SRA_RE_SOGZ.7.a
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.8 } }
+	}
+	option = {
+		name = SRA_RE_SOGZ.7.b
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.11 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.8
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.8.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 18 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.9 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.10 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.9
+	title = SRA_RE_no_title
+	desc = SRA_RE_SOGZ.9.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 0 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.10 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.10 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.10
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.10.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 18 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.13 days = 30 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.13 days = 30 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.11
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.11.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		set_country_flag = SRA_StellarRegulator_Cloth_1
+    }
+	option = {
+		name = SRA_RE_SOGZ.11.a
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.10 } }
+	}
+	option = {
+		name = SRA_RE_SOGZ.11.b
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.12 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.12
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.12.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 18 }
+		set_country_flag = SRA_StellarRegulator_Cloth_1
+    }
+	option = {
+		name = SRA_RE_SOGZ.12.a
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.13 days = 30 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.13
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.14 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.15 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.14
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.14.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.15 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.15 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.15
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.15.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.16 days = 30 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.16 days = 30 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.16
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_SOGZ.16.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.17 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.17 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.17
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_SOGZ.17.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+		set_country_flag = SRA_RE_tech_1
+		set_country_flag = SRA_RE_orient_target_3
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {}
+		default_hide_option = yes
+	}
+}
+
+
+country_event = {
+	id = SRA_RE_SOGZ.20
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.20.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.21 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.22 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.21
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.21.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.22 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.22 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.22
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.22.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {
+			random_planet_within_border = {
+				limit = {
+					is_ringworld = no
+					is_star = no
+					is_colony = no
+					is_colonizable = no
+					is_capital = no
+					NOT = { exists = archaeological_site }
+				}
+				enable_special_project = {
+					name = SRA_RE_SOGZ_SP1
+					location = THIS
+					owner = root
+			    }
+			}
+		}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {
+			random_planet_within_border = {
+				limit = {
+					is_ringworld = no
+					is_star = no
+					is_colony = no
+					is_colonizable = no
+					is_capital = no
+					NOT = { exists = archaeological_site }
+				}
+				enable_special_project = {
+					name = SRA_RE_SOGZ_SP1
+					location = THIS
+					owner = root
+			    }
+			}
+		}
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = SRA_RE_SOGZ.23
+	title = SRA_RE_SOGZ.23
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.23.desc"
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	option = {
+		name = SRA_RE_SOGZ.23.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP3
+				owner = root
+			}
+		}
+	}
+}
+fleet_event = {
+	id = SRA_RE_SOGZ.24
+	title = SRA_RE_SOGZ.24
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.24.desc"
+	immediate = {
+		save_event_target_as = SRA_RE_SOGZ_SP1_Fleet
+		set_event_locked = yes
+	}
+	option = {
+		name = SRA_RE_SOGZ.24.a
+		enable_special_project = {
+			name = SRA_RE_SOGZ_SP2
+			owner = root
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.25
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.25.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		set_country_flag = SRA_RE_SOGZ_transition_enable
+		set_country_flag = SRA_RE_SOGZ_fire_enable
+		set_country_flag = SRA_RE_SOGZ_Repair_2
+		change_variable = { which = SRA_SOGZ_sub_energy value = 100 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.26 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.26 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.26
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.26.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		set_country_flag = SRA_RE_StellarRegulator_sequence_2_start
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_4_project"
+			owner = root
+		}
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_5_project"
+			owner = root
+		}
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_6_project"
+			owner = root
+		}
+    }
+	option = {
+		name = SRA_RE_SOGZ.26.a
+		hidden_effect = { country_event = { id = SRA_RE_StellarRegulator.420 } }
+	}
+	option = {
+		name = SRA_RE_SOGZ.26.b
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.41 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.27
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.27.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = SRA_RE_SOGZ.27.a
+		remove_country_flag = SRA_RE_SOGZ_Repair_2
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 100000 }
+			resource_stockpile_compare = { resource = astral_threads value >= 20000 }
+		} 
+	    add_resource = {
+	    	energy = -100000
+		    astral_threads = -20000
+	    }
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP4
+				owner = root
+	        }
+	    }
+	}
+	option = {
+		name = SRA_RE_SOGZ.27.b
+		hidden_effect = { country_event = { id = SRA_RE_StellarRegulator.100 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.28
+	title = SRA_RE_SOGZ.28
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.28.desc"
+	immediate = {
+		save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_own_country
+		remove_modifier = SRA_Weapon_Adjust_Buff_0
+		random_owned_ship = {
+			limit = {
+				SRA_is_SOGZ_ship_size = yes
+			}
+			create_fleet = {
+				name = "NAME_SRA_Spear_Of_Galaxy_Zenith"
+				effect = {
+					set_owner = event_target:SRA_Spear_Of_Galaxy_Zenith_own_country
+					create_ship = {
+						name = random
+						design = "NAME_SRA_Bright_Galaxy_Adjust"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+						}
+					}			
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+					set_fleet_stance = aggressive
+					save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+					set_event_locked = yes
+				}
+			}
+		fleet = { leader? = { save_event_target_as = SRA_target_leader unassign_leader = this }
+		}
+		delete_ship = this
+			if = { limit = { exists = event_target:SRA_target_leader } 
+				fleet = { assign_leader = event_target:SRA_target_leader } 
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_SOGZ.28.a
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.29 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.29
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.29.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = SRA_RE_SOGZ.29.a
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.30 } }
+	}
+	option = {
+		name = SRA_RE_SOGZ.29.b
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.30 } }
+	}
+	option = {
+		name = SRA_RE_SOGZ.29.c
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.30 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.30
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.30.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 14 }
+    }
+	option = {
+		name = SRA_RE_SOGZ.30.a
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.31 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.31
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.31.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 18 }
+    }
+	option = {
+		name = SRA_RE_SOGZ.31.a
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.32 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.32
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.32.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+    }
+	option = {
+		name = SRA_RE_SOGZ.32.a
+		hidden_effect = {
+			event_target:SRA_Spear_Of_Galaxy_Zenith = {
+				enable_special_project = {
+					name = SRA_RE_SOGZ_SP5
+					location = THIS
+					owner = root
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.33
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.33.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		set_country_flag = SRA_RE_SOGZ_overclock_enable
+		set_country_flag = SRA_RE_SOGZ_Repair_3
+		change_variable = { which = SRA_SOGZ_sub_energy value = 100 }
+		event_target:SRA_Spear_Of_Galaxy_Zenith = {
+			fleet = {
+				set_event_locked = no
+			}
+		}
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}
+
+#第三次修复
+country_event = {
+	id = SRA_RE_SOGZ.34
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.34.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		save_event_target_as = SRA_RE_SOGZ_35
+    }
+	option = {
+		name = SRA_RE_SOGZ.34.a
+		remove_country_flag = SRA_RE_SOGZ_Repair_3
+		allow = {
+			resource_stockpile_compare = { resource = alloys value >= 30000 }
+			resource_stockpile_compare = { resource = astral_threads value >= 8000 }
+			any_planet_within_border = {
+				is_planet_class = pc_black_hole
+			}
+		}
+	    add_resource = {
+	    	alloys = -30000
+		    astral_threads = -8000
+	    }
+		hidden_effect = {
+			random_planet_within_border = {
+				limit = {
+					is_planet_class = pc_black_hole
+				}
+				enable_special_project = {
+					name = SRA_RE_SOGZ_SP6
+					location = THIS
+					owner = root
+				}
+			}
+	    }
+	}
+	option = {
+		name = SRA_RE_SOGZ.34.b
+		hidden_effect = { country_event = { id = SRA_RE_StellarRegulator.100 } }
+	}
+}
+
+carrier_event = {
+	id = SRA_RE_SOGZ.35
+	title = SRA_RE_SOGZ.35
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.35.desc"
+	option = {
+		name = SRA_RE_SOGZ.35.a
+		hidden_effect = {
+			solar_system = {
+				spawn_megastructure = {
+					type = "SRA_RE_SOGZ_Repair_1"
+					planet = root
+					owner = event_target:SRA_RE_SOGZ_35
+					graphical_culture = "mammalian_01"
+			    }
+			}
+			event_target:SRA_RE_SOGZ_35 = {
+				country_event = {
+					id = SRA_RE_SOGZ.351 days = 1800
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.351
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = {
+				any_owned_megastructure = {
+					is_megastructure_type = SRA_RE_SOGZ_Repair_1
+					is_upgrading = no
+				}
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_Rocivia
+				localization =  SRA_RE_SOGZ.351.MESSAGE_SRA_RE_Rocivia
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_Rocivia
+				variable = {
+					 type = name
+					 localization = SRA_RE_Rocivia
+					scope = event_target:SRA_portrait_leader_Rocivia
+				}
+				variable = {
+					 key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+			country_event = {
+				id = SRA_RE_SOGZ.351 days = 360
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.36
+	title = SRA_RE_SOGZ.36
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.36.desc"
+	option = {
+		name = SRA_RE_SOGZ.36.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_SOGZ.37 days = 30
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.37
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_SOGZ.37.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		set_country_flag = SRA_RE_SOGZ_immortality_enable
+		set_country_flag = SRA_RE_SOGZ_Repair_4
+		change_variable = { which = SRA_SOGZ_sub_energy value = 100 }
+		every_owned_ship = {
+			limit = {
+				SRA_is_SOGZ_ship_size = yes
+			}
+			save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+		fleet = { leader? = { save_event_target_as = SRA_target_leader unassign_leader = this } 
+			create_ship = {
+				name = random
+				design = "NAME_SRA_Bright_Galaxy"
+					upgradable = no
+					effect = {
+						set_disable_at_health = 0.01
+					}
+				}
+			}
+			event_target:SRA_Spear_Of_Galaxy_Zenith = {
+				destroy_ship = this
+			}
+			if = { limit = { exists = event_target:SRA_target_leader } 
+				fleet = { assign_leader = event_target:SRA_target_leader } 
+			}
+		}
+		remove_country_flag = SRA_SOGZ_Adjust
+		remove_modifier = SRA_RE_SOGZ_Upkeep
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.38
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.38.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = SRA_RE_SOGZ.38.a
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.39 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.39
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.39.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.40 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.44 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.40
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.40.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.41 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.44 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.41
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.41.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.42 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.44 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.42
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.42.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.43 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.44 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.43
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.43.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.44 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.44 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.44
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.44.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP7
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP7
+				owner = root
+			}
+		}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.45
+	title = SRA_RE_SOGZ.45
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.45.desc"
+	option = {
+		name = SRA_RE_SOGZ.45.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP8
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.46
+	title = SRA_RE_SOGZ.46
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.46.desc"
+	option = {
+		name = SRA_RE_SOGZ.46.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP7
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.47
+	title = SRA_RE_SOGZ.47
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.47.desc"
+	option = {
+		name = SRA_RE_SOGZ.47.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP9
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.48
+	title = SRA_RE_SOGZ.48
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.48.desc"
+	option = {
+		name = SRA_RE_SOGZ.48.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP8
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.49
+	title = SRA_RE_SOGZ.49
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.49.desc"
+	option = {
+		name = SRA_RE_SOGZ.49.a
+		hidden_effect = {
+			country_event = { id = SRA_RE_SOGZ.52 days = 10 }
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.50
+	title = SRA_RE_SOGZ.50
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.50.desc"
+	option = {
+		name = SRA_RE_SOGZ.50.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP9
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.51
+	title = SRA_RE_SOGZ.51
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_SOGZ.51.desc"
+	option = {
+		name = SRA_RE_SOGZ.51.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_SOGZ_SP7
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.52
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.52.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		set_country_flag = SRA_RE_SOGZ_Repair_5
+		change_variable = { which = SRA_SOGZ_sub_energy value = 100 }
+		set_country_flag = SRA_RE_SOGZ_burst_enable
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.53
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.53.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {
+			country_event = { id = SRA_RE_SOGZ.54 }
+		}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {
+			country_event = { id = SRA_RE_SOGZ.54 }
+		}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.54
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.54.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = SRA_RE_SOGZ.54.a
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 40000 }
+			resource_stockpile_compare = { resource = alloys value >= 200000 }
+			resource_stockpile_compare = { resource = astral_threads value >= 20000 }
+		}
+	    add_resource = {
+            energy = -40000
+            alloys = -200000
+            astral_threads = -20000
+	    }
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.56 } }
+	}
+	option = {
+		name = SRA_RE_SOGZ.54.b
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.55 } }
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.55
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.55.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.56
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.56.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.57 days = 10 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_SOGZ.57 days = 10 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_SOGZ.57
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_SOGZ.57.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		set_country_flag = SRA_RE_SOGZ_time_stop_enable
+		remove_country_flag = SRA_RE_SOGZ_Repair_5
+		end_event_chain = SRA_RE_SOGZ_repair_chain
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}

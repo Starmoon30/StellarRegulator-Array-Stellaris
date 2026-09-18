@@ -1,0 +1,728 @@
+
+ship_section_template = {
+	key = "SRA_Executor_MID"
+	ship_size = SRA_Executor
+	fits_on_slot = mid
+	entity = "SRA_Executor_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon_fixed" locatorname = "t_weapon_01" }
+	component_slot = { name = "t_weapon_02" template = "SRA_titanic_weapon_fixed" locatorname = "t_weapon_01" }
+	component_slot = { name = "xl_weapon_01" template = "SRA_extra_large_weapon" locatorname = "xl_weapon_01" }
+	component_slot = { name = "xl_weapon_02" template = "SRA_extra_large_weapon" locatorname = "xl_weapon_02" }
+	component_slot = { name = "xl_weapon_03" template = "SRA_extra_large_weapon" locatorname = "xl_weapon_03" }
+	component_slot = { name = "xl_weapon_04" template = "SRA_extra_large_weapon" locatorname = "xl_weapon_04" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "l_weapon_01" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "l_weapon_02" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "l_weapon_03" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "l_weapon_04" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "l_weapon_05" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "l_weapon_06" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "l_weapon_07" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "l_weapon_08" }
+	component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "l_weapon_01" }
+	component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "l_weapon_02" }
+	component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "l_weapon_03" }
+	component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "l_weapon_04" }
+	component_slot = { name = "l_weapon_13" template = "SRA_large_weapon" locatorname = "l_weapon_05" }
+	component_slot = { name = "l_weapon_14" template = "SRA_large_weapon" locatorname = "l_weapon_06" }
+	component_slot = { name = "l_weapon_15" template = "SRA_large_weapon" locatorname = "l_weapon_07" }
+	component_slot = { name = "l_weapon_16" template = "SRA_large_weapon" locatorname = "l_weapon_08" }
+	component_slot = { name = "torpedo_01" template = "SRA_torpedo_weapon" locatorname = "t_weapon_01" }
+	component_slot = { name = "torpedo_02" template = "SRA_torpedo_weapon" locatorname = "t_weapon_01" }
+	component_slot = { name = "strike_craft_01" template = "large_strike_craft" locatorname = "t_weapon_01" }
+	component_slot = { name = "strike_craft_02" template = "large_strike_craft" locatorname = "t_weapon_01" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_01" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_02" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_03" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_04" }
+	large_utility_slots = 24
+	aux_utility_slots = 5
+}
+
+
+ship_section_template = {
+	key = "SRA_Cruiser_MID"
+	ship_size = SRA_Cruiser
+	fits_on_slot = mid
+	entity = "SRA_Cruiser_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	# component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon_fixed" locatorname = "t_weapon_01" }
+	component_slot = { name = "xl_weapon_01" template = "SRA_extra_large_weapon" locatorname = "xl_weapon_01" }
+	component_slot = { name = "xl_weapon_02" template = "SRA_extra_large_weapon" locatorname = "xl_weapon_02" }
+	component_slot = { name = "xl_weapon_03" template = "SRA_extra_large_weapon" locatorname = "xl_weapon_03" }
+	component_slot = { name = "xl_weapon_04" template = "SRA_extra_large_weapon" locatorname = "xl_weapon_04" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "l_weapon_01" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "l_weapon_02" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "l_weapon_03" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "l_weapon_04" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "l_weapon_05" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "l_weapon_06" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "l_weapon_07" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "l_weapon_08" }
+	component_slot = { name = "torpedo_01" template = "SRA_torpedo_weapon" locatorname = "t_weapon_01" }
+	component_slot = { name = "strike_craft_01" template = "large_strike_craft" locatorname = "t_weapon_01" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_01" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_02" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_03" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_04" }
+	large_utility_slots = 12
+	aux_utility_slots = 4
+}
+
+#跨星系打击信标
+ship_section_template = {
+	key = "SRA_fire_target_0_mid"
+	ship_size = SRA_fire_target_0
+	fits_on_slot = mid
+	entity = "natural_wormhole_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_13" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_14" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_15" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_16" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_17" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_18" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_19" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_20" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_21" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_22" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_23" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_24" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_25" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_26" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_27" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_28" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_29" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_30" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_31" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_32" template = "SRA_small_weapon" locatorname = "root" }
+
+	aux_utility_slots = 8
+
+	large_utility_slots = 48
+	
+}
+
+#星规探索者
+ship_section_template = {
+	key = "SRA_Science_Ship_mid"
+	ship_size = SRA_Science_Ship
+	fits_on_slot = mid
+	entity = "SRA_Cruiser_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "t_weapon_01" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "t_weapon_01" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "xl_weapon_01" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "xl_weapon_02" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "xl_weapon_03" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "xl_weapon_04" }
+	component_slot = { name = "m_weapon_01" template = "SRA_medium_weapon" locatorname = "l_weapon_01" }
+	component_slot = { name = "m_weapon_02" template = "SRA_medium_weapon" locatorname = "l_weapon_02" }
+	component_slot = { name = "m_weapon_03" template = "SRA_medium_weapon" locatorname = "l_weapon_03" }
+	component_slot = { name = "m_weapon_04" template = "SRA_medium_weapon" locatorname = "l_weapon_04" }
+	component_slot = { name = "m_weapon_05" template = "SRA_medium_weapon" locatorname = "l_weapon_05" }
+	component_slot = { name = "m_weapon_06" template = "SRA_medium_weapon" locatorname = "l_weapon_06" }
+	component_slot = { name = "m_weapon_07" template = "SRA_medium_weapon" locatorname = "l_weapon_07" }
+	component_slot = { name = "m_weapon_08" template = "SRA_medium_weapon" locatorname = "l_weapon_08" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_01" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_02" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_03" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "xl_weapon_04" }
+	large_utility_slots = 12
+}
+#星规远行要塞
+ship_section_template = {
+	key = "SRA_Crisis_Fort_bow"
+	ship_size = SRA_Crisis_Fort
+	fits_on_slot = bow
+	entity = "SRA_Crisis_Fort_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "medium_gun_01" } #基地中心哪个球
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "medium_gun_02" } #塔上圈
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "medium_gun_03" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "medium_gun_04" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "medium_gun_05" } #塔下圈
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "medium_gun_06" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "medium_gun_07" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "medium_gun_08" } #塔外边三个尖塔
+	component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "medium_gun_09" }
+	component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "medium_gun_10" }
+	component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "medium_gun_11" }
+	component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "medium_gun_12" }
+	component_slot = { name = "l_weapon_13" template = "SRA_large_weapon" locatorname = "medium_gun_13" }
+	component_slot = { name = "l_weapon_14" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_15" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_16" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_17" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_18" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_19" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_20" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_21" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_22" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_23" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_24" template = "SRA_medium_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_25" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_26" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_27" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_28" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_29" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_30" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_31" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_32" template = "SRA_small_weapon" locatorname = "root" }
+	component_slot = { name = "torpedo_01" template = "SRA_torpedo_weapon" locatorname = "root" }
+	component_slot = { name = "torpedo_02" template = "SRA_torpedo_weapon" locatorname = "root" }
+	component_slot = { name = "strike_craft_01" template = "large_strike_craft" locatorname = "root" }
+	component_slot = { name = "strike_craft_02" template = "large_strike_craft" locatorname = "root" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "root" }
+	
+	aux_utility_slots = 9
+
+	large_utility_slots = 48
+	
+}
+# 要塞6个塔的点位，同时需要调整ship_size
+# ship_section_template = {
+	# key = "SRA_Crisis_Fort_mid"
+	# ship_size = SRA_Crisis_Fort
+	# fits_on_slot = mid
+	# entity = "SRA_Crisis_Fort_section_mid_entity"
+	# icon = "GFX_ship_part_core_mid"
+	
+	# component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "medium_gun_01" }
+	# component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "medium_gun_02" }
+	# component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "medium_gun_03" }
+	# component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "medium_gun_04" }
+	# component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "medium_gun_05" }
+	# component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "medium_gun_06" }
+	# component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "medium_gun_07" }
+	# component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "medium_gun_08" }
+	# component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "medium_gun_09" }
+	# component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "medium_gun_10" }
+	# component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "medium_gun_11" }
+	# component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "medium_gun_12" }
+	# aux_utility_slots = 9
+	# large_utility_slots = 32
+	# resources = {
+		# category = ship_sections
+		# cost = { alloys = 10000 }
+	# }
+# }
+
+
+#星规远行航标
+
+ship_section_template = {
+	key = "SRA_Crisis_Mark_mid"
+	ship_size = SRA_Crisis_Mark
+	fits_on_slot = mid
+	entity = "SRA_Crisis_Mark_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "pillar_top_weapon_1" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "pillar_top_weapon_2" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "pillar_bottom_weapon_1" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "pillar_bottom_weapon_2" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_1" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_2" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_3" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_1" }
+	component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_2" }
+	component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_3" }
+	component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_1" }
+	component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_2" }
+	component_slot = { name = "l_weapon_13" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_3" }
+	component_slot = { name = "l_weapon_14" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_1" }
+	component_slot = { name = "l_weapon_15" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_2" }
+	component_slot = { name = "l_weapon_16" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_3" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "pillar_top_weapon_1" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "pillar_bottom_weapon_1" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "floating_arm_left_weapon_1" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "floating_arm_right_weapon_1" }
+	
+	aux_utility_slots = 4
+
+	large_utility_slots = 16
+	
+}
+
+
+ship_section_template = {
+	key = "SRA_starbase_turret_section"
+	entity = "starbase_turret_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	ship_size = starbase_outpost
+	ship_size = starbase_starport
+	ship_size = starbase_starhold
+	ship_size = starbase_starfortress
+	ship_size = starbase_citadel
+
+	fits_on_slot = "1"
+	fits_on_slot = "2"
+	fits_on_slot = "3"
+	fits_on_slot = "4"
+	fits_on_slot = "5"
+	fits_on_slot = "6"
+
+	should_draw_components = yes
+
+	component_slot = {
+		name = "l_weapon_01"
+		template = "SRA_large_weapon"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "l_weapon_02"
+		template = "SRA_large_weapon"
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "l_weapon_03"
+		template = "SRA_large_weapon"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "l_weapon_04"
+		template = "SRA_large_weapon"
+		locatorname = "medium_gun_02"
+	}
+}
+
+
+ship_section_template = {
+	key = "SRA_Sentry_Platform_core"
+	fits_on_slot = "ship"
+	ship_size = SRA_Sentry_Platform
+	entity = "SRA_Crisis_Mark_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "t_weapon_02" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "t_weapon_03" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "xl_weapon_01" template = "SRA_extra_large_weapon" locatorname = "pillar_top_weapon_1" }
+	component_slot = { name = "xl_weapon_02" template = "SRA_extra_large_weapon" locatorname = "pillar_top_weapon_2" }
+	component_slot = { name = "xl_weapon_03" template = "SRA_extra_large_weapon" locatorname = "pillar_bottom_weapon_1" }
+	component_slot = { name = "xl_weapon_04" template = "SRA_extra_large_weapon" locatorname = "pillar_bottom_weapon_2" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_1" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_2" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_3" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_1" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_2" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_3" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_1" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_2" }
+	component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "floating_arm_left_weapon_3" }
+	component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_1" }
+	component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_2" }
+	component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "floating_arm_right_weapon_2" }
+	component_slot = { name = "l_weapon_13" template = "SRA_large_weapon" locatorname = "pillar_top_weapon_1" }
+	component_slot = { name = "l_weapon_14" template = "SRA_large_weapon" locatorname = "pillar_top_weapon_2" }
+	component_slot = { name = "l_weapon_15" template = "SRA_large_weapon" locatorname = "pillar_bottom_weapon_1" }
+	component_slot = { name = "l_weapon_16" template = "SRA_large_weapon" locatorname = "pillar_bottom_weapon_2" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "pillar_top_weapon_1" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "pillar_bottom_weapon_1" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "floating_arm_left_weapon_1" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "floating_arm_right_weapon_1" }
+	large_utility_slots = 24
+	aux_utility_slots = 6
+}
+
+
+#星穹枢纽-星穹尖塔
+ship_section_template = {
+	key = "SRA_GZ_Platform_mid"
+	ship_size = SRA_GZ_Platform
+	fits_on_slot = mid
+	entity = "SRA_GZ_Platform_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "t_weapon_02" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "t_weapon_03" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "bottom_weapon_3" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "bottom_weapon_3" }
+	component_slot = { name = "l_weapon_13" template = "SRA_large_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "l_weapon_14" template = "SRA_large_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "l_weapon_15" template = "SRA_large_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "l_weapon_16" template = "SRA_large_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "l_weapon_17" template = "SRA_large_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "l_weapon_18" template = "SRA_large_weapon" locatorname = "bottom_weapon_3" }
+	component_slot = { name = "m_weapon_01" template = "SRA_medium_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "m_weapon_02" template = "SRA_medium_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "m_weapon_03" template = "SRA_medium_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "m_weapon_04" template = "SRA_medium_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "m_weapon_05" template = "SRA_medium_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "m_weapon_06" template = "SRA_medium_weapon" locatorname = "bottom_weapon_3" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "pd_weapon_05" template = "SRA_point_defence_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "pd_weapon_06" template = "SRA_point_defence_weapon" locatorname = "bottom_weapon_3" }
+	
+	large_utility_slots = 48
+	aux_utility_slots = 6
+
+}
+#星规星环基地
+ship_section_template = {
+	key = "SRA_orbital_ring_STARBASE_SECTION"
+	ship_size = SRA_orbital_ring
+
+	fits_on_slot = "core"
+	entity = "SRA_eta_gateway_0_megastructure_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon" locatorname = "UpperPillar_locator_center" }
+	component_slot = { name = "t_weapon_02" template = "SRA_titanic_weapon" locatorname = "LowerPillar_locator_center" }
+	component_slot = { name = "xl_weapon_01" template = "SRA_extra_large_weapon" locatorname = "UpperPillar_locator_center" }
+	component_slot = { name = "xl_weapon_02" template = "SRA_extra_large_weapon" locatorname = "LowerPillar_locator_center" }
+	component_slot = { name = "xl_weapon_03" template = "SRA_extra_large_weapon" locatorname = "UpperPillar_locator_center" }
+	component_slot = { name = "xl_weapon_04" template = "SRA_extra_large_weapon" locatorname = "LowerPillar_locator_center" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "fa_locator_1" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "fa_locator_1" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "fa_locator_2" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "fa_locator_2" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "fa_locator_3" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "fa_locator_3" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "fa_locator_4" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "fa_locator_4" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "fa_locator_1" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "fa_locator_2" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "fa_locator_3" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "fa_locator_4" }
+	
+	large_utility_slots = 16
+	aux_utility_slots = 4
+}
+
+
+ship_section_template = {
+	key = "starbase_SRA_1_core"
+	ship_size = starbase_SRA_1
+	fits_on_slot = mid
+	entity = "SRA_GZ_Platform_hull_small_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "t_weapon_02" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "t_weapon_03" template = "SRA_titanic_weapon_fixed" locatorname = "primary_weapon" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "bottom_weapon_3" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "bottom_weapon_3" }
+	component_slot = { name = "l_weapon_13" template = "SRA_large_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "l_weapon_14" template = "SRA_large_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "l_weapon_15" template = "SRA_large_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "l_weapon_16" template = "SRA_large_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "l_weapon_17" template = "SRA_large_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "l_weapon_18" template = "SRA_large_weapon" locatorname = "bottom_weapon_3" }
+	component_slot = { name = "m_weapon_01" template = "SRA_medium_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "m_weapon_02" template = "SRA_medium_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "m_weapon_03" template = "SRA_medium_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "m_weapon_04" template = "SRA_medium_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "m_weapon_05" template = "SRA_medium_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "m_weapon_06" template = "SRA_medium_weapon" locatorname = "bottom_weapon_3" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "top_weapon_1" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "top_weapon_2" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "top_weapon_3" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "bottom_weapon_1" }
+	component_slot = { name = "pd_weapon_05" template = "SRA_point_defence_weapon" locatorname = "bottom_weapon_2" }
+	component_slot = { name = "pd_weapon_06" template = "SRA_point_defence_weapon" locatorname = "bottom_weapon_3" }
+	
+	large_utility_slots = 36
+	aux_utility_slots = 6
+}
+
+#突变
+#模拟范围伤害用船
+
+ship_section_template = {
+	key = "SRA_Mutation_Boom_mid_1"
+	ship_size = SRA_Mutation_Boom
+	fits_on_slot = mid
+	entity = "SRA_zeta_crisis_psionic_storm_large_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+}
+ship_section_template = {
+	key = "SRA_Mutation_Boom_mid_2"
+	ship_size = SRA_Mutation_Boom
+	fits_on_slot = mid
+	entity = "SRA_SOGZ_menu_sub_4_1_ship_entity_2"
+	icon = "GFX_ship_part_core_mid"
+	
+}
+ship_section_template = {
+	key = "SRA_Mutation_Boom_mid_3"
+	ship_size = SRA_Mutation_Boom
+	fits_on_slot = mid
+	entity = "SRA_SOGZ_menu_sub_4_3_ship_entity_1"
+	icon = "GFX_ship_part_core_mid"
+	
+}
+ship_section_template = {
+	key = "SRA_Mutation_Boom_mid_4"
+	ship_size = SRA_Mutation_Boom
+	fits_on_slot = mid
+	entity = "SRA_SOGZ_menu_sub_4_3_ship_entity_2"
+	icon = "GFX_ship_part_core_mid"
+	
+}
+#帝国线
+#科尔先驱主力舰
+ship_section_template = {
+	key = "SRA_RE_Core_Battleship_MID"
+	ship_size = SRA_RE_Core_Battleship
+	fits_on_slot = mid
+	entity = "fallen_empire_01_warship_large_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon_fixed" locatorname = "large_gun_01" }
+	component_slot = { name = "xl_weapon_01" template = "SRA_extra_large_weapon" locatorname = "large_gun_02" }
+	component_slot = { name = "xl_weapon_02" template = "SRA_extra_large_weapon" locatorname = "large_gun_02" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "medium_gun_01" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "medium_gun_02" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "medium_gun_03" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "medium_gun_04" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "medium_gun_01" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "medium_gun_02" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "medium_gun_03" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "medium_gun_04" }
+	component_slot = { name = "l_weapon_09" template = "SRA_large_weapon" locatorname = "medium_gun_01" }
+	component_slot = { name = "l_weapon_10" template = "SRA_large_weapon" locatorname = "medium_gun_02" }
+	component_slot = { name = "l_weapon_11" template = "SRA_large_weapon" locatorname = "medium_gun_03" }
+	component_slot = { name = "l_weapon_12" template = "SRA_large_weapon" locatorname = "medium_gun_04" }
+	component_slot = { name = "torpedo_01" template = "SRA_torpedo_weapon" locatorname = "large_gun_01" }
+	component_slot = { name = "strike_craft_01" template = "large_strike_craft" locatorname = "large_gun_02" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "medium_gun_01" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "medium_gun_02" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "medium_gun_03" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "medium_gun_04" }
+	large_utility_slots = 12
+	aux_utility_slots = 1
+}
+
+ship_section_template = {
+	key = "starbase_SRA_RE_Calamitisease_STARBASE_SECTION"
+	ship_size = starbase_SRA_RE_Calamitisease
+
+	fits_on_slot = "core"
+	entity = "SRA_dyson_swarm_phase_3_Ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon" locatorname = "root" }
+	component_slot = { name = "t_weapon_02" template = "SRA_titanic_weapon" locatorname = "root" }
+	component_slot = { name = "t_weapon_03" template = "SRA_titanic_weapon" locatorname = "root" }
+	component_slot = { name = "t_weapon_04" template = "SRA_titanic_weapon" locatorname = "root" }
+	component_slot = { name = "t_weapon_05" template = "SRA_titanic_weapon" locatorname = "root" }
+	component_slot = { name = "t_weapon_06" template = "SRA_titanic_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_05" template = "SRA_point_defence_weapon" locatorname = "root" }
+	component_slot = { name = "pd_weapon_06" template = "SRA_point_defence_weapon" locatorname = "root" }
+	
+	large_utility_slots = 0
+	aux_utility_slots = 0
+}
+#耀红黑星
+ship_section_template = {
+	key = "SRA_Rokia_dragon_Ship_mid"
+	ship_size = SRA_Rokia_dragon_Ship
+	fits_on_slot = mid
+	entity = "SRA_Rokia_dragon_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "planet_killer_weapon_01" template = "SRA_planet_killer_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "star_mid" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "left_arm_1" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "left_arm_2" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "right_arm_1" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "right_arm_2" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "top_arm_1" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "top_arm_2" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "left_leg_1" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "left_leg_2" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "right_leg_1" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "right_leg_2" }
+}
+#混沌实体
+ship_section_template = {
+	key = "SRA_chaos_Ship_mid"
+	ship_size = SRA_chaos_Ship
+	fits_on_slot = mid
+	entity = "SRA_chaos_Ship_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "star_mid" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "left_arm_1" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "left_arm_2" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "right_arm_1" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "right_arm_2" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "top_arm_1" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "top_arm_2" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "left_leg_1" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "left_leg_2" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "right_leg_1" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "right_leg_2" }
+}
+ship_section_template = {
+	key = "starbase_SRA_chaos_1_core"
+	ship_size = starbase_SRA_chaos_1
+	fits_on_slot = mid
+	entity = "SRA_Rokia_dragon_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	aux_utility_slots = 0
+
+	large_utility_slots = 0
+	
+}
+ship_section_template = {
+	key = "SRA_SD_metabyss_orbital_ring_core"
+	ship_size = SRA_SD_metabyss_orbital_ring
+	fits_on_slot = mid
+	entity = "SRA_Rokia_dragon_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	aux_utility_slots = 0
+
+	large_utility_slots = 0
+	
+}
+ship_section_template = {
+	key = "SRA_Return_To_Calamitisease_Ship_mid"
+	ship_size = SRA_Return_To_Calamitisease_Ship
+	fits_on_slot = mid
+	entity = "SRA_elder_tiyanki_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "head" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "ship_main" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "attach1" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "attach2" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "attach3" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "attach4" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "attach5" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "attach6" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "gib_locator_01" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "gib_locator_02" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "gib_locator_03" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "gib_locator_04" }
+	component_slot = { name = "pd_weapon_05" template = "SRA_point_defence_weapon" locatorname = "gib_locator_05" }
+	component_slot = { name = "pd_weapon_06" template = "SRA_point_defence_weapon" locatorname = "gib_locator_06" }
+}
+
+ship_section_template = {
+	key = "SRA_reanimated_voidspawn_key"
+	ship_size = SRA_reanimated_leviathan_01_voidspawn
+	fits_on_slot = mid
+	entity = "SRA_leviathan_01_voidspawn_reanimated_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "xl_weapon_01"
+		template = "SRA_extra_large_weapon"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "l_weapon_01"
+		template = "SRA_large_weapon"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "l_weapon_02"
+		template = "SRA_large_weapon"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "l_weapon_03"
+		template = "SRA_large_weapon"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "l_weapon_04"
+		template = "SRA_large_weapon"
+		locatorname = "turret_01"
+	}
+	component_slot = {
+		name = "pd_weapon_01"
+		template = "SRA_point_defence_weapon"
+		locatorname = "spine"
+	}
+	component_slot = {
+		name = "pd_weapon_02"
+		template = "SRA_point_defence_weapon"
+		locatorname = "spine"
+	}
+
+	#aux_utility_slots = 2
+	large_utility_slots = 8
+}
+
+ship_section_template = {
+	key = "SRA_SD_Abyss_Hostile_Ship_mid"
+	ship_size = SRA_SD_Abyss_Hostile_Ship
+	fits_on_slot = mid
+	entity = "SRA_chaos_Ship_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = { name = "t_weapon_01" template = "SRA_titanic_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_01" template = "SRA_large_weapon" locatorname = "root" }
+	component_slot = { name = "l_weapon_02" template = "SRA_large_weapon" locatorname = "star_mid" }
+	component_slot = { name = "l_weapon_03" template = "SRA_large_weapon" locatorname = "left_arm_1" }
+	component_slot = { name = "l_weapon_04" template = "SRA_large_weapon" locatorname = "left_arm_2" }
+	component_slot = { name = "l_weapon_05" template = "SRA_large_weapon" locatorname = "right_arm_1" }
+	component_slot = { name = "l_weapon_06" template = "SRA_large_weapon" locatorname = "right_arm_2" }
+	component_slot = { name = "l_weapon_07" template = "SRA_large_weapon" locatorname = "top_arm_1" }
+	component_slot = { name = "l_weapon_08" template = "SRA_large_weapon" locatorname = "top_arm_2" }
+	component_slot = { name = "pd_weapon_01" template = "SRA_point_defence_weapon" locatorname = "left_leg_1" }
+	component_slot = { name = "pd_weapon_02" template = "SRA_point_defence_weapon" locatorname = "left_leg_2" }
+	component_slot = { name = "pd_weapon_03" template = "SRA_point_defence_weapon" locatorname = "right_leg_1" }
+	component_slot = { name = "pd_weapon_04" template = "SRA_point_defence_weapon" locatorname = "right_leg_2" }
+}

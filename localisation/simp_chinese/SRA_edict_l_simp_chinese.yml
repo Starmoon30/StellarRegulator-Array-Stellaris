@@ -1,0 +1,22 @@
+﻿l_simp_chinese:
+ edict_SRA_Produce_1:0 "星规建设协议"
+ edict_SRA_Produce_1_desc:0 "“学会了咱的运营，剩下的只用F2A就行了。”\n§Y作弊法令§!"
+ edict_SRA_Shipyard_Reduce_1:0 "星规船坞限制条令"
+ edict_SRA_Shipyard_Reduce_1_desc:0 "让那些船坞又少又喜欢抢订单的巨构和主宰闭嘴。"
+ edict_SRA_Diplomacy_1:0 "星规外交协议"
+ edict_SRA_Diplomacy_1_desc:0 "“朝贡是结盟的高级形式。”\n所有国家的£opinion£§Y评价增加§!§G+1000§!\n\n此外，激活时立即使你对所有国家的§Y当前情报§!§G+100§!，你所在的联邦立即获得§G+20000§!经验。\n§Y作弊法令§!"
+ opinion_country_to_SRA1:0 "“狡日尽，善日开。”"
+ edict_SRA_election_term:0 "选举延期"
+ edict_SRA_election_term_desc:0 "极大幅度地推迟下一次选举的时间，因为领导人是你喜欢的那一个。\n\n§B会是路希维亚吗？§!"
+
+
+ edict_SRA_Open_Menu:0 "打开星规通讯界面"
+ edict_SRA_Open_Menu_desc:0 "§B“您能信任的只有我。”§!"
+ edict_SRA_Setting:0 "打开星规阵列-设置面板"
+ edict_SRA_Setting_desc:0 "你可以在这里管理星规阵列MOD的相关设置。\n§B“如果你真的无所畏惧，那么做好准备，直面无边无际的黑暗吧。”§!"
+
+ edict_SRA_Spear_Of_Galaxy_Zenith_Menu:0 "打开星穹之矛控制面板"
+ edict_SRA_Spear_Of_Galaxy_Zenith_Menu_desc:0 "§B于第三远征后期设计的舰队支援母舰，作战火力平台，超级旗舰。用于大型舰队战，攻坚战，长程火力支援和单舰突进。\n唯一一种搭载了时空相位引擎的星规阵列作战舰船，这使得有着星穹之矛支持的舰队不再需要远行要塞和远行信标的供能。同时时空相位引擎也能为星穹之矛提供额外支持，在战斗中创造巨大的优势。§!"
+
+ edict_SRA_Weapon_Adjust:0 "打开星规调谐武器调整界面"
+ edict_SRA_Weapon_Adjust_desc:0 "您可以任意调整您的「星规武器」的伤害，因为煮不在糊。"

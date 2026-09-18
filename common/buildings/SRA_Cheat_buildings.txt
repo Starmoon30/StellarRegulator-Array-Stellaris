@@ -1,0 +1,499 @@
+building_SRA_control_centre = {
+	base_buildtime = 100
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	icon = building_SRA_control_centre
+	category = government
+	# add_to_first_building_slot = yes
+	position_priority = 0
+	destroy_trigger = { always = no }
+	potential = {
+		always = yes
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	country_modifier = {
+		country_admin_cap_mult = 1
+		megastructure_build_speed_mult = 1
+	}
+	planet_modifier = {
+		# planet_max_buildings_add = 160
+		planet_max_branch_office_buildings_add = 64
+		planet_defense_armies_add = 20
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+		}
+		produces = {
+			influence = 5
+			minor_artifacts = 50
+		}
+		upkeep = {
+		}
+	}
+}
+
+building_SRA_databank = {
+	base_buildtime = 100
+	can_build = yes
+	can_demolish = yes
+	icon = building_SRA_databank
+	category = research
+	position_priority = 3
+	destroy_trigger = { always = no }
+	potential = {
+	owner? = {
+		OR = {
+			custom_tooltip = {
+				fail_text = "SRA_need_building_core"
+				check_variable = {
+					which = building_SRA_databank_counter
+					value > 0
+				}
+			}
+			AND = {
+				has_country_flag = StellarRegulator_Array_tech_permit
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	on_built = {
+		owner = {
+			if = {
+				limit = {
+					check_variable = {
+						which = building_SRA_databank
+						value > 0
+					}
+				}
+				subtract_variable = {
+					which = building_SRA_databank
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = building_SRA_databank
+					value = 0
+				}
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			physics_research = 6000
+			society_research = 6000
+			engineering_research = 6000
+			unity = 4000
+		}
+		upkeep = {
+		}
+	}
+}
+
+building_SRA_foundry = {
+	base_buildtime = 100
+	can_build = yes
+	can_demolish = yes
+	icon = building_SRA_foundry
+	category = resource
+	position_priority = 4
+	allow = {
+		always = yes
+	}
+	destroy_trigger = { always = no }
+	potential = {
+	owner? = {
+		OR = {
+			custom_tooltip = {
+				fail_text = "SRA_need_building_core"
+				check_variable = {
+					which = building_SRA_foundry_counter
+					value > 0
+				}
+			}
+			AND = {
+				has_country_flag = StellarRegulator_Array_tech_permit
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	on_built = {
+		owner = {
+			if = {
+				limit = {
+					check_variable = {
+						which = building_SRA_foundry
+						value > 0
+					}
+				}
+				subtract_variable = {
+					which = building_SRA_foundry
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = building_SRA_foundry
+					value = 0
+				}
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 12000
+			minerals = 4000
+			food = 6000
+			trade = 2000
+			alloys = 6000
+			consumer_goods = 6000
+			rare_crystals = 1000
+			exotic_gases = 1000
+			volatile_motes = 1000
+			sr_dark_matter = 500
+			sr_living_metal = 500
+			sr_zro = 500
+			nanites = 500
+			astral_threads = 500
+		}
+		upkeep = {
+		}
+	}
+	upgrades = {
+	}
+}
+
+building_SRA_ground_yards = {
+	base_buildtime = 100
+	icon = building_SRA_ground_yards
+	can_build = yes
+	can_demolish = yes
+	category = government
+	planet_limit = 1
+	position_priority = 1
+	destroy_trigger = { always = no }
+	potential = {
+	owner? = {
+		OR = {
+			custom_tooltip = {
+				fail_text = "SRA_need_building_core"
+				check_variable = {
+					which = building_SRA_ground_yards_counter
+					value > 0
+				}
+			}
+			AND = {
+				has_country_flag = StellarRegulator_Array_tech_permit
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	on_built = {
+		owner = {
+			if = {
+				limit = {
+					check_variable = {
+						which = building_SRA_ground_yards_counter
+						value > 0
+					}
+				}
+				subtract_variable = {
+					which = building_SRA_ground_yards_counter
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = building_SRA_ground_yards_counter
+					value = 0
+				}
+			}
+		}
+	}
+	planet_modifier = {
+		planet_stability_add = 20
+		planet_jobs_produces_mult = 0.2
+		planet_amenities_mult = 0.50
+		planet_jobs_trade_produces_mult = 0.50
+		planet_defense_armies_add = 5
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			alloys = 200
+			consumer_goods = 100
+		}
+		upkeep = {
+			energy = 20
+			alloys = 20
+		}
+	}
+	country_modifier = {
+		starbase_shipyard_build_speed_mult = 1
+		country_naval_cap_add = 500
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			owner = {
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+}
+
+building_SRA_produce_centre = {
+	base_buildtime = 100
+	can_build = yes
+	can_demolish = yes
+	icon = building_SRA_produce_centre
+	category = government
+	# add_to_first_building_slot = yes
+	position_priority = 5
+	destroy_trigger = { always = no }
+	potential = {
+	owner? = {
+		OR = {
+			custom_tooltip = {
+				fail_text = "SRA_need_building_core"
+				check_variable = {
+					which = building_SRA_produce_centre_counter
+					value > 0
+				}
+			}
+			AND = {
+				has_country_flag = StellarRegulator_Array_tech_permit
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	on_built = {
+		owner = {
+			if = {
+				limit = {
+					check_variable = {
+						which = building_SRA_produce_centre
+						value > 0
+					}
+				}
+				subtract_variable = {
+					which = building_SRA_produce_centre
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = building_SRA_produce_centre
+					value = 0
+				}
+			}
+		}
+	}
+	planet_modifier = {
+		district_automated_workforce = 1
+		bonus_automated_workforce_mult = 0.5
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+		}
+		produces = {
+		}
+		upkeep = {
+		}
+	}
+}
+
+
+building_SRA_plane_collector = {
+	base_buildtime = 100
+	can_build = yes
+	can_demolish = yes
+	icon = building_wg_fe_dimensional_fabricator
+	category = resource
+	position_priority = 6
+	allow = {
+		always = yes
+	}
+	destroy_trigger = { always = no }
+	potential = {
+		owner? = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+			# OR = {
+			# 	has_authority = auth_shenhai
+			# 	has_authority = auth_warshipgirls
+			# 	has_authority = auth_united_fleet
+			# 	has_authority = auth_starshipgirls
+			# 	AND = {
+			# 		has_global_flag = acot_activated
+			# 		has_technology = tech_dark_matter_power_core
+			# 	}
+			# 	is_cg_empire = yes
+			# 	has_technology = GE_tech_reactor
+			# 	has_technology = tech_KZ_VOY_dilithium_magic
+			# 	has_technology = tech_KZ_VOY_dilithium_Resonating
+			# 	has_technology = tc_tech_arcane_research
+			# }
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_authority = auth_shenhai
+						has_authority = auth_warshipgirls
+					}
+				}
+			}
+			sr_pantsu = 200
+		}
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_technology = tech_building_wsg_neo
+					}
+				}
+			}
+			sr_neo = 200
+		}
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_technology = tech_building_wsg_alpha
+					}
+				}
+			}
+			sr_alpha = 200
+		}
+	produces = {
+		trigger = {
+			owner = {
+				OR = {
+					has_technology = tech_wsg_senergy
+					has_technology = tech_sh_senergy
+				}
+			}
+		}
+		sr_se = 200
+	}
+		produces = {
+			trigger = { owner = { has_authority = auth_starshipgirls } }
+			sr_kyber_swgs = 400
+			sr_tibanna_swgs = 400
+		}
+		produces = {
+			trigger = { owner = { has_authority = auth_united_fleet } }
+			sr_uf = 400
+		}
+		produces = {
+			trigger = {
+				has_global_flag = acot_activated
+			}
+			sr_dark_matter = 4000
+			acot_sr_dark_energy = 4000
+			acot_sr_stellarite = 4000
+			acot_sr_light_matter = 4000
+		}
+		produces = {
+			trigger = { owner = { is_cg_empire = yes } }
+			#Colorful Galaxy
+			sr_beauty = 200
+			excellent_slave = 200
+			love_juice = 200
+			holylight_crystal = 200
+			sr_christian = 200
+			sr_ten = 200
+			living_tentacles = 200
+			Obscene_separation = 200
+		}
+		#兽耳娘
+		produces = {
+			trigger = { owner = { has_technology = tech_KZ_VOY_dilithium_magic } }
+			KZ_VOY_dilithium_crystal = 2000
+			KZ_VOY_zero_g_crystal = 2000
+			KZ_VOY_stellar_core = 2000
+			KZ_VOY_stellar_sakura = 2000
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_KZ_VOY_dilithium_Resonating } }
+			KZ_VOY_hyperstructure_alloys = 2000
+		}
+		#ThaumStellar
+		# produces = {
+		# 	trigger = { owner = { has_technology = tc_tech_arcane_research } }
+		# 	tc_essences = 2000
+		# 	tc_thaumium = 2000
+		# 	tc_element_shard = 2000
+		# 	tc_knowledge_fragment = 2000
+		# }
+		# produces = {
+		# 	trigger = { owner = { has_technology = tc_tech_eldritch_minor } }
+		# 	tc_void_metal = 2000
+		# }
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 800
+			minerals = 800
+		}
+		upkeep = {
+			energy = 200
+			minerals = 200
+		}
+	}
+}

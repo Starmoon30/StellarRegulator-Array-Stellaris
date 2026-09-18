@@ -1,0 +1,36 @@
+
+category = {
+	name = "Effects"
+	soundeffects = {
+		SRA_psionic_storm_base
+		SRA_psionic_storm_lightning
+	}
+}
+
+soundeffect = {
+    name = SRA_psionic_storm_base
+    sounds = {
+        sound = sfx_amb_crisis_extradimensional_01
+    }
+    volume = 0.25
+    loop = yes
+    max_audible = 1
+    max_audible_behaviour = fail
+    playbackrate_random_offset = { -5.0 5.0 }
+    fade_in = 4
+    fade_out = 2
+}
+soundeffect = {
+    name = SRA_psionic_storm_lightning
+    sounds = {
+        sound = sfx_amb_space_storm_1_01
+    }
+    volume = 0.45
+    loop = yes
+    is3d = yes
+    max_audible = 1
+    max_audible_behaviour = fail
+    playbackrate_random_offset = { -5.0 5.0 }
+    fade_in = 4
+    fade_out = 2
+}

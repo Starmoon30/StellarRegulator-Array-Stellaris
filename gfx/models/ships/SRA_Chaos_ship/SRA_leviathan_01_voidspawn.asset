@@ -1,0 +1,62 @@
+
+entity = {
+	name = "SRA_leviathan_01_voidspawn_reanimated_section_entity"
+	pdxmesh = "SRA_leviathan_01_voidspawn_reanimated_mesh"
+	locator = { name = "spine" }
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "amb_voidspawn_reanimated_idle_lp" stop_on_state_change = yes } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 0
+				"hatching" = 100
+			}
+			default = 1
+		}
+	}
+	state = { name = "idle" animation = "idle" animation_blend_time = 1 looping = no next_state = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "amb_voidspawn_reanimated_idle_lp" stop_on_state_change = yes } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 100
+				"hatching" = 0
+			}
+			default = 1
+		}
+	}
+	state = { name = "moving" animation = "moving" 
+		event = { trigger_once = yes sound = { soundeffect = "amb_voidspawn_reanimated_moving_lp" stop_on_state_change = yes } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 100
+				"hatching" = 0
+			}
+			default = 1
+		}
+	}
+	state = { name = "moving" animation = "moving" animation_blend_time = 0.5 looping = no next_state = "moving" 
+		event = { trigger_once = yes sound = { soundeffect = "amb_voidspawn_reanimated_moving_lp" stop_on_state_change = yes } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 0
+				"hatching" = 100
+			}
+			default = 1
+		}
+	}
+	state = { name = "hatching" animation = "hatching" looping = no next_state = "idle"	}
+	state = { name = "death" animation = "death" looping = no animation_blend_time = 0.3
+		event = { time = 1.2 node = "head" particle = "distant_stars_gib_explosion_effect" keep_particle = yes trigger_once = yes }
+	}
+
+	game_data = {
+		uv_animation_speed 		= 0.05
+		uv_animation_direction 	= { -1.0 0.0 }
+	}
+}
+

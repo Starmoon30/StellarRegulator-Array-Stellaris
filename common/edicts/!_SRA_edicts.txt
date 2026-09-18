@@ -1,0 +1,44 @@
+# SRA_Open_Menu = {
+# 	icon = "GFX_edict_SRA"
+# 	length = 0
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 		}
+# 	}
+# 	effect = {
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = SRA_StellarRegulator.101
+# 			}
+# 		}
+# 	}
+# 	potential = {
+# 		has_country_flag = has_SRA_StellarRegulator_country
+# 		NOT = {
+# 		has_country_flag = StellarRegulator_engaged
+# 		}
+# 	}
+# }
+# SRA_Spear_Of_Galaxy_Zenith_Menu = {
+# 	icon = "GFX_edict_SRA"
+# 	length = 1
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 		}
+# 	}
+# 	effect = {
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = SRA_Spear_Of_Galaxy_Zenith.2
+# 			}
+# 		}
+# 	}
+# 	potential = {
+# 		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+# 		NOT = {
+# 			has_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+# 		}
+# 	}
+# }

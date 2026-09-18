@@ -1,0 +1,9 @@
+#root = system
+#from = player
+sc_SRA_chaos_star_tooltip = {
+	custom_tooltip = {
+		success_text = sc_SRA_chaos_star_tooltip
+
+		has_star_flag = SRA_chaos_star
+	}
+}

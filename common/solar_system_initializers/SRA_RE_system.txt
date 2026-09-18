@@ -1,0 +1,162 @@
+
+#防御站残骸星系
+
+SRA_RE_system_3 = {
+	name = "NAME_SRA_RE_system_3"
+	class = sc_b
+	flags = { SRA_RE_system_3 }
+
+	prevent_anomalies = yes
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = 1
+		class = rl_unhabitable_planets
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 200 }
+		
+		
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = rl_unhabitable_planets
+		orbit_distance = 35
+		orbit_angle = { min = 100 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			class = rl_unhabitable_planets
+			orbit_angle = { min = 30 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = 1
+		class = pc_molten
+		orbit_distance = 45
+		orbit_angle = { min = 270 max = 350 }
+		size = { min = 15 max = 25 }
+		init_effect = {
+			save_global_event_target_as = SRA_RE_archaeological_country_1_Mark
+			create_archaeological_site = SRA_RE_archaeological_4
+			event_target:SRA_RE_archaeological_country_1 = {
+				create_fleet = {
+					name = "NAME_SRA_RE_Crisis_Mark_Fleet"
+					effect = {
+						set_owner = event_target:SRA_RE_archaeological_country_1
+						create_ship = {
+							name = random
+							design = "NAME_SRA_RE_Crisis_Mark"
+						}
+						set_location = {
+							target = event_target:SRA_RE_archaeological_country_1_Mark
+							distance = 40
+							angle = random
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+SRA_RE_system_4 = {
+	name = "NAME_SRA_RE_system_4"
+	class = sc_b
+	flags = { SRA_RE_system_4 }
+
+	prevent_anomalies = yes
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+		init_effect = {
+			solar_system = {
+				set_star_flag = SRA_RE_Crisis_1_system
+			}
+		}
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = 1
+		class = rl_unhabitable_planets
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 200 }
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = rl_unhabitable_planets
+		orbit_distance = 35
+		orbit_angle = { min = 100 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			class = rl_unhabitable_planets
+			orbit_angle = { min = 30 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		count = 1
+		class = pc_relic
+		orbit_distance = 45
+		orbit_angle = { min = 270 max = 350 }
+		size = { min = 15 max = 25 }
+		init_effect = {
+			solar_system = {
+				save_global_event_target_as = SRA_RE_Crisis_1_start_system
+			}
+			save_global_event_target_as = SRA_RE_archaeological_country_2_Fleet
+			create_archaeological_site = SRA_RE_archaeological_6
+			add_modifier = { modifier = planet_SRA_RE_Core_1 }
+			add_modifier = { modifier = planet_SRA_RE_Core_2 }
+			event_target:SRA_RE_archaeological_country_2 = {
+				create_fleet = {
+					name = "NAME_SRA_RE_CORE_Fleet_Fleet"
+					effect = {
+						set_owner = event_target:SRA_RE_archaeological_country_2
+						while = { count = 45 create_ship = { design = "NAME_SRA_RE_Core_Battleship" } }
+						set_location = {
+							target = event_target:SRA_RE_archaeological_country_2_Fleet
+							distance = 40
+							angle = random
+						}
+					}
+				}
+			}
+		}	
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = rl_unhabitable_planets
+		orbit_distance = 55
+		orbit_angle = { min = 270 max = 350 }
+	}
+	
+}

@@ -1,0 +1,10 @@
+
+animation = { name = "SRA_ancient_large_ship_frame_idle_animation" file = "SRA_ancient_large_ship_frame_idle.anim" }
+animation = { name = "SRA_ancient_large_ship_frame_death1_animation" file = "SRA_ancient_large_ship_frame_death1.anim" }
+animation = { name = "SRA_ancient_large_ship_frame_death2_animation" file = "SRA_ancient_large_ship_frame_death2.anim" }
+animation = { name = "SRA_ancient_large_ship_frame_death3_animation" file = "SRA_ancient_large_ship_frame_death3.anim" }
+
+animation = { name = "SRA_ancient_small_ship_frame_idle_animation" file = "SRA_ancient_small_ship_frame_idle.anim" }
+animation = { name = "SRA_ancient_small_ship_frame_death1_animation" file = "SRA_ancient_small_ship_frame_death1.anim" }
+animation = { name = "SRA_ancient_small_ship_frame_death2_animation" file = "SRA_ancient_small_ship_frame_death2.anim" }
+animation = { name = "SRA_ancient_small_ship_frame_death3_animation" file = "SRA_ancient_small_ship_frame_death3.anim" }

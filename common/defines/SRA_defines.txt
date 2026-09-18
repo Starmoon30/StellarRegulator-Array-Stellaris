@@ -1,0 +1,5 @@
+
+NGameplay = {
+	#COMMAND_LIMIT_MAX										= 800
+	NAVAL_CAPACITY_MAX										= 20000 #被其他mod覆盖了也无所谓
+}

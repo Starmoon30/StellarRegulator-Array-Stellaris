@@ -1,0 +1,515 @@
+guiTypes = {
+	buttonType = {
+		name = "close"
+		quadTextureSprite = "GFX_SRA_text_close_button"
+		position = { x= 410 y = 11 }
+		Orientation = "UPPER_RIGHT"
+		clicksound = "back_click"
+		shortcut = "ESCAPE"
+	}
+	containerWindowType = {
+		name = "SRA_SOGZ_menu_button"
+		position = { x=0 y=0 }
+		size = { width = 300 height = 57 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_button"
+			position = { x=0 y=0 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+	containerWindowType = {
+		name = "SRA_SOGZ_menu_button_last"
+		position = { x=20 y=0 }
+		size = { width = 280 height = 57 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_button"
+			position = { x=0 y=0 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+
+	scrollbarType = {
+		name = "SRA_SOGZ_menu_desc_standardlistbox_slider"	
+		slider = "listboxSliderButton"
+		track = "listboxTrackButton"
+		leftbutton = "upButton"
+		rightbutton = "downButton"
+		size = { x = 12 y = 12 }
+		position = { x = 0 y = 0 }
+		priority = 100			
+		borderSize = { x = 12 y = 12 }	
+		maxValue = 1
+		minValue = 0
+		stepSize = 1.6
+		startValue = 0
+		horizontal = 0
+		guiButtonType = {
+			name = "listboxSliderButton"
+			quadTextureSprite = "GFX_SRA_setting_slider"
+			position = { x = 5 y = 0 }
+		}
+		guiButtonType = {
+			name = "listboxTrackButton"
+			quadTextureSprite = "GFX_SRA_setting_scroll_bg"
+			position = { x = 12 y = 12 }
+		}	
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "upButton"
+			quadTextureSprite = "GFX_ncp_scroll_down"
+			position = { x = 0 y = 0 }
+		}
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "downButton"
+			quadTextureSprite = "GFX_ncp_scroll_up"
+			position = { x = 0 y = 120}
+		}
+	}
+	scrollbarType = {
+		name = "SRA_SOGZ_menu_standardlistbox_slider"	
+		slider = "listboxSliderButton"
+		track = "listboxTrackButton"
+		leftbutton = "upButton"
+		rightbutton = "downButton"
+		size =  { x = 12 y = 12 }
+		position = { x = 0 y = 0 }
+		priority = 100			
+		borderSize = { x = 12 y = 12 }	
+		maxValue = 1
+		minValue = 0
+		stepSize = 0.1
+		startValue = 0
+		horizontal = 0
+		guiButtonType = {
+			name = "listboxSliderButton"
+			quadTextureSprite = "GFX_SRA_setting_slider"
+			position = { x = 5 y = 0 }
+		}
+		guiButtonType = {
+			name = "listboxTrackButton"
+			quadTextureSprite = "GFX_SRA_setting_scroll_bg"
+			position = { x = 12 y = 12 }
+		}	
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "upButton"
+			quadTextureSprite = "GFX_ncp_scroll_down"
+			position = { x = 0 y = 0 }
+		}
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "downButton"
+			quadTextureSprite = "GFX_ncp_scroll_up"
+			position = { x = 0 y = 120}
+		}
+	}
+	
+	##################################################################
+	# 界面
+	##################################################################
+
+	containerWindowType = {
+		name = "SRA_SOGZ_menu_window"
+		size = { width = 1600 height = 900 }
+		moveable = yes
+		orientation = center
+		origo = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_SRA_SOGZ_menu_background"
+			position = { x = 0 y = 0 }
+		}
+
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			format = "LEFT"
+			orientation = "UPPER_LEFT"
+			position = { x = 25 y = 85 }
+			maxWidth = 195
+			maxHeight = 425
+			alwaysTransparent = yes
+			scrollbartype = "SRA_mini_menu_desc_standardlistbox_slider"
+		}
+
+		### EVENT DIPLO ###
+		
+		
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			size = { width = 1600 height = 900 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "large_title_font_28"
+				position = { x = 0 y = 15 }
+				maxWidth = 1600
+				maxHeight = 50
+				format = CENTER
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={ name = "action_desc" font = "malgun_goth_24" position = { x = -1453 y = -12450 } } # hidden
+			
+			listboxType = {
+				name = "option_list"
+				position = { x = 650 y = 600 }
+				backGround=""
+				size = { x = 300 y = 300 }
+				spacing = 10
+				scrollbartype = "SRA_mini_menu_standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+		###########################
+		# 显示窗
+		###########################
+		effectButtonType = {
+			name = "SRA_SOGZ_menu_energy"
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_energy"
+			orientation = "UPPER_LEFT"
+			position = { x = 650 y = 500 }
+			no_clicksound = yes
+			font = "large_title_font_28"
+			text = "SRA_SOGZ_menu_energy_text"
+			effect = "SRA_SOGZ_menu_energy_effect"
+		}
+		effectButtonType = {
+			name = "SRA_SOGZ_menu_window"
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_window"
+			orientation = "UPPER_LEFT"
+			position = { x = 100 y = 50 }
+			effect = "SRA_SOGZ_menu_window_effect"
+		}
+		effectButtonType = {
+			name = "SRA_SOGZ_menu_window_1"
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_window_1"
+			orientation = "UPPER_LEFT"
+			position = { x = 100 y = 50 }
+			effect = "SRA_SOGZ_menu_window_effect"
+		}
+		###########################
+		# 子系统选择
+		###########################
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_1_1_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 100 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_1_1_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_1_2_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 100 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_1_2_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_1_3_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 100 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_1_3_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_2_1_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 300 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_2_1_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_2_2_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 300 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_2_2_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_2_3_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 300 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_2_3_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_3_1_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 500 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_3_1_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_3_2_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 500 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_3_2_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_3_3_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 500 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_3_3_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_4_1_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1000 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_4_1_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_4_2_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1000 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_4_2_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_4_3_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1000 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_4_3_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_5_1_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1200 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_5_1_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_5_2_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1200 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_5_2_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_5_3_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1200 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_5_3_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_6_1_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1400 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_6_1_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_6_2_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1400 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_6_2_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_6_3_box
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_box"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1400 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_6_3_box"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_1_1
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_1_1"
+			Orientation = "UPPER_LEFT"
+			position = { x = 100 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_1_1"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_1_2
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_1_2"
+			Orientation = "UPPER_LEFT"
+			position = { x = 100 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_1_2"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_1_3
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_1_3"
+			Orientation = "UPPER_LEFT"
+			position = { x = 100 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_1_3"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_2_1
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_2_1"
+			Orientation = "UPPER_LEFT"
+			position = { x = 300 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_2_1"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_2_2
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_2_2"
+			Orientation = "UPPER_LEFT"
+			position = { x = 300 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_2_2"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_2_3
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_2_3"
+			Orientation = "UPPER_LEFT"
+			position = { x = 300 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_2_3"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_3_1
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_3_1"
+			Orientation = "UPPER_LEFT"
+			position = { x = 500 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_3_1"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_3_2
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_3_2"
+			Orientation = "UPPER_LEFT"
+			position = { x = 500 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_3_2"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_3_3
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_3_3"
+			Orientation = "UPPER_LEFT"
+			position = { x = 500 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_3_3"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_4_1
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_4_1"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1000 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_4_1"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_4_2
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_4_2"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1000 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_4_2"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_4_3
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_4_3"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1000 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_4_3"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_5_1
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_5_1"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1200 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_5_1"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_5_2
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_5_2"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1200 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_5_2"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_5_3
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_5_3"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1200 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_5_3"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_6_1
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_6_1"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1400 y = 775 }
+			effect = "SRA_SOGZ_menu_sub_6_1"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_6_2
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_6_2"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1400 y = 650 }
+			effect = "SRA_SOGZ_menu_sub_6_2"
+		}
+		effectButtonType = {
+			name = SRA_SOGZ_menu_sub_6_3
+			quadTextureSprite = "GFX_SRA_SOGZ_menu_sub_6_3"
+			Orientation = "UPPER_LEFT"
+			position = { x = 1400 y = 525 }
+			effect = "SRA_SOGZ_menu_sub_6_3"
+		}
+		############################################
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+		############################################
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1453 y = -12450 }} # hidden
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long_caravaneer" position = { x = -1453 y = -12450 } }
+		buttonType = { name = "focus_button" position = { x = -1453 y = -12450 } spriteType = "GFX_fleetview_focus" }
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1453 y = -12450 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1453 y = -12450 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask"  } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden 
+		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1453 y = -12450 } } # hidden
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1453 y = -12450 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1453 y = -12450 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1453 y = -12450 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+	}
+}

@@ -1,0 +1,518 @@
+#无表情
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3011.1
+		}
+	}
+	text = SRA_Rokia_talk.3011.1.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3011.2
+		}
+	}
+	text = SRA_Rokia_talk.3011.2.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3011.3
+		}
+	}
+	text = SRA_Rokia_talk.3011.3.desc
+}
+#微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3012.1
+		}
+	}
+	text = SRA_Rokia_talk.3012.1.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3012.2
+		}
+	}
+	text = SRA_Rokia_talk.3012.2.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3012.3
+		}
+	}
+	text = SRA_Rokia_talk.3012.3.desc
+}
+#闭眼
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3013.1
+		}
+	}
+	text = SRA_Rokia_talk.3013.1.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3013.2
+		}
+	}
+	text = SRA_Rokia_talk.3013.2.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3013.3
+		}
+	}
+	text = SRA_Rokia_talk.3013.3.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3013.4
+		}
+	}
+	text = SRA_Rokia_talk.3013.4.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3013.5
+		}
+	}
+	text = SRA_Rokia_talk.3013.5.desc
+}
+#闭眼微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3014.1
+		}
+	}
+	text = SRA_Rokia_talk.3014.1.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 3014.2
+		}
+	}
+	text = SRA_Rokia_talk.3014.2.desc
+}
+#耀红黑星存在
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4001.1
+		}
+	}
+	text = SRA_Rokia_talk.4001.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4001.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 43
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4001.2
+		}
+	}
+	text = SRA_Rokia_talk.4001.2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4001.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 43
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4001.3
+		}
+	}
+	text = SRA_Rokia_talk.4001.3
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4001.3
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 43
+		}
+	}
+}
+
+#耀红黑星战斗
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4002.1
+		}
+	}
+	text = SRA_Rokia_talk.4002.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4002.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 42
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4002.2
+		}
+	}
+	text = SRA_Rokia_talk.4002.2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4002.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 42
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4002.3
+		}
+	}
+	text = SRA_Rokia_talk.4002.3
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4002.3
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 42
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4002.4
+		}
+	}
+	text = SRA_Rokia_talk.4002.4
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4002.4
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 42
+		}
+	}
+}
+#耀红黑星轨道研究
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4003.1
+		}
+	}
+	text = SRA_Rokia_talk.4003.1
+}
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4003.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 45
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4003.2
+		}
+	}
+	text = SRA_Rokia_talk.4003.2
+}
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4003.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 45
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4003.3
+		}
+	}
+	text = SRA_Rokia_talk.4003.3
+}
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4003.3
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 43
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4003.4
+		}
+	}
+	text = SRA_Rokia_talk.4003.4
+}
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4003.4
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 43
+		}
+	}
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4003.5
+		}
+	}
+	text = SRA_Rokia_talk.4003.5
+}
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4003.5
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 47
+		}
+	}
+}
+#耀红黑星探索星系
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4004.1
+		}
+	}
+	text = SRA_Rokia_talk.4004.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4004.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 42
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4004.2
+		}
+	}
+	text = SRA_Rokia_talk.4004.2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4004.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 42
+		}
+	}
+}
+
+
+#耀红黑星研究异常
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4005.1
+		}
+	}
+	text = SRA_Rokia_talk.4005.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4005.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 43
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_Rokia_talk
+			value = 4005.2
+		}
+	}
+	text = SRA_Rokia_talk.4005.2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_Rokia_talk
+				value = 4005.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 43
+		}
+	}
+}

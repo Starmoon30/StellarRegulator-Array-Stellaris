@@ -1,0 +1,16 @@
+#选择目标
+SRA_mini_menu_choose_button = {
+	potential = {
+		OR = {
+			FROM = { 
+				SRA_mini_menu_choose_button_potential = yes
+			}
+		}
+	}
+	allow = { always = yes }
+	effect = {
+		this = {
+			save_global_event_target_as = SRA_mini_menu_choose_button_target
+		}
+	}
+}

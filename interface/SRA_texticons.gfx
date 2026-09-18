@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_text_pc_SRA_chaos_star_sky"
+		texturefile = "gfx/portraits/environments/pc_SRA_chaos_star_sky.dds"
+	}
+	spriteType = {
+		name = "GFX_text_leader_trait_SRA_SD_Myth"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+	}
+}

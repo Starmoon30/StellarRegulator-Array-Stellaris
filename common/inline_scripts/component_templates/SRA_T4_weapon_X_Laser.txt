@@ -1,0 +1,51 @@
+
+	#key = "SRA_T4_weapon_X_Laser"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_SRA_T4_weapon_X_Laser"
+	icon_frame = 1
+	
+	firing_arc = 45
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 16384 max = 24576 }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 320.0
+	accuracy = 1
+	tracking = 1
+	shield_penetration = @SRA_weapon_penetration_4
+	armor_penetration = @SRA_weapon_penetration_4
+	#shield_damage = 4
+	#armor_damage = 4
+	#hull_damage = 3
+	power = -160
+	
+	# ai_weight = {
+	# 	weight = 0
+	# 	modifier = {
+	# 		weight = 10000
+	# 		OR = {
+	# 			has_civic = civic_SRAtechnology
+	# 			has_civic = civic_SRARociviaEmpire
+	# 		}
+	# 	}
+	# }
+	# prerequisites = { "tech_SRA_T4_weapon_TX_Laser" }
+	# component_set = "SRA_T4_weapon_X_Laser"
+	#tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	projectile_gfx = "SRA_xl_weapon_0_no_windup"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_7 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_7 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_7 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}

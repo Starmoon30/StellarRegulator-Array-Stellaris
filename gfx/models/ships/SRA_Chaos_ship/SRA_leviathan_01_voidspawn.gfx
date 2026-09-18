@@ -1,0 +1,32 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_leviathan_01_voidspawn_reanimated_mesh"
+		file = "gfx/models/ships/guardians/voidspawn/leviathan_01_voidspawn.mesh"
+
+		animation = { id = "idle"				type = "leviathan_01_voidspawn_idle_animation" }
+		animation = { id = "moving"				type = "leviathan_01_voidspawn_moving_animation" }
+		animation = { id = "hatching"			type = "leviathan_01_voidspawn_hatching_animation" }
+		animation = { id = "death"				type = "leviathan_01_voidspawn_death_animation" }
+		
+		meshsettings = {
+			name = "leviathan_01_voidspawnShape"
+			index = 0
+			texture_diffuse = "SRA_leviathan_01_voidspawn_reanimated_diffuse.dds"
+			texture_normal = "leviathan_01_voidspawn_reanimated_normal.dds"
+			texture_specular = "leviathan_01_voidspawn_reanimated_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+			#shader = "PdxMeshReanimatedLeviathan"
+		}
+
+		meshsettings = {
+			name = "hair_lowShape"
+			index = 0
+			texture_diffuse = "SRA_leviathan_01_voidspawn_reanimated_diffuse.dds"
+			texture_normal = "leviathan_01_voidspawn_reanimated_normal.dds"
+			texture_specular = "leviathan_01_voidspawn_reanimated_specular.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+			#shader = "AlphaBlendNoDepth_00"
+		}
+	}
+	
+}

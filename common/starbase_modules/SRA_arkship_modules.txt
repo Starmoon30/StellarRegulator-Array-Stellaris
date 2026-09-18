@@ -1,0 +1,240 @@
+SRA_Spear_Of_Galaxy_Zenith_Ark_engineering_bay = {
+	icon = "GFX_arkship_engineering_bay"
+	construction_days = 5
+	starbase_type = arkship
+	category = sm_naval_support_cat
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+
+	possible = {
+	}
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	station_modifier = {
+		show_only_custom_tooltip = no
+		megastructure_build_speed_mult = 1
+	}
+	planet_modifier = {
+		planet_building_capacity_add = 10
+	}
+
+	on_finished = {
+		set_ship_construction_type = starbase_shipyard
+	}
+	on_destroyed = {
+	}
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_shipwright
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_docking_bay = {
+	icon = "GFX_arkship_docking_bay"
+	construction_days = 5
+	starbase_type = arkship
+	category = sm_utility_cat
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 5000
+	}
+
+	station_modifier = {
+		ship_starbase_stockpile_collection_rate_mult = 1
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_habitation_module = {
+	icon = "GFX_arkship_habitation_module"
+	construction_days = 5
+	starbase_type = arkship
+	category = sm_utility_cat
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = 10
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_grand_archive = {
+	icon = "GFX_arkship_grand_archive"
+	construction_days = 5
+	starbase_type = arkship
+	category = sm_utility_cat
+
+	empire_limit = {
+		base = 1
+	}
+
+	potential = {
+		owner? = {
+			has_grand_archive = no
+			has_technology = tech_galactic_archivism
+		}
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	country_modifier = {
+		country_vivarium_max_capacity_add = 1000
+	}
+
+	on_finished = {
+		owner = {
+			if = {
+				limit = { has_country_flag = grand_archive_destroyed }
+				remove_country_flag = grand_archive_destroyed
+			}
+			set_country_flag = has_arkship_grand_archive_module
+			country_event = { id = grand_archive.4120 }
+			country_event = { id = grand_archive.4199 }
+			if = {
+				limit = { has_origin = origin_treasure_hunters }
+				country_event = {
+					id = grand_archive.8090
+					scopes = { from = prev.solar_system }
+				}
+			}
+		}
+	}
+	on_destroyed = {
+		owner = {
+			remove_country_flag = ga_destroyed_contains_space_fauna
+			if = {
+				limit = { num_vivarium_slots > 0 }
+				set_country_flag = ga_destroyed_contains_space_fauna
+				release_all_vivarium_fauna = { LOCATION = prev.solar_system }
+			}
+			set_country_flag = grand_archive_destroyed
+			remove_country_flag = has_arkship_grand_archive_module
+		}
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_hangar_bay = {
+	icon = "GFX_arkship_hangar_bay"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_utility_cat
+
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+		NOT = { has_starbase_building = SRA_Spear_Of_Galaxy_Zenith_Ark_remove_hangar_bay }
+	}
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	station_modifier = {
+		strike_craft_regeneration_mult = 4
+	}
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_hull = {
+	icon = "GFX_arkship_archaeo_armor"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_utility_cat
+
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+		NOT = { has_starbase_building = SRA_Spear_Of_Galaxy_Zenith_Ark_remove_hangar_bay }
+	}
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	station_modifier = {
+		ship_armor_mult = 1
+		ship_hull_mult = 1
+	}
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump = {
+	icon = "GFX_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_spinal_cat
+
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+	fits_on_slots = { spinal_mount_1 }
+
+	station_modifier = {
+		show_only_custom_tooltip = yes
+		catapult_spread_base = 1
+		catapult_range_base = 6400
+	}
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	custom_tooltip = sm_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_tt
+	ai_weight = {
+		weight = 100
+	}
+}
+

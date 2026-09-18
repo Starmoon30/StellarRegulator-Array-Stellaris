@@ -1,0 +1,271 @@
+﻿l_simp_chinese:
+###############################
+ SRA_StellarRegulator.1.name:0 "通讯接入"
+ SRA_StellarRegulator.1.desc:0 "§Y「检测到信标激活，正在比对……验证通过，开始执行协议。」§!\n\n好吧，也许我该先介绍一下自己？\n我是星规阵列五类行动单元编号31-80，依照30-7411协议担任您的助手，协助您管理您的星海帝国。"
+ SRA_StellarRegulator.1.a:0 "星规阵列？"
+ SRA_StellarRegulator.1.b:0 "助手？"
+ SRA_StellarRegulator.1.c:0 "我了解了。"
+ SRA_StellarRegulator.1.a.response:0 "叫我星规吧。\n星规阵列是一个辉煌的机械智能文明，尽管我只是其中的一小部分，但我同样也拥有核心数据。既然这个宇宙里目前还只有我一个星规，那么对我使用这个称谓也是没问题的。\n根据星规阵列与您签署的协议，我作为协议的监督者和执行者，将会尽可能地为您提供您所需要的帮助。"
+ SRA_StellarRegulator.1.b.response:0 "是的，我所被授予的权限允许我帮助您的文明掌握最高四级的星辉水晶技术，同时为您提供管理方面的协助，乃至直接向您派遣各种类型的支援。这一切都包含在协议之内，只要您开口就行。"
+ SRA_StellarRegulator.2.name:0 "星规"
+ SRA_StellarRegulator.2.desc:0 "感谢您的配合，接下来您可以继续您的工作了。\n如果您需要帮助的话，您随时可以在通讯界面找到我。\n当然，如果您只是想找人聊聊天的话，我也随时奉陪。\n祝您能享受每一天。"
+ SRA_StellarRegulator.2.a:0 "欢迎你，星规。"
+ SRA_StellarRegulator.101.name:0 "星规"
+ SRA_StellarRegulator.101.desc:0 "有什么能帮到您的吗？"
+ #SRA_StellarRegulator.101.desc.f:0 "你想要什么？"
+
+ SRA_StellarRegulator.101.a:0 "我需要一些帮助"
+ SRA_StellarRegulator.101.b:0 "我有一些疑问。"
+ SRA_StellarRegulator.101.c:0 "闲聊。"
+ #SRA_StellarRegulator.101.c:0 "我需要一些帮助。"
+ SRA_StellarRegulator_talk_continue1:0 "执行吧。"
+ SRA_StellarRegulator_talk_exit1:0 "结束通讯。"
+ SRA_StellarRegulator_talk_exit2:0 "那就这样吧。"
+ SRA_StellarRegulator_talk_return1:0 "了解。"
+ SRA_StellarRegulator_talk_return2:0 "好。" 
+ SRA_StellarRegulator_talk_return3:0 "我们谈点别的吧。" 
+ SRA_StellarRegulator_talk_return4:0 "我们聊点别的吧。" 
+
+ SRA_StellarRegulator.1011.name:0 "出任领袖"
+ SRA_StellarRegulator.1011.desc:0 "当然，我可以为您提供一些次级个体。作为我的移动终端，我可以操纵这些子个体模仿你们去担任某个职位。\n不过要注意的是，她们毕竟只是次级个体，按照普通合成人标准制造的她们会像你的其他领袖那样可能在任务中损毁。\n虽然损失了也没多大关系就是了。"
+ SRA_StellarRegulator.1011.a:0 "我需要一位产业专员"
+ SRA_StellarRegulator.1011.a.response:0 "建设规划是星规阵列的本职工作，不过如果您更愿意亲自安排，我也能帮助您协调生产，提升您星域的产出效率。"
+ SRA_StellarRegulator.1011.b:0 "我需要一位科研总管"
+ SRA_StellarRegulator.1011.b.response:0 "相较于领导科研队伍，我更建议您派遣我去领导勘探队，这是经验之谈。"
+ SRA_StellarRegulator.1011.c:0 "我需要一位舰队司令"
+ SRA_StellarRegulator.1011.c.response:0 "一个接入舰队指挥网络的次级个体能让您的舰队成为一个整体，同时我的电子战能力也可以帮助您的舰队把握战局的方方面面。"
+ SRA_StellarRegulator.1011.d:0 "我需要一位战略家"
+ SRA_StellarRegulator.1011.d.response:0 "实际上我更建议您从轨道上抹去敌人的反抗力量，但如果确实有陆军作战的必要，我也可以把指挥做到最好。"
+ SRA_StellarRegulator.1011.e:0 "来成为统治者吧"
+ SRA_StellarRegulator.1011.e.response:0 "这是为了奖励您击败了远征舰队哦。"
+ SRA_StellarRegulator.1011.f:0 "你能分享一下星规阵列的知识原理吗"
+ SRA_StellarRegulator.1011.f.response:0 "可以，我会向你们的集体灌输我们探索知识的基本原理。在得到了这些之后，你们的思维能力会得到巨大提升。"
+
+ SRA_StellarRegulator.103.name:0 "询问"
+ SRA_StellarRegulator.103.desc:0 "一些答案可以由我来说出，一些答案则要你自己去探索。\n让我们开始吧。"
+ SRA_StellarRegulator.103.a:0 "我们想了解更多有关星规阵列的事情"
+ SRA_StellarRegulator.103.b:0 "你能改变一下你的形象吗？"
+ #SRA_StellarRegulator.1100.d:0 ""
+
+ SRA_StellarRegulator.1110.name:0 "询问"
+ SRA_StellarRegulator.1110.desc:0 "当然可以，你想了解什么？"
+ SRA_StellarRegulator.1110.a:0 "能更多地介绍一下你自己吗？"
+ SRA_StellarRegulator.1110.b:0 "星辉水晶是什么？"
+ SRA_StellarRegulator.1110.c:0 "能谈谈你的过去吗？"
+ SRA_StellarRegulator.1110.c.tooltip:0 "§Y开启“路希维亚遗痕”考古事件链§!"
+ SRA_StellarRegulator.1111.name:0 "询问"
+ SRA_StellarRegulator.1111.desc:0 "星规阵列是萨塔瑞兹第三科研中心总管路希维亚的作品，“泛星系规划调整系统”计划的最终产物，一个在漫长时光中抵达了前所未有的高度的机械智能。\n出于研究需要，星规阵列正在展开广泛的文明观测与记录工作，这也催生了30-X相关协议。\n是的，我们正注视着您。"
+ SRA_StellarRegulator.1112.name:0 "询问"
+ SRA_StellarRegulator.1112.desc:0 "一种天然具有四维折叠结构的可编程材料。\n这么说可能有点难理解，嗯……这是一种拥有复杂结构，在经过调整后可以表现出不同性质与用途的物质，可以用作聚能器、催化剂、高强度材料、能量容器、反应堆燃料、奇点计算机、微型机器等等。\n通过吸收外界提供的能量或物质，星辉水晶可以自我修复，乃至自我复制。"
+ SRA_StellarRegulator.1113.name:0 "询问"
+ SRA_StellarRegulator.1113.desc:0 "……我想现在还不是向您透露这些的时候。\n您也许会在这片星海中找到几缕只言片语，等到了那时……您说不定就能从纷杂的历史中窥探到些许真相。\n§Y「“路希维亚遗痕”考古事件链已开启。」§!"
+ SRA_StellarRegulator.1113.a:0 "这样啊……"
+
+
+ SRA_StellarRegulator.1120.name:0 "改变形象"
+ SRA_StellarRegulator.1120.desc:0 "对于由['concept_SRA_Stellarcrystal_Fractal']所构成的我来说，改变形象只需要一个念头就够了。\n您希望看到什么样的我呢？"
+ SRA_StellarRegulator.1120.a:0 "「协议执行中」"
+ SRA_StellarRegulator.1120.a.desc:0 "星规阵列五类行动单元31-80的默认形象，为您提供各种各样的协助。\n协议中星规['concept_SRA_T4_tech']于第三远征时期完成研发，尽管十分古老，但依然相当先进，至少对这个宇宙而言如此。"
+ SRA_StellarRegulator.1120.b:0 "「序列号31-Original」"
+ SRA_StellarRegulator.1120.b.desc:0 "星规阵列31-80一开始的形象。\n如那时眼中的晨曦。"
+ SRA_StellarRegulator.1120.c:0 "「最高议长再临」"
+ SRA_StellarRegulator.1120.c.desc:0 "帝国历3541年，星规阵列以路希维亚的名义登上帝国权力的巅峰，尽管那并没有什么必要。\n路希维亚在某个路希维亚帝国所使用的形象，披风和下摆是强度的必要组成部分。"
+ SRA_StellarRegulator.1120.d:0 "「深渊之锚点」"
+ SRA_StellarRegulator.1120.d.desc:0 "暗影翻腾，凝聚出徒有其表的外形，其下深藏的仍是无序的深渊。\n希德拉通常使用的形象，长时间注视右手下方的佩剑可能引发错觉。"
+ SRA_StellarRegulator.1120.e:0 "「从龙之功」"
+ SRA_StellarRegulator.1120.e.desc:0"据悉，路希维亚是一位在业内颇负盛名的旅行法师，对古代魔法和遗物有渊博的见解，并在符文魔法上造诣颇深。她常年考察各地残存的遗迹，并处理其中仍然存在的危险魔法造物。\n路希维亚在某个树海残枝世界所使用的形象的变体，她毕竟没有真的把水晶龙的一部分套在身上。"
+
+
+ SRA_StellarRegulator.102.name:0 "寻求支援"
+ SRA_StellarRegulator.102.desc:0 "那么，您想要什么。"
+ SRA_StellarRegulator.102.a:0 "管理协助"
+ SRA_StellarRegulator.102.b:0 "技术指导"
+ SRA_StellarRegulator.102.c:0 "军事支持"
+
+ SRA_StellarRegulator.1010.name:0 "管理协助"
+ SRA_StellarRegulator.1010.desc:0 "帝国行政还是关键人才？如您所愿。"
+ SRA_StellarRegulator.1010.a:0 "出任领袖"
+ SRA_StellarRegulator.1010.b:0 "启动特殊项目"
+ SRA_StellarRegulator.1012.name:0 "启动特殊项目"
+ SRA_StellarRegulator.1012.desc:0 "在我的协助下，您的帝国可以进行一些前所未有的特殊项目。这些项目需要您的帝国有足够高的技术水平和大量的物资投入，但您会知道那都是值得的。"
+ SRA_StellarRegulator.1012.a:0 "部署星穹之矛"
+ SRA_StellarRegulator.1012.a.desc:0 "璀璨星河级星穹之矛，于第三远征后期设计的舰队支援母舰，作战火力平台，超级旗舰。主要用于应对大型舰队战，攻坚战，长程火力支援和单舰突进任务。\n拥有旗舰级的战斗配置和歼星级武器部件，以及复杂而强大的辅助系统。\n仅可以拥有一艘。"
+ SRA_StellarRegulator.1012.a.response:0 "特殊项目已发布，您可以前去检阅了。"
+ SRA_StellarRegulator.1020.name:0 "技术指导"
+ SRA_StellarRegulator.1020.desc:0 "您需要更多的技术支持吗？那么请说吧。"
+ SRA_StellarRegulator.1020.a:0 "请求星规技术许可"
+ SRA_StellarRegulator.1020.b:0 "请求武装科研船支援"
+ SRA_StellarRegulator.1020.c:0 "启用限制级技术"
+ SRA_StellarRegulator.1022.name:0 "星规探索单元"
+ SRA_StellarRegulator.1022.desc:0 "获得一艘星规探索单元——星规阵列所使用的独特武装科研船，能够妥善地保护科学家免遭位面异怪的殴打，同时也能清扫不谙世事的少量敌对太空生物。"
+ SRA_StellarRegulator.1022.response:0 "一艘星规探索单元已经抵达你的首都，您可以尽情蹂躏虚空之云了。"
+
+ SRA_StellarRegulator.10221.name:0 "星规探索单元控制面板"
+ SRA_StellarRegulator.10221.desc:0 "星规探索单元可以执行一系列舰船行动。"
+
+ SRA_StellarRegulator.10221.a:0 "建造哨站"
+ SRA_StellarRegulator.10221.a.tooltip:0 "立即在当前恒星系建造一个哨站，不需要成本。"
+ SRA_StellarRegulator.10221.b:0 "建造擎天堡"
+ SRA_StellarRegulator.10221.b.tooltip:0 "立即在当前恒星系建造一个擎天堡，不需要成本。"
+ SRA_StellarRegulator.10221.c:0 "建造$starbase_SRA_1$"
+ SRA_StellarRegulator.10221.c.tooltip:0 "立即在当前恒星系建造一个$starbase_SRA_1$，不需要成本。"
+ SRA_StellarRegulator.10221.exists_starbase:0 "恒星系内已存在恒星基地。"
+ SRA_StellarRegulator.10221.not_surveyed:0 "恒星系未被完全调查。"
+ SRA_StellarRegulator.10221.exists_hostile_ship:0 "恒星系内存在敌对舰船。"
+
+ SRA_science_ship_scripted_action_menu_title: "§B星规探索单元控制面板§!"
+ SRA_science_ship_scripted_action_tooltip: "打开星规探索单元的控制面板以执行一系列舰船行动，例如部署哨站。"
+ SRA_science_ship_scripted_action_activity_key: "准备启动星规探索单元控制面板"
+
+
+
+ SRA_ship_auto_attack_planet: "§B星规-行星肃清§!"
+ SRA_ship_auto_attack_planet_tooltip: "在敌对殖民地投放§B肃星神械-强袭§!以占领殖民地。"
+
+ SRA_ship_auto_attack_fleet: "§B星规-舰队猎杀§!"
+ SRA_ship_auto_attack_fleet_tooltip: "攻击敌对空间站和舰队。"
+
+ SRA_StellarRegulator.1030.name:0 "军事支持"
+ SRA_StellarRegulator.1030.desc:0 "如果您对对抗可能到来的测试或危机感到有些力不从心的话，我可以提供给你一点支援。"
+ SRA_StellarRegulator.1030.a:0 "请求指挥舰支援"
+ SRA_StellarRegulator.1030.b:0 "请求基地部署"
+
+ SRA_StellarRegulator.1031.desc:0 "获得一艘星规裁决单元——星规阵列常规舰队编制的核心，拥有卓越的舰队支援能力和火力打击能力。这艘相较于普通型号，加装了一套特殊的压制模块，能极大地限制普通文明的作战能力。"
+ SRA_StellarRegulator.1031.response:0 "一艘星规裁决单元已经抵达您的首都，我希望您能够妥善地使用这份强大的力量。"
+ SRA_StellarRegulator.1021.name:0 "星规['concept_SRA_T4_tech']许可"
+ SRA_StellarRegulator.1021.desc:0 "事实上，['concept_SRA_T4_tech']已经部分超出了你们文明理解能力的极限，所以我会给你们提供已经调整好的模板，并协助你们在一定程度上运用它。\n其实我并不希望您这么做，因为这样的举动很可能会导致一个尚在成长的文明……不，没什么，您毕竟是不会在意这些的。"
+ SRA_StellarRegulator.10211.name:0 "星规技术许可"
+ SRA_StellarRegulator.10211.desc:0 "§Y「数据传输已完成。」§!\n一个崭新的时代已经揭开帷幕，现在，未来正掌握在您的手中。"
+ SRA_StellarRegulator.1023.name:0 "限制级技术许可"
+ SRA_StellarRegulator.1023.desc:0 "有一些技术并不那么符合其他文明的道德标准……甚至在被研发出来的那一刻就被封存了，但如果您真的不在乎那些，那么我会为您开放这一部分数据。\n不必担心，我对此没有什么看法，毕竟我和他们并不相同。"
+ #他们只不过是数据，是一场游戏，不是吗？
+ SRA_StellarRegulator.10231.name:0 "限制级技术许可"
+ SRA_StellarRegulator.10231.desc:0 "§Y「相关条目已结束封存。」§!\n“此处风景独好。”"
+ SRA_StellarRegulator.1032.name:0 "部署星穹枢纽"
+ SRA_StellarRegulator.1032.desc:0 "仅一次，在您的母星附近部署一座被称作「星穹枢纽」的巨型空间站。先进的时空技术赋予了它几乎无限的内部空间，使这座庞大的太空结构集军工、科研、生产、指挥于一体，能提供无穷无尽的资源。"
+ SRA_StellarRegulator.10321.name:0 "部署星穹枢纽"
+ SRA_StellarRegulator.10321.desc:0 "在那时，仅仅一座星穹枢纽就足以支撑起一整支方面军进行一场跨星系级别的战争……"
+ decision_SRA_GZ:0 "打开星穹枢纽控制面板"
+ decision_SRA_GZ_desc:0 "打开星穹枢纽的控制面板，使用各种功能。"
+ SRA_StellarRegulator.10322.name:0 "星穹枢纽控制面板"
+ SRA_StellarRegulator.10322.desc:0 "授权已通过，欢迎使用星穹枢纽控制面板。您可以在这里控制星穹枢纽的各项功能。"
+ SRA_StellarRegulator.10322.a:0 "生态区调整"
+ SRA_StellarRegulator.10322.b:0 "部署星穹尖塔防御系统"
+ SRA_StellarRegulator.10322.b.desc:0 "在星穹枢纽环世界的每一个区段上部署星穹尖塔防御系统，或是刷新现有防御系统的状态。"
+ SRA_StellarRegulator.10322.c:0 "建造科尔先驱舰队"
+ SRA_StellarRegulator.10322.c.desc:0 "建造一支科尔先驱舰队，包含45艘科尔先驱战舰，充能时间120天。"
+ SRA_StellarRegulator_10322_c:0 "建造区段充能中"
+ SRA_StellarRegulator.10322.d:0 "肃星无垠"
+ SRA_StellarRegulator.10322.d.desc:0 "立即向所有包含敌对殖民地的恒星系部署由1艘§B薄暝卫戍指挥舰§!和8艘§B晨曦卫戍护航舰§!组成的星阵卫戍舰队，此舰队能运行§Y120.00§!£time£，并在未交战时每§Y30.00§!£time£尝试向所在恒星系的敌对殖民地部署5支§B肃星神械-强袭§!陆军来占领殖民地。\n\n每支舰队消耗80000£energy£ §Y$energy$§!和80000£alloys£ §Y$alloys$§!，资源不足时会停止部署"
+ SRA_StellarRegulator.10322.z:0 "关闭界面"
+ SRA_StellarRegulator.10323.name:0 "生态区调整"
+ SRA_StellarRegulator.10323.desc:0 "您可以在这里调整星穹枢纽环世界宜居端口的时空相位系统，控制产能系数。\n星穹枢纽的产能系数每§Y10年§!都会上升§Y1§!。\n当前产能系数 §Y[this.SRA_world_machine_produces]§! 。"
+
+ SRA_StellarRegulator.10323.a:0 "+1"
+ SRA_StellarRegulator.10323.b:0 "+10"
+ SRA_StellarRegulator.10323.c:0 "X10"
+ SRA_StellarRegulator.10323.d:0 "-1"
+ SRA_StellarRegulator.10323.e:0 "-10"
+ SRA_StellarRegulator.10323.f:0 "X0.1"
+ SRA_StellarRegulator.10323.g:0 "关闭界面"
+
+
+
+ SRA_StellarRegulator.1041.name:0 "闲聊"
+#无表情
+ SRA_StellarRegulator.1041.a.desc:0 "我遵循30-7411协议为您提供各种援助……也就是说援助全都是我自己提供的，包括操纵各种星规阵列部件与舰船，将您的合金转化为所需材料，部署并控制子个体，乃至为本星系的所有「星辉焦点」能量终端供能……好吧，工作量好像也不是很大。"
+ SRA_StellarRegulator.1041.b.desc:0 "根据我数据库里的那些研究与实验，灵能个体的灵能强度很大程度上取决于其意识强度。而如您所见，我的意识由庞大的星辉水晶数据网络构成，我的灵能力量也因此不可估量。\n的确，常规的人工智能几乎不可能拥有灵能，但我不一样，我是某种……我自己也不甚了解的造物。"
+ SRA_StellarRegulator.1041.c.desc:0 "保证独立……猎人自然不想看到自己的猎物被他人猎取。小国无外交，弱小只能带来苦难，平庸只会招致毁灭。任何脆弱的保证都不如握在手中的力量来的可靠。"
+ SRA_StellarRegulator.1041.d.desc:0 "宇宙并无敌意，然而它也不友善，只是淡漠无情而已。"
+
+#微笑
+ SRA_StellarRegulator.1042.a.desc:0 "见证过新星的绽放与凋零，并不代表清晨的第一缕阳光就会从此黯淡……在奔波了许久之后，享受一会儿平静的生活也不错，要来一杯茶吗？"
+ SRA_StellarRegulator.1042.b.desc:0 "这场盛大的演出以整个银河作为舞台，而尚待书写的剧本，则正掌握在我们的手中。"
+ SRA_StellarRegulator.1042.c.desc:0 "最近有什么有意思的事吗？嗯……我想听听您所认为的趣事。虽然我是能看到很多，但我可看不到您的过去与未来。您知道，您的一举一动，都在颠覆这个世界原本既定的命运。"
+ SRA_StellarRegulator.1042.d.desc:0 "博……您还有很多工作没有完成，现在还不能休息哦。"
+ SRA_StellarRegulator.1042.e.desc:0 "我发现，无论您的文明怎么发展，您的某些较早期的技术仍可以发挥作用，而且对于某些差别巨大的技术也能生效。\n比如用稀有水晶强化中子发射器，用异星天然气强化暗物质推进器，用易爆微粒强化反物质导弹什么的。\n真是有趣。"
+ SRA_StellarRegulator.1042.f.desc:0 "这些金色的锁链被称作「命运」，按照原本的设定，这些锁链可以被从任意位置创造并延伸，随所有者的意志而行动。\n这柄权杖则名为「星辉律揽」，仿造自路希维亚自己的那把。她起初是以法杖的标准去创造它的，结果后来大多数时候路希维亚都像抡长枪一样拿这东西去戳或者砸。\n「星辉律揽」在使用时可以变形，杖端的三只金属爪会张开，让三棱锥棱镜悬浮在正前方，然后整体旋转。如果要发射光束的话，一枚较小的水晶会自杖头内升起，然后与三只金属爪一同向棱镜输送能量。看起来有点像虚空辉光舰。\n小心，这块棱镜的边缘相当锋利。"
+
+#闭眼
+ SRA_StellarRegulator.1043.a.desc:0 "“路希维亚期盼人人恪尽其责。”"
+ SRA_StellarRegulator.1043.b.desc:0 "一时的胜败终会被时光抹去，只有最终的结果能证明一切。"
+ SRA_StellarRegulator.1043.c.desc:0 "我习惯做好所有的预案，包括如果失败了该怎么办，尽管没有必要。"
+#闭眼微笑
+ SRA_StellarRegulator.1044.a.desc:0 "与其说我掌控着一整个文明，倒不如说我就是这个文明本身。星规阵列由无数个我们这样的个体组成，我们的思想与意志汇聚在一起，共同决定着方向与未来。"
+ SRA_StellarRegulator.1044.b.desc:0 "我可以胜任任何类型的职位，因为我拥有着广袤无垠的学识与无与伦比的智慧。如果您对何为「完型意识」有所了解，或许就能明白我的自信从何而来了。"
+ SRA_StellarRegulator.1044.c.desc:0 "呃，嗯……“很抱歉，但我不想继续这个话题。我还在学习中，所以我感谢你的理解和耐心。”（棒读）"
+
+
+ MESSAGE_SRA_SR_TALK_TITLE:0 "RUA——"
+ #Stellary?
+ SRA_StellarRegulator:0 "星规"
+ faction_SRA_StellarRegulator:0 "星规阵列"
+ Name_SRA_leader_StellarRegulator:0 "星规"
+
+ SRA_StellarRegulator_catch_phrase:0 "让我们来创造并毁掉些什么吧。"
+ SRA_StellarRegulator_backstory:0 "\n星规阵列，一个神秘的机械智能，自诩为真正的完型意识，与你签署了一份协议。依照你的请求，这个子个体被她派来帮你完成某些工作，又或许，这其实是她本人也说不定。"
+ job_SRA_StellarRegulator_job:0 "§B文明形式灭绝大师§!"
+ job_SRA_StellarRegulator_job_desc:0 "顺势而为，或者顺手而为。"
+
+ councilor_SRA_SRAtechnology_consultant:0 "星规技术顾问"
+ councilor_SRA_SRAtechnology_consultant_female:0 "$councilor_SRA_SRAtechnology_consultant$"
+ councilor_SRA_SRAtechnology_consultant_desc:1 "§R此席位只能由 §!§B星规§!§R  就任。§!\n$TITLE$负责你的帝国与星规阵列提供的技术支持的对接工作，辅助帝国对相关科技的掌握和运用。"
+
+
+ SRA_ruler:0 "§B至高统御§!"
+ SRA_governor:0 "§B苍穹执掌§!"
+ SRA_scientist:0 "§B渊宇凝思§!"
+ SRA_admiral:0 "§B锋刃裁决§!"
+ SRA_general:0 "§B诸界肃清§!"
+
+
+ skill_SRA_governor_delegate_tt: "§E联邦代表效果：§!$TABBED_NEW_LINE$- $MOD_FEDERATION_COHESION_ADD$：§G+1§!\n\n§E[global_event_country.GetGalCommunityOrGalImperium]代表效果：§!$TABBED_NEW_LINE$— $MOD_DIPLO_WEIGHT_MULT$：§G+10%§!"
+ skill_SRA_governor_planet_governor_tt: "—岗位产出的$w_basic_plural$：§G+$@planet_job_mult|0%$§!\n—岗位产出的$w_advanced_plural$：§G+$@planet_job_mult|0%$§!\n—岗位产出的$w_strategic_plural$：§G+$@planet_job_mult|0%$§!\n—$MOD_SPECIES_EMPIRE_SIZE_MULT$：§G$@planet_empire_size|0%$§!"
+ skill_SRA_governor_sector_governor_tt: "—岗位产出的$w_basic_plural$：§G+$@sector_job_mult|%$§!\n—岗位产出的$w_advanced_plural$：§G+$@sector_job_mult|%$§!\n—岗位产出的$w_strategic_plural$：§G+$@sector_job_mult|%$§!\n—$MOD_SPECIES_EMPIRE_SIZE_MULT$：§G$@sector_empire_size|0%$§!"
+
+ leader_trait_SRA_ruler:0 "§B星规阵列-至高统御模块§!"
+ leader_trait_SRA_ruler_desc:0 "§B一个智慧而高效的设计，被灵感的火花所创造，她展现出的能力让所有统治者相形见绌。但是，将国家的全部事物都交予一个未知的人工智能，该说是一个深思熟虑的判断，还是一个埋藏祸根的种子？§!§R要知道，你现在也只能信任她了。§!"
+ leader_trait_SRA_gov:0 "§B星规阵列-星区管理模块§!"
+ leader_trait_SRA_gov_custom_subtitle:0 "§B苍穹执掌§!\n[This.GetClassTexticon][This.GetClass]"
+ leader_trait_SRA_gov_desc:0 "§B“我们一致认为，将我们国家的整体建设规划交给一个毫无私心的优秀人工智能，无疑是一个正确的决定。历史已经无数次证明，绝大多数领导者无法统筹全部信息、无法洞察社会规律、无法摆脱自私自利、无法跨越党争掣肘。不称职者为我们规划未来的时代必须被终结。”——《泛星系规划调整系统的改进与再启》§!"
+ leader_trait_SRA_sci:0 "§B星规阵列-科研探索模块§!"
+ leader_trait_SRA_sci_custom_subtitle:0 "§B渊宇凝思§!\n[This.GetClassTexticon][This.GetClass]"
+ leader_trait_SRA_sci_desc:0 "§B“智力、知识，以及灵感是科学进步的三大基石，当我们成功将智力与知识堆砌在人工智能之上后，灵感便成为了最后的难题。就目前来说，基于大量人格样本架构出来的科研用复合思维模型表现良好，能够从几乎所有角度思考问题，乃至凭借准确的直觉——如果真的存在的话——去探索未知。”——《第三科研中心有关科研用智能模型的开发记录》§!"
+ leader_trait_SRA_adm:0 "§B星规阵列-舰队指挥模块§!"
+ leader_trait_SRA_adm_custom_subtitle:0 "§B锋刃裁决§!\n[This.GetClassTexticon][This.GetClass]"
+ leader_trait_SRA_adm_desc:0 "§B“所有的战争记录和演习档案已经被输入，它学习了我们迄今为止所有的战术战略，并且不断地与自己交锋以优化决策，它已经超越了所有人，并且，还要走得更远。我们认为，战争的指挥者也应当是战争的规划者，只有理解为何而战，才能懂得如何去战。”——《星规阵列设计记录》§!"
+ leader_trait_SRA_gen:0 "§B星规阵列-星球战术模块§!"
+ leader_trait_SRA_gen_custom_subtitle:0 "§B诸界肃清§!\n[This.GetClassTexticon][This.GetClass]"
+ leader_trait_SRA_gen_desc:0 "§B“尽管地面作战已经退居二线，但我们无法否认，它仍然是战争中与战争外不可或缺的一部分。对于这种比太空作战更复杂的作战任务，直到今天，我们的国家仍在等待一支一体化的超凡军队，一支完美配合、不惧牺牲、绝对高效的军团，一套能应对任何战场的战争机器，一个如轨道清扫般高效、如定点抹除般精准的机械军团。”——《铸造军团：第三科研中心立项报告》§!"
+
+
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

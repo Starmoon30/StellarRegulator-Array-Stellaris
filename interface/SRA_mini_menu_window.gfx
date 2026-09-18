@@ -1,0 +1,32 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_SRA_mini_menu_window_bg"
+		texturefile = "gfx/interface/SRA_mini_menu/SRA_mini_menu_window.dds"
+		borderSize = { x=449 y=540 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	#spriteType = {
+	#	name = "GFX_SRA_mini_menu_above_elements"
+	#	texturefile = "gfx/interface/SRA_mini_menu/SRA_mini_menu_above_elements.dds"
+	#	alwaysTransparent = yes
+	#}
+	# 按钮
+	spriteType = {
+		name = "GFX_SRA_mini_menu_button"
+		texturefile = "gfx/interface/SRA_mini_menu/SRA_mini_menu_button.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_mini_menu_choose_button"
+		texturefile = "gfx/interface/SRA_mini_menu/SRA_mini_menu_choose_button.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	#spriteType = {
+	#	name = "GFX_SRA_mini_menu_close_button"
+	#	texturefile = "gfx/interface/SRA_mini_menu/SRA_mini_menu_close_button.dds"
+	#	noOfFrames = 3
+	#	effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	#}
+}

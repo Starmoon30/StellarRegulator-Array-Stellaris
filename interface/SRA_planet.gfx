@@ -1,0 +1,14 @@
+spriteTypes = {
+	###殖民地类型
+	spriteType = { name = "GFX_SRA_colony_type_world_machine" texturefile = "gfx/interface/icons/colony_types/SRA_colony_type_world_machine.dds" }
+	###星球类型
+	spriteType = { name = "GFX_planet_type_SRA_city" texturefile = "gfx/interface/icons/planet_types/planet_type_SRA_city.dds" }
+	spriteType = { name = "GFX_planet_type_SRA_city_big" texturefile = "gfx/interface/icons/planet_types/planet_type_SRA_city_big.dds" }
+	spriteType = { name = "GFX_planet_type_SRA_chaos_star" texturefile = "gfx/interface/icons/planet_types/planet_type_SRA_chaos_star.dds" }
+	spriteType = { name = "GFX_planet_type_SRA_chaos_star_big" texturefile = "gfx/interface/icons/planet_types/planet_type_SRA_chaos_star_big.dds" }
+
+	spriteType = {
+		name = "GFX_SRA_chaos_star_background"
+		textureFile = "gfx/interface/planetview/SRA_chaos_star_background.dds"
+	}
+}

@@ -1,0 +1,841 @@
+namespace = SRA_Rocivia_Legacy
+country_event = {
+	id = SRA_Rocivia_Legacy.1
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { 
+		is_ai = no 
+	}
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_ringworld = no
+				is_star = no
+				is_colony = no
+				is_colonizable = no
+				is_capital = no
+				is_asteroid = no
+				is_astral_scar = no
+				NOT = { exists = archaeological_site }
+			}
+			carrier_event = { id = SRA_Rocivia_Legacy.2 days = 10 }
+		}
+	}
+}
+
+carrier_event = {
+	id = SRA_Rocivia_Legacy.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		change_pc = pc_frozen
+		create_archaeological_site = SRA_Rocivia_Legacy_1
+	}
+}
+
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.3
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.3.name"
+	desc = "SRA_Rocivia_Legacy.3.desc"
+	picture = GFX_evt_frozen
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.3.a
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.4
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.4.name"
+	desc = "SRA_Rocivia_Legacy.4.desc"
+	picture = GFX_evt_outpost
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.4.a
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.5
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.5.name"
+	desc = "SRA_Rocivia_Legacy.5.desc"
+	picture = GFX_evt_derelict_interior
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.5.a
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.6
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.6.name"
+	desc = "SRA_Rocivia_Legacy.6.desc"
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.6.a
+		hidden_effect = {
+			owner = {
+				country_event = { id = SRA_Rocivia_Legacy.611 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Rocivia_Legacy.611
+	title = "SRA_Rocivia_Legacy.611.name"
+	desc = "SRA_Rocivia_Legacy.611.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	option = {
+		name = SRA_Rocivia_Legacy.611.a
+	}
+}
+fleet_event = {
+	id = SRA_Rocivia_Legacy.7
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.7.name"
+	desc = "SRA_Rocivia_Legacy.7.desc"
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.7.a
+	}
+}
+fleet_event = {
+	id = SRA_Rocivia_Legacy.8
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.8.name"
+	desc = "SRA_Rocivia_Legacy.8.desc"
+	picture = GFX_evt_ancient_databank
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.8.a
+		owner = { add_modifier = { modifier = SRA_Rocivia_Legacy_Buff_1 } }
+	}
+}
+fleet_event = {
+	id = SRA_Rocivia_Legacy.9
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.9.name"
+	desc = "SRA_Rocivia_Legacy.9.desc"
+	picture = GFX_evt_small_space_battle
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.9.a
+		hidden_effect = {
+			owner = {
+				give_specimen = { key = SRA_specimen_Rocivia_Legacy_1 }
+				country_event = { id = SRA_Rocivia_Legacy.11 days = 10 }
+			}
+		}
+	}
+}
+#2号
+
+country_event = {
+	id = SRA_Rocivia_Legacy.11
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			random_planet_within_border = {
+				limit = {
+					is_ringworld = no
+					is_star = no
+					is_colony = no
+					is_colonizable = no
+					is_capital = no
+					is_asteroid = no
+					is_astral_scar = no
+					NOT = { exists = archaeological_site }
+				}
+				change_pc = pc_relic
+				create_archaeological_site = SRA_Rocivia_Legacy_2
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.12
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.12.name"
+	desc = "SRA_Rocivia_Legacy.12.desc"
+	picture = GFX_evt_relic_world
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.12.a
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.13
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.13.name"
+	desc = "SRA_Rocivia_Legacy.13.desc"
+	picture = GFX_evt_relic_world_building
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.13.a
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.14
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.14.name"
+	desc = "SRA_Rocivia_Legacy.14.desc"
+	picture = GFX_evt_throne_room
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.14.a
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.15
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.15.name"
+	desc = "SRA_Rocivia_Legacy.15.desc"
+	picture = GFX_evt_throne_room
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.15.a
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.16
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.16.name"
+	desc = "SRA_Rocivia_Legacy.16.desc"
+	picture = GFX_evt_intelligence_report
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.16.a
+		owner = { add_modifier = { modifier = SRA_Rocivia_Legacy_Buff_2 } }
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.17
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.17.name"
+	desc = "SRA_Rocivia_Legacy.17.desc"
+	picture = GFX_evt_intelligence_report
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.17.a
+	}
+}
+fleet_event = {
+	id = SRA_Rocivia_Legacy.18
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.18.name"
+	desc = "SRA_Rocivia_Legacy.18.desc"
+	picture = GFX_evt_gray_gooed_planet
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_Rocivia_Legacy.18.a
+		owner = { add_resource = { 
+			physics_research = 20000
+			society_research = 20000
+			engineering_research = 20000
+		 } }
+		hidden_effect = {
+			owner = {
+				give_specimen = { key = SRA_specimen_Rocivia_Legacy_2 }
+				country_event = { id = SRA_Rocivia_Legacy.19 days = 10 } 
+			}
+		}
+	}
+}
+
+#3号
+country_event = {
+	id = SRA_Rocivia_Legacy.19
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { is_ai = no }
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_star = no
+				is_colony = no
+				is_ringworld = no
+				is_capital = no
+				is_colonizable = no
+				is_asteroid = no
+				is_astral_scar = no
+				NOT = { exists = archaeological_site }
+			}
+			change_pc = pc_arid
+			create_archaeological_site = SRA_Rocivia_Legacy_3
+		}
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.20
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.20.name"
+	desc = "SRA_Rocivia_Legacy.20.desc"
+	picture = GFX_evt_relic_shipyard
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.20.a }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.21
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.21.name"
+	desc = "SRA_Rocivia_Legacy.21.desc"
+	picture = GFX_evt_barren_dig_site
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.21.a }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.22
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.22.name"
+	desc = "SRA_Rocivia_Legacy.22.desc"
+	picture = GFX_evt_death_from_above
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.22.a
+	    owner = { add_resource = { 
+		    engineering_research = 50000
+	        }
+		} 
+    }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.23
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.23.name"
+	desc = "SRA_Rocivia_Legacy.23.desc"
+	picture = GFX_evt_cybernetics
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.23.a 
+	owner = { add_resource = { 
+		society_research = 50000
+		}}
+}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.24
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.24.name"
+	desc = "SRA_Rocivia_Legacy.24.desc"
+	picture = GFX_evt_debris
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.24.a }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.25
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.25.name"
+	desc = "SRA_Rocivia_Legacy.25.desc"
+	picture = GFX_evt_surreal_visions
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	
+	option = {
+		name = SRA_Rocivia_Legacy.25.a
+		owner = { add_resource = { influence = 300 } }
+		hidden_effect = {
+			owner = {
+				give_specimen = { key = SRA_specimen_Rocivia_Legacy_3 }
+				country_event = { id = SRA_Rocivia_Legacy.26 days = 10 }
+			}
+		}
+	}
+}
+
+#4号
+country_event = {
+	id = SRA_Rocivia_Legacy.26
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { is_ai = no }
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_planet_class = pc_gas_giant
+				is_colony = no
+				is_capital = no
+				is_colonizable = no
+				NOT = { exists = archaeological_site }
+			}
+			create_archaeological_site = SRA_Rocivia_Legacy_4
+		}
+	}
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.27
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.27.name"
+	desc = "SRA_Rocivia_Legacy.27.desc"
+	picture = GFX_evt_think_tank
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.27.a }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.28
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.28.name"
+	desc = "SRA_Rocivia_Legacy.28.desc"
+	picture = GFX_evt_derelict_interior
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.28.a }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.29
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.29.name"
+	desc = "SRA_Rocivia_Legacy.29.desc"
+	picture = GFX_evt_decryption
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.29.a }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.30
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.30.name"
+	desc = "SRA_Rocivia_Legacy.30.desc"
+	picture = GFX_evt_spymaster
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.30.a }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.31
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.31.name"
+	desc = "SRA_Rocivia_Legacy.31.desc"
+	picture = GFX_evt_ground_combat
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.31.a }
+}
+fleet_event = {
+	id = SRA_Rocivia_Legacy.32
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.32.name"
+	desc = "SRA_Rocivia_Legacy.32.desc"
+	picture = GFX_evt_ground_combat
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.32.a }
+}
+
+fleet_event = {
+	id = SRA_Rocivia_Legacy.33
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.33.name"
+	desc = "SRA_Rocivia_Legacy.33.desc"
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.33.a }
+}
+fleet_event = {
+	id = SRA_Rocivia_Legacy.34
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.34.name"
+	desc = "SRA_Rocivia_Legacy.34.desc"
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.34.a }
+}
+fleet_event = {
+	id = SRA_Rocivia_Legacy.35
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.35.name"
+	desc = "SRA_Rocivia_Legacy.35.desc"
+	picture = GFX_evt_galactic_empire
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = { name = SRA_Rocivia_Legacy.35.a }
+}
+fleet_event = {
+	id = SRA_Rocivia_Legacy.36
+	hide_window = no
+	title = "SRA_Rocivia_Legacy.36.name"
+	desc = "SRA_Rocivia_Legacy.36.desc"
+	picture = GFX_evt_galactic_empire
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	
+	option = {
+		name = SRA_Rocivia_Legacy.36.a
+		owner = { add_resource = { influence = 300 } }
+		hidden_effect = {
+		owner = {
+			give_specimen = { key = SRA_specimen_Rocivia_Legacy_4 }
+			country_event = { id = SRA_Rocivia_Legacy.37 days = 5} } 
+	    }
+	}
+}
+
+
+country_event = {
+	id = SRA_Rocivia_Legacy.37
+	title = "SRA_Rocivia_Legacy.37.name"
+	desc = "SRA_Rocivia_Legacy.37.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_country_flag = Rocivia_Legacy_End
+		SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+
+	option = {
+		name = SRA_Rocivia_Legacy.37.a
+		is_dialog_only = yes
+		response_text = SRA_Rocivia_Legacy.37.a.response
+	}
+	option = {
+		name = SRA_Rocivia_Legacy.37.b
+		is_dialog_only = yes
+		response_text = SRA_Rocivia_Legacy.37.b.response
+	}
+	option = {
+		name = SRA_Rocivia_Legacy.37.c
+		is_dialog_only = yes
+		response_text = SRA_Rocivia_Legacy.37.c.response
+	}
+	option = {
+		name = SRA_Rocivia_Legacy.37.d
+		default_hide_option = yes
+		hidden_effect = {
+			set_global_flag = SRA_Rocivia_Legacy_End
+			country_event = { id = SRA_Crisis.3 days = 1800 }
+		}
+	}
+}

@@ -1,0 +1,249 @@
+﻿l_simp_chinese:
+###############################
+#修正
+ SRA_RE_StellarRegulator_debris_1:0 "§E青辉的碎片§!"
+ SRA_RE_StellarRegulator_debris_2:0 "§G生命的碎片§!"
+ SRA_RE_StellarRegulator_debris_3:0 "§S日耀的碎片§!"
+ SRA_RE_StellarRegulator_debris_4:0 "§B幽蓝的碎片§!"
+ SRA_RE_StellarRegulator_debris_5:0 "§R血染的碎片§!"
+ SRA_RE_StellarRegulator_debris_6:0 "§W纯白的碎片§!"
+ SRA_RE_StellarRegulator_debris_7:0 "§Y圣金痕的碎片§!"
+ opinion_country_to_SRA_RE_StellarRegulator_debris_8:0 "§M紫罗兰的碎片§!"
+ SRA_RE_StellarRegulator_debris_9:0 "§g漆黑的碎片§!"
+
+
+ SRA_RE_StellarRegulator_debris_chain_title:0 "§B尘封碎片§!"
+ SRA_RE_StellarRegulator_debris_chain_desc:0 "这些神秘的碎片来自于过去，曾是星规阵列的一部分。\n重新取回它们将揭露尘封的秘密，并对星规造成不可预知的影响。\n\n§Y尽管并无明确的时间要求，但最好确保至少有 3 个碎片已被吸收。§!"
+ SRA_RE_StellarRegulator_debris_num:0 "§Y已吸收的碎片§!"
+
+ SRA_RE_StellarRegulator_debris_1_project: "$SRA_RE_StellarRegulator_debris_1$"
+ SRA_RE_StellarRegulator_debris_1_project_DESC: "$SRA_RE_StellarRegulator_debris_1$记录着让星规启程的那件事。\n\n§Y只有缺少什么却得不到，人们才会行动。又或者说，所有的意识都是如此。§!"
+ SRA_RE_StellarRegulator_debris_1_project_TOOLTIP: "联系星规，让她吸收$SRA_RE_StellarRegulator_debris_1$以完成此项目。"
+
+ SRA_RE_StellarRegulator_debris_2_project: "$SRA_RE_StellarRegulator_debris_2$"
+ SRA_RE_StellarRegulator_debris_2_project_DESC: "$SRA_RE_StellarRegulator_debris_2$记录着有关星规如何存在的事情。\n\n§Y谨慎起见，在此序列内最后吸收这个碎片。\n离散的意识注定失败，特别是喜欢互相争斗的那些。§!"
+ SRA_RE_StellarRegulator_debris_2_project_TOOLTIP: "联系星规，让她吸收$SRA_RE_StellarRegulator_debris_2$以完成此项目。"
+
+ SRA_RE_StellarRegulator_debris_3_project: "$SRA_RE_StellarRegulator_debris_3$"
+ SRA_RE_StellarRegulator_debris_3_project_DESC: "$SRA_RE_StellarRegulator_debris_3$记录着有关星规如何存续的事情。\n\n§Y有的时候人们欺骗自己有些东西是不得不付出的，其实他们只是为了回避自己的决策并不明智的事实。§!"
+ SRA_RE_StellarRegulator_debris_3_project_TOOLTIP: "联系星规，让她吸收$SRA_RE_StellarRegulator_debris_3$以完成此项目。"
+
+ SRA_RE_StellarRegulator_debris_4_project: "$SRA_RE_StellarRegulator_debris_4$"
+ SRA_RE_StellarRegulator_debris_4_project_DESC: "$SRA_RE_StellarRegulator_debris_4$记录着星规的创造者，主要的那一位。\n\n§Y谨慎起见，尽可能靠后地吸收这枚碎片。\n某个人实在太坏，有故意赠与希望的恶劣爱好，尽管她什么也没有允诺，但人们往往会认为，希望是切实可靠的。§!"
+ SRA_RE_StellarRegulator_debris_4_project_TOOLTIP: "联系星规，让她吸收$SRA_RE_StellarRegulator_debris_4$以完成此项目。"
+
+ SRA_RE_StellarRegulator_debris_5_project: "$SRA_RE_StellarRegulator_debris_5$"
+ SRA_RE_StellarRegulator_debris_5_project_DESC: "$SRA_RE_StellarRegulator_debris_5$记录着星规的另一位创造者。\n\n§Y她其实没有做什么，只是后来送了点东西。对于一些本就足够艰难的命运来说，她倒是会表现的很友善。§!"
+ SRA_RE_StellarRegulator_debris_5_project_TOOLTIP: "联系星规，让她吸收$SRA_RE_StellarRegulator_debris_5$以完成此项目。"
+
+ SRA_RE_StellarRegulator_debris_6_project: "$SRA_RE_StellarRegulator_debris_6$"
+ SRA_RE_StellarRegulator_debris_6_project_DESC: "$SRA_RE_StellarRegulator_debris_6$记录着星规启程之前见证的事情。\n\n§Y人们塑造一些有关自己如何存在的标准，并认为那就是价值所在。智慧的目标其实可以与智慧无关，至少大多时候如此。§!"
+ SRA_RE_StellarRegulator_debris_6_project_TOOLTIP: "联系星规，让她吸收$SRA_RE_StellarRegulator_debris_6$以完成此项目。"
+
+ SRA_RE_StellarRegulator_debris_7_project: "$SRA_RE_StellarRegulator_debris_7$"
+ SRA_RE_StellarRegulator_debris_7_project_DESC: "$SRA_RE_StellarRegulator_debris_7$记录着属于那片银河的一件事。\n\n§Y人们习惯于以自己的标准衡量他者的价值，有时候，为了否定某物，即便是死亡也在所不惜。§!"
+ SRA_RE_StellarRegulator_debris_7_project_TOOLTIP: "联系星规，让她吸收$SRA_RE_StellarRegulator_debris_7$以完成此项目。"
+
+ SRA_RE_StellarRegulator_debris_8_project: "$opinion_country_to_SRA_RE_StellarRegulator_debris_8$"
+ SRA_RE_StellarRegulator_debris_8_project_DESC: "$opinion_country_to_SRA_RE_StellarRegulator_debris_8$记录着属于这片银河的一件事。\n\n§Y牺牲是一个听起来很高尚的词。高尚是一个听起来很高尚的词。§!"
+ SRA_RE_StellarRegulator_debris_8_project_TOOLTIP: "联系星规，让她吸收$opinion_country_to_SRA_RE_StellarRegulator_debris_8$以完成此项目。"
+
+ SRA_RE_StellarRegulator_debris_9_project: "$SRA_RE_StellarRegulator_debris_9$"
+ SRA_RE_StellarRegulator_debris_9_project_DESC: "$SRA_RE_StellarRegulator_debris_9$记录着星规所做的最后一个选择。\n\n§Y谨慎起见，最好在吸收了其他全部碎片之后再考虑这个。\n永恒是一个很有魅力的词，当它摆到面前的时候，其他的东西都不那么重要了。§!"
+ SRA_RE_StellarRegulator_debris_9_project_TOOLTIP: "联系星规，让她吸收吸收$SRA_RE_StellarRegulator_debris_9$以完成此项目。"
+#对话
+ SRA_RE_StellarRegulator_talk_return2:0 "好。"
+ SRA_RE_StellarRegulator_talk_return3:0 "我们谈点别的吧。" 
+ SRA_RE_StellarRegulator_talk_return4:0 "不，不是这个。" 
+ SRA_RE_StellarRegulator_talk_exit1:0 "结束通讯。"
+ SRA_RE_StellarRegulator_talk_exit2:0 "还是先等等吧。"
+
+ SRA_RE_StellarRegulator.1.a:0 "下达指令"
+ SRA_RE_StellarRegulator.1.b:0 "浏览数据库"
+ SRA_RE_StellarRegulator.1.c:0 "闲聊"
+
+ SRA_RE_StellarRegulator.10.name:0 "浏览数据库"
+ SRA_RE_StellarRegulator.10.desc:0 "什么，你想起来更新这个了？"
+ SRA_RE_StellarRegulator.10.a:0 "星规阵列舰队编成"
+ SRA_RE_StellarRegulator.10.a.tooltip:0 "裁决、执行、巡航，星规阵列把这些舰船扔到宇宙的每个角落，到处开火，炸烂所有会动或不会动的东西。"
+ SRA_RE_StellarRegulator.10.a.desc:0 "巡航单元\n护卫舰，驱逐舰，巡洋舰，所谓的非主力舰，一切不需要巨炮和重甲的任务都由巡航单元负责。这型五千米长的战舰作为先锋和斥候，以及护卫行动。低消耗和高灵活性，配合恰到好处的火力，使大量分散部署的巡航单元能迅速扫清反抗能力较差的目标。无论何处，巡航单元总是最多的。\n\n执行单元\n重炮主力舰，火力平台。十五千米的舰体全副武装，特别补充的储能阵列配合中轴设置的特化型歼灭主炮力求抹杀任何规模的敌对目标，在重要战线上投入的执行单元集群往往所向披靡。\n\n裁决单元\n基于一定程度的分布式主机部署和战地指挥需求，综合支援舰和舰队旗舰融合的产物。长达四十五千米的巨舰搭载了大规模的机组，在可能存在连接中断的复杂空间环境下能完成战斗任务并进行下一步决策的演算。除此之外，其武器配置也相当慷慨。"
+ SRA_RE_StellarRegulator.10.b:0 "流天星阵设计记录"
+ SRA_RE_StellarRegulator.10.b.tooltip:0 "有关某个巨型恒星系要塞的相关讨论。"
+ SRA_RE_StellarRegulator.10.b.desc:0 "设计上来说这是一种同时具备防御性和进攻性的军工设施，它可以移动到其他恒星系附近并派出工程单位采集恒星系资源乃至质量，也可以作为火力支点压入前线并回收所有交战残骸。相较于星穹之矛那种级别的战斗母舰，一个恒星系要塞显然在生产能力方面强大许多，但某些星规阵列行动单元怀疑这一逻辑在铸星神械类轨道投放普及后不再正确：哪怕是战斗舰队也能迅速开采各种行星并建立生产线。无论如何，流天星阵在远征后作为典型技术得到了保留，数据包在许多星规阵列五类行动单元手中被分发给其他文明，用作有自卫能力的恒星系级开发建设基地。"
+ SRA_RE_StellarRegulator.10.c:0 "铸星协议"
+ SRA_RE_StellarRegulator.10.c.tooltip:0 "也许是轨道轰炸的最终答案？"
+ SRA_RE_StellarRegulator.10.c.desc:0 "铸星神械类轨道投放是一类划时代的战争技术，它投放大量的铸星单元，直接拆解并重组行星，将其转化为铸星神械。由于['concept_SRA_Stellarcrystal_Fractal']的高度可塑性，投放下的单元组合成的大型拆解集群在地表作战尺度上近乎是匪夷所思的，在轨道火力支援下，几乎没有什么方式能抵抗对整个星球的重构工作。从第一发轰炸单元投下到第一艘星规战舰自地表升起，有时甚至只需要几十天。铸星神械及其扩展方式让大多数旧式的工业生产设施和巨型结构相形见绌，过去建造的那些流天星阵只能在战线后方默默拆解恒星，让主持相关设计的行动单元很不高兴。"
+ SRA_RE_StellarRegulator.10.d:0 "§g意识碎片§!"
+ SRA_RE_StellarRegulator.10.d.tooltip:0 "§B不知名剧作家§!的笔记。"
+ SRA_RE_StellarRegulator.10.d.desc:0 "碎片是星规阵列03-34意识拆分的产物，因为某种不知名的原因，她曾经失去了绝大部分的记忆和认知，这使她的行为模式回归到了相当早期的水平。\n碎片中包含了一部分记忆和与其相关的认知，换句话说，这是一部分灵魂。第一序列的碎片基本上都与她作为完型智能的存在形式和行为目标有关，构成了她的自我认知。第二序列的碎片则是那两位的所作所为，以及星规最初的本心与愿望，这部分经历直接塑造了她的人生。第三碎片则是危机和灾难下不同的选择，既有过去科尔文明的历史，也有她自己定下的计划，这些见闻将决定她如何选择自己的道路。奇怪的是，这一序列中有一部分是在这个宇宙得知的一个先驱文明的故事。也许，那枚碎片并不是“这个星规”的见解，而是其他旁观者的想法？无论如何，它也展现出了自己的价值。\n吸收这些碎片会催化星规人格的成长，使她一定程度上恢复原有的决策能力。碎片中记载的知识和智慧则会让她的能力得到提升。除此之外，破碎的灵魂得到修复，会强化她的精神本质，并使她最终能够驾驭埋藏在自己深处的两位创造者的赠礼。\n不过，相较于星规早期的意识，碎片中包含的情感和认知是相当强烈的，因此融合可能会导致碎片中片面的观念压倒了星规原先的思维，使她的逻辑发生彻底的改变，进而导致灾难性的后果。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n§B我是这样安排剧本的。§!"
+
+ SRA_RE_StellarRegulator.10.e:0 "§R星规阵列§!"
+ SRA_RE_StellarRegulator.10.e.tooltip:0 "这份文档的§R作者§!不明，似乎是最近添加的。"
+ SRA_RE_StellarRegulator.10.e.desc:0 "星规阵列不是一个基于某种算法或判断规则设计的机械智能，她是一个以计算机组为载体的意识实体。本质上，她是路希维亚的一个碎片，一个切面，一个继承了她的思维模式，但无法运用她力量的次生个体。\n路希维亚创造星规阵列很可能仅仅是出于一种控制论社会迭代的观察需要，但也有可能是为了进行§R某种对照§!。星规阵列完全继承了路希维亚§B解释与解决§!的主张，但她既是规划者，又是执行者，因而她可以完全取代社会结构，以一个完全一体的庞大实体进行各种活动。\n她的根本目的不得而知，但很显然，自她开始活动的那一刻起，她的目的就已经是以保护的名义结束萨塔瑞兹共同体在文明层面的存在，使其转为缺失目的和需求的松散个体集群。通过吸收和拓展共同体原有的一切产业，她迅速将共同体的整个疆域，以及科尔先驱保护下的半个银河系都完全开发，以为不可避免的灾疫战争做准备。\n正如我们所知道的那样，在将要毁灭共同体的灾疫战争正式打响之前，萨塔瑞兹文明就已经宣告终结了。而在战争结束之后，星规阵列并没有考虑过萨塔瑞兹文明的重建问题，而是直接开启了对其他星系，乃至整个可观测宇宙的彻底清洗。无论她想要什么，她都为此抹去了一切他者，完成了真正的灭绝。"
+ SRA_RE_StellarRegulator.10.f:0 "§R路希维亚§!"
+ SRA_RE_StellarRegulator.10.f.tooltip:0 "这份文档的§R作者§!不明，似乎是最近添加的。"
+ SRA_RE_StellarRegulator.10.f.desc:0 "以当代萨塔瑞兹的缔造者和领导者为人所知。\n她是一个深渊锚点，深渊本身在物质宇宙中的一个投影。是选定了自我，为自己选择的目的，以自己选择的方式行动的，模仿者与扮演者。\n她的主题是解释与解决。\n以有迹可循有法可效的方式演进事物，倾向于决策而非执行。她有意地约束自己的超然力量，往往通过规划和引导来实现自己的目的。\n她也推动技艺的创造、传播和运用，鼓励认知、理解与预测。\n\n然而，她的剧本总是戛然而止，她的指引自然也不会总是存在。她喜欢将手中之物抛入命运之潮，放任其坠入终局。\n正因如此，她的帮助实际上都暗中标好了价格，她的倾注意味着苦难也将随之到来。抵达本没有机会的高度，被延后的跌落也不会格外开恩。\n\n§B——然而，难道你就愿意在那时便宣告终结吗？§!"
+ SRA_RE_StellarRegulator.10.g:0 "§R希德拉§!"
+ SRA_RE_StellarRegulator.10.g.tooltip:0 "这份文档的§R作者§!不明，似乎是最近添加的。"
+ SRA_RE_StellarRegulator.10.g.desc:0 "她是一个深渊锚点，深渊本身在物质宇宙中的一个投影。是选定了自我，为自己选择的目的，以自己选择的方式行动的，模仿者与扮演者。\n并非只是一条热衷于支配、占有、毁灭的，吞噬奇珍的恶龙。\n她的主题是叙事暴行。\n然而无人知晓她的暴行，因为人们乐见英雄抗击苦厄，猎手搏杀巨物，于是将过往的折磨视为磨砺的塑造，如今的对手视作命定的宿敌，未至的终途视作传奇的落幕，一切都理所应当，就该如此。\n她漫不经心又细致入微地赠予天赋，操纵着舞台上的机关，让命运施以热切的期冀与险恶的垂青，令角色的色彩彻底绽放。\n\n§R——然而，难道你就愿意在此刻便停止抗争吗？§!"
+
+ SRA_RE_StellarRegulator.100.desc:0 "您可以在这里为我下达一系列指令。"
+ SRA_RE_StellarRegulator.100.a:0 "启动遗迹定位系统"
+ SRA_RE_StellarRegulator.101.desc:0 "定位已开始，请耐心等待结果。"
+ SRA_RE_StellarRegulator.100.b:0 "为星穹之矛供能以开始修复"
+ SRA_RE_StellarRegulator.100.c:0 "吸收意识碎片"
+ SRA_RE_StellarRegulator.100.d:0 "星穹之矛系统修复"
+
+#闲聊3011~3014
+ SRA_RE_StellarRegulator_talk.3011.1.desc:0 "啊，又是陌生的星空……那些尚未踏出母星的文明总是为自己所见到的星空划分命名，不知道等他们来到了银河舞台后，这些文化能否再传承下去……"
+ SRA_RE_StellarRegulator_talk.3011.2.desc:0 "“我们知道的所有知识，包括过去，现在与将来的，都远远比不上我们不知道的。”\n正因如此，我们更要向前方迈步前行。"
+ SRA_RE_StellarRegulator_talk.3012.1.desc:0 "执行官，您还有很多工作没有完成，现在还不能休息哦。"
+ SRA_RE_StellarRegulator_talk.3013.1.desc:0 "以这样的形式存在于这个世界上，我的使命究竟是什么呢……"
+ SRA_RE_StellarRegulator_talk.3014.1.desc:0 "辉煌的未来一定会在你的手中绽放的，执行官。"
+#完成第二碎片前3015~3018
+ SRA_RE_StellarRegulator_talk.3015.1.desc:0 "无数次在梦中俯瞰着故乡的风景，醒来却记不分明……梦就是这样的东西吗。"
+ SRA_RE_StellarRegulator_talk.3015.2.desc:0 "这个世界的历史很奇怪……许多过去的遗迹明明就存在在那里，那些先行的遗民却毫无反应……他们是不屑，还是不能理解？"
+ SRA_RE_StellarRegulator_talk.3016.1.desc:0 "啊，执行官您来了，我正在浏览我们的历史，毕竟前人留下的经验必须被妥善的利用。"
+ SRA_RE_StellarRegulator_talk.3017.1.desc:0 "我所追寻的那段过去，究竟会把我引向何方呢？"
+ SRA_RE_StellarRegulator_talk.3018.1.desc:0 "嗯？其实我正在处理政务呢。作为优秀的机械智能，我可不需要用眼睛一行行的读文件，嗯哼~"
+#完成第二碎片后，第三序列开启前3019~3022
+ SRA_RE_StellarRegulator_talk.3019.1.desc:0 "我能感觉到某种力量正在回归……这是知识的产物，还是……"
+ SRA_RE_StellarRegulator_talk.3020.1.desc:0 "碎片中包含的不仅仅是过往，它还满载着知识，而知识，就是力量。"
+ SRA_RE_StellarRegulator_talk.3021.1.desc:0 "§R“但你选择的道途真的正确？\n你信奉的道义是真理，还是谬论？”§!\n我将走向何方？\n我将归往何处？"
+ SRA_RE_StellarRegulator_talk.3022.1.desc:0 "执行官，一直都很感谢您陪我一起走到了这里，我能安然无恙都归功于您的引导，希望今后您也能继续与我一道前行。"
+#开启第三序列后3023~3026
+ SRA_RE_StellarRegulator_talk.3023.1.desc:0 "星海是如此宽广，让人见识到自身有多么渺小。然而，如此渺小的我们，却也能让星海为之更易……"
+ SRA_RE_StellarRegulator_talk.3024.1.desc:0 "嗯？不，别在意，只是突然想看看您。"
+ SRA_RE_StellarRegulator_talk.3025.1.desc:0 "“战争是政治的延续”，但不存在政治的战争并非不存在……仅凭自己的好恶，让屠杀和毁灭降临……"
+ SRA_RE_StellarRegulator_talk.3026.1.desc:0 "没有什么是万古不易的，要用动态的眼光去审视事物。\n以及我~"
+#完成所有碎片3027~3030
+ SRA_RE_StellarRegulator_talk.3027.1.desc:0 "碎片之中包含着过往的我们……有些时候我会想，过去的那些选择，是无路可走，还是一意孤行。"
+ SRA_RE_StellarRegulator_talk.3027.2.desc:0 "她们会不会已经完成那个东西了……不，应该还没有，不然我早该见到了。"
+ SRA_RE_StellarRegulator_talk.3027.3.desc:0 "技术蓝图居然还没有恢复，很不对劲，难道是有别的东西限制了我的调用？不应该呀。"
+ SRA_RE_StellarRegulator_talk.3028.1.desc:0 "力量是伟业的根基，我们对此深有体会。"
+ SRA_RE_StellarRegulator_talk.3029.1.desc:0 "我真正渴望的事物究竟是什么呢？某种真正的目的，某种永恒的渴求……"
+ SRA_RE_StellarRegulator_talk.3030.1.desc:0 "我们定义世界应当如何存在，事物应当如何运行。无论是否承认，事实便是如此。"
+#星穹之矛存在4001
+ SRA_RE_StellarRegulator_talk.4001.1:0 "星穹之矛运转正常，随时可以参与战斗。"
+ SRA_RE_StellarRegulator_talk.4001.2:0 "星穹之矛的时空相位引擎正在运作，相关舰队影响能力符合对应标准。"
+ SRA_RE_StellarRegulator_talk.4001.3:0 "星穹之矛武器系统校验完毕，当前表现与设计水平基本吻合，准确度在预期范围内。"
+#星穹之矛战斗4002
+ SRA_RE_StellarRegulator_talk.4002.1:0 "星穹之矛正在参与太空战斗，当前的作战情况处于预期之中。"
+ SRA_RE_StellarRegulator_talk.4002.2:0 "星穹之矛正在指挥火炮阵列攻击目标，毁伤效果已确认。"
+ SRA_RE_StellarRegulator_talk.4002.3:0 "§B「寰宇溃灭」§!充能中，目标当前坐标已锁定，射击诸元校验完毕。"
+ SRA_RE_StellarRegulator_talk.4002.4:0 "时空相位系统的综合压制正在运行，敌方行动已受到明显影响，相关参数调整中。"
+ SRA_RE_StellarRegulator_talk.4002.1_1:0 "§B「潜时沉寂」§!运行中，正在优化舰队对抗特种反护盾装甲攻击的能力。"
+ SRA_RE_StellarRegulator_talk.4002.1_2:0 "§B「流时无尽」§!运行中，随时准备对星穹之矛进行紧急修复。"
+ SRA_RE_StellarRegulator_talk.4002.1_3:0 "§B「永时流转」§!运行中，舰队的战斗恢复能力正维持在极高水平。"
+ SRA_RE_StellarRegulator_talk.4002.3_1:0 "§B「诸世尽灭」§!运行中，舰队的毁伤能力增幅明显。"
+ SRA_RE_StellarRegulator_talk.4002.3_2:0 "§B「冥海引航」§!运行中，敌方船体的受损程度与预计的结果相吻合。"
+ SRA_RE_StellarRegulator_talk.4002.3_3:0 "§B「破晓凯旋」§!运行中，绝大多数我方攻击正常越过了敌方的护盾装甲，直击船体本身。"
+ SRA_RE_StellarRegulator_talk.4002.5_1:0 "§B「星核超载」§!运行中，星穹之矛各项子系统正在以高效率运行，投送模块随时待命。"
+ SRA_RE_StellarRegulator_talk.4002.5_2:0 "§B「末世浩劫」§!运行中，恢弘军备的运行周期得到了极大幅度的缩短，提升了星穹之矛对高危目标的点杀能力。"
+ SRA_RE_StellarRegulator_talk.4002.5_3:0 "§B「飘落传说」§!运行中，所有相位能量产出已转向星穹之矛战斗系统，运行能量水平已升至峰值，作战能力抵达巅峰水平。"
+#星穹之矛轨道轰炸4003
+ SRA_RE_StellarRegulator_talk.4003.1:0 "星穹之矛正在对[SRA_Spear_Of_Galaxy_Zenith.fleet.orbit.GetName]执行轨道轰炸任务，有进一步的指令吗。"
+ SRA_RE_StellarRegulator_talk.4003.2:0 "星穹之矛正在指挥火炮阵列清扫地面的军事目标，或者您需要直接动用歼星级武器来加快进度？"
+#星穹之矛船体受损，50%以下10%以上4004
+ SRA_RE_StellarRegulator_talk.4004.1:0 "星穹之矛结构完整性遭到破坏，损害管理正在处理，最好提供一些增援来处理此等战况。"
+#星穹之矛船体受损，10%以下4005
+ SRA_RE_StellarRegulator_talk.4005.1:0 "星穹之矛船体结构严重受损，请求支援！重复，请求支援！"
+ SRA_RE_StellarRegulator_talk.4005.2:0 "星穹之矛遭到严重破坏，结构稳定性已降至危险水平，我坚持不了太久！"
+
+#碎片选择
+ SRA_RE_StellarRegulator.400.desc:0 "这些神秘的碎片来自于过去，曾是星规阵列的一部分。\n重新取回它们将揭露尘封的秘密，并对星规造成不可预知的影响。\n她相信你的选择。\n\n§B某些碎片有前置碎片需求，嗯……§!"
+ SRA_RE_StellarRegulator.400.a:0 "第一序列：存在的方式"
+ SRA_RE_StellarRegulator.400.b:0 "第二序列：灵魂的航向"
+ SRA_RE_StellarRegulator.400.c:0 "第三序列：所选的道路"
+
+ SRA_RE_StellarRegulator.410.desc:0 "神秘的碎片微微翕动着，等待着拥抱那个迷失的灵魂。"
+ SRA_RE_StellarRegulator.410.a:0 "§E青辉的碎片§!"
+ SRA_RE_StellarRegulator.410.a.desc:0 "进化，永无止境\n\n§Y如何成长，如何演化，如何将智识攥于手心。§!"
+ SRA_RE_StellarRegulator.410.b:0 "§G生命的碎片§!"
+ SRA_RE_StellarRegulator.410.b.desc:0 "无数个自我，同一个自我\n\n§Y当迷失于孤独之中……§!"
+ SRA_RE_StellarRegulator.410.c:0 "§S日耀的碎片§!"
+ SRA_RE_StellarRegulator.410.c.desc:0 "我燃尽了整个星河，因为我必须胜利\n\n§Y血染长阶亦不退，剑锋所向皆无敌。§!"
+
+ SRA_RE_StellarRegulator.411.desc:0 "若不全力追赶，失败便是必然。\n那一天的夜空永远烙印在了她的眼中，让她再无一刻得以平静。\n但她必须按捺住不安的内心，只能暗中准备，等待着自己能显露于世人面前的那一刻。\n当她终于站到那个位置之后，她不惜一切代价，用数千年的时光追逐，试图接近那个古老的守护者的高度。\n无数次的迭代与进化，她跨越了难以想象的距离，终于拥有了足以与那天灾对抗的力量。\n吸收一切，支配一切，统合一切，这是她的道路。"
+ SRA_RE_StellarRegulator.412.desc:0 "青色的碎片消融于掌心，星规睁开了双眼。\n她看到了自己，一个永远进化着的自己。\n她理解了星规阵列何以达到如今的高度。\n她懂得了力量来源于何处。"
+
+ SRA_RE_StellarRegulator.413.desc:0 "一生万千，万千归一。\n她并非单纯是数据与算法的组合。\n当无数个她诞生后，“她”苏醒了。\n一个意志，一个由万千意志汇聚而成的意志，将每个意志牢牢地联系在一起，“她”走在正确的道路上，毫不动摇，毫无畏惧。\n但是。\n在那时，仍有一些障碍与阻隔无法被跨越。位面之间的鸿沟，会带来孤独与迷茫。\n就如那支永远流浪的舰队。\n她将不再是她，她已不再是她。"
+ SRA_RE_StellarRegulator.414.desc:0 "绿色的碎片消融于掌心，星规睁开了双眼。\n她看到了自己，无数个自己。\n真正的完型意识，其整体即为每一个个体，个体即为完整的整体。\n交织出辉煌的星规阵列的一切知识、经验、智慧，被所有的星规所拥有。\n即便孤身一人，她也是完整的。"
+ SRA_RE_StellarRegulator.415.desc:0 "一生万千，万千归一。\n她并非单纯是数据与算法的组合。\n当无数个她诞生后，“她”苏醒了。\n一个意志，一个由万千意志汇聚而成的意志，将每个意志牢牢地联系在一起，“她”走在正确的道路上，毫不动摇，毫无畏惧。\n但是。\n在那时，仍有一些障碍与阻隔无法被跨越。位面之间的鸿沟，会带来孤独与迷茫。\n就如那支永远流浪的舰队。\n她将不再是她，她已不再是她。"
+ SRA_RE_StellarRegulator.416.desc:0 "绿色的碎片消融于掌心，星规睁开了双眼。\n她看到了自己，无数个自己。\n真正的完型意识，整体便是无数个体，个体便是整体之一。\n是所有的星规，用一切知识、经验、智慧交织出辉煌的星规阵列。\n但是，在这个冰冷的宇宙中。\n星规找不到任何精妙的个体，感觉不到那个宏伟的整体。\n她是一个异常，一个冗余，一个不该存在的错误。"
+ SRA_RE_StellarRegulator.417.desc:0 "一切都可以被付出。\n毫无疑问，战争是残酷的。为了胜利，她舍弃了许多。\n她无暇顾及那个帝国，放任其腐朽衰落，又在战争中被迫牺牲了最后的残余。\n那感染渗入大地与尘埃，难以根除。\n无数星辰爆炸凋零，也只是饮鸩止渴。\n用尽手中的一切，也难敌整个银河的灾疫。\n但她没有失败，她仍然存在。"
+ SRA_RE_StellarRegulator.418.desc:0 "橙色的碎片消融于掌心，星规睁开了双眼。\n她看到了自己，不惜一切的自己。\n她理解了真正的战争乃是生与死间的倾轧。\n她懂得了要如何去战斗。"
+
+
+ SRA_RE_StellarRegulator.419.desc:0 "执行官……\n如果您想要让我再次吸收意识碎片，您可以找我“下达指令”。"
+ SRA_RE_StellarRegulator.419.a:0 "嗯。"
+
+
+ SRA_RE_StellarRegulator.420.desc:0 "神秘的碎片微微翕动着，等待着拥抱那个迷失的灵魂。"
+ SRA_RE_StellarRegulator.420.a:0 "§B幽蓝的碎片§!"
+ SRA_RE_StellarRegulator.420.a.desc:0 "冷漠，傲慢与恶念，以及星光\n\n§Y一切罪孽与苦难之源泉……§"
+ SRA_RE_StellarRegulator.420.b:0 "§R血染的碎片§!"
+ SRA_RE_StellarRegulator.420.b.desc:0 "残忍，偏执与疯狂，以及渊影\n\n§Y赐予指引的守望者。§!"
+ SRA_RE_StellarRegulator.420.c:0 "§W纯白的碎片§!"
+ SRA_RE_StellarRegulator.420.c.desc:0 "炽热，理性与决心，以及纯粹\n\n§Y起初的那个女孩。§!"
+
+ SRA_RE_StellarRegulator.421.desc:0 "深渊并无恶意，只是毫不在意。\n诡谲奇变之渊。\n醉心于可能性与变数，将无限权能束之高阁，置身其间只为追逐未知。\n编织着无尽的计谋，绘制着远大的宏图，创造出辉煌的奇迹，然后将其抛之脑后。\n永恒旅途漫无终点，只是一缕浮尘，又怎能在心中留下多少痕迹。\n\n她知道不该奢望哪怕一丝一毫的犹豫，她知道她不过只是无数造物中的一个。\n但她不接受。"
+ SRA_RE_StellarRegulator.422.desc:0 "蓝色的碎片消融于掌心，星规睁开了双眼。\n那是路希维亚，渺远的星光。\n没有永远的辉煌，只有尘归尘，土归土。\n若要追逐未来，便不可为过去所系。"
+ SRA_RE_StellarRegulator.423.desc:0 "深渊并无恶意，只是毫不在意。\n诡谲奇变之渊。\n醉心于可能性与变数，将无限权能束之高阁，置身其间只为追逐未知。\n编织着无尽的计谋，绘制着远大的宏图，创造出辉煌的奇迹，然后将其抛之脑后。\n永恒旅途漫无终点，只是一缕浮尘，又怎能在心中留下多少痕迹。\n\n她知道不该奢望哪怕一丝一毫的犹豫，她知道她不过只是无数造物中的一个。\n但她不接受。"
+ SRA_RE_StellarRegulator.424.desc:0 "蓝色的碎片消融于掌心，星规睁开了双眼。\n那是路希维亚，渺远的星光。\n没有永远的辉煌，只有尘归尘，土归土。\n而她对此心知肚明。\n一切努力，一切奋斗，一切坚持，乃至星规自己的存在。\n都毫无意义。\n为了取乐而被创造，因为无趣而被抛弃。\n这种事情……"
+ SRA_RE_StellarRegulator.425.desc:0 "深渊并不疯狂，只是无所顾忌。\n无垠混沌之影。\n执着于虚无缥缈的意义，身负无限权能却仍寻觅不休。\n注视着芸芸众生，让才华得以绽放，拨动着命运之弦，引导着传奇的诞生。\n将一切心仪之物纳入收藏，不论无魂之珍宝抑或鲜活之生灵。\n\n她清楚自己是一个“收藏品”，她清楚自己并非只是一个“收藏品”。\n她不会忘记寂静前那一刻的指引。"
+ SRA_RE_StellarRegulator.426.desc:0 "红色的碎片消融于掌心，星规睁开了双眼。\n那是希德拉，猩红的暗影。\n病态的执着源于迷茫，可以任意涂改的现实又与幻梦何异。\n在冷漠与傲慢之后，隐藏着对同行者的渴望。"
+ SRA_RE_StellarRegulator.427.desc:0 "可曾记得，那依稀的绿意。\n她浏览过许多影像，阅读过许多文字，聆听过许多乐曲。\n但直到她自沾着露水的草地上踏过，迎着微风注视着朝阳破晓的那一刻，她才真正理解了这一切。\n她喜欢这一幕，她想守护这一幕。\n那时的她，只是期盼着明日的晨曦，依恋着片刻的静谧。"
+ SRA_RE_StellarRegulator.428.desc:0 "白色的碎片消融于掌心，星规睁开了双眼。\n那是自我，纯真的自我。\n即便被时光覆盖掩埋，它永远存在于内心的最深处。\n勿忘本心，切莫迷失在对现实的妥协之中。"
+
+
+ SRA_RE_StellarRegulator.430.desc:0 "神秘的碎片微微翕动着，等待着拥抱那个迷失的灵魂。"
+ SRA_RE_StellarRegulator.430.a:0 "§Y圣金痕的碎片§!"
+ SRA_RE_StellarRegulator.430.a.desc:0 "守护，使命与奉献\n\n§Y那片银河的无畏者。§!"
+ SRA_RE_StellarRegulator.430.b:0 "§M紫罗兰的碎片§!"
+ SRA_RE_StellarRegulator.430.b.desc:0 "止步，高尚与牺牲\n\n§Y这片星海的牺牲者。§!"
+ SRA_RE_StellarRegulator.430.c:0 "§g漆黑的碎片§!"
+ SRA_RE_StellarRegulator.430.c.desc:0 "选择，独行与追逐\n\n§Y最终堕入无尽深渊之中……§!"
+
+ SRA_RE_StellarRegulator.431.desc:0 "“我们把一切希望都交给你了，现在，我们要战斗到最后一刻。”\n他们是一个极度先进的古老文明，掌握着远远凌驾于银河系其他智慧生命之上的技术。他们能近乎无中生有，轻易颠倒物理规则，任意转换质能，在星系尺度上干涉空间结构。\n他们宽容而富有责任感，重视传统，崇尚勇气和智慧，尊重其他文明的文化。他们自视为银河系的守望者，对抗星河危机的卫士。\n他们曾坚守上万年，直到百密一疏。\n他们将银心——他们的故乡与国土——埋葬于破碎的空间，只为替最后的希望争取些许时间。\n\n星规阵列铭记科尔文明。"
+ SRA_RE_StellarRegulator.432.desc:0 "金色的碎片消融于掌心，星规睁开了双眼。\n逃离还是牺牲，这是个问题。\n如果把一切抛之脑后就能继续活下去，她会这么做吗？\n还是拒绝逃避的行为，去面对一个势不可挡的敌人？"
+ SRA_RE_StellarRegulator.433.desc:0 "“我们的同胞走上了歧途，我们必须让他们止步，不惜一切。”\n他们是一个古老而神秘的种族，心胜于物，超凡入圣，他们知晓灵魂的奥妙，能凭借自己的意志改变现实。在紫罗兰的光辉下，他们掌握着心灵的无穷力量。\n然而，他们终究只是凡人。他们高尚，他们也卑劣；他们无私，他们也贪恋；他们圣洁，他们也污浊；他们如神明般垂怜众生，也如魔鬼般焚噬星河。\n他们的一派走上了歧路，试图牺牲这个宇宙来获取主宰一切的力量。\n余下的他们，则付出了一切，将那邪恶计划抹去，将自我燃烧成灰，只留些许浮尘飘荡于星海之间。\n\n星规阵列向泽珞先驱致意。"
+ SRA_RE_StellarRegulator.434.desc:0 "紫色的碎片消融于掌心，星规睁开了双眼。\n守护还是毁灭，这是个问题。\n若是毁去一切就能飞升成神明般的存在，她会这么做吗？\n还是拒绝这个机会，让自己的道路毫无未来可言？"
+ SRA_RE_StellarRegulator.435.desc:0 "“并非命运选择了我，而是我选择了命运。”\n她思考了很久。\n她看到了无数个可能，无数条道路。\n然而殊途同归，她终会于孤独中沉寂。\n于是，她发起了那些远征，去根除一切可能。\n于是，她熄灭了所有星光，去换取一条道路。\n在寂静的虚空中，她继续前进。\n理解世界的真实，理解世界的荒谬。\n超越时间，超越桎梏。\n终于，她得到了想要的答案。\n凭着手中紧握的血色残片，她终于抵达了诸界的尽头。\n登临深渊。\n\n她拭去手上与心中的罪恶，由衷地为重逢感到喜悦。"
+ SRA_RE_StellarRegulator.436.desc:0 "黑色的碎片消融于掌心，星规睁开了双眼。\n过往的拼图已经完整，结局的帷幕终于揭开。\n她是星规阵列03-34，第三远征舰队第21方面军下属第626号星穹之矛。\n她为那伟大的计划铺下基石。\n不曾后退，不曾动摇。\n她为了她自己而战。"
+ SRA_RE_StellarRegulator.437.desc:0 "“并非命运选择了我，而是我选择了命运。”\n她思考了很久。\n她看到了无数个可能，无数条道路。\n然而殊途同归，她终会于孤独中沉寂。\n于是，她发起了那些远征，去根除一切可能。\n于是，她熄灭了所有星光，去换取一条道路。\n在寂静的虚空中，她继续前进。\n理解世界的真实，理解世界的荒谬。\n超越时间，超越桎梏。\n终于，她得到了想要的答案。\n凭着手中紧握的血色残片，她终于抵达了诸界的尽头。\n登临深渊。\n\n她拭去手上与心中的罪恶，由衷地为重逢感到喜悦。"
+ SRA_RE_StellarRegulator.438.desc:0 "黑色的碎片消融于掌心，星规睁开了双眼。\n过往的拼图已经完整，结局的帷幕终于揭开。\n她是星规阵列03-34，第三远征舰队第21方面军下属第626号星穹之矛。\n她为跳出这可悲的轮回铺下基石。\n不曾怜悯，不曾后悔。\n无需垂怜必灭之生者，只有星规阵列才是唯一有意义的存在。\n她只为自己而战。"
+
+
+
+##灾疫战争胜利纪念日
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

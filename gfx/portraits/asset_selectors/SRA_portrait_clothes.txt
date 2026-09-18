@@ -1,0 +1,298 @@
+SRA_portrait_clothes = {
+	default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds"
+	game_setup = { default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" }
+	species = { default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" }
+	pop = { default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" }
+	leader = {
+		default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds"
+		#星规1
+		"gfx/models/portraits/SRA_portraits/SRA_001.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_002.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 2 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_003.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 3 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_004.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 4 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_005.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 5 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_006.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 6 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_007.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 7 }
+		}
+		#星规2
+		"gfx/models/portraits/SRA_portraits/SRA_101.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 101 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_102.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 102 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_103.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 103 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_104.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 104 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_105.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 105 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_106.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 106 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_107.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 107 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_108.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 108 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_109.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 109 }
+		}
+		#路希维亚
+		"gfx/models/portraits/SRA_portraits/SRA_201.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 201 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_202.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 202 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_203.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 203 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_205.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 205 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_206.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 206 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_207.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 207 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_208.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 208 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_209.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 209 }
+		}
+		#希德拉
+		"gfx/models/portraits/SRA_portraits/SRA_301.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 301 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_302.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 302 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_303.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 303 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_305.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 305 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_306.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 306 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_307.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 307 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_308.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 308 }
+		}
+		#洛琪亚
+		"gfx/models/portraits/SRA_portraits/SRA_402.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 402 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_403.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 403 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_405.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 405 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_406.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 406 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_407.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 407 }
+		}
+		#树海的诗人
+		"gfx/models/portraits/SRA_portraits/SRA_601.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 601 }
+		}
+		#旅人路希维亚
+		"gfx/models/portraits/SRA_portraits/SRA_702.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 702 }
+		}
+		#龙翼之影
+		"gfx/models/portraits/SRA_portraits/SRA_1001.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1001 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_1002.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1002 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_1003.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1003 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_1004.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1004 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_1005.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1005 }
+		}
+
+
+		# 可以扩展更多的差分。
+		"gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 0 }
+		}
+	}
+	ruler = {
+		default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds"
+		#星规1
+		"gfx/models/portraits/SRA_portraits/SRA_001.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_002.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 2 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_003.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 3 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_004.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 4 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_005.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 5 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_006.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 6 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_007.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 7 }
+		}
+		#星规2
+		"gfx/models/portraits/SRA_portraits/SRA_101.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 101 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_102.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 102 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_103.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 103 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_104.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 104 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_105.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 105 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_106.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 106 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_107.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 107 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_108.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 108 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_109.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 109 }
+		}
+		#路希维亚
+		"gfx/models/portraits/SRA_portraits/SRA_201.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 201 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_202.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 202 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_203.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 203 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_205.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 205 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_206.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 206 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_207.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 207 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_208.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 208 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_209.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 209 }
+		}
+		#希德拉
+		"gfx/models/portraits/SRA_portraits/SRA_301.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 301 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_302.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 302 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_303.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 303 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_305.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 305 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_306.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 306 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_307.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 307 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_308.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 308 }
+		}
+		#洛琪亚
+		"gfx/models/portraits/SRA_portraits/SRA_402.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 402 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_403.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 403 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_405.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 405 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_406.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 406 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_407.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 407 }
+		}
+		#树海的诗人
+		"gfx/models/portraits/SRA_portraits/SRA_601.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 601 }
+		}
+		#旅人路希维亚
+		"gfx/models/portraits/SRA_portraits/SRA_702.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 702 }
+		}
+		#龙翼之影
+		"gfx/models/portraits/SRA_portraits/SRA_1001.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1001 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_1002.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1002 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_1003.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1003 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_1004.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1004 }
+		}
+		"gfx/models/portraits/SRA_portraits/SRA_1005.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 1005 }
+		}
+
+
+		# 可以扩展更多的差分。
+		"gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" = {
+			check_variable = { which = SRA_portrait_clothes_var value = 0 }
+		}
+	}
+}

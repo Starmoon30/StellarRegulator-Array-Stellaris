@@ -1,0 +1,23 @@
+﻿l_english:
+###############################
+ civic_SRAtechnology:0 "§BSRA Technology§!"
+ civic_SRAtechnology_desc:0 "\"As per the agreement, the StellarRegulator Array will provide us with Stellarcrystal technology within the scope of the contract. Although these technologies are quite ancient, they remain extremely advanced.\"\n\n§BYou know what you are doing, right.§!"
+ civic_SRAtechnology_effects:0 "-Establish communication with §BStellarRegulator§!\n-Unlock §BStellarcrystal§! related technologies\n-Unlock ['concept_SRA_Stellarcrystal_industry']\n-Unlock §YBackstory Line§!\n-Can independently research part of ['concept_SRA_T4_tech'] after §YEnd-Game Year§!"
+ civic_SRAtechnology_negative_effects:0 "-§BWhat could possibly go wrong?§!"
+
+ civic_SRARociviaEmpire:0 "§BRocivia Empire§!"
+ civic_SRARociviaEmpire_desc:0 "§YThe effect of this civic is \"Rocivia Empire\" story mode, excluding most content of ['civic:civic_SRAtechnology'].§!\n\nCompared to civilizations that sit back and enjoy the fruits of signing agreements with some bored machine intelligence, being chosen by Rocivia herself is a \"favor of fate\"-suffering will tirelessly strike, just to witness the history of struggling resistance and the inevitable end.\n\n§RBeta testing, welcome to play and feedback§!"
+ civic_SRARociviaEmpire_effects:0 "-Unlock §YDifferent Story Lines§! through opening options\n-Unlock §BStellarcrystal§! related technologies stage by stage according to flow"
+ civic_SRARociviaEmpire_negative_effects:0 "-§RWhat could possibly go wrong?§!"
+
+
+ civic_SRARociviaEmpire_0_desc:0 "§YThe effect of this civic is \"Rocivia Empire\" story mode, excluding most content of ['civic:civic_SRAtechnology'].§!\n\nCompared to civilizations that sit back and enjoy the fruits of signing agreements with some bored machine intelligence, being chosen by Rocivia herself is a \"favor of fate\"-suffering will tirelessly strike, just to witness the history of struggling resistance and the inevitable end.\n\n§RBeta testing, welcome to play and feedback§!"
+ civic_SRARociviaEmpire_0_effects:0 "-Unlock §YDifferent Story Lines§! through opening options\n-Unlock §BStellarcrystal§! related technologies stage by stage according to flow"
+
+ civic_SRARociviaEmpire_a_desc:0 "This civilization once half-stepped into the stars, but was trapped by internecine warfare, ruining the prosperity of the past.\nFortunately, a faction found a path to avoid extinction in an ancient ruin.\nAn existence from another world descended upon this land, ending all disputes, allowing this civilization to look towards the stars again.\nNow, this civilization has broken through the barrier of light speed and ascended to become a member of the sea of stars.\nHowever, no one knows where this path that didn't exist will lead."
+ civic_SRARociviaEmpire_a_effects:0 "-Establish communication with §BRocivia§!, §RHidra§!, §BStellarRegulator§!\n-§BRocivia§! will become leader\n-Unlock ['concept_SRA_Stellarcrystal_industry']\n-A crashed Spear_Of_Galaxy_Zenith awaits excavation on the homeworld\n-Dust of history falls among the sea of stars"
+ civic_SRARociviaEmpire_b_desc:0 "This civilization has trembled under the shadow of a pair of dragon wings since ancient times, offering everything in exchange for lingering survival.\nPerhaps on a whim, we were allowed to sail into the endless galaxy to gather more. If we can condense the power of stars at our fingertips, can we tear apart that shadow?"
+ civic_SRARociviaEmpire_b_effects:0 "-Homeworld becomes §RMetarbor Remnant Branch§!, a special celestial type with endless potential\n-Homeworld starbase will be replaced by a §RUnchangeable§! special starbase with §RNo Shipyard§!\n-The ferocious §RFallen Dragon§! will loom over your civilization. From ancient times to the present, only submission can avoid destruction\n-The Fallen Dragon demands §Rwealth in any form§!, especially the most precious ones... §Rwhether living or dead§!\n-Completely submit under the Dragon Shadow, or call for freedom with blades"
+
+#  civic_SRARociviaEmpire_desc:0 "§Y本国策效果为“路希维亚帝国”起源，该起源为剧情模式，不包含「星规技术」的绝大部分内容。§!\n《路希维亚帝国：域外异闻》\n这个文明曾半步踏入群星之间，却又为同族相残的战乱所困，往昔的盛世毁于一旦。\n所幸，一支势力在一座古老的遗迹中找到了一条可以免于灭亡的道路。\n来自异界的存在降临于这片大地上，终结了一切纷争，让这个文明得以再度着眼于群星。\n如今，这个文明突破了光速的壁垒，进升为星海间的一员。\n然而，没有人知道，这条本不存在的道路，究竟会通往何方。\n§B不建议使用会经常更换领导人的政体，那样会很不方便，你知道的。§!\n§RBeta测试中，欢迎游玩和反馈§!"
+#  civic_SRARociviaEmpire_effects:0 "-与§B路希维亚§!、§R希德拉§!、§B星规§!建立通讯\n-§B路希维亚§!将成为领导人\n-解锁星辉水晶相关技术\n-解锁独特故事线"

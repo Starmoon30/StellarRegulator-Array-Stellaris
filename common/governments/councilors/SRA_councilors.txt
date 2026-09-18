@@ -1,0 +1,77 @@
+# Councilor Documentation
+#
+# councilor_name_key = {
+#	possible = { }								Country scope triggers to evaluate if the council position is allowed. 
+#   leader_class = { }							Which leader classes can have this council position. Currently only used for the Recruit new Leader buttons. Default = none.
+#   is_leader_possible = { }					Leader scope triggers to evaluate if a leader can be assigned to this position.
+#	conditional_tooltip = "LOC_KEY"				Custom tooltip text shown for the requirements of the council position.
+#   civic = civic_imperial_cult					Civic that is required for this council position. Also used by UI. Default = none.
+#	custom_unlock_title	= "LOC_KEY"				Custom text shown instead of "UNLOCK_COUNCIL_POSITION_TOOLTIP for council positions without a civic"
+#   modifier = { }								Country Modifier, that is multiplied by assigned Leader's level.
+#	custom_tooltip = "LOC_KEY"					Custom tooltip text shown instead of the auto-generated modifier tooltip text of the council position.
+#	custom_tooltip_with_modifiers = "LOC_KEY"	Custom tooltip text shown in addition to the auto-generated modifier tooltip text of the council position.
+#	icon = "GFX_icon_name"						Icon used for the council position, if a civic is not specified.
+#	required = yes/no							Is this position forced to be on the council. Default = no
+# }
+# councilor_SRA_SRAtechnology_consultant = {
+# 	leader_class = { official commander scientist }
+# 	is_leader_possible = {
+# 		OR = {
+# 			has_trait = leader_trait_SRA_gov
+# 			has_trait = leader_trait_SRA_sci
+# 			has_trait = leader_trait_SRA_adm
+# 			has_trait = leader_trait_SRA_gen
+# 		}
+# 	}
+# 	civic = civic_SRAtechnology
+# 	modifier = {
+# 		all_technology_research_speed = 0.1
+# 		planet_jobs_produces_mult = 0.02
+# 		ship_archaeological_site_clues_add = 1
+# 		ship_astral_rift_clues_add = 1
+# 		ship_anomaly_research_speed_mult = 0.1
+# 		ship_astral_rift_speed_mult = 0.1
+# 	}
+# }
+
+councilor_SRA_RE_minister_of_security = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			has_trait = leader_trait_SRA_RE_Hidra_gov
+			has_trait = leader_trait_SRA_RE_Hidra_sci
+			has_trait = leader_trait_SRA_RE_Hidra_adm
+			has_trait = leader_trait_SRA_RE_Hidra_gen
+		}
+	}
+	possible = {
+		has_civic = civic_SRARociviaEmpire
+		has_country_flag = SRA_RE_Rocivia_Empire_story
+	}
+	icon = "GFX_SRARociviaEmpire"
+	modifier = {
+		planet_stability_add = 1
+		all_technology_research_speed = 0.05
+		planet_crime_add = -5
+		planet_army_build_speed_mult = 0.1
+	}
+}
+
+councilor_SRA_SD_lost_presbyter = {
+	leader_class = { official commander scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = commander
+			leader_class = scientist
+		}
+		not = { has_trait = leader_trait_SRA_SD_Bard_of_Metarbor }
+	}
+	possible = {
+		has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+	}
+	icon = "GFX_SRA_RE_Hidra_icon"
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+}

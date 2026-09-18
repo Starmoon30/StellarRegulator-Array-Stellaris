@@ -1,0 +1,141 @@
+﻿l_simp_chinese:
+###############################
+
+#Sacrilence「息声」，希德拉的剑
+
+ SRA_RE_Hidra_talk_return1:0 "嗯。" 
+ SRA_RE_Hidra_talk_return4:0 "我们聊点别的吧。" 
+ SRA_RE_Hidra_talk_exit1:0 "结束通讯。"
+
+ SRA_RE_Hidra.2.desc:0 "你好啊，墙外的支配者。就如我之前所说的那样，我管理着帝国安全总局和秘密理事会。\n帝国安全总局注视着这个国家的每一个角落，确保着社会的安全与稳定，监督着每一个政策的执行，在黑暗中对抗着帝国的敌人。\n秘密理事会则由一批职位重大且富有智慧的人组成，时刻确保着这个国家正行进在正确的道路上，并为着潜在的危机积蓄着力量。\n你可以通过我来向这两个部门发布命令。"
+ SRA_RE_Hidra.1.desc:0 "你好啊，外来者。"
+ SRA_RE_Hidra.1.a:0 "寻求支援"
+ SRA_RE_Hidra.1.b:0 "出任领袖"
+ SRA_RE_Hidra.1.c:0 "闲聊"
+ SRA_RE_Hidra.1.d:0 "寻求深渊的指引"
+ #不必在意所见之事，吾会指引汝之道路。
+
+ SRA_RE_Hidra.100.desc:0 "帝国安全总局是一柄利刃，时刻狩猎着帝国的敌人，无论敌人来自何方，身处何处。而秘密理事会则是握着利刃的手，如果有必要，我们将采取一切手段维持文明的存续。"
+ SRA_RE_Hidra.100.a:0 "组织大规模维稳行动"
+ SRA_RE_Hidra.100.a.desc:0 "为了保证社会稳定和安全，将绝大部分安全局人力投入到内部审查与社会维稳工作中，通过大量的监控调查，尽可能的排除一切不稳定因素。\n“有关窥探记忆和精神控制的说法皆为无稽之谈。”"
+ SRA_RE_Hidra.100.a.response:0 "行动开始，具体方案已传达给安全局各部门。"
+ SRA_RE_Hidra_101:0 "大规模维稳行动展开中"
+ SRA_RE_Hidra.101.desc:0 "大规模维稳行动当前的计划已经基本完成，需要继续开展下一阶段吗？"
+ SRA_RE_Hidra.101.a:0 "继续执行。"
+ SRA_RE_Hidra.101.b:0 "就此结束吧。"
+ SRA_RE_Hidra.100.b:0 "紧急召集一批资源"
+ SRA_RE_Hidra.100.b.desc:0 "如果事态紧急，秘密理事会可以提供一批应急资源，这些资源基本都有不可明说的来源，当然也有私人出资。总之能一定程度的补充国家开支，但也不一定是刚好需要的物资。"
+ SRA_RE_Hidra.100.b.allow:0 "资源筹备中"
+ SRA_RE_Hidra.100.c:0 "潜入虚境"
+ SRA_RE_Hidra.100.c.desc:0 "如果有需要，我可以引导你们潜入虚境。不过，在那之后就是你们自己的事情了。"
+ SRA_RE_Hidra_103_cooldown:0 "龙的协助"
+ SRA_RE_Hidra_103_cooldown_desc:0 "你相信存在没有代价的好事情吗？"
+
+ SRA_RE_Hidra_102_resource_a:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面包含着一张藏宝图，记载着在§Y[Root.Capital.GetName]§!的某个角落里埋藏着大量的贵金属。"
+ SRA_RE_Hidra_102_resource_b:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面存放着一整套的制服。看上去似乎是[Root.GetName]在前太空时代的军装。\n\n不过，这些衣服的材料还是可以循环利用的。"
+ SRA_RE_Hidra_102_resource_c:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面堆满了稀有的水晶，质地澄澈，价值非凡。"
+ SRA_RE_Hidra_102_resource_d:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面装着一堆很有年代感的卷轴。它由[Root.GetAdj]的古代语言写成，十分具有研究价值。"
+ SRA_RE_Hidra_102_resource_e:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面存放着一大堆冷兵器，不过所用的材料非常优异，可以直接熔炼用作军工所需。"
+ SRA_RE_Hidra_102_resource_f:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面装着满满的军粮。虽然上面的所有标记都已经磨损殆尽了，但是里面的东西看起来尚且安全，而且跟[Root.GetAdj]的旧款式极为相似。"
+ SRA_RE_Hidra_102_resource_g:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面里面堆满了红黑色的奇怪鳞片，强度极高，可以作为军用合金的替代品。"
+ SRA_RE_Hidra_102_resource_h:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面装满了各式各样的黄金珠宝，看上去像是某个王朝的遗物。\n上面有些奇怪的啃咬痕迹。"
+ SRA_RE_Hidra_102_resource_i:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面装着数不清的财富，如果你对不在场的人说起的话，没有人会相信这么巨量的财富会真实存在。"
+ SRA_RE_Hidra_102_resource_j:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面装着几个外星设备，看上去没什么反应，应该是坏了的。"
+ SRA_RE_Hidra_102_resource_k:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面虽然是空的，但是这个箱子的内壁上到底都是各种印记。在更深处的地方追踪到了一些生物物质的踪迹。"
+ SRA_RE_Hidra_102_resource_l:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面存放着一个如同古代传说中地狱火元素的奇特生物。它在接触到现实宇宙的瞬间燃烧成了一堆灵能灰烬。"
+ SRA_RE_Hidra_102_resource_m:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面有一个旋转着的全息模型，与当前物理学的前沿课题息息相关。"
+ SRA_RE_Hidra_102_resource_n:0 "希德拉打了个响指，一个打开的箱子便出现在你的面前，里面装着一整块平滑的合金，其材质是军工材料中最最顶尖的那一批。"
+
+ SRA_RE_Hidra.200.desc:0 "啊，如果你刚好在某一领域缺少一位优秀领袖的话，我也不是不能小小地帮你一个忙。不过呢，我只能有限度的帮你，不能喧宾夺主，不是吗？\n§R你知道，就连灰风都能因为星球上的黑帮交火而暴毙，各路科学家去世更是司空见惯，所以我这个领袖要是哪天死了也不奇怪，到时候你再来这里找我就是了。§!"
+ SRA_RE_Hidra.200.a:0 "以产业专员身份行动"
+ SRA_RE_Hidra.200.b:0 "以科学官身份行动"
+ SRA_RE_Hidra.200.c:0 "以舰队司令身份行动"
+ SRA_RE_Hidra.200.d:0 "以战略家身份行动"
+
+ SRA_RE_Hidra.3011.a.desc:0 "现实是无法醒来的梦境，梦境是可以打破的现实。然而，如果在面对所谓的现实时也能像在梦中一般随心所欲，乃至在厌烦时抽身而去，那么这一切，又有什么意义呢……只是偶然间的感慨，不必放在心上。"
+ SRA_RE_Hidra.3011.b.desc:0 "我总是随波逐流……没有什么追求，兴趣爱好也仅限于眼前见到的范围。我跟着路希，有一部分原因也就是因为她总是有事可做，能让我也有事可做。如果没有她，我大概会在深渊中一直沉睡下去吧……"
+ SRA_RE_Hidra.3011.c.desc:0 "“可能性”的光辉终究少见，这世上的芸芸众生，大多只是艰难地绞合着前进的齿轮，被命运塞进庞大的历史机器中，等到磨损到无法运行，便被剔除出来，扔进遗忘的熔炉中去。"
+ SRA_RE_Hidra.3011.d.desc:0 "这个宇宙的规则并不稳定，一群奇特的四足食草动物以愚蠢的方式搭建了它的基础，随后又有许多别的存在在这一基础上修修补补涂涂改改……说不定什么时候它就崩溃了。"
+ SRA_RE_Hidra.3011.e.desc:0 "你对一切仍然满怀信心……将这些人的命运捏在手里的时候，你相信会有个好结局。"
+
+ SRA_RE_Hidra.3012.a.desc:0 "对于我来说，即便做出对于凡人而言伟大至极的功业也毫不费力。征服世界？创造传奇？英雄？霸主？所有的这些，对于我来说不过是能随手摘去的果实罢了。但那又有什么意义呢？我做到那些并不是因为我想的更多，做的更多，而是因为我从一开始就站在终点线前，只要愿意迈步，就一定是冠军。\n所以我不追逐宏大，我只是注目你们的努力，你们的付出，你们的可能性，看着你们以渺小之身，成就你们的辉煌。"
+ SRA_RE_Hidra.3012.b.desc:0 "最好避免在同一支舰队内编入过多舰船，一百艘以内为妙。一旦太多被摧毁的舰船等待补充，你就会感觉时间的流逝变得不那么顺畅了。"
+ SRA_RE_Hidra.3012.c.desc:0 "“不要因路远而踌躇，只要去，就必到达。”"
+
+ #山巅的巨龙不曾想过统治山下的国度，但当勇士艰难攀上山峰寻求智慧时，它不介意给予一点“小小的”帮助。
+
+ SRA_RE_Hidra.3013.a.desc:0 "在遇到某些特殊星球的时候，尽可能使用陆军登陆吧。那些摧毁星球的方式在某一层面上……不太可靠。"
+ SRA_RE_Hidra.3013.b.desc:0 "舰船武器之外的摧毁方式是不被这片群星所承认的，那些玩弄数据的把戏，不过是自欺欺人。"
+ SRA_RE_Hidra.3013.c.desc:0 "来时的地方白骨累累，要去的地方鲜花满地……"
+
+ SRA_RE_Hidra.3014.a.desc:0 "时间不过是衡量变化的尺度。在更高的角度上，所有的时间都“同时”存在，所谓的未来“已经”发生。因此，一切都已注定，命运不可改变。除非在时间之外的某个存在轻轻触动了某个片段，将它导向了另一个注定的命运。\n而你我，正拨动着命运之弦，模糊着未来的方向。"
+
+ SRA_RE_Hidra.401.desc:0 "路希想让你在这个剧本里脚踏实地，让你自己去探索每一种可能，做出抉择，直面危机。\n但如果你想，我可以指引你走向“正确”的道路。\n以及，给予你些许改变现实的力量。\n这不需要你付出什么，什么都不需要。"
+ SRA_RE_Hidra.401.a:0 "接受"
+ SRA_RE_Hidra.401.a.desc:0 "§Y当需要做出抉择时，为你指明道路。\n当需要竭力探索时，为你揭示真实。\n揭露星辉水晶的奥秘，为你点亮技术。\n宇宙的恶疾将不会滋生于你的国土。"
+
+ #将灾疫研究项目的消耗改为5000
+
+ SRA_RE_Hidra.401.b:0 "额，要不我们先等等？"
+ SRA_RE_Hidra.402.desc:0 "嗯……\n现在，你可以继续前行了。\n然而，若是如此……\n为什么不选择「星规技术」呢？"
+ SRA_RE_Hidra.403.desc:0 "大概是因为这里有我这样一个兼具智慧和美丽，如晨曦一般绚丽的少女吧。"
+ SRA_RE_Hidra.404.desc:0 "（敲）\n你怎么突然过来了？"
+ SRA_RE_Hidra.405.desc:0 "好痛……\n因为感觉到了某人正在破坏我的伟大游戏……呃，我是说我的剧本。"
+ SRA_RE_Hidra.406.desc:0 "那多有意思啊，不是吗？"
+ SRA_RE_Hidra.407.desc:0 "不行不行，要是前面的部分这么轻松的话，后面的煽情部分不就很尴尬了吗？明明是碾压的局面，却又要过剧情说“这是唯一的办法了”，这可不行。"
+ SRA_RE_Hidra.408.desc:0 "就算我不这么做，不想配合你的「执行官」也会选择去打别的Mod，或者干脆按~开控制台的。这是他们的自由。"
+ SRA_RE_Hidra.409.desc:0 "啧。"
+
+
+ ag_patron_ancient_ai: "$ag_extragalactic_galaxy_m106_ai_name$"
+ ag_patron_ancient_ai_article: "$ag_extragalactic_galaxy_m106_ai_name$"
+ ag_patron_ancient_ai_article_cap: "$ag_extragalactic_galaxy_m106_ai_name$"
+ ag_patron_ancient_ai_color: "§L$ag_extragalactic_galaxy_m106_ai_name$§!"
+ ag_patron_ancient_ai_color_article: "§H$ag_extragalactic_galaxy_m106_ai_name$§!"
+ ag_patron_ancient_ai_color_article_cap: "§H$ag_extragalactic_galaxy_m106_ai_name$§!"
+ #虚境实体
+ SRA_patron_Hidra: "猩红之创痕"
+ SRA_patron_Hidra_article: "$SRA_patron_Hidra$"
+ SRA_patron_Hidra_article_cap: "$SRA_patron_Hidra$"
+ SRA_patron_Hidra_color: "§L$SRA_patron_Hidra$§!"
+ SRA_patron_Hidra_color_article: "§R$SRA_patron_Hidra$§!"
+ SRA_patron_Hidra_color_article_cap: "R$SRA_patron_Hidra$§!"
+ SRA_patron_Hidra_desc: "一次触碰在§H虚境§!中留下的令人悚骇的伤痕，血棘滋长，创伤蔓延。也许有朝一日，§H虚境§!将因此§R干枯死去§!。"
+ code_name_SRA_patron_Hidra: "悚骇之物"
+ SRA_patron_Hidra_passive_accord_effect: "§R荣耀的时刻即将到来。§!"
+ SRA_patron_Hidra_passive_accord_modifier: "§R彷徨与无措已然结束。§!"
+
+ SRA_patron_Hidra_project_desc_end:0 "在知道这个实体的真名之前，我们会称之为§H$code_name_SRA_patron_Hidra$§!。"
+ SRA_patron_Hidra_project:0 "与$code_name_SRA_patron_Hidra$通灵"
+ SRA_patron_Hidra_project_DESC:0 "$MINOR_PATRON_FC_PROJECT_DESC$\n\n$SRA_patron_Hidra_project_desc_end$"
+ SRA_patron_Hidra_project_hive:0 "与$code_name_SRA_patron_Hidra$通灵"
+ SRA_patron_Hidra_project_hive_DESC:0 "$MINOR_PATRON_FC_PROJECT_HIVE_DESC$\n\n$SRA_patron_Hidra_project_desc_end$"
+ SRA_patron_Hidra_project_machine:0 "与$code_name_SRA_patron_Hidra$通灵"
+ SRA_patron_Hidra_project_machine_DESC:0 "$MINOR_PATRON_FC_PROJECT_ROBOT_DESC$\n\n$SRA_patron_Hidra_project_desc_end$"
+
+ SRA_RE_Hidra.500.desc: "§H虚境§!的流动骤然狂暴，将我们席卷到了一处此前我们从未发现过的领域之中。\n模糊而狰狞的树杈在这里无处不在，在§H虚境§!的每一个表面滋长，穿刺，§R虚境正在流血。§!而直面这一切的我们也被§H虚境§!的痛苦所压倒，我们的灵能尖啸着碎裂，发出垂死的嘶嚎。\n就当我们绝望之时，§R某个存在§!向我们投下了目光。\n\n压力骤然减缓，消亡，无影无踪，我们又能在§H虚境§!中自由的活动了。然而，这处§H虚境§!的伤痕仍然存在，它是如此的令人悚骇，就好像无边无际的§H虚境§!会因此而衰弱死去。\n§R那个存在§!没有对我们言说什么，但祂表现出的似乎是一种模糊的善意？我们不知道祂和这道伤痕有什么关系，但祂也带着同样的令人不安的感觉。\n\n我们正在脱离§H虚境§!，暂且称§R这个存在§!为§R$code_name_SRA_patron_Hidra$§!吧，我们也许很快就能再会了。"
+ SRA_RE_Hidra.500.a:0 "令人不安。"
+
+ SRA_RE_Hidra.501.name:0 "§R$code_name_SRA_patron_Hidra$§!"
+ SRA_RE_Hidra.501.desc:0 "§Y我们循着此前留下的灵能印记重新找到了我们称之为§R$code_name_SRA_patron_Hidra$§!的§H虚境§!存在，此刻祂并不身处那个可怖的伤痕之旁，而是在§H虚境§!的某个新的领域。那些猩红的树杈在祂的身旁缓缓生长，但还没有在§H虚境§!上撕开新的伤口。\n§R$code_name_SRA_patron_Hidra$§!看向我们，祂的注目令我们感到深切的不安。§!\n\n你好啊，外来者。"
+ SRA_RE_Hidra.501.a:0 "你是？"
+ SRA_RE_Hidra.502.name:0 "§R$SRA_patron_Hidra$§!"
+ SRA_RE_Hidra.502.desc:0 "§Y§R$code_name_SRA_patron_Hidra$§!似乎轻笑了一声，随后笼罩着祂的迷雾逐渐散去，露出了一个你相当熟悉的身影。§!\n\n在这里的话，嗯，其他§H虚境§!存在称我为§R$SRA_patron_Hidra$§!，我们就暂且借用这个称谓吧。\n\n§Y$Name_SRA_RE_leader_Hidra$，或者按她的说法，§R$SRA_patron_Hidra$§!露出了一个不怀好意的笑容。§!\n\n这个宇宙真有意思，有这么多千奇百怪而又广阔的位面，可以随意旅行，不像有些孤岛，连一点上级位面都没有。\n§H虚境§!映照出了我的一些侧面，或者说，我影响的其中一部分在这里被放大了，我仅仅只是轻轻触碰了一下，就留下了这样的一道创伤。\n对宽广的§H虚境§!来说这小小的一处并不算什么，但它既然挑选了这样的性质，也许哪天会有很有意思的场面也说不定？\n不过眼下，我们可以当做无事发生，你可以继续享受你的§H虚境§!探索，不用在意我。"
+ SRA_RE_Hidra.502.a:0 "害怕……"
+##########################字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§H H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+## 结束
+##########################字体颜色代码
+
+###
+#31冷漠32普通33微笑

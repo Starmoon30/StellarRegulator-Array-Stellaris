@@ -1,0 +1,412 @@
+#################领袖特质##################
+leader_trait_SRA_ruler = {
+	cost = 0
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = yes
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = leader			# official, scientist, commander
+		SRA_background = GFX_SRA_b_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_gov
+		SRA_tier = none
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = influence
+		AMOUNT = 10
+	}
+	councilor_modifier = {
+		country_cost_mult = -0.5
+	    planet_jobs_upkeep_mult = -0.5
+		country_produces_mult = 0.5
+	}
+	force_councilor_trait = yes
+	leader_class = { official commander scientist  }
+	initial = no
+	randomized = no
+}
+
+leader_trait_SRA_End_2_ruler = {
+	cost = 0
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = yes
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = leader			# official, scientist, commander
+		SRA_background = GFX_SRA_b_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_RE_ruler2
+		SRA_tier = none
+	}
+	councilor_modifier = {
+		country_produces_mult = 1
+		all_technology_research_speed = 1
+	}
+	force_councilor_trait = yes
+	leader_class = { official commander scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_SRA_gov = {
+	cost = 10
+	custom_subtitle = "leader_trait_SRA_gov_custom_subtitle"
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = no
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = official			# official, scientist, commander
+		SRA_background = GFX_SRA_b_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_gov
+		SRA_tier = none
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.5
+		planet_building_build_speed_mult = 0.5
+		planet_decision_enact_speed_mult = 0.5
+		planet_clear_blocker_speed_mult = 1
+		planet_jobs_trade_produces_mult = 0.5
+		planet_buildings_cost_mult = -0.5
+		planet_districts_cost_mult = -0.5
+		planet_stability_add = 20
+		pop_citizen_happiness = 0.2
+	}
+	sector_modifier = {
+		planet_jobs_produces_mult = 0.5
+		planet_building_build_speed_mult = 0.5
+		planet_decision_enact_speed_mult = 0.5
+		planet_clear_blocker_speed_mult = 1
+		planet_jobs_trade_produces_mult = 0.5
+		planet_buildings_cost_mult = -0.5
+		planet_districts_cost_mult = -0.5
+		planet_stability_add = 20
+		pop_citizen_happiness = 0.2
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_SRA_sci = {
+	cost = 0
+	custom_subtitle = "leader_trait_SRA_sci_custom_subtitle"
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = no
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = scientist			# official, scientist, commander
+		SRA_background = GFX_SRA_b_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_sci
+		SRA_tier = none
+	}
+	modifier = {
+		ship_archaeological_site_clues_add = 4
+		ship_astral_rift_clues_add = 4
+		ship_anomaly_research_speed_mult = 1
+		ship_astral_rift_speed_mult = 2
+		ship_archaeological_site_excavation_speed_mult = 2
+		country_astral_rift_fail_mult = -1
+		ship_anomaly_generation_chance_mult = 0.5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			OR = {
+				is_councilor_type = councilor_research
+				is_councilor_type = councilor_gestalt_cognitive
+			}
+		}
+		all_technology_research_speed = 1
+		planet_jobs_produces_mult = 0.2
+		ship_archaeological_site_clues_add = 10
+		ship_astral_rift_clues_add = 10
+		ship_anomaly_research_speed_mult = 1
+		ship_astral_rift_speed_mult = 1
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+	
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_SRA_adm = {
+	cost = 0
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = no
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = commander			# official, scientist, commander
+		SRA_background = GFX_SRA_b_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_adm
+		SRA_tier = none
+	}
+	fleet_modifier = {
+		ship_tracking_add = 10
+		ship_accuracy_add = 10
+		ship_weapon_damage = 0.5
+		ship_fire_rate_mult = 0.5
+		ship_weapon_range_mult = 0.3
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+leader_trait_SRA_gen = {
+	cost = 0
+	immortal_leaders = yes
+	inline_script = {
+		script = trait/SRA_common_trait_template
+		SRA_council = no
+		SRA_rarity = paragon		# common, veteran, paragon, free_or_veteran
+		SRA_class = commander			# official, scientist, commander
+		SRA_background = GFX_SRA_b_trait_glow_destiny
+		SRA_icon = GFX_leader_trait_SRA_gen
+		SRA_tier = none
+	}
+	army_modifier = {
+		army_health = 3
+		army_damage_mult = 5
+		army_morale = 5
+		#army_damage_taken_mult = -1
+		army_collateral_damage_mult = -1
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#################物种特质##################
+
+SRA_RE_trait_metabyss = {
+	cost = 1
+	allowed_archetypes = { SRA_SR }
+	sorting_priority = 30
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_trait_SRA_RE_rul1.dds"
+	modifier={
+		negative_leader_traits_species = -10
+		species_leader_exp_gain = 10
+		leaders_upkeep_mult = -1
+		pop_happiness = 1
+	}
+}
+
+SRA_trait_SR = {
+	cost = 1
+	allowed_archetypes = { SRA_SR }
+	sorting_priority = 30
+	randomized = no
+	icon = "gfx/interface/icons/traits/SRA_trait_SR.dds"
+	immortal_leaders = yes
+	modifier = {
+		negative_leader_traits_species = -10
+		pop_bonus_workforce_mult = 0.2
+		habitability_floor_add = 1
+		pop_housing_usage_mult = -1
+	}
+}
+SRA_trait_mind_network = {
+	cost = 1
+	allowed_archetypes = { SRA_SR }
+	sorting_priority = 30
+	randomized = no
+	icon = "gfx/interface/icons/traits/SRA_trait_mind_network.dds"
+	modifier={
+		species_leader_exp_gain = 1
+		leaders_upkeep_mult = -1
+		pop_happiness = 1
+	}
+}
+SRA_trait_mind_entity = {
+	cost = 1
+	allowed_archetypes = { SRA_SR }
+	sorting_priority = 30
+	randomized = no
+	icon = "gfx/interface/icons/traits/SRA_trait_mind_entity.dds"
+	modifier = {
+		pop_bonus_workforce_mult = 0.6
+		planet_pops_upkeep_mult = -1
+	}
+}
+SRA_trait_material_energy_conversion = {
+	cost = 1
+	allowed_archetypes = { SRA_SR }
+	sorting_priority = 30
+	randomized = no
+	icon = "gfx/interface/icons/traits/SRA_trait_material_energy_conversion.dds"
+	modifier = {
+		pop_bonus_workforce_mult = 0.2
+		pop_amenities_usage_mult = -1
+	}
+}
+SRA_trait_foldable_structure = {
+	cost = 1
+	allowed_archetypes = { SRA_SR }
+	sorting_priority = 30
+	randomized = no
+	icon = "gfx/interface/icons/traits/SRA_trait_foldable_structure.dds"
+	modifier = {
+		pop_bonus_workforce_mult = 0.4
+		army_damage_mult = 1
+		army_health = 1
+		army_morale = 1
+	}
+}
+#####特殊可用物种特质
+
+trait_pc_SRA_SD_chaos_star_habitable_preference = {
+	icon = "gfx/interface/icons/traits/trait_SRA_SD_preference.dds"
+	short_name = "trait_pc_SRA_SD_chaos_star_habitable_preference_short"
+	allowed_archetypes = { SRA_SR }
+	archetype_override = {
+		from = {
+			OR = {
+				has_country_flag = StellarRegulator_Array_tech_permit
+				has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+			}
+		}
+	}
+	sorting_priority = 30
+	bound_to_planet_classes = {
+		pc_SRA_SD_chaos_star_habitable
+	}
+	initial = no
+	randomized = no
+	species_possible_merge_add = {
+		always = yes
+	}
+	species_possible_remove = {
+		always = yes
+	}
+	modifier = {
+		habitability_floor_add = 2
+		pop_environment_tolerance = 4
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+# SRA_Erlius_trait_1 = {
+# 	cost = 0
+# 	allowed_archetypes = { BIOLOGICAL MACHINE WARSHIPGIRL SHENHAI STARSHIPGIRLS TOUHOUGIRLS Dolls UNITED_FLEET NYTO KZ_VOY_TERRANOID }
+# 	sorting_priority = 30
+# 	initial = no
+# 	randomized = no
+# 	icon = "gfx/interface/icons/traits/SRA_Erlius_trait_1.dds"
+# 	prerequisites = { tech_SRA_Erlius_trait }
+# 	modifier = {
+# 		planet_jobs_engineering_research_produces_mult = 0.1
+# 		planet_jobs_physics_research_produces_mult = 0.1
+# 		planet_jobs_society_research_produces_mult = 0.1
+# 		pop_happiness = -0.1
+# 	}
+# }
+# SRA_Erlius_trait_2 = {
+# 	cost = 0
+# 	allowed_archetypes = { BIOLOGICAL MACHINE WARSHIPGIRL SHENHAI STARSHIPGIRLS TOUHOUGIRLS Dolls UNITED_FLEET NYTO KZ_VOY_TERRANOID }
+# 	sorting_priority = 30
+# 	initial = no
+# 	randomized = no
+# 	icon = "gfx/interface/icons/traits/SRA_Erlius_trait_2.dds"
+# 	prerequisites = { tech_SRA_Erlius_trait }
+# 	species_potential_add = {
+# 		has_trait = SRA_Erlius_trait_1
+# 	}
+# 	modifier = {
+# 		planet_jobs_engineering_research_produces_mult = 0.5
+# 		planet_jobs_physics_research_produces_mult = 0.5
+# 		planet_jobs_society_research_produces_mult = 0.5
+# 		planet_jobs_unity_produces_mult = -0.5
+# 		leader_age = -20
+# 		pop_category_rulers_consumer_goods_upkeep_add = 0.5
+# 		pop_category_specialists_consumer_goods_upkeep_add = 0.5
+# 		pop_category_workers_consumer_goods_upkeep_add = 0.5
+# 		pop_category_slave_consumer_goods_upkeep_add = 0.5
+# 	}
+# }
+# SRA_Erlius_trait_3 = {
+# 	cost = 0
+# 	allowed_archetypes = { BIOLOGICAL MACHINE WARSHIPGIRL SHENHAI STARSHIPGIRLS TOUHOUGIRLS Dolls UNITED_FLEET NYTO KZ_VOY_TERRANOID }
+# 	sorting_priority = 30
+# 	initial = no
+# 	randomized = no
+# 	icon = "gfx/interface/icons/traits/SRA_Erlius_trait_3.dds"
+# 	prerequisites = { tech_SRA_Erlius_trait }
+# 	species_potential_add = {
+# 		has_trait = SRA_Erlius_trait_1
+# 	}
+# 	modifier = {
+# 	}
+# }
+# SRA_Erlius_trait_4 = {
+# 	cost = 0
+# 	allowed_archetypes = { BIOLOGICAL MACHINE WARSHIPGIRL SHENHAI STARSHIPGIRLS TOUHOUGIRLS Dolls UNITED_FLEET NYTO KZ_VOY_TERRANOID }
+# 	sorting_priority = 30
+# 	initial = no
+# 	randomized = no
+# 	icon = "gfx/interface/icons/traits/SRA_Erlius_trait_4.dds"
+# 	prerequisites = { tech_SRA_Erlius_trait }
+# 	species_potential_add = {
+# 		has_trait = SRA_Erlius_trait_1
+# 	}
+# 	modifier = {
+# 	}
+# }
+# SRA_Erlius_trait_5 = {
+# 	cost = 0
+# 	allowed_archetypes = { BIOLOGICAL MACHINE WARSHIPGIRL SHENHAI STARSHIPGIRLS TOUHOUGIRLS Dolls UNITED_FLEET NYTO KZ_VOY_TERRANOID }
+# 	sorting_priority = 30
+# 	initial = no
+# 	randomized = no
+# 	icon = "gfx/interface/icons/traits/SRA_Erlius_trait_5.dds"
+# 	prerequisites = { tech_SRA_Erlius_trait }
+# 	species_potential_add = {
+# 		has_trait = SRA_Erlius_trait_1
+# 	}
+# 	modifier = {
+# 	}
+# }
+# SRA_Erlius_trait_6 = {
+# 	cost = 0
+# 	allowed_archetypes = { BIOLOGICAL MACHINE WARSHIPGIRL SHENHAI STARSHIPGIRLS TOUHOUGIRLS Dolls UNITED_FLEET NYTO KZ_VOY_TERRANOID }
+# 	sorting_priority = 30
+# 	initial = no
+# 	randomized = no
+# 	icon = "gfx/interface/icons/traits/SRA_Erlius_trait_6.dds"
+# 	prerequisites = { tech_SRA_Erlius_trait }
+# 	species_potential_add = {
+# 		has_trait = SRA_Erlius_trait_1
+# 	}						
+# 	modifier = {
+# 	}
+# }
+# SRA_Erlius_trait_7 = {
+# 	cost = 0
+# 	allowed_archetypes = { BIOLOGICAL MACHINE WARSHIPGIRL SHENHAI STARSHIPGIRLS TOUHOUGIRLS Dolls UNITED_FLEET NYTO KZ_VOY_TERRANOID }
+# 	sorting_priority = 30
+# 	initial = no
+# 	randomized = no
+# 	icon = "gfx/interface/icons/traits/SRA_Erlius_trait_7.dds"
+# 	prerequisites = { tech_SRA_Erlius_trait }
+# 	species_potential_add = {
+# 		has_trait = SRA_Erlius_trait_1
+# 	}
+# 	modifier = {
+# 	}
+# }

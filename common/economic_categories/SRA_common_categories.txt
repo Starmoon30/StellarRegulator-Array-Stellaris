@@ -1,0 +1,24 @@
+SRA_SD_productive_category = {
+	parent = planets
+	generate_add_modifiers = {
+		produces
+        upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}
+SRA_SD_core_building_category = {
+	parent = planets
+	generate_add_modifiers = {
+		produces
+        upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}

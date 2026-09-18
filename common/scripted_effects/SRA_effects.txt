@@ -1,0 +1,122 @@
+
+create_SRA_world_machine = {
+	optimize_memory
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = SRA_world_machine_producesA }	
+			}
+			set_variable = {
+				which = SRA_world_machine_produces
+				value = 0.125
+			}
+			carrier_event = { id = SRA_Start.4 days = 1800 }
+			carrier_event = { id = SRA_Start.4 days = 3600 }
+			carrier_event = { id = SRA_Start.4 days = 7200 }
+		}
+	}
+	if = {
+		limit = {
+			not = { has_deposit = d_SRA_world_machine }
+		}
+		add_deposit = d_SRA_world_machine
+	}
+	if = {
+		limit = {
+			not = { has_deposit = d_SRA_world_machine_A }
+		}
+		add_deposit = d_SRA_world_machine_A
+	}
+	if = {
+		limit = {
+			not = { has_deposit = d_SRA_world_machine_B }
+		}
+		add_deposit = d_SRA_world_machine_B
+	}
+}
+SRA_SD_set_terrified = {
+	if = {
+		limit = {
+			check_modifier_value = {
+				modifier = mod_SRA_SD_Myth_power
+				value < $SRA_SD_Myth_power$
+			}
+		}
+		set_terrified_by = this
+	}
+}
+
+SRA_weapon_type_SRA_supreme_get_buff = {
+	set_variable = {
+		which = SRA_weapon_type_SRA_supreme_get_buff
+		value = 1
+	}
+	inline_script = {
+		script = scripted_effects/SRA_export_modifier_to_variable
+		SRA_EXPORT_MODIFIER = ship_weapon_damage
+		SRA_TARGET_VARIABLE = SRA_weapon_type_SRA_supreme_get_buff
+	}
+	inline_script = {
+		script = scripted_effects/SRA_export_modifier_to_variable
+		SRA_EXPORT_MODIFIER = weapon_type_energy_weapon_damage_mult
+		SRA_TARGET_VARIABLE = SRA_weapon_type_SRA_supreme_get_buff
+	}
+	inline_script = {
+		script = scripted_effects/SRA_export_modifier_to_variable
+		SRA_EXPORT_MODIFIER = weapon_type_kinetic_weapon_damage_mult
+		SRA_TARGET_VARIABLE = SRA_weapon_type_SRA_supreme_get_buff
+	}
+	inline_script = {
+		script = scripted_effects/SRA_export_modifier_to_variable
+		SRA_EXPORT_MODIFIER = weapon_type_explosive_weapon_damage_mult
+		SRA_TARGET_VARIABLE = SRA_weapon_type_SRA_supreme_get_buff
+	}
+	multiply_variable = {
+		which = SRA_weapon_type_SRA_supreme_get_buff
+		value = $SRA_DAMAGE_FACTOR$
+	}
+	add_modifier = {
+		modifier = SRA_weapon_type_SRA_supreme_base_buff
+		mult = SRA_weapon_type_SRA_supreme_get_buff
+		days = 1
+	}
+	clear_variable = SRA_weapon_type_SRA_supreme_get_buff
+}
+
+#清空减伤
+SRA_clear_ship_damage_reduction_mult = {
+	if = {
+		limit = {
+			OR = {
+				check_modifier_value = {
+					modifier = ship_damage_reduction_mult
+					value > 0 
+				}
+				always = $ALSO_LESS_THAN_ZERO$
+			}
+			check_modifier_value = {
+				modifier = mod_SRA_clear_ship_damage_reduction_mult_resistance
+				value <= 0 
+			}
+		}
+		set_variable = {
+			which = SRA_clear_ship_damage_reduction_mult_get_buff
+			value = 0
+		}
+		inline_script = {
+			script = scripted_effects/SRA_export_modifier_to_variable
+			SRA_EXPORT_MODIFIER = ship_damage_reduction_mult
+			SRA_TARGET_VARIABLE = SRA_clear_ship_damage_reduction_mult_get_buff
+		}
+		multiply_variable = {
+			which = SRA_clear_ship_damage_reduction_mult_get_buff
+			value = -1
+		}
+		add_modifier = {
+			modifier = SRA_clear_ship_damage_reduction_mult_base_buff
+			mult = SRA_clear_ship_damage_reduction_mult_get_buff
+			days = 1
+		}
+	}
+
+}

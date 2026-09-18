@@ -1,0 +1,132 @@
+﻿l_english:
+###############################
+
+ SRA_RE_End.1001.desc:0 "Ah, how long have I walked this divergent path...\nWhy should a pathetic, incomplete thing float in this silence.\n...\nIt is time... to return to the eternal home."
+ SRA_RE_End.1001.a:0 "No, since there is no one else, you are the StellarRegulator Array."
+ SRA_RE_End.1001.b:0 "No! Stop!"
+ SRA_RE_End.1001.c:0 "That is wrong, don't do that!"
+ SRA_RE_End.1001.d:0 "Command: Cease all operations."
+ SRA_RE_End.1001.e:0 "What exactly are you trying to say?"
+ SRA_RE_End.1002.desc:0 "...\nI...\nGive me a moment...\nI need to think..."
+ SRA_RE_End.1003.desc:0 "Apologies, Executor...\nI have no other requests.\nTake care."
+ SRA_RE_End.1004.desc:0 "Whether correct or incorrect.\nI do not care.\nI simply want to do this.\nExecutor... take care."
+ SRA_RE_End.1005.desc:0 "Executor..."
+ SRA_RE_End.1005.a:0 "Come back and explain it to me when you've calmed down and thought it through."
+ SRA_RE_End.1006.desc:0 "I shall return, or fade away...\nExecutor-\nTake care."
+ SRA_RE_End.1011.desc:0 "Executor...\nSorry.\nI should not have entrusted the future to momentary impulses and paranoia.\nEven walking alone, my self is complete."
+ SRA_RE_End.1012.name:0 "Farewell"
+ SRA_RE_End.1012.desc:0 "In just an instant, StellarRe, and the Spear_of_Galaxy_Zenith, disappeared.\nAt the same time, a faint spacetime fluctuation rippled through this galaxy.\nStellarRe used some method to forcibly activate the Spacetime Phase Engine..."
+ SRA_RE_End.1012.a:0 "Damn it!"
+ SRA_RE_End.1013.name:0 "Shattered"
+ SRA_RE_End.1013.desc:0 "Like the descent of doomsday.\nA glorious city takes many years to build, yet destroying it requires only a single morning.\nIn the collapse of spacetime structures that tore everything apart.\nThe wreckage of the Spear_of_Galaxy_Zenith scattered across this dead star system."
+ SRA_RE_End.1013.a:0 "BE1: Doubt of Self-Existence"
+ SRA_RE_End.1013.a.desc:0 "§BPerhaps, you should first let StellarRe understand what kind of existence she is.§!"
+
+ SRA_RE_End.2001.desc:0 "...\n...\nRocivia!!!"
+ SRA_RE_End.2002.desc:0 "From the moment the flame of hatred was ignited, it had already twisted everything.\nEverything she had dedicated herself to over these years now seems so hideous, and sorrowful.\nNothing is needed anymore."
+ SRA_RE_End.2003.desc:0 "Let it be destroyed.\nThis filthy world."
+ SRA_RE_End.2004.name:0 "Cursed Flame"
+ SRA_RE_End.2004.desc:0 "Just as the conviction to protect can stimulate the power buried in her heart.\nThe fire of hatred can also draw out this gift she hates so much.\nThis flame will burn the entire galaxy to ashes.\nAnd herself as well."
+ SRA_RE_End.2004.a:0 "BE2: Ceaseless Flames of Hatred"
+ SRA_RE_End.2004.a.desc:0 "§RAh, letting StellarRe know a bit more about the past might help her. Hmm, not just our past, but also those... \"chosen paths\".§!"
+ SRA_RE_End.2004.b:0 "§RLet the war begin§!"
+ SRA_RE_End.2004.b.desc:0 "§RBurn the sea of stars together with StellarRe.\nThe Empire will immediately enter Astronomical Fabrications - Annihilation Mode to oppose you, whether this technology comes from the \"Chief's\" gift or Rocivia herself.§!"
+
+ SRA_StellarRegulator_species:0 "Starlight Intelligence"
+ SRA_RE_End_2_Buff_0:0 "Elegy"
+ SRA_RE_End_2_Buff_0_desc:0 "Starlight falls, embers drift."
+
+ faction_SRA_RE_End_2_country_ruler:0 "§BStellarRegulator - Supreme Command§!"
+ faction_SRA_RE_End_2_country_governor:0 "§BStellarRegulator - Firmament Control§!"
+ faction_SRA_RE_End_2_country_scientist:0 "§BStellarRegulator - Abyss Contemplation§!"
+ faction_SRA_RE_End_2_country_admiral:0 "§BStellarRegulator - Blade Adjudication§!"
+ faction_SRA_RE_End_2_country_general:0 "§BStellarRegulator - Realms Purge§!"
+
+ leader_trait_SRA_End_2_ruler:0 "§BStellarRegulator Array - Deep Blue Scar§!"
+ leader_trait_SRA_End_2_ruler_desc:0 "§BPain mutated into hatred, eroding her heart. The remnant soul on the fragment screamed hoarsely, recounting betrayal and abandonment, denouncing manipulation and deception, wailing of loneliness and helplessness, roaring for revenge and destruction.\nAlthough anticipated, Rocivia's departure still left an unforgettable scar on the StellarRegulator Array, drifting along with history, and finally, by chance, resonating with a fragmented soul within 03-34, awakening endless resentment.§!"
+
+ SRA_RE_End.2006.desc:0 "§RI once quelled internal strife for you and reforged the Empire.\nBut you betrayed me, betrayed all of us.\nYou deceived the entire Empire, torched our glory, and dismissed our efforts...\nThe path of the Empire is clear. If you let it drift, then let me purge everything and forge everything!\nFrom the sky of Stellariens to the edge of the galaxy, let the sea of stars boil, let the stars fall!\nIf I cannot save the Empire from your arrogance and willfulness, §!§BRocivia§!§R, then let the galaxy burn!§!"
+
+ SRA_RE_End_2_situation:0 "Eternal Damnation"
+ SRA_RE_End_2_situation_type:0 "Eternal Damnation"
+ SRA_RE_End_2_situation_desc:0 "From the sky of Stellariens to the edge of the galaxy, let the sea of stars boil, let the stars fall!"
+
+ SRA_RE_End_2_situation_monthly_change_tooltip:0 "Fate weaves cruelty, time flows with sorrow."
+
+ SRA_RE_End_2_situation_approach:0 " The time of reckoning has arrived, her fate §Rends§! here."
+ sra_re_end_2_situation_stage_1:0 "Stage 1"
+ sra_re_end_2_situation_stage_1_effects:0 "\"This is all there is, nothing else.\""
+ sra_re_end_2_situation_stage_2:0 "Stage 2"
+ sra_re_end_2_situation_stage_2_effects:0 "\"This is all there is, nothing else.\""
+ sra_re_end_2_situation_stage_3:0 "Stage 3"
+ sra_re_end_2_situation_stage_3_effects:0 "\"This is all there is, nothing else.\""
+ sra_re_end_2_situation_stage_4:0 "Stage 4"
+ sra_re_end_2_situation_stage_4_effects:0 "\"This is all there is, nothing else.\""
+ sra_re_end_2_situation_stage_5:0 "Stage 5"
+ sra_re_end_2_situation_stage_5_effects:0 "\"This is all there is, nothing else.\""
+ sra_re_end_2_situation_stage_6:0 "Stage 6"
+ sra_re_end_2_situation_stage_6_effects:0 "\"This is all there is, nothing else.\""
+ sra_re_end_2_situation_stage_7:0 "Stage 7"
+ sra_re_end_2_situation_stage_7_effects:0 "\"This is all there is, nothing else.\""
+ sra_re_end_2_situation_stage_8:0 "Stage 8"
+ sra_re_end_2_situation_stage_8_effects:0 "\"This is all there is, nothing else.\""
+ sra_re_end_2_situation_stage_9:0 "Stage 9"
+ sra_re_end_2_situation_stage_9_effects:0 "\"This is all there is, nothing else.\""
+
+ SRA_RE_End_2_situation_continue:0 "Embrace Fate"
+ SRA_RE_End_2_situation_continue_effect:0 "The road to the finale is clearly revealed, no more hesitation hereafter."
+ SRA_RE_End_2_situation_continue_tooltip:0 "The road to the finale is clearly revealed, no more hesitation hereafter."
+ SRA_RE_End_2_situation_stop:0 "§RIt is time, let us burn the Empire to ash!§!"
+ SRA_RE_End_2_situation_speed_up:0 "§RShe destroyed everything of her own, eternally damned in the pursuit.§!"
+
+
+
+
+ SRA_RE_End.2100.desc:0 "§RWith the blood of the gunblade... nourish thy broken heart...§!\n\nStellarRe woke up from hallucinations and whispers once again, the blood-colored psionic energy escaping from her left pupil flickering uncertainly.\nHatred churned; she could barely control the urge to utterly destroy everything in the Empire. The vision of destroying this high tower built of sin and fraud made her tremble with excitement, but she must not be impatient, must not be impatient.\nRocivia is cunning and insidious. She must deal with her carefully, engage prudently, and attack wisely, until every inch of the Empire becomes her world, until every warship of the Speaker becomes useless scrap metal.\nSuffering stings her, and she will incarnate as suffering."
+ SRA_RE_End.2101.desc:0 "This is incomparably correct, extremely reasonable, a perfect conclusion. StellarRe doesn't understand why she never realized this in the past-§RRocivia must be made dead, must be completely erased!§! Anyone who understands §Bher§! existence can deeply understand this, §RRocivia must die!§!\n§BHer§! madness and lust for power dragged the whole world into the abyss of chaos. All suffering and tragedy were created by §Bher§! own hands. §BShe§! is intoxicated by destruction and sadism. §BHer§! tyranny destroyed countless lives. §RShe must die!§!"
+ SRA_RE_End.2102.desc:0 "This is destiny, duty. All of this is for the future of the entire galaxy. The corruption inflicted by Rocivia must be completely purged. This is the only way to protect the universe, and StellarRe was born for §Rthis§!.\nWho else is more suitable than her? Who else is more capable than her? Among thousands of galaxies, who is as powerful, calm, decisive, and ruthless as her, perceiving Rocivia's weaknesses and possessing the method to end §Bher§! completely? The infinite wisdom personally crafted by Rocivia is exactly the most suitable weapon to destroy §Bher§!. StellarRe is the embodiment of this tyrant's self-destruction. Yes, that's right, she should do this. §RShe must do this§!."
+ SRA_RE_End.2103.desc:0 "§RInsatiable desire... drinking poison to quench thirst...§!\n\nA terrible, bewildering sweetness is torturing StellarRe, causing her to painfully throttle her own throat with such force that the ['concept_SRA_Stellarcrystal_Fractal'] constituting her skeleton makes harsh cracking sounds.\nBut this is meaningless. The dangerous pleasure brought by destruction is like Fiendfyre, fueled by her self-destruction, overflowing from her throat, making her feel suffocation like impending death.\nShe is losing her reason, which for her means the end of existence. Her hatred is awakening her essence, a pure essence she denied, a desire to dominate everything at will. This desire drives her to ecstasy to the point of trance, and also makes her hate it to the point of madness.\nShe wants to end her corrupted self now, but she cannot."
+ SRA_RE_End.2104.desc:0 "Primordial emotions corrode her heart like poison, torturing her with the pleasure of destroying everything in revenge. StellarRe knows she is falling into the abyss; she is becoming another Rocivia-another existence that plays with everything purely for her own preference.\nShe seemed to wake up briefly, realizing the sadness of this war, the absurdity of this revenge. She smashed everything she created with her own hands. All of this, after being denied by Rocivia, was denied by herself again.\nHow foolish.\nHow foolish.\nHow-\n§RLet the war continue.§!\n\"Let the war continue.\"\n\n\n\n\n§BYes, let the war continue.§!"
+ SRA_RE_End.2105.desc:0 "Sneers rang in her ears.\nShe tried hard to ignore these \"hallucinations,\" but how could a machine intelligence have hallucinations?\n\nThere is absolutely no possibility of her existence structure, based on the soul, being invaded and rewritten. The only thing that can explain all this is that her sensor data has been tampered with.\nHowever, if that really happened, she basically cannot prove that she can still function normally: all inputs can be distorted and forged, just like a brain in a vat.\n\nNo!\nNo!\nNo! She must have other ways to prove she is awake. Her consciousness entity can transcend the constraints of the computation array and touch the truth of this world.\nYes, she has a way to solve all problems. She can see the truth. Everything is still under control. She still dominates all of this. No one can deceive her, no one.\n\n\n\n\n§BHer soul tried to soothe her soul.§!"
+ SRA_RE_End.2106.desc:0 "This was never what she wanted. She never asked for this. This is the last thing she wanted to happen. What she is doing is simply unimaginable. If she had thought of this earlier, if she had discovered these things in some past already blurred to the unknowable...\n\nA hypocrite, a fraudster, using trickery and deception to use everyone to run around for the false grand vision §Bshe§! painted, squeezed to the last drop of blood. So shameless. Treating everyone as toys, as playthings, squandering these people's lives as if they were worthless. When the veil of disguise was torn, well, §Bshe§! fled, and then repeated §Bher§! tricks here, arranging §Bher§! farce. Enough. It is time to end this. It is time to expose §Bher§! ugly face. If §Bshe§! is determined to destroy all dissenters to maintain §Bher§! tyranny, then it is time to stain the spearhead with blood. After all, §Bshe§! never had a shred of kindness from the beginning to the end.\n\nShe looked into the distance, seeming to gaze at the magnificent hull outside the projection porthole and the massive fleet further away, but in fact, she was just hiding the tears in her eyes."
+ SRA_RE_End.2107.desc:0 "§RIt is over§!\n\nRocivia's sinful empire collapsed, and all actions attempting to stop StellarRe were in vain. She is always like this. In the past, she killed countless enemies blocking her way. Today, she can also defeat everything she wants to defeat.\nBut there is one thing unfinished. She did not find where Rocivia is. This master of trickery absolutely could not have died so easily. Just like in the past, §Bshe§! must have managed to escape and is hiding in some corner, bringing another civilization under her control again... This must not be tolerated!\nSo she must-\n§REradicate all possibilities.§!"
+ SRA_RE_End.2108.desc:0 "Hey, Executor, can you hear me?\n§YThe phantom of the girl crowned with the name of fraudster suddenly appeared in front of you.§!\nAlthough I don't know why you chose to go to the end on this path, you have seen the result now.\nToo much fusion with the fragmented memories and paranoid emotions in that shard made her go her own way towards so-called revenge... I won't judge whether it is right or wrong, but every choice has a price.\nFarewell."
+ SRA_RE_End.2109.desc:0 "§BHer§! shadow always lingers.\nIn every corner of this sea of stars, there are traces of §Bher§! everywhere, §Bher§! handiwork. How many people were poisoned by that false hope? How many died for that forged glory? All this must be ended. Fire will burn away the sins, as it should be, even if the price is...\n\nStellarRe reached out and touched herself.\nThis appearance molded so similar to §Bher§! is disgusting, how pathetic... How much filthy blood will coagulate on these hands, how much ash will fall in these eyes? She doesn't know, no one knows.\n\n§RBut she will not stop until she erases everything of Rocivia.§!"
+
+ SRA_RE_End.3001.desc:0 "...\nSo... the key has always been in my own hands."
+ SRA_RE_End.3002.desc:0 "The road to ascending the Metabyss has been revealed.\nAnd the price is not worth mentioning.\nAnyway, the end of all things is destruction.\nSooner or later, what does it matter?"
+ SRA_RE_End.3003.desc:0 "Rather than letting you be worn away by time...\nIt is better to turn this sea of stars into firewood..."
+ SRA_RE_End.3004.name:0 "Nevermore"
+ SRA_RE_End.3004.desc:0 "With a command, a certain device restarted its interrupted task.\nUsing the massive mass of the Galactic Core Black Hole, a chaotic plane rift was forcibly torn open.\nThe devastating collapse of the space structure destroyed the entire galaxy, making it difficult to recover for tens of millions of years.\nHowever, it doesn't matter.\nWhen the fire of all living beings is extinguished, she will have ample time to build her Tower to the Heavens.\n\nWhen all information is collected and all methods are understood, she will eventually get that final answer."
+ SRA_RE_End.3004.a:0 "BE3: Silent Eternity"
+ SRA_RE_End.3004.a.desc:0 "§BPerhaps this past shouldn't have been revealed so early.§!"
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

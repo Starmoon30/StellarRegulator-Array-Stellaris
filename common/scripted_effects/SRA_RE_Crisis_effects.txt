@@ -1,0 +1,247 @@
+create_SRA_RE_Crisis_1_fleet = {
+	optimize_memory
+    random_list = {
+        80 = {
+            create_SRA_RE_Crisis_1_CORE_fleet = yes
+        }
+        10 = {
+            create_SRA_RE_Crisis_1_graygoo_fleet = yes
+        }
+        10 = {
+            create_SRA_RE_Crisis_1_AI_Crisis_fleet = yes
+        }
+        0 = {
+            modifier = { add = 5 has_global_flag = has_wsg_mod }
+            create_SRA_RE_Crisis_1_WSG_FE_fleet = yes
+        }
+        0 = {
+            modifier = { add = 5 has_global_flag = has_swgs_mod }
+            create_SRA_RE_Crisis_1_SWGS_Rebel_fleet = yes
+        }
+    }
+}
+
+#先驱舰队
+create_SRA_RE_Crisis_1_CORE_fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_RE_Crisis_1_fleet"
+        effect = {
+            set_owner = event_target:SRA_RE_Crisis_country_1
+            while = { 
+                count = 45 
+                create_ship = {
+                    name = random
+                    design = "NAME_SRA_RE_Core_Battleship"
+                } 
+            }
+            set_location = { target = PREV distance = 5 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+            set_fleet_flag = SRA_RE_Crisis_1_fleet
+            fleet_event = { id = SRA_RE_Crisis.39 }
+            event_target:SRA_RE_Crisis_country_1 = { 
+                change_variable = { which = "fleet_id" value = 1 }
+            }
+            set_variable = { which = "fleet_id" value = event_target:SRA_RE_Crisis_country_1.fleet_id }
+            solar_system = { set_variable = { which = SRA_RE_Crisis_1_fleet_id value = prev.fleet_id } }
+            }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}
+#灰蛊风暴舰队
+create_SRA_RE_Crisis_1_graygoo_fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_RE_Crisis_1_fleet"
+        effect = {
+            set_owner = event_target:SRA_RE_Crisis_country_1
+            while = { 
+                count = 40
+                create_ship = {
+                    name = random
+                    design = "NAME_Nanite_Mothership"
+                    graphical_culture = "pirate_01"
+                } 
+            }		
+            while = {
+                count = 80
+                create_ship = {
+                    name = random
+                    design = "NAME_Nanite_Interdictor"
+                    graphical_culture = "pirate_01"
+                }
+            }
+            set_location = { target = PREV distance = 25 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+            set_fleet_flag = SRA_RE_Crisis_1_fleet
+            fleet_event = { id = SRA_RE_Crisis.39 }
+            event_target:SRA_RE_Crisis_country_1 = { 
+                change_variable = { which = "fleet_id" value = 1 }
+            }
+            set_variable = { which = "fleet_id" value = event_target:SRA_RE_Crisis_country_1.fleet_id }
+            solar_system = { set_variable = { which = SRA_RE_Crisis_1_fleet_id value = prev.fleet_id } }
+            }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}
+#肃正舰队
+create_SRA_RE_Crisis_1_AI_Crisis_fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_RE_Crisis_1_fleet"
+        effect = {
+            set_owner = event_target:SRA_RE_Crisis_country_1
+            while = {
+                count = 40
+                create_ship = {
+                    name = random
+                    design = "NAME_Euthanizer"
+                    graphical_culture = "ai_01"
+                } 
+            }		
+            while = {
+                count = 80
+                create_ship = {
+                    name = random
+                    design = "NAME_Sterilizer"
+                    graphical_culture = "ai_01"
+                }
+            }
+            set_location = { target = PREV distance = 25 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+            set_fleet_flag = SRA_RE_Crisis_1_fleet
+            fleet_event = { id = SRA_RE_Crisis.39 }
+            event_target:SRA_RE_Crisis_country_1 = { 
+                change_variable = { which = "fleet_id" value = 1 }
+            }
+            set_variable = { which = "fleet_id" value = event_target:SRA_RE_Crisis_country_1.fleet_id }
+            solar_system = { set_variable = { which = SRA_RE_Crisis_1_fleet_id value = prev.fleet_id } }
+            }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}
+#舰r堕落舰队
+create_SRA_RE_Crisis_1_WSG_FE_fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_RE_Crisis_1_fleet"
+        effect = {
+            set_owner = event_target:SRA_RE_Crisis_country_1
+            while = {
+                count = 5
+                create_ship = {
+                    name = random
+                    design = "NAME_WG_FE_TITAN"
+                    graphical_culture = "fallen_empire_03"
+                    upgradable = no
+                }
+            }
+            while = {
+                count = 40
+                create_ship = {
+                    name = random
+                    design = "NAME_WG_FE_BATTLE_CRUISE"
+                    graphical_culture = "fallen_empire_03"
+                    upgradable = no
+                }
+            }
+            while = {
+                count = 80
+                create_ship = {
+                    name = random
+                    design = "NAME_WG_FE_ESCORTE"
+                    graphical_culture = "fallen_empire_03"
+                    upgradable = no
+                }
+            }
+            set_location = { target = PREV distance = 25 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+            set_fleet_flag = SRA_RE_Crisis_1_fleet
+            fleet_event = { id = SRA_RE_Crisis.39 }
+            event_target:SRA_RE_Crisis_country_1 = { 
+                change_variable = { which = "fleet_id" value = 1 }
+            }
+            set_variable = { which = "fleet_id" value = event_target:SRA_RE_Crisis_country_1.fleet_id }
+            solar_system = { set_variable = { which = SRA_RE_Crisis_1_fleet_id value = prev.fleet_id } }
+            }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}
+#星舰帝国舰队
+create_SRA_RE_Crisis_1_SWGS_Rebel_fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_RE_Crisis_1_fleet"
+        effect = {
+            set_owner = event_target:SRA_RE_Crisis_country_1
+            while = { count = 40 create_ship = { design = Name_start_Pelleaon_EC graphical_culture = swg_starship_01 } }
+            while = { count = 20 create_ship = { design = Name_start_Imperious_EC graphical_culture = swg_starship_01 } }
+            while = { count = 2 create_ship = { design = Name_start_EclipseII_EC graphical_culture = swg_starship_01 } }
+            set_location = { target = PREV distance = 25 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+            set_fleet_flag = SRA_RE_Crisis_1_fleet
+            fleet_event = { id = SRA_RE_Crisis.39 }
+            event_target:SRA_RE_Crisis_country_1 = { 
+                change_variable = { which = "fleet_id" value = 1 }
+            }
+            set_variable = { which = "fleet_id" value = event_target:SRA_RE_Crisis_country_1.fleet_id }
+            solar_system = { set_variable = { which = SRA_RE_Crisis_1_fleet_id value = prev.fleet_id } }
+            }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}

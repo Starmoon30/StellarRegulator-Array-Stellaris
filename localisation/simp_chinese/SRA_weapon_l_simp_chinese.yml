@@ -1,0 +1,302 @@
+﻿l_simp_chinese:
+###############################
+###特殊武器###
+ SRA_T_weapon_supreme:0 "§B星规-寰宇溃灭§!"
+ SRA_T_weapon_supreme_DESC:0 "§B星穹之矛的主炮，毁灭性的歼星级位面撕裂武器的直击将「放逐」命中的存在并制造一枚耀眼的新星，其能量释放足以撼动周围的天体，乃至击碎一定范围内的空间结构。§!\n"
+ SRA_T_weapon_supreme_on_hit:0 "-伤害提升§R100.00§!倍，持续 1.00£time£ 。\n-若目标所在舰队的$MOD_SHIP_DAMAGE_REDUCTION_MULT$大于 §Y0.00%§! ，则将其['concept_SRA_clear_ship_damage_reduction_mult',§R清空§!]，持续 1.00£time£ 。\n-对目标所在舰队施加 8.00£time£ 的['modifier:SRA_T_weapon_supreme_buff']。\n-此效果每§Y16.00£time£§!只能触发一次。"
+
+ SRA_Crisis_G_weapon_collision:0 "§B撞击§!"
+ SRA_Crisis_G_weapon_collision_DESC:0 "\n§B高度活跃的['concept_SRA_Stellarcrystal_Fractal']会解离接触的物质并将其吸收。§!"
+
+ SRA_Crisis_G_weapon_kind_laser:0 "§B星规-湮灭千星§!"
+ SRA_Crisis_G_weapon_kind_laser_DESC:0 "§B特化型歼灭主炮，直接对接储能阵列，一次开火就能耗光接近全部的能量储备，这种毁灭性的歼星级位面撕裂武器的直击将「放逐」命中的存在并制造一枚耀眼的新星，其能量释放足以撼动周围的天体，乃至击碎一定范围内的空间结构。§!\n"
+ SRA_Crisis_G_weapon_kind_laser_on_hit:0 "-伤害提升§R100.00§!倍，持续 1.00£time£ 。\n-若目标的$MOD_SHIP_DAMAGE_REDUCTION_MULT$大于 §Y0.00%§! ，则将其['concept_SRA_clear_ship_damage_reduction_mult',§R清空§!]，持续 1.00£time£ 。\n-对目标施加 8.00£time£ 的['modifier:SRA_T_weapon_supreme_buff']。\n-此效果每§Y32.00£time£§!只能触发一次。"
+ SRA_T_weapon_supreme_buff:0 "§B相位崩解§!"
+ SRA_T_weapon_supreme_buff_desc:0 "§B混乱的相位能量会撕扯物质乃至现实。§!"
+
+
+ SRA_T4_weapon_G_supreme:0 "§B星规-渺远星辰§!"
+ SRA_T4_weapon_G_supreme_DESC:0 "§B这种特化武器系统设计用于提供周期性的防御能力强化，通过捕捉目标的相位特征并建立通道，来保证在舰船进入相位偏移状态时仍然能正常展开攻击。§!"
+ SRA_T4_weapon_G_supreme_on_hit:0 "使自身获得§Y4.00£time£§!的['modifier:SRA_T4_weapon_G_supreme_buff']。\n-此效果每§Y8.00£time£§!只能触发一次。"
+ SRA_T4_weapon_G_supreme_buff:0 "§B相位偏移§!"
+ SRA_T4_weapon_G_supreme_buff_desc:0 "§B这个单位将自己的相位与其他单位偏移开来，免受大部分攻击的影响。§!"
+
+ #歼星
+
+ SRA_T4_weapon_planet_killer:0 "§B星规-新星终结§!"
+ SRA_T4_weapon_planet_killer_DESC:0 "§B这件武器可以使用定向位面撕裂摧毁目标所在坐标的位面本身，被直接命中的目标将被「放逐」，而与此同时释放出的巨量能量则将严重摧毁附近的时空并撕碎任何宏观结构。§!§Y会根据目标的不同调整出力。其歼星级攻击可以彻底击碎行星与环形世界,抹去气态巨行星的外层大气，完全摧毁轨道居住站。若将恒星作为目标，那么受引导的能量爆发将摧毁整个恒星系，恒星本身将在耀眼的超新星爆发中坍缩为黑洞。§!"
+ SRA_T4_weapon_planet_killer_ACTION:0 "使用§B「新星终结」§!攻击"
+ SRA_T4_weapon_planet_killer_ACTION_DESC:0 "使用歼星级位面撕裂武器§B「新星终结」§!攻击目标，对目标的伤害效果取决于目标类型。"
+ MESSAGE_DESC_FOR_SRA_T4_weapon_planet_killer:0 "被摧毁"
+ FLEETORDER_DESTROY_PLANET_WITH_SRA_T4_weapon_planet_killer:0 "使用歼星级位面撕裂武器§B「新星终结」§!攻击$PLANET|Y$"
+ message_SRA_T4_weapon_pk_weapon_killed_star_desc:0 "$SRA_target_planet|Y$因遭受$SRA_attacker|Y$的$SRA_attacker_ship|Y$的歼星级位面撕裂武器的攻击而被彻底摧毁，$SRA_target_system|Y$恒星系在耀眼的超新星爆发中被毁灭。"
+ message_SRA_T4_weapon_pk_weapon_killed_planet_desc:0 "$SRA_target_planet|Y$因遭受$SRA_attacker|Y$的$SRA_attacker_ship|Y$的歼星级位面撕裂武器的攻击而被彻底摧毁。"
+ message_SRA_T4_weapon_pk_weapon_swept_planet_desc:0 "$SRA_target_planet|Y$上的智慧生命因遭受$SRA_attacker|Y$的$SRA_attacker_ship|Y$的歼星级位面撕裂武器的攻击而被全部消灭。"
+
+ SRA_T4_weapon_planet_killer_L_Laser:0 "§B星规-新星终结§!"
+ SRA_T4_weapon_planet_killer_L_Laserr_DESC:0 "这道毁灭性的位面撕裂束来源于已启动的歼星级位面撕裂武器§B「新星终结」§!，由时空相位引擎构造的相位空间投影能发射极为强大的攻击，迅速抹杀范围内的所有目标。"
+
+
+ SRA_planet_killer.11.name:0 "湮灭星辰"
+ SRA_planet_killer.11.desc:0 "随着§H[From.From.GetName]§!上的歼星级位面撕裂武器完成了它湮灭星辰的任务，§H[From.GetName]§!的亮度瞬间提升了数百倍，随后逐渐暗淡下去，传感器表明这个天体已经塌缩成了一个奇点。位面裂隙中溢出的大部分能量将§H[From.GetName]§!彻底摧毁，其余的则将§H[From.solar_system.GetName]§!恒星系内的其他天体一并毁灭。"
+ SRA_planet_killer.11.a:0 "它寂静了。"
+ SRA_planet_killer.11.b:0 "又一个丰碑！"
+
+ SRA_planet_killer.12.name:0 "摧毁星球"
+ SRA_planet_killer.12.desc:0 "随着§H[From.From.GetName]§!上的歼星级位面撕裂武器完成了它摧毁星球的任务，§H[From.GetName]§!也在剧烈的爆炸中四分五裂，成为了漂浮在星海中无数无法支持智慧生命生存的天体之一，无论其曾经拥有着怎样的财富，它们也都随着§H[From.GetName]§!的毁灭而灰飞烟灭了。"
+ SRA_planet_killer.12.a:0 "绽放，然后终结。"
+ SRA_planet_killer.12.b:0 "那么，下一个在哪里呢？"
+
+ SRA_planet_killer.13.name:0 "清扫世界"
+ SRA_planet_killer.13.desc:0 "随着§H[From.From.GetName]§!上的歼星级位面撕裂武器完成了它清扫世界的任务，我们的生命传感器已无法在§H[From.GetName]§!捕捉到任何智慧生命的信号了，无论是有机生物，还是岩石，抑或是钢铁铸造的机械，它们都已在位面撕裂武器的轻轻一抹中永远的消失了。"
+ SRA_planet_killer.13.a:0 "真安静啊。"
+ SRA_planet_killer.13.b:0 "这下它们终于闭嘴了。"
+
+ SRA_requires_no_compact_star_star_killer:0 "§R目标不能是致密的天体。§!"
+ SRA_requires_outside_border_star_killer:0 "§R目标不能位于己方境内。§!"
+ SRA_requires_a_star_star_killer:0 "§R目标必须与配置的攻击模式相对应。§!"
+ SRA_requires_declares_war_star_killer:0 "§R我们需要首先配置武器模式。§!"
+ SRA_requires_no_pacifist_star_killer:0 "§R我们的§Y$ethic_pacifist$§!执政道德理念不允许我们使用这种武器。§!"
+ SRA_requires_no_ancient_system:0 "§R古代防御系统阻止了我们攻击这个恒星系。§!"
+ SRA_requires_no_zeta_crisis_system:0 "§R虚境侵军的灵能活动阻止了我们攻击这个恒星系。§!"
+ SRA_requires_no_exd_system:0 "§R高维入侵者的灵能活动阻止了我们攻击这个恒星系。§!"
+ SRA_requires_no_contingency_system:0 "§R肃正协议的防御系统阻止了我们攻击这个恒星系。§!"
+ SRA_requires_no_special_system:0 "§R出于一些未知的原因，我们无法攻击这个目标。§!"
+ SRA_requires_no_is_cloaked:0 "§R我们需要解除隐形才能使用歼星武器。§!"
+
+
+
+ SRA_Rokia_dragon_weapon_planet_killer_ACTION:0 "使用§R「荒芜驱驰」§!攻击"
+ SRA_Rokia_dragon_weapon_planet_killer_ACTION_DESC:0 "使用歼星级武器§R「荒芜驱驰」§!攻击目标，摧毁整个世界的反抗意志，让它们直接臣服于我们。"
+ FLEETORDER_SRA_Rokia_dragon_weapon_planet_killer_ACTION_DESC:0 "使用歼星级武器§R「荒芜驱驰」§!攻击目标，摧毁整个世界的反抗意志，让它们直接臣服于我们。"
+ MESSAGE_DESC_FOR_SRA_Rokia_dragon_weapon_planet_killer:0 "被支配"
+ FLEETORDER_DESTROY_PLANET_WITH_SRA_Rokia_dragon_weapon_planet_killer:0 "使用歼星级武器§R「荒芜驱驰」§!直接支配$PLANET|Y$"
+ message_SRA_Rokia_dragon_weapon_planet_killer_desc:0 "$SRA_target_planet|Y$上的智慧生命因遭受$SRA_attacker|Y$的$SRA_attacker_ship|Y$的§R「荒芜驱驰」§!的攻击而被摧毁了反抗意志。"
+
+ SRA_planet_killer.14.name:0 "支配世界"
+ SRA_planet_killer.14.desc:0 "随着§H[From.From.GetName]§!上的§R「荒芜驱驰」§!完成了它的任务，我们的已经接收到了§H[From.GetName]§!被纳入支配的消息，无论是有机生物，还是岩石，抑或是钢铁铸造的机械，它们的反抗意识都已经在可怖力量的轻轻一抹中永远的消失了。"
+ SRA_planet_killer.14.a:0 "有趣。"
+ SRA_planet_killer.14.b:0 "它们幸运的免于死去。"
+#####可调整####
+###不可设计###
+
+ SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-调谐§!"
+ SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-调谐§!"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-调谐§!" 
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-调谐§!" 
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+
+ SRA_T4_weapon_L_Particle_Launcher_Adjust_Event:0 "$SRA_T4_weapon_L_Particle_Launcher$§B-调谐§!"
+ SRA_T4_weapon_L_Particle_Launcher_Adjust_Event_DESC:0 "$SRA_T4_weapon_L_Particle_Launcher_DESC$"
+ SRA_T4_weapon_L_Laser_Adjust_Event:0 "$SRA_T4_weapon_L_Laser$§B-调谐§!"
+ SRA_T4_weapon_L_Laser_Adjust_Event_DESC:0 "$SRA_T4_weapon_L_Laser_DESC$"
+
+ SRA_T4_weapon_X_Laser_Adjust_Event:0 "$SRA_T4_weapon_X_Laser$§B-调谐§!"
+ SRA_T4_weapon_X_Laser_Adjust_Event_DESC:0 "$SRA_T4_weapon_X_Laser_DESC$"
+
+ SRA_T4_weapon_T_Laser_Adjust_Event:0 "$SRA_T4_weapon_T_Laser$§B-调谐§!"
+ SRA_T4_weapon_T_Laser_Adjust_Event_DESC:0 "$SRA_T4_weapon_T_Laser_DESC$"
+
+ SRA_T4_weapon_H_Adjust_Event:0 "$SRA_T4_weapon_H$§B-调谐§!"
+ SRA_T4_weapon_H_Adjust_Event_DESC:0 "$SRA_T4_weapon_H_DESC$"
+
+ SRA_T4_weapon_G_Adjust_Event:0 "$SRA_T4_weapon_G$§B-调谐§!"
+ SRA_T4_weapon_G_Adjust_Event_DESC:0 "$SRA_T4_weapon_G_DESC$"
+
+ SRA_T4_weapon_P_Adjust_Event:0 "$SRA_T4_weapon_P$§B-调谐§!"
+ SRA_T4_weapon_P_Adjust_Event_DESC:0 "$SRA_T4_weapon_P_DESC$"
+
+#####可调整
+ SRA_T4_weapon_SML_Mass_Drivers_Adjust:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-调谐§!"
+ SRA_T4_weapon_SML_Mass_Drivers_Adjust_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-调谐§!"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-调谐§!" 
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust:0 "$SRA_T4_weapon_SML_Mass_Drivers$§B-调谐§!" 
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+
+ SRA_T4_weapon_L_Particle_Launcher_Adjust:0 "$SRA_T4_weapon_L_Particle_Launcher$§B-调谐§!"
+ SRA_T4_weapon_L_Particle_Launcher_Adjust_DESC:0 "$SRA_T4_weapon_L_Particle_Launcher_DESC$"
+ SRA_T4_weapon_L_Laser_Adjust:0 "$SRA_T4_weapon_L_Laser$§B-调谐§!"
+ SRA_T4_weapon_L_Laser_Adjust_DESC:0 "$SRA_T4_weapon_L_Laser_DESC$"
+
+ SRA_T4_weapon_X_Laser_Adjust:0 "$SRA_T4_weapon_X_Laser$§B-调谐§!"
+ SRA_T4_weapon_X_Laser_Adjust_DESC:0 "$SRA_T4_weapon_X_Laser_DESC$"
+
+ SRA_T4_weapon_T_Laser_Adjust:0 "$SRA_T4_weapon_T_Laser$§B-调谐§!"
+ SRA_T4_weapon_T_Laser_Adjust_DESC:0 "$SRA_T4_weapon_T_Laser_DESC$"
+
+ SRA_T4_weapon_H_Adjust:0 "$SRA_T4_weapon_H$§B-调谐§!"
+ SRA_T4_weapon_H_Adjust_DESC:0 "$SRA_T4_weapon_H_DESC$"
+
+ SRA_T4_weapon_G_Adjust:0 "$SRA_T4_weapon_G$§B-调谐§!"
+ SRA_T4_weapon_G_Adjust_DESC:0 "$SRA_T4_weapon_G_DESC$"
+
+ SRA_T4_weapon_P_Adjust:0 "$SRA_T4_weapon_P$§B-调谐§!"
+ SRA_T4_weapon_P_Adjust_DESC:0 "$SRA_T4_weapon_P_DESC$"
+
+#####T4
+ SRA_T4_weapon_SML_Mass_Drivers:0 "§B星规-星弧破碎§!"
+ SRA_T4_weapon_SML_Mass_Drivers_DESC:0 "§B这一型拥有高度泛用性的双联装速射炮灵活而精准，能够胜任几乎所有用途。其发射的短促能量束拥有强大的贯彻力，难以被护盾或装甲阻挡。§!"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers:0 "§B星规-星弧破碎§!"
+ SMALL_SRA_T4_weapon_SML_Mass_Drivers_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers:0 "§B星规-星弧破碎§!" 
+ MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers:0 "§B星规-星弧破碎§!" 
+ LARGE_SRA_T4_weapon_SML_Mass_Drivers_DESC:0 "$SRA_T4_weapon_SML_Mass_Drivers_DESC$"
+
+ SRA_T4_weapon_L_Particle_Launcher:0 "§B星规-虚空撕裂§!"
+ SRA_T4_weapon_L_Particle_Launcher_DESC:0 "§B这一型重型粒子团火炮势大力沉，其射弹能造成拥有卓越穿透力的物质抹除效果并引发威力庞大的二次毁伤，甚至会短暂影响空间结构本身的稳定性。§!\n\n§Y此类武器是特化的大型武器，通过尽可能发挥大型武器槽位的潜力来实现相较于常规大型武器更为优秀的性能，代价是没有中小型款式且成本高昂。§!"
+ SRA_T4_weapon_L_Laser:0 "§B星规-命运之枪§!"
+ SRA_T4_weapon_L_Laser_DESC:0 "§B这种重型空间撕裂武器发射极为精准的死亡射线，在开火的瞬间破坏沿线的空间结构，即刻摧毁任何被命中的有序结构并制造耀眼的光爆。§!\n\n§Y此类武器是特化的大型武器，通过尽可能发挥大型武器槽位的潜力来实现相较于常规大型武器更为优秀的性能，代价是没有中小型款式且成本高昂。§!"
+
+ SRA_T4_weapon_X_Laser:0 "§B星规-归虚之光§!"
+ SRA_T4_weapon_X_Laser_DESC:0 "§B这件武器能破坏目标方向上的时空结构，沿线的物质将被直接转换为纯能量并对周围造成二次毁伤，未被直接命中的物质则将在时空乱流中被撕成碎片。§!"
+
+ SRA_T4_weapon_T_Laser:0 "§B星规-破晓之星§!"
+ SRA_T4_weapon_T_Laser_DESC:0 "§B这件武器会在位面上撕开一道狭缝，沿途的物质将消失在位面外的混沌空间中，与此同时涌入的庞大能量则会对周围造成巨大的破坏。由于位面自身的自稳性，这道狭缝会迅速关闭，因此不会造成长久性的位面结构损伤。§!"
+
+ SRA_T4_weapon_H:0 "§B星规-渊宇之狩§!"
+ SRA_T4_weapon_H_DESC:0 "§B这些游曳的猎手穿行于星间，以粒子射流与能量导弹武装自己。身为战舰的戍卫，它们是从敌舰薄弱点进攻的杀手，更是敌方导弹与舰载机的梦魇。§!"
+
+ SRA_T4_weapon_G:0 "§B星规-寰宇追迹之火§!"
+ SRA_T4_weapon_G_DESC:0 "§B星规阵列所使用的导弹系统，这一型能量鱼雷命中目标后发生的复杂效应将导致小范围内的空间结构扭曲乃至撕裂，对各种类型的目标都有相当强大的毁伤能力，并且难以被拦截。§!"
+
+ SRA_T4_weapon_P:0 "§B星规-光辉之冠§!"
+ SRA_T4_weapon_P_DESC:0 "§B这套先进的点防御系统警惕着任何来犯之敌，脉冲光束连射能轻松摧毁来袭的导弹或舰载机，甚至对战舰也有可观的威胁能力。§!"
+
+######T3
+ SRA_T3_weapon_SML_Plasma:0 "§Y晶格-晶源劫裂者§!"
+ SRA_T3_weapon_SML_Plasma_DESC:0 "§YCSC-191-LMS晶格聚合发射器\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的火炮组，释放出独特的能量团，能够渗透护盾和主要装甲，直接破坏船体。§!"
+ SMALL_SRA_T3_weapon_SML_Plasma:0 "§Y晶格-晶源劫裂者§!"
+ SMALL_SRA_T3_weapon_SML_Plasma_DESC:0 "§YCSC-191-S晶格聚合发射器\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的火炮组，释放出独特的能量团，能够渗透护盾和主要装甲，直接破坏船体。§!"
+ MEDIUM_SRA_T3_weapon_SML_Plasma:0 "§Y晶格-晶源劫裂者§!" 
+ MEDIUM_SRA_T3_weapon_SML_Plasma_DESC:0 "§YCSC-191-M晶格聚合发射器\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的火炮组，释放出独特的能量团，能够渗透护盾和主要装甲，直接破坏船体。§!"
+ LARGE_SRA_T3_weapon_SML_Plasma:0 "§Y晶格-晶源劫裂者§!" 
+ LARGE_SRA_T3_weapon_SML_Plasma_DESC:0 "§YCSC-191-L晶格聚合发射器\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的火炮组，释放出独特的能量团，能够渗透护盾和主要装甲，直接破坏船体。§!"
+
+ SRA_T3_weapon_X_Laser:0 "§Y晶格-湮流载波炮§!"
+ SRA_T3_weapon_X_Laser_DESC:0 "§YCSC-07-X晶格撕裂光束\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的大型光束武器，能够使弹道上发生能级跌落，使得命中的物质结构崩解并释放出大量能量，造成严重的二次损伤。§!"
+
+ SRA_T3_weapon_T_Laser:0 "§Y晶格-天界耀流§!"
+ SRA_T3_weapon_T_Laser_DESC:0 "§YCSC-83-T晶格撕裂光矛\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的巨型光束武器，能够使弹道上发生空间结构撕裂，这样的攻击会直接湮灭物质并制造耀眼的光爆，产生威力极大的二次破坏。§!"
+
+ SRA_T3_weapon_H:0 "§Y晶格-衍耀天刃§!"
+ SRA_T3_weapon_H_DESC:0 "§YCSC-117-H晶格舰载机组\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的舰载机组，使用小型化结构扰乱束进攻敌人船体的弱点。§!"
+
+ SRA_T3_weapon_G:0 "§Y晶格-陨日光伏§!"
+ SRA_T3_weapon_G_DESC:0 "§YCSC-38-G§Y晶格粒子导弹系统§\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的导弹系统，发射由高能粒子团构成的导弹，命中后造成严重的空间扰乱效果来破坏敌对舰船。§!"
+
+ SRA_T3_weapon_P:0 "§Y晶格-光子裂袭§!"
+ SRA_T3_weapon_P_DESC:0 "§YCSC-1130-P晶格点防御系统\n使用['concept_SRA_Composite_Crystal_Lattice']技术构建的点防御系统，使用小型化结构扰乱束精准地拦截来袭的导弹与舰载机。§!"
+
+#####T2
+ SRA_T2_weapon_SML_Laser:0 "星辉水晶激光器"
+ SRA_T2_weapon_SML_Laser_DESC:0 "使用成熟的星辉水晶技术构建的激光器，对各种目标都有优秀的毁伤效果。"
+ SMALL_SRA_T2_weapon_SML_Laser:0 "星辉水晶激光器"
+ SMALL_SRA_T2_weapon_SML_Laser_DESC:0 "使用成熟的星辉水晶技术构建的激光器，对各种目标都有优秀的毁伤效果。"
+ MEDIUM_SRA_T2_weapon_SML_Laser:0 "星辉水晶激光器" 
+ MEDIUM_SRA_T2_weapon_SML_Laser_DESC:0 "使用成熟的星辉水晶技术构建的激光器，对各种目标都有优秀的毁伤效果。"
+ LARGE_SRA_T2_weapon_SML_Laser:0 "星辉水晶激光器" 
+ LARGE_SRA_T2_weapon_SML_Laser_DESC:0 "使用成熟的星辉水晶技术构建的激光器，对各种目标都有优秀的毁伤效果。"
+
+ SRA_T2_weapon_X_Laser:0 "星辉水晶光矛"
+ SRA_T2_weapon_X_Laser_DESC:0 "使用成熟的星辉水晶技术构建的大型光束武器，能提供巨量的能量输出和破坏力。"
+
+ SRA_T2_weapon_T_Laser:0 "聚焦星辉水晶光矛"
+ SRA_T2_weapon_T_Laser_DESC:0 "使用成熟的星辉水晶技术构建的巨型光束武器，能提供巨量的能量输出和破坏力。这一型号极大地提升了功率。"
+
+ SRA_T2_weapon_H:0 "星辉水晶舰载机组"
+ SRA_T2_weapon_H_DESC:0 "使用成熟的星辉水晶技术构建的舰载机组，使用小型化星辉水晶激光进攻敌人船体的弱点。"
+
+ SRA_T2_weapon_G:0 "星辉水晶粒子导弹系统"
+ SRA_T2_weapon_G_DESC:0 "使用成熟的星辉水晶技术构建的导弹系统，发射由高能粒子团构成的导弹，释放高能爆炸。"
+
+ SRA_T2_weapon_P:0 "星辉水晶点防御系统"
+ SRA_T2_weapon_P_DESC:0 "使用成熟的星辉水晶技术构建的点防御系统，使用小型化星辉水晶激光精准地拦截来袭的导弹与舰载机。"
+
+#####T1
+ SRA_T1_weapon_SML_Space_Whale_Weapon:0 "初型水晶放能器"
+ SRA_T1_weapon_SML_Space_Whale_Weapon_DESC:0 "使用星辉水晶技术构建的试验性能量武器，能释放出充满破坏力的能量束。"
+ SMALL_SRA_T1_weapon_SML_Space_Whale_Weapon:0 "初型水晶放能器"
+ SMALL_SRA_T1_weapon_SML_Space_Whale_Weapon_DESC:0 "使用星辉水晶技术构建的试验性能量武器，能释放出充满破坏力的能量束。"
+ MEDIUM_SRA_T1_weapon_SML_Space_Whale_Weapon:0 "初型水晶放能器" 
+ MEDIUM_SRA_T1_weapon_SML_Space_Whale_Weapon_DESC:0 "使用星辉水晶技术构建的试验性能量武器，能释放出充满破坏力的能量束。"
+ LARGE_SRA_T1_weapon_SML_Space_Whale_Weapon:0 "初型水晶放能器" 
+ LARGE_SRA_T1_weapon_SML_Space_Whale_Weapon_DESC:0 "使用星辉水晶技术构建的试验性能量武器，能释放出充满破坏力的能量束。"
+
+ SRA_T1_weapon_X_Laser:0 "初型水晶光矛"
+ SRA_T1_weapon_X_Laser_DESC:0 "使用星辉水晶技术构建的试验性大型光束武器，相较于常规光矛武器对护盾效率更高。"
+
+ SRA_T1_weapon_T_Laser:0 "聚焦初型水晶光矛"
+ SRA_T1_weapon_T_Laser_DESC:0 "使用星辉水晶技术构建的试验性巨型光束武器，相较于常规光矛武器对护盾效率更高。这一型号极大地提升了功率。"
+
+ SRA_T1_weapon_H:0 "初型水晶舰载机组"
+ SRA_T1_weapon_H_DESC:0 "使用星辉水晶技术构建的试验性舰载机组，使用试验性小型化星辉水晶激光进攻敌人船体的弱点。"
+
+ SRA_T1_weapon_G:0 "初型水晶粒子导弹系统"
+ SRA_T1_weapon_G_DESC:0 "使用星辉水晶技术构建的试验性导弹系统，发射由高能粒子团构成的试验性导弹，释放高能爆炸。"
+
+ SRA_T1_weapon_P:0 "初型水晶点防御系统"
+ SRA_T1_weapon_P_DESC:0 "使用星辉水晶技术构建的试验性点防御系统，使用试验性小型化星辉水晶激光精准地拦截来袭的导弹与舰载机。"
+
+
+######帝国线
+#科尔先驱
+ SRA_RE_Core_weapon_L_Particle_Launcher:0 "先驱根除者"
+ SRA_RE_Core_weapon_L_Particle_Launcher_DESC:0 "应用空间撕裂技术的强大武器，它投射的能量团对命中的目标产生毁灭性的空间撕裂效应。"
+ SRA_RE_Core_weapon_L_Laser:0 "先驱解离者"
+ SRA_RE_Core_weapon_L_Laser_DESC:0 "应用空间撕裂技术的强大武器，它撕扯其指向上的空间结构，进而摧毁其上的所有实体。"
+
+ SRA_RE_Core_weapon_X_Cannon:0 "先驱撕裂者"
+ SRA_RE_Core_weapon_X_Cannon_DESC:0 "庞大而先进的动能武器，尽管看似寻常，但它的能级能直接过载大多数护盾并击穿装甲和船体。"
+
+ SRA_RE_Core_weapon_T_Laser:0 "先驱歼灭炮"
+ SRA_RE_Core_weapon_T_Laser_DESC:0 "传奇般的舰船主炮，为击穿和摧毁任何类型的目标而设计，它的每一次开火都意味着毁灭，而它的开火永不停歇。"
+
+ SRA_RE_Core_weapon_H:0 "先驱哨卫"
+ SRA_RE_Core_weapon_H_DESC:0 "舰载无人机，用于维护和近防任务，也可以干扰乃至压制敌对舰船。"
+
+ SRA_RE_Core_weapon_G:0 "先驱风暴鱼雷"
+ SRA_RE_Core_weapon_G_DESC:0 "使用空间扭曲技术的能量鱼雷，能造成大范围的连锁破坏。"
+
+ SRA_RE_Core_weapon_P:0 "先驱短剑"
+ SRA_RE_Core_weapon_P_DESC:0 "性能优异的点防御系统。"
+
+
+ SRA_starbase_SRA_RE_Calamitisease_weapon_T:0 "灾疫耀斑"
+ SRA_starbase_SRA_RE_Calamitisease_weapon_T_DESC:0 "灾疫恒星阵列可以将恒星的能量转化为毁灭性的攻击，迅速地投射规模巨大的能量束。"
+ SRA_starbase_SRA_RE_Calamitisease_weapon_P:0 "灾疫日冕"
+ SRA_starbase_SRA_RE_Calamitisease_weapon_P_DESC:0 "灾疫恒星阵列可以将恒星的能量转化为毁灭性的攻击，迅速地投射规模巨大的能量束。"
+
+
+#耀红黑星
+ SRA_Rokia_dragon_weapon_planet_killer:0 "荒芜驱驰"
+ SRA_Rokia_dragon_weapon_planet_killer_DESC:0 "思绪破碎，众生臣服。"
+ SRA_Rokia_dragon_weapon_L_Particle_Launcher:0 "残星尽碎"
+ SRA_Rokia_dragon_weapon_L_Particle_Launcher_DESC:0 "裹挟着可怖能量的猎手，其力量所波及之处，将现实腐蚀成无际混沌。"
+ SRA_Rokia_dragon_weapon_L_Particle_Launcher_on_hit:0 "-若目标的$MOD_SHIP_DAMAGE_REDUCTION_MULT$大于 §Y0.00%§! ，则将其['concept_SRA_clear_ship_damage_reduction_mult',§R清空§!]，持续 1.00£time£ 。\n-对目标施加 8.00£time£ 的['modifier:SRA_Rokia_dragon_weapon_L_Particle_Launcher_buff']。\n-此效果§R总是触发§!。"
+ SRA_Rokia_dragon_weapon_L_Particle_Launcher_buff:0 "§R完型崩解§!"
+ SRA_Rokia_dragon_weapon_L_Laser:0 "彷徨触痕"
+ SRA_Rokia_dragon_weapon_L_Laser_DESC:0 "湮灭的轻触，其意志所注目之处，将存续碾为齑粉。"
+ SRA_Rokia_dragon_weapon_L_Laser_on_hit:0 "['concept_SRA_set_terrified_3',§R恐惧。§!]"
+ SRA_Rokia_dragon_weapon_P:0 "晨曦一现"
+ SRA_Rokia_dragon_weapon_P_DESC:0 "轻柔的光芒拂过，其意志所途径之处，将时光破碎成空虚。"
+
+#龙翼之影
+
+ SRA_SD_weapon_L_Laser:0 "噬心狂欲"
+ SRA_SD_weapon_L_Laser_DESC:0 "此法术阵列释放浩瀚污邪能量洪流，崩解命中目标并抽取其源质成分，用于在受损舰体上构筑临时保护层，形成类似自我修复的效果。"
+
+ SRA_SD_weapon_L_accuracy:0 "反偏斜阵列"
+ SRA_SD_weapon_L_accuracy_DESC:0 "此法术阵列引导所有类型的攻击，修正其弹道以确保能够准确命中目标，能与偏斜效应场对抗。\n法术阵列本身也能释放较弱的攻击。\n\n§Y复数反偏斜阵列的效应可以叠加，以对抗更高强度的偏斜效应场。§!"
+
+ SRA_SD_weapon_L_Repair:0 "熔融重构"
+ SRA_SD_weapon_L_Repair_DESC:0 "此法术阵列在舰船交战状态下工作，修复舰船装甲与船体受到的损伤并随机逸散会造成少量伤害的能量弧。\n\n§Y在舰船命中能力受到严重干扰时，此法术阵列的运作效率会下降。§!"
+
+ SRA_SD_Abyss_Hostile_Ship_main_weapon:0 "§R深源-深渊召选§!"
+ SRA_SD_Abyss_Hostile_Ship_main_weapon_DESC:0 "伤害：§R约 6400000.00§!\n冷却：§Y约 32.00£time£§!\n命中后：对目标所在舰队施加32.00£time£的§R宿命终结§!，使其免疫§R荒谬英雄§!的所有效果。\n\n"

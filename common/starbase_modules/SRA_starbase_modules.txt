@@ -1,0 +1,54 @@
+# possible section models:
+# SHIPYARD_STARBASE_SECTION
+# REFINERY_STARBASE_SECTION
+# SCIENCE_STARBASE_SECTION
+# HANGAR_STARBASE_SECTION
+# ASSEMBLYYARD_STARBASE_SECTION
+#
+
+SRA_starbase_turret = {
+	section = "SRA_starbase_turret_section"
+	icon = GFX_spaceport_modules
+	construction_days = 120
+	category = sm_utility_cat
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 1600
+		}
+		upkeep = {
+			energy = 16
+		}
+	}
+
+	station_modifier = {
+		ship_armor_add = 80000
+		ship_armor_regen_add_static = 1600
+		ship_hull_add = 80000
+		ship_hull_regen_add_static = 1600
+		ship_shield_add = 80000
+		ship_shield_regen_add_static = 1600
+		# starbase_trade_protection_range_add = 4
+		# starbase_trade_protection_add = 20
+		starbase_defense_platform_capacity_add = 16
+		ship_cloaking_detection_add = 8
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 0 
+	}
+	potential = {
+		owner? = { has_technology = "tech_SRA_starbase_turret" }
+		NOT = {
+			has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+		}
+	}	
+
+	show_in_tech = "tech_SRA_starbase_turret"
+}

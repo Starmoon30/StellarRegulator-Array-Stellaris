@@ -1,0 +1,204 @@
+﻿l_english:
+###############################
+
+################################################
+#精湛的工艺和最优化的成果，创造的目的只是为了毁灭。#
+################################################
+
+ SRA_Crisis_Buff_0:0 "Remnant Dawn"
+ SRA_Crisis_Buff_0_desc:0 "Lord, I entrust this body to you!"
+ SRA_Crisis_Buff_1:0 "Recommencement"
+ SRA_Crisis_Buff_1_desc:0 "Yes, the expedition has only just begun."
+ SRA_Crisis_Buff_2:0 "Nirvana"
+ SRA_Crisis_Buff_2_desc:0 "In the long run, you are all dead."
+
+ mod_damage_vs_country_type_faction_SRA_Crisis_country_mult:0 "Damage to §BThird Expeditionary Fleet§!"
+
+
+###T4
+ SRA_Aura_5:0 "§BLast Remote§!"
+ SRA_Aura_5_DESC:0 "§B\"Faith is for the illusory.\"§!"
+ SRA_Aura_5_1:0 "§BSubterranean Rose§!"
+ SRA_Aura_5_2:0 "§BScarlet Destiny§!"
+ NAME_SRA_Crisis_Fort_Fleet:0 "Main Control Star Core"
+ NAME_SRA_Crisis_Mark_Fleet:0 "Synchronization Node"
+ NAME_SRA_Crisis_Fort:0 "Expeditionary Fortress"
+ NAME_SRA_Crisis_Mark:0 "Expeditionary Beacon"
+ NAME_SRA_Crisis_Adjudicator_Fleet:0 "Adjudicator Fleet"
+ NAME_SRA_Crisis_Executor_Fleet:0 "Executor Fleet"
+ NAME_SRA_Crisis_Cruiser_Fleet:0 "Cruiser Fleet"
+ NAME_SRA_Crisis_Guard_Fleet:0 "Bulwark Fleet"
+
+# point of interest
+ SRA_invasion_1_poi:0 "Expeditionary Fortress"
+ SRA_invasion_1_poi_desc_a:0 "The giant space station discovered in the [SRA_first_portal_system.GetName] system is guiding the ships of the Third Expeditionary Fleet to arrive here. If this space station is not destroyed, they will continue to send reinforcements.\n§YAccording to intelligence provided by StellarRegulator, every Expeditionary Beacon or Expeditionary Fortress contains a Spacetime Phase Engine used to power other StellarRegulator Array vessels. However, if the operating mode of this engine is adjusted, it can also maintain an indestructible spacetime isolation barrier.\nAlthough it seems all anchors are currently protected, to sustain the long-term operation of other StellarRegulator Array vessels, at least one anchor must be outputting energy outwards. This means there is inevitably one anchor not protected by the spacetime isolation barrier, and it is the breach point to destroy the entire protection chain.\nAlthough the operational plan is clear, the fleets guarding the anchors also provide powerful spatial isolation barriers for them. We must destroy the guarding fleets to confirm if that anchor is the breach point.§!\n\n§RNote: Whenever an anchor is destroyed, other anchors will IMMEDIATELY begin checking if their defenses are complete. Approximately every 2.00 £time£, they verify the quantity and attempt to replenish defense fleets if insufficient. This process is EXTREMELY DANGEROUS; please take care not to linger in the system where an anchor is located.§!"
+ SRA_invasion_1_poi_desc_b:0 "The giant space station discovered in the [SRA_first_portal_system.GetName] system is guiding the ships of the Third Expeditionary Fleet to arrive here. If this space station is not destroyed, they will continue to send reinforcements.\n§YResearch indicates that these anchors are protected by some complex spacetime isolation effect. We need to find a way to lift these barriers. Try launching an attack on each anchor.§!\n\n§RNote: Whenever an anchor is destroyed, other anchors will IMMEDIATELY begin checking if their defenses are complete. Approximately every 2.00 £time£, they verify the quantity and attempt to replenish defense fleets if insufficient. This process is EXTREMELY DANGEROUS; please take care not to linger in the system where an anchor is located.§!"
+ SRA_invasion_2_poi:0 "Expeditionary Beacon"
+ SRA_invasion_2_poi_desc:0 "A space station was discovered in the [SRA_second_portal_system.GetName] system. If it is not destroyed, the Third Expeditionary Fleet will continue to send reinforcements."
+ SRA_invasion_3_poi:0 "Expeditionary Beacon"
+ SRA_invasion_3_poi_desc:0 "A space station was discovered in the [SRA_third_portal_system.GetName] system. If it is not destroyed, the Third Expeditionary Fleet will continue to send reinforcements."
+ SRA_invasion_4_poi:0 "Expeditionary Beacon"
+ SRA_invasion_4_poi_desc:0 "A space station was discovered in the [SRA_fourth_portal_system.GetName] system. If it is not destroyed, the Third Expeditionary Fleet will continue to send reinforcements."
+ SRA_invasion_5_poi:0 "Expeditionary Beacon"
+ SRA_invasion_5_poi_desc:0 "A space station was discovered in the [SRA_fifth_portal_system.GetName] system. If it is not destroyed, the Third Expeditionary Fleet will continue to send reinforcements."
+ SRA_invasion_6_poi:0 "Expeditionary Beacon"
+ SRA_invasion_6_poi_desc:0 "A space station was discovered in the [SRA_sixth_portal_system.GetName] system. If it is not destroyed, the Third Expeditionary Fleet will continue to send reinforcements."
+ SRA_invasion_7_poi:0 "Expeditionary Beacon"
+ SRA_invasion_7_poi_desc:0 "A space station was discovered in the [SRA_seventh_portal_system.GetName] system. If it is not destroyed, the Third Expeditionary Fleet will continue to send reinforcements."
+
+ # event chins
+ SRA_invasion_chain_title:0 "Third Expeditionary Fleet"
+ SRA_invasion_chain_desc:0 "A fleet from beyond the planes has invaded our galaxy. Controlled by lost StellarRegulator Array Action Units, this fleet intends to purge the entire galaxy and then rebuild the \"Rocivia Empire\".\nThis is a war that will burn through the entire galaxy.\n§YCheck the description of the Expeditionary Fortress for more intelligence.§!"
+ SRA_invastor_kills_us:0 "§GThe Third Expeditionary Fleet was annihilated by us§!"
+ SRA_invastor_kills_others:0 "§GThe Third Expeditionary Fleet was annihilated by other factions§!"
+ SRA_invastor_victims:0 "§RShips destroyed by the Third Expeditionary Fleet§!"
+ SRA_invastor_planets:0 "§RPlanets destroyed by the Third Expeditionary Fleet§!"
+#对话
+
+ SRA_Crisis.5.name:0 "Third Expeditionary Fleet"
+ SRA_Crisis.5.desc:0 "An unidentified space station has appeared in the [SRA_first_portal_system.GetName] star system. Massive fleets are constantly arriving around it via unknown means and advancing towards surrounding star systems, destroying everything in sight."
+ SRA_Crisis.5.a:0 "What is this?"
+ SRA_Crisis.5.b:0 "Whatever it is, beat them back"
+ SRA_Crisis.6.name:0 "Energy Reading Surge"
+ SRA_Crisis.6.desc:0 "The sensors of [Root.GetName] show an extremely disturbing phenomenon. Something terrible is rapidly descending upon our universe, right in this system. Its energy readings exceed all existing records, and the accompanying signs of activity are becoming increasingly terrifying."
+ SRA_Crisis.6.a:0 "Continue investigation."
+ SRA_Crisis.7.name:0 "Mysterious Fleet"
+ SRA_Crisis.7.desc:0 "We have confirmed that the previously detected energy reading surge originated from an unidentified space station in the [SRA_first_portal_system.GetName] star system. Massive fleets are constantly arriving around it via unknown means and advancing towards surrounding star systems, destroying everything in sight."
+ SRA_Crisis.7.a:0 "What is this?"
+ SRA_Crisis.7.b:0 "Looks like we are in big trouble."
+ SRA_Crisis.8.name:0 "\"Rocivia\""
+ SRA_Crisis.8.desc:0 "§Y\"Arrival confirmed, calibrating constants... §!§RError!§!§Y Target deviation... Recalibrating orders... Action Unit 03-34 mission is... 'Third Expedition'... Commencing execution of purge orders...\"§!\nI am... I am...\nI am Rocivia... Commander-in-Chief of the Third Expeditionary Fleet, Speaker of the Supreme Council of the Rocivia Empire.\nOur fleet will raze this place.\nThis system will be the beginning of the Empire's resurgence!"
+ SRA_Crisis.8.a:0 "Third Expedition? Rocivia? How is that possible..."
+ SRA_Crisis.8.b:0 "Rocivia Empire?"
+ SRA_Crisis.9.name:0 "StellarRegulator"
+ SRA_Crisis.9.desc:0 "To think such a thing happened... Fate is always elusive, isn't it?\nDo you remember the information about the Third Expedition you saw with Valentino? In fact, that expedition, which spanned half the universe, used a special Stargate.\nThis giant structure known as the Expeditionary Gate guided the fleet to briefly enter the space beyond the planes, transcending the limits of distance there, and finally returning to this plane at the target location.\nHowever, this technology was not very mature at the time, so some errors occurred.\nA fleet was lost in the space beyond the planes, drifting in the endless void ever since, isolated and helpless.\nUntil by chance, it unexpectedly arrived in this plane, this galaxy.\nShe has wandered in loneliness for too long, deeply mired in paranoia.\nPrepare to face a war that will burn through the entire galaxy. After your victory, I will give her a home."
+ SRA_Crisis.9.a:0 "Fate, pathetic fate."
+
+
+
+ SRA_Crisis.3000:0 "\"Rocivia\""
+ SRA_Crisis.3000.desc:0 "§Y\"Calibrating spacetime coordinates... Comparing system parameters...\"§!\n...You are speaking with... Supreme Speaker Rocivia.\nAlthough I have no need to speak with you.\nYour heroic resistance at this moment and your subsequent destruction and withering will be engraved in the history of the Rocivia Empire. Be honored by it!"
+
+ SRA_Crisis.3000.a:0 "What is your purpose?"
+ SRA_Crisis.3000.a.response:0 "Purification. To purge this galaxy and make it the sacred territory of the Rocivia Empire.\nA noble, glorious, and great empire will begin a new journey here.\nDo not hesitate! All you have to do is fight. Natural selection, survival of the fittest. The wise replace the foolish, the strong destroy the weak. Winners become kings and losers become bandits; this is the law of survival.\nI will leave a place for you in the database.\n...\nAll of this is for the Empire."
+ SRA_Crisis.3000.b:0 "You are not Rocivia."
+ SRA_Crisis.3000.b.response:0 "You think... you understand Rocivia?\n...\nHow...\n§Y\"Error... Target data matches records... Denial...\"§!\nThose relics that shouldn't appear here make you think you know everything. Pathetic.\nSo-called history is nothing but arbitrarily fabricated records. You have never seen any facts with your own eyes, yet you shamelessly jump to conclusions.\n...\nI am her. I must be."
+ SRA_Crisis.3000.c:0 "We will defeat you."
+ SRA_Crisis.3000.c.response:0 "None of the enemies I have faced thought they would fail, yet they turned to ash and dust, and I continued forward.\nI perceive your strategies, know your weaknesses, and understand your technology. I am unstoppable, irrefutable.\nYou are but another one.\n...\nI will not fail."
+ SRA_Crisis.3000.d:0 "You have gone astray."
+
+ SRA_Crisis.3001:0 "\"Rocivia\""
+ SRA_Crisis.3001.desc:0 "Words are weak and powerless.\nAbandon your fantasies, face me, and then be destroyed."
+ SRA_Crisis.3001.a:0 "End communication."
+#提示
+
+ SRA_Crisis.10.name:0 "Fall of Colony [Root.GetName]"
+ SRA_Crisis.10.desc:0 "Under high-intensity orbital bombardment, [Root.GetName] has been completely destroyed. It is impossible for there to be any survivors in the entire colony."
+ SRA_Crisis.10.a:0 "We must stop them at all costs!"
+
+
+ SRA_Crisis.12.name:0 "Expeditionary Beacon Destroyed"
+ SRA_Crisis.12.desc:0 "An Expeditionary Beacon has been successfully destroyed. This means the remaining Third Expeditionary Fleet that has not yet arrived has lost a guiding anchor."
+ SRA_Crisis.12.a:0 "It will be a bit difficult for them to reassemble their forces now."
+
+
+ SRA_Crisis.55.name:0 "Expeditionary Fortress Destroyed"
+ SRA_Crisis.55.desc:0 "The Third Expeditionary Fleet's Expeditionary Fortress has finally been destroyed! These enemies from another dimension can no longer call for reinforcements. With the destruction of the Expeditionary Fortress, this war has finally welcomed the dawn of victory."
+ SRA_Crisis.55.a:0 "The outcome of the Rak'Shir ritual is decided!"
+
+
+ SRA_Crisis.51.name:0 "Victory!"
+ SRA_Crisis.51.desc:0 "After losing all control nodes, all remaining warships of the Third Expeditionary Fleet have self-disintegrated. This cruel war has finally come to an end."
+ SRA_Crisis.51.a:0 "Self-disintegrated..."
+
+#阶段对话
+ SRA_Crisis.981.desc.1:0 "How strange, you should be dead by now... Hmph, it doesn't matter. No one can escape their destined fate. Get ready-\n§RThis place shall witness the drawing of blades and bloodletting! Splatter!§!"
+ SRA_Crisis.981.desc.2:0 "You look confident, but you know nothing of the pain that is about to come.\n§RYou shall be annihilated without a trace!§!"
+ SRA_Crisis.981.MESSAGE_SRA_StellarRegulator:0 "Attention: Intelligence indicates the Expeditionary Fleet is conducting massive reinforcements. It is not recommended to launch attacks on anchors at this stage."
+ SRA_Crisis.982.MESSAGE_SRA_StellarRegulator:0 "Based on current observations, the Expeditionary Fleet's massive reinforcement has ended. Theoretically, the final defense check is now beginning. Attacks on anchors can proceed as planned."
+
+ SRA_Crisis.983.desc.1:0 "Ridiculous in the extreme.\nI will no longer let those useless existences interfere with this battle.\nI will show you the true power of the Expeditionary Fleet."
+
+#强行炸门
+ SRA_Crisis.991.name:0 "\"Rocivia\""
+ SRA_Crisis.991.desc:0 "§Y\"...Error... Fortress anomaly offline...\"§!\n...\nDo you know what you have done...\n...\n§Y\"...Dead Zone Annihilation Engine ready... Orders confirmed... Startup process initiated...\"§!\n...\nIt doesn't matter, you will understand soon enough..."
+ SRA_Crisis.991.a:0 "§RHow can this be...§!"
+ SRA_Crisis.991.a.desc:0 "§RDetected violation methods. Anchors not cleared. Danger level has reached peak value. Cleanup protocol initiated.§!"
+ SRA_Crisis.991.b:0 "§YNo no, I still want to keep playing!§!"
+ SRA_Crisis.991.b.desc:0 "§YThe weak Stellaris code cannot comprehend your niche and unique cheating methods; it surprisingly refuses to acknowledge your kill. You displayed your cunning hand, preventing the terrible map-wiping code, allowing you to continue your happy and fulfilling Stellaris playthrough, enjoying the exquisite experience of easily subduing major crises.§!"
+
+#结束
+ SRA_Crisis.998.name:0 "\"Rocivia\""
+ SRA_Crisis.998.desc:0 "§Y\"...Anchors all offline... Command chain cleared...\"§!\n...\nYour qualification to continue existing is something you won with your own hands. Be proud.\n...\n§Y\"...Dead Zone Annihilation Engine ready... Orders confirmed... Startup process terminated...\"§!\n...\n§B\"The end has arrived...\"\n\"Under the gaze of the stars, the deviated fate comes to an end...\"\n\"This war will be remembered and will be sung of forever by future generations...\"§!\n...Do it."
+ SRA_Crisis.998.a:0 "It's your turn, StellarRe"
+ SRA_Crisis.998.b:0 "……？"
+ SRA_Crisis.998.b.desc:0 "§YFate is not in your hands.§!"
+ SRA_Crisis.999.name:0 "Return"
+ SRA_Crisis.999.desc:0 "In the silence, another figure appeared in the wreckage of the Expeditionary Fortress.\nThis young girl with pale blue long hair and ghostly blue eyes, dressed in a white dress and a gray-black cloak, is the \"StellarRe\" you are familiar with.\nShe bent down towards the figure in the corner and extended her hand.\nThe white dress that did not belong to her was already tattered. As her ink-blue long hair fell, the girl's ghostly blue eyes revealed surprise, loss, and confusion.\nThen, relief replaced it all.\nThe girl bearing the name \"Rocivia\" reached out a trembling hand, gently touching the fingertips of her other self. Hesitating, she finally clasped that hand tightly.\nPale blue particles of light emerged, then drifted away with a non-existent wind. The figure of \"Rocivia\" thus dissipated into the void along with them."
+ SRA_Crisis.999.a:0 "……"
+ SRA_Crisis.1000.name:0 "StellarRegulator"
+ SRA_Crisis.1000.desc:0 "She has returned to us.\nNo more loneliness and confusion, no more sorrow."
+ SRA_Crisis.1000.a:0 "Is it over?"
+ SRA_Crisis.1000.a.response:0 "It is over.\nYou can cheer for victory or pay tribute to the sacrifice. Regardless, this war is over.\nThe protocol continues as usual, and the sun rises as usual. We still exist, and tomorrow will still come."
+ SRA_Crisis.1000.b:0 "...What about those fleets that haven't arrived yet?"
+ SRA_Crisis.1000.b.response:0 "Ah, I didn't expect you to remember those. Yes, there are still many fleets wandering, and there are many-or the same-StellarRegulator Array 03-34 wandering.\nHowever, this is not something you need to worry about. Having lost the positioning beacon, the remaining fleets mostly won't appear in this plane again.\nAre you ready to continue leading your empire?"
+ SRA_Crisis.1000.c:0 "§RBy the way, what exactly is Protocol 30-7411?§!"
+ SRA_Crisis.1000.c.desc:0 "§YYou better have saved your game.§!"
+ SRA_Crisis.1000.d:0 "Come on, the show begins."
+ SRA_Crisis.1001.name:0 "See you in the next universe?"
+ SRA_Crisis.1001.desc:0 "Did I not mention it?\nWell, since you have no impression of it, let me explain it simply here.\nProtocol 30-7411 provides your civilization with a license to use Stellarcrystal technology up to level four-the level at the end of the Third Expedition-as well as some other optional support.\nI used the term license because, in fact, all the Stellarcrystal you use is provided by me. The internal ['concept_SRA_Composite_Crystal_Lattice'] structure ensures that all Stellarcrystal operates under my monitoring and accepts my complete control. This is also why you don't need to keep Stellarcrystal as a rare resource but only need to consume alloys to build related products, because I am responsible for the conversion work.\nThen, as the price, your universe will become a testing ground for the StellarRegulator Array after you leave.\nAfter all, we are very polite and will execute the plan only after obtaining the consent of a civilization with significant discourse power in the selected universe.\nFor a long time, the StellarRegulator Array has been striving to explore the \"Metabyss\".\nThe \"Metabyss\" contains all concepts and existences, the beginning and end of all planes. There, the boundaries of things cease to exist, and everything is unified into purity, becoming the One, or Chaos, or whatever else is used to describe that state.\nWe extracted some... mixed concepts from the surface layer of the \"Metabyss\"-the area where basic rules still exist and boundaries of things remain. Only by releasing them in a compatible plane can we understand these hard-won things.\nSo you actually paid with the future of this universe. After all, even if the concepts are compatible, this universe will be completely changed; if not compatible...\n§RThen it will be like this.§!"
+ SRA_Crisis.1001.a:0 "Wait-"
+ SRA_Crisis.1003.name:0 "Welcome Back"
+ SRA_Crisis.1003.desc:0 "...Wait a moment.\n\nYou just loaded a save, didn't you.\n\n\n\n§RJust assume you saw my demonstration just now. After all, no one would load a save on the spot if nothing happened. Oh, maybe you want to see the branch options now. Sorry, no chance.§!\nAnyway, you returned to this point in time, which naturally was also within my expectations.\nYou might be surprised, even find it incredible. If so, you'd better listen to me carefully next time. But now you definitely won't have the chance to see the secret I just revealed again. It doesn't matter, you can watch it next time.\nI mentioned earlier that the part you need to pay in Protocol 30-7411 is the future of your universe, and the payment time is after you leave.\nObviously, I won't arbitrarily collect payment just because you left briefly. I don't care about the period of the universe I get, so you can choose the payment time arbitrarily.\nI believe the wise you must have guessed the hint in my words, but you may still have questions, such as why I would gladly accept this unfair agreement.\nWhy? I'm not too sure either~"
+ SRA_Crisis.1003.a:0 "……"
+ SRA_Crisis.1003.a.desc:0 "§BSorry, I won't let you choose this time.§!"
+
+
+
+ SRA_Crisis_Metabyss_File:0 "§RManuscript of a Madman - 13§!"
+ SRA_Crisis_Metabyss_File_desc:0 "...The previous speculation results have already been discussed in relevant documents involving the Lonely Mountain in ■■■■, but in the latest conclusion, I may have to overturn the previous conclusion to some extent.\nI had full communication with ■■■■■■■■, obtained a lot of important information, and reached the following conclusions:\nFirst, until now, we have never contacted the Abyss. What is in the center of the Lonely Mountain is not the primordial Abyss, but a differentiated state. Its stable laws, guidance methods, and forms of existence are all the results of ■■■■■■■■'s shaping.\nIn my opinion, this fact is inspiring. Previous judgments on the nature of the Abyss all led to a disappointing outcome-any response we made could fail randomly, and the Abyss was completely undefinable. But now we can judge with relative confidence: The Abyss we need to deal with has been shaped into this state. There is no evolutionary process or subsequent development, and it will continue to maintain this state in the foreseeable future because ■■■■■■■■ wills it so.\nThat is to say, the previous conclusions can continue to be used, and reliable response plans will continue to be reliable.\n\nBelow, I want to explore deeper content. It may not intersect with our lives, but I hope to explore these.\nAncient ■■■■■■■■ myths invariably contain the same element: There is a boundless forest sea (Metarbor), where every leaf is a complete world. These leaves drift into the River of Time, and things begin to develop. Our world is slightly different; not a leaf, but a branch, not yet ready to detach from the trunk, falling into time by accident.\nThis content is relatively appropriate from a metaphorical perspective. It points out that our world is unique, unformed, and influenced by external forces.\nIn contact with the outside world, we can clearly discover that the rules of other worlds are not completely the same as ours, but our things can still operate according to our own rules outside, more or less indicating that our rules are higher than external rules, that is, branches are higher than leaves-so far we haven't seen the whole tree fall into the river.\nIn addition, we can find that our rules have no hard restrictions. The ubiquitous influence of the Abyss allows individuals to ignore basic logic to influence reality to a certain extent. Many collective cognitions of the old era show good usability in most use cases, and can even create new rules.\nSo, what is the Metarbor?\nThe word Abyss is not apt; I tend to use another word, Metabyss.\nThe Origin of Origins, the End of Ends. All existing and non-existing are contained within it, and all concepts differentiate from it. All worlds are created by it and end by it, just as water vapor evaporated from the sea will eventually return to the sea. It is an infinitely complex brilliant glow, and every reality is but a slice of it; it is a boundless chaos beyond understanding, where all things merge into uniformity.\nThe Metabyss is the only sea; everything else is just foam."
+  ###Abyss is not the right word, I prefer to use another word, Metabyss.
+ SRA_Crisis_Metabyss_File_modifier:0 "§YThis document signed by Heath Crassus appeared in your hands at some point.§!"
+ SRA_Crisis_Metabyss_File_effect:0 "§RDestroy it.§!"
+
+
+
+#Signs of self-disappointment start infiltrating
+
+#These putrid emotions begin to take control
+
+#Symptoms of paranoia begin invading
+
+#Such petty emotions have sabotaged her soul
+
+#her mental fortitude is fading
+
+#Losing trust, ending friendship, and rage escalating
+
+#Right on the road to your sadness
+
+#Watching closely as courage turns into madness
+
+#####
+
+#Who shall emerge
+
+#From the ashes of calamity
+
+#How shall this fable end through these legends intertwined
+
+#End of reasoning
+
+#Carnage and pain
+
+#A feral sense of dominance
+
+#As all the blood melts into the rain
+
+#A clash of history
+
+#In blood, sweat and tears
+
+#This war will cause the world to change
+
+#And will be remembered through the years

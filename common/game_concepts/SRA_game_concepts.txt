@@ -1,0 +1,195 @@
+#####################
+#	CONCEPT TYPES	#
+#####################
+#concept_id = {													# ID used for specifying the concept in loc strings.
+#																# If it's used without a replacement string, there must be a loc with an identical key.
+#																# If tooltip_override is not used, there must be a loc with a key suffixed with "_desc" (e.g. concept_id_desc).
+#	alias = { concept_alias_1 concept_alias_2 }					# List of aliases that may be used instead of the ID.
+#																# Any that are used without a replacement string must have a loc with an identical key.
+#	icon = "gfx/interface/icons/concepts/concept_icon.dds"		# Icon shown in concept tooltip.
+#																# If not specified, it will use NUncheckedDefines::NInterface::GAME_CONCEPT_ICON_DEFAULT from unchecked_defines/00_interface.txt.
+#	texture = "gfx/interface/icons/concepts/concept_icon.dds"	# Alternative for "icon".
+#	tooltip_override = "civic:civic_imperial_cult"				# Tooltip to use instead of the default. Can be either a loc key or a database object (see DATABASE CONCEPTS below).
+#}
+#
+#############################
+#	USING CONCEPTS IN LOC	#
+#############################
+# EXAMPLE_LOC_1: "Example of a ['concept_id'] with a tooltip"
+#	This will replace the square bracketed text with the "concept_id" loc.
+#	The tooltip will use the key "concept_id_desc" unless tooltip_override is specified.
+#
+# EXAMPLE_LOC_2: "Example of a ['concept_id', replacement text] with a tooltip"
+#	This will replace the square bracketed text with "replacement text".
+#	Unlike EXAMPLE_LOC_1, there doesn't need to be a loc with the key "concept_id".
+#
+#########################
+#	DATABASE CONCEPTS	#
+#########################
+# For some types of database objects, we support automatically generating concept tooltips without having to manually create them in loc. Objects are specified using the following syntax:
+# civic:civic_imperial_cult
+# In this example, "civic" is the object type and "civic_imperial_cult" is the object ID.
+#
+# There are two ways to use database concepts:
+# 1) Specify a database object instead of a concept ID.
+#		EXAMPLE_LOC_1: "Example of ['civic:civic_imperial_cult'] with a tooltip"
+#		This method does not require creating a concept in game_concepts or any concept loc.
+#		Tooltips shown this way will not have a concept icon.
+#		If a replacement string is not specified, this will use the object ID as the loc key for the concept text.
+#			This only works for object types whose loc keys are the same as their object IDs, otherwise a replacement string should be used.
+#			It also doesn't support objects using different names based on triggers (e.g. tradition swaps); it will always use the default name (only in the concept text; the tooltip should apply triggers correctly).
+#    Specify a specific database swap.
+#        This can be used if you want to override any triggers and show one specific swap or the pre-swapped version of the database object.
+#        EXAMPLE AUTHORITY SWAP
+#        1: authority:auth_democratic:auth_cyber_creed_democratic
+#            Always show the Cyber Creed authority swap for Democracy
+#        2: authority:auth_democratic:
+#            Always show the base Democratic authority
+# 2) Create a concept with the database object as its tooltip_override, then use that concept in loc.
+#		concept_id = {
+#			tooltip_override = "civic:civic_imperial_cult"
+#		}
+#		Like other concepts, this requires a loc with the same key as the concept unless a replacement string is used. It also supports concept icons and aliases.
+#
+# List of currently supported object types:
+#	ascension_perk
+#	authority
+#	authority_swaps
+#	building
+#	civic (includes origins)
+#	district
+#	edict
+#	ethic
+#	starbase_building
+#	starbase_module
+#	technology (note: the tooltip currently only shows the name and description)
+#	tradition
+#	tradition_category
+#	trait (both species and leader traits)
+#
+# In GUI, instantTextBoxType has a "concepts_show_missing_dlc" parameter. If set to "yes", database concept tooltips inside the text box will show unmet DLC requirements for the database object.
+# Currently, this only works for authorities, civics, ethics and species traits.
+
+concept_SRA_Stellarcrystal_Machine = {
+	icon = "gfx/interface/icons/governments/civics/SRAtechnology.dds"
+}
+concept_SRA_T4_tech = {
+	icon = "gfx/interface/icons/governments/civics/SRAtechnology.dds"
+}
+concept_SRA_Stellarcrystal_Fractal = {
+	icon = "gfx/interface/icons/governments/civics/SRAtechnology.dds"
+}
+concept_SRA_Composite_Crystal_Lattice = {
+	icon = "gfx/interface/icons/governments/civics/SRAtechnology.dds"
+}
+concept_SRA_Stellarcrystal_industry = {
+	icon = "gfx/interface/icons/governments/civics/SRAtechnology.dds"
+}
+concept_SRA_Damage_Inhibition = {
+}
+concept_SRA_set_terrified_3 = {
+}
+concept_SRA_Planet_Combat_Width_Attacker = {
+}
+concept_SRA_clear_ship_damage_reduction_mult = {
+}
+
+
+
+concept_SRA_SD_The_Rips = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+concept_SRA_SD_Abyss_Erosion = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+concept_SRA_SD_barren_space = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+concept_SRA_SD_chaos_star_habitable_vitality = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+concept_SRA_SD_chaos_star_habitable_core_building = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+concept_SRA_SD_chaos_star_habitable_building = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+
+concept_SRA_SD_Arcane = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+concept_SRA_SD_Divine = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+concept_SRA_SD_Occult = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+concept_SRA_SD_Primal = {
+	icon = "flags/SRA_flags/SRA_flags_Abyss.dds"
+}
+
+concept_mod_SRA_SD_Attack_Bonus = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+
+concept_SRA_SD_Myth_get_1 = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_get_2 = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_get_3 = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_get_4 = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_mod_SRA_SD_Myth_power = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_councilor_skill = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_damage_mult = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_evasion_mult = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_accuracy_debuff = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_army_damage_taken = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_alone = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_Myth_sector_speed = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+
+concept_SRA_SD_Bard_of_Metarbor = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_element = {
+	icon = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+}
+concept_SRA_SD_element_forge = {
+	icon = "gfx/interface/SRA_text/SRA_SD_element_forge.dds"
+}
+concept_SRA_SD_element_edge = {
+	icon = "gfx/interface/SRA_text/SRA_SD_element_edge.dds"
+}
+concept_SRA_SD_element_stone = {
+	icon = "gfx/interface/SRA_text/SRA_SD_element_stone.dds"
+}
+concept_SRA_SD_element_lantern = {
+	icon = "gfx/interface/SRA_text/SRA_SD_element_lantern.dds"
+}
+concept_SRA_SD_element_chalice = {
+	icon = "gfx/interface/SRA_text/SRA_SD_element_chalice.dds"
+}
+concept_SRA_SD_element_secret = {
+	icon = "gfx/interface/SRA_text/SRA_SD_element_secret.dds"
+}

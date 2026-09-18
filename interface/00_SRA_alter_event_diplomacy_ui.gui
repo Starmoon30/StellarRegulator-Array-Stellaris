@@ -1,0 +1,198 @@
+ @SRA_invisible_position = 23333
+@SRA_option_list_x_pos = 497
+@SRA_option_list_slider_x_pos = 8
+@SRA_option_list_slider_y_pos = 9
+guiTypes = {
+	
+	containerWindowType = {
+		name = "SRA_alter_event_diplomacy_option"
+		position = { x=0 y=0 }
+		size = { width = 4096 height = 2048 }
+		moveable = no
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_SRA_alter_event_diplomacy_option"
+			position = { x=0 y=0 }
+			font = "malgun_goth_24"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+	scrollbarType = {
+		name = "SRA_diplomacy_desc_standardlistbox_slider"	
+		slider = "listboxSliderButton"
+		track = "listboxTrackButton"
+		leftbutton = "upButton"
+		rightbutton = "downButton"
+		size = { x = 12 y = 12 }
+		position = { x = 0 y = 0 }
+		priority = 100			
+		borderSize = { x = 12 y = 12 }	
+		maxValue = 1
+		minValue = 0
+		stepSize = 1.6
+		startValue = 0
+		horizontal = 0
+		guiButtonType = {
+			name = "listboxSliderButton"
+			quadTextureSprite = "GFX_SRA_setting_slider"
+			position = { x = 5 y = 0 }
+		}
+		guiButtonType = {
+			name = "listboxTrackButton"
+			quadTextureSprite = "GFX_SRA_setting_scroll_bg"
+			position = { x = 12 y = 12 }
+		}	
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "upButton"
+			quadTextureSprite = "GFX_ncp_scroll_down"
+			position = { x = 0 y = 0 }
+		}
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "downButton"
+			quadTextureSprite = "GFX_ncp_scroll_up"
+			position = { x = 0 y = 120}
+		}
+	}
+	scrollbarType = {
+		name = "SRA_diplomacy_standardlistbox_slider"	
+		slider = "listboxSliderButton"
+		track = "listboxTrackButton"
+		leftbutton = "upButton"
+		rightbutton = "downButton"
+		size =  { x = 12 y = 12 }
+		position = { x = 0 y = 0 }
+		priority = 100			
+		borderSize = { x = 12 y = 12 }	
+		maxValue = 1
+		minValue = 0
+		stepSize = 0.1
+		startValue = 0
+		horizontal = 0
+		guiButtonType = {
+			name = "listboxSliderButton"
+			quadTextureSprite = "GFX_SRA_setting_slider"
+			position = { x = 5 y = 0 }
+		}
+		guiButtonType = {
+			name = "listboxTrackButton"
+			quadTextureSprite = "GFX_SRA_setting_scroll_bg"
+			position = { x = 12 y = 12 }
+		}	
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "upButton"
+			quadTextureSprite = "GFX_ncp_scroll_down"
+			position = { x = 0 y = 0 }
+		}
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "downButton"
+			quadTextureSprite = "GFX_ncp_scroll_up"
+			position = { x = 0 y = 120}
+		}
+	}
+	containerWindowType = {
+		name = "SRA_alter_event_diplomacy_window"
+		orientation = center
+		origo = center
+		moveable = no
+		size = { width = 4096 height = 2048 }
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_SRA_alter_event_diplomacy_background" 
+		}
+
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			format = "LEFT"
+			orientation = "UPPER_LEFT"
+			position = { x = -8192 y = -8192 }
+			maxWidth = 913
+			maxHeight = 213
+			alwaysTransparent = yes
+			scrollbartype = "SRA_diplomacy_desc_standardlistbox_slider"
+		}
+
+		### EVENT DIPLO ###
+	
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			size = { width=835 height=264 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 0 y = 0 }
+				maxWidth = 835
+				maxHeight = 264
+				format = center
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={ name = "action_desc" font = "malgun_goth_24" position = { x = -8192 y = -8192 } } # hidden
+			
+			listboxType = {
+				name = "option_list"
+				position = { x = 0 y = 0 }
+				backGround=""
+				size = { x = 4096 y = 2048 }
+				spacing = 10
+				scrollbartype = "SRA_diplomacy_standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = UPPER_LEFT
+			}
+		}
+		############################################
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+		############################################
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -8192 y = -8192 }} # hidden
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long_caravaneer" position = { x = -8192 y = -8192 } }
+		buttonType = { name = "focus_button" position = { x = -8192 y = -8192 } spriteType = "GFX_fleetview_focus" }
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -8192 y = -8192 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -8192 y = -8192 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask"  } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden 
+		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -8192 y = -8192 } } # hidden
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -8192 y = -8192 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -81920 y = -8192 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -8192 y = -8192 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+	}
+}

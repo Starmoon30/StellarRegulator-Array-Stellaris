@@ -1,0 +1,359 @@
+ship_design = {
+	name = "NAME_SRA_Rokia_dragon_Ship"
+	ship_size = SRA_Rokia_dragon_Ship
+	is_event_design = yes
+
+	section = {
+		template = "SRA_Rokia_dragon_Ship_mid"
+		slot = "mid"
+	
+		component = { 
+			slot = "planet_killer_weapon_01" 
+			template = "SRA_Rokia_dragon_weapon_planet_killer" 
+		}
+		component = {
+			slot = "l_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_05"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_06"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_07"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_08"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+	}	
+	required_component = "SRA_Rokia_dragon_Reactor"
+	required_component = "SENSOR_4"
+}
+ship_design = {
+	name = "NAME_SRA_chaos_Ship"
+	ship_size = SRA_chaos_Ship
+	is_event_design = yes
+
+	section = {
+		template = "SRA_chaos_Ship_mid"
+		slot = "mid"
+	
+		component = {
+			slot = "l_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_05"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_06"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_07"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_08"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+	}
+	required_component = "SRA_chaos_Ship_Reactor"
+}
+ship_design = {
+	name = "NAME_starbase_SRA_chaos_1"
+	ship_size = starbase_SRA_chaos_1
+
+	section = {
+		template = "starbase_SRA_chaos_1_core"
+		slot = "mid"
+	}
+
+	required_component = "starbase_SRA_chaos_Reactor"
+}
+ship_design = {
+	name = "NAME_SRA_SD_metabyss_orbital_ring"
+	ship_size = SRA_SD_metabyss_orbital_ring
+
+	section = {
+		template = "SRA_SD_metabyss_orbital_ring_core"
+		slot = "mid"
+	}
+
+	required_component = "starbase_SRA_chaos_Reactor"
+}
+ship_design = {
+	name = "NAME_SRA_Return_To_Calamitisease_Ship"
+	ship_size = SRA_Return_To_Calamitisease_Ship
+	is_event_design = yes
+
+	section = {
+		template = "SRA_Return_To_Calamitisease_Ship_mid"
+		slot = "mid"
+	
+		component = {
+			slot = "l_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_05"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_06"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_07"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_08"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_05"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_06"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+	}
+	required_component = "SRA_chaos_Ship_Reactor"
+	required_component = "SRA_Return_To_Calamitisease_Ship_Aura"
+}
+
+ship_design = {
+	name = "NAME_SRA_Return_To_Calamitisease_Ship2"
+	ship_size = SRA_Return_To_Calamitisease_Ship
+	is_event_design = yes
+
+	section = {
+		template = "SRA_Return_To_Calamitisease_Ship_mid"
+		slot = "mid"
+	
+		component = {
+			slot = "l_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_05"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_06"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_07"
+			template = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_08"
+			template = "SRA_Rokia_dragon_weapon_L_Laser"
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_03"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_04"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_05"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_06"
+			template = "SRA_Rokia_dragon_weapon_P"
+		}
+	}
+	required_component = "SRA_chaos_Ship_Reactor"
+	required_component = "SRA_Return_To_Calamitisease_Ship_Aura2"
+}
+ship_design = {
+	name = "NAME_SRA_reanimated_voidspawn"
+	ship_size = SRA_reanimated_leviathan_01_voidspawn
+	is_event_design = yes
+
+	section = {
+		template = "SRA_reanimated_voidspawn_key"
+		slot = "mid"
+	
+		component = { 
+			slot = "xl_weapon_01" 
+			template = "SRA_RE_Core_weapon_T_Laser" 
+		}
+		component = {
+			slot = "l_weapon_01"
+			template = "SRA_RE_Core_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_02"
+			template = "SRA_RE_Core_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_03"
+			template = "SRA_RE_Core_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_04"
+			template = "SRA_RE_Core_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_RE_Core_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_RE_Core_weapon_P"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+	}
+	required_component = "SRA_chaos_Ship_Reactor"
+	required_component = "SENSOR_4"
+}

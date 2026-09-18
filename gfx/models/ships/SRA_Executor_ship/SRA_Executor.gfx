@@ -1,0 +1,17 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_Executor_mesh"
+		file = "gfx/models/ships/SRA_Executor_ship/SRA_Executor.mesh"
+		scale = 1.0
+
+		animation = { id = "idle" type = "SRA_Executor_idle_animation" }
+		meshsettings = {
+			name = "ZhuTiShape"
+			index = 0
+			texture_diffuse = "SRA_Executor_diffuse.dds"
+			texture_normal = "SRA_Executor_Normal.dds"
+			texture_specular = "SRA_Executor_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -1,0 +1,256 @@
+﻿l_english:
+###############################
+ #操作所需的能量币和星界丝缕其实是星规收取的手续费，因为她帮你套了一层操作系统，实际控制还是由星规完成的。
+ #全长135千米。星穹之矛，所向无敌！
+ #项目中不包含随舰狂热者军团，你也不是大主教，尽管你同样也缺少高质量AOE。
+ #这艘船不是星梭号或者悖论引擎！保修不包含任何因撞击造成的损坏。
+
+ #远行要塞的互锁机制是不完善的，它成本高昂且存在弱点。如果有人能发掘这一保护的链条，他就有可能摧毁整个体系。因此星穹之矛被设计出来，用来取代远行要塞和航标，担任舰队的核心，并为整个舰队提供能量。
+ #它既可以被投入到任何焦灼的正面战场上，作为一张王牌，主宰战局。也可以逃过任何追杀和捕捉，将自己隐藏在没人知道的角落。它的时空相位引擎为一整只远征军供能，失去了星穹之矛，远征军只能持续战斗不长的时间——大约几千年。
+ #它如同其他星规舰船一样，由星辉分形打造，这种令人惊骇的材料能够在质能间流转，任意切换形态和功能。因此星穹之矛可以随意改变它的构造，并以超乎想象的速度修复自己，只要能量足够。它几乎不存在弱点，即便被孤立，它也能独自重建整个舰队。
+ #每个星穹之矛同时还是星规的载体，一个远征军通常有成百上千艘星穹之矛，它们共同承载一个星规个体的意识，完型意识。可以说，星穹之矛承载文明本身，因为它是星规的分形，包含基本要素。星穹之矛是一个完型意识的最小单位，其他舰船没有能力承载也不准备承载这样的意识，其他舰船只是被遥控的自律机械。
+
+ ###### 局势 ######
+ 
+ SRA_SOGZ_main_situation:0 "Spear_Of_Galaxy_Zenith Status"
+ SRA_SOGZ_main_situation_type:0 "Spear_Of_Galaxy_Zenith Status"
+ SRA_SOGZ_main_situation_desc:0 "This shows the current §BPhase Energy§! level of Spear_Of_Galaxy_Zenith. §BPhase Energy§! is the reserve energy of Spear_Of_Galaxy_Zenith, which can be used to activate various active effects.\nYou can open the control panel of Spear_Of_Galaxy_Zenith here."
+ SRA_SOGZ_main_situation_monthly_change_tooltip:0 "Spear_Of_Galaxy_Zenith's §BPhase Energy§! reserve grows at a steady rate; it can accelerate growth for certain reasons or be continuously consumed by certain functions."
+
+ SRA_SOGZ_main_situation_progress_complete:0 "Spear_Of_Galaxy_Zenith fully charged, unable to continue reserving §BPhase Energy§!."
+ SRA_SOGZ_main_situation_fail:0 "Spear_Of_Galaxy_Zenith energy depleted, unable to activate any function requiring §BPhase Energy§!."
+ sra_sogz_main_situation_stage_1:0 "Phase Energy Level Low"
+ sra_sogz_main_situation_stage_1_effects:0 "Current energy level is relatively low; need to use energy prudently."
+ sra_sogz_main_situation_stage_2:0 "Phase Energy Level Medium"
+ sra_sogz_main_situation_stage_2_effects:0 "Current energy level is medium; possess relatively reliable energy reserves to cope with various situations."
+ sra_sogz_main_situation_stage_3:0 "Phase Energy Level High"
+ sra_sogz_main_situation_stage_3_effects:0 "Current energy level is relatively high; time to fire at full power."
+ sra_sogz_main_situation_stage_4:0 "Phase Energy Level Full"
+ sra_sogz_main_situation_stage_4_effects:0 "Current energy level is full, unable to continue charging."
+ SRA_SOGZ_main_situation_open_menu:0 "Open Menu"
+ SRA_SOGZ_main_situation_open_menu_effect:0 "Open Spear_Of_Galaxy_Zenith's control menu."
+ SRA_SOGZ_main_situation_open_menu_tooltip:0 "Open Spear_Of_Galaxy_Zenith's control menu"
+ SRA_SOGZ_main_situation_charge:0 "Running"
+ SRA_SOGZ_main_situation_charge_effect:0 "Spear_Of_Galaxy_Zenith charging continuously."
+ SRA_SOGZ_main_situation_charge_tooltip:0 "Running Spear_Of_Galaxy_Zenith will continuously reserve Phase Energy for future use."
+ SRA_SOGZ_main_situation_charge_stop:0 "Spear_Of_Galaxy_Zenith current energy level full, unable to continue charging"
+ SRA_SOGZ_menu_sub_5_3_charge_stop:0 "Spear_Of_Galaxy_Zenith currently activated §BFalling Legend§!, thus unable to charge"
+ SRA_SOGZ_menu_sub_5_2_charge:0 "Spear_Of_Galaxy_Zenith currently activated §BDoomsday Catastrophe§!, thus charge speed doubled"
+
+
+ SRA_mini_menu_choose_button:0 ""
+
+ casus_belli_cb_SRA_SOGZ:0 "Spear_Of_Galaxy_Zenith"
+ war_goal_wg_SRA_SOGZ:0 "$war_goal_wg_colossus$"
+ war_goal_wg_SRA_SOGZ_desc:0 "Spear_Of_Galaxy_Zenith dominates the sea of stars, governing fate. Where the spear tip points is the empire's frontier."
+ 
+ casus_belli_cb_SRA_stop_SOGZ:0 "$casus_belli_cb_SRA_SOGZ$"
+ war_goal_wg_SRA_stop_SOGZ:0 "$war_goal_wg_end_threat$"
+ war_goal_wg_SRA_stop_SOGZ_desc:0 "This civilization possessing unknown advanced technology and inconceivable warships is a threat to the entire galaxy. For the stability of the sea of stars, it must be destroyed."
+
+ SRA_SPEAR_OF_GALAXY_ZENITH:0 "Understand How to Manipulate Spear_Of_Galaxy_Zenith"
+ SRA_SPEAR_OF_GALAXY_ZENITH_DESC:0 "Although the jump procedure is ready, we know almost nothing about this super warship. Before it officially arrives and becomes a powerful aid to our fleet, we must master various performances of Spear_Of_Galaxy_Zenith and understand how to manipulate this behemoth."
+
+ SRA_Spear_Of_Galaxy_Zenith.1:0 "Spear_Of_Galaxy_Zenith"
+ SRA_Spear_Of_Galaxy_Zenith.1.desc:0 "Spear_Of_Galaxy_Zenith has arrived above your capital and belongs to your command. This is an incomparably powerful weapon, far exceeding any conventional ship."
+ SRA_Spear_Of_Galaxy_Zenith.1.a:0 "Very good."
+ SRA_Spear_Of_Galaxy_Zenith.2:0 "Spear_Of_Galaxy_Zenith"
+ SRA_Spear_Of_Galaxy_Zenith.2.desc:0 "§B\"Spear_Of_Galaxy_Zenith Control System Activated\"§!\nYou can configure various functions of Spear_Of_Galaxy_Zenith and invoke its various systems here. If Spear_Of_Galaxy_Zenith is destroyed and emergency jumps to escape, you can redeploy it here."
+ SRA_Spear_Of_Galaxy_Zenith.2.a:0 "Open Configuration Panel"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_1:0 "Activate Banner of Universe"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_1.desc:0 "Configure Bow Guidance Beacon, calculate routes and specify maneuver logic for fleets in the entire star system, optimizing their relevant performance. At the same time, activate jump delivery system, allowing all our ships to jump.\n\nCost: §Y25 Phase Energy§!\nCooldown: 180.00£time£\nDuration: 180.00£time£\nFriendly ships within empire:\nJump capability: §GUnlocked§!\n$MOD_SHIP_SPEED_MULT$: §G+200%§!\n$MOD_SHIP_EVASION_MULT$: §G+100%§!\n$MOD_SHIP_WINDUP_MULT$: §G-200%§!\n$MOD_SHIP_FTL_JUMPDRIVE_RANGE_MULT$: §G+800%§!\n$MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$: §G-200%§!"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_2:0 "Activate Comet Approach"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_2.desc:0 "Configure Bow Guidance Beacon, guide a prepared fleet to immediately reinforce Spear_Of_Galaxy_Zenith's location. Multiple fleet types exist for selection; fleet type affects resources to pay and subsequent cooldown time.\n\nCost: §Y25 Phase Energy§!\nCooldown: Variable"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_3:0 "Activate Celestial Formation Guard"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_3.desc:0 "Configure Bow Guidance Beacon, immediately deploy Celestial Formation Guard Fleet and fortress reserved in Spacetime Phase Engine's internal space to Spear_Of_Galaxy_Zenith's location. Next batch of fleets needs 360.00£time£ to prepare again.\n\nCost: §Y200 Phase Energy§!\nCooldown: 360.00£time£"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_1:0 "Activate Explosive Blossom"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_1.desc:0 "Configure Strike Suppression Module, making Spear_Of_Galaxy_Zenith conduct covering strikes on enemy fleets, causing massive damage to all enemies in the star system.\n\nCost: §Y50 Phase Energy§!\nCooldown: 30.00£time£\nDuration: 10.00£time£\nEnemy ships in star system:\nTake §R5000§! damage every 1.00£time£"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_2:0 "Activate Dark Sea Distant Sound"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_2.desc:0 "Configure Strike Suppression Module, making Spear_Of_Galaxy_Zenith conduct explosive energy suppression on the star system, weakening all enemy ships' defense structures and destroying their penetration resistance.\n\nCost: §Y50 Phase Energy§!\nCooldown: 180.00£time£\nDuration: 30.00£time£\nEnemy ships in star system:\n$MOD_SHIP_SHIELD_REDUCTION$: §R80%§!\n$MOD_SHIP_ARMOR_REDUCTION$: §R80%§!\n$MOD_SHIP_SHIELD_HARDENING_ADD$: §R-200%§!\n$MOD_SHIP_ARMOR_HARDENING_ADD$: §R-200%§!"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_3:0 "Activate Pale Star Fall"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_3.desc:0 "Configure Strike Suppression Module, making Spear_Of_Galaxy_Zenith place a highly compressed Phase Energy star in the center of the star system, exploding after a short delay, causing devastating blows to all hostile fleets in the entire star system.\n\nCost: §Y50 Phase Energy§!\nCooldown: 180.00£time£\nDelay: 5.00£time£\nDuration: 30.00£time£\nEnemy ships in star system:\nTake §Rimmeasurable§! damage every 1.00£time£"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_1:0 "Activate Nova Termination"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_1.desc:0 "Configure Spacetime Phase Engine, use Spear_Of_Galaxy_Zenith's powerful weapons assisted by Spacetime Phase Engine to attack target star system. When using Anti-Cluster Strike Mode, project a Phase Space Projection existing for 15 days in target star system and attack all enemies within; when using Galaxy Destruction Mode, use §B\"Nova Termination\"§! to directly destroy target star system.\n\nCost: §Y50 Phase Energy§!\nCooldown: 360.00£time£"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_2:0 "Activate Singularity Burst"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_2.desc:0 "Configure Spacetime Phase Engine, redirect Spacetime Phase Engine energy output, activate most energy reserves, charge ['concept_SRA_Stellarcrystal_Fractal'] to enter semi-energized state, extremely significantly enhancing weapon output density, and enabling nearly energized hull to rapidly repair almost any type of damage.\n\nCost: §Y100 Phase Energy§!\nCooldown: 360.00£time£\nDuration: 60.00£time£\nSpear_Of_Galaxy_Zenith:\n§YCannot be destroyed§!\n§BUniversal Collapse§!: §GFour times fire rate§!\n$MOD_SHIP_SHIELD_DAMAGE_MULT$: §G+200%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$: §G+200%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$: §G+200%§!\n$MOD_SHIP_SHIELD_PENETRATION_MULT$: §G+2000%§!\n$MOD_SHIP_ARMOR_PENETRATION_MULT$: §G+2000%§!\n$MOD_SHIP_DAMAGE_REDUCTION_MULT$: §G+200%§!\n$MOD_SHIP_TARGET_WEIGHT_MULT$: §Y+800%§!"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_3:0 "Activate Event Horizon"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_3.desc:0 "Configure Spacetime Phase Engine, make Spacetime Phase Engine draw energy reserves to complete charging, then consume massive energy to expand its range to the entire system, extremely significantly slowing down all hostile fleets' attack and movement speed, constituting an effect similar to time stop.\n\nCost: §Y100 Phase Energy§!\nCooldown: 360.00£time£\nDuration: 20.00£time£\nEnemy ships in system:\n$MOD_SHIP_DISENGAGE_CHANCE_REDUCTION$: §R1000%§!\n$MOD_SHIP_SPEED_MULT$: §R-4000%§!\n$MOD_SHIP_WEAPON_RANGE_MULT$: §R-4000%§!\n$MOD_SHIP_EVASION_MULT$: §R-4000%§!\n$MOD_SHIP_ACCURACY_MULT$: §R-4000%§!\n$MOD_SHIP_TRACKING_MULT$: §R-4000%§!\n\n§YIneffective against fleets with dynamic adjustment systems§!"
+
+ SRA_Spear_Of_Galaxy_Zenith.2.e:0 "Redeploy Spear_Of_Galaxy_Zenith"
+ SRA_Spear_Of_Galaxy_Zenith.2.e.desc:0 "Repair severely damaged Spear_Of_Galaxy_Zenith and redeploy it to your capital."
+
+
+ SRA_Spear_Of_Galaxy_Zenith.10:0 "Secondary Control Panel"
+ SRA_Spear_Of_Galaxy_Zenith.10.desc:0 "§B\"Spear_Of_Galaxy_Zenith Secondary Control Panel Ready\"§!\nYou can configure various functions of Spear_Of_Galaxy_Zenith here."
+ SRA_Spear_Of_Galaxy_Zenith.10.a:0 "Activate Boost Overclock"
+ SRA_Spear_Of_Galaxy_Zenith.10.a.desc:0 "After activation, resource consumption of all systems increases to four times, Fleet Jump System and Interstellar Strike System cooldowns are extremely significantly shortened, Singularity Burst Mode cooldown shortened to half.\n§YAlloys required for Fleet Jump System to jump fleets will not increase.§!\n§YTime Freeze System is not affected.§!"
+ SRA_Spear_Of_Galaxy_Zenith.10.b:0 "Deactivate Boost Overclock"
+ SRA_Spear_Of_Galaxy_Zenith.10.b.desc:0 "Boost Overclock activated, click to deactivate."
+ SRA_Spear_Of_Galaxy_Zenith.10.c:0 "Activate Immortality Protocol"
+ SRA_Spear_Of_Galaxy_Zenith.10.c.desc:0 "Will no longer directly emergency jump when about to be destroyed; can choose to consume 160000 Energy, 320000 Alloys, 64000 Astral Threads to instantly repair to full state on the spot."
+ SRA_Spear_Of_Galaxy_Zenith.10.d:0 "Deactivate Immortality Protocol"
+ SRA_Spear_Of_Galaxy_Zenith.10.d.desc:0 "Immortality Protocol activated, click to deactivate."
+ SRA_Spear_Of_Galaxy_Zenith.10.e:0 "§B\"Nova Termination\"§! switch to Purge Mode"
+ SRA_Spear_Of_Galaxy_Zenith.10.e.desc:0 "Adjust energy output level of Star-Killer Plane-Tearing Weapon §B\"Nova Termination\"§!, converting weapon to Purge Mode that sweeps all intelligent life on the planet."
+ SRA_Spear_Of_Galaxy_Zenith.10.f:0 "§B\"Nova Termination\"§! switch to Destruction Mode"
+ SRA_Spear_Of_Galaxy_Zenith.10.f.desc:0 "Adjust energy output level of Star-Killer Plane-Tearing Weapon §B\"Nova Termination\"§!, converting weapon to Destruction Mode that directly destroys the planet."
+ SRA_Spear_Of_Galaxy_Zenith.10.g:0 "Switch Weapon System to Adjustable Mode"
+ SRA_Spear_Of_Galaxy_Zenith.10.g.desc:0 "Switch weapon configuration to Adjustable Mode (i.e., using weapons with §B\"SRA Weapon\"§! tag)."
+ SRA_Spear_Of_Galaxy_Zenith.10.h:0 "Switch Weapon System back to Conventional Mode"
+ SRA_Spear_Of_Galaxy_Zenith.10.h.desc:0 "Switch weapon configuration back to Conventional Mode."
+
+
+ SRA_Spear_Of_Galaxy_Zenith.20:0 "Fleet Jump System"
+ SRA_Spear_Of_Galaxy_Zenith.20.desc:0 "§B\"Spear_Of_Galaxy_Zenith Fleet Jump System Ready\"§!\nYou can select the fleet type you want to deploy here."
+ SRA_Spear_Of_Galaxy_Zenith.20.a:0 "Jump Annihilation Execution Fleet"
+ SRA_Spear_Of_Galaxy_Zenith.20.a.desc:0 "Immediately jump an Annihilation Execution Fleet to Spear_Of_Galaxy_Zenith's location, containing 2 SRA Adjudicator Units and 46 SRA Executor Units; afterwards, Fleet Jump System enters 240 days cooldown. §YSpecific design depends on designs in your ship designer; please ensure you possess at least one design.§!"
+ SRA_Spear_Of_Galaxy_Zenith.20.b:0 "Jump Battleship Fleet"
+ SRA_Spear_Of_Galaxy_Zenith.20.b.desc:0 "Immediately jump a Battleship Fleet to Spear_Of_Galaxy_Zenith's location, containing 2 Titans and 32 Battleships; afterwards, Fleet Jump System enters 240 days cooldown. §YSpecific design depends on designs in your ship designer; please ensure you possess at least one design.§!"
+ SRA_Spear_Of_Galaxy_Zenith.20.c:0 "Jump Adjudicator Fleet"
+ SRA_Spear_Of_Galaxy_Zenith.20.c.desc:0 "Immediately jump an Adjudicator Fleet to Spear_Of_Galaxy_Zenith's location, containing 2 SRA Adjudicator Units, 16 SRA Executor Units, and 32 SRA Pathfinder Units; afterwards, Fleet Jump System enters 240 days cooldown."
+
+
+ SRA_Spear_Of_Galaxy_Zenith.32:0 "Spear_Of_Galaxy_Zenith - Immortality Protocol"
+ SRA_Spear_Of_Galaxy_Zenith.32.desc:0 "§B\"Immortality Protocol Activation Detected\"§!\nCurrent Spear_Of_Galaxy_Zenith is severely damaged. You can start Immortality Protocol to instantly fully repair Spear_Of_Galaxy_Zenith's damage, or enable Stasis System to isolate Spear_Of_Galaxy_Zenith, waiting 30 days before choosing."
+ SRA_Spear_Of_Galaxy_Zenith.32.a:0 "Start Immortality Protocol"
+ SRA_Spear_Of_Galaxy_Zenith.32.b:0 "Start Stasis System"
+ SRA_Spear_Of_Galaxy_Zenith.32.c:0 "Start Emergency Jump"
+
+
+ SRA_Spear_Of_Galaxy_Zenith.40:0 "Interstellar Strike System"
+ SRA_Spear_Of_Galaxy_Zenith.40.desc:0 "§B\"Spear_Of_Galaxy_Zenith Interstellar Strike System Ready\"§!\nYou can choose how to aim at the target star system here."
+ SRA_Spear_Of_Galaxy_Zenith.40.a:0 "Beacon Lock Mode"
+ SRA_Spear_Of_Galaxy_Zenith.40.a.desc:0 "An Interstellar Strike Beacon will appear beside Spear_Of_Galaxy_Zenith; jump it to the target star system to locate."
+ SRA_Spear_Of_Galaxy_Zenith.40.b:0 "Star System Selector Mode"
+ SRA_Spear_Of_Galaxy_Zenith.40.b.desc:0 "Open star system selector interface; can aim at up to five targets."
+ SRA_Spear_Of_Galaxy_Zenith.40.c:0 "Target Selector Mode"
+ SRA_Spear_Of_Galaxy_Zenith.40.c.desc:0 "After selector opens, select target with mouse in target star system, then click button to lock this target, then enter next step to confirm target and choose attack mode."
+
+
+ SRA_Spear_Of_Galaxy_Zenith.43:0 "Nova Termination - Target Lock"
+ SRA_Spear_Of_Galaxy_Zenith.43.desc:0 "§B\"Spear_Of_Galaxy_Zenith Interstellar Strike System Target Locked\"§!\nYou can choose how to attack the target star system here.\n§RWarning: Destroying certain star systems containing special events or crisis spawn points, destroying fleets with special mechanisms or kill events, may all cause event chain interruptions, inability to end crisis, and other serious problems. Please use this powerful weapon properly to avoid causing galaxy-level logic errors.§!"
+ SRA_Spear_Of_Galaxy_Zenith.43.a:0 "Galaxy Destruction Mode"
+ SRA_Spear_Of_Galaxy_Zenith.43.a.desc:0 "Use §B\"Nova Termination\"§! to directly destroy the target star system; afterwards, Interstellar Strike System enters 180 days cooldown."
+ SRA_Spear_Of_Galaxy_Zenith.43.b:0 "Fleet Purge Mode§!"
+ SRA_Spear_Of_Galaxy_Zenith.43.b.desc:0 "Use Anti-Cluster Strike Mode, project a Phase Space Projection existing for 15 days in the target star system and attack all enemies within; afterwards, Interstellar Strike System enters 90 days cooldown."
+ SRA_Spear_Of_Galaxy_Zenith.43.c:0 "Cancel Command"
+
+
+ SRA_Spear_Of_Galaxy_Zenith.50:0 "Nova Termination - Target Selection"
+ SRA_Spear_Of_Galaxy_Zenith.50.desc:0 "§B\"Spear_Of_Galaxy_Zenith Interstellar Strike System Selecting Target\"§!\nYou can select the target to attack here.\n§KSelect the target with the mouse within the target star system, keep it selected and click the lock button on this panel to lock this target, then click the confirm target button and select attack mode.§!"
+ SRA_Spear_Of_Galaxy_Zenith.50.a:0 "Confirm Target"
+ SRA_Spear_Of_Galaxy_Zenith.50.a.desc:0 "Click to lock \"§H[SRA_mini_menu_choose_button_target.GetName]§!\" as target."
+ SRA_mini_menu_choose_button_lost_target:0 "Target does not exist"
+ SRA_mini_menu_choose_button_duplicate_target:0 "Cannot select duplicate target"
+
+ SRA_Spear_Of_Galaxy_Zenith.51:0 "Nova Termination - Target Lock"
+ SRA_Spear_Of_Galaxy_Zenith.51.desc:0 "§B\"Spear_Of_Galaxy_Zenith Interstellar Strike System Target Locked\"§!\nCurrent Target\n\"§H[SRA_mini_menu_choose_button_target.GetName]§!\"\nYou can choose how to attack the target here.\n§RWarning: Destroying certain star systems containing special events, or destroying fleets with special mechanisms, may all cause event chain interruptions, inability to end crisis, and other serious problems. Please use this powerful weapon properly to avoid causing galaxy-level logic errors.§!"
+ SRA_Spear_Of_Galaxy_Zenith.51.a:0 "Galaxy Destruction Mode"
+ SRA_Spear_Of_Galaxy_Zenith.51.a.desc:0 "Use §B\"Nova Termination\"§! to directly destroy the target star system; afterwards, Interstellar Strike System enters 360 days cooldown."
+ SRA_Spear_Of_Galaxy_Zenith.51.b:0 "Fleet Purge Mode"
+ SRA_Spear_Of_Galaxy_Zenith.51.b.desc:0 "Use Anti-Cluster Strike Mode, project a Phase Space Projection existing for 15 days at the target location and attack all enemies within target star system; afterwards, Interstellar Strike System enters 360 days cooldown."
+ SRA_Spear_Of_Galaxy_Zenith.51.c:0 "Select Next Target"
+ SRA_Spear_Of_Galaxy_Zenith.51.c.desc:0 "This will save the current target marker and revert to the selector interface."
+ SRA_Spear_Of_Galaxy_Zenith.51.d:0 "Cancel Command"
+ SRA_Spear_Of_Galaxy_Zenith.51.d.desc:0 "This will remove all target markers."
+
+
+ SRA_SOGZ_menu_sub_2_1_cool_down:0 "Banner of Universe on cooldown."
+ SRA_SOGZ_menu_sub_2_2_cool_down:0 "Comet Approach on cooldown."
+ SRA_SOGZ_menu_sub_2_3_cool_down:0 "Celestial Formation Guard on cooldown."
+ SRA_SOGZ_menu_sub_4_1_cool_down:0 "Explosive Blossom on cooldown."
+ SRA_SOGZ_menu_sub_4_2_cool_down:0 "Dark Sea Distant Sound on cooldown."
+ SRA_SOGZ_menu_sub_4_3_cool_down:0 "Pale Star Fall on cooldown."
+ SRA_SOGZ_menu_sub_6_1_cool_down:0 "Nova Termination on cooldown."
+ SRA_SOGZ_menu_sub_6_2_cool_down:0 "Singularity Burst on cooldown."
+ SRA_SOGZ_menu_sub_6_3_cool_down:0 "Event Horizon on cooldown."
+ SRA_fire_target_0_stand_by:0 "Nova Termination Beacon already exists."
+ SRA_Spear_Of_Galaxy_Zenith_resources_not_enough:0 "Insufficient resources."
+ SRA_Spear_Of_Galaxy_Zenith_continue1:0 "Execute"
+ SRA_Spear_Of_Galaxy_Zenith_exit1:0 "Close Interface"
+ SRA_Spear_Of_Galaxy_Zenith_return1:0 "Return to Previous Interface"
+
+ SRA_Spear_Of_Galaxy_Zenith_fire_not_enable:0 "Interstellar Strike System not repaired."
+ SRA_Spear_Of_Galaxy_Zenith_burst_not_enable:0 "Singularity Burst Mode not repaired."
+ SRA_Spear_Of_Galaxy_Zenith_time_stop_not_enable:0 "Time Freeze System not repaired."
+ SRA_Spear_Of_Galaxy_Zenith_transition_not_enable:0 "Fleet Jump System not repaired."
+ SRA_SOGZ_menu_sub_5_1_not_enable:0 "Boost Overclock function not repaired."
+ SRA_SOGZ_menu_sub_1_2_not_enable:0 "Immortality Protocol function not repaired."
+
+ SRA_SOGZ_menu_energy_text:0 "[From.SRA_SOGZ_sub_energy_choose]"
+
+ SRA_Spear_Of_Galaxy_Zenith.60:0 "§BSpear_Of_Galaxy_Zenith - Subsystem Configuration Interface§!"
+ SRA_Spear_Of_Galaxy_Zenith.60.desc:0 " "
+ SRA_Spear_Of_Galaxy_Zenith.60.a:0 "Save Current Configuration"
+ SRA_Spear_Of_Galaxy_Zenith.60.a.desc:0 "After changing configuration, next change requires waiting 180.00£time£."
+ SRA_Spear_Of_Galaxy_Zenith.60.a.custom_tooltip1:0 "Current configuration energy insufficient."
+ SRA_Spear_Of_Galaxy_Zenith.60.a.custom_tooltip2:0 "Configuration change cooldown not passed."
+ SRA_Spear_Of_Galaxy_Zenith.60.b:0 "Exit Without Saving"
+ SRA_SOGZ_menu_energy_effect_custom_tooltip:0 "§YSpear_Of_Galaxy_Zenith Remaining System Energy Under Current Configuration§!"
+ SRA_SOGZ_menu_energy_no_enough:0 "§YSpear_Of_Galaxy_Zenith Current Phase Energy Insufficient§!"
+# 船尾水晶 防御系统 被动
+ SRA_SOGZ_menu_sub_1_1_custom_tooltip:0 "§BLatent Time Silence§!\n\n§CDefense Array Passive§!\n§YSystem Energy Configuration Cost 0§!\n\nConfigure Crystal Projection Array, tune protection systems of fleets in star system, introduce Starlight energy into shields and armor, significantly strengthening their special performance, enhancing resistance to weakening and penetration effects.\n\nFriendly ships in star system:\n$MOD_SHIP_SHIELD_REDUCTION$: §G-100%§!\n$MOD_SHIP_ARMOR_REDUCTION$: §G-100%§!\n$MOD_SHIP_SHIELD_HARDENING_ADD$: §G+800%§!\n$MOD_SHIP_ARMOR_HARDENING_ADD$: §G+800%§!"
+ SRA_SOGZ_menu_sub_1_2_custom_tooltip:0 "§BFlowing Time Endless§!\n\n§CDefense Array Passive§!\n§YSystem Energy Configuration Cost 100§!\n\nConfigure Crystal Projection Array, infiltrate Phase Energy into all parts of Spear_Of_Galaxy_Zenith hull; will no longer directly emergency jump when about to be destroyed; can choose to consume 10 points of Phase Energy to instantly repair to full state on the spot, and will not be destroyed again within 5.00£time£, or choose to temporarily enter stasis state, deciding after 30.00£time£."
+ SRA_SOGZ_menu_sub_1_3_custom_tooltip:0 "§BEternal Time Flow§!\n\n§CDefense Array Passive§!\n§YSystem Energy Configuration Cost 200§!\n\nConfigure Crystal Projection Array, charge hulls of fleets in star system, making parts enter semi-energized state; nearly energized armor and hull structure can rapidly repair vast majority of damage, meanwhile shield field can also recover at high speed.\n\nFriendly ships in star system:\n$MOD_SHIP_SHIELD_REGEN_ADD_STATIC$: §G+256000§!\n$MOD_SHIP_ARMOR_REGEN_ADD_STATIC$: §G+256000§!\n$MOD_SHIP_HULL_REGEN_ADD_STATIC$: §G+256000§!\n\nIn addition, whenever Spear_Of_Galaxy_Zenith is about to be destroyed, it will enter stasis state for 10.00£time£ and release several teams of Celestial Garrison; Celestial Garrison will fight for 180.00£time£. Spear_Of_Galaxy_Zenith cannot activate this effect again within 5.00£time£ after leaving stasis state."
+#船头:投送模块 主动
+ SRA_SOGZ_menu_sub_2_1_custom_tooltip:0 "§BBanner of Universe§!\n\n§CDelivery Module Active§!\n§YSystem Energy Configuration Cost 0§!\n\nConfigure Bow Guidance Beacon, calculate routes and specify maneuver logic for fleets in the entire star system, optimizing their relevant performance. At the same time, activate jump delivery system, allowing all our ships to jump.\n\nCost: §Y25 Phase Energy§!\nCooldown: 180.00£time£\nDuration: 180.00£time£\nFriendly ships within empire:\nJump capability: §GUnlocked§!\n$MOD_SHIP_SPEED_MULT$: §G+200%§!\n$MOD_SHIP_EVASION_MULT$: §G+100%§!\n$MOD_SHIP_WINDUP_MULT$: §G-200%§!\n$MOD_SHIP_FTL_JUMPDRIVE_RANGE_MULT$: §G+800%§!\n$MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$: §G-200%§!"
+ SRA_SOGZ_menu_sub_2_1_Buff:0 "§BBanner of Universe§!"
+ SRA_SOGZ_menu_sub_2_2_custom_tooltip:0 "§BComet Approach§!\n\n§CDelivery Module Active§!\n§YSystem Energy Configuration Cost 100§!\n\nConfigure Bow Guidance Beacon, guide a prepared fleet to immediately reinforce Spear_Of_Galaxy_Zenith's location. Multiple fleet types exist for selection; fleet type affects resources to pay and subsequent cooldown time.\n\nCost: §Y25 Phase Energy§!\nCooldown: Variable"
+ SRA_SOGZ_menu_sub_2_3_custom_tooltip:0 "§BCelestial Formation Guard§!\n\n§CDelivery Module Active§!\n§YSystem Energy Configuration Cost 200§!\n\nConfigure Bow Guidance Beacon, immediately deploy Celestial Formation Guard Fleet and fortress reserved in Spacetime Phase Engine's internal space to Spear_Of_Galaxy_Zenith's location.\n\nCost: §Y200 Phase Energy§!\nCooldown: 360.00£time£"
+# 前浮翼 进攻系统 被动
+ SRA_SOGZ_menu_sub_3_1_custom_tooltip:0 "§BWorld Extinction§!\n\n§CJoint Attack Passive§!\n§YSystem Energy Configuration Cost 0§!\n\nConfigure Float-Wing Offensive Matrix, amplify weapon systems of fleets in star system, strengthening their damage capability against various targets.\n\nFriendly ships in star system:\n$MOD_SHIP_SHIELD_DAMAGE_MULT$: §G+50%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$: §G+50%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$: §G+50%§!"
+ SRA_SOGZ_menu_sub_3_2_custom_tooltip:0 "§BNether Sea Navigation§!\n\n§CJoint Attack Passive§!\n§YSystem Energy Configuration Cost 100§!\n\nConfigure Float-Wing Offensive Matrix, tune weapon systems of fleets in star system, making them specialized in hull structure destruction; as a cost, damage effects on shields and armor will basically disappear, need to be used with penetrating weapons.\n\nFriendly ships in star system:\n$MOD_SHIP_SHIELD_DAMAGE_MULT$: §R-200%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$: §R-200%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$: §G+400%§!"
+ SRA_SOGZ_menu_sub_3_3_custom_tooltip:0 "§BDawn Triumph§!\n\n§CJoint Attack Passive§!\n§YSystem Energy Configuration Cost 200§!\n\nConfigure Float-Wing Offensive Matrix, extra Stellarcrystal energy will be introduced into Spear_Of_Galaxy_Zenith weapon system, re-coding weapon array ballistic logic, making all weapons forcibly drop dimensions the moment they hit the enemy; massive energy released during drop will bypass ship shields and armor to hit the hull directly.\n\nFriendly ships in star system:\n$MOD_SHIP_SHIELD_PENETRATION_MULT$: §G+800%§!\n$MOD_SHIP_ARMOR_PENETRATION_MULT$: §G+800%§!"
+#后浮翼：打击模块 主动
+ SRA_SOGZ_menu_sub_4_1_custom_tooltip:0 "§BExplosive Blossom§!\n\n§CFire Support Active§!\n§YSystem Energy Configuration Cost 0§!\n\nConfigure Strike Suppression Module, allowing Spear_Of_Galaxy_Zenith to conduct covering strikes on enemy fleets, causing massive damage to all enemies in the star system.\n\nCost: §Y50 Phase Energy§!\nCooldown: 120.00£time£\nDuration: 25.00£time£\nEnemy ships in star system:\nTake §R8000§! damage every 1.00£time£"
+ SRA_SOGZ_menu_sub_4_2_custom_tooltip:0 "§BDark Sea Distant Sound§!\n\n§CFire Support Active§!\n§YSystem Energy Configuration Cost 100§!\n\nConfigure Strike Suppression Module, allowing Spear_Of_Galaxy_Zenith to conduct explosive energy suppression on the star system, weakening all enemy ships' defense structures and destroying their penetration resistance.\n\nCost: §Y50 Phase Energy§!\nCooldown: 180.00£time£\nDuration: 30.00£time£\nEnemy ships in star system:\n$MOD_SHIP_SHIELD_REDUCTION$: §R80%§!\n$MOD_SHIP_ARMOR_REDUCTION$: §R80%§!\n$MOD_SHIP_SHIELD_HARDENING_ADD$: §R-200%§!\n$MOD_SHIP_ARMOR_HARDENING_ADD$: §R-200%§!"
+ SRA_SOGZ_menu_sub_4_3_custom_tooltip:0 "§BPale Star Fall§!\n\n§CFire Support Active§!\n§YSystem Energy Configuration Cost 200§!\n\nConfigure Strike Suppression Module, allowing Spear_Of_Galaxy_Zenith to place a highly compressed Phase Energy star in the center of the star system, exploding after a short delay, causing devastating blows to all hostile fleets in the entire star system.\n\nCost: §Y50 Phase Energy§!\nCooldown: 180.00£time£\nDelay: 5.00£time£\nDuration: 30.00£time£\nEnemy ships in star system:\nTake §Rimmeasurable§! damage every 1.00£time£"
+#歼星框架  能量调谐系统 被动
+ SRA_SOGZ_menu_sub_5_1_custom_tooltip:0 "§BStar Core Overload§!\n\n§CEnergy Tuning Passive§!\n§YSystem Energy Configuration Cost 0§!\n\nConfigure Energy Tuning System, optimize system configuration, improve efficiency and preparation speed.\n\n§BDelivery Module§! System Cooldown: §G-100%§!\n§BFire Support§! System Cooldown: §G-75%§!\n§BSpacetime Phase§! System Cooldown: §G-50%§!"
+ SRA_SOGZ_menu_sub_5_2_custom_tooltip:0 "§BDoomsday Catastrophe§!\n\n§CEnergy Tuning Passive§!\n§YSystem Energy Configuration Cost 100§!\n\nConfigure Energy Tuning System, redirect weapon energy allocation, significantly improve grand armament efficiency, enhance destruction capability against single targets. At the same time, adjusted energy fluctuation circuits will double Spear_Of_Galaxy_Zenith's Phase Energy charging speed.\n\n§YPhase Energy§! Output: §G+100%§!\nSpear_Of_Galaxy_Zenith:\n§BUniversal Collapse§!: §GFive times fire rate§!"
+ SRA_SOGZ_menu_sub_5_3_custom_tooltip:0 "§BFalling Legend§!\n\n§CEnergy Tuning Passive§!\n§YSystem Energy Configuration Cost 200§!\n\nConfigure Energy Tuning System, switch energy supply mode, divert all Phase Energy output to strengthening Spear_Of_Galaxy_Zenith itself, extremely significantly enhancing its attributes.\n\n§YPhase Energy§! Output: §R-100%§!\nSpear_Of_Galaxy_Zenith:\n$MOD_SHIP_SHIELD_MULT$: §G+3200%§!\n$MOD_SHIP_ARMOR_MULT$: §G+3200%§!\n$MOD_SHIP_HULL_MULT$: §G+3200%§!\n$MOD_SHIP_SHIELD_DAMAGE_MULT$: §G+200%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$: §G+200%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$: §G+200%§!\n$MOD_SHIP_SHIELD_REGEN_ADD_STATIC$: §G+64000000§!\n$MOD_SHIP_ARMOR_REGEN_ADD_STATIC$: §G+64000000§!\n$MOD_SHIP_HULL_REGEN_ADD_STATIC$: §G+64000000§!\n\n§YCelestial Garrison released by §BEternal Time Flow§! will enjoy this enhancement for 10.00£time£.§!"
+#核心水晶 时空相位核心 主动
+ SRA_SOGZ_menu_sub_6_1_custom_tooltip:0 "§BNova Termination§!\n\n§CSpacetime Phase Active§!\n§YSystem Energy Configuration Cost 0§!\n\nConfigure Spacetime Phase Engine, allow using Spear_Of_Galaxy_Zenith's powerful weapons assisted by Spacetime Phase Engine to attack target star system. When using Anti-Cluster Strike Mode, project a Phase Space Projection existing for 15 days in target star system and attack all enemies within; when using Galaxy Destruction Mode, use §B\"Nova Termination\"§! to directly destroy target star system.\n\nCost: §Y50 Phase Energy§!\nCooldown: 360.00£time£"
+ SRA_SOGZ_menu_sub_6_2_custom_tooltip:0 "§BSingularity Burst§!\n\n§CSpacetime Phase Active§!\n§YSystem Energy Configuration Cost 100§!\n\n$SRA_Spear_Of_Galaxy_Zenith.2.6_2.desc$"
+ SRA_SOGZ_menu_sub_6_3_custom_tooltip:0 "§BEvent Horizon§!\n\n§CSpacetime Phase Active§!\n§YSystem Energy Configuration Cost 200§!\n\nConfigure Spacetime Phase Engine, authorize Spacetime Phase Engine to draw energy reserves to complete charging, then consume massive energy to expand its range to the entire system, extremely significantly slowing down all hostile fleets' attack and movement speed, constituting an effect similar to time stop.\n\nCost: §Y100 Phase Energy§!\nCooldown: 360.00£time£\nDuration: 20.00£time£\nEnemy ships in system:\n$MOD_SHIP_DISENGAGE_CHANCE_REDUCTION$: §R1000%§!\n$MOD_SHIP_SPEED_MULT$: §R-4000%§!\n$MOD_SHIP_WEAPON_RANGE_MULT$: §R-4000%§!\n$MOD_SHIP_EVASION_MULT$: §R-4000%§!\n$MOD_SHIP_ACCURACY_MULT$: §R-4000%§!\n$MOD_SHIP_TRACKING_MULT$: §R-4000%§!\n\n§YIneffective against fleets with dynamic adjustment systems§!"
+
+
+#####修正
+ SRA_SOGZ_menu_sub_5_2_Buff:0 "§BDoomsday Catastrophe§!"
+ SRA_SOGZ_menu_sub_5_3_Buff:0 "§BFalling Legend§!"
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码
+ ### Fire Target Modifiers ###
+ SRA_fire_target_Buff_0:0 "Fire Control Disruption: Tracking -40"
+ SRA_fire_target_Buff_1:0 "Fire Control Enhancement: Tracking +40"
+ SRA_Spear_Of_Galaxy_Zenith_nearly_repair:0 "Spear of Galaxy Zenith Repairing..."
+ SRA_Spear_Of_Galaxy_Zenith_Buff_1:0 "Spear of Galaxy Zenith · Supreme Judgment"
+ SRA_Spear_Of_Galaxy_Zenith_Buff_2:0 "Spear of Galaxy Zenith · Dark Sea Distant Sound"
+ SRA_SOGZ_menu_sub_4_2_buff:0 "Dark Sea Distant Sound Suppression"

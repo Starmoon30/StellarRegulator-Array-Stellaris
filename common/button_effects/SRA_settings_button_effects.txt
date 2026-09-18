@@ -1,0 +1,344 @@
+#危机难度
+SRA_settings_crisis_group = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = {
+        custom_tooltip = {
+            fail_text = SRA_invasion_happened
+            NOR = { 
+                has_global_flag = SRA_invasion_happened
+                has_global_flag = SRA_invasion_end
+            }
+        }
+        custom_tooltip = {
+            fail_text = SRA_settings_crisis_isRE
+            FROM = { 
+                NOT = { has_civic = civic_SRARociviaEmpire }
+            }
+        }
+    }
+	effect = { custom_tooltip = "SRA_settings_crisis_tooltip" }
+}
+SRA_settings_crisis_a_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = {
+        custom_tooltip = {
+            fail_text = SRA_invasion_happened
+            NOR = { 
+                has_global_flag = SRA_invasion_happened
+                has_global_flag = SRA_invasion_end
+            }
+        }
+        custom_tooltip = {
+            fail_text = SRA_settings_crisis_isRE
+            FROM = { 
+                NOT = { has_civic = civic_SRARociviaEmpire }
+            }
+        }
+    }
+    effect = {
+		custom_tooltip = "SRA_settings_crisis_a.tooltip"
+        remove_global_flag = SRA_Crisis_hard
+        remove_global_flag = SRA_Crisis_lunatic
+        remove_global_flag = SRA_Crisis_disabled
+        set_global_flag = SRA_Crisis_normal
+    }
+}
+SRA_settings_crisis_a_box_effect = {
+	potential = { has_global_flag = SRA_Crisis_normal hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_crisis_b_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = {
+        custom_tooltip = {
+            fail_text = SRA_invasion_happened
+            NOR = { 
+                has_global_flag = SRA_invasion_happened
+                has_global_flag = SRA_invasion_end
+            }
+        }
+        custom_tooltip = {
+            fail_text = SRA_settings_crisis_isRE
+            FROM = { 
+                NOT = { has_civic = civic_SRARociviaEmpire }
+            }
+        }
+    }
+    effect = {
+		custom_tooltip = "SRA_settings_crisis_b.tooltip"
+        remove_global_flag = SRA_Crisis_normal
+        remove_global_flag = SRA_Crisis_lunatic
+        remove_global_flag = SRA_Crisis_disabled
+        set_global_flag = SRA_Crisis_hard
+    }
+}
+SRA_settings_crisis_b_box_effect = {
+	potential = { has_global_flag = SRA_Crisis_hard hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_crisis_c_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = {
+        custom_tooltip = {
+            fail_text = SRA_invasion_happened
+            NOR = { 
+                has_global_flag = SRA_invasion_happened
+                has_global_flag = SRA_invasion_end
+            }
+        }
+        custom_tooltip = {
+            fail_text = SRA_settings_crisis_isRE
+            FROM = { 
+                NOT = { has_civic = civic_SRARociviaEmpire }
+            }
+        }
+    }
+    effect = {
+		custom_tooltip = "SRA_settings_crisis_c.tooltip"
+        remove_global_flag = SRA_Crisis_normal
+        remove_global_flag = SRA_Crisis_hard
+        remove_global_flag = SRA_Crisis_disabled
+        set_global_flag = SRA_Crisis_lunatic
+    }
+}
+SRA_settings_crisis_c_box_effect = {
+	potential = { has_global_flag = SRA_Crisis_lunatic hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_crisis_d_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = {
+        custom_tooltip = {
+            fail_text = SRA_invasion_happened
+            NOR = { 
+                has_global_flag = SRA_invasion_happened
+                has_global_flag = SRA_invasion_end
+            }
+        }
+        custom_tooltip = {
+            fail_text = SRA_settings_crisis_isRE
+            FROM = { 
+                NOT = { has_civic = civic_SRARociviaEmpire }
+            }
+        }
+    }
+    effect = {
+		custom_tooltip = "SRA_settings_crisis_d.tooltip"
+        remove_global_flag = SRA_Crisis_normal
+        remove_global_flag = SRA_Crisis_hard
+        remove_global_flag = SRA_Crisis_lunatic
+        set_global_flag = SRA_Crisis_disabled
+    }
+}
+SRA_settings_crisis_d_box_effect = {
+	potential = { has_global_flag = SRA_Crisis_disabled hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+#危机其他选项
+SRA_settings_crisis_other_group = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+	effect = { custom_tooltip = "SRA_settings_crisis_other_tooltip" }
+}
+SRA_settings_crisis_other_a_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_crisis_other_a.tooltip"
+		remove_global_flag = SRA_no_crisis_sound
+    }
+}
+SRA_settings_crisis_other_a_box_effect = {
+    potential = { NOT = { has_global_flag = SRA_no_crisis_sound } hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_crisis_other_b_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_crisis_other_b.tooltip"
+		set_global_flag = SRA_no_crisis_sound
+		stop_crisis_sound = yes
+    }
+}
+SRA_settings_crisis_other_b_box_effect = {
+    potential = { has_global_flag = SRA_no_crisis_sound hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_crisis_other_c_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = {
+        custom_tooltip = {
+            fail_text = SRA_settings_crisis_isRE
+            FROM = { 
+                NOT = { has_civic = civic_SRARociviaEmpire }
+            }
+        }
+    }
+    effect = {
+		custom_tooltip = "SRA_settings_crisis_other_c.tooltip"
+        hidden_effect = {
+            FROM = { 
+                if = {
+                    limit = { NOT = { has_country_flag = SRA_Mutation_engaged } }
+                    country_event = { id = SRA_Mutation.1 } 
+                }
+            }
+        }
+    }
+}
+
+#AI科技
+SRA_settings_AI_tech_group = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+	effect = { custom_tooltip = "SRA_settings_AI_tech_tooltip" }
+}
+SRA_settings_AI_tech_a_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_AI_tech_a.tooltip"
+		remove_global_flag = SRA_AI_world_machine
+		remove_global_flag = SRA_AI_world_machine_oblivion
+		set_global_flag = SRA_AI_tech_permit
+    }
+}
+SRA_settings_AI_tech_a_box_effect = {
+	potential = { has_global_flag = SRA_AI_tech_permit NOR = { has_global_flag = SRA_AI_world_machine has_global_flag = SRA_AI_world_machine_oblivion } hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_AI_tech_b_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_AI_tech_b.tooltip"
+		remove_global_flag = SRA_AI_world_machine_oblivion
+		set_global_flag = SRA_AI_tech_permit
+		set_global_flag = SRA_AI_world_machine
+    }
+}
+SRA_settings_AI_tech_b_box_effect = {
+    potential = { has_global_flag = SRA_AI_world_machine NOT = { has_global_flag = SRA_AI_world_machine_oblivion } hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_AI_tech_c_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_AI_tech_c.tooltip"
+		set_global_flag = SRA_AI_tech_permit
+		set_global_flag = SRA_AI_world_machine
+		set_global_flag = SRA_AI_world_machine_oblivion
+    }
+}
+SRA_settings_AI_tech_c_box_effect = {
+    potential = { has_global_flag = SRA_AI_world_machine_oblivion hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_AI_tech_d_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_AI_tech_d.tooltip"
+		remove_global_flag = SRA_AI_tech_permit
+		remove_global_flag = SRA_AI_world_machine
+		remove_global_flag = SRA_AI_world_machine_oblivion
+    }
+}
+SRA_settings_AI_tech_d_box_effect = {
+    potential = { NOT = { has_global_flag = SRA_AI_tech_permit } hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+
+
+
+
+#第二页
+#星辉产业
+SRA_settings_stellarcrystal_industry_group = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 2 } } } }
+	allow = { always = yes }
+	effect = { custom_tooltip = "SRA_settings_stellarcrystal_industry_tooltip" }
+}
+SRA_settings_stellarcrystal_industry_a_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 2 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_stellarcrystal_industry_a.tooltip"
+        FROM = { remove_country_flag = SRA_RE_building_hidden }
+    }
+}
+SRA_settings_stellarcrystal_industry_a_box_effect = {
+	potential = { hidden_trigger = { FROM = { NOT = { has_country_flag = SRA_RE_building_hidden } check_variable = { which = SRA_settings_page value = 2 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_stellarcrystal_industry_b_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 2 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_stellarcrystal_industry_b.tooltip"
+        FROM = { set_country_flag = SRA_RE_building_hidden }
+    }
+}
+SRA_settings_stellarcrystal_industry_b_box_effect = {
+    potential = { hidden_trigger = { FROM = { has_country_flag = SRA_RE_building_hidden check_variable = { which = SRA_settings_page value = 2 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_stellarcrystal_industry_c_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 2 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_stellarcrystal_industry_c.tooltip"
+        FROM = { set_country_flag = SRA_Automation_on }
+    }
+}
+SRA_settings_stellarcrystal_industry_c_box_effect = {
+	potential = { hidden_trigger = { FROM = { has_country_flag = SRA_Automation_on check_variable = { which = SRA_settings_page value = 2 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_settings_stellarcrystal_industry_d_effect = {
+    potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 2 } } } }
+    allow = { always = yes }
+    effect = {
+		custom_tooltip = "SRA_settings_stellarcrystal_industry_d.tooltip"
+        FROM = { remove_country_flag = SRA_Automation_on }
+    }
+}
+SRA_settings_stellarcrystal_industry_d_box_effect = {
+	potential = { hidden_trigger = { FROM = { NOT = { has_country_flag = SRA_Automation_on } check_variable = { which = SRA_settings_page value = 2 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+
+
+
+#翻页
+SRA_settings_page_group = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {}
+}
+SRA_settings_page_1_effect = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 2 } } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { hidden_effect = { FROM = { set_variable = { which = SRA_settings_page value = 1 } } } }
+}
+SRA_settings_page_2_effect = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_settings_page value = 1 } } } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { hidden_effect = { FROM = { set_variable = { which = SRA_settings_page value = 2 } } } }
+}

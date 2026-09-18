@@ -1,0 +1,26 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_SRA_text_window_bg"
+		texturefile = "gfx/interface/SRA_text/SRA_text_window.dds"
+		borderSize = { x=1600 y=900 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	#spriteType = {
+	#	name = "GFX_SRA_text_above_elements"
+	#	texturefile = "gfx/interface/SRA_text/SRA_text_above_elements.dds"
+	#	alwaysTransparent = yes
+	#}
+	# 按钮
+	spriteType = {
+		name = "GFX_SRA_text_button"
+		texturefile = "gfx/interface/SRA_text/SRA_text_button.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_text_close_button"
+		texturefile = "gfx/interface/SRA_text/SRA_text_close_button.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+}

@@ -1,0 +1,96 @@
+﻿l_simp_chinese:
+ ### Concepts
+ # Use §K for headers and §I for highlights in Concepts
+ # 语法：['concept_xxxx']
+ # ['concept_xxxx', 自定义文本]
+#####深渊 → Abyss
+#####深源 → Metabyss
+#####树海 → Metarbor
+#####树海的诗人 → Bard of Metarbor
+ concept_SRA_SD_chaos_star_habitable_vitality:0 "§R深渊§!活跃度"
+ concept_SRA_SD_chaos_star_habitable_vitality_desc:0 "§R深渊§!活跃度是对当前深渊活跃性的衡量，深渊的活跃既有助于我们对其的利用和开发，也会导致侵蚀扩散速度与范围，以及活跃的深渊造物的数量的提升。活跃度会影响['concept_SRA_SD_Abyss_Erosion']事件的发生频率和危害大小，深渊探索的成功率，以及深渊入侵时的战斗力。\n提升技术水平或者对深渊展开探索行动会提升活跃度，随机发生的['concept_SRA_SD_Abyss_Erosion']也会进一步提高活跃度，成功击退深渊入侵则会降低活跃度。如果事态失控，我们可以用特定方式大幅度降低活跃度，但代价巨大。"
+
+ concept_SRA_SD_The_Rips:0 "§R大撕裂§!"
+ concept_SRA_SD_The_Rips_desc:0 "昔日核心世界的崩塌。\n深渊扩张的灾难性表现，某种能量的爆发导致地层开裂山体崩塌，在一瞬之间刻下无数峡谷，几乎完全重塑了地表的结构。\n从观测结果来看，这场灾难类似一场发生在深渊中心的大爆炸，造成的地理变动随延伸距离，其深度递减。\n从深渊中心到周围约八千公里的距离上，其影响范围从深至九重铸炉到地表逐级递减。\n大撕裂并不只是一场超大规模的地震，它所造就的那些峡谷中充斥着深渊能量，时刻侵蚀着周围地区，其影响处于峰值时，侵蚀强度高到足以将岩体破碎并重构为构造体。\n大撕裂直接导致了数千公里半径的环深渊地区内几乎所有国家的崩溃，幸存者寥寥无几。"
+
+ concept_SRA_SD_Abyss_Erosion:0 "§R深渊侵蚀§!"
+ concept_SRA_SD_Abyss_Erosion_desc:0 "深渊侵蚀是一种类似现实扭曲的现象，其主要表现为模糊物质的构成和属性，并将其化为一种有认知危害的构造体，明确特征为红黑色的迷雾或水晶，以及一种黑色类似石材的材料。\n深渊侵蚀同时会对生物的认知造成严重影响，制造幻觉，扭曲其思考能力，并最终剥夺其意识。受侵蚀的个体通常同时从生理和心理上受损，并最终变为无自我的，以散播侵蚀为目的行动的傀儡。\n有深渊性质的这些构造体能以违反物理规则的方式行动，攻击和摧毁大多数物体，并散播侵蚀。\n某些特殊的材料或加工方式能一定程度抵抗深渊的侵蚀，有魂之物则能靠意志减缓心理及生理被侵蚀的速度。"
+
+ concept_SRA_SD_barren_space:0 "荒域"
+ concept_SRA_SD_barren_space_desc:0 "荒域是树海文明对通天之塔外的位面的称呼，意在表达这片位面的荒芜乃至贫瘠。\n对生在一个即便残酷，却也强大到超乎想象的诡异世界的这些人来说，常规物质宇宙的能量密度实在是不堪入目，这里绝大部分的空间空无一物，只有极为稀疏的天体分布其间，固态的天体脆弱而呆滞，物质结构低劣；正在反应的发光天体尽管庞大，却也任由术式的摆布。\n树海所造就的超凡生灵哪怕在家乡平平无奇，但到了外界却能轻易以自身意志改变现实。不过无论如何，荒域仍然是一片广阔的，值得探索的新天地。"
+
+ concept_SRA_SD_chaos_star_habitable_core_building:0 "§R树海残枝§!产业核心"
+ concept_SRA_SD_chaos_star_habitable_core_building_desc:0 "§R树海残枝§!产业核心用于为整个§R树海残枝§!产业体系提供基础资源和加成，并承担产业体系带来的负荷。其具体规则如下：\n\n$mod_SRA_SD_core_building_category_produces_mult$修正：\n-基础值为§G+1000%§!。\n-基于负荷使用比例的提升而降低。\n\n£energy£ $energy$产出：\n-基于所对应的区划数量的增长而提升。\n-基于负荷使用比例的提升而提升。\n-受到['concept_SRA_SD_chaos_star_habitable_vitality']的非线性影响，并在§Y600§!时达到最高。\n\n£minerals£ $minerals$维护费：\n-基于所对应的区划数量的增长而提升。\n-基于负荷使用比例的提升而提升。\n-基于['concept_SRA_SD_chaos_star_habitable_vitality']的提升而提升。\n\n£alloys£ $alloys$维护费：\n-基于负荷使用比例的提升而提升。\n-基于负荷使用量的提升而提升。\n\n['concept_SRA_SD_chaos_star_habitable_building']产出和维护费修正：\n-基于所对应的区划数量的增长而提升。\n-基于负荷使用比例靠近§Y1§!的程度而提升。\n-受到['concept_SRA_SD_chaos_star_habitable_vitality']的非线性影响，并在§Y600§!时达到最高。\n\n§R树海残枝§!产业核心使用§Y$SRA_SD_core_building_category$§!经济类型，仅受§Y$SRA_SD_core_building_category$§!产出和维护费以及每月资源修正影响。"
+ concept_SRA_SD_chaos_star_habitable_building:0 "§R树海残枝§!产业枢纽"
+ concept_SRA_SD_chaos_star_habitable_building_desc:0 "§R树海残枝§!产业枢纽是一种特殊的产业建筑，它会基于所对应的区划数量的增长，提升自己的产出和维护费。\n\n§R树海残枝§!产业枢纽使用§Y$SRA_SD_productive_category$§!经济类型，受§Y$planet_jobs_productive$§!的产出和维护费及其上级修正，以及§Y$SRA_SD_productive_category$§!产出和维护费影响。修正之间加算。"
+
+ concept_SRA_SD_Arcane:0 "§B树海-奥术体系§!"
+ concept_SRA_SD_Arcane_desc:0 "奥术施法者使用逻辑和理智来支配自身或周围的超凡力量，认为世间万物都能被解释以及被法术操纵，奥术施法者是典型的研究者，通过明确（也可能并不真的了解）的法术模型来表达施法目的，并不断改进模型来优化法术的成本或效果。\n\n$SRA_SD_Arcane_relic$会为奥术体系的舰船武器提供等于 能量武器修正*50% + 爆破武器修正*50% 的['concept_SRA_SD_Arcane']武器修正。"
+ concept_SRA_SD_Divine:0 "§Y树海-神术体系§!"
+ concept_SRA_SD_Divine_desc:0 "神术施法者依赖信念、复现事迹以及与强大力量来源联系施展法术，往往沿用既有的法术并长期研习，亦或是将大量时间用于规训自身以满足施法来源的要求。神话力量现已被证实是神术的主要来源，包括神话存在本身发放的神术，与由其事迹自然产生的神术。神术表现出鲜明的象征性与在某些人看来近乎是强加的联系。\n\n$SRA_SD_Divine_relic$会为神术体系的舰船武器提供等于 舰载机武器修正*25% + 动能武器修正*50% 的['concept_SRA_SD_Divine']武器修正。"
+ concept_SRA_SD_Occult:0 "§M树海-异能体系§!"
+ concept_SRA_SD_Occult_desc:0 "异能施法者凭借自我的超感知与灵感施展力量，将其构想出的现象投射到现实之中。异能往往表现为念动力，心灵技艺或是高等级的奥术魔法效应，尽管许多异能施法者认为这种又称“灵能”的力量是自己强大灵魂的外显，主流研究仍然倾向于异能是一种本能化的['concept_SRA_SD_Arcane', 奥术]施法行为。"
+ concept_SRA_SD_Primal:0 "§G树海-原能体系§!"
+ concept_SRA_SD_Primal_desc:0 "原能施法者根植于我们世界既有的自然环境与运转秩序，向动植物、气候、地貌与天体寻求力量，并以物质或象征性的方式表达。由于其明显的象征性以及明确的来源，主流学界认为原能实际上是一种特化的['concept_SRA_SD_Divine', 神术]。"
+
+ concept_mod_SRA_SD_Attack_Bonus:0 "树海-攻击调整值"
+ concept_mod_SRA_SD_Attack_Bonus_desc:0 "攻击调整值是在进行攻击检定时使用的数值。\n\n攻击检定是为击中你的对手而进行的尝试。（是额外的加值！）\n每次攻击检定会进行一轮 §YD20§! （得到一个1到20之间的随机整数），并§G加上§!你的攻击调整值，§R减去§!敌人的防御等级（大部分时候以攻击调整值光环表现），得出的每点结果会以 $MOD_SHIP_ACCURACY_MULT$：§G+10%§! 的形式作用在你的舰船上。\n若是攻击检定中的 §YD20§! 掷出了§Y20§!，将会视为§Y大成功§!，额外获得§Y极高的加值§!。\n\n攻击检定会在§Y交战开始时§!进行，并每隔§Y6.00£time£§!重新进行。"
+
+ concept_SRA_SD_Myth_get_1:0 "抵达巅峰"
+ concept_SRA_SD_Myth_get_1_desc:0 "神话意味着最难以想象，最超凡脱俗，最跌宕起伏，最宏伟壮丽的故事，足以在整个世界上留下痕迹，并持久地影响此后的历史。\n拥有神话力量的存在往往是举世闻名的英雄人物，骇人至极的可怖邪物，影响世界的神秘存在，或者干脆就是千年以来的诸神。\n\n§Y想要抵达神话领域，领袖必须首先抵达 10级 ，也就是默认情况下的等级上限。§!"
+ concept_SRA_SD_Myth_get_2:0 "战胜万难"
+ concept_SRA_SD_Myth_get_2_desc:0 "一位神话存在必须有自己的，常人所难以企及的经历。这些经历也许是得到一份强大无比的传承，也许是打败难以估量的敌手，也许是创造登峰造极的事物，也许是领导影响世界的成功，或者干脆就是击败另一个神话存在并将其力量占为己有。\n\n§Y一位领袖可以靠在$pc_SRA_SD_chaos_star_habitable$世界担任总督，指挥陆战，完成技术水平的攀升，或者在其他领域建立巨大的功绩来得到这一资格，但这并不是每次都能发生的。§!"
+ concept_SRA_SD_Myth_get_3:0 "超越凡尘"
+ concept_SRA_SD_Myth_get_3_desc:0 "凡人只不过是砂砾，任由深渊的狂风裹挟，重塑与磨灭。但抵达了神话的领域，这位存在就掌握了凭借自身意志挑战深渊的可怖侵蚀的能力。\n又或者，其实正是因为能以自身意志挑战深渊，神话之力才回应了呼唤。\n\n§Y领袖需要成功战胜§R['concept_SRA_SD_Abyss_Erosion']§!才能抵达神话领域，而这已经完成了。§!"
+ concept_SRA_SD_Myth_get_4:0 "神话道途"
+ concept_SRA_SD_Myth_get_4_desc:0 "抵达神话意味着存在形式的蜕变，也意味着崭新的强大力量，神话存在会在提升神话阶层的过程不断增强已有的力量并获取新的力量，这些力量对凡人具有压倒性的优势，面对其他神话存在时也不容小觑。\n\n§Y领袖现在可以获取神话能力。§!"
+
+ concept_mod_SRA_SD_Myth_power:0 "§Y神话阶层§!"
+ concept_mod_SRA_SD_Myth_power_desc:0 "纵使已然超脱凡尘，神话力量亦有强弱之分。\n\n§Y可以抵抗['concept_SRA_Damage_Inhibition', §E伤害压制/神话§!]。\n不会在面对具有神话来源的效果的豁免鉴定时自动失败。§!"
+
+ concept_SRA_SD_Myth_councilor_skill:0 "完化身心"
+ concept_SRA_SD_Myth_councilor_skill_desc:0 "这位领袖无止境的历练与钻研铸就了无与伦比的自我掌控。\n\n§Y$MOD_LEADER_SKILL_ADD$：§G+['concept_mod_SRA_SD_Myth_power']§!§!"
+
+ concept_SRA_SD_Myth_damage_mult:0 "破敌万物"
+ concept_SRA_SD_Myth_damage_mult_desc:0 "这位领袖在舰队战斗上抵达了登峰造极的地步，他能轻而易举地找出一切舰船的弱点，并将其击破。\n\n§Y$MOD_SHIP_SHIELD_DAMAGE_MULT$：§G+['concept_mod_SRA_SD_Myth_power']*10%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$：§G+['concept_mod_SRA_SD_Myth_power']*10%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$：§G+['concept_mod_SRA_SD_Myth_power']*10%§!§!"
+
+ concept_SRA_SD_Myth_evasion_mult:0 "致命精巧"
+ concept_SRA_SD_Myth_evasion_mult_desc:0 "这位领袖在舰队战斗上抵达了登峰造极的地步，他的瞄准与闪躲精准无比，如同早已知晓双方的攻击会落在何处。\n\n§Y$MOD_SHIP_EVASION_MULT$：§G+['concept_mod_SRA_SD_Myth_power']*10%§!\n$MOD_SHIP_ACCURACY_MULT$：§G+['concept_mod_SRA_SD_Myth_power']*10%§!\n$MOD_SHIP_TRACKING_MULT$：§G+['concept_mod_SRA_SD_Myth_power']*10%§!§!"
+
+ concept_SRA_SD_Myth_accuracy_debuff:0 "神威如岳"
+ concept_SRA_SD_Myth_accuracy_debuff_desc:0 "这位领袖将其神话力量施加在敌人身上，以可怖威压使其动弹不得。\n\n战斗开始时触发：\n持续时间：['concept_mod_SRA_SD_Myth_power']差值*2.00 £time£\n星系内的['concept_mod_SRA_SD_Myth_power']更低的敌方舰船:\n§Y$MOD_SHIP_EVASION_MULT$：§R-['concept_mod_SRA_SD_Myth_power']差值*5%§!\n$MOD_SHIP_ACCURACY_MULT$：§R-['concept_mod_SRA_SD_Myth_power']差值*5%§!\n$MOD_SHIP_TRACKING_MULT$：§R-['concept_mod_SRA_SD_Myth_power']差值*5%§!§!"
+
+ concept_SRA_SD_Myth_army_damage_taken:0 "屹立不倒"
+ concept_SRA_SD_Myth_army_damage_taken_desc:0 "这位领袖将其神话力量共享给队伍，使他们受到的伤害大幅度降低，对于非$pc_SRA_SD_chaos_star_habitable$世界来说，伤害会被逐渐完全免疫。\n\n§Y$MOD_ARMY_DAMAGE_TAKEN_MULT$：§G-['concept_mod_SRA_SD_Myth_power']*10%§!§!"
+
+ concept_SRA_SD_Myth_alone:0 "遗世独立"
+ concept_SRA_SD_Myth_alone_desc:0 "这位领袖选择了一条孤独的道路，放弃担任旗帜转而成为尖刀，以此换取在单人行动上登峰造极的技艺。\n\n在仅指挥一艘舰船时：\n获得等价于['concept_SRA_SD_Myth_evasion_mult']和['concept_SRA_SD_Myth_damage_mult']的效果\n§Y$MOD_SHIP_SHIELD_REGEN_ADD_STATIC$：§G+['concept_mod_SRA_SD_Myth_power']*256000§!\n$MOD_SHIP_ARMOR_REGEN_ADD_STATIC$：§G+['concept_mod_SRA_SD_Myth_power']*256000§!\n$MOD_SHIP_HULL_REGEN_ADD_STATIC$：§G+['concept_mod_SRA_SD_Myth_power']*256000§!§!"
+
+ concept_SRA_SD_Myth_sector_speed:0 "神速指引"
+ concept_SRA_SD_Myth_sector_speed_desc:0 "这位领袖了解速度的真谛，并能够将力量覆盖到遥远的距离，增加所管辖整个星域内所有舰船的航行速度。\n\n£sector£§Y星域总督§!§E效果§!：\n§Y$MOD_SHIP_SPEED_MULT$：§G+['concept_mod_SRA_SD_Myth_power']*100%§!§!"
+
+
+
+ concept_SRA_SD_Bard_of_Metarbor:0 "你"
+ concept_SRA_SD_Bard_of_Metarbor_desc:0 "这可能是你，你可能会说天哪难道我是一个二次元女人吗，但反正这就是故事的主角，看你代入不代入吧。"
+
+ concept_SRA_SD_element:0 "要素"
+ concept_SRA_SD_element_desc:0 "要素是“此刻之术”的法则，此刻之术是以与深渊的混沌相对立而成的技艺，通过描绘和构成分化后的世界来操纵现实，是萨塔瑞兹最悠久的技艺之一。此刻是一种观念，意在与世界自深渊中升起前的无限过去以及世界落入深渊泯灭后的无限未来相对立，实际上此刻几乎包含古往今来所有的时间，而非真的只是“此刻”。\n要素是此刻存在之物的法则，也是万事万物的法则，掌握此刻之术的人可以将事物解读为要素，也可以基于要素构造自己的力量。\n['concept_SRA_SD_element_forge']，['concept_SRA_SD_element_edge']，['concept_SRA_SD_element_stone']，是存在三要素，又名形式三要素或者躯壳三要素。它们代表着事物的存在形式与性质，对于人体，它们象征力量，敏捷，体质。\n['concept_SRA_SD_element_lantern']，['concept_SRA_SD_element_chalice']，['concept_SRA_SD_element_secret']，是趋势三要素，又名意识三要素或者精神三要素。它们代表着事物的发展方向与倾向，对于人体，它们象征智识，感知，魅力。\n要素可以根据基本的规则进行转化，也可以通过强烈的仪式来进行跨规则的转化。要素没有正逆，因为它们的领域并不完全对立。譬如，铸是创造的要素，将材料送入铸炉创造事物，也是材料本身存在的毁灭；石是存续的要素，生命的存续是状态的存续，死亡则是一种永恒存续的状态；秘是诱隐的要素，隐秘之物正因其隐秘而引人注意，而这正是秘密不再是秘密的前奏。"
+
+ concept_SRA_SD_element_forge:0 "铸"
+ concept_SRA_SD_element_forge_desc:0 "送入铸炉，取出器具，万事万物得以铸造。['concept_SRA_SD_element',铸是创造的要素]。\n\n铸的领域是创造、转化、塑造、从无到有或从原料到成品的过程；其影响力富集于熔炉、铁砧、工匠、工业、剧烈的改变、赋予形态的行为。\n\n创造之物得以区分。"
+
+ concept_SRA_SD_element_edge:0 "刃"
+ concept_SRA_SD_element_edge_desc:0 "执刃者支配与统治，执刃者破坏与分裂。刃聚集万物又使之分离。['concept_SRA_SD_element',刃是区分的要素。]\n\n刃的领域是区分、界限、权力、裁决、破坏、分离、精确、冲突；其影响力富集于刀剑、统治者、法官、战争，切割、分类、定义的行为。\n\n区分之物得以存续。"
+
+ concept_SRA_SD_element_stone:0 "石"
+ concept_SRA_SD_element_stone_desc:0 "石久存于大地，大地以石而久存。['concept_SRA_SD_element',石是存续的要素。]\n\n石的领域是存续、稳固、基础、永恒、忍耐、根基、历史、大地；其影响力富集于岩石、山脉、地基、纪念碑、时间、不变性、支撑的行为。\n\n存续之物得以创造。"
+
+ concept_SRA_SD_element_lantern:0 "灯"
+ concept_SRA_SD_element_lantern_desc:0 "点亮灯火，驱逐黑暗，指引前路，缔造辉煌。['concept_SRA_SD_element',灯是智识的要素。]\n\n灯的领域是智识、理性、启蒙、光明、指引、洞察、显性知识、辉煌之物；其影响力富集于灯火、灯塔、学者、理性之光、揭示、驱散迷雾、文明。\n\n智识之物得以渴求。"
+
+ concept_SRA_SD_element_chalice:0 "杯"
+ concept_SRA_SD_element_chalice_desc:0 "所求愈多，所盛愈广，所饮愈尽，所溺愈深。['concept_SRA_SD_element',杯是渴求的要素。]\n\n杯的领域是探求、欲望、渴求、容纳、流动、情感、体验、感知、沉浸、滋养与消耗；其影响力富集于酒杯、容器、欲望之口、河流、漩涡、盛宴、令人迷醉而流连忘返之物。\n\n渴求之物得以诱隐。"
+
+ concept_SRA_SD_element_secret:0 "秘"
+ concept_SRA_SD_element_secret_desc:0 "秘密因其秘密而引人追寻。['concept_SRA_SD_element',秘是诱隐的要素。]\n\n秘的领域是诱隐、神秘、隐藏、未知、吸引力、禁忌、隐性知识；其影响力富集于阴影、低语、面纱、密文、契约与协定、以及诱人之物与人。\n\n诱隐之物得以智识。"

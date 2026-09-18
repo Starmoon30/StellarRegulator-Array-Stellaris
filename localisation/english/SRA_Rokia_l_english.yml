@@ -1,0 +1,255 @@
+﻿l_english:
+##############################
+ faction_SRA_Rokia_sub_title:0 "§RCrimson Dark Star§!\nA mysterious intelligent entity guiding dangerous chaotic energy, trying to find her own place among the stars." 
+ leader_trait_SRA_Rokia_sci:0 "§RCrimson Dark Star§!"
+ leader_trait_SRA_Rokia_sci_desc:0 "§RWandering in the lost dust world, endless intellect flows in this body. Treading on the path of thorns, illusionary abyss shadows linger at fingertips.§!"
+ leader_trait_SRA_Rokia_1_ruler:0 "§RCrimson Dark Star§!"
+ leader_trait_SRA_Rokia_1_ruler_desc:0 "§RWandering in the lost dust world, endless intellect flows in this body. Treading on the path of thorns, illusionary abyss shadows linger at fingertips.§!"
+ leader_trait_SRA_Rokia_ruler:0 "§RCrimson Dark Star§!"
+ leader_trait_SRA_Rokia_ruler_desc:0 "After tricking the galaxy's most ambitious civilization into completing the plan for her, the entire universe will eventually turn into boundless Abyssal chaos. In this sense, as long as there is no unpredictable external interference, she can enjoy the days of holding everything in her hands, pursue some personal interests, or simply rest, until urged by fate to set off again."
+ SRA_Rokia_1_catch_phrase:0 "Because this world has long been reshaped, everything is false."
+ SRA_Rokia_1_backstory:0 "\nRokia, a mysterious intelligent entity, an unknowable other."
+ SRA_Rokia_2_catch_phrase:0 "Because that origin never existed, everything is real."
+ SRA_Rokia_2_backstory:0 "\nRokia Rocivia, a wandering stranger. A named concept, a divided infinity, a shaped void.\nOne day, she will arrive at the hometown she has never met."
+
+ SRA_Rokia_talk_return3:0 "Let me think about it." 
+ SRA_Rokia_talk_return4:0 "Let's talk about something else." 
+ SRA_Rokia_talk_exit1:0 "End transmission."
+
+ SRA_Rokia_1:0 "Rokia"
+ SRA_Rokia_2:0 "Rokia Rocivia"
+
+
+ SRA_Rokia.100.a:0 "Issue Command"
+ SRA_Rokia.100.b:0 "Chat"
+
+ SRA_Rokia.200.desc:0 "Speak, what do you want?"
+ SRA_Rokia.200.a:0 "Redeploy Crimson Dark Star."
+#闲聊
+#无表情
+ SRA_Rokia_talk.3011.1.desc:0 "Truth is always meaningless, the crown is always tyrannical, the living always justify, the dead always speak wildly."
+ SRA_Rokia_talk.3011.2.desc:0 "Life is self-tolerance.\nLife is consuming everything.\nLife is becoming bait for each other, regardless of good or evil.\nLife is fairness, life is inequality.\nLife is eternity."
+ SRA_Rokia_talk.3011.3.desc:0 "When the first spark ignites from the creation of genes, a parasite is born. It spreads and diffuses among suitable hosts one after another, interacts and fights, grows, expands, becomes an incomparably huge collective in its name, crosses all tangible and intangible shackles, vows to encompass everything, and achieve eternity.\nThis is civilization. It struggles in bloated self, hyperplasia and extinction, survival and survival."
+#微笑
+ SRA_Rokia_talk.3012.1.desc:0 "People speak but do not say, people listen but do not hear; it was so in the past, and will be so in the future."
+ SRA_Rokia_talk.3012.2.desc:0 "I wonder, how much of all this in your hands did you create yourself?"
+ SRA_Rokia_talk.3012.3.desc:0 "Out of my little remaining kindness, I remind you, letting me leave too many traces here may not be a good thing. Of course, you never care, right."
+#闭眼
+ SRA_Rokia_talk.3013.1.desc:0 "Fate bares its fangs and claws; bottomless abyss lies by the roadside, filled with blood-like future."
+ SRA_Rokia_talk.3013.2.desc:0 "Memento mori... Where does your path extend, where do your footsteps lead?" #人终有一死
+ SRA_Rokia_talk.3013.3.desc:0 "Forgetting the past loses the wisdom sufficient to face the future, but immersing in repeated rumination of the past only invites ignorance..."
+ SRA_Rokia_talk.3013.4.desc:0 "May you find peace in the world of the living."
+ SRA_Rokia_talk.3013.5.desc:0 "Time disordered, nightmare babbling... I may not belong here.\n\nWill there be a world worthy of being called an ending left for me?"
+#闭眼微笑
+ SRA_Rokia_talk.3014.1.desc:0 "I earnestly hope you can listen to my advice, draw a conclusion to the story here, instead of replaying the drama again and again."
+ SRA_Rokia_talk.3014.2.desc:0 "How far will she allow me to go? If the previous story has indeed ended, has the lead actor of the play changed? Maybe I should talk to her directly... although she definitely won't say."
+
+#耀红黑星存在4001
+ SRA_Rokia_talk.4001.1:0 "Alright, hurry up and order. I want to go for a walk, or not, actually didn't want to go out that much. Okay, still want to a bit. Forget it, up to you."
+ SRA_Rokia_talk.4001.2:0 "I am releasing dangerous chaotic energy to pollute the space environment. If you are willing to let me find some targets, I can also pollute things like enemy hulls."
+ SRA_Rokia_talk.4001.3:0 "Good morning, Executor! Hope you like this ethereal and dreamlike feeling, because I added some wonderful little things to your breakfast out of boredom, the kind with unknown side effects for now. Or you can let me go do something, lest your lunch has some wonderful big things added."
+#耀红黑星战斗4002
+ SRA_Rokia_talk.4002.1:0 "Hello, I am conducting space combat. Or, using a little accurate, appropriate word-\n§RI am slaughtering.§!"
+ SRA_Rokia_talk.4002.2:0 "Hmm, communication?\nAlright, this little game is almost played out; time to wrap up."
+ SRA_Rokia_talk.4002.3:0 "I can see them, touch them. They are so fragile; just a gentle caress, and they fall apart."
+ SRA_Rokia_talk.4002.4:0 "God, Executor, the enemy is attacking your research specialist, you'd better save her quickly!\nOr forget it? You decide."
+#耀红黑星使用荒芜驱驰4003
+ SRA_Rokia_talk.4003.1:0 "Yes, I am watching, watching the hustle and bustle on the surface, coming and going, watching dying people do dying things... Well, maybe I should consider less about time spans?"
+ SRA_Rokia_talk.4003.2:0 "Research Specialist Rokia used evil and terrible black magic to increase the industrial output of the planet where she is located during assistance research tasks. Hmm, just write it like this. Who cares if they believe it or not, what can they do to me?"
+ SRA_Rokia_talk.4003.3:0 "Monitor thinking patterns, then provide some inspiration where needed; research capability goes up, how great."
+ SRA_Rokia_talk.4003.4:0 "Just a gaze. I heard some powerful psionic entities can make the entire civilization prosperous like this, even better."
+ SRA_Rokia_talk.4003.5:0 "Report: Current planetary industry operation is very stable, all production running at high efficiency, no social problems affecting output and development. Regarding the previously submitted anomaly accident and psionic usage traces report, after investigation confirmed, pure fabrication."
+#耀红黑星探索恒星系4004
+ SRA_Rokia_talk.4004.1:0 "Starry sky, so vast, who knows what secrets are hidden on the other side."
+ SRA_Rokia_talk.4004.2:0 "I can't wait to meet those cute space creatures. Oh, thinking of those Ether Drakes with wonderful scales, Dimensional Horrors from another dimension, Tiyanki with extraordinary vitality, lively Space Amoebas, and so many interesting lives, I can't wait to-\n§RCrush them one by one.§!"
+#耀红黑星研究异常4005
+ SRA_Rokia_talk.4005.1:0 "I am researching anomalies! Hmm... not very anomalous to me, still have to be treated as anomalies for you."
+ SRA_Rokia_talk.4005.2:0 "Advance, conquer, until the unknown end!"
+
+
+
+
+
+
+
+ SRA_planet_killer_4_buff:0 "§RDesolation Drive§!"
+ SRA_planet_killer_4_buff_desc:0 "§RWhat worse could happen?§!"
+
+
+ # event chins
+ SRA_chaos_ascension_chain_title:0 "§RCrossing the Abyss of Chaos§!"
+ SRA_chaos_ascension_chain_desc:0 "Who will give everything, who will achieve eternity."
+ SRA_chaos_ascension_leader:0 "§RSublimation of Intellect§!"
+ SRA_chaos_ascension_ship:0 "§RBlooming of Power§!"
+ SRA_chaos_ascension_pop:0 "§RDedication of Collective§!"
+ SRA_chaos_ascension_system:0 "§RNirvana of Worlds§!"
+
+
+ pc_SRA_chaos_star:0 "§RRemnant Star of Illusionary Abyss§!" 
+ pc_SRA_chaos_star_desc:0 "§RTaboo words of chaotic dust breath, silencing thousands of living beings§!"
+
+ sc_SRA_chaos_star_tooltip:0 "\n§RTaboo words of chaotic dust breath, silencing thousands of living beings§!"
+
+ #  sc_SRA_chaos_star_tooltip:0 "\n§R讳言混沌尘息，噤默万千生灵§!\n\n\n\n\n\n\n£pc_SRA_chaos_star_sky£\n\n\n\n\n\n\n"
+
+ pc_SRA_chaos_star_habitable:0 "§RDivine Realm of Illusionary Abyss§!" 
+ pc_SRA_chaos_star_habitable_desc:0 "§RIf you have eyes, shed tears; if you have voice, cry out; for the destined has arrived, mortal dust is extinguished.§!"
+ building_SRA_world_machine_chaos:0 "§RAstronomical Fabrications Boundless§!"
+ building_SRA_world_machine_chaos_desc:0 "The purpose of existence is existence."
+
+ SRA_Rokia.8000.desc:0 "You are treading on an unprecedented path. Neither past history nor current order can stop your footsteps.\nMortals are short-sighted and ignorant, fate is arrogant and flamboyant. Will you stop here, or bare your fangs at the eternal throne?"
+ SRA_Rokia.8000.a:0 "§YNo King Rules Forever§!"
+ SRA_Rokia.8000.b:0 "§RI Want Glory to Bow to Me§!"
+ SRA_Rokia.8000.b.tooltip:0 "§RThis leads to a path of death and destruction, no one knows the end, no one dares to step.\n\n\n§YWill block all event chains and lead to almost certain game over.§!"
+
+ SRA_Rokia.8000.message:0 "Executor, please never believe her! We simply don't understand what that power is, absolutely cannot act rashly!"
+
+ SRA_Rokia.8001.name:0 "A Glimpse into the Deepest"
+ SRA_Rokia.8001.desc:0 "Knowledge in our hands indicates that outside our world exists a boundless ocean of chaos. If we can acquire that yet vague power, we can use it as fuel for thought to burn out our own reality.\nClearly, breaking the barrier of the world is a fantasy. Maintaining a stable plane rift requires peak technology and inestimable energy, yet the return of opening the rift is just these. This paradox makes everyone flinch.\nHowever, it seems there is a path capable of touching a small wisp of falling dust of that power."
+ SRA_Rokia.8001.a:0 "We Press Forward"
+
+ SRA_Rokia.8002.name:0 "Spark of Inspiration"
+ SRA_Rokia.8002.desc:0 "A mysterious technology has shown us the future. We will build a huge control tower to draw down the thunder of planes and ignite the primordial fire.\nChaos energy will naturally convert into basic energy types, but if we try to let it self-constrain, we can maintain the state of chaos energy, only separating a part for our use, lest it becomes a devastating explosion.\nThe constraint method is clear: massive consciousness, representing our determination and desire, will be endowed with this primordial spark.\n\n§YOur capital will ignite the Star of the Abyss §RDivine Realm of Illusionary Abyss§! in one month.§!"
+ SRA_Rokia.8002.a:0 "We embody greatness"
+
+ SRA_Rokia.8003.name:0 "Beautiful End"
+ SRA_Rokia.8003.desc:0 "The Abyssal rift containing unimaginable power has opened in our capital, bringing destruction of existing things and new birth of eternal existence.\nThe space station of the star system is replaced by §RAbyssal Gaze§!, recklessly stretching infinite power of destruction, turning all who dare to challenge our supreme authority here into flying ash.\n\nNext, we must maintain the existence of §RDivine Realm of Illusionary Abyss§!, because it is an indispensable part of our ascension path. We will feed this star, letting its disorderly authority spread in our empire and the entire galaxy."
+ SRA_Rokia.8003.a:0 "§RLet us begin§!"
+
+ SRA_Rokia.80031.desc:0 "...Sadly, the most vibrant nation in the galaxy is also so lacking in foresight. It seems indulging in temporary achievements and massive power is an eternal boring script; false temptations always invite blindness and short-sightedness.\nMaybe I can find a wiser version of you in another timeline."
+ SRA_Rokia.80031.a:0 "You should have rolled long ago"
+ SRA_Rokia.80031.b:0 "Barking of a broken-spined dog"
+
+ SRA_Rokia_8004_Buff:0 "Sublimation of Intellect"
+ SRA_Rokia.8004.name:0 "Sublimation of Intellect"
+ SRA_Rokia.8004.desc:0 "Our intellect will sublime into power, our leaders will merge into §RDivine Realm of Illusionary Abyss§!, knowledge and wisdom will merge into one, interweaving, becoming eternal."
+ SRA_Rokia.8004.a:0 "No mind to think"
+
+ SRA_Rokia.80041.desc:0 "I don't really recommend betting everything in a field you don't understand at all, especially when someone guides you to do so. But since you have come this far, presumably you won't stop. Fine, fine.\nI will watch until the end."
+ SRA_Rokia.80041.a:0 "Shut up."
+ SRA_Rokia.80041.b:0 "Don't dictate."
+
+ SRA_Rokia_8005_Buff:0 "Blooming of Power"
+ SRA_Rokia.8005.name:0 "Blooming of Power"
+ SRA_Rokia.8005.desc:0 "Our power will bloom into sparks, our fleets will merge into §RDivine Realm of Illusionary Abyss§!, force and fortitude will merge into one, interweaving, becoming eternal."
+ SRA_Rokia.8005.a:0 "No will to succumb"
+
+ SRA_Rokia.80051.desc:0 "If this is your wish...\n\nFarewell, Executor, may you find happiness."
+ SRA_Rokia.80051.a:0 "What a pity."
+ SRA_Rokia.80051.b:0 "This is a necessary sacrifice."
+
+ SRA_Rokia_8006_Buff:0 "Dedication of Collective"
+ SRA_Rokia.8006.name:0 "Dedication of Collective"
+ SRA_Rokia.8006.desc:0 "Our collective will dedicate essence, our people will merge into §RDivine Realm of Illusionary Abyss§!, thought and will will merge into one, interweaving, becoming eternal."
+ SRA_Rokia.8006.a:0 "No voice to cry"
+
+ SRA_Rokia_8007_Buff:0 "Nirvana of Worlds"
+ SRA_Rokia.8007.name:0 "Nirvana of Worlds"
+ SRA_Rokia.8007.desc:0 "Our world will nirvana in this life, our galaxy will merge into §RDivine Realm of Illusionary Abyss§!, survival and evolution will merge into one, interweaving, becoming eternal."
+ SRA_Rokia.8007.a:0 "No existence to lose"
+
+ SRA_Rokia.8008.name:0 "Penetrating Heaven"
+ SRA_Rokia.8008.desc:0 "§RCost will be collected, power will be repaid, existence will be sublimated, eternity will be cast.\nWe step forward towards the path of ascension.§!\n\n§YA group of §RBoundless Abyss Shadow§! appeared in your capital system.§!"
+ SRA_Rokia.8008.a:0 "This is the right track of fate"
+
+ SRA_Rokia.8010.desc:0 "§RCompleted.§!\nWalking to the boundary of mortal dust, wielding immeasurable power.\nDiscarding life and death, transcending existence, all things will be smelted into one.\nLook, the whole world will submit, all wills will surrender. At this boundary of creation and destruction, only domination reigns eternal...\n\n\n...This is the §Rcurse and blessing§! I bear."
+ SRA_Rokia.8010.a:0 "Fate has fallen into my hands."
+ SRA_Rokia.8010.a.tooltip:0 "GE1: Ember Master"
+ SRA_Rokia.8010.b:0 "§RYours?§!"
+ SRA_Rokia.8010.b.tooltip:0 "§RYou chose this path without scruples at first, why think of asking now?§!"
+
+ SRA_Rokia.8011.desc:0 "Mine.\n§YShe showed a cruel smile.§!\nFrom beginning to end.\nThe primordial spark was ignited by me, and the star of the end naturally falls into my hands.\n\nChoose, to resist my domination, or enjoy this power. Admittedly, I do not wish to fight you; I am merely seeking a breathing space between tides.\nBut you are qualified to know the truth."
+ SRA_Rokia.8011.a:0 "Arrogant and foolish, do you think you can manipulate the will of a civilization?"
+ SRA_Rokia.8011.b:0 "Then enjoy your false crown."
+ SRA_Rokia.8011.b.tooltip:0 "NE1: Temporary Curtain Call"
+ SRA_Rokia.8011.c:0 "You should at least explain the whole story clearly."
+
+
+ SRA_Rokia.8012.desc:0 "Mhm~ I can just play some small tricks.\n\nAlthough manipulating your dizzy minds isn't difficult either.\n\nGoodbye, or will you return to before soon? Doesn't matter, anyway that's already a new timeline."
+ SRA_Rokia.8012.a:0 "§RYou were kicked out of the office.§!"
+ SRA_Rokia.8012.a.tooltip:0 "What? No, what is this situation?"
+
+ SRA_Rokia.8013.desc:0 "Thank you very much~ Now I want to have a good sleep... No fools destroying everywhere, no brain-broken machines, no toss-and-turn thrill seekers, only this quiet, peaceful, steady star system."
+ SRA_Rokia.8013.a:0 "……"
+
+
+ SRA_Rokia.8014.desc:0 "Mhm, mhm.\n\nIn a place unknown to anyone, a girl woke up in confusion, standing up among hanging cables and flashing sparks.\nHer hands were cold, surrounded by sticky and palpitating touch. Lights flickered; she touched her chest tremblingly."
+ SRA_Rokia.8015.desc:0 "A touch like a blooming flower responded to the girl, making her suffocate, making her flee. Like a thief running for life, a panicked young beast, wanting desperately to escape this place destroyed by undeserved disaster, a place she once thought she could entrust her life to, escape this place once carved with dreams and hopes.\nHow nice, even if broken into and destroyed, the security doors between corridors still opened dutifully for the fleeing girl, and dim lights also pointed out a path, leading to the other side, leading to ruins, leading to unknown ashes, leading to a possibly existing tomorrow."
+ SRA_Rokia.8016.desc:0 "Barren and cruel, the satellite's cold reflected light spilled on the ground. From the beginning, this was dry soil sparse with vegetation, shaped by wind and sand and deprived of life by wind and sand.\nShe felt light pricking her body like needles, yet couldn't find a shadow to shield herself.\nSearching and searching, searching for a path to escape, searching for the edge of nightmare.\nHer legs trembled, whimpering like dry bones, so she fell to her knees, hair hanging down on withered grass like willow branches.\nShe took out a terminal from her waist; the sturdy and durable machine had dented corners but could still light up.\nShe wiped the sticky touch clean on the hem of her clothes, touching the screen gently with fingertips to avoid leaving dark red stains.\nSo her face appeared on the screen. Pale, terrified, blood trails flowed down from the forehead corner, coagulated.\nThe neck was also dead silent, like a morbid painting, strange porcelain.\nThen it was..."
+ SRA_Rokia.8017.desc:0 "There are §Rflowers§! blooming.\n\nEleven bullets entered from the back, blooming brilliant flowers in the chest.\nLike roses, pink, or pale, or dark red.\nHer hands loosened. The terminal buckled on the ground, no longer revealing reality for its master.\nShe felt something in her chest twitching and squeezing out crimson liquid, extremely painful.\nBut her chest was empty.\nThen, in this bone-chilling dead silence, the sound of metal collision rang out here.\nA shadow covered the girl's body, blocking the light from the sky for her."
+ SRA_Rokia.8018.desc:0 "One, and another.\nTest products, defective products, discarded products.\nIn this place named creation, creations followed their last master here.\nMachines swaying uncertainly, or walking staggeringly.\nBut they said not a word, gathering here.\nGuarding her, protecting her."
+ SRA_Rokia.8019.desc:0 "That initial time was soaked in the color of numbness. The girl stumbled back to her residence, changed out of torn clothes, ignoring new fabric being moistened by old flesh and blood, then pieced her equipment randomly on the machine following closely beside her, watching indicator lights flicker on and off. Absurdity and contradiction shrouded her, making her unwilling to accept everything happening to her, yet believing she could no longer be listed among humans, so she took all records and remnants, left this place also invaded and erased."
+ SRA_Rokia.8020.desc:0 "She didn't understand what happened to her, didn't dare reveal to anyone, nor believed anyone could solve these-if there were, it would be that guy from the past who now died somewhere unknown, never to be found again.\nShe could no longer sleep peacefully. As long as her life would still be distorted by fate's random and ruthless mockery, dragged into undeserved disaster, unable to keep anything she wanted to possess, she could never sleep peacefully."
+ SRA_Rokia.8021.desc:0 "The girl wandered in the city's structural layer; facilities following management system operations opened doors for her. In seemingly ordinary wear and tear, machines maintaining the entire city's efficient intelligent society were adding bricks and tiles to the girl's own legion.\nAs her will extended in the network, what she saw and knew expanded rapidly, yet it brought more fatigue.\nShe blew up her original traces, leaving more traces. She wanted to oppose part of the order, but found there was a more massive existence above it.\nAnd she could rely only on herself, and that cold cluster seized, stolen, occupied."
+ SRA_Rokia.8022.desc:0 "She once wishfully thought they found her, the last survivor, because they had no other target to obey.\nBut how could these disposable experimental products have such functions?\nJust a thought, an idea, these creations used their own ways to explore, collect, transmit, change, creating everything she needed for her.\nMachines that should have worked routinely, serving the rulers, nodded to her, as if creations of the civilized world were born to serve her."
+ SRA_Rokia.8023.desc:0 "Sigh.\nThe girl knew she had to make a decision. Fate urged her to choose between two paths, one leading to a drifting future, while the other, suffering had already overflowed.\nWhat to do? There was still a way back now, leave these machines, forage in corners without light, she could survive. For this body, living is very simple.\nNo, of course not, she had enough of those days, enough of this world taking everything from her at will. She wanted power, whatever the cost.\nShe found a mineral vein, basically abandoned, but still had many resources to be mined. The girl tampered with records in the database, sealing this place on grounds of \"serious pollution\", building her own base under the mine pit. This helped greatly for machines crumbling due to lack of replacement components, although many of them could surprisingly still operate in an almost completely damaged state.\nShe couldn't finish everything alone; what the girl needed to acquire was too complex, not something her pitch-black cold underground could assemble.\nSigh, she really didn't want to communicate with existences other than self, those hateful despicable untrustworthy...\nBut she had to do so. She was once adept at this; she was born adept at this."
+ SRA_Rokia.8024.desc:0 "At first, she thought she hid very well. Using the invaded city management system as a springboard, her consciousness shuttled through the data torrent, looking for undercurrents hidden under legal transactions. Information was encrypted, transferred layer by layer, and finally sent out tentative signals through a communication robot providing maintenance services for a rim space station.\nHer chips were information, system backdoors, key loopholes in some forgotten data archives. She provided hacking services: clearing records of specific targets, bypassing certain security protocols, even providing sensitive information of competitors-as long as the price was right. In return, she demanded those cold, flashing, strictly controlled technological creations.\nShe never appeared in person. Sometimes she was an ordinary-looking, old-model city cleaning robot, accidentally passing by a garbage dump at a designated time, with a data chip hidden in the mechanical arm's secret compartment; sometimes a cargo drone, dropping a package in a desolate abandoned area according to a precisely planned route, then self-destructing; sometimes an abandoned construction exoskeleton, walking like a ghost, delivering goods to the meeting point.\nTransactions were like dancing on a blade, yet surprisingly smooth. Goods obtained, data chips read, credits flowed into anonymous accounts controlled by her. The other party seemed satisfied with her efficiency and maintained due politeness towards her mystery. The girl's tight nerves, in the cold mine pit, seemed to loosen imperceptibly. Perhaps not all existences \"outside\" were so hateful? Perhaps cautious cooperation was feasible? After all, to be honest, she hadn't truly communicated with many people until now; those things she encountered happened only a few times throughout the entire planet; she was just coincidentally a bit unlucky, wasn't she?"
+ SRA_Rokia.8025.desc:0 "Thus, fate came as invited.\nA transaction no more ordinary than others, lacking no caution. A maintenance cabin of an abandoned space station in orbit, a very suitable place. No one cared, no one minded, just like all previous transactions.\nThe agent was as usual: an engineering robot with its outer shell patched almost beyond recognition, disguised as a common unit sent to the space station for routine maintenance. Scanning goods, giving remuneration, taking away goods, then there would be many re-transfers, mixing into countless automated warehouses, back and forth, finally arriving in her hands.\nShe acted from the perspective of the engineering robot, as if that machine was exactly herself. She looked around this maintenance cabin piled with discarded parts and dimly lit. The target cargo box was placed in a conspicuous position. The other party of the transaction, a figure wearing a bulky space suit with unclear face, stood not far away.\nShe approached the cargo box, scanner lighting up green. Confirmed correct. She put down the data container, goods stored into cargo hold. Process perfect.\nThings just happened naturally like this.\nElectric arcs flashed, almost burning through her eyes-of course not really so, just for the engineering robot, it was about the same.\nConcealed communication, closed hatch, several figures suddenly rushed out; they were prepared, arranged properly. Grappling hooks quickly took away the data container, jammers operated, weapons fired, disabling all behavioral capabilities of the robot, cutting open the body, trying to take out more.\nBetrayal.\nA torrent of coldness mixed with anger and shame of being fooled surged. What they wanted was not only to renege on debt, but also to catch her personally. For her, indeed there was a bounty long ago, quote not low. Betrayal was not hard to understand, only disappointing."
+ SRA_Rokia.8026.desc:0 "She was angry.\nOn one hand, anger was for the betrayers in front. The word betrayal, shameful if people are on one's side, hateful if not, often both. On the other hand, anger was for the girl herself, for those ridiculous pathetic fantasies, for those fictional longings.\nHer anger was burning, scorching her hands, also scorching that machine there. Her anger was tangible, flowing from the processor, melting all nodes, detonating remaining energy.\nThat cut open engineering robot, as if placed on a cutting board, exploded magnificently, ignoring the wireless connection already burned by electric arcs, and also ignoring the self-destruct mechanism already disabled. She was one with this machine; her will naturally dominated everything of this machine.\nFlustered curses came from the communication channel. Chaos in the space station was intensifying; ear-piercing alarms resounded through the entire area.\nDeep in the mine pit, the girl threw herself back against the cold chair back, panting violently. The light of the screen reflected her bloodless face; cold liquid seemed to seep out from her forehead corner again. In the surveillance footage, the still living betrayers were fleeing in panic to their small shuttle, escaping this chaos caused by themselves.\nShe was safe, temporarily."
+ SRA_Rokia.8027.desc:0 "Embers of anger burned in her chest, but deeper was a cold fatigue and disappointment soaking into the bone marrow. As expected, as expected.\nShe looked around; the lights of the base seemed to dim a few degrees. Those loyal, staggering mechanical figures still worked tirelessly, making regular metal collision sounds. Only them... only these cold creations were the only ones who wouldn't betray.\nShe slowly raised her hand; the screen brought up the structural map of deeper layers of the mine pit. It was no longer safe here. Although the other party couldn't track here directly, this incident was like lighting a signal flare in the dark; her presence was greatly enhanced. The Imperial Security Bureau's sense of smell was far sharper than black market hyenas.\nMust move. Must abandon this nest she just built, which cost her countless efforts.\nHer order was dry and cold. Everywhere in the mine pit, those working machines paused simultaneously. Immediately after, more intensive operations began. The girl stood up, taking a last look at this place where she thought she could take root. The screen reflected her still young but pale and deadly silent face.\nShe walked towards a secret passage leading to deeper darkness. Loyal machines followed silently, walking towards the next unknown ruin destined to be full of thorns. The lights of the mine pit, behind her, extinguished one by one, finally completely swallowed by the impending deafening collapse sound."
+ SRA_Rokia.8028.desc:0 "The collapse of the mineral vein, just like a trivial geological disaster record in the Empire archives, completely buried the girl's first nest. Shockwaves left ugly scars on the desolate surface, raised dust obscuring the satellite's cold light, and temporarily obscuring all pursuing gazes.\nTransfer is cruel. Reconstruction is difficult. She tasted these things for the first time, regrettably, not the last time.\nThe girl learned fast. She started using many different identities, dismantling her needs. She learned to betray before betrayal. Her way was unique after all; no one could find slightest traces about her from these agents. People rely on machines to communicate with machines, and machines listen to her more.\nCargo needs were dismantled into countless tiny, seemingly unrelated parts, transmitted through different anonymous channels, different time nodes, different logistics systems. These fragments like trickling streams flowed into those preset, constantly changing \"dead drops\" deep in the city structural layer-an abandoned ventilation shaft fork, a maintenance groove of sewage treatment pipeline, even inside gap of a large garbage compactor. Then for various reasons finally fell into her hands.\nTime passed in the dampness of the deep well base and the low hum of machines. The shadow of the Empire was still huge; a ghost network expanded quietly in its crevices. The girl's power was growing; her mechanical empire grew slowly but firmly in the underground where no sun shone. Resources were seized, technologies integrated, more city maintenance machines \"awakened\" silently, becoming a node in the vast network. She even began trying to reverse engineer those cutting-edge parts on a small scale, trying to get rid of dependence on others-although this progress was agonizingly slow."
+ SRA_Rokia.8029.desc:0 "Unfortunately, the playwright would not allow the protagonist to idle; something must happen. So here was one event, used to end this seemingly stable development, creating some dramatic changes.\nThe location was an abandoned transfer station deep in the city structural layer. This used to be a temporary foothold for scavengers and outlaws, now only dilapidated and filthy. Her target was a sealed box placed in the corner of rusted pipes. Just as the mechanical arm was about to touch the box, a faint and painful moan came from behind the rotting insulation material.\nThe machine paused.\nA curled figure. Clothes worn out beyond recognition wrapped a skinny body; exposed skin was covered with new and old bruises and suspicious needle holes. A head of withered grass-like hair covered most of the face, but the girl recognized those eyes.\nWhat was her name... right, Carnea. A name with the pungent smell of disinfectant, just like many names known by the girl.\nCarnea, Carnea, the girl thought she died long ago, like those names disposed of during or after resistance. Not to mention after so many years, the death vortex related to drugs she encountered before, others couldn't escape either. They should have all died, just like...\nThe machine approached clumsily. Although not possessing any scanning ability, it could clearly capture that familiar, hideous metal interface pasted behind the neck. Generous gift, everyone has a share, convenient for quickly ingesting a series of Institute products requiring intimate contact with the central nervous system.\nSomeone like her, crawled out of that hell, yet ruthlessly abandoned by fate in a rotting corner... kin?"
+ #卡涅亚Carnea
+ SRA_Rokia.8030.desc:0 "No warning, no event, everything looked completely accidental. But the girl stopped believing in accidents long ago. She suddenly became tense. There were no callable recording devices around the abandoned transfer station; she had to investigate in a wider range, trying to find out Carnea's origin. However, she found nothing.\nNo trace is also a trace. This is a trap, a scam, a bait, a scheme. Her enemy used a method unknown to her, placing Carnea here. As long as she took this so-called kin back, someone would find her location and exclude her, a dangerous factor, from the shadow of the Empire.\nSo she brought Carnea back.\nThe settlement point was ten thousand miles away from her base, she told herself so. With her mysterious ability, she could completely let this small camp operate in isolation; no one could find her location from these machines because she wouldn't be betrayed by machines.\nThe girl carefully took care of the picked-up girl, treating those future scars of hers, getting her necessities for survival. When seeing that face distorted by pain ease slightly, some imperceptible familiar joy would flash for a moment, just like the feeling the girl got when winning over children from those white coats in the research institute a long time ago."
+ SRA_Rokia.8031.desc:0 "Just as mentioned before, the kind of death vortex that once appeared on the girl soon appeared on Carnea. Implants, rejection reactions, drug dependence, nervous system disorders, and even unstable psionic activities were destroying Carnea's body. The girl had to do for Carnea what she once did for herself; she started looking for medicine.\nThe girl soon realized that medicine was exactly the key to this scheme. Rare, expensive, highly controlled, simply written all over with danger, and demand increasing. However, she had to do this; she couldn't let go of Carnea. Leaving such a person in such a situation alone was no different from killing her in essence. The girl didn't want to kill her, even if not by means of murder, just letting her die."
+ SRA_Rokia.8032.desc:0 "When the first dose was obtained, Carnea, as if submerged in deep sea, finally woke up. Her voice was hoarse and terrified; her performance was exactly the same as the girl back then. She was slightly younger, but now, she was probably at the age the girl finally possessed.\nShe was very far from the girl, yet very close. Although the girl used an abandoned medical robot as her image, her words and deeds were enough to show her past experiences. Carnea obviously realized the girl once had the same encounter as herself, but she didn't ask, maintaining a distance that could be called polite.\nBut the girl failed to keep the distance.\nTime is a cunning lobbyist; it governs vocabularies like \"getting used to\" and is very keen on spreading its influence.\nThe girl talked more, although she thought she was under control. No intention to be harsh, she really hadn't communicated with anyone truly for too long. They talked about things, about Carnea herself, about this place, about the outside world. Carnea very sensibly didn't talk about the girl herself, unless the girl brought it up voluntarily."
+ SRA_Rokia.8033.desc:0 "One day, she talked about herself; one day, she evaluated herself; one day, she failed to obtain enough medicine; one day, she wanted to accompany Carnea.\nCarnea understood the girl's difficulty too well; she was almost comforting the girl in return. She said, if there's no way, forget it.\nThere is a wonderful psychological process belonging to generous and kind helpers. When one day, such a person cannot continue to help due to their own situation or limited ability, a sense of guilt arises. Although these people have been giving and giving from beginning to end, once such giving stops, these people themselves feel bad instead.\nUnfortunately, due to such a psychological process, the girl wanted to see Carnea.\nShe didn't know what she wanted to get either; was it face-to-face forgiveness, or more apologies? Anyway, an irrational behavior was generated like this. Ultimately, she still thought she was herself, a flesh and blood person, not really just some ethereal ghost appearing among many machines."
+ SRA_Rokia.8034.desc:0 "Carnea was her friend.\nA friend, naturally, to the prudent girl, could not be an agent of the Security Bureau, could not be directed by an almost random yet insidious plan, sent here just to catch an unknown nobody, could not have a hidden instruction lurking at the bottom of consciousness, unable to be recalled even by herself before being revealed.\nThe girl met her.\nThe girl hadn't looked at herself seriously for a long time. Except when replacing some parts completely damaged or rotten due to accidents or stories, she never cared about her full appearance. As if by not looking, she would still be the same person as before.\nA person who had been dead for a long time.\nCarnea hid her panic very well; such a situation was indeed somewhat terrifying for her too. She conversed with the girl as if nothing happened, comforting her uneasiness, looking forward to the next success, until the explosion sounded.\nAlmost instantly, it seemed invaders were everywhere. This was not the base the girl had managed for a long time, but merely a simply arranged shelter. The machines attempting to counterattack were destroyed in an instant, leaving only purple electric arcs flickering due to psionic effects.\nThe girl didn't know what happened, nor who the attacker was. She began to counterattack as best she could and covered her direction of evacuation.\nShe swore to Carnea that she would protect her.\nCarnea responded with a bolt of psionic lightning."
+ SRA_Rokia.8035.desc:0 "The girl was defenseless. The lightning took into account her unbelievable physical state and instead attacked her consciousness, or something like a soul. However, her consciousness had already become twisted and massive during these times. Her ability to span thousands of miles and make a machine part of herself was the very embodiment of this mutation. This was probably an unfortunate thing, but right now, she was lucky not to be hurt much by it.\nWell, there might be ambiguity. Her consciousness was not hurt in this attack, but her heart was severely wounded.\nSome disturbing things spread in her shell that just stood in place, making Carnea agree even more with the danger mentioned in the mission. After a moment of dullness and confusion that was likely just an instant, the girl finally took action.\nShe raised a hand.\nThe actions of psionics are often associated with their limb movements. This is a clear psychological suggestion and goal orientation, helping psionics confirm their purpose. In long-term training, Carnea had learned to suppress such actions and launch attacks silently, while the girl naturally had not received such training.\nAs this hand trembled in mid-air, Carnea realized something bad about the girl's danger."
+ SRA_Rokia.8036.desc:0 "Almost in an instant, all implants in Carnea's body began to tremble uneasily, then they succumbed to a more massive will and began to detach from the flesh and blood closely connected to them.\nA psionic agent who has undergone thorough modification and reconstruction has a large number of organs replaced by more efficient mechanical structures. In addition, the complete replacement of the spine is a relatively radical modification direction. Carnea was one of the experiencers of this technology. At first, she was reluctant, but later she didn't care.\nSo her spine detached from her body, her fingers cracked, ribs snapped, her heart was torn open, and many things broke through her skin, fleeing her flesh.\nBecause of these wounds, her flesh also fled. Her spinal cord broke, the implants inside the skull shattered into pieces. She was almost unaware of her situation; she would die soon, but would suffer for a while longer.\nDespair drowned her, but the despair was not hers."
+ SRA_Rokia.8037.desc:0 "A very slight sound of airflow broke the dead silence. It was not breathing, but more like the sound of something cracking.\nImmediately after, this sound began to have ups and downs. A suppressed, intermittent sound leaked from the corners of her stiff mouth. At first, it was very low, like a whimper with a choked throat, but soon, the sound began to twist and deform, taking on a creepy, metal-rubbing texture.\nIt became shrill and sharp, like a dull knife scraping against a rusted steel plate, or the last sorrowful scream emitted by a machine on the verge of falling apart. This sound had no temperature, no undulation belonging to life, only palpitations and nearly insane tremors.\n\n§YThe Rokia before you stopped narrating. After a long time, or perhaps just a moment, she revealed an expression that was almost compassionate.§!\n\nThe girl was crushed, destroyed. This was an exquisite blow from the past, smashing the little she had left into pieces.\nShe only lost control for a short while.\nShe wiped away the sticky liquid seeping out of her eyes.\n\"Let's go.\" She said to herself.\nThe story after that is simple. The girl easily found a cargo ship and left this planet on it. Then she transferred several times and arrived at a scientific expedition ship waiting for supplies. She called out softly, so this ship agreed, left other sundries behind, took her away, and never returned."
+ SRA_Rokia.8038.desc:0 "The girl never looked back.\nShe did many things later. Because of a certain curse, she was able to escape her completely defeated world, continue her planning, failing again and again, until today.\n\nThe story is over. Goodbye."
+ SRA_Rokia.8038.a:0 "§YShe turned away.§!"
+ SRA_Rokia.8038.a.tooltip:0 "NE2: Fictional Story"
+
+
+ #SRA_Rokia.8015.desc:0 "夜晚无可救药，白天早已放弃。痛苦满溢而出，啜泣寂静无声。"
+
+ SRA_Rokia.8096.a:0 "This journey of yours shall end what began with you"
+
+ SRA_Rokia.8099.a.tooltip:0 "You managed to break free from the shackles.\n\n§RAt least for now.§!"
+ SRA_Rokia.8099.b.tooltip:0 "You can do nothing.\n\n§RYou can only watch.§!"
+ SRA_Rokia.8099.c.tooltip:0 "You lost your home planet. Until your warriors reclaim their homeland, you cannot issue any orders.\n\n§RAt least this time, you still have a chance.§!"
+
+ SRA_Rokia.8199.b.tooltip:0 "You can do nothing.\n\n§RBut you can go and see.§!"
+
+
+
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码
+ ### Rokia.8096 ###
+ SRA_Rokia.8096.a.tooltip:0 "Make your choice."
+ ### SD_Story_event.3 ###
+ SRA_SD_Story_event.3.b_flag:0 "Choosing this path will set a specific flag."
+ ### Chaos Star Planet Class ###
+ mod_pc_SRA_chaos_star_habitable_habitability:0 "§RDivine Realm of Illusionary Abyss§! Habitability"
+ trait_pc_SRA_chaos_star_habitable_preference:0 "Divine Realm of Illusionary Abyss Preference"
+ trait_pc_SRA_chaos_star_habitable_preference_desc:0 "This species prefers §RDivine Realm of Illusionary Abyss§! worlds and gains additional habitability on such planets."

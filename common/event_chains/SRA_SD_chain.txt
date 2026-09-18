@@ -1,0 +1,6 @@
+
+SRA_SD_Crisis_2_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	situation_log_category = crises
+	picture = GFX_evt_cosmic_storms_nexus_storm
+}

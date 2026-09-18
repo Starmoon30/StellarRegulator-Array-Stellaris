@@ -1,0 +1,123 @@
+objectTypes = {
+	#################################
+	# Ringworld Clouds
+	#################################
+	# Medium
+	pdxmesh = {
+		name = "SRA_ancient_ringworld_medium_cloud_mesh"
+		file = "gfx/models/planets/ringworld_habitable_clouds.mesh"
+		cull_distance = 999999999.0f
+		scale = 1.0
+
+		meshsettings = {
+			name = "polySurface35Shape"
+			index = 0
+			texture_diffuse = "clouds_medium_diffuse.dds"
+			texture_normal = "clouds_medium_normal.dds"
+			texture_specular = "clouds_medium_specular.dds"
+			shader = "PdxMeshClouds"
+		}
+		meshsettings = {
+			name = "polySurface34Shape"
+			index = 0
+			texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshClouds"
+		}
+	}
+	# Thin
+	pdxmesh = {
+		name = "SRA_ancient_ringworld_thin_cloud_mesh"
+		file = "gfx/models/planets/ringworld_habitable_clouds.mesh"
+		cull_distance = 999999999.0f
+		scale = 1.0
+
+		meshsettings = {
+			name = "polySurface35Shape"
+			index = 0
+			texture_diffuse = "clouds_thin_diffuse.dds"
+			texture_normal = "clouds_thin_normal.dds"
+			texture_specular = "clouds_thin_specular.dds"
+			shader = "PdxMeshClouds"
+		}
+		meshsettings = {
+			name = "polySurface34Shape"
+			index = 0
+			texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshClouds"
+		}
+	}
+	#################################
+	# Ringworld Tech Sections
+	#################################
+	# Blue
+	pdxmesh = {
+		name = "SRA_ancient_ringworld_tech_blue_mesh"
+		file = "gfx/models/planets/ringworld_tech.mesh"
+		cull_distance = 999999999.0f
+		scale = 1.0
+
+		meshsettings = {
+			name = "pasted__polySurface28Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_ringworld_tech_blue_diffuse.dds"
+			texture_normal = "ringworld_tech_normal.dds"
+			texture_specular = "ringworld_tech_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	#################################
+	# Ringworld Habitable Sections
+	#################################
+	# City Bright
+	pdxmesh = {
+		name = "SRA_ancient_ringworld_habitable_city_bright_blue_mesh"
+		file = "gfx/models/planets/ringworld_habitable.mesh"
+		cull_distance = 999999999.0f
+		scale = 1.0
+
+		meshsettings = {
+			name = "pCube20Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_ringworld_habitable_blue_diffuse.dds"
+			texture_normal = "ringworld_habitable_normal.dds"
+			texture_specular = "ringworld_habitable_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+		meshsettings = {
+			name = "polySurface9Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_ringworld_habitable_city_blue_diffuse.dds"
+			texture_normal = "SRA_ancient_ringworld_habitable_city_blue_normal.dds"
+			texture_specular = "SRA_ancient_ringworld_habitable_city_blue_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+	# Gaia
+	pdxmesh = {
+		name = "SRA_ancient_ringworld_habitable_gaia_blue_mesh"
+		file = "gfx/models/planets/ringworld_habitable.mesh"
+		cull_distance = 999999999.0f
+		scale = 1.0
+
+		meshsettings = {
+			name = "pCube20Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_ringworld_habitable_blue_diffuse.dds"
+			texture_normal = "ringworld_habitable_normal.dds"
+			texture_specular = "ringworld_habitable_specular.dds"
+			shader = "PdxMeshTerra"
+		}
+		meshsettings = {
+			name = "polySurface9Shape"
+			index = 0
+			texture_diffuse = "gaia_01_diffuse.dds"
+			texture_normal = "tropical_03_normal.dds"
+			texture_specular = "tropical_03_spec.dds"
+			shader = "PdxMeshTerra"
+		}
+	}
+}

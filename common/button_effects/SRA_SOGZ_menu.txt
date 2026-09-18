@@ -1,0 +1,449 @@
+#显示窗
+SRA_SOGZ_menu_energy_effect = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_energy_effect_custom_tooltip
+		}
+	}
+}
+SRA_SOGZ_menu_window_effect = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {}
+}
+#选择子系统
+SRA_SOGZ_menu_sub_1_1 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_1_1_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_1_2_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_1_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_1_1_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_1_2 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_1_2_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_1_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_1_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_1_2_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_1_3 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_1_3_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_1_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_1_2_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_1_3_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_2_1 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_2_1_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_2_2_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_2_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_2_1_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_2_2 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_2_2_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_2_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_2_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_2_2_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_2_3 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_2_3_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_2_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_2_2_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_2_3_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_3_1 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_3_1_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_3_2_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_3_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_3_1_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_3_2 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_3_2_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_3_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_3_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_3_2_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_3_3 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_3_3_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_3_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_3_2_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_3_3_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_4_1 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_4_1_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_4_2_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_4_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_4_1_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_4_2 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_4_2_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_4_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_4_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_4_2_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_4_3 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_4_3_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_4_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_4_2_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_4_3_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_5_1 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_5_1_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_5_2_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_5_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_5_1_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_5_2 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_5_2_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_5_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_5_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_5_2_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_5_3 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_5_3_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_5_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_5_2_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_5_3_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_6_1 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_6_1_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_6_2_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_6_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_6_1_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_6_2 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_6_2_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_6_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_6_3_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_6_2_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+SRA_SOGZ_menu_sub_6_3 = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		FROM = {
+			custom_tooltip = SRA_SOGZ_menu_sub_6_3_custom_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = SRA_SOGZ_menu_sub_unlimited }
+					}
+					remove_country_flag = SRA_SOGZ_menu_sub_6_1_choose
+					remove_country_flag = SRA_SOGZ_menu_sub_6_2_choose
+				}
+				set_country_flag = SRA_SOGZ_menu_sub_6_3_choose
+				SRA_SOGZ_sub_energy_choose_check_effect = yes
+			}
+		}
+	}
+}
+#选中亮框
+SRA_SOGZ_menu_sub_1_1_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_1_1_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_1_2_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_1_2_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_1_3_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_1_3_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_2_1_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_2_1_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_2_2_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_2_2_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_2_3_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_2_3_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_3_1_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_3_1_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_3_2_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_3_2_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_3_3_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_3_3_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_4_1_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_4_1_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_4_2_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_4_2_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_4_3_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_4_3_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_5_1_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_5_1_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_5_2_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_5_2_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_5_3_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_5_3_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_6_1_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_6_1_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_6_2_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_6_2_choose } }
+	allow = { always = yes }
+}
+SRA_SOGZ_menu_sub_6_3_box = {
+	potential = { FROM = { has_country_flag = SRA_SOGZ_menu_sub_6_3_choose } }
+	allow = { always = yes }
+}

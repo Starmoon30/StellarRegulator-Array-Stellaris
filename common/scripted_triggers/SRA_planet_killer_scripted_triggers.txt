@@ -1,0 +1,183 @@
+SRA_mini_menu_choose_button_potential = {
+	has_active_event = {
+		SRA_Spear_Of_Galaxy_Zenith.50
+	}
+}
+
+SRA_is_ancient_system = {
+	OR = {
+		has_star_flag = ag_ancient_system
+		has_star_flag = ag_gamma_station_small_in_system
+		# has_star_flag = ag_zeta_crisis_psionic_storm_system
+		# has_star_flag = ag_zeta_crisis_psionic_singularity_system
+	}
+}
+
+
+
+
+can_destroy_planet_with_SRA_T4_weapon_planet_killer = {
+	# custom_tooltip = {
+	# 	fail_text = "SRA_requires_a_star_star_killer"
+	# 	NOR = {
+	# 		is_planet_class = pc_ag_void_star
+	# 		is_planet_class = pc_ag_void_planet
+	# 	}
+	# }
+	custom_tooltip = {
+		fail_text = "SRA_requires_outside_border_star_killer"
+		NOR = {
+			AND = {
+				from.owner = {
+					NOR = {
+						has_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+						has_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+					}
+				}
+				is_inside_border = from.owner
+				solar_system = {
+					any_system_planet = {
+						OR = {
+							is_colony = yes
+							is_under_colonization = yes
+						}
+					}
+				}
+			}
+			AND = {
+				from.owner = {
+					OR = {
+						has_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+						has_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+					}
+				}
+				exists = owner
+				owner = { is_same_value = from.owner }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = "SRA_requires_declares_war_star_killer"
+		NAND = {
+			from.owner = {
+				NOR = {
+					has_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+					has_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+				}
+			}
+		}
+	}
+	# custom_tooltip = {
+	# 	fail_text = "SRA_requires_no_pacifist_star_killer"
+	# 	from.owner = {
+	# 		NOR = {
+	# 			has_ethic = ethic_fanatic_pacifist
+	# 			has_ethic = ethic_pacifist
+	# 		}
+	# 	}
+	# }
+	solar_system = {
+		custom_tooltip = {
+			fail_text = "SRA_requires_no_ancient_system" 
+			SRA_is_ancient_system = no
+		}
+		custom_tooltip = {
+			fail_text = "SRA_requires_no_zeta_crisis_system" 
+			NOT = { has_star_flag = ag_zeta_crisis_core_system }
+		}
+		custom_tooltip = {
+			fail_text = "SRA_requires_no_special_system" 
+			SRA_is_special_system = no
+		}
+	}
+	# custom_tooltip = {
+	# 	fail_text = "SRA_requires_no_is_cloaked" 
+	# 	from = { is_cloaked = no }
+	# }
+}
+
+
+can_destroy_planet_with_SRA_Rokia_dragon_weapon_planet_killer = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_country_type = primitive }
+		}
+		custom_tooltip = {
+		fail_text = primitives_not_in_borders
+		exists = space_owner
+		space_owner = { is_same_value = from.owner }
+		}
+		custom_tooltip = {
+			fail_text = primitives_not_full_interference
+			from.owner = {
+				has_policy_flag = interference_aggressive
+			}
+		}
+	}
+}
+
+
+SRA_is_common_country = {
+	OR = {
+		is_country_type = default
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = awakened_marauders
+		is_country_type = primitive
+		is_country_type = ratlings
+		# is_country_type = prikki
+		
+		# is_country_type = default_ev
+	}
+}
+
+
+
+SRA_is_special_system = {
+	OR = {
+		has_star_flag = Kuat_system
+		has_star_flag = Kuat_system_1
+		has_star_flag = Kuat_system_2
+		has_star_flag = Kuat_system_3
+	}
+}
+
+SRA_is_habitat = {
+	OR = {
+		is_planet_class = pc_habitat
+		#SRA
+		is_planet_class = pc_SRA_Barrier_Main_Station
+		# gigastructure
+		is_planet_class = pc_flat_world
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_interstellar_habitat
+		# Plentiful Traditions
+		is_planet_class = pc_mem_vazuran_habitat
+		is_planet_class = pc_habitat_robot
+		#PD - Planetary Habitats
+		is_planet_class = pc_gghab
+		is_planet_class = pc_tmhab
+		is_planet_class = pc_tmhab2
+		is_planet_class = pc_mmhab
+		is_planet_class = pc_mmhab2
+		is_planet_class = pc_bhab
+		is_planet_class = pc_bchab
+		is_planet_class = pc_mhab
+		is_planet_class = pc_fhab
+		is_planet_class = pc_fmhab
+		is_planet_class = pc_mehab
+	}
+}

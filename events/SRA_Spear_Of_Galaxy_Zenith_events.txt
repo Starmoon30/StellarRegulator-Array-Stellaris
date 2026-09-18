@@ -1,0 +1,2717 @@
+namespace = SRA_Spear_Of_Galaxy_Zenith
+
+
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.1
+	title = SRA_Spear_Of_Galaxy_Zenith.1
+	desc = SRA_Spear_Of_Galaxy_Zenith.1.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		OR = {
+			has_country_flag = has_SRA_RE_StellarRegulator_country
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = ROOT
+		}
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_SOGZ_sub_energy value = 600 }
+		start_situation = {
+			type = SRA_SOGZ_main_situation
+		}
+		SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+		set_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+		capital_scope = {
+			save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_capital_location
+		}
+		save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_own_country
+		if = {
+			limit = {
+				has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+				NOT = {
+					any_owned_ship ={
+						SRA_is_SOGZ_ship_size = yes
+					}
+				}
+			}
+			create_fleet = {
+				name = "NAME_SRA_Spear_Of_Galaxy_Zenith"
+				effect = {
+					set_owner = event_target:SRA_Spear_Of_Galaxy_Zenith_own_country
+					create_ship = {
+						name = random
+						design = "NAME_SRA_Bright_Galaxy"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+							save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+							ship_event = {
+								id = SRA_Spear_Of_Galaxy_Zenith.5023
+							}
+						}
+					}			
+					set_location = {
+						target = event_target:SRA_Spear_Of_Galaxy_Zenith_capital_location
+						distance = 0
+						angle = random
+					}
+					set_fleet_stance = aggressive
+				}
+			}
+		}		
+	}
+	
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.1.a
+	}
+}
+
+
+
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.2
+	title = SRA_Spear_Of_Galaxy_Zenith.2
+	desc = SRA_Spear_Of_Galaxy_Zenith.2.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+	}
+
+	custom_gui = SRA_mini_menu_window
+	custom_gui_option = SRA_mini_menu_button
+	immediate = {
+		set_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+		}
+	}
+	#打开配置面板
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.60
+			}
+		}
+	}
+	#寰宇之帜
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.2_1
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.2_1.desc
+		trigger = {
+			has_country_flag = SRA_SOGZ_menu_sub_2_1
+			any_owned_ship ={
+					SRA_is_SOGZ_ship_size = yes
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_2_1_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_2_1_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 25
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+		hidden_effect = {
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_2_1_cool_down days = 180 }
+	        }
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -25
+			}
+			add_modifier = {
+				modifier = SRA_SOGZ_menu_sub_2_1_Buff days = 180
+			}
+			set_timed_country_flag = {
+				flag = jump_drive_allowed
+				days = 180
+			}
+		}
+	}
+	#彗耀迫临
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.2_2
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.2_2.desc
+		trigger = {
+			has_country_flag = SRA_SOGZ_menu_sub_2_2
+			any_owned_ship ={
+					SRA_is_SOGZ_ship_size = yes
+	 	  }
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_2_2_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_2_2_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 25
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.20
+			}
+		}
+	}
+	#星阵卫戍
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.2_3
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.2_3.desc
+		trigger = {
+			has_country_flag = SRA_SOGZ_menu_sub_2_3
+			any_owned_ship ={
+					SRA_is_SOGZ_ship_size = yes
+	 		}
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_2_3_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_2_3_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 200
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+		hidden_effect = {
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_2_3_cool_down days = 360 }
+	        }
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -200
+			}
+			random_owned_ship = {
+				limit = {
+						SRA_is_SOGZ_ship_size = yes
+				}
+				save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+			}
+			create_fleet = {
+				name = "NAME_SRA_Barrier_Guard_Station_fleet"
+				effect = {
+					set_owner = root
+					set_location = {
+						target = event_target:SRA_Spear_Of_Galaxy_Zenith
+						distance = 0
+						angle = random
+					}
+					while = {
+						count = 32
+						create_ship = {
+							design = NAME_SRA_Barrier_Guard_Cruiser
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							design = NAME_SRA_Barrier_Guard_Titan
+						}
+					}
+					create_ship = {
+						name = "NAME_SRA_Barrier_Guard_Station_Name_1"
+						design = "NAME_SRA_Barrier_Guard_Station"
+						prefix = no
+					}
+				}
+				settings = { 
+					can_upgrade = no 
+					uses_naval_capacity = no
+					can_change_composition = no
+					spawn_debris = no
+				}
+			}
+		}
+	}
+	#爆华绽放
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.4_1
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.4_1.desc
+		trigger = {
+			any_owned_ship ={
+					SRA_is_SOGZ_ship_size = yes
+		 	}
+			has_country_flag = SRA_SOGZ_menu_sub_4_1
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_4_1_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_4_1_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 50
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+		hidden_effect = {
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_4_1_cool_down days = 120 }
+	        }
+			else = {
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_4_1_cool_down days = 30 }
+			}
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -50
+			}
+			random_owned_ship = {
+				limit = {
+					SRA_is_SOGZ_ship_size = yes
+				}
+				ship_event = {
+					id = SRA_Spear_Of_Galaxy_Zenith.1041
+				}
+			}
+		}
+	}
+	#溟乎远响
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.4_2
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.4_2.desc
+		trigger = {
+			any_owned_ship ={
+				OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+		 	}
+			has_country_flag = SRA_SOGZ_menu_sub_4_2
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_4_2_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_4_2_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 50
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+		hidden_effect = {
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_4_2_cool_down days = 180 }
+	        }
+			else = {
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_4_2_cool_down days = 45 }
+			}
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -50
+			}
+			random_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+					}
+				}
+				solar_system = {
+					every_fleet_in_system = {
+						limit = {
+							owner = {
+								is_hostile = root
+							}
+						}
+						add_modifier = { modifier = "SRA_SOGZ_menu_sub_4_2_buff" days = 30 } 
+					}
+				}
+			}
+		}
+	}
+	#苍星陨灭
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.4_3
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.4_3.desc
+		trigger = {
+			any_owned_ship ={
+				OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+		 	}
+			has_country_flag = SRA_SOGZ_menu_sub_4_3
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_4_3_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_4_3_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 50
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+		hidden_effect = {
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_4_3_cool_down days = 180 }
+	        }
+			else = {
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_4_3_cool_down days = 45 }
+			}
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -50
+			}
+			random_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					}
+				}
+				ship_event = {
+					id = SRA_Spear_Of_Galaxy_Zenith.1043
+				}
+			}
+		}
+	}
+	#新星终结
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.6_1
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.6_1.desc
+		trigger = {
+			any_owned_ship = {
+				OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+			}
+			has_country_flag = SRA_SOGZ_menu_sub_6_1
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_6_1_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_6_1_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 50
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+			custom_tooltip = {
+				NOT = {
+					has_global_flag = SRA_Chief_Crisis_1_starting
+				}
+				fail_text = SRA_SOGZ_menu_sub_6_1_chief
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.40
+			}
+		}
+	}
+	#奇点爆发
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.6_2
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.6_2.desc
+	    trigger = {
+	    	any_owned_ship ={
+	    		OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+	        }
+			has_country_flag = SRA_SOGZ_menu_sub_6_2
+	    }
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_6_2_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_6_2_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 100
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+	    hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -100
+			}
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					}
+				}
+				add_modifier = { modifier = "SRA_Spear_Of_Galaxy_Zenith_Buff_1" days = 60 } 
+			}
+			set_timed_country_flag = { flag = SRA_Spear_Of_Galaxy_Zenith_burst days = 60 }
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_2_cool_down days = 360 }
+	        }
+			else = {
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_2_cool_down days = 180 }
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.2
+			}
+	    }
+	}
+	#事件视界
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.6_3
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.6_3.desc
+	    trigger = {
+	    	any_owned_ship ={
+	    		OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+	        }
+			has_country_flag = SRA_SOGZ_menu_sub_6_3
+	    }
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_6_3_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_6_3_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 100
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+	    hidden_effect = { 
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -100
+			}
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_3_cool_down days = 360 }
+			}
+			else = {
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_3_cool_down days = 180 }
+			}
+			every_country = {
+				limit =  { is_hostile = root }
+				add_modifier = { modifier = SRA_Spear_Of_Galaxy_Zenith_Buff_2 days = 20 }
+			}
+	    }
+	}
+	#重新部署
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.2.e
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.2.e.desc
+		trigger = {
+			OR = {
+				has_country_flag = SRA_SOGZ_ark_ship_mia_returning
+				NOT = {
+					any_owned_ship ={
+						OR = {
+							is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+							is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+							is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+						}
+					}
+				}
+			}
+	    } 
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 40000 }
+			resource_stockpile_compare = { resource = alloys value >= 80000 }
+			resource_stockpile_compare = { resource = astral_threads value >= 8000 }
+		}
+	    add_resource = {
+		    energy = -40000
+		    alloys = -80000
+		    astral_threads = -8000
+	    }
+		hidden_effect = {
+			if = {
+				limit = { exists = capital_scope }
+				capital_scope = {
+					save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_capital_location
+				}
+			}
+			else = {
+				random_owned_planet = {
+					save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_capital_location
+				}
+			}
+			save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_own_country
+			if = {
+				limit = {
+					has_country_flag = SRA_SOGZ_ark_ship_mia_returning
+					any_owned_ship = { is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark }
+				}
+				remove_country_flag = SRA_SOGZ_ark_ship_mia_returning
+				if = {
+					limit = {
+						NOT = { exists = event_target:SRA_Spear_Of_Galaxy_Zenith_capital_location }
+					}
+					random_system = {
+						star = { save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_capital_location }
+					}
+				}
+				every_owned_ship = {
+					limit = { is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark }
+					repair_ship = yes
+					set_disable_at_health = 0.01
+					set_disabled = no
+					fleet = {
+						set_location = {
+							target = event_target:SRA_Spear_Of_Galaxy_Zenith_capital_location
+							distance = 0
+							angle = random
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						any_owned_ship ={
+							OR = {
+								is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+								is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+								is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+							}
+						}
+					}
+				}
+				if = {
+					limit = { has_country_flag = SRA_SOGZ_ark_ship_active }
+					create_fleet = {
+						name = "NAME_SRA_Spear_Of_Galaxy_Zenith"
+						effect = {
+							set_owner = event_target:SRA_Spear_Of_Galaxy_Zenith_own_country
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Bright_Galaxy_Ark"
+								upgradable = no
+								effect = {
+									set_disable_at_health = 0.01
+									save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+									change_variable = {
+										which = SRA_world_machine_produces
+										value = 1
+									}
+									ship_event = {
+										id = SRA_Spear_Of_Galaxy_Zenith.5023
+									}
+								}
+							}
+							set_location = {
+								target = event_target:SRA_Spear_Of_Galaxy_Zenith_capital_location
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+						}	
+					}
+				}
+				else_if = {
+					limit = { has_country_flag = SRA_SOGZ_Adjust }
+					create_fleet = {
+						name = "NAME_SRA_Spear_Of_Galaxy_Zenith"
+						effect = {
+							set_owner = event_target:SRA_Spear_Of_Galaxy_Zenith_own_country
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Bright_Galaxy_Adjust"
+								upgradable = no
+								effect = {
+									set_disable_at_health = 0.01
+									save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+									ship_event = {
+										id = SRA_Spear_Of_Galaxy_Zenith.5023
+									}
+								}
+							}			
+							set_location = {
+								target = event_target:SRA_Spear_Of_Galaxy_Zenith_capital_location
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+						}	
+					}
+				}
+				else = {
+					create_fleet = {
+						name = "NAME_SRA_Spear_Of_Galaxy_Zenith"
+						effect = {
+							set_owner = event_target:SRA_Spear_Of_Galaxy_Zenith_own_country
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Bright_Galaxy"
+								upgradable = no
+								effect = {
+									set_disable_at_health = 0.01
+									save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+									ship_event = {
+										id = SRA_Spear_Of_Galaxy_Zenith.5023
+									}
+								}
+							}			
+							set_location = {
+								target = event_target:SRA_Spear_Of_Galaxy_Zenith_capital_location
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+						}	
+					}
+				}						
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.2
+			}	
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith_exit1
+	}
+}
+
+#次级菜单
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.10
+	title = SRA_Spear_Of_Galaxy_Zenith.10
+	desc = SRA_Spear_Of_Galaxy_Zenith.10.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+	}
+
+	custom_gui = SRA_mini_menu_window
+	custom_gui_option = SRA_mini_menu_button
+	immediate = {
+		set_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+		}
+	}
+	#增压超频
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.a
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.a.desc
+			trigger = {
+			NOT = {
+				has_country_flag = SRA_SOGZ_menu_sub_5_1
+			}
+		}
+		allow = {
+			OR = {
+				NOT = {
+					has_civic = civic_SRARociviaEmpire
+				}
+				has_country_flag = SRA_RE_SOGZ_overclock_enable
+			}
+			custom_tooltip = SRA_SOGZ_menu_sub_5_1_not_enable
+		}
+		hidden_effect = { 
+			set_country_flag = SRA_SOGZ_menu_sub_5_1
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.10
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.b
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.b.desc
+	 	trigger = {
+			has_country_flag = SRA_SOGZ_menu_sub_5_1
+	 	}
+		hidden_effect = { 
+			remove_country_flag = SRA_SOGZ_menu_sub_5_1
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.10
+			}
+		}
+	}
+	#不朽协议
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.c
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.c.desc
+	 	trigger = {
+			NOT = {
+				has_country_flag = SRA_SOGZ_menu_sub_1_2
+			}
+		}
+		allow = {
+			OR = {
+				NOT = {
+					has_civic = civic_SRARociviaEmpire
+				}
+				has_country_flag = SRA_RE_SOGZ_immortality_enable
+			}
+			custom_tooltip = SRA_SOGZ_menu_sub_1_2_not_enable
+		}
+		hidden_effect = { 
+			set_country_flag = SRA_SOGZ_menu_sub_1_2
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.10
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.d
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.d.desc
+		trigger = {
+			has_country_flag = SRA_SOGZ_menu_sub_1_2
+	 	}
+		hidden_effect = { 
+			remove_country_flag = SRA_SOGZ_menu_sub_1_2
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.10
+			}
+		}
+	}
+	#切换武器模式
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.e
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.e.desc
+	 	trigger = {
+			has_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+		}
+		hidden_effect = { 
+			remove_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+			set_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.10
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.f
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.f.desc
+		trigger = {
+			has_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+	 	}
+		hidden_effect = { 
+			remove_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+			set_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.10
+			}
+		}
+	}
+	#切换为可调整武器
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.g
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.g.desc
+	 	trigger = {
+			has_country_flag = SRA_Weapon_Adjust
+			NOT = {
+				has_country_flag = SRA_SOGZ_Adjust
+			}
+		}
+		hidden_effect = { 
+			set_country_flag = SRA_SOGZ_Adjust
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.10
+			}
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					}
+				}
+				save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+			fleet = { leader? = { save_event_target_as = SRA_target_leader unassign_leader = this } 
+				create_ship = {
+					name = random
+					design = "NAME_SRA_Bright_Galaxy_Adjust"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+							ship_event = {
+								id = SRA_Spear_Of_Galaxy_Zenith.5023
+							}
+						}
+					}
+				}
+				event_target:SRA_Spear_Of_Galaxy_Zenith = {
+					delete_ship = this
+				}
+				if = { limit = { exists = event_target:SRA_target_leader } 
+				    fleet = { assign_leader = event_target:SRA_target_leader } 
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.h
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.h.desc
+		trigger = {
+			has_country_flag = SRA_SOGZ_Adjust
+	 	}
+		hidden_effect = { 
+			remove_country_flag = SRA_SOGZ_Adjust
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.10
+			}
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					}
+				}
+				save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+			fleet = { leader? = { save_event_target_as = SRA_target_leader unassign_leader = this } 
+				create_ship = {
+					name = random
+					design = "NAME_SRA_Bright_Galaxy"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+							ship_event = {
+								id = SRA_Spear_Of_Galaxy_Zenith.5023
+							}
+						}
+					}
+				}
+				event_target:SRA_Spear_Of_Galaxy_Zenith = {
+					destroy_ship = this
+				}
+				if = { limit = { exists = event_target:SRA_target_leader } 
+				    fleet = { assign_leader = event_target:SRA_target_leader } 
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith_return1
+		hidden_effect = {
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.2
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith_exit1
+	}
+}
+#折跃舰队
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.20
+	title = SRA_Spear_Of_Galaxy_Zenith.20
+	desc = SRA_Spear_Of_Galaxy_Zenith.20.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+	}
+
+	custom_gui = SRA_mini_menu_window
+	custom_gui_option = SRA_mini_menu_button
+	immediate = {
+		set_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+		random_controlled_ship ={
+			limit = { 
+				OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+			}
+			save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+		}
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.20.a
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.20.a.desc
+		trigger = {
+			has_technology = tech_SRA_T4_ship_Part
+			NOT = {
+				is_country_type = faction_SRA_RE_End_2_country
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 25
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_5_1 } }
+				resource_stockpile_compare = { resource = energy value >= 200000 }
+				resource_stockpile_compare = { resource = alloys value >= 800000 }
+			}
+			if = {
+				limit = {  has_country_flag = SRA_SOGZ_menu_sub_5_1 }
+				resource_stockpile_compare = { resource = energy value >= 800000 }
+				resource_stockpile_compare = { resource = alloys value >= 800000 }
+			}
+		}
+		if = { limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+	    	add_resource = {
+	    		energy = -200000
+				alloys = -800000
+	   		}
+		}
+		if = { limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1  }	 
+	   		add_resource = {
+	    		energy = -800000
+				alloys = -800000
+	    	}
+		}
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -25
+			}
+			create_fleet = {
+				name = "NAME_SRA_Crisis_Executor_Fleet"
+				effect = {
+					set_owner = root
+					while = {
+						count = 2
+						create_ship = {
+							random_existing_design = SRA_Adjudicator
+						}
+					}
+					while = {
+						count = 46
+						create_ship = {
+							random_existing_design = SRA_Executor
+						}
+					}
+					set_location = {
+						target = event_target:SRA_Spear_Of_Galaxy_Zenith
+						distance = 5
+						angle = random
+					}
+				}
+			}
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_2_2_cool_down days = 180 }
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.20
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.20.b
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.20.b.desc
+		trigger = {
+			NOT = {
+				is_country_type = faction_SRA_RE_End_2_country
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 25
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_5_1 } }
+				resource_stockpile_compare = { resource = energy value >= 32000 }
+				resource_stockpile_compare = { resource = alloys value >= 108000 }
+			}
+			if = {
+				limit = {  has_country_flag = SRA_SOGZ_menu_sub_5_1 }
+				resource_stockpile_compare = { resource = energy value >= 128000 }
+				resource_stockpile_compare = { resource = alloys value >= 108000 }
+			}
+		}
+		if = { limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+	    	add_resource = {
+	    		energy = -32000
+				alloys = -108000
+	  		}
+		}
+		if = { limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1  }	 
+	    	add_resource = {
+	    		energy = -128000
+				alloys = -108000
+	    	}
+		}
+			
+		hidden_effect = { 
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -25
+			}
+			create_fleet = {
+				name = "NAME_SRA_Battleship_Fleet"
+				effect = {
+					set_owner = root
+						while = {
+							count = 2
+							create_ship = {
+								random_existing_design = titan
+							}
+						}
+						while = {
+							count = 32
+							create_ship = {
+								random_existing_design = battleship
+							}
+						}
+						set_location = {
+						target = event_target:SRA_Spear_Of_Galaxy_Zenith
+						distance = 5
+						angle = random
+					}
+				}
+			}
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_2_2_cool_down days = 180 }
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.20
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.20.c
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.20.c.desc
+		trigger = {
+			is_country_type = faction_SRA_RE_End_2_country
+		}
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < 25
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+			if = {
+				limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_5_1 } }
+				resource_stockpile_compare = { resource = energy value >= 128000 }
+				resource_stockpile_compare = { resource = alloys value >= 256000 }
+			}
+			if = {
+				limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1 }
+				resource_stockpile_compare = { resource = energy value >= 512000 }
+				resource_stockpile_compare = { resource = alloys value >= 256000 }
+			}
+		}
+		if = { limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+	   		add_resource = {
+	    		energy = -128000
+				alloys = -256000
+	  		}
+		}
+		if = { limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1  }	 
+	   		add_resource = {
+	    		energy = -512000
+				alloys = -256000
+	    	}
+		}
+			
+		hidden_effect = { 
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				add_situation_progress = -25
+			}
+			create_fleet = {
+				name = "NAME_SRA_Crisis_Adjudicator_fleet"
+				effect = {
+					set_owner = root
+						while = { count = 2 create_ship = { design = "NAME_SRA_Chief_Adjudicator" } }
+						while = { count = 16 create_ship = { design = "NAME_SRA_Chief_Executor" } }
+						while = { count = 32 create_ship = { design = "NAME_SRA_Chief_Cruiser" } }
+						set_location = {
+						target = event_target:SRA_Spear_Of_Galaxy_Zenith
+						distance = 5
+						angle = random
+					}
+					set_fleet_bombardment_stance = SRA_doom1
+				}
+			}
+			if = { limit = { NOT ={ has_country_flag = SRA_SOGZ_menu_sub_5_1 } }	 
+				set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_2_2_cool_down days = 180 }
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.20
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith_return1
+		hidden_effect = {
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.2
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith_exit1
+	}
+}
+
+
+
+
+# on_ship_disabled, Disable SRA_Spear_Of_Galaxy_Zenith, decide to destroy it or revive it.
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			is_ship_size = SRA_fire_target_0
+			OR = {
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+			}
+			has_ship_flag = SRA_on_ship_disabled_repair
+		}
+	}
+	immediate = {
+		if = {
+			limit = { has_ship_flag = SRA_on_ship_disabled_repair }
+			repair_ship = yes
+			set_disabled = no
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						owner = { has_country_flag = SRA_Spear_Of_Galaxy_Zenith_burst }
+						owner = { has_country_flag = SRA_Spear_Of_Galaxy_Zenith_nearly_repair }
+					}
+				}
+				repair_ship = yes
+				set_disabled = no
+			}
+			else = {
+				if = {
+					limit = { 
+						owner = {
+							has_country_flag = SRA_SOGZ_menu_sub_1_2
+						}
+					}
+					owner = {
+						country_event = {
+							id = SRA_Spear_Of_Galaxy_Zenith.32
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						owner = {
+							has_country_flag = SRA_SOGZ_menu_sub_1_3
+						}
+						NOT = {
+							has_ship_flag = SRA_SOGZ_menu_sub_1_3_cooldown
+						}
+					}
+					set_timed_ship_flag = {
+						flag = SRA_SOGZ_menu_sub_1_3_cooldown
+						days = 15
+					}
+					set_disable_at_health = 1.01
+					repair_ship = yes
+					set_disabled = yes
+					ship_event = {
+						id = SRA_Spear_Of_Galaxy_Zenith.33 days = 10
+					}
+					create_fleet = {
+						name = "NAME_SRA_Barrier_Guard_Station_fleet"
+						effect = {
+							set_owner = root.owner
+							set_location = {
+								target = root
+								distance = 0
+								angle = random
+							}
+							while = {
+								count = 32
+								create_ship = {
+									design = NAME_SRA_Barrier_Guard_Cruiser
+								}
+							}
+							while = {
+								count = 4
+								create_ship = {
+									design = NAME_SRA_Barrier_Guard_Titan
+								}
+							}
+							fleet_event = {
+								id = SRA_Spear_Of_Galaxy_Zenith.48 days = 180
+							}
+							if = {
+								limit = {
+									owner = {
+										has_country_flag = SRA_SOGZ_menu_sub_5_3
+									}
+								}
+								add_modifier = { modifier = SRA_SOGZ_menu_sub_5_3_Buff days = 10 }
+							}
+						}
+						settings = { 
+							can_upgrade = no 
+							uses_naval_capacity = no
+							can_change_composition = no
+							spawn_debris = no
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+						owner = { has_country_flag = SRA_SOGZ_ark_ship_active }
+					}
+					repair_ship = yes
+					set_disabled = no
+					set_disable_at_health = 0.01
+					owner = {
+						set_timed_country_flag = { flag = SRA_SOGZ_ark_ship_mia_returning days = 18000 }
+					}
+					fleet = {
+						set_mia = mia_return_home
+						set_mia_return_delay = 18000
+					}
+				}
+				else = {
+					destroy_ship = this 
+				}
+			}
+		}
+		else = {
+			destroy_ship = this
+		}
+	}
+}
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.32
+	title = SRA_Spear_Of_Galaxy_Zenith.32
+	desc = SRA_Spear_Of_Galaxy_Zenith.32.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+		OR = {
+			has_country_flag = SRA_SOGZ_menu_sub_1_2
+		}
+	}
+
+	custom_gui = SRA_mini_menu_window
+	custom_gui_option = SRA_mini_menu_button
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.32.a
+		allow = {
+			AND = {
+				resource_stockpile_compare = { resource = energy value >= 160000 }
+				resource_stockpile_compare = { resource = alloys value >= 320000 }
+				resource_stockpile_compare = { resource = astral_threads value >= 64000 }
+			}
+		}
+		hidden_effect = {
+			add_resource = {
+				energy = -160000
+				alloys = -320000
+				astral_threads = -64000
+			}
+			set_timed_country_flag = { flag = SRA_Spear_Of_Galaxy_Zenith_nearly_repair days = 5 }
+			add_modifier = { modifier = SRA_Spear_Of_Galaxy_Zenith_nearly_repair days = 5 }
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+					}
+				}
+				repair_ship = yes
+				set_disable_at_health = 0.01
+				set_disabled = no
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.32.b
+		hidden_effect = { 
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+					}
+				}
+				set_disable_at_health = 1.01
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.32 days = 30
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.32.c
+		hidden_effect = { 
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+					}
+				}
+				if = {
+					limit = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+						owner = { has_country_flag = SRA_SOGZ_ark_ship_active }
+					}
+					repair_ship = yes
+					set_disabled = no
+					set_disable_at_health = 0.01
+					owner = {
+						set_timed_country_flag = { flag = SRA_SOGZ_ark_ship_mia_returning days = 18000 }
+					}
+					fleet = {
+						set_mia = mia_return_home
+						set_mia_return_delay = 18000
+					}
+				}
+				else = {
+					destroy_ship = this
+				}
+			}
+		}
+	}
+}
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.33
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+			is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+			is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+			is_ship_size = SRA_Return_To_Calamitisease_Ship
+		}
+	}
+	immediate = {
+		repair_ship = yes
+		set_disable_at_health = 0.01
+		set_disabled = no
+	}
+}
+
+
+
+###[目标定位器]
+
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.40
+	title = SRA_Spear_Of_Galaxy_Zenith.40
+	desc = SRA_Spear_Of_Galaxy_Zenith.40.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+	}
+
+	custom_gui = SRA_mini_menu_window
+	custom_gui_option = SRA_mini_menu_button
+	immediate = {
+		random_controlled_ship ={
+			limit = { 
+				OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+			}
+			save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+		}
+		save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_own_country
+		set_timed_country_flag = {
+			flag = SRA_fire_target_0_on_way days = 1
+		}
+	}
+	
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.40.a
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.40.a.desc
+		trigger = { always = no }
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_6_1_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_6_1_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_fire_target_0_stand_by
+				}
+				fail_text = SRA_fire_target_0_stand_by
+			}
+		}
+		hidden_effect = { 
+			set_timed_country_flag = { flag = SRA_fire_target_0_stand_by days = 180 }
+			create_fleet = {
+				name = "NAME_SRA_fire_target_0"
+				effect = {
+					set_owner = event_target:SRA_Spear_Of_Galaxy_Zenith_own_country
+					create_ship = {
+						name = random
+						design = "NAME_SRA_fire_target_0"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+							add_modifier = { modifier = "SRA_fire_target_Buff_0" } 
+							save_event_target_as = SRA_fire_target_0
+						}
+					}			
+					set_location = {
+						target = event_target:SRA_Spear_Of_Galaxy_Zenith
+						distance = 0
+						angle = random
+					}
+					set_fleet_stance = aggressive
+				}
+				settings = { 
+					can_upgrade = no 
+					uses_naval_capacity = no
+					can_change_leader = no
+					can_change_composition = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+			}
+			set_country_flag = SRA_enabled_SRA_T4_weapon_planet_killer_selector
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.40.b
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.40.b.desc
+		trigger = { always = no }
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_6_1_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_6_1_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_fire_target_0_stand_by
+				}
+				fail_text = SRA_fire_target_0_stand_by
+			}
+		}
+			
+		# hidden_effect = {
+		# 	set_country_flag = SRA_enabled_SRA_T4_weapon_planet_killer_selector
+		# 	country_event = {
+		# 		id = SRA_system_selector.1
+		# 	}
+		# }
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.40.c
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.40.c.desc
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_SOGZ_menu_sub_6_1_cool_down
+				}
+				fail_text = SRA_SOGZ_menu_sub_6_1_cool_down
+			}
+			custom_tooltip = {
+				NOT = {
+					has_country_flag = SRA_fire_target_0_stand_by
+				}
+				fail_text = SRA_fire_target_0_stand_by
+			}
+		}
+			
+		hidden_effect = {
+			set_country_flag = SRA_enabled_SRA_T4_weapon_planet_killer_selector
+			set_variable = { which = SRA_mini_menu_choose_button_target_variable value = 0 }
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.50
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith_return1
+		hidden_effect = {
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.2
+			}	
+		}
+	}
+}
+
+
+# #on_entering_system_fleet 跃迁完成
+# fleet_event = {
+# 	id = SRA_Spear_Of_Galaxy_Zenith.41
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = { 
+# 		is_ship_size = SRA_fire_target_0 
+# 		owner = {
+# 			NOT = {
+# 				has_country_flag = SRA_fire_target_0_on_way
+# 			}
+# 		}
+# 	}
+	
+# 	immediate = {
+# 		if = { 
+# 			limit = { is_ship_size = SRA_fire_target_0 }
+# 			fleet_event = { id = SRA_Spear_Of_Galaxy_Zenith.42 }
+# 			every_controlled_ship = {
+# 				set_timed_ship_flag = {
+# 					flag = SRA_on_ship_disabled_repair days = 15
+# 				}
+# 			}
+# 		}	
+# 		owner = {
+# 			remove_country_flag = SRA_fire_target_0_stand_by
+# 		}
+# 	}
+# }
+
+# fleet_event = {
+# 	id = SRA_Spear_Of_Galaxy_Zenith.42
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		owner = {
+# 			NOT = {
+# 				has_country_flag = SRA_fire_target_0_on_way
+# 			}
+# 		}
+# 	}	#_[目标定位器]
+# 	immediate = {
+# 	 fleet_event = { id = SRA_Spear_Of_Galaxy_Zenith.43 } 
+# 	}
+# }
+
+
+# fleet_event = {
+# 	id = SRA_Spear_Of_Galaxy_Zenith.43
+# 	title = SRA_Spear_Of_Galaxy_Zenith.43
+# 	desc = SRA_Spear_Of_Galaxy_Zenith.43.desc
+
+# 	is_triggered_only = yes
+# 	diplomatic = yes
+# 	force_open = yes
+# 	trigger = {
+# 		owner = {
+# 			has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+# 			has_country_flag = SRA_enabled_SRA_T4_weapon_planet_killer_selector
+# 		}
+# 	}
+
+# 	custom_gui = SRA_mini_menu_window
+# 	custom_gui_option = SRA_mini_menu_button
+# 	immediate = {
+# 	}
+	
+# 	after = {
+# 	}
+# 	option = {
+# 		name = SRA_Spear_Of_Galaxy_Zenith.43.a
+# 		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.43.a.desc
+# 		if = {
+# 			limit = { owner = { has_country_flag = SRA_SOGZ_menu_sub_5_1 }}
+# 			owner = { set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 360 }}
+# 		}
+# 		else = {
+# 			owner = { set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 180 }}
+# 		}
+# 		owner = {
+# 			random_situation = {
+# 				limit = {
+# 					is_situation_type = SRA_SOGZ_main_situation
+# 				}
+# 				add_situation_progress = -50
+# 			}
+# 		}
+# 		hidden_effect = { 
+# 			solar_system = {
+# 				set_star_flag = SRA_system_selector_selected_system
+# 			}
+# 			owner = {
+# 				country_event = {
+# 					id = SRA_Spear_Of_Galaxy_Zenith.44
+# 				}
+# 			}
+# 			destroy_fleet = {
+# 				target = this
+# 				kill_leader = no
+# 				destroy_template = yes
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = SRA_Spear_Of_Galaxy_Zenith.43.b
+# 		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.43.b.desc
+# 		if = {
+# 			limit = { owner = { has_country_flag = SRA_SOGZ_menu_sub_5_1 }}
+# 			owner = { set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 360 }}
+# 		}
+# 		else = {
+# 			owner = { set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 180 }}
+# 		}
+# 		owner = {
+# 			random_situation = {
+# 				limit = {
+# 					is_situation_type = SRA_SOGZ_main_situation
+# 				}
+# 				add_situation_progress = -50
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			every_system = {
+# 				remove_star_flag = SRA_system_selector_selected_system
+# 				remove_star_flag = SRA_T4_weapon_planet_killer_target@root
+# 				every_system_ambient_object = {
+# 					limit = { has_ambient_object_flag = SRA_T4_weapon_planet_killer_firing_effect@root }
+# 					destroy_ambient_object = this
+# 				}
+# 			}
+# 			add_modifier = { modifier = "SRA_fire_target_Buff_1" } 
+# 			fleet_event = {
+# 				id = SRA_Spear_Of_Galaxy_Zenith.48 days = 15
+# 			}
+# 			solar_system = {
+# 				every_fleet_in_system = {
+# 					limit = {
+# 						owner = {
+# 							is_hostile = root
+# 						}
+# 					}
+# 					add_modifier = { modifier = "SRA_fire_target_Buff_0" days = 15 }
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = SRA_Spear_Of_Galaxy_Zenith.43.c
+# 		hidden_effect = {
+# 			every_system = {
+# 				remove_star_flag = SRA_system_selector_selected_system
+# 				remove_star_flag = SRA_T4_weapon_planet_killer_target@root
+# 				every_system_ambient_object = {
+# 					limit = { has_ambient_object_flag = SRA_T4_weapon_planet_killer_firing_effect@root }
+# 					destroy_ambient_object = this
+# 				}
+# 			}
+# 			destroy_fleet = {
+# 				target = this
+# 				kill_leader = no
+# 				destroy_template = yes
+# 			}
+# 		}
+# 	}
+# }
+
+
+#  Starkiller destroy stars.
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.44
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { has_country_flag = SRA_enabled_SRA_T4_weapon_planet_killer_selector }
+	immediate = {
+		event_target:SRA_Spear_Of_Galaxy_Zenith = {
+			if = {
+				limit = { owner = { NOT = { has_country_flag = SRA_SOGZ_ark_ship_active } }  }
+				set_ship_design = { design = NAME_SRA_Bright_Galaxy_opening }
+				ship_event = {
+					id = SRA_Spear_Of_Galaxy_Zenith.57 days = 15
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { has_country_flag = SRA_SOGZ_menu_sub_5_1 }}
+			set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 180 }
+		}
+		remove_country_flag = SRA_enabled_SRA_T4_weapon_planet_killer_selector
+		set_variable = { which = SRA_temp_counter value = 0 }
+		every_system = {
+			limit = { has_star_flag = SRA_system_selector_selected_system }
+			remove_star_flag = SRA_system_selector_selected_system
+			set_star_flag = SRA_T4_weapon_planet_killer_target@root
+			root = { change_variable = { which = SRA_temp_counter value = 1 } }
+			random_system_planet = {
+				limit = { is_primary_star = yes }
+				SRA_nemesis_system_effect_3_effect = yes
+				last_created_ambient_object = { set_ambient_object_flag = SRA_T4_weapon_planet_killer_firing_effect@root }
+			}
+		}
+		if = { limit = { check_variable = { which = SRA_temp_counter value = 1 } } add_resource = { energy = 10000 sr_dark_matter = 1000 } }
+		else_if = { limit = { check_variable = { which = SRA_temp_counter value = 2 } } add_resource = { energy = 20000 sr_dark_matter = 2000 } }
+		else_if = { limit = { check_variable = { which = SRA_temp_counter value = 3 } } add_resource = { energy = 40000 sr_dark_matter = 4000 } }
+		else_if = { limit = { check_variable = { which = SRA_temp_counter value = 4 } } add_resource = { energy = 80000 sr_dark_matter = 8000 } }
+		else_if = { limit = { check_variable = { which = SRA_temp_counter value = 5 } } add_resource = { energy = 160000 sr_dark_matter = 16000 } }
+		if = {
+			limit = { check_variable = { which = SRA_temp_counter value > 0 } }
+			country_event = { id = SRA_Spear_Of_Galaxy_Zenith.45 days = 10 }
+		}
+		set_variable = { which = SRA_temp_counter value = 0 }
+		clear_variable = SRA_temp_counter
+	}
+}
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.45
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_owned_ship = {
+			OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+			} 
+		}
+	immediate = {
+		random_controlled_ship = {
+			limit = {
+				OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				}
+			}
+			owner = { country_event = { id = SRA_Spear_Of_Galaxy_Zenith.46 days = 5 } }
+			every_system = {
+				limit = { has_star_flag = SRA_T4_weapon_planet_killer_target@root }
+				random_system_planet = {
+					limit = { is_primary_star = yes }
+					SRA_eta_titan_system_portal_effect = yes
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.46
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_owned_ship = {
+			OR = {
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+			} 
+		}
+	}
+
+	immediate = {
+		random_controlled_ship = {
+			limit = { 
+				OR = {
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+				} 
+			}
+			every_system = {
+				limit = { has_star_flag = SRA_T4_weapon_planet_killer_target@root }
+				remove_star_flag = SRA_T4_weapon_planet_killer_target@root
+				random_system_planet = {
+					limit = { is_primary_star = yes }
+					fire_on_action = {
+						on_action = on_destroy_planet_with_SRA_T4_weapon_planet_killer
+						scopes = { from = prevprev.fleet }
+					}
+				}
+			}
+		}
+	}
+}
+# on_ship_destroyed_victim, Remove firing flag if ship destroyed.
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.47
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		fromfrom = { 
+			OR = {
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+			} 
+		} 
+	}
+	immediate = { 
+		every_system = {
+			limit = { has_star_flag = SRA_T4_weapon_planet_killer_target@root }
+			remove_star_flag = SRA_T4_weapon_planet_killer_target@root
+			every_system_ambient_object = {
+				limit = { has_ambient_object_flag = SRA_T4_weapon_planet_killer_firing_effect@root }
+				destroy_ambient_object = this
+			}
+		} 
+	}
+}
+
+fleet_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.48
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		delete_fleet = {
+			target = this
+			kill_leader = no
+			destroy_template = yes
+		}
+	}
+}
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.50
+	title = SRA_Spear_Of_Galaxy_Zenith.50
+	desc = SRA_Spear_Of_Galaxy_Zenith.50.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+	}
+
+	custom_gui = SRA_mini_menu_window
+	custom_gui_option = SRA_mini_menu_button
+	immediate = {
+	}
+	
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.50.a
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.50.a.desc
+		allow = {
+			custom_tooltip = {
+				exists = event_target:SRA_mini_menu_choose_button_target
+				fail_text = SRA_mini_menu_choose_button_lost_target
+			}
+			custom_tooltip = {
+				NOT = {
+					event_target:SRA_mini_menu_choose_button_target = {
+						solar_system = {
+							has_star_flag = SRA_system_selector_selected_system
+						}
+					}
+				}
+				fail_text = SRA_mini_menu_choose_button_duplicate_target
+			}
+		}
+		
+		hidden_effect = {
+			change_variable = { which = SRA_mini_menu_choose_button_target_variable value = -50 }
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.51
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith_return1
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.51.d.desc
+		hidden_effect = {
+			every_system = {
+				limit = {
+					has_star_flag = SRA_system_selector_selected_system
+				}
+				remove_star_flag = SRA_system_selector_selected_system
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.40
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.51
+	title = SRA_Spear_Of_Galaxy_Zenith.51
+	desc = SRA_Spear_Of_Galaxy_Zenith.51.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+	}
+
+	custom_gui = SRA_mini_menu_window
+	custom_gui_option = SRA_mini_menu_button
+	immediate = {
+		set_variable = {
+			which = SRA_mini_menu_choose_button_target_variable_limit
+			value = SRA_mini_menu_choose_button_target_variable
+		}
+		multiply_variable = {
+			which = SRA_mini_menu_choose_button_target_variable_limit
+			value = -1
+		}
+		change_variable = {
+			which = SRA_mini_menu_choose_button_target_variable_limit
+			value = 50
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.43.a
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.43.a.desc
+		if = {
+			limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1 }
+			set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 360 }
+		}
+		else = {
+			set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 180 }
+		}
+		random_situation = {
+			limit = {
+				is_situation_type = SRA_SOGZ_main_situation
+			}
+			add_situation_progress = prev.SRA_mini_menu_choose_button_target_variable
+		}
+		hidden_effect = {
+			event_target:SRA_mini_menu_choose_button_target = {
+				solar_system = {
+					set_star_flag = SRA_system_selector_selected_system
+				}
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.44
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.43.b
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.43.b.desc
+		if = {
+			limit = { has_country_flag = SRA_SOGZ_menu_sub_5_1 }
+			set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 360 }
+		}
+		else = {
+			set_timed_country_flag = { flag = SRA_SOGZ_menu_sub_6_1_cool_down days = 180 }
+		}
+		random_situation = {
+			limit = {
+				is_situation_type = SRA_SOGZ_main_situation
+			}
+			add_situation_progress = prev.SRA_mini_menu_choose_button_target_variable
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = SRA_fire_target_0_on_way days = 2
+			}
+			event_target:SRA_mini_menu_choose_button_target = {
+				solar_system = {
+					set_star_flag = SRA_system_selector_selected_system
+				}
+			}
+			every_system = {
+				limit = {
+					has_star_flag = SRA_system_selector_selected_system
+				}
+				remove_star_flag = SRA_system_selector_selected_system
+				# every_fleet_in_system = {
+				# 	limit = {
+				# 		owner = {
+				# 			is_hostile = root
+				# 		}
+				# 	}
+				# 	add_modifier = { modifier = "SRA_fire_target_Buff_0" days = 15 }
+				# }
+				create_fleet = {
+					name = "NAME_SRA_fire_target_0"
+					effect = {
+						set_owner = event_target:SRA_Spear_Of_Galaxy_Zenith_own_country
+						create_ship = {
+							name = random
+							design = "NAME_SRA_fire_target_0"
+							upgradable = no
+							effect = {
+								set_timed_ship_flag = {
+									flag = SRA_on_ship_disabled_repair days = 15
+								}
+								set_disable_at_health = 0.01
+								add_modifier = { modifier = "SRA_fire_target_Buff_1" } 
+								save_event_target_as = SRA_fire_target_0
+							}
+						}			
+						set_location = {
+							target = prev.star
+							distance = 100
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						fleet_event = {
+							id = SRA_Spear_Of_Galaxy_Zenith.48 days = 15
+						}
+					}
+					settings = { 
+						can_upgrade = no 
+						uses_naval_capacity = no
+						can_change_leader = no
+						can_change_composition = no
+						spawn_debris = no
+						ai_ignore_strength = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.51.c
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.51.c.desc
+		allow = {
+			custom_tooltip = {
+				NOT = {
+					any_situation = {
+						is_situation_type = SRA_SOGZ_main_situation
+						situation_progress < prev.SRA_mini_menu_choose_button_target_variable_limit
+					}
+				}
+				fail_text = SRA_SOGZ_menu_energy_no_enough
+			}
+		}
+		hidden_effect = {
+			event_target:SRA_mini_menu_choose_button_target = {
+				solar_system = {
+					set_star_flag = SRA_system_selector_selected_system
+				}
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.50
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.51.d
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.51.d.desc
+		hidden_effect = {
+			every_system = {
+				limit = {
+					has_star_flag = SRA_system_selector_selected_system
+				}
+				remove_star_flag = SRA_system_selector_selected_system
+			}
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.40
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.57
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_ship_design = { design = NAME_SRA_Bright_Galaxy_opened }
+		ship_event = {
+			id = SRA_Spear_Of_Galaxy_Zenith.58 days = 15
+		}
+	}
+}
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.58
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_ship_design = { design = NAME_SRA_Bright_Galaxy_closing }
+		SRA_eta_titan_system_portal_effect = yes
+		ship_event = {
+			id = SRA_Spear_Of_Galaxy_Zenith.59 days = 15
+		}
+	}
+}
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.59
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { owner = { has_country_flag = SRA_SOGZ_Adjust } }
+			set_ship_design = { design = NAME_SRA_Bright_Galaxy_Adjust }
+		}
+		else = {
+			set_ship_design = { design = NAME_SRA_Bright_Galaxy }
+		}
+	}
+}
+country_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.60
+	title = SRA_Spear_Of_Galaxy_Zenith.60
+	desc = SRA_Spear_Of_Galaxy_Zenith.60.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+	}
+
+	custom_gui = SRA_SOGZ_menu_window
+	custom_gui_option = SRA_SOGZ_menu_button
+	immediate = {
+		set_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+		SRA_SOGZ_sub_energy_choose_prepare_effect = yes
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Spear_Of_Galaxy_Zenith_engaged
+			SRA_SOGZ_sub_energy_choose_over_effect = yes
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.60.a
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.60.a.desc
+		allow = {
+			custom_tooltip = {
+				fail_text = SRA_Spear_Of_Galaxy_Zenith.60.a.custom_tooltip1
+				check_variable = { which = SRA_SOGZ_sub_energy_choose value >= 0 }
+			}
+			custom_tooltip = {
+				fail_text = SRA_Spear_Of_Galaxy_Zenith.60.a.custom_tooltip2
+				NOT = { has_country_flag = SRA_SOGZ_sub_energy_choose_nearly }
+			}
+		}
+		hidden_effect = {
+			SRA_SOGZ_sub_energy_choose_confirm_effect = yes
+			set_timed_country_flag = { flag = SRA_SOGZ_sub_energy_choose_nearly days = 180 }
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.2
+			}
+			random_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					}
+				}
+				ship_event = {
+					id = SRA_Spear_Of_Galaxy_Zenith.5023
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.60.b
+		hidden_effect = {
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.2
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.60.c
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.60.c.desc
+		trigger = {
+			NOR = {
+				has_country_flag = SRA_SOGZ_ark_ship_active
+				has_modifier = SRA_RE_SOGZ_Upkeep
+			}
+		}
+		hidden_effect = {
+			set_country_flag = SRA_SOGZ_ark_ship_active
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					}
+				}
+				create_fleet = {
+					name = "NAME_SRA_Spear_Of_Galaxy_Zenith"
+					effect = {
+						set_owner = root
+						create_ship = {
+							name = random
+							design = "NAME_SRA_Bright_Galaxy_Ark"
+							upgradable = no
+							effect = {
+								set_disable_at_health = 0.01
+								save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+								change_variable = {
+									which = SRA_world_machine_produces
+									value = 1
+								}
+								ship_event = {
+									id = SRA_Spear_Of_Galaxy_Zenith.5023
+								}
+							}
+						}			
+						set_location = {
+							target = prev
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						assign_leader = prev.fleet.leader
+					}
+				}
+				delete_ship = this
+			}
+			country_event = { id = SRA_Spear_Of_Galaxy_Zenith.60 }
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.60.d
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.60.d.desc
+		trigger = {
+			has_country_flag = SRA_SOGZ_ark_ship_active
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = SRA_Spear_Of_Galaxy_Zenith.60.d.custom_tooltip1
+				any_owned_colony = {
+					NOT = {
+						ship? = { is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark }
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = SRA_SOGZ_ark_ship_active
+			if = {
+				limit = { capital_scope = { NOT = { ship? = { is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark } } } }
+				capital_scope = { save_event_target_as = SRA_SOGZ_ark_ship_pop_destination }
+			}
+			else = {
+				random_owned_planet = {
+					limit = { is_capital = no }
+					save_event_target_as = SRA_SOGZ_ark_ship_pop_destination
+				}
+			}
+			if = {
+				limit = { any_owned_ship = { is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark } }
+				random_owned_ship = {
+					limit = { is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark }
+					leader? = { unassign_leader = this }
+				}
+				every_owned_pop_group = {
+					resettle_pop_group = {
+						POP_GROUP = this
+						PLANET = event_target:SRA_SOGZ_ark_ship_pop_destination
+						PERCENTAGE = 0.9
+					}
+				}
+			}
+			every_owned_ship = {
+				limit = { is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark }
+				create_fleet = {
+					name = "NAME_SRA_Spear_Of_Galaxy_Zenith"
+					effect = {
+						set_owner = root
+						if = {
+							limit = { owner = { has_country_flag = SRA_SOGZ_Adjust } }
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Bright_Galaxy_Adjust"
+								upgradable = no
+								effect = {
+									set_disable_at_health = 0.01
+									save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+									ship_event = { id = SRA_Spear_Of_Galaxy_Zenith.5023 }
+								}
+							}
+						}
+						else = {
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Bright_Galaxy"
+								upgradable = no
+								effect = {
+									set_disable_at_health = 0.01
+									save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+									ship_event = { id = SRA_Spear_Of_Galaxy_Zenith.5023 }
+								}
+							}
+						}
+						set_location = {
+							target = prev
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						assign_leader = prev.fleet.leader
+					}
+				}
+				delete_ship = this
+			}
+			country_event = { id = SRA_Spear_Of_Galaxy_Zenith.60 }
+		}
+	}
+	#切换武器模式
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.e
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.e.desc
+	 	trigger = {
+			has_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+		}
+		hidden_effect = { 
+			remove_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+			set_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.60
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.f
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.f.desc
+		trigger = {
+			has_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+	 	}
+		hidden_effect = { 
+			remove_country_flag = SRA_T4_weapon_planet_killer_sweeper_mode
+			set_country_flag = SRA_T4_weapon_planet_killer_killer_mode
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.60
+			}
+		}
+	}
+	#切换为可调整武器
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.g
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.g.desc
+	 	trigger = {
+			has_country_flag = SRA_Weapon_Adjust
+			NOT = {
+				has_country_flag = SRA_SOGZ_Adjust
+			}
+		}
+		hidden_effect = { 
+			set_country_flag = SRA_SOGZ_Adjust
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.60
+			}
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					}
+				}
+				save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+			fleet = { leader? = { save_event_target_as = SRA_target_leader unassign_leader = this } 
+				create_ship = {
+					name = random
+					design = "NAME_SRA_Bright_Galaxy_Adjust"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+							ship_event = {
+								id = SRA_Spear_Of_Galaxy_Zenith.5023
+							}
+						}
+					}
+				}
+				event_target:SRA_Spear_Of_Galaxy_Zenith = {
+					delete_ship = this
+				}
+				if = { limit = { exists = event_target:SRA_target_leader } 
+				    fleet = { assign_leader = event_target:SRA_target_leader } 
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Spear_Of_Galaxy_Zenith.10.h
+		custom_tooltip = SRA_Spear_Of_Galaxy_Zenith.10.h.desc
+		trigger = {
+			has_country_flag = SRA_SOGZ_Adjust
+	 	}
+		hidden_effect = { 
+			remove_country_flag = SRA_SOGZ_Adjust
+			country_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.60
+			}
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+						is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+					}
+				}
+				save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+			fleet = { leader? = { save_event_target_as = SRA_target_leader unassign_leader = this } 
+				create_ship = {
+					name = random
+					design = "NAME_SRA_Bright_Galaxy"
+						upgradable = no
+						effect = {
+							set_disable_at_health = 0.01
+							ship_event = {
+								id = SRA_Spear_Of_Galaxy_Zenith.5023
+							}
+						}
+					}
+				}
+				event_target:SRA_Spear_Of_Galaxy_Zenith = {
+					destroy_ship = this
+				}
+				if = { limit = { exists = event_target:SRA_target_leader } 
+				    fleet = { assign_leader = event_target:SRA_target_leader } 
+				}
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.1041
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		solar_system = {
+			every_fleet_in_system = {
+				limit = {
+					owner = {
+						is_hostile = root.owner
+					}
+				}
+				create_fleet = {
+					name = "NAME_SRA_SOGZ_menu_sub_4_1_ship_1"
+					effect = {
+						set_owner = Root.owner
+						create_ship = {
+							name = random
+							design = "NAME_SRA_Mutation_Boom_2"
+							upgradable = no
+						}		
+						set_location = {
+							target = prev
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_event_locked = yes
+						fleet_event = {
+							id = SRA_Spear_Of_Galaxy_Zenith.48 days = 25
+						}
+					}
+				}
+			}
+		}
+	}
+}
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.1043
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		solar_system = {
+			star = {
+				create_fleet = {
+					name = "NAME_SRA_SOGZ_menu_sub_4_3_ship_1"
+					effect = {
+						set_owner = Root.owner
+						create_ship = {
+							name = random
+							design = "NAME_SRA_SOGZ_menu_sub_4_3_ship_1"
+							upgradable = no
+							effect = {
+								ship_event = {
+									id = SRA_Spear_Of_Galaxy_Zenith.10431 days = 5
+								}
+							}
+						}		
+						set_location = {
+							target = prev
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+						set_event_locked = yes
+					}
+				}
+			}
+		}
+	}
+}
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.5023
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = SRA_SOGZ_menu_sub_5_2
+				}
+			}
+			add_modifier = { modifier = SRA_SOGZ_menu_sub_5_2_Buff days = -1 }
+		}
+		else = {
+			remove_modifier = SRA_SOGZ_menu_sub_5_2_Buff
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = SRA_SOGZ_menu_sub_5_3
+				}
+			}
+			add_modifier = { modifier = SRA_SOGZ_menu_sub_5_3_Buff days = -1 }
+		}
+		else = {
+			remove_modifier = SRA_SOGZ_menu_sub_5_3_Buff
+		}
+	}
+}
+ship_event = {
+	id = SRA_Spear_Of_Galaxy_Zenith.10431
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		fleet = {
+			create_ship = {
+				name = random
+				design = "NAME_SRA_SOGZ_menu_sub_4_3_ship_2"
+				upgradable = no
+			}
+			fleet_event = {
+				id = SRA_Spear_Of_Galaxy_Zenith.48 days = 30
+			}
+		}
+		destroy_ship = this
+	}
+}

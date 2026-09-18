@@ -1,0 +1,163 @@
+
+@SRA_ringworld_scale = 1.0
+@SRA_ringworld_cull_radius = 500.0
+@SRA_ringworld_size = 50.0
+
+
+#################################
+# Ringworld Clouds
+#################################
+# Medium
+entity = {
+	name = "SRA_ancient_ringworld_medium_cloud_entity"
+	pdxmesh = "SRA_ancient_ringworld_medium_cloud_mesh"
+	
+	cull_radius = 500.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 } }
+	state = { name = "construction" }
+	
+	game_data = {
+		size = 50
+		uv_animation_speed 		= 0.005
+		uv_animation_direction 	= { 1.0 0.0 }
+		emissive_recolor_crunch = 0.0
+	}
+}
+# Thin
+entity = {
+	name = "SRA_ancient_ringworld_thin_cloud_entity"
+	pdxmesh = "SRA_ancient_ringworld_thin_cloud_mesh"
+	
+	cull_radius = 500.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 } }
+	state = { name = "construction" }
+	
+	game_data = {
+		size = 50
+		uv_animation_speed 		= 0.005
+		uv_animation_direction 	= { 1.0 0.0 }
+		emissive_recolor_crunch = 0.0
+	}
+}
+
+#################################
+# Ringworld Tech Sections
+#################################
+# Damaged
+entity = {
+	name = "SRA_ancient_ringworld_tech_damaged_entity"
+	pdxmesh = "ringworld_tech_damaged_01_mesh"
+	cull_radius = @SRA_ringworld_cull_radius
+	scale = @SRA_ringworld_scale
+	game_data = { emissive_recolor_crunch = 0.0 }
+}
+# Blue
+entity = {
+	name = "SRA_ancient_ringworld_tech_blue_entity"
+	pdxmesh = "SRA_ancient_ringworld_tech_blue_mesh"
+	
+	scale = @SRA_ringworld_scale
+	
+	cull_radius = @SRA_ringworld_cull_radius
+	
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "SRA_ringworld_tech_blue" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "SRA_ringworld_tech_blue" keep_particle = yes trigger_once = yes }
+	}
+	
+	game_data = {
+		size = @SRA_ringworld_size
+		emissive_recolor_crunch = 0.0
+	}
+}
+#################################
+# Ringworld Habitable Sections
+#################################
+# Damaged
+entity = {
+	name = "SRA_ancient_ringworld_habitable_damaged_entity"
+	pdxmesh = "ringworld_habitable_damaged_01_mesh"
+	cull_radius = @SRA_ringworld_cull_radius
+	scale = @SRA_ringworld_scale
+	game_data = { emissive_recolor_crunch = 0.0 }
+}
+##############################
+# Gaia Ringworlds, the common version
+# Gaia - Shielded
+entity = {
+	name = "SRA_ancient_ringworld_habitable_gaia_blue_shielded_blue_01_entity"
+	pdxmesh = "SRA_ancient_ringworld_habitable_gaia_blue_mesh"
+	
+	scale = @SRA_ringworld_scale
+	
+	cull_radius = @SRA_ringworld_cull_radius
+	
+	default_state = "idle"
+	state = { name = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+	}
+	
+	game_data = {
+		size = @SRA_ringworld_size
+		emissive_recolor_crunch = 0.0
+	}
+	
+	attach = { root = "SRA_ancient_ringworld_medium_cloud_entity" }
+	attach = { root = "ringworld_shield_effect_entity" }
+}
+
+#####
+#city planet
+
+entity = {
+	name = "SRA_city_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "SRA_ancient_ringworld_habitable_city_blue_diffuse.dds"
+		texture_normal = "SRA_ancient_ringworld_habitable_city_blue_normal.dds"
+		texture_specular = "SRA_ancient_ringworld_habitable_city_blue_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "SRA_clouds_smog_01_white_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_smog_shadow_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
+
+}

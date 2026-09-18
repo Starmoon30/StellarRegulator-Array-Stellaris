@@ -1,0 +1,34 @@
+objectTypes = {
+
+	
+	
+	#######
+	# Room
+	#######
+	# Blue
+	pdxmesh = {
+		name = "SRA_ai_crisis_room_background_mesh"
+		file = "gfx/models/portraits/SRA_other/SRA_ai_crisis_room_background.mesh"
+		
+		animation = { id = "idle"	type = "ai_crisis_room_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "SRA_ai_crisis_room_mesh"
+		file = "gfx/models/portraits/SRA_other/SRA_ai_crisis_room.mesh"
+		
+		animation = { id = "idle"	type = "ai_crisis_room_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "SRA_ai_crisis_room_foreground_mesh"
+		file = "gfx/models/portraits/AI/ai_crisis_room_foreground.mesh"
+		
+		meshsettings = {
+			texture_diffuse = "SRA_ai_crisis_room_portrait.dds"
+		}	
+	}
+	
+	
+	
+}

@@ -1,0 +1,438 @@
+﻿SRA_Rocivia_Empire = {
+	randomized = no
+	ship_names = {
+		generic = {
+			"SRA_RE_SHIP_1"
+			"SRA_RE_SHIP_2"
+			"SRA_RE_SHIP_3"
+			"SRA_RE_SHIP_4"
+			"SRA_RE_SHIP_5"
+			"SRA_RE_SHIP_6"
+			"SRA_RE_SHIP_7"
+			"SRA_RE_SHIP_8"
+			"SRA_RE_SHIP_9"
+			"SRA_RE_SHIP_10"
+			"SRA_RE_SHIP_11"
+			"SRA_RE_SHIP_12"
+			"SRA_RE_SHIP_13"
+			"SRA_RE_SHIP_14"
+			"SRA_RE_SHIP_15"
+			"SRA_RE_SHIP_16"
+			"SRA_RE_SHIP_17"
+			"SRA_RE_SHIP_18"
+			"SRA_RE_SHIP_19"
+			"SRA_RE_SHIP_20"
+			"SRA_RE_SHIP_21"
+			"SRA_RE_SHIP_22"
+		}
+		
+		corvette = {
+			"SRA_RE_Corvette_1"
+			"SRA_RE_Corvette_2"
+			"SRA_RE_Corvette_3"
+			"SRA_RE_Corvette_4"
+			"SRA_RE_Corvette_5"
+			"SRA_RE_Corvette_6"
+			"SRA_RE_Corvette_7"
+		}
+		
+		destroyer = {
+			"SRA_RE_Destroyer_1"
+			"SRA_RE_Destroyer_2"
+			"SRA_RE_Destroyer_3"
+			"SRA_RE_Destroyer_4"
+			"SRA_RE_Destroyer_5"
+			"SRA_RE_Destroyer_6"
+		}
+		
+		cruiser = {
+			"SRA_RE_Cruiser_1"
+			"SRA_RE_Cruiser_2"
+			"SRA_RE_Cruiser_3"
+			"SRA_RE_Cruiser_4"
+			"SRA_RE_Cruiser_5"
+			"SRA_RE_Cruiser_6"
+		}
+
+		battleship = {
+			"SRA_RE_Battleship_1"
+			"SRA_RE_Battleship_2"
+			"SRA_RE_Battleship_3"
+			"SRA_RE_Battleship_4"
+			"SRA_RE_Battleship_5"
+			"SRA_RE_Battleship_6"
+		}
+
+		titan = {
+			"SRA_RE_Titan_1"
+			"SRA_RE_Titan_2"
+			"SRA_RE_Titan_3"
+			"SRA_RE_Titan_4"
+		}
+
+		colossus = {
+			"SRA_RE_Colossus_1"
+			"SRA_RE_Colossus_2"
+			"SRA_RE_Colossus_3"
+		}
+		juggernaut = {
+			"SRA_RE_Juggernaut_1"
+			"SRA_RE_Juggernaut_2"
+			"SRA_RE_Juggernaut_3"
+		}		
+		science = {
+			"SRA_RE_Science_1"
+			"SRA_RE_Science_2"
+			"SRA_RE_Science_3"
+			"SRA_RE_Science_4"
+			"SRA_RE_Science_5"
+			"SRA_RE_Science_6"
+			"SRA_RE_Science_7"
+			"SRA_RE_Science_8"
+		}
+		
+		colonizer = {
+			"SRA_RE_Colonizer_1"
+			"SRA_RE_Colonizer_2"
+			"SRA_RE_Colonizer_3"
+		}
+
+		sponsored_colonizer = {
+			"SRA_RE_Colonizer_1"
+			"SRA_RE_Colonizer_2"
+			"SRA_RE_Colonizer_3"
+		}
+		
+		constructor = {
+			"SRA_RE_Constructor_1"
+			"SRA_RE_Constructor_2"
+			"SRA_RE_Constructor_3"
+			"SRA_RE_Constructor_4"
+			"SRA_RE_Constructor_5"
+			"SRA_RE_Constructor_6"
+			"SRA_RE_Constructor_7"
+		}
+		
+		transport = {
+			"SRA_RE_transport_1"
+			"SRA_RE_transport_2"
+			"SRA_RE_transport_3"
+			"SRA_RE_transport_4"
+			"SRA_RE_transport_5"
+		}
+		
+		military_station_small = { 
+			"SRA_RE_Station_1"
+			"SRA_RE_Station_2"
+			"SRA_RE_Station_3"
+			"SRA_RE_Station_4"
+			"SRA_RE_Station_5"
+		}
+
+		ion_cannon = {
+			"SRA_RE_ion_cannon_1"
+			"SRA_RE_ion_cannon_2"
+			"SRA_RE_ion_cannon_3"
+			"SRA_RE_ion_cannon_4"
+			"SRA_RE_ion_cannon_5"
+		}
+		
+	}
+
+	fleet_names = {
+		random_names = {
+			"SRA_RE_Fleet_1"
+			"SRA_RE_Fleet_2"
+			"SRA_RE_Fleet_3"
+			"SRA_RE_Fleet_4"
+			"SRA_RE_Fleet_5"
+			"SRA_RE_Fleet_6"
+			"SRA_RE_Fleet_7"
+			"SRA_RE_Fleet_8"
+			"SRA_RE_Fleet_9"
+			"SRA_RE_Fleet_10"
+			"SRA_RE_Fleet_11"
+			"SRA_RE_Fleet_12"
+			"SRA_RE_Fleet_13"
+			"SRA_RE_Fleet_14"
+			"SRA_RE_Fleet_15"
+		}
+		sequential_name = "SRA_RE_NAME_LIST_Fleet_xx_ORD"
+	}
+	
+	army_names = {
+		generic = {
+			sequential_name = HUMAN3_LIMITANEIxx_ROM
+		}
+
+		machine_defense = {
+			sequential_name = HUMAN3_LIMITANEIxx_ROM
+		}
+
+		machine_assault_1 = {
+			sequential_name = HUMAN3_LEGIOxx_ROM
+		}
+
+		machine_assault_2 = {
+			sequential_name = HUMAN3_LEGIOxx_ROM
+		}
+
+		machine_assault_3 = {
+			sequential_name = HUMAN3_LEGIOxx_ROM
+		}
+
+		assault_army = {
+			sequential_name = HUMAN3_LEGIOxx_ROM
+		}
+
+		slave_army = {
+			sequential_name = HUMAN3_AUXILIAxx_ROM
+		}
+
+		clone_army = {
+			sequential_name = HUMAN3_CLONANDIxx_ROM
+		}
+
+		undead_army = {
+			sequential_name = HUMAN3_LEGIOHORRORIAExx_ROM
+		}
+
+		robotic_army = {
+			sequential_name = HUMAN3_ROBOTUMxx_ROM
+		}
+
+		robotic_defense_army = {
+			sequential_name = HUMAN3_LIMITANEIROBOTUMxx_ROM
+		}
+
+		psionic_army = {
+			sequential_name = HUMAN3_LEGIOPSYCHICAxx_ROM
+		}
+
+		xenomorph_army = {
+			sequential_name = HUMAN3_BESTIAAUXILIAxx_ROM
+		}
+
+		gene_warrior_army = {
+			sequential_name = HUMAN3_LEGIOPRAETORIAExx_ROM
+		}
+
+		occupation_army = {
+			sequential_name = HUMAN3_COHORTVIGILUMxx_ROM
+		}
+
+		robotic_occupation_army = {
+			sequential_name = HUMAN3_ROBOTUMVIGILUMxx_ROM
+		}
+
+		primitive_army = {
+			sequential_name = HUMAN3_PRIMITIVEARMYxx_SEQ
+		}
+		industrial_army = {
+			sequential_name = HUMAN3_INDUSTRIALARMYxx_SEQ
+		}
+		postatomic_army = {
+			sequential_name = HUMAN3_POSTATOMICARMYxx_SEQ
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"SRA_RE_Planet_1"
+				"SRA_RE_Planet_2"
+				"SRA_RE_Planet_3"
+				"SRA_RE_Planet_4"
+				"SRA_RE_Planet_5"
+				"SRA_RE_Planet_6"
+				"SRA_RE_Planet_7"
+				"SRA_RE_Planet_8"
+				"SRA_RE_Planet_9"
+				"SRA_RE_Planet_10"
+				"SRA_RE_Planet_11"
+				"SRA_RE_Planet_12"
+				"SRA_RE_Planet_13"
+				"SRA_RE_Planet_14"
+				"SRA_RE_Planet_15"
+				"SRA_RE_Planet_16"
+				"SRA_RE_Planet_17"
+				"SRA_RE_Planet_18"
+				"SRA_RE_Planet_19"
+				"SRA_RE_Planet_20"
+				"SRA_RE_Planet_21"
+				"SRA_RE_Planet_22"
+				"SRA_RE_Planet_23"
+				"SRA_RE_Planet_24"
+				"SRA_RE_Planet_25"
+				"SRA_RE_Planet_26"
+				"SRA_RE_Planet_27"
+				"SRA_RE_Planet_28"
+				"SRA_RE_Planet_29"
+				"SRA_RE_Planet_30"
+				"SRA_RE_Planet_31"
+				"SRA_RE_Planet_32"
+				"SRA_RE_Planet_33"
+				"SRA_RE_Planet_34"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+				
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+	### CHARACTERS
+
+	character_names = {
+
+		default = {
+			first_names_male = {
+				"SRA_RE_fn_m_1"
+				"SRA_RE_fn_m_2"
+				"SRA_RE_fn_m_3"
+				"SRA_RE_fn_m_4"
+				"SRA_RE_fn_m_5"
+				"SRA_RE_fn_m_6"
+				"SRA_RE_fn_m_7"
+				"SRA_RE_fn_m_8"
+				"SRA_RE_fn_m_9"
+				"SRA_RE_fn_m_10"
+				"SRA_RE_fn_m_11"
+				"SRA_RE_fn_m_12"
+				"SRA_RE_fn_m_13"
+				"SRA_RE_fn_m_14"
+				"SRA_RE_fn_m_15"
+				"SRA_RE_fn_m_16"
+				"SRA_RE_fn_m_17"
+				"SRA_RE_fn_m_18"
+			}
+			first_names_female = {
+				"SRA_RE_fn_fm_1"
+				"SRA_RE_fn_fm_2"
+				"SRA_RE_fn_fm_3"
+				"SRA_RE_fn_fm_4"
+				"SRA_RE_fn_fm_5"
+				"SRA_RE_fn_fm_6"
+				"SRA_RE_fn_fm_7"
+				"SRA_RE_fn_fm_8"
+				"SRA_RE_fn_fm_9"
+				"SRA_RE_fn_fm_10"
+				"SRA_RE_fn_fm_11"
+				"SRA_RE_fn_fm_12"
+				"SRA_RE_fn_fm_13"
+				"SRA_RE_fn_fm_14"
+				"SRA_RE_fn_fm_15"
+				"SRA_RE_fn_fm_16"
+				"SRA_RE_fn_fm_17"
+				"SRA_RE_fn_fm_18"
+				"SRA_RE_fn_fm_19"
+				"SRA_RE_fn_fm_20"
+				"SRA_RE_fn_fm_21"
+				"SRA_RE_fn_fm_22"
+				"SRA_RE_fn_fm_23"
+				"SRA_RE_fn_fm_24"
+				"SRA_RE_fn_fm_25"
+				"SRA_RE_fn_fm_26"
+				"SRA_RE_fn_fm_27"
+				"SRA_RE_fn_fm_28"
+			}
+			second_names = {
+				"SRA_RE_sn_1"
+				"SRA_RE_sn_2"
+				"SRA_RE_sn_3"
+				"SRA_RE_sn_4"
+				"SRA_RE_sn_5"
+				"SRA_RE_sn_6"
+				"SRA_RE_sn_7"
+				"SRA_RE_sn_8"
+				"SRA_RE_sn_9"
+				"SRA_RE_sn_10"
+				"SRA_RE_sn_11"
+				"SRA_RE_sn_12"
+				"SRA_RE_sn_13"
+				"SRA_RE_sn_14"
+				"SRA_RE_sn_15"
+				"SRA_RE_sn_16"
+				"SRA_RE_sn_17"
+				"SRA_RE_sn_18"
+				"SRA_RE_sn_19"
+				"SRA_RE_sn_20"
+				"SRA_RE_sn_21"
+				"SRA_RE_sn_22"
+				"SRA_RE_sn_23"
+				"SRA_RE_sn_24"
+				"SRA_RE_sn_25"
+				"SRA_RE_sn_26"
+				"SRA_RE_sn_27"
+				"SRA_RE_sn_28"
+				"SRA_RE_sn_29"
+				"SRA_RE_sn_30"
+				"SRA_RE_sn_31"
+				"SRA_RE_sn_32"
+				"SRA_RE_sn_33"
+				"SRA_RE_sn_34"
+				"SRA_RE_sn_35"
+				"SRA_RE_sn_36"
+				
+			}
+		}
+	}
+}

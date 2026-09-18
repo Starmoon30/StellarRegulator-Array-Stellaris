@@ -1,0 +1,178 @@
+
+
+weapon_component_template = {
+	key = "SRA_SD_weapon_L_Laser"
+	size = large
+	type = instant
+	icon = "GFX_SRA_SD_weapon_L_Laser"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 1024 max = 1536 }
+	
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 240
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_4
+	armor_penetration = @SRA_weapon_penetration_4
+	tracking = 1
+	power = -80
+	
+	ship_modifier = {
+		component_lifesteal_add = 1
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 7500
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_SD_ship_Part" }
+	component_set = "SRA_SD_weapon_L_Laser"
+	projectile_gfx = "SRA_l_weapon_1"
+	tags = { weapon_type_SRA_SD_Arcane weapon_type_energy l_slot artillery }
+	ai_tags = { weapon_role_anti_armor gunship artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 4800
+		}
+	}
+}
+weapon_component_template = {
+	key = "SRA_SD_weapon_L_accuracy"
+	size = large
+	type = instant
+	icon = "GFX_SRA_SD_weapon_L_accuracy"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 256 max = 384 }
+	
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 240
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_4
+	armor_penetration = @SRA_weapon_penetration_4
+	tracking = 1
+	power = -80
+	
+	ship_modifier = {
+		ship_accuracy_mult = 1
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_SD_ship_Part" }
+	component_set = "SRA_SD_weapon_L_accuracy"
+	projectile_gfx = "SRA_pd_weapon_1"
+	tags = { weapon_type_SRA_SD_Arcane weapon_type_energy l_slot artillery }
+	ai_tags = { weapon_role_anti_armor gunship artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 4800
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SRA_SD_weapon_L_Repair"
+	size = large
+	type = instant
+	icon = "GFX_SRA_SD_weapon_L_Repair"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 1 max = 1 }
+	
+	windup = { min = 0 max = 0 }
+	total_fire_time = 10
+	range = 320
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_4
+	armor_penetration = @SRA_weapon_penetration_4
+	tracking = 1
+	power = -80
+	
+	ship_modifier = {
+		component_lifesteal_add = 3200
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 7500
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_SD_ship_Part" }
+	component_set = "SRA_SD_weapon_L_Repair"
+	projectile_gfx = "SRA_l_weapon_1"
+	tags = { weapon_type_SRA_SD_Arcane weapon_type_energy l_slot artillery }
+	ai_tags = { weapon_role_anti_armor gunship artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 4800
+		}
+	}
+}
+
+
+
+weapon_component_template = {
+	key = "SRA_SD_Abyss_Hostile_Ship_main_weapon"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_T1_weapon_planet_killer"
+	icon_frame = 1
+
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	damage = { min = 640 max = 640 }
+	
+	windup = { min = 0 max = 80 }
+	total_fire_time = 3160
+	range = 320
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	tracking = 1
+	power = -800000
+	hide_damage_values_from_tooltip = yes
+	custom_tooltip = SRA_SD_Abyss_Hostile_Ship_main_weapon_DESC
+	ai_weight = {
+		weight = 0
+	}
+	#Scope = ship (target), from = ship (shooter)
+	on_hit = {
+		fleet = {
+			every_owned_ship = {
+				set_timed_ship_flag = {
+					flag = SRA_Return_To_Calamitisease_Ship_Aura_1 days = 32
+				}
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	projectile_gfx = "SRA_t_weapon_1_no_windup"
+	tags = { weapon_type_SRA_supreme }
+	ai_tags = { weapon_role_anti_hull }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 4800
+		}
+	}
+}

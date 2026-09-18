@@ -1,0 +1,144 @@
+# 	on_success = { 					# Effect happens when project completes
+# 		# Scopes:
+# 		# 	THIS = project scope (matches setting in "event_scope" i.e. ship/planet/country)
+# 		# 	FROM = location scope, if set (usually a planet)
+# 		# 	PREV = country
+# 	}
+	
+# 	on_start = { 					# Effect happens when you start researching the project
+# 		# Scopes: see on_success
+# 	}
+	
+# 	on_progress_25/50/75 = {  		# Effect happens when you have researched X% of the research costs
+# 		# Scopes: see on_success
+# 	}
+	
+# 	on_fail = { 					# Effect happens if you allow the timelimit to expire
+# 		# Scopes:
+# 		# 	THIS = country
+# 		# 	FROM = project scope (matches setting in "event_scope" i.e. ship/planet/country). Might not exist!
+# 		# 	FROMFROM = location scope, if set (usually a planet)
+# 	}
+
+# 	on_cancel = { 					# Effect happens if you choose to stop researching or if the abort_trigger returns true
+# 		# Scopes: See on_fail
+# 	}
+
+# 	abort_trigger = { 				# Trigger for aborting the project and removing it from the situation log. Fires on_cancel effect
+# 		# Scopes: See on_fail
+# 	}
+# }
+
+#星光二号
+special_project = {
+	key = "SRA_AG_STARLIGHTII"
+	days_to_research = 120
+	tech_department = engineering_technology
+	picture = GFX_evt_ag_lost_ancient_battleship
+
+	event_scope = country_event
+	
+	abort_trigger = {
+		NOT = { exists = event_target:ag_starlight_2_ship }
+	}
+	on_success = {
+		country_event = { id = SRA_ag_StarLightII.26 }
+	}
+}
+special_project = {
+	key = "SRA_AG_STARLIGHTII_REPAIR"
+	days_to_research = 3600
+	tech_department = engineering_technology
+	picture = GFX_evt_ag_lost_ancient_battleship
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_ag_StarLightII.9999 }
+	}
+}
+#曙光之星
+special_project = {
+	key = "SRA_ag_epsilon_titan"
+	days_to_research = 120
+	tech_department = engineering_technology
+	picture = GFX_evt_ag_ancient_AI
+
+	event_scope = country_event
+	
+	on_success = {
+		set_country_flag = ag_StarinAurora_use_anim_portrait
+		ag_epsilon_titan_diplo_portrait_check = yes
+		if = {
+			limit = { has_country_flag = SRA_ag_StarLightII.1002.a }
+			country_event = { id = SRA_ag_StarLightII.1006 }
+		}
+		else = {
+			country_event = { id = SRA_ag_StarLightII.1005 }
+		}
+	}
+}
+#幻星一号
+special_project = {
+	key = "SRA_ag_kappa_computer"
+	days_to_research = 120
+	tech_department = engineering_technology
+	picture = GFX_evt_ag_ancient_AI
+
+	event_scope = country_event
+	
+	on_success = {
+		set_country_flag = ag_Illustelia_use_anim_portrait
+		ag_kappa_computer_diplo_portrait_check = yes
+		country_event = {
+			id = SRA_ag_StarLightII.1103
+		}
+	}
+}
+
+
+
+special_project = {
+	key = SRA_ag_StarLightII_eta_gateway_event_overwrite_project
+	days_to_research = 30
+	tech_department = physics_technology
+	picture = GFX_evt_mysterious_signal
+	icon = "gfx/interface/icons/situation_log/situation_log_ag_ancients.dds"
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 10
+	}
+	on_progress_25 = { ship_event = { id = ag_eta.127 } }
+	on_success = {
+		if = {
+			limit = { NOR = { has_global_flag = ag_eta_titan_event_ended has_global_flag = ag_eta_symbol_checking } }
+			event_target:global_event_country = {
+				set_variable = { which = ag_eta_symbols_check_result_overwrite value = 1 }
+				country_event = { id = ag_eta.106 days = 15 random = 15 }
+			}
+			owner = { country_event = { id = ag_eta.118 } }
+		}
+		else = { owner = { country_event = { id = ag_eta.120 } } }
+	}
+	on_fail = { }
+}
+
+
+#星穹之矛
+special_project = {
+	key = "SRA_SPEAR_OF_GALAXY_ZENITH"
+	cost = 1000000
+	tech_department = engineering_technology
+	picture = GFX_evt_death_from_above
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_Spear_Of_Galaxy_Zenith.1 }
+	}
+}
+#瘟疫之心转移至SOGZ
+
+

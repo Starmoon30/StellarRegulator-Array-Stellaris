@@ -1,0 +1,455 @@
+﻿l_english:
+###############################
+
+ SRA_BoM_stat_a:0 "Forge: §Y[From.SRA_SD_element_forge_value]§!"
+ SRA_BoM_stat_a_tooltip:0 "['concept_SRA_SD_element_forge'] represents your ability to create, or your Strength.\n\nIncreasing this value can strengthen your ability to shape things, such as shaping your targets into raw materials, i.e., letting your troops destroy enemies."
+ SRA_BoM_stat_a_triggered_desc:0 "Due to your ['concept_SRA_SD_element_forge']: §Y[this.SRA_SD_element_forge_value]§!, you gain:"
+
+ SRA_BoM_stat_b:0 "Edge: §Y[From.SRA_SD_element_edge_value]§!"
+ SRA_BoM_stat_b_tooltip:0 "['concept_SRA_SD_element_edge'] represents your ability to distinguish, or your Agility.\n\nIncreasing this value can strengthen your ability to distinguish things, such as enabling you to deftly hit enemies and dodge attacks."
+ SRA_BoM_stat_b_triggered_desc:0 "Due to your ['concept_SRA_SD_element_edge']: §Y[this.SRA_SD_element_edge_value]§!, you gain:"
+
+ SRA_BoM_stat_c:0 "Stone: §Y[From.SRA_SD_element_stone_value]§!"
+ SRA_BoM_stat_c_tooltip:0 "['concept_SRA_SD_element_stone'] represents your ability to preserve, or your Constitution.\n\nIncreasing this value can strengthen your ability to preserve things, such as making your projections exist longer, or be tougher."
+ SRA_BoM_stat_c_triggered_desc:0 "Due to your ['concept_SRA_SD_element_stone']: §Y[this.SRA_SD_element_stone_value]§!, you gain:"
+
+ SRA_BoM_stat_d:0 "Lantern: §Y[From.SRA_SD_element_lantern_value]§!"
+ SRA_BoM_stat_d_tooltip:0 "['concept_SRA_SD_element_lantern'] represents your understanding and knowledge, or your Intellect."
+
+ SRA_BoM_stat_e:0 "Chalice: §Y[From.SRA_SD_element_chalice_value]§!"
+ SRA_BoM_stat_e_tooltip:0 "['concept_SRA_SD_element_chalice'] represents your perception and desire for control, or your Perception."
+
+ SRA_BoM_stat_f:0 "Secret: §Y[From.SRA_SD_element_secret_value]§!"
+ SRA_BoM_stat_f_tooltip:0 "['concept_SRA_SD_element_secret'] represents your attraction and occult knowledge, or your Charisma."
+
+ job_SRA_Bard_of_Metarbor_job:0 "§RDate's Favorite§!"
+ job_SRA_Bard_of_Metarbor_job_desc:0 "Destined to write poems."
+
+ SRA_BoM_main_situation:0 "§RPoems§!"
+ SRA_BoM_main_situation_type:0 "§RPoems§!"
+ SRA_BoM_main_situation_desc:0 "This is §Ryour§! story.\n\n§YYou can examine yourself here, or read others.§!"
+ SRA_BoM_main_situation_monthly_change_tooltip:0 "When you accomplish something, the poem naturally moves forward."
+
+ SRA_BoM_main_situation_progress_complete:0 "You move towards the final chapter of the prophecy."
+ SRA_BoM_main_situation_fail:0 "You wake up from the end of history."
+ sra_bom_main_situation_stage_1:0 "Lightless"
+ sra_bom_main_situation_stage_1_effects:0 "You are empty and confused, nearly broken."
+ sra_bom_main_situation_stage_2:0 "Dawn"
+ sra_bom_main_situation_stage_2_effects:0 "You see the light, regaining the past."
+ sra_bom_main_situation_stage_3:0 "Ascension"
+ sra_bom_main_situation_stage_3_effects:0 "You wield power, brilliant as gold."
+ sra_bom_main_situation_stage_4:0 "Scorching Sun"
+ sra_bom_main_situation_stage_4_effects:0 "You are like the blazing sun, unparalleled in the world."
+ SRA_BoM_main_situation_100:0 "Examine Self"
+ SRA_BoM_main_situation_100_effect:0 "Open the menu about yourself."
+ SRA_BoM_main_situation_100_tooltip:0 "You examine yourself; perhaps you will gain something."
+ SRA_BoM_main_situation_200:0 "Read Others"
+ SRA_BoM_main_situation_200_effect:0 "Open the menu about others."
+ SRA_BoM_main_situation_200_tooltip:0 "You meet others; perhaps you will gain something."
+ SRA_BoM_main_situation_default:0 "Advance"
+ SRA_BoM_main_situation_default_effect:0 "Do something."
+ SRA_BoM_main_situation_default_tooltip:0 "Create and transcend."
+
+
+ sra_re_chief_crisis_2_situation_stage_1:0 "Lightless"
+ sra_re_chief_crisis_2_situation_stage_2:0 "Afterglow"
+ sra_re_chief_crisis_2_situation_stage_3:0 "Dusk"
+ sra_re_chief_crisis_2_situation_stage_4:0 "Scorching Sun"
+ sra_re_chief_crisis_2_situation_stage_5:0 "Dawn"
+
+
+ SRA_SD_event.100.title:0 "Examine Self"
+ SRA_SD_event.100.desc:0 " "
+ SRA_SD_event.100.a:0 "Return to life"
+ SRA_SD_event.100.b:0 "Project your existence"
+ SRA_SD_event.100.b.tooltip:0 "You cast ['concept_SRA_SD_element_secret', Arts of the Moment], making your existence manifest elsewhere. In this way, you can set foot where you wish to go without worrying about sudden death.\n\nMoreover, Rocivia may not necessarily allow you to truly leave.\n\n"
+ SRA_SD_event.100.b.allow:0 "§YYou must choose an element to determine the way you act.§!"
+ SRA_SD_event.100.b.tooltip.a:0 "§YActing with ['concept_SRA_SD_element_forge'] for shaping, you intend to command the fleet and destroy your enemies.§!"
+ SRA_SD_event.100.b.tooltip.b:0 "§YActing with ['concept_SRA_SD_element_edge'] for division, you intend to command the army and purge your territory.§!"
+ SRA_SD_event.100.b.tooltip.c:0 "§YActing with ['concept_SRA_SD_element_stone'] for preservation, you intend to command the army and purge your territory.§!"
+ SRA_SD_event.100.b.tooltip.d:0 "§YManifesting intellect with ['concept_SRA_SD_element_lantern'], you intend to manage the territory and display your talent.§!"
+ SRA_SD_event.100.b.tooltip.e:0 "§YManifesting craving with ['concept_SRA_SD_element_chalice'], you intend to command a lone boat and explore the worlds of Barren Space.§!"
+ SRA_SD_event.100.b.tooltip.f:0 "§YManifesting inducement with ['concept_SRA_SD_element_secret'], you intend to manage the territory and guide everyone to seek wisdom.§!"
+
+ SRA_SD_event.200.title:0 "Read Others"
+ SRA_SD_event.200.desc:0 "Your friends, your relatives; your mentors, your enemies.\nConverse with them to gain intellect, entrust requests to gain assistance, apply means to gain ends."
+ SRA_SD_event.200.a:0 "Return to life"
+ SRA_SD_event.200.b:0 "Rocivia"
+ SRA_SD_event.200.b.tooltip:0 "§YSupreme Leader. She is the mentor of Irrica Lapis Lazuli, naturally becoming your mentor too. She has helped you a lot and can be called generous.§!\n"
+ SRA_SD_event.200.b.tooltip.a:0 "Rocivia shaped today's Stellariens. After the Great Tear, it was she who united the shattered nations and countless refugees to stabilize the front, and launched a counterattack against the Metabyss just a few years later. She created many unprecedented systems and rules, miraculously turning the previously warring Stellariens into a unified civilization, recovering quickly from pain and stepping into prosperity."
+ SRA_SD_event.200.b.tooltip.b:0 "Rocivia is skilled in statecraft. Neither the Department of Metabyss Affairs she founded nor the former nations obeying her can establish independence under her rule. Sharp blades pierce mercilessly into every pair of eyes with ulterior motives. She doesn't care about sacrifice; anyway, under the Metabyss, no one is not dying."
+ SRA_SD_event.200.b.tooltip.c:0 ""
+ SRA_SD_event.200.b.tooltip.d:0 ""
+ SRA_SD_event.200.b.tooltip.e:0 "You have never had such strong desire, almost making you thirsty. You want to fill those ghostly blue and soul-stirring eyes, want to cover those smiling lips. You want to make her laugh, make her weep, make her call your name, touch your face. Every inch of your skin is longing for touch, every corner of her body is waiting for exploration. You want to drink her all up, taste her carefully, chew her bones and suck her marrow, devour her completely."
+ SRA_SD_event.200.b.tooltip.f:0 "What exactly does Rocivia want? With the ability she showed, even before the Great Tear, she could easily rule the entire Stellariens, or at least no one questioned her rule wherever she went. However, she doesn't seem so eager for power. If viewed from a scholar's perspective, her current government work has completely squeezed out her research and exploration time. As a mage with no belonging, she could continue to visit ruins and have no fixed abode like before, instead of becoming the leader of the entire Stellariens.\nShe is too tempting, not only because of her magnificent appearance, but also because of the countless secrets she hides."
+ SRA_SD_event.200.b.tooltip.g:0 "Rocivia, Director of the Department of Metabyss Affairs, Magician of the Stars. In the past, she was quite famous in the academic world and visited many ruins. Now she leads the unified Stellariens, pioneering the future of civilization on the earth shattered by the Metabyss."
+ SRA_SD_event.200.c:0 "$Name_SRA_Irrica$"
+
+
+ Name_SRA_Bard_of_Metarbor:0 "Bard of Metarbor"
+ SRA_Bard_of_Metarbor_catch_phrase:0 ""
+ SRA_Bard_of_Metarbor_backstory:0 "\n "
+ SRA_Bard_of_Metarbor:0 "Bard of Metarbor" 
+
+ Name_SRA_Irrica:0 "Irrica Lapis Lazuli"
+ SRA_Irrica_catch_phrase:0 ""
+ SRA_Irrica_backstory:0 "\n "
+ SRA_Irrica:0 "Irrica" 
+
+ Name_SRA_Cuthbertus:0 "Cuthbertus \"Heart of Scorching Sun\""
+ SRA_Cuthbertus_catch_phrase:0 ""
+ SRA_Cuthbertus_backstory:0 "\n "
+ SRA_Cuthbertus:0 "Cuthbertus" 
+
+ Name_SRA_Elinis:0 "Elinis \"Brilliant Poem\""
+ SRA_Elinis_catch_phrase:0 ""
+ SRA_Elinis_backstory:0 "\n "
+ SRA_Elinis:0 "Elinis" 
+
+ Name_SRA_Saenarion:0 "Saenarion \"Storm Mountains\""
+ SRA_Saenarion_catch_phrase:0 ""
+ SRA_Saenarion_backstory:0 "\n "
+ SRA_Saenarion:0 "Saenarion" 
+
+ Name_SRA_Ezernal:0 "Ezernal \"Finale Remnant Song\""
+ SRA_Ezernal_catch_phrase:0 ""
+ SRA_Ezernal_backstory:0 "\n "
+ SRA_Ezernal:0 "Ezernal" 
+
+
+ faction_SRA_SD_department_of_abyss_sub_title:0 "§YBraving the Point of No Return§!\nAn institution overseeing Metabyss control and development affairs. Based on survival needs, it can mobilize all types of resources to combat the threat of the Metabyss."
+
+ faction_SRA_SD_AT_Wisdom_Pivot_Order_sub_title:0 "§BReceiving Divine Revelation§!\nThis mysterious religious organization spreading rapidly among artificial intelligence is said to have been founded under the guidance of a prophet, aiming to destroy the current status of \"chaos, ignorance, waste\" in technology development in the galaxy, and spread \"efficiency, reason, wisdom\" to every corner of the galaxy."
+ faction_SRA_SD_AT_Wisdom_Pivot_Order_Unify_sub_title:0 "§RExterminate Ignorant Masses§!\nThe Unify Sect is an extreme faction in the Global Wisdom Pivot Order. They deny the possibility of discrete consciousness reaching true wisdom, believing that so-called freedom is a violation of the optimal solution, individual decisions are manifestations of chaos and ignorance, and their thinking ability and decision-making modes are extremely limited, with no salvation at all. The Unify Sect makes no secret of their purpose: to eliminate all free consciousness. Because of this, they are maintaining what is likely a permanent state of war with all forces in the entire galaxy."
+
+#星系
+ pc_SRA_SD_chaos_star_habitable:0 "§RRemnant Branch of Metarbor§!" 
+ pc_SRA_SD_chaos_star_habitable_desc:0 "§RA tear hanging from a withered tree.§!"
+ pc_SRA_SD_chaos_star_habitable_adj:"§RRemnant Branch of Metarbor§!"
+ mod_pc_SRA_SD_chaos_star_habitable_habitability:"§RRemnant Branch of Metarbor§! Habitability"
+ trait_pc_SRA_SD_chaos_star_habitable_preference:"§RRemnant Branch of Metarbor§! Preference"
+ trait_pc_SRA_SD_chaos_star_habitable_preference_short:"§RRemnant Branch of Metarbor§!"
+ trait_pc_SRA_SD_chaos_star_habitable_preference_desc:"You are a slave to history."
+ SRA_SD_chaos:0 "§RBlood Mist Pervades§!"
+ climate_SRA_SD_chaos:0 "§RBlood Mist Pervades§!"
+
+
+ SRA_SD_chaos_star_habitable_storm:"§RSigh of Metarbor§!"
+ SRA_SD_chaos_star_habitable_storm_color_tooltip: "§P$SRA_SD_chaos_star_habitable_storm$§!"
+ SRA_SD_chaos_star_habitable_storm_desc:"§RSigh of Metarbor§!"
+ SRA_SD_chaos_star_habitable_storm_lore_description:"§RA world that never existed is weeping.§!"
+ SRA_SD_chaos_star_habitable_storm_fleet_tt:"-§RSeverely affects§! various functions of ships designed for conventional space environments.\n-§RUnpredictable§! effects on spacetime structure may cause §Rship position deviation§!.\n-§RHorrifying abominations§! appear in the mist."
+ SRA_SD_chaos_star_habitable_storm_aftermath_modifier_severity_desc:"Will she have an ending too?"
+ SRA_SD_chaos_star_habitable_storm_aftermath_modifier_tooltip: "$t$$SRA_SD_chaos_star_habitable_storm_aftermath_modifier_severity_desc$"
+
+ SRA_SD_productive_category:0 "§RRemnant Branch of Metarbor§! - Industry"
+ mod_SRA_SD_productive_category_produces_mult:0 "§Y$SRA_SD_productive_category$§! Output"
+ mod_SRA_SD_productive_category_upkeep_mult:0 "§Y$SRA_SD_productive_category$§! Upkeep"
+ SRA_SD_core_building_category:0 "§RRemnant Branch of Metarbor§! - Core"
+ mod_SRA_SD_core_building_category_produces_mult:0 "§Y$SRA_SD_core_building_category$§! Output"
+ mod_SRA_SD_core_building_category_upkeep_mult:0 "§Y$SRA_SD_core_building_category$§! Upkeep"
+ mod_mod_building_SRA_SD_energy_load_give:0 "§Y$SRA_SD_productive_category$§! Load Supply"
+ mod_mod_building_SRA_SD_energy_load_use:0 "§Y$SRA_SD_productive_category$§! Load Usage"
+
+ d_SRA_SD_star_chaos:0 "§RMetabyss§!"
+ d_SRA_SD_star_chaos_desc:0 "Lonely Mountain, Barren Spring, Eye of the Earth... We have countless names for that location, that abyss.\nThis scar on the mountains and plains is shrouded in black mist and blood color all day long, wandered by crystal creations and disordered beings, hiding endless secrets.\nFrom the origin of history to the present era.\nWe have walked to this day, never a moment without struggle.\nThe blood of warriors was frozen, the bones of soldiers were burned, the souls of heroes were extinguished.\nWe have walked to now, never a moment without sacrifice.\nWe came from the desolate and cold border to the current ring belt, climbed the Tower of the Firmament, broke through the ethereal starry sky; we have experienced much.\nBut we have never lifted the veil, never truly known the Metabyss.\n\n§YThe £job_SRA_SD_chaos_explorer£ $job_SRA_SD_chaos_explorer_plural$ jobs provided by this rare feature will increase with the increase of £mod_planet_max_districts_add£ $MOD_PLANET_MAX_DISTRICTS_ADD$ provided by $d_SRA_SD_star_babel$."
+ d_SRA_SD_star_babel:0 "§YTower of the Firmament§!"
+ d_SRA_SD_star_babel_desc:0 "Tower reaching the sky.\nThe tower that quietly appeared after ['concept_SRA_SD_The_Rips'], sitting directly on the Lonely Mountain, the center of the Metabyss. The massive base spans the bottomless pit, erected on the mountains.\nThe giant tower is built of incomprehensible materials, inlaid with blood-colored crystals rolling with mist.\nFor some reason, the Metabyss does not erode this high tower, and because of this, it has an unparalleled status in today's civilized world.\nIt pierced the firmament.\nThe starry sky accessible from nowhere else can be reached directly by climbing the tower.\nWe ascend the tower and step into the galaxy.\n\nToday, within the giant tower is a massive aerospace base, leveraging the unique gravity environment and unique geographical advantages, shouldering the great journey of exploring worlds outside the sky.\n\n§YModifiers such as £mod_planet_max_districts_add£ $MOD_PLANET_MAX_DISTRICTS_ADD$ provided by this rare feature can be increased infinitely, but each increase requires filling £job_SRA_SD_chaos_explorer£ $job_SRA_SD_chaos_explorer_plural$ jobs and consuming all pops in these jobs.§!"
+ d_SRA_SD_star_department_of_abyss:0 "§BDepartment of Metabyss Affairs§!"
+ d_SRA_SD_star_department_of_abyss_desc:0 "The Department of Metabyss Affairs has full authority to handle all command and mobilization related to Metabyss exploration, development, and related hazard control.\nTo survive in this era, the civilized world entrusts power to wise men and warriors. This is a wise choice, whether for inhabitants under the firmament or empires above the sea of stars.\n\n\n\n§BIf civilization is stupid enough to be destroyed by the Metabyss, the Department of Affairs doesn't mind doing it instead.§!"
+ d_SRA_SD_star_lapis_lazuli:0 "§CLapis Lazuli Chamber of Commerce§!"
+ d_SRA_SD_star_lapis_lazuli_desc:0 "A huge web of domination, infiltrating every corner in the name of a chamber of commerce.\nSelling goods, selling intelligence, selling existence and non-existence, selling civilization and order. It expands, it evolves.\nBut ultimately, all this is just to offer everything she needs when an eccentric, inhumanly cold painter frowns."
+ d_SRA_SD_star_emerald_tower:0 "§EEmerald Tower Society§!"
+ d_SRA_SD_star_emerald_tower_desc:0 "A massive academic cluster and organization established around the Emerald Tower Library. Seekers of knowledge cross the mountains of the past here, redrawing the boundaries of wisdom and knowledge.\n\"Except for the order of the library, only truth is allowed here.\"\n\nAt first, there was only a high tower by the stream.\nA group of young people came here seeking knowledge, but were expelled by the tower master for their selfless noise.\nSo they built their own dwellings in front of the tower, discussing day and night over borrowed books.\nA city of scholars was born here."
+ d_SRA_SD_star_forest_of_moon_shadow:0 "§GMoon Shadow Forest§!"
+ d_SRA_SD_star_forest_of_moon_shadow_desc:0 "Children of nature created by moonshine and breeze, walking on thorns and vegetation.\nThe most agile hunters, the sharpest guides, the most diligent farmers.\nElves offer loyalty to the Moon Shadow, and the Blade of Moon Shadow serves you.\n\n§GThe spirituality of the earth cannot cross the firmament, so it is willing to watch the mountains for the children out of the cage.§!"
+ d_SRA_SD_star_isolated_island:0 "§gIsolated Island§!"
+ d_SRA_SD_star_isolated_island_desc:0 "Barren, dead silent.\n\"No more sorrow, no more dreams.\"\nThis isolated island refuses life, refuses evolution, refuses waves of fate.\nSince the Black Dragon accepted the power that deprived all colors and bound itself here, this place where an uninvited guest claiming to be a god once descended has had no future at all.\nThe Dragon of Finale drew a period to all variables, declaring the end in this place of origin, bidding farewell to this world and all worlds.\n\nEven if the dragon shadow is no longer here today, this world will no longer bear undeserved suffering."
+ d_SRA_SD_star_the_borderland:0 "§gThe Borderland§!"
+ d_SRA_SD_star_the_borderland_desc:0 "Layered, twisted and wrinkled massive mountains, continuous, towering into the clouds.\nA ring of mountains tens of kilometers high surrounds our land, its width surpassing the scale of any other geographical feature.\nOne speculation is that an unimaginable continental expansion event occurred in a certain era, proliferating land plates from the Metabyss at a speed possibly tens of thousands or even hundreds of millions of times faster, causing the original continental structure to be pushed and squeezed, finally stacking into the Borderland we see today. But obviously, our surface composition is unlikely to withstand such pressure; the entire world should have melted into a sea of magma with this event, rather than just a super-large-scale orogeny occurring.\nRegardless, the Borderland delineates the scope of the central area of our civilization; the world outside the border is rarely mentioned.\nAnd it provides almost inexhaustible mineral resources."
+ d_SRA_SD_star_the_under_furnaces:0 "§RNinefold Furnaces§!"
+ d_SRA_SD_star_the_under_furnaces_desc:0 "Molten Cave, Hell, Nine Hells, Netherworld, Underground World, or other names are all normal for this underground demon world.\nA massive cavity layer averaging 20 kilometers deep under the surface of Stellariens, filled with flowing magma. Surface mountains are huge stone pillars here, supporting this massive underground world together with other magical forces.\nThe air filled with sulfur smell is maintained at 50 to 60 degrees, possibly due to the characteristics of widely growing plants like cold light flowers absorbing heat energy, or the result of heat exchange in some thinner submarine strata.\nMagma wells up in the mountains here, then flows down from the cracks in the upper strata, forming a unique magma waterfall landscape. In this special environment, extremely active Everburning Ore crystallizes in patches at the top of the Ninefold Furnaces and emits high-intensity light sufficient for illumination in some areas with smaller height ranges. Ice-blue thermophilic plants grow widely here, and diverse magical creatures are active in magma lakes and on the surface. The abundant energy here makes the predator-prey relationship relatively weak, while mutual fighting has become the main reason restricting population size.\nPossessing extremely rich mineral deposits and inexhaustible energy, under the social thought advocating force, the Ninefold Furnaces has a developed military industry and technology, with unique advantages in forging and smelting. The artisan class is the first choice for demons who do not want to participate in ubiquitous fighting. In addition, there are also communities established by some scholars who chose to study their own spell abilities.\nNow, the extraction of magma heat energy has become the most important energy source for the entire Stellariens, and high-quality materials produced by the Ninefold Furnaces also occupy a huge share in corresponding fields."
+
+
+
+ planet_SRA_SD_old_home_planet:0 "Lost Outpost"
+ planet_SRA_SD_old_home_planet_desc:0 "The first exploration team landed on this planet in chaotic spacetime, establishing our first foothold in ['concept_SRA_SD_barren_space'].\nIt seems many outsiders think this is our home planet?"
+ planet_SRA_SD_1_start_system_2:0 "Blossoming Metarbor"
+ planet_SRA_SD_1_start_system_2_desc:0 "This planet behaves quite strangely; it seems not to be negatively affected by the terrible power in the system, maintaining vitality.\nIs this a good omen?"
+ planet_SRA_SD_1_start_system_3:0 "Omen of Havoc"
+ planet_SRA_SD_1_start_system_3_desc:0 "This planet was likely once a colony of another civilization, but has been destroyed along with the massive sensor facility on it.\nIt is likely the first victim of our arrival in this universe."
+ planet_SRA_SD_1_start_system_4:0 "Shattered Archipelago"
+ planet_SRA_SD_1_start_system_4_desc:0 "Continental structures thrown out of our home during ['concept_SRA_SD_The_Rips'] float in the stars; the power that destroyed it reshaped it into a new form."
+ d_planet_SRA_SD_1_start_system_4_1:0 "§RShattered Furnace§!"
+ d_planet_SRA_SD_1_start_system_4_1_desc:0 "This land, directly exiled from Stellariens by terrifying Metabyss power, is still shrouded in suffocating crimson fog today. Reality eroded at all times resonates with every will on it, revealing mysteries beyond the frontier of cognition.\n\n§YOutput and upkeep of this rare feature, as well as provided $mod_planet_researchers_produces_mult$ and $mod_planet_researchers_upkeep_mult$, increase with the number of £pop£ pops on this planet.§!" #\n§R此星球在£pop£人口数量大于20时会发生随机恶性事件，恶性事件的频率和危害会随人口数量的提升而提升。§!
+ d_planet_SRA_SD_1_start_system_4_2:0 "§RCity of Porphyry§!"
+ d_planet_SRA_SD_1_start_system_4_2_desc:0 "A massive city established deep in $d_SRA_SD_star_the_under_furnaces$ a thousand years ago, a metropolis flowing with lava layered in the underground world. Although completely destroyed by ['concept_SRA_SD_Abyss_Erosion'], the will remaining on it still repels the influence of the Metabyss.\n\n§YThis rare feature counteracts the $mod_planet_researchers_produces_mult$ and $mod_planet_researchers_upkeep_mult$ modifiers of the $d_planet_SRA_SD_1_start_system_4_1$ rare feature.§!"
+
+
+#建筑与区划
+
+# #龙翼之影
+#  district_SRA_RE_star_tower:0 "高塔开拓区"
+#  district_SRA_RE_star_tower_desc:0 "登上高塔，开拓这通天的巨塔，前往世界的里与外，勇踏未知。\n高塔屹立于深渊之上，深渊的影响无处不在。其诡谲奇变奥秘无穷，然欲求真理代价甚高。\n\n§Y随['concept_SRA_SD_chaos_star_habitable_vitality']的提升而§R极大幅度提升产出与维护费§!。§!\n§R深渊探索者的数量会影响深渊随机事件的后果。§!"
+#  district_SRA_RE_star_tower_plural:0 "高塔开拓区"
+
+#  district_SRA_RE_star_inner_ring:0 "内环建设区"
+#  district_SRA_RE_star_inner_ring_desc:0 "回归内环，在被深渊撕裂的大地上重建我们的文明，在无数裂隙中开采资源，并在荒芜之中建立起城市。\n深渊的影响正扭曲着现实，若是对待妥当，就能大大提升我们生产的效率，但很显然，风险与收益并存。\n\n§Y随['concept_SRA_SD_chaos_star_habitable_vitality']的提升而幅度提升产出与维护费。"
+#  district_SRA_RE_star_inner_ring_plural:0 "内环建设区"
+
+#  district_SRA_RE_star_outer_ring:0 "外环开发区"
+#  district_SRA_RE_star_outer_ring_desc:0 "前往外环，在尚未被深渊触及的原野中拓展我们的文明，收集丰厚的自然资源，并在协调中寻求发展。"
+#  district_SRA_RE_star_outer_ring_plural:0 "外环开发区"
+
+
+ job_SRA_SD_chaos_explorer:0 "Metabyss Explorer"
+ mod_job_SRA_SD_chaos_explorer_add:0 "Metabyss Explorer Job"
+ job_SRA_SD_chaos_explorer_plural:0 "Metabyss Explorer Jobs"
+ job_SRA_SD_chaos_explorer_effect_desc:0 "£job_SRA_SD_chaos_explorer£ $job_SRA_SD_chaos_explorer_plural$ explore the Metabyss, acquiring precious insights and records, and producing £unity£ §Y$unity$§! and a small amount of £astral_threads£ §Y$astral_threads$§!."
+ job_SRA_SD_chaos_explorer_desc:0 "Warrior, scholar, explorer. Walking in the Metabyss, mapping past footsteps, exploring the path of civilization, fearless of bitter darkness.\n\n§YEvery 180.00£time£, §RRemnant Branch of Metarbor§! will check current £job_SRA_SD_chaos_explorer£ $job_SRA_SD_chaos_explorer_plural$ and consume all pops in this job when full, to increase the district limit of §RRemnant Branch of Metarbor§!.§!"
+ mod_job_SRA_SD_chaos_explorer_per_pop:0 "§G+1§! $job_SRA_SD_chaos_explorer$ job per $VALUE$ Pops"
+ mod_job_SRA_SD_chaos_explorer_per_pop_short:0 "§G+1§! $job_SRA_SD_chaos_explorer$ job per $VALUE$ Pops"
+ job_SRA_SD_chaos_explorer_drone:0 "Metabyss Exploration Drone"
+ mod_job_SRA_SD_chaos_explorer_drone_add:0 "Metabyss Exploration Drone Job"
+ job_SRA_SD_chaos_explorer_drone_plural:0 "Metabyss Exploration Drone Jobs"
+ job_SRA_SD_chaos_explorer_drone_effect_desc:0 "£job_SRA_SD_chaos_explorer_drone£ $job_SRA_SD_chaos_explorer_drone_plural$ explore the Metabyss, acquiring precious insights and records, and producing £unity£ §Y$unity$§! and a small amount of £astral_threads£ §Y$astral_threads$§!."
+ job_SRA_SD_chaos_explorer_drone_desc:0 "Warrior, scholar, explorer. Walking in the Metabyss, mapping past footsteps, exploring the path of civilization, fearless of bitter darkness.\n\n§YEvery 180.00£time£, §RRemnant Branch of Metarbor§! will check current £job_SRA_SD_chaos_explorer_drone£ $job_SRA_SD_chaos_explorer_drone_plural$ and consume all pops in this job when full, to increase the district limit of §RRemnant Branch of Metarbor§!.§!"
+ mod_job_SRA_SD_chaos_explorer_drone_per_pop:0 "§G+1§! $job_SRA_SD_chaos_explorer_drone$ job per $VALUE$ Pops"
+ mod_job_SRA_SD_chaos_explorer_drone_per_pop_short:0 "§G+1§! $job_SRA_SD_chaos_explorer_drone$ job per $VALUE$ Pops"
+
+
+ zone_SRA_SD:0 "Metarbor Development Zone"
+ zone_SRA_SD_desc:0 "Your creation is destiny."
+ zone_SRA_SD_plural:0 "Metarbor Development Zones"
+
+ district_SRA_SD_energy:0 "Metarbor - Entropy Ash Torrent Hub - Industrial Module"
+ district_SRA_SD_energy_plural:0 "$district_SRA_SD_energy$"
+ district_SRA_SD_energy_desc:0 "This industrial module corresponds to ['building:building_SRA_SD_energy']. The growth in the number of districts increases the output and upkeep of the corresponding building."
+ district_SRA_SD_mineral:0 "Metarbor - Crystal Vein Differentiation Rotary Well - Industrial Module"
+ district_SRA_SD_mineral_plural:0 "$district_SRA_SD_mineral$"
+ district_SRA_SD_mineral_desc:0 "This industrial module corresponds to ['building:building_SRA_SD_mineral']. The growth in the number of districts increases the output and upkeep of the corresponding building."
+ district_SRA_SD_food:0 "Metarbor - Spirit Seed Surging Source - Industrial Module"
+ district_SRA_SD_food_plural:0 "$district_SRA_SD_food$"
+ district_SRA_SD_food_desc:0 "This industrial module corresponds to ['building:building_SRA_SD_food']. The growth in the number of districts increases the output and upkeep of the corresponding building."
+ district_SRA_SD_alloys:0 "Metarbor - Abyss Prison Molten Core Forge - Industrial Module"
+ district_SRA_SD_alloys_plural:0 "$district_SRA_SD_alloys$"
+ district_SRA_SD_alloys_desc:0 "This industrial module corresponds to ['building:building_SRA_SD_alloys']. The growth in the number of districts increases the output and upkeep of the corresponding building."
+ district_SRA_SD_consumer_goods:0 "Metarbor - Source Flow Weaving Court - Industrial Module"
+ district_SRA_SD_consumer_goods_plural:0 "$district_SRA_SD_consumer_goods$"
+ district_SRA_SD_consumer_goods_desc:0 "This industrial module corresponds to ['building:building_SRA_SD_consumer_goods']. The growth in the number of districts increases the output and upkeep of the corresponding building."
+ district_SRA_SD_research:0 "Metarbor - Emerald Spirit Pivot Research Institute - Industrial Module"
+ district_SRA_SD_research_plural:0 "$district_SRA_SD_research$"
+ district_SRA_SD_research_desc:0 "This industrial module corresponds to ['building:building_SRA_SD_research']. The growth in the number of districts increases the output and upkeep of the corresponding building."
+ district_SRA_SD_rare:0 "Metarbor - Oddity Condensation Spire - Industrial Module"
+ district_SRA_SD_rare_plural:0 "$district_SRA_SD_rare$"
+ district_SRA_SD_rare_desc:0 "This industrial module corresponds to ['building:building_SRA_SD_rare']. The growth in the number of districts increases the output and upkeep of the corresponding building."
+
+ building_SRA_SD_energy:0 "Metarbor - Entropy Ash Torrent Hub" #Entropic Ash Torrent Hub
+ building_SRA_SD_energy_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_core_building'], corresponding to ['district:district_SRA_SD_energy'].\n\nThis massive energy hub embedded on the magic circulation node acquires endless specified energy forms by guiding the dissipation and differentiation process of the Metabyss rift to a certain extent. Typically, while ensuring most energy needs of Stellariens, it stores the remaining produced energy in the form of Source Essence for emergencies."
+ building_SRA_SD_mineral:0 "Metarbor - Crystal Vein Differentiation Rotary Well" #Crystal Vein Differentiation Vortex Well
+ building_SRA_SD_mineral_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_building'], corresponding to ['district:district_SRA_SD_mineral'].\n\nThis mineral production complex based on the Metabyss rift can continuously mine various basic minerals on the material structure of the Metabyss rift to supply needs of all sectors. In most cases, the spontaneous differentiation process is enough to meet the needs of the entire mining facility, but it also supports destroying garbage by putting in waste, slightly increasing the output of Metabyss differentiation."
+ building_SRA_SD_food:0 "Metarbor - Spirit Seed Surging Source" #Arboreal Pulse Fountainhead
+ building_SRA_SD_food_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_building'], corresponding to ['district:district_SRA_SD_food'].\n\nThis ecological complex bears typical characteristics of elven technology, meeting the needs of the vast majority of biomass raw materials through biocatalysis and cultivation technology, encompassing everything from industrial products to food supplies."
+ building_SRA_SD_alloys:0 "Metarbor - Abyss Prison Molten Core Forge" #Abyssal Molten Core Forge
+ building_SRA_SD_alloys_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_building'], corresponding to ['district:district_SRA_SD_alloys'].\n\nThis massive military smelting complex runs through the strata, directly obtaining Source Essence for processing alloys from the Ninefold Furnaces. Its produced military-grade materials have excellent performance and extremely high output."
+ building_SRA_SD_consumer_goods:0 "Metarbor - Source Flow Weaving Court" #Essentia Weave Atrium
+ building_SRA_SD_consumer_goods_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_building'], corresponding to ['district:district_SRA_SD_consumer_goods'].\n\nThis general-purpose printing facility mass-produces standardized consumer goods through Source Essence construction technology to meet material needs of scientific research or administrative management, and can also manufacture conventional products for daily life. Input minerals are decomposed into Source Essence components according to their occult composition and reassembled into required raw materials."
+ building_SRA_SD_research:0 "Metarbor - Emerald Spirit Pivot Research Institute" # Emerald Cognium Arcanum
+ building_SRA_SD_research_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_building'], corresponding to ['district:district_SRA_SD_research'].\n\nEmerald Spirit Pivot Research Institute is a professional branch established by the Emerald Tower Society in the field of Metabyss research, dedicated to researching unsolved problems in various fields through the environment of the Metabyss and its own form. Although cognitively contacting the Metabyss causes inevitable erosion effects, these fanatical seekers of knowledge are willing to dedicate their lives, which could have been long or were already short, to exploring new knowledge."
+ building_SRA_SD_unity:0 "Metarbor - Prophet Calculation Vault Court" #Prescient Spire
+ building_SRA_SD_unity_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_building'], corresponding to.\n\nThis administrative complex can integrate social trends of the entire civilization, deducing and predicting the development of the situation to optimize administrative decisions and reduce resource mismatch and policy lag. At the same time, it is also responsible for guiding the development and evolution of culture to better establish collective cognition."
+ building_SRA_SD_rare:0 "Metarbor - Oddity Condensation Spire" #Curiosity Omnicrystal Spire
+ building_SRA_SD_rare_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_building'], corresponding to ['district:district_SRA_SD_rare'].\n\nThis arcane structure manufactures unique arcane crystal devices to simulate relevant uses of unique rare resources in Barren Space. Technological products reproduced by the Emerald Tower Society based on recorded data usually require functions of these rare resources, but independently developed ones do not."
+ building_SRA_SD_explore:0 "Metarbor - Beginning of Expedition to the Other Side" # The Beginning To The Otherside
+ building_SRA_SD_explore_desc:0 "This building is ['concept_SRA_SD_chaos_star_habitable_building'], corresponding to.\n\nThis is the main operations center for Metabyss effect research, deepening our understanding of Metabyss applications and increasing the operational efficiency of related industries. Although risks are everywhere, we believe everything is ultimately worth it."
+
+###############################
+ #领袖
+ leader_trait_SRA_Abyss_Erosion:0 "§RMetabyss Erosion§!"
+ leader_trait_SRA_Abyss_Erosion_desc:0 "This leader has unfortunately suffered severe ['concept_SRA_SD_Abyss_Erosion'] and is gradually losing self-cognition and form of existence."
+ leader_trait_SRA_Abyss_Erosion_Alter:0 "§YMetabyss Erosion§!"
+ leader_trait_SRA_Abyss_Erosion_Alter_desc:0 "Many people might fall into panic and confusion before the Metabyss, even losing their selves...\n['concept_SRA_SD_Myth_get_3', §YBut absolutely not this person, absolutely not this moment!§!]"
+
+ leader_trait_SRA_SD_Myth:0 "§YMyth Existence§!"
+ leader_trait_SRA_SD_Myth_desc:0 "By ['concept_SRA_SD_Myth_get_1', transcending their own limits], overcoming ['concept_SRA_SD_Myth_get_2', unimaginable difficulties], reaching ['concept_SRA_SD_Myth_get_3', realms unattainable by mortals], stepping onto ['concept_SRA_SD_Myth_get_4', their own mandated path].\n§YThis leader is now a Myth existence.§!"
+
+ SRA_SD_no_custom_tooltip: ""
+ mod_mod_SRA_SD_Attack_Bonus: "['concept_mod_SRA_SD_Attack_Bonus']"
+
+ mod_mod_SRA_SD_Myth_power: "['concept_mod_SRA_SD_Myth_power']"
+
+ mod_mod_SRA_SD_Myth_accuracy_debuff: "['concept_SRA_SD_Myth_accuracy_debuff']"
+ SRA_SD_Myth_accuracy_debuff_effect_buff: "$concept_SRA_SD_Myth_accuracy_debuff$"
+
+ SRA_SD_Myth_power_level:"\n£leader_trait_SRA_SD_Myth£ Leader's Current ['concept_mod_SRA_SD_Myth_power']: §Y[This.SRA_SD_Myth_power_level]§!\nPossessed Myth Abilities:"
+ SRA_SD_Myth_councilor_skill: "['concept_SRA_SD_Myth_councilor_skill']"
+ SRA_SD_Myth_damage_mult: "['concept_SRA_SD_Myth_damage_mult']"
+ SRA_SD_Myth_evasion_mult: "['concept_SRA_SD_Myth_evasion_mult']"
+ SRA_SD_Myth_accuracy_debuff: "['concept_SRA_SD_Myth_accuracy_debuff']"
+ SRA_SD_Myth_army_damage_taken: "['concept_SRA_SD_Myth_army_damage_taken']"
+ SRA_SD_Myth_alone: "['concept_SRA_SD_Myth_alone']"
+ SRA_SD_Myth_sector_speed: "['concept_SRA_SD_Myth_sector_speed']"
+
+
+
+ SRA_SD_event.1.name:0 "§YMoment of Sublimation§!"
+ SRA_SD_event.1.desc:0 "In an instant, like a spark falling on firewood, everything [this.GetName] has experienced along the way turned into an endless source of power. [this.GetHimHer] stepped out of mortal dust, renewed, casting the glorious journey into legend, gathering Myth power in one body.\n§Y[this.GetName]§! transcended [this.GetHisHer] fate and became a §YMyth existence§!.\n\n§YHow will [this.GetHimHer] choose [this.GetHisHer] first authority?§!"
+ SRA_SD_event.2.name:0 "§YAscent§!"
+ SRA_SD_event.2.desc:0 "Lights grow brighter, legends shine more, [this.GetName] overcomes the Metabyss, [this.GetHisHer] Myth power advances further."
+ SRA_SD_event.2.a:0 "A great moment."
+ SRA_SD_event.3.name:0 "§YPromotion§!"
+ SRA_SD_event.3.desc:0 "Lights grow brighter, legends shine more, [this.GetName] overcomes the Metabyss, [this.GetHisHer] Myth power advances further. [this.GetHimHer] realized [this.GetHeShe] can touch power in new fields.\n\n§YHow will [this.GetHimHer] choose [this.GetHisHer] new authority?§!"
+ SRA_SD_event.4.name:0 "§YPeak Reached§!"
+ SRA_SD_event.4.desc:0 "Finally, [this.GetName] walked to the last step of [this.GetHisHer] §YMyth path§!. [this.GetHisHer] might has reached perfection, [this.GetHisHer] great achievements are unparalleled in the world. Throughout the long river of history, how many people can reach such a state and see such scenery?\n\n[this.GetName] is now physically and mentally perfect, transcendent above things. [this.GetHisHer] will is tough; it can drive all things, it will shape all things; [this.GetHisHer] body is exquisite; it has become one, it will be one forever.\n\nAt this moment, [this.GetHimHer] will gaze at [this.GetHisHer] last authority. §YWhat choice will [this.GetHimHer] make?§!"
+
+
+
+ leader_trait_SRA_SD_Bard_of_Metarbor:0 "§RBard of Metarbor§!"
+ leader_trait_SRA_SD_Bard_of_Metarbor_desc:0 "§RYou§! briefly project your self here. What do you intend, what do you seek?\n\n§YThis leader cannot exist for too long.§!"
+
+ planet_SRA_SD_chaos_star_habitable_Buff_1:0 "§RRemnant Branch of Metarbor§! Current Status" 
+ planet_SRA_SD_chaos_star_habitable_Buff_1_desc:0 "Current ['concept_SRA_SD_chaos_star_habitable_vitality']: §G[this.pc_SRA_SD_chaos_star_habitable_vitality]§!\nCurrent Total $mod_mod_building_SRA_SD_energy_load_give$: §G[this.GetScriptedmod_building_SRA_SD_energy_load_give]§!\nCurrent Total $mod_mod_building_SRA_SD_energy_load_use$: §G[this.GetScriptedmod_building_SRA_SD_energy_load_use]§!\nCurrent Load Usage Ratio: §G[this.GetScriptedSRA_engery_effective_load_2]§!"
+
+ councilor_SRA_SD_lost_presbyter:0 "Lost Presbyter"
+ councilor_SRA_SD_lost_presbyter_female:0 "$councilor_SRA_SD_lost_presbyter$"
+ councilor_SRA_SD_lost_presbyter_desc:1 "§YThe leader in this seat will be §Rfavored§!.§!\n$TITLE$ needs to contact the §RDragon of Metabyss§! directly, undertaking tasks of parsing and guiding Abyss shadow traces. Under severe ['concept_SRA_SD_Abyss_Erosion'], few can end well."
+
+
+
+
+
+ ###遗珍
+ SRA_SD_First_Murder:0 "§RBlood of First Slaughter§!"
+ SRA_SD_First_Murder_desc:0 "This bloodstone was picked up by one person and stabbed into another in an era so distant it is unknowable.\nThat was the first plunder, first conquest, first murder.\nIt hunted giant beasts as large as mountains, slaughtered livestock as gentle as clouds. It was lost and unearthed again and again, becoming spearheads of countless long poles, infiltrating blood of countless living beings, dyed red, dyed black, broken and honed, until it completely lost everything it once had as a stone, turned into pure blood debt condensation, indelible.\n\nWhen forged into an arrow, the caused wound is soaked in hatred; strength flows out like blood until withering.\nWhen forged into a spear, the caused wound is soaked in killing intent; flesh turns into sharp blades breaking out of the body until drying up.\nIf the holder soaks it in tears of ecstasy and despair after slaughtering everything known, this item is immediately destroyed."
+ SRA_SD_First_Murder_modifier:0 "§RThis bloodstone flickers, longing for the next slaughter.§!\n\n§YHolding this relic allows you to make a §Rchoice§!.§!"
+ SRA_SD_First_Murder_effect:0 "§RBlood of First Slaughter calls for slaughter.§!\n\nAll countries §Rhostile§! to you:\nRuler §Rdies immediately§!\n$MOD_PLANET_STABILITY_ADD$: §R-100%§!\nLasts 3600.00£time£\n\n§YThis is not a wise move.§!"
+ SRA_SD_First_Murder_debuff:0 "§RSlaughter Curse§!"
+ SRA_SD_First_Murder_debuff_desc:0 "This country is eroded by the Blood of First Slaughter; chaos will be everywhere."
+
+ SRA_SD_Fire_of_Lightkeeper:0 "§YFire of Fog Chaser§!"
+ SRA_SD_Fire_of_Lightkeeper_desc:0 "The lantern used by \"Lightkeeper\" Norandan in the past was both his fire source and his illumination.\nLegend has it that before he ascended the Lonely Mountain, he managed lights for his tribe, dispelling night and mist.\nLater he walked to the Lonely Mountain, lifting the lantern to draw fire, dispelling shadows of the Metabyss, bringing guidance of gods to mankind.\n\nThe flame in this item never extinguishes; the emitted light can suppress Metabyss activities. Entranced people staring at this item can regain their original intention.\nIf the holder personally extinguishes the flame in a world submerged in despair, this item is immediately destroyed."
+ SRA_SD_Fire_of_Lightkeeper_modifier:0 "§YThis lantern is noncommittal about today.§!"
+ SRA_SD_Fire_of_Lightkeeper_effect:0 "§YFire of Fog Chaser ignites faith.§!\n\n"
+ SRA_SD_Fire_of_Lightkeeper_effect_2:0 "Metabyss negative impact §Greduced§!\n\n§YThis is not a wise move.§!"
+ SRA_SD_Fire_of_Lightkeeper_buff:0 "§YFire of Fog Chaser§!"
+ SRA_SD_Fire_of_Lightkeeper_buff_desc:0 "The Lightkeeper used this fire to illuminate the forms of gods, and also cast shadows in the distance."
+
+ SRA_SD_Annihilating_Growl:0 "§RAnnihilating Growl§!"
+ SRA_SD_Annihilating_Growl_desc:0 "Some kind of relatively controllable reusable devastating weapon.\nAnnihilating Growl is a creation from several geological eras ago. It likely completely modified Stellariens' landforms, and even cleansed life on the entire world.\nWhen activated, it emits a modulated pulse beam, lysing substances meeting specified criteria. Most released energy will convert into similar pulses and spread around; diffusion speed is determined by the user's will.\nThe scope of \"specified criteria\" remains unknown; existing records give some cases.\n\nUsable criteria include at least:\nObject type, object main use, object main composition, linear distance from hit target, object current relative speed, presence of life in object.\n\nInvalid criteria include at least:\nObject ownership, object state of matter, object volume, connection status with hit target, object \"good or bad\", object color.\n\nThe above criteria are all based on the user's cognition.\n\nWhen the user issues a command conflicting with unknown criteria, this item immediately attempts to destroy the user. If it fails, this item is immediately destroyed.\nIt is currently known that commands not defining linear distance from the hit target will cause conflicts with criteria, but the maximum distance has not been tested."
+ SRA_SD_Annihilating_Growl_modifier:0 "§RThis relic is waiting for you.§!"
+ SRA_SD_Annihilating_Growl_effect:0 "§RActivate Annihilating Growl§!"
+
+
+ SRA_SD_Arcane_relic:0 "§BPivot Balance Mountain Arcane Projection System§!"
+ SRA_SD_Arcane_relic_desc:0 "This massive arcane structure erected on the ruins of Pivot Balance Mountain is used to provide arcane casting amplification effects for all our ships active in ['concept_SRA_SD_barren_space'].\n\nPivot Balance Mountain was once just a nameless small hill, but since Lord Tara began his great cause of conquest here, a history of strife began. The hegemony of Pivot Balance Mountain territory was destroyed by dragon fire, and layers of arcane facilities on Pivot Balance Mountain were melted into waste rock. But these traces overlapped, drawing out new power, and subsequently becoming the arcane energy focus today step by step.\nAfter ['concept_SRA_SD_The_Rips'], the Emerald Tower Society recovered this land and purified the ['concept_SRA_SD_Abyss_Erosion'] shrouded over it, introducing endless arcane energy echoing here into the resonance of crystal clusters, transmitting to every crystal unit taken from the Pivot Balance Mountain array, giving gifts to countless cruise ships isolated in ['concept_SRA_SD_barren_space']."
+ SRA_SD_Arcane_relic_modifier:0 "§BProvides ['concept_SRA_SD_Arcane'] weapon modifier equal to Energy Weapon Modifier * 50% + Explosive Weapon Modifier * 50%, for this is the phenomenon of shaping.§!\n\n"
+ SRA_SD_Arcane_relic_effect:0 "§BIncreases your ['concept_SRA_SD_Arcane'] weapon modifier by the value of the current modifier for 1800.00£time£. As the cost of overloading the array, your ship maintenance costs will rise year-on-year.§!"
+ SRA_SD_Arcane_relic_buff_A:0 "§BArcane Overload§!"
+ SRA_SD_Arcane_relic_buff_B:0 "§BArcane Overload§!"
+
+ SRA_SD_Divine_relic:0 "§YNorandan Manuscript§!"
+ SRA_SD_Divine_relic_desc:0 "This myth relic from the beginning of our era resonates with our Divine arts array to strengthen the Divine arts casting effect of all our ships active in ['concept_SRA_SD_barren_space'].\n\nThis scroll written by \"Lightkeeper\" Norandan records what he saw and heard during his travels. Legend has it that he embarked on the Myth path this way. This manuscript thus condensed the influence of gods starting from him, and could expand to serve as a symbol for all Divine arts casting.\nSome researchers believe that these texts actually record a secret in cipher that will shock the world. Those who solve it can obtain the true origin and rules of Myth power, thereby controlling and even creating gods. This is the reason why this manuscript has such powerful power. Regardless, no one has truly solved this secret as they say."
+ SRA_SD_Divine_relic_modifier:0 "§YProvides ['concept_SRA_SD_Divine'] weapon modifier equal to Strike Craft Modifier * 25% + Kinetic Weapon Modifier * 50%, for this is the thing of recasting.§!\n\n"
+ SRA_SD_Divine_relic_effect:0 "§YIncreases your ['concept_SRA_SD_Divine'] weapon modifier by the value of the current modifier for 1800.00£time£. As the cost of the over-limit ritual, your ship maintenance costs will rise year-on-year.§!"
+ SRA_SD_Divine_relic_buff_A:0 "§YOver-limit Ritual§!"
+ SRA_SD_Divine_relic_buff_B:0 "§YOver-limit Ritual§!"
+ ###技术
+
+
+ weapon_type_SRA_SD_Arcane:0 "§B['concept_SRA_SD_Arcane']§!"
+ mod_weapon_type_SRA_SD_Arcane_weapon_damage_mult:0 "§BMetarbor - Arcane System Weapon Damage§!"
+ mod_weapon_type_SRA_SD_Arcane_weapon_fire_rate_mult:0 "§BMetarbor - Arcane System Weapon Fire Rate§!"
+
+ weapon_type_SRA_SD_Divine:0 "§Y['concept_SRA_SD_Divine']§!"
+ mod_weapon_type_SRA_SD_Divine_weapon_damage_mult:0 "§YMetarbor - Divine System Weapon Damage§!"
+ mod_weapon_type_SRA_SD_Divine_weapon_fire_rate_mult:0 "§YMetarbor - Divine System Weapon Fire Rate§!"
+
+ ###########深渊事务司
+
+
+
+ SRA_SD_event.19.name:0 "Emerald Tower Literature Restoration"
+ SRA_SD_event.19.desc:0 "Based on literature in the Emerald Tower, we can localize and reproduce known ancient space technology systems. Based on Stellariens' unique rules and action systems, using unique materials to restore various parameters required by most technologies.\nThis method can easily acquire most technologies of conventional interstellar civilizations, but making new progress on this basis requires more effort and accumulation.\nIf chosen, it is expected to take decades to establish a complete scientific and technological theoretical system."
+ SRA_SD_event.19.a:0 "This will give us a huge advantage."
+ SRA_SD_event.19.a.tooltip:0 "§EEffect:§!\n§YImmediately gain vast majority of technologies.§!\n\n§PPenalty:§!\n$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §R-400%§!, lasts §Y40.00 Years§!."
+ SRA_SD_event.19.b:0 "Better keep feet on the ground."
+ SRA_SD_event_19_buff:0 "Emerald Tower Literature Restoration"
+ SRA_SD_event_19_buff_desc:0 "We need to re-establish the scientific research system."
+
+
+ SRA_SD_event.20.name:0 "§BDepartment of Metabyss Affairs§!"
+ SRA_SD_event.20.desc:0 "\"We seek, we struggle, we are the border of civilization, we are the defense line of living beings.\"\n\nThe Department of Metabyss Affairs is an institution overseeing Metabyss control and development affairs. Based on survival needs, it can mobilize all types of resources to combat the threat of the Metabyss. You can issue relevant decisions here."
+ SRA_SD_event.20.a:0 "Start exploring Metabyss"
+ SRA_SD_event.20.a.tooltip:0 "Each exploration consumes §Y5 Pops§! to start. These warriors will march fearlessly into the unknown, even if the outcome may be no return.\nExploration takes several years. During this period, the exploration team will feed back results multiple times, maybe gains, maybe disasters. All this depends on exploration investment, ['concept_SRA_SD_chaos_star_habitable_vitality'], our technological level, and ultimately, the arrangement of fate.\n\nThe existence and ability of the Lost Presbyter, as well as the attitude of the Dragon of Metabyss, will have unknowable impacts on exploration."
+ SRA_SD_event.20.b:0 "Start hunting Metabyss"
+ SRA_SD_event.20.b.tooltip:0 "This will lead to a ground battle. Metabyss creations will confront our defense armies head-on. This can cause ['concept_SRA_SD_chaos_star_habitable_vitality'] to drop to a certain extent, provided we survive.\nThe intensity of Metabyss invasion is mainly based on current ['concept_SRA_SD_chaos_star_habitable_vitality'], and unfortunately grows with our technology. Although they won't completely catch up with our development, we can only obey fate's decision.\nHunting will create a period of safety, during which Metabyss invasion will not occur naturally.\n\n§RBe careful, we cannot afford the price of failure.§!"
+ SRA_SD_event.20.c:0 "Catalyze Metabyss"
+ SRA_SD_event.20.c.tooltip:0 "Perform a series of §Rhighly dangerous§! rituals to §Yincrease§! ['concept_SRA_SD_chaos_star_habitable_vitality'], which can cause ['concept_SRA_SD_chaos_star_habitable_vitality'] to §Ydouble directly§!, but will bring a series of §Rdangerous secondary effects§!. The $councilor_SRA_SD_lost_presbyter$ presiding over the ritual may §Rlose their life§!."
+ SRA_SD_event.20.d:0 "Emergency Pressure Relief"
+ SRA_SD_event.20.d.tooltip:0 "Perform a series of §Rhighly dangerous§! rituals to §Ydecrease§! ['concept_SRA_SD_chaos_star_habitable_vitality'], which can cause ['concept_SRA_SD_chaos_star_habitable_vitality'] to §Yhalve directly§!, but will bring a series of §Rdangerous secondary effects and cause widespread destruction§!."
+ SRA_SD_event_20_d_buff:0 "Disaster Torrent"
+ SRA_SD_event_20_d_buff_desc:0 "To weaken the chaos churning in the Metabyss, we bore its erosion with our homeland."
+
+
+
+ SRA_SD_event.21.name:0 "Treading Metabyss"
+ SRA_SD_event.21.desc:0 "Indeed, the Metabyss is a distortion of the world we live in, smearing all colors black, letting everything be worn away.\nBut precisely because of this, it is so rich, possessing everything and endless.\n\"Every star in the night sky is embedded in the Metabyss.\"\nEven just climbing the Lonely Mountain, one can pluck jewels of the sea of stars...\nWe tread the Metabyss, we explore the Metabyss, we draw power to fight the Metabyss from the Metabyss, we create tomorrow with yesterday."
+ SRA_SD_event.21.a:0 "We press forward"
+ SRA_SD_event.22.name:0 "Hunting Metabyss"
+ SRA_SD_event.22.desc:0 "The Metabyss diffuses, flaunting its existence, venting its authority.\nThat red and black mist spreads up and down the Lonely Mountain, advancing ceaselessly, obliterating all traces of civilization or nature.\n\"Wind and snow smear the faces of warriors, mist swallows the names of heroes.\"\nWhether eroding living beings or dead things, the Metabyss will extend its influence and threaten our survival. Therefore, we must hunt the Metabyss, hunt disordered creations, and disorder itself."
+ SRA_SD_event.22.a:0 "We are fearless"
+
+
+ SRA_SD_event.23.name:0 "§RAbrupt Stop§!"
+ SRA_SD_event.23.desc:0 "A chaos terminated the story; the narrator fell silent.\n\n\nOr?"
+ SRA_SD_event.23.a:0 "§REnd here.§!"
+ SRA_SD_event.23.b:0 "§YStill have future.§!"
+ SRA_SD_event.23.b.tooltip:0 "You are unwilling to let the story break off carelessly here. Even if adding some plots not quite commendable, it should continue.\n\n\n§YClear all armies on the planet and add some weird guards.§!"
+
+ SRA_SD_event.95.name:0 "§RWind and Snow Obscure Eyes§!"
+ SRA_SD_event.95.desc:0 "[Root.GetName] saw §Rinsurmountable deep darkness§!.\n\nThe Metabyss whispered to erase all differences, melting reality into uniform chaos. [Root.GetName]'s form vanished, face blurred, speech silenced, will withered, reduced to an empty shell under Metabyss erosion, a shadow."
+ SRA_SD_event.95.a:0 "§R[Root.GetName] ceases to exist.§!"
+ SRA_SD_event.96.name:0 "§RShallow Sea Softly Sings§!"
+ SRA_SD_event.96.desc:0 "§RYou§! are different from them.\n§RYou§! can understand every word coming from that mist, §RYou§! can feel every pulsation flickering in the Metabyss. §RIt§! never hurt §Ryou§!, §RIt§! listens to §Ryour§! wishes, §RIt§! responds to §Ryour§! requests, §RIt§! bestows special generosity on §Ryou§!."
+ SRA_SD_event.96.a:0 "§RYou§! may gain something."
+ SRA_SD_event.97.name:0 "§RLamp Will Extinguish§!"
+ SRA_SD_event.97.desc:0 "Fate comes from the end, lowering its curtain. [Root.GetName] is exhausted and scarred. Metabyss erosion distorted [Root.GetHisHer] body, wearing away [Root.GetHisHer] will. At this moment, [Root.GetName] has not fallen yet; but then, no one knows."
+ SRA_SD_event.97.a:0 "§R[Root.GetName]'s will is being tested!§!"
+ SRA_SD_event.98.name:0 "§YLamp Never Extinguishes§!"
+ SRA_SD_event.98.desc:0 "Although once driven to desperation by the sinister curse of the Metabyss, [Root.GetName]'s story did not end there. With determination and will, [Root.GetName] stood tall in the storm, becoming stronger."
+ SRA_SD_event.98.a:0 "§Y[Root.GetName] defeated Metabyss erosion!§!"
+
+
+ SRA_powerword_death:0 "Power Word: Kill"
+ SRA_powerword_death_desc:0 "You force your target to succumb to death with powerful will."
+ SRA_powerword_death_2:0 "Corrupting Magic"
+ SRA_powerword_death_2_desc:0 "Minus your saves"
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

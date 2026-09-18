@@ -1,0 +1,264 @@
+﻿l_simp_chinese:
+###############################
+ #操作所需的能量币和星界丝缕其实是星规收取的手续费，因为她帮你套了一层操作系统，实际控制还是由星规完成的。
+ #全长135千米。星穹之矛，所向无敌！
+ #项目中不包含随舰狂热者军团，你也不是大主教，尽管你同样也缺少高质量AOE。
+ #这艘船不是星梭号或者悖论引擎！保修不包含任何因撞击造成的损坏。
+
+ #远行要塞的互锁机制是不完善的，它成本高昂且存在弱点。如果有人能发掘这一保护的链条，他就有可能摧毁整个体系。因此星穹之矛被设计出来，用来取代远行要塞和航标，担任舰队的核心，并为整个舰队提供能量。
+ #它既可以被投入到任何焦灼的正面战场上，作为一张王牌，主宰战局。也可以逃过任何追杀和捕捉，将自己隐藏在没人知道的角落。它的时空相位引擎为一整只远征军供能，失去了星穹之矛，远征军只能持续战斗不长的时间——大约几千年。
+ #它如同其他星规舰船一样，由星辉分形打造，这种令人惊骇的材料能够在质能间流转，任意切换形态和功能。因此星穹之矛可以随意改变它的构造，并以超乎想象的速度修复自己，只要能量足够。它几乎不存在弱点，即便被孤立，它也能独自重建整个舰队。
+ #每个星穹之矛同时还是星规的载体，一个远征军通常有成百上千艘星穹之矛，它们共同承载一个星规个体的意识，完型意识。可以说，星穹之矛承载文明本身，因为它是星规的分形，包含基本要素。星穹之矛是一个完型意识的最小单位，其他舰船没有能力承载也不准备承载这样的意识，其他舰船只是被遥控的自律机械。
+
+ ###### 局势 ######
+ 
+ SRA_SOGZ_main_situation:0 "星穹之矛状态"
+ SRA_SOGZ_main_situation_type:0 "星穹之矛状态"
+ SRA_SOGZ_main_situation_desc:0 "这里显示的是星穹之矛当前的§B相位能量§!水平，§B相位能量§!是星穹之矛的储备能源，可以用于激活各种主动效果。\n你可以在这里打开星穹之矛的控制面板。"
+ SRA_SOGZ_main_situation_monthly_change_tooltip:0 "星穹之矛的§B相位能量§!储备会以一个稳定的速度增长，它可以因为某些原因而加速增长，也可以被某些功能持续消耗。"
+
+ SRA_SOGZ_main_situation_progress_complete:0 "星穹之矛完全充能，无法继续储备§B相位能量§!。"
+ SRA_SOGZ_main_situation_fail:0 "星穹之矛储能耗尽，无法激活任何需要§B相位能量§!的功能。"
+ sra_sogz_main_situation_stage_1:0 "相位能量水平低"
+ sra_sogz_main_situation_stage_1_effects:0 "当前能量水平较低，需要慎重的使用能量。"
+ sra_sogz_main_situation_stage_2:0 "相位能量水平中"
+ sra_sogz_main_situation_stage_2_effects:0 "当前能量水平中等，拥有相对可靠的能量储备来应对各种情况。"
+ sra_sogz_main_situation_stage_3:0 "相位能量水平高"
+ sra_sogz_main_situation_stage_3_effects:0 "当前能量水平较高，是时候火力全开了。"
+ sra_sogz_main_situation_stage_4:0 "相位能量水平满"
+ sra_sogz_main_situation_stage_4_effects:0 "当前能量水平已满，无法继续充能。"
+ SRA_SOGZ_main_situation_open_menu:0 "打开菜单"
+ SRA_SOGZ_main_situation_open_menu_effect:0 "打开星穹之矛的控制菜单。"
+ SRA_SOGZ_main_situation_open_menu_tooltip:0 "打开星穹之矛的控制菜单"
+ SRA_SOGZ_main_situation_charge:0 "运行中"
+ SRA_SOGZ_main_situation_charge_effect:0 "星穹之矛持续充能中。"
+ SRA_SOGZ_main_situation_charge_tooltip:0 "运行中的星穹之矛会持续储备相位能量以备后用。"
+ SRA_SOGZ_main_situation_charge_stop:0 "星穹之矛当前能量水平已满，无法继续充能"
+ SRA_SOGZ_menu_sub_5_3_charge_stop:0 "星穹之矛当前激活了§B飘落传说§!，因此无法充能"
+ SRA_SOGZ_menu_sub_5_2_charge:0 "星穹之矛当前激活了§B末世浩劫§!，因此充能速度加倍"
+
+
+ SRA_mini_menu_choose_button:0 ""
+
+ casus_belli_cb_SRA_SOGZ:0 "星穹之矛"
+ war_goal_wg_SRA_SOGZ:0 "$war_goal_wg_colossus$"
+ war_goal_wg_SRA_SOGZ_desc:0 "星穹之矛统御星海，执掌命运。矛尖所指之处，即为帝国边疆。"
+ 
+ casus_belli_cb_SRA_stop_SOGZ:0 "$casus_belli_cb_SRA_SOGZ$"
+ war_goal_wg_SRA_stop_SOGZ:0 "$war_goal_wg_end_threat$"
+ war_goal_wg_SRA_stop_SOGZ_desc:0 "这个拥有未知的先进技术和匪夷所思的战舰的文明是整个银河系的威胁，为了星海的安定，必须将其消灭。"
+
+ SRA_SPEAR_OF_GALAXY_ZENITH:0 "理解如何操纵星穹之矛"
+ SRA_SPEAR_OF_GALAXY_ZENITH_DESC:0 "尽管折越程序已经就绪，但我们对这艘超级战舰还几乎一无所知。在它正式抵达并成为我们舰队的强大助力之前，我们必须掌握星穹之矛的各项性能，并理解如何操纵这一庞然大物。"
+
+ SRA_Spear_Of_Galaxy_Zenith.1:0 "星穹之矛"
+ SRA_Spear_Of_Galaxy_Zenith.1.desc:0 "星穹之矛已经抵达您的首都上空并归属您指挥，这是一件无比强大的武器，远超任何常规舰船。"
+ SRA_Spear_Of_Galaxy_Zenith.1.a:0 "很好。"
+ SRA_Spear_Of_Galaxy_Zenith.2:0 "星穹之矛"
+ SRA_Spear_Of_Galaxy_Zenith.2.desc:0 "§B「星穹之矛控制系统已启动」§!\n您可以在这里配置星穹之矛的各项功能，调用它的各项系统。如果星穹之矛被摧毁而紧急折越逃脱，您可以在这里重新部署它。"
+ SRA_Spear_Of_Galaxy_Zenith.2.a:0 "打开配置面板"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_1:0 "激活寰宇之帜"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_1.desc:0 "配置舰首引导航标，为整个星系的舰队计算航线并指定机动逻辑，优化其相关性能。与此同时，启动折跃投送系统，使我们的所有舰船可以跃迁。\n\n消耗：§Y25 相位能量§!\n冷却时间：180.00£time£\n持续时间：180.00£time£\n帝国内的友方舰船:\n跃迁能力：§G解锁§!\n$MOD_SHIP_SPEED_MULT$：§G+200%§!\n$MOD_SHIP_EVASION_MULT$：§G+100%§!\n$MOD_SHIP_WINDUP_MULT$：§G-200%§!\n$MOD_SHIP_FTL_JUMPDRIVE_RANGE_MULT$：§G+800%§!\n$MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$：§G-200%§!"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_2:0 "激活彗耀迫临"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_2.desc:0 "配置舰首引导航标，引导一支预先准备的舰队立即增援到星穹之矛所在位置，存在多种舰队类型以供选择，舰队类型会影响所需支付的资源和后续的冷却时间。\n\n消耗：§Y25 相位能量§!\n冷却时间：不定"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_3:0 "激活星阵卫戍"
+ SRA_Spear_Of_Galaxy_Zenith.2.2_3.desc:0 "配置舰首引导航标，将时空相位引擎的内部空间中储备的星阵卫戍舰队及要塞立即部署到星穹之矛所在位置，下一批舰队需要 360.00£time£ 来重新准备。\n\n消耗：§Y200 相位能量§!\n冷却时间：360.00£time£"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_1:0 "激活爆华绽放"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_1.desc:0 "配置打击压制模块，使星穹之矛对敌方舰队进行覆盖式打击，对恒星系内所有敌人造成大量伤害。\n\n消耗：§Y50 相位能量§!\n冷却时间：30.00£time£\n持续时间：10.00£time£\n恒星系内的敌方舰船:\n每1.00£time£受到 §R5000§! 伤害"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_2:0 "激活溟乎远响"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_2.desc:0 "配置打击压制模块，使星穹之矛对恒星系进行爆发性能量压制，弱化所有敌方舰船的防御结构并破坏其穿透抗性。\n\n消耗：§Y50 相位能量§!\n冷却时间：180.00£time£\n持续时间：30.00£time£\n恒星系内的敌方舰船:\n$MOD_SHIP_SHIELD_REDUCTION$：§R80%§!\n$MOD_SHIP_ARMOR_REDUCTION$：§R80%§!\n$MOD_SHIP_SHIELD_HARDENING_ADD$：§R-200%§!\n$MOD_SHIP_ARMOR_HARDENING_ADD$：§R-200%§!"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_3:0 "激活苍星陨灭"
+ SRA_Spear_Of_Galaxy_Zenith.2.4_3.desc:0 "配置打击压制模块，使星穹之矛在恒星系中央放置一颗高度压缩的相位能量星体，并在短暂延迟后爆发，对整个恒星系内的一切敌对舰队造成毁灭性的打击。\n\n消耗：§Y50 相位能量§!\n冷却时间：180.00£time£\n延迟：5.00£time£\n持续时间：30.00£time£\n恒星系内的敌方舰船:\n每1.00£time£受到 §R无法估量的§! 伤害"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_1:0 "激活新星终结"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_1.desc:0 "配置时空相位引擎，使用星穹之矛的强大武器藉由时空相位引擎的协助向目标恒星系发起攻击。使用反集群打击模式时，将在目标恒星系投射一个存在15天的相位空间投影并攻击目标恒星系内的所有敌人；使用星系摧毁模式时，将使用§B「新星终结」§!直接摧毁目标恒星系。\n\n消耗：§Y50 相位能量§!\n冷却时间：360.00£time£"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_2:0 "激活奇点爆发"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_2.desc:0 "配置时空相位引擎，重定向时空相位引擎能量输出，激活大部分能量储备，充能['concept_SRA_Stellarcrystal_Fractal']使其进入半能化，极大幅度地增强武器的输出密度，并使得接近能量化的舰体能够迅速修复几乎任何类型的损伤。\n\n消耗：§Y100 相位能量§!\n冷却时间：360.00£time£\n持续时间：60.00£time£\n星穹之矛:\n§Y不会被摧毁§!\n§B寰宇溃灭§!：§G四倍射速§!\n$MOD_SHIP_SHIELD_DAMAGE_MULT$：§G+200%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$：§G+200%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$：§G+200%§!\n$MOD_SHIP_SHIELD_PENETRATION_MULT$：§G+2000%§!\n$MOD_SHIP_ARMOR_PENETRATION_MULT$：§G+2000%§!\n$MOD_SHIP_DAMAGE_REDUCTION_MULT$：§G+200%§!\n$mod_mod_SRA_clear_ship_damage_reduction_mult_resistance$：§G+1§!\n$MOD_SHIP_TARGET_WEIGHT_MULT$：§Y+800%§!"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_3:0 "激活事件视界"
+ SRA_Spear_Of_Galaxy_Zenith.2.6_3.desc:0 "配置时空相位引擎，使时空相位引擎抽取能量储备以完成充能，随后消耗巨量能量扩大其作用范围至整个星系，极大幅度地减缓所有敌对舰队的攻击和移动速度，构成类似于时间静止的效果。\n\n消耗：§Y100 相位能量§!\n冷却时间：360.00£time£\n持续时间：20.00£time£\n星系内的敌方舰船:\n$MOD_SHIP_DISENGAGE_CHANCE_REDUCTION$：§R1000%§!\n$MOD_SHIP_SPEED_MULT$：§R-4000%§!\n$MOD_SHIP_WEAPON_RANGE_MULT$：§R-4000%§!\n$MOD_SHIP_EVASION_MULT$：§R-4000%§!\n$MOD_SHIP_ACCURACY_MULT$：§R-4000%§!\n$MOD_SHIP_TRACKING_MULT$：§R-4000%§!\n\n§Y对拥有动态调整系统的舰队无效§!"
+
+ SRA_Spear_Of_Galaxy_Zenith.2.e:0 "重新部署星穹之矛"
+ SRA_Spear_Of_Galaxy_Zenith.2.e.desc:0 "修复严重受损的星穹之矛并将其重新部署至您的首都。"
+
+
+ SRA_Spear_Of_Galaxy_Zenith.10:0 "次级控制面板"
+ SRA_Spear_Of_Galaxy_Zenith.10.desc:0 "§B「星穹之矛次级控制面板已就绪」§!\n您可以在这里配置星穹之矛的各项功能。"
+ SRA_Spear_Of_Galaxy_Zenith.10.a:0 "激活增压超频"
+ SRA_Spear_Of_Galaxy_Zenith.10.a.desc:0 "开启后所有系统的资源消耗提升至四倍，舰队折越系统和跨星系打击系统冷却时间极大幅度缩短，奇点爆发模式冷却时间缩短至一半。\n§Y舰队折越系统折越舰队所需要的合金不会增加。§!\n§Y时间冻结系统不受其影响。§!"
+ SRA_Spear_Of_Galaxy_Zenith.10.b:0 "关闭增压超频"
+ SRA_Spear_Of_Galaxy_Zenith.10.b.desc:0 "增压超频已激活，点击关闭。"
+ SRA_Spear_Of_Galaxy_Zenith.10.c:0 "激活不朽协议"
+ SRA_Spear_Of_Galaxy_Zenith.10.c.desc:0 "即将被摧毁时将不再直接紧急折越，可选择消耗160000能量币320000合金64000星界丝缕原地瞬间修复至完整状态。"
+ SRA_Spear_Of_Galaxy_Zenith.10.d:0 "关闭不朽协议"
+ SRA_Spear_Of_Galaxy_Zenith.10.d.desc:0 "不朽协议已激活，点击关闭。"
+ SRA_Spear_Of_Galaxy_Zenith.10.e:0 "§B「新星终结」§!切换至净化模式"
+ SRA_Spear_Of_Galaxy_Zenith.10.e.desc:0 "调整歼星级位面撕裂武器§B「新星终结」§!的能量输出水平，将武器转化为清扫行星上所有智慧生命的净化模式。"
+ SRA_Spear_Of_Galaxy_Zenith.10.f:0 "§B「新星终结」§!切换至毁灭模式"
+ SRA_Spear_Of_Galaxy_Zenith.10.f.desc:0 "调整歼星级位面撕裂武器§B「新星终结」§!的能量输出水平，将武器转化为直接摧毁行星的毁灭模式。"
+ SRA_Spear_Of_Galaxy_Zenith.10.g:0 "将武器系统切换至可调整模式"
+ SRA_Spear_Of_Galaxy_Zenith.10.g.desc:0 "将武器配置切换至可调整模式（即使用§B「星规武器」§!标签的武器）。"
+ SRA_Spear_Of_Galaxy_Zenith.10.h:0 "将武器系统切换回常规模式"
+ SRA_Spear_Of_Galaxy_Zenith.10.h.desc:0 "将武器配置切换回常规模式。"
+
+
+ SRA_Spear_Of_Galaxy_Zenith.20:0 "舰队折越系统"
+ SRA_Spear_Of_Galaxy_Zenith.20.desc:0 "§B「星穹之矛舰队折越系统已就绪」§!\n您可以在这里选择您要部署的舰队类型。"
+ SRA_Spear_Of_Galaxy_Zenith.20.a:0 "折越歼灭执行舰队"
+ SRA_Spear_Of_Galaxy_Zenith.20.a.desc:0 "立即在星穹之矛位置折越一支歼灭执行舰队，包含2艘星规裁决单元和46艘星规执行单元，此后舰船折越系统进入240天的冷却时间。§Y具体设计取决于您舰船设计器中的设计，请确保您至少拥有一个设计。§!"
+ SRA_Spear_Of_Galaxy_Zenith.20.b:0 "折越战列舰队"
+ SRA_Spear_Of_Galaxy_Zenith.20.b.desc:0 "立即在星穹之矛位置折越一支战列舰队，包含2艘泰坦和32艘战列舰，此后舰船折越系统进入240天的冷却时间。§Y具体设计取决于您舰船设计器中的设计，请确保您至少拥有一个设计。§!"
+ SRA_Spear_Of_Galaxy_Zenith.20.c:0 "折越裁决舰队"
+ SRA_Spear_Of_Galaxy_Zenith.20.c.desc:0 "立即在星穹之矛位置折越一支裁决舰队，包含2艘星规裁决单元、16艘星规执行单元和32艘星规巡航单元，此后舰船折越系统进入240天的冷却时间。"
+
+
+ SRA_Spear_Of_Galaxy_Zenith.32:0 "星穹之矛-不朽协议"
+ SRA_Spear_Of_Galaxy_Zenith.32.desc:0 "§B「检测到不朽协议已激活」§!\n当前星穹之矛已严重受损，您可以启动不朽协议以瞬间完全修复星穹之矛的损伤，或者启用静滞系统来隔离星穹之矛，等待30天后再进行选择。"
+ SRA_Spear_Of_Galaxy_Zenith.32.a:0 "启动不朽协议"
+ SRA_Spear_Of_Galaxy_Zenith.32.b:0 "启动静滞系统"
+ SRA_Spear_Of_Galaxy_Zenith.32.c:0 "启动紧急跃迁"
+
+
+ SRA_Spear_Of_Galaxy_Zenith.40:0 "跨星系打击系统"
+ SRA_Spear_Of_Galaxy_Zenith.40.desc:0 "§B「星穹之矛跨星系打击系统已就绪」§!\n您可以在这里选择瞄准目标恒星系的方式。"
+ SRA_Spear_Of_Galaxy_Zenith.40.a:0 "信标锁定模式"
+ SRA_Spear_Of_Galaxy_Zenith.40.a.desc:0 "一个跨星系打击信标将出现在星穹之矛旁，将其折越到目标恒星系以定位。"
+ SRA_Spear_Of_Galaxy_Zenith.40.b:0 "星系选择器模式"
+ SRA_Spear_Of_Galaxy_Zenith.40.b.desc:0 "打开星系选择器界面，可以最多瞄准五个目标。"
+ SRA_Spear_Of_Galaxy_Zenith.40.c:0 "目标选择器模式"
+ SRA_Spear_Of_Galaxy_Zenith.40.c.desc:0 "选择器开启后，在目标所在恒星系用鼠标选中目标，然后点击按钮锁定此目标，然后进入下一步确认目标并选择攻击模式。"
+
+
+ SRA_Spear_Of_Galaxy_Zenith.43:0 "新星终结-目标锁定"
+ SRA_Spear_Of_Galaxy_Zenith.43.desc:0 "§B「星穹之矛跨星系打击系统已锁定目标」§!\n您可以在这里选择攻击目标星系的方式。\n§R警告：摧毁某些包含特殊事件的恒星系或危机刷新点等位置，摧毁拥有特殊机制或击杀事件的舰队，都可能造成事件链中断，危机无法结束等严重问题。请妥善使用这件强大的武器，避免造成星系级别的逻辑错误。§!"
+ SRA_Spear_Of_Galaxy_Zenith.43.a:0 "星系毁灭模式"
+ SRA_Spear_Of_Galaxy_Zenith.43.a.desc:0 "使用§B「新星终结」§!直接摧毁目标恒星系，此后跨星系打击系统进入180天的冷却时间。"
+ SRA_Spear_Of_Galaxy_Zenith.43.b:0 "舰队肃清模式§!"
+ SRA_Spear_Of_Galaxy_Zenith.43.b.desc:0 "使用反集群打击模式，在目标恒星系投射一个存在15天的相位空间投影并攻击目标恒星系内的所有敌人，此后跨星系打击系统进入90天的冷却时间。"
+ SRA_Spear_Of_Galaxy_Zenith.43.c:0 "取消命令"
+
+
+ SRA_Spear_Of_Galaxy_Zenith.50:0 "新星终结-目标选择"
+ SRA_Spear_Of_Galaxy_Zenith.50.desc:0 "§B「星穹之矛跨星系打击系统选定目标中」§!\n您可以在这里选择攻击的目标。\n§K在目标所在恒星系内用鼠标选中目标，保持选中状态并点击此面板上的锁定按钮来锁定此目标，然后点击确定目标按钮并选择攻击模式。§!"
+ SRA_Spear_Of_Galaxy_Zenith.50.a:0 "确定目标"
+ SRA_Spear_Of_Galaxy_Zenith.50.a.desc:0 "点击以将「§H[SRA_mini_menu_choose_button_target.GetName]§!」锁定为目标。"
+ SRA_mini_menu_choose_button_lost_target:0 "目标不存在"
+ SRA_mini_menu_choose_button_duplicate_target:0 "不可选中重复的目标"
+
+ SRA_Spear_Of_Galaxy_Zenith.51:0 "新星终结-目标锁定"
+ SRA_Spear_Of_Galaxy_Zenith.51.desc:0 "§B「星穹之矛跨星系打击系统已锁定目标」§!\n当前目标\n「§H[SRA_mini_menu_choose_button_target.GetName]§!」\n您可以在这里选择攻击目标的方式。\n§R警告：摧毁某些包含特殊事件的恒星系，或者摧毁拥有特殊机制的舰队，都有可能造成事件链中断，危机无法结束等严重问题。请妥善使用这件强大的武器，避免造成星系级别的逻辑错误。§!"
+ SRA_Spear_Of_Galaxy_Zenith.51.a:0 "星系毁灭模式"
+ SRA_Spear_Of_Galaxy_Zenith.51.a.desc:0 "使用§B「新星终结」§!直接摧毁目标所在恒星系，此后跨星系打击系统进入360天的冷却时间。"
+ SRA_Spear_Of_Galaxy_Zenith.51.b:0 "舰队肃清模式"
+ SRA_Spear_Of_Galaxy_Zenith.51.b.desc:0 "使用反集群打击模式，在目标位置投射一个存在15天的相位空间投影并攻击目标恒星系内的所有敌人，此后跨星系打击系统进入360天的冷却时间。"
+ SRA_Spear_Of_Galaxy_Zenith.51.c:0 "选择下一个目标"
+ SRA_Spear_Of_Galaxy_Zenith.51.c.desc:0 "这将保存当前的目标标记，并回退至选择器界面。"
+ SRA_Spear_Of_Galaxy_Zenith.51.d:0 "取消命令"
+ SRA_Spear_Of_Galaxy_Zenith.51.d.desc:0 "这将移除所有目标标记。"
+
+
+ SRA_SOGZ_menu_sub_2_1_cool_down:0 "寰宇之帜冷却中。"
+ SRA_SOGZ_menu_sub_2_2_cool_down:0 "彗耀迫临冷却中。"
+ SRA_SOGZ_menu_sub_2_3_cool_down:0 "星阵卫戍冷却中。"
+ SRA_SOGZ_menu_sub_4_1_cool_down:0 "爆华绽放冷却中。"
+ SRA_SOGZ_menu_sub_4_2_cool_down:0 "溟乎远响冷却中。"
+ SRA_SOGZ_menu_sub_4_3_cool_down:0 "苍星陨灭冷却中。"
+ SRA_SOGZ_menu_sub_6_1_cool_down:0 "新星终结冷却中。"
+ SRA_SOGZ_menu_sub_6_2_cool_down:0 "奇点爆发冷却中。"
+ SRA_SOGZ_menu_sub_6_3_cool_down:0 "事件视界冷却中。"
+ SRA_fire_target_0_stand_by:0 "新星终结信标已存在。"
+ SRA_Spear_Of_Galaxy_Zenith_resources_not_enough:0 "资源不足。"
+ SRA_Spear_Of_Galaxy_Zenith_continue1:0 "执行"
+ SRA_Spear_Of_Galaxy_Zenith_exit1:0 "关闭界面"
+ SRA_Spear_Of_Galaxy_Zenith_return1:0 "退回上一界面"
+
+ SRA_Spear_Of_Galaxy_Zenith_fire_not_enable:0 "跨星系打击系统未修复。"
+ SRA_Spear_Of_Galaxy_Zenith_burst_not_enable:0 "奇点爆发模式未修复。"
+ SRA_Spear_Of_Galaxy_Zenith_time_stop_not_enable:0 "时间冻结系统未修复。"
+ SRA_Spear_Of_Galaxy_Zenith_transition_not_enable:0 "舰队折越系统未修复。"
+ SRA_SOGZ_menu_sub_5_1_not_enable:0 "增压超频功能未修复。"
+ SRA_SOGZ_menu_sub_1_2_not_enable:0 "不朽协议功能未修复。"
+
+ SRA_SOGZ_menu_energy_text:0 "[From.SRA_SOGZ_sub_energy_choose]"
+
+ SRA_Spear_Of_Galaxy_Zenith.60:0 "§B星穹之矛-子系统配置界面§!"
+ SRA_Spear_Of_Galaxy_Zenith.60.desc:0 " "
+ SRA_Spear_Of_Galaxy_Zenith.60.a:0 "保存当前配置"
+ SRA_Spear_Of_Galaxy_Zenith.60.a.desc:0 "每次更改配置后下一次更改需要等待180.00£time£。"
+ SRA_Spear_Of_Galaxy_Zenith.60.a.custom_tooltip1:0 "当前配置能量不足。"
+ SRA_Spear_Of_Galaxy_Zenith.60.a.custom_tooltip2:0 "配置更改冷却时间未过。"
+ SRA_Spear_Of_Galaxy_Zenith.60.b:0 "不保存直接退出"
+
+ ### 星穹之矛宜居端口 ###
+ SRA_Spear_Of_Galaxy_Zenith.60.c:0 "激活星穹之矛宜居端口"
+ SRA_Spear_Of_Galaxy_Zenith.60.c.desc:0 "将星穹之矛切换为方舟舰。"
+ SRA_Spear_Of_Galaxy_Zenith.60.d:0 "关闭星穹之矛宜居端口"
+ SRA_Spear_Of_Galaxy_Zenith.60.d.desc:0 "星穹之矛将不再是方舟舰，携带的人口会被迁移出去。"
+ SRA_Spear_Of_Galaxy_Zenith.60.d.custom_tooltip1:0 "你必须拥有至少一个其他殖民地才能关闭宜居端口。"
+
+ SRA_SOGZ_menu_energy_effect_custom_tooltip:0 "§Y星穹之矛当前配置下的剩余系统能量§!"
+ SRA_SOGZ_menu_energy_no_enough:0 "§Y星穹之矛当前相位能量不足§!"
+# 船尾水晶 防御系统 被动
+ SRA_SOGZ_menu_sub_1_1_custom_tooltip:0 "§B潜时沉寂§!\n\n§C防御阵列 被动§!\n§Y系统能量配置消耗0§!\n\n配置水晶投射阵列，调谐恒星系内舰队的防护系统，将星辉能量导入至护盾和装甲内，大幅度强化其特种性能，增强其对削弱和穿透效果的抵抗能力。\n\n恒星系内的友方舰船:\n$MOD_SHIP_SHIELD_REDUCTION$：§G-100%§!\n$MOD_SHIP_ARMOR_REDUCTION$：§G-100%§!\n$MOD_SHIP_SHIELD_HARDENING_ADD$：§G+800%§!\n$MOD_SHIP_ARMOR_HARDENING_ADD$：§G+800%§!"
+ SRA_SOGZ_menu_sub_1_2_custom_tooltip:0 "§B流时无尽§!\n\n§C防御阵列 被动§!\n§Y系统能量配置消耗100§!\n\n配置水晶投射阵列，将相位能量渗透进星穹之矛舰体各处，在即将被摧毁时将不再直接紧急折越，可选择消耗10点相位能量原地瞬间修复至完整状态，并在5.00£time£内不会被再次摧毁，或者可以选择暂时进入静滞状态，30.00£time£后再做决定。"
+ SRA_SOGZ_menu_sub_1_3_custom_tooltip:0 "§B永时流转§!\n\n§C防御阵列 被动§!\n§Y系统能量配置消耗200§!\n\n配置水晶投射阵列，充能恒星系内舰队的舰体，使其部分进入半能化，接近能量化的装甲和舰体结构能够迅速修复绝大多数损伤，与此同时护盾场也能高速恢复。\n\n恒星系内的友方舰船:\n$MOD_SHIP_SHIELD_REGEN_ADD_STATIC$：§G+256000§!\n$MOD_SHIP_ARMOR_REGEN_ADD_STATIC$：§G+256000§!\n$MOD_SHIP_HULL_REGEN_ADD_STATIC$：§G+256000§!\n\n此外，星穹之矛每当即将被摧毁时，会进入静滞状态10.00£time£并释放数队流天戍卫，流天戍卫将作战180.00£time£。星穹之矛脱离静滞状态后5.00£time£内无法再次激活此效果。"
+#船头:投送模块 主动
+ SRA_SOGZ_menu_sub_2_1_custom_tooltip:0 "§B寰宇之帜§!\n\n§C投送模块 主动§!\n§Y系统能量配置消耗0§!\n\n配置舰首引导航标，为整个星系的舰队计算航线并指定机动逻辑，优化其相关性能。与此同时，启动折跃投送系统，使我们的所有舰船可以跃迁。\n\n消耗：§Y25 相位能量§!\n冷却时间：180.00£time£\n持续时间：180.00£time£\n帝国内的友方舰船:\n跃迁能力：§G解锁§!\n$MOD_SHIP_SPEED_MULT$：§G+200%§!\n$MOD_SHIP_EVASION_MULT$：§G+100%§!\n$MOD_SHIP_WINDUP_MULT$：§G-200%§!\n$MOD_SHIP_FTL_JUMPDRIVE_RANGE_MULT$：§G+800%§!\n$MOD_SHIP_JUMPDRIVE_COOLDOWN_MULT$：§G-200%§!"
+ SRA_SOGZ_menu_sub_2_1_Buff:0 "§B寰宇之帜§!"
+ SRA_SOGZ_menu_sub_2_2_custom_tooltip:0 "§B彗耀迫临§!\n\n§C投送模块 主动§!\n§Y系统能量配置消耗100§!\n\n配置舰首引导航标，引导一支预先准备的舰队立即增援到星穹之矛所在位置，存在多种舰队类型以供选择，舰队类型会影响所需支付的资源和后续的冷却时间。\n\n消耗：§Y25 相位能量§!\n冷却时间：不定"
+ SRA_SOGZ_menu_sub_2_3_custom_tooltip:0 "§B星阵卫戍§!\n\n§C投送模块 主动§!\n§Y系统能量配置消耗200§!\n\n配置舰首引导航标，将时空相位引擎的内部空间中储备的星阵卫戍舰队及要塞立即部署到星穹之矛所在位置。\n\n消耗：§Y200 相位能量§!\n冷却时间：360.00£time£"
+# 前浮翼 进攻系统 被动
+ SRA_SOGZ_menu_sub_3_1_custom_tooltip:0 "§B诸世尽灭§!\n\n§C联合攻击 被动§!\n§Y系统能量配置消耗0§!\n\n配置浮翼进攻矩阵，增幅恒星系内舰队的武器系统，强化其对各种目标的毁伤能力。\n\n恒星系内的友方舰船:\n$MOD_SHIP_SHIELD_DAMAGE_MULT$：§G+50%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$：§G+50%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$：§G+50%§!"
+ SRA_SOGZ_menu_sub_3_2_custom_tooltip:0 "§B冥海引航§!\n\n§C联合攻击 被动§!\n§Y系统能量配置消耗100§!\n\n配置浮翼进攻矩阵，调谐恒星系内舰队的武器系统，使其向船体结构破坏方面特化，作为代价，对护盾和装甲的伤害效果将基本消失，需要配合穿透武器使用。\n\n恒星系内的友方舰船:\n$MOD_SHIP_SHIELD_DAMAGE_MULT$：§R-200%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$：§R-200%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$：§G+400%§!"
+ SRA_SOGZ_menu_sub_3_3_custom_tooltip:0 "§B破晓凯旋§!\n\n§C联合攻击 被动§!\n§Y系统能量配置消耗200§!\n\n配置浮翼进攻矩阵，额外星辉水晶能量会导入星穹之矛武器系统，重新编码武器阵列弹道逻辑，使所有武器在命中敌人的瞬间强行跌落维度，在跌落时释放的庞大能量将越过舰船的护盾装甲直击船体本身。\n\n恒星系内的友方舰船:\n$MOD_SHIP_SHIELD_PENETRATION_MULT$：§G+800%§!\n$MOD_SHIP_ARMOR_PENETRATION_MULT$：§G+800%§!"
+#后浮翼：打击模块 主动
+ SRA_SOGZ_menu_sub_4_1_custom_tooltip:0 "§B爆华绽放§!\n\n§C火力支援 主动§!\n§Y系统能量配置消耗0§!\n\n配置打击压制模块，允许星穹之矛对敌方舰队进行覆盖式打击，对恒星系内所有敌人造成大量伤害。\n\n消耗：§Y50 相位能量§!\n冷却时间：120.00£time£\n持续时间：25.00£time£\n恒星系内的敌方舰船:\n每1.00£time£受到 §R8000§! 伤害"
+ SRA_SOGZ_menu_sub_4_2_custom_tooltip:0 "§B溟乎远响§!\n\n§C火力支援 主动§!\n§Y系统能量配置消耗100§!\n\n配置打击压制模块，允许星穹之矛对恒星系进行爆发性能量压制，弱化所有敌方舰船的防御结构并破坏其穿透抗性。\n\n消耗：§Y50 相位能量§!\n冷却时间：180.00£time£\n持续时间：30.00£time£\n恒星系内的敌方舰船:\n$MOD_SHIP_SHIELD_REDUCTION$：§R80%§!\n$MOD_SHIP_ARMOR_REDUCTION$：§R80%§!\n$MOD_SHIP_SHIELD_HARDENING_ADD$：§R-200%§!\n$MOD_SHIP_ARMOR_HARDENING_ADD$：§R-200%§!"
+ SRA_SOGZ_menu_sub_4_3_custom_tooltip:0 "§B苍星陨灭§!\n\n§C火力支援 主动§!\n§Y系统能量配置消耗200§!\n\n配置打击压制模块，允许星穹之矛在恒星系中央放置一颗高度压缩的相位能量星体，并在短暂延迟后爆发，对整个恒星系内的一切敌对舰队造成毁灭性的打击。\n\n消耗：§Y50 相位能量§!\n冷却时间：180.00£time£\n延迟：5.00£time£\n持续时间：30.00£time£\n恒星系内的敌方舰船:\n每1.00£time£受到 §R无法估量的§! 伤害"
+#歼星框架  能量调谐系统 被动
+ SRA_SOGZ_menu_sub_5_1_custom_tooltip:0 "§B星核超载§!\n\n§C能量调谐 被动§!\n§Y系统能量配置消耗0§!\n\n配置能量调谐系统，优化系统配置，提升效能与整备速度。\n\n§B投送模块§! 系统冷却时间：§G-100%§!\n§B火力支援§! 系统冷却时间：§G-75%§!\n§B时空相位§! 系统冷却时间：§G-50%§!"
+ SRA_SOGZ_menu_sub_5_2_custom_tooltip:0 "§B末世浩劫§!\n\n§C能量调谐 被动§!\n§Y系统能量配置消耗100§!\n\n配置能量调谐系统，重定向武器能量分配，大幅度提升恢弘军备效能，增强对单个目标的毁灭能力。与此同时，调整后的能量涨落回路将使星穹之矛相位能量的充能速度加倍。\n\n§Y相位能量§!产出：§G+100%§!\n星穹之矛:\n$mod_weapon_type_SRA_supreme_weapon_fire_rate_mult$：§G+300%§!\n§B寰宇溃灭§!：§Y命中效果触发的冷却时间：§G-75%§!§!"
+ SRA_SOGZ_menu_sub_5_3_custom_tooltip:0 "§B飘落传说§!\n\n§C能量调谐 被动§!\n§Y系统能量配置消耗200§!\n\n配置能量调谐系统，转换能量供应模式，将所有相位能量产出全部转向至星穹之矛本身的强化，极大幅度的加强其各项属性。\n\n§Y相位能量§!产出：§R-100%§!\n星穹之矛:\n$MOD_SHIP_SHIELD_MULT$：§G+3200%§!\n$MOD_SHIP_ARMOR_MULT$：§G+3200%§!\n$MOD_SHIP_HULL_MULT$：§G+3200%§!\n$MOD_SHIP_SHIELD_DAMAGE_MULT$：§G+200%§!\n$MOD_SHIP_ARMOR_DAMAGE_MULT$：§G+200%§!\n$MOD_SHIP_HULL_DAMAGE_MULT$：§G+200%§!\n$MOD_SHIP_SHIELD_REGEN_ADD_STATIC$：§G+64000000§!\n$MOD_SHIP_ARMOR_REGEN_ADD_STATIC$：§G+64000000§!\n$MOD_SHIP_HULL_REGEN_ADD_STATIC$：§G+64000000§!\n\n§Y§B永时流转§!释放的星阵戍卫将享受此强化10.00£time£。§!"
+#核心水晶 时空相位核心 主动
+ SRA_SOGZ_menu_sub_6_1_custom_tooltip:0 "§B新星终结§!\n\n§C时空相位 主动§!\n§Y系统能量配置消耗0§!\n\n配置时空相位引擎，允许使用星穹之矛的强大武器藉由时空相位引擎的协助向目标恒星系发起攻击。使用反集群打击模式时，将在目标恒星系投射一个存在15天的相位空间投影并攻击目标恒星系内的所有敌人；使用星系摧毁模式时，将使用§B「新星终结」§!直接摧毁目标恒星系。\n\n消耗：§Y50 相位能量§!\n冷却时间：360.00£time£"
+ SRA_SOGZ_menu_sub_6_2_custom_tooltip:0 "§B奇点爆发§!\n\n§C时空相位 主动§!\n§Y系统能量配置消耗100§!\n\n$SRA_Spear_Of_Galaxy_Zenith.2.6_2.desc$"
+ SRA_SOGZ_menu_sub_6_3_custom_tooltip:0 "§B事件视界§!\n\n§C时空相位 主动§!\n§Y系统能量配置消耗200§!\n\n配置时空相位引擎，授权时空相位引擎抽取能量储备以完成充能，随后消耗巨量能量扩大其作用范围至整个星系，极大幅度地减缓所有敌对舰队的攻击和移动速度，构成类似于时间静止的效果。\n\n消耗：§Y100 相位能量§!\n冷却时间：360.00£time£\n持续时间：20.00£time£\n星系内的敌方舰船:\n$MOD_SHIP_DISENGAGE_CHANCE_REDUCTION$：§R1000%§!\n$MOD_SHIP_SPEED_MULT$：§R-4000%§!\n$MOD_SHIP_WEAPON_RANGE_MULT$：§R-4000%§!\n$MOD_SHIP_EVASION_MULT$：§R-4000%§!\n$MOD_SHIP_ACCURACY_MULT$：§R-4000%§!\n$MOD_SHIP_TRACKING_MULT$：§R-4000%§!\n\n§Y对拥有动态调整系统的舰队无效§!"
+
+
+#####修正
+ SRA_SOGZ_menu_sub_5_2_Buff:0 "§B末世浩劫§!"
+ SRA_SOGZ_menu_sub_5_3_Buff:0 "§B飘落传说§!"
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码
+ ### Fire Target Modifiers ###
+ SRA_fire_target_Buff_0:0 ""
+ SRA_fire_target_Buff_1:0 ""
+ SRA_Spear_Of_Galaxy_Zenith_nearly_repair:0 "星穹之矛修复中"
+ SRA_Spear_Of_Galaxy_Zenith_Buff_1:0 "星穹之矛-至高裁决"
+ SRA_Spear_Of_Galaxy_Zenith_Buff_2:0 "星穹之矛-溟乎远响"
+ SRA_SOGZ_menu_sub_4_2_buff:0 "溟乎远响压制"

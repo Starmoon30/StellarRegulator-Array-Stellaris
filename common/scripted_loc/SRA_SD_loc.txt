@@ -1,0 +1,12 @@
+defined_text = {
+	name = GetScriptedmod_building_SRA_SD_energy_load_give
+	value = modifier:mod_building_SRA_SD_energy_load_give
+}
+defined_text = {
+	name = GetScriptedmod_building_SRA_SD_energy_load_use
+	value = modifier:mod_building_SRA_SD_energy_load_use
+}
+defined_text = {
+	name = GetScriptedSRA_engery_effective_load_2
+	value = value:SRA_engery_effective_load_2
+}

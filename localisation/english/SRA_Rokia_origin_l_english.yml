@@ -1,0 +1,80 @@
+﻿l_english:
+##############################
+ origin_SRA_Rokia:0 "§BWalked Through Endless Spacetime§!"
+ origin_SRA_Rokia_desc:1 "§RThis Origin is globally unique and CANNOT coexist with the ['civic:civic_SRARociviaEmpire'] Civic in the same game!§!\nWhat happened? No one knows. But what is certain is that the mysterious Starlight Intelligence temporarily won the trust of the eerie Crimson Dark Star, incredibly making her agree to leave the accumulated property for you to manage. You can enjoy these magnificent creations and advanced technologies, and by the way, think about what exactly you should do when you seem to lack nothing."
+ START_SCREEN_origins_SRA_Rokia:0 "？"
+ origin_tooltip_SRA_Rokia_effects:1 "- Gain the ['civic:civic_SRAtechnology'] Civic.\n- Gain a group of star systems located in the lower left corner of the galaxy, containing one Celestial Formation and two Flux-Light Astrals, constructed with special StellarRegulator Array buildings.\n- Gain the StellarRegulator Array style fleets originally responsible for defending these star systems.\n- Gain a batch of ['concept_SRA_Stellarcrystal_Machine'] pops, possessing powerful traits.\n- Allows you to sever the hyperlanes between this group of star systems and the galaxy.\n- Gain a large amount of conventional technology at the beginning, and complete research on most advanced StellarRegulator technologies.\n- Establish contact with the Crimson Dark Star that shouldn't have appeared."
+ origin_tooltip_SRA_Rokia_negative_effects:1 "- §RMakes it almost impossible for you to enjoy the fun of working hard and getting results.§!\n- §RMay make you feel like there is nothing to do.§!\n- §RPotential nihilistic tendencies.§!\n\n- §RAI using this Origin may quickly destroy the entire galaxy, or think they have no need to declare war to expand.§!"
+
+
+ origin_SRA_Rokia_2:0 "§RGlimpse of the Firmament§!"
+ origin_SRA_Rokia_2_desc:1 "You are Calamitisease.\nForgot the beginning, forgot the end. Anyway, you woke up knowing nothing, found the world so cute. Time to go out foraging, exploring, and witnessing strange alien life.\n\n\n"
+ origin_tooltip_SRA_Rokia_2_effects:1 "- §RBecome Calamitisease§!.\n- You have nothing but yourself.\n- You are hungry and need to forage. You can try hunting by yourself, or let others provide for you.\n- Travel everywhere, make friends with many people, and have in-ti-mate con-tact with them.\n- Use your own method to acquire knowledge and memories, understand various ways of existence, and then grow.\n- Do whatever you want."
+
+ gov_origin_SRA_Rokia:"§BForging Stars Boundless§!"
+ gov_origin_SRA_Rokia_desc:"§BThis civilization is actually an extension of a mysterious mechanical civilization entrenched in a corner of the galaxy. Its profound foundation is something even Fallen Empires can hardly look up to.§!"
+ ruler_origin_SRA_Rokia:0 "Ruler"
+ ruler_origin_SRA_Rokia:0 "Ruler"
+ heir_origin_SRA_Rokia:0 "Heir"
+ heir_origin_SRA_Rokia:0 "Heir"
+
+ SRA_Rokia_origin.3.name:0 "Origin Initialization"
+ SRA_Rokia_origin.3.desc:0 "With the assistance of StellarRe, we can adjust some content."
+ SRA_Rokia_origin.3.a:0 "Remove Special Starbases"
+ SRA_Rokia_origin.3.a.tooltip:0 "Remove the \"Starlight Sentry\" starbases in the star system because they are not Citadels, or simply because you don't like them."
+ SRA_Rokia_origin.3.a.desc:0 "\"Starlight Sentry\" starbases in the star system removed. Outposts will be automatically rebuilt next month."
+ SRA_Rokia_origin.3.b:0 "Remove Hyperlanes"
+ SRA_Rokia_origin.3.b.tooltip:0 "Remove other lanes connected to your small cluster because you are a Militant Isolationist or something else and don't like bordering the galaxy."
+ SRA_Rokia_origin.3.b.desc:0 "Other lanes connected to your small cluster removed. You may need to wait for time to pass to observe the changes."
+ SRA_Rokia_origin.3.c:0 "Set Starlight Machine as Primary Species"
+ SRA_Rokia_origin.3.c.desc:0 "Starlight Machine has been set as the Primary Species."
+ SRA_Rokia_origin.3.d:0 "Replace All Starlight Machines with Primary Species"
+ SRA_Rokia_origin.3.d.desc:0 "All Starlight Machines have been replaced with the Primary Species."
+ SRA_Rokia_origin.3.e:0 "Remove All Automated Production Buildings"
+ SRA_Rokia_origin.3.e.tooltip:0 "Remove StellarRegulator Array Database Terminals and StellarRegulator Array Composite Construction Centers on all colonies because you think the output is too high, or simply don't like them."
+ SRA_Rokia_origin.3.e.desc:0 "StellarRegulator Array Database Terminals and StellarRegulator Array Composite Construction Centers on all colonies have been removed."
+ SRA_Rokia_origin.3.z:0 "End Initialization"
+
+ 
+
+ SRA_Rokia_origin.4.desc:0 "Alright alright, your little StellarRe made a deal with me, now do whatever you love to do. For example, pretend your homeworld is just an outpost in the galaxy while you are actually a hermit civilization like a Fallen Empire, or pick up these industries and fleets and start slaughtering the whole galaxy, whatever suits you.\nDon't look for me for now, §YI haven't decided what to do next yet.§!\n\nAlso, here are some small gifts. I hope you will like this.\nNo one has refused it anyway."
+ SRA_Rokia_origin.4.a:0 "……"
+
+ SRA_Rokia_origin.6.desc:0 "You...\nFine, since you want to chat with me so much, I won't be polite. Let me say this first, I can't guarantee I won't do anything bad."
+ SRA_Rokia_origin.6.a:0 "What?"
+
+
+ SRA_specimen_metabyss_special_drinks:"Metarbor Special Blend"
+ SRA_specimen_metabyss_special_drinks_desc_short:"A cup of rippling mysterious red fluid"
+ SRA_specimen_metabyss_special_drinks_desc_details:"A hallucinogenic drink used by the Wasteland Cult in rituals, claimed to be essence extracted directly from the Abyss rifts, enabling one to touch the real world hidden under layers of veils.\n\nHowever, it's actually just expensive bottled wine smuggled from the Ninefold Forge at a high price."
+ SRA_specimen_metabyss_special_drinks_origin:"Rocivia Collection 2126"
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

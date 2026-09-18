@@ -1,0 +1,42 @@
+﻿l_english:
+###############################
+
+ weapon_type_SRA_RE_Core:0 "§YPioneer Weapon§!"
+ mod_weapon_type_SRA_RE_Core_weapon_damage_mult:0 "§YPioneer Weapon Damage§!"
+ mod_weapon_type_SRA_RE_Core_weapon_fire_rate_mult:0 "§YPioneer Weapon Fire Rate§!"
+ SRA_RE_Core_weapon_Buff_0:0 "§YPioneer Weapon Optimization§!"
+
+ weapon_type_SRA_supreme:0 "§BSRA - Grand Armament§!"
+ mod_weapon_type_SRA_supreme_weapon_damage_mult:0 "§BSRA - Grand Armament Damage§!"
+ mod_weapon_type_SRA_supreme_weapon_fire_rate_mult:0 "§BSRA - Grand Armament Fire Rate§!"
+
+
+
+ weapon_type_SRA_Adjust:0 "§BSRA Tuned Weapon§!"
+ mod_weapon_type_SRA_Adjust_weapon_damage_mult:0 "§BSRA Tuned Weapon Damage§!"
+ mod_weapon_type_SRA_Adjust_weapon_fire_rate_mult:0 "§BSRA Tuned Weapon Fire Rate§!"
+ SRA_Weapon_Adjust_Buff_0:0 "SRA Tuned Weapon Damage Adjustment"
+ SRA_Weapon_Adjust_Buff_1:0 "SRA Tuned Weapon Fire Rate Adjustment"
+
+ SRA_Weapon_Adjust.2.name:0 "SRA Tuned Weapon Adjustment"
+ SRA_Weapon_Adjust.2.desc:0 "This interface allows you to adjust the damage and fire rate of your \"SRA Tuned Weapon\". Current Damage Bonus: §Y[Root.SRA_Weapon_Adjust_0]%§!, Fire Rate Bonus: §Y[Root.SRA_Weapon_Adjust_1]%§!."
+ SRA_Weapon_Adjust.2.a:0 "SRA Tuned Weapon Damage Adjustment"
+ SRA_Weapon_Adjust.2.b:0 "SRA Tuned Weapon Fire Rate Adjustment"
+
+
+ SRA_Weapon_Adjust.3.name:0 "SRA Tuned Weapon Damage Adjustment"
+ SRA_Weapon_Adjust.3.desc:0 "This interface allows you to adjust the damage of the \"SRA Tuned Weapon\" of §YYour Country§!. Current Damage Bonus: §Y[Root.SRA_Weapon_Adjust_0]%§!.\nStellaris weapon damage calculation rule is Panel Damage * Panel Multiplier Bonus * Sum of all \"Damage\" Bonuses * Shield, Armor, Hull Damage. For example, an \"SRA Tuned Weapon\" with 100 panel damage and +100% hull damage deals 200 damage when attacking hull. If you hold a -90% \"SRA Tuned Weapon\" tag damage bonus, then its damage is 200 * (1-90%) = 20. You can adjust the \"SRA Tuned Weapon\" tag damage in this interface according to the additive algorithm, so that the sum of the tag damage bonuses of your SRA Array weapons meets your needs."
+
+
+ SRA_Weapon_Adjust.4.name:0 "SRA Tuned Weapon Fire Rate Adjustment"
+ SRA_Weapon_Adjust.4.desc:0 "This interface allows you to adjust the fire rate of your \"SRA Tuned Weapon\". Current Fire Rate Bonus: §Y[Root.SRA_Weapon_Adjust_1]%§!.\nFire rate related modifiers are all additive, and affect both the cooldown time after firing and the weapon wind-up. You can adjust the \"SRA Tuned Weapon\" tag fire rate in this interface according to the additive algorithm, so that the sum of the tag fire rate bonuses of your SRA Array weapons meets your needs."
+
+
+ SRA_Weapon_Adjust.a:0 "+1%"
+ SRA_Weapon_Adjust.b:0 "+10%"
+ SRA_Weapon_Adjust.c:0 "X10"
+ SRA_Weapon_Adjust.d:0 "-1%"
+ SRA_Weapon_Adjust.e:0 "-10%"
+ SRA_Weapon_Adjust.f:0 "X0.1"
+ SRA_Weapon_Adjust.g:0 "Return to Previous Level"
+ SRA_Weapon_Adjust.h:0 "Close Interface"

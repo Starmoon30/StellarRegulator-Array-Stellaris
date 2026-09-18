@@ -1,0 +1,141 @@
+﻿l_english:
+###############################
+
+#Sacrilence「息声」，希德拉的剑
+
+ SRA_RE_Hidra_talk_return1:0 "Hmm." 
+ SRA_RE_Hidra_talk_return4:0 "Let's talk about something else." 
+ SRA_RE_Hidra_talk_exit1:0 "End communication."
+
+ SRA_RE_Hidra.2.desc:0 "Hello, ruler from outside the wall. As I said before, I manage the Imperial Security Headquarters and the Secret Council.\nThe Imperial Security Headquarters watches every corner of this country, ensuring social security and stability, supervising the execution of every policy, and fighting the Empire's enemies in the dark.\nThe Secret Council consists of a group of people with important positions and wisdom, always ensuring that this country is moving on the right path and accumulating strength for potential crises.\nYou can issue orders to these two departments through me."
+ SRA_RE_Hidra.1.desc:0 "Hello, outsider."
+ SRA_RE_Hidra.1.a:0 "Seek Support"
+ SRA_RE_Hidra.1.b:0 "Serve as Leader"
+ SRA_RE_Hidra.1.c:0 "Chat"
+ SRA_RE_Hidra.1.d:0 "Seek Guidance from the Metabyss"
+ #不必在意所见之事，吾会指引汝之道路。
+
+ SRA_RE_Hidra.100.desc:0 "The Imperial Security Headquarters is a sharp blade, always hunting the Empire's enemies, no matter where they come from or where they are. The Secret Council is the hand holding the blade. If necessary, we will take all means to maintain the continued existence of civilization."
+ SRA_RE_Hidra.100.a:0 "Organize Large-Scale Stability Maintenance Operation"
+ SRA_RE_Hidra.100.a.desc:0 "To ensure social stability and security, invest the vast majority of Security Bureau manpower into internal review and social stability maintenance work. Through extensive surveillance and investigation, eliminate all unstable factors as much as possible.\n\"Claims about prying into memories and mind control are sheer nonsense.\""
+ SRA_RE_Hidra.100.a.response:0 "Operation started. Specific plans have been conveyed to various departments of the Security Bureau."
+ SRA_RE_Hidra_101:0 "Large-Scale Stability Maintenance Operation in Progress"
+ SRA_RE_Hidra.101.desc:0 "The current plan for the large-scale stability maintenance operation has been basically completed. Do you need to continue to the next phase?"
+ SRA_RE_Hidra.101.a:0 "Continue execution."
+ SRA_RE_Hidra.101.b:0 "Let's end it here."
+ SRA_RE_Hidra.100.b:0 "Urgently Assemble a Batch of Resources"
+ SRA_RE_Hidra.100.b.desc:0 "If the situation is urgent, the Secret Council can provide a batch of emergency resources. Most of these resources have unspeakable sources, and of course, some are privately funded. In short, it can supplement national expenditures to a certain extent, but it may not be exactly the supplies needed."
+ SRA_RE_Hidra.100.b.allow:0 "Resources Being Prepared"
+ SRA_RE_Hidra.100.c:0 "Infiltrate The Shroud"
+ SRA_RE_Hidra.100.c.desc:0 "If needed, I can guide you to infiltrate The Shroud. However, what happens after that is your own business."
+ SRA_RE_Hidra_103_cooldown:0 "Dragon's Assistance"
+ SRA_RE_Hidra_103_cooldown_desc:0 "Do you believe there are good things without a price?"
+
+ SRA_RE_Hidra_102_resource_a:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing a treasure map recording that a large amount of precious metals are buried in a corner of §Y[Root.Capital.GetName]§!."
+ SRA_RE_Hidra_102_resource_b:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing a full set of uniforms. It looks like military uniforms of [Root.GetName] from the pre-space age.\n\nHowever, the materials of these clothes can still be recycled."
+ SRA_RE_Hidra_102_resource_c:0 "Hidra snapped her fingers, and an open chest appeared in front of you, piled with rare crystals of clear texture and extraordinary value."
+ SRA_RE_Hidra_102_resource_d:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing a pile of scrolls with a sense of age. Written in the ancient language of [Root.GetAdj], they are of great research value."
+ SRA_RE_Hidra_102_resource_e:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing a large pile of cold weapons, but the materials used are excellent and can be directly smelted for military needs."
+ SRA_RE_Hidra_102_resource_f:0 "Hidra snapped her fingers, and an open chest appeared in front of you, filled with military rations. Although all markings on them have worn away, the contents look safe and are extremely similar to the old styles of [Root.GetAdj]."
+ SRA_RE_Hidra_102_resource_g:0 "Hidra snapped her fingers, and an open chest appeared in front of you, piled with strange red-black scales of extremely high strength, which can be used as a substitute for military alloys."
+ SRA_RE_Hidra_102_resource_h:0 "Hidra snapped her fingers, and an open chest appeared in front of you, filled with various gold jewelry, looking like relics of some dynasty.\nThere are some strange bite marks on them."
+ SRA_RE_Hidra_102_resource_i:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing countless wealth. If you told people who were not present, no one would believe that such a huge amount of wealth actually exists."
+ SRA_RE_Hidra_102_resource_j:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing several alien devices that seem unresponsive and should be broken."
+ SRA_RE_Hidra_102_resource_k:0 "Hidra snapped her fingers, and an open chest appeared in front of you. Although it is empty, the inner walls of this chest are covered with various marks. Traces of some biological matter were tracked deeper inside."
+ SRA_RE_Hidra_102_resource_l:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing a strange creature like a hellfire elemental from ancient legends. It burned into a pile of psionic ash the moment it touched the real universe."
+ SRA_RE_Hidra_102_resource_m:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing a rotating holographic model closely related to the frontier topics of current physics."
+ SRA_RE_Hidra_102_resource_n:0 "Hidra snapped her fingers, and an open chest appeared in front of you, containing a whole block of smooth alloy, the material of which is among the very top of military industrial materials."
+
+ SRA_RE_Hidra.200.desc:0 "Ah, if you happen to lack an excellent leader in a certain field, I can help you a little bit. However, I can only help you to a limited extent, I can't take over, can I?\n§RYou know, even Gray Tempest could die suddenly due to gang crossfire on a planet, and the death of various scientists is commonplace, so it wouldn't be strange if I, a leader, died one day. You can just come here to find me then.§!"
+ SRA_RE_Hidra.200.a:0 "Act as Industrial Commissioner"
+ SRA_RE_Hidra.200.b:0 "Act as Science Officer"
+ SRA_RE_Hidra.200.c:0 "Act as Fleet Admiral"
+ SRA_RE_Hidra.200.d:0 "Act as Strategist"
+
+ SRA_RE_Hidra.3011.a.desc:0 "Reality is a dream from which one cannot wake, and dreams are realities that can be broken. However, if one can follow one's heart when facing so-called reality as in a dream, and even withdraw when bored, then what is the meaning of all this... Just a casual lament, don't take it to heart."
+ SRA_RE_Hidra.3011.b.desc:0 "I always drift with the flow... have no pursuits, and my hobbies are limited to what I see in front of me. Part of the reason I follow Rocivia is because she always has things to do, which gives me something to do as well. Without her, I would probably have slept in the Metabyss forever..."
+ SRA_RE_Hidra.3011.c.desc:0 "The brilliance of \"possibility\" is rare after all. Most living beings in this world are just gears struggling to mesh and move forward, stuffed into the huge machine of history by fate. When worn to the point of inability to operate, they are culled and thrown into the furnace of oblivion."
+ SRA_RE_Hidra.3011.d.desc:0 "The rules of this universe are unstable. A group of strange four-legged herbivores built its foundation in a foolish way, and subsequently, many other existences tinkered and modified on this basis... Maybe it will collapse sometime."
+ SRA_RE_Hidra.3011.e.desc:0 "You are still full of confidence in everything... When holding the fate of these people in your hands, you believe there will be a good ending."
+
+ SRA_RE_Hidra.3012.a.desc:0 "For me, even achieving feats that are extremely great for mortals is effortless. Conquering the world? Creating legends? Heroes? Overlords? All of these are just fruits that I can pick at will. But what's the point? I achieved those not because I thought more or did more, but because I stood before the finish line from the beginning. As long as I am willing to take a step, I must be the champion.\nSo I don't chase grandeur. I just watch your efforts, your sacrifices, your possibilities, watching you achieve your glory with your tiny bodies."
+ SRA_RE_Hidra.3012.b.desc:0 "It is best to avoid organizing too many ships in the same fleet; within one hundred is optimal. Once too many destroyed ships are waiting for replenishment, you will feel that the flow of time becomes less smooth."
+ SRA_RE_Hidra.3012.c.desc:0 "\"Do not hesitate because the road is long; as long as you go, you will arrive.\""
+
+ #山巅的巨龙不曾想过统治山下的国度，但当勇士艰难攀上山峰寻求智慧时，它不介意给予一点“小小的”帮助。
+
+ SRA_RE_Hidra.3013.a.desc:0 "When encountering certain special planets, use army landings as much as possible. Those methods of destroying planets are... unreliable on some level."
+ SRA_RE_Hidra.3013.b.desc:0 "Destruction methods other than ship weapons are not recognized by these stars. Those tricks playing with data are nothing but self-deception."
+ SRA_RE_Hidra.3013.c.desc:0 "The place we came from is full of bleached bones, and the place we are going is full of flowers..."
+
+ SRA_RE_Hidra.3014.a.desc:0 "Time is but a scale to measure change. From a higher perspective, all times exist \"simultaneously,\" and the so-called future has \"already\" happened. Therefore, everything is destined, and fate cannot be changed. Unless some existence outside of time gently touches a fragment and guides it to another destined fate.\nAnd you and I are plucking the strings of fate, blurring the direction of the future."
+
+ SRA_RE_Hidra.401.desc:0 "Rocivia wants you to be down-to-earth in this scenario, letting you explore every possibility yourself, make choices, and face crises.\nBut if you want, I can guide you to the \"correct\" path.\nAnd, give you a little power to change reality.\nThis requires nothing from you, nothing at all."
+ SRA_RE_Hidra.401.a:0 "Accept"
+ SRA_RE_Hidra.401.a.desc:0 "§YWhen a choice needs to be made, show you the way.\nWhen you need to explore with all your might, reveal the truth to you.\nReveal the mysteries of Stellarcrystal and light up technology for you.\nThe malady of the universe will not breed in your land."
+
+ #将灾疫研究项目的消耗改为5000
+
+ SRA_RE_Hidra.401.b:0 "Uh, how about we wait first?"
+ SRA_RE_Hidra.402.desc:0 "Hmm...\nNow, you can continue forward.\nHowever, if so...\nWhy not choose \"StellarRegulator Technology\"?"
+ SRA_RE_Hidra.403.desc:0 "Probably because there is a girl like me here, who combines wisdom and beauty, as gorgeous as the dawn."
+ SRA_RE_Hidra.404.desc:0 "(Knock)\nWhy did you come over suddenly?"
+ SRA_RE_Hidra.405.desc:0 "That hurts...\nBecause I felt someone destroying my great game... uh, I mean my scenario."
+ SRA_RE_Hidra.406.desc:0 "Isn't that interesting?"
+ SRA_RE_Hidra.407.desc:0 "No, no, if the earlier parts are so easy, wouldn't the emotional parts later be very awkward? It's clearly a crushing situation, yet we have to go through the plot saying \"this is the only way\", that won't do."
+ SRA_RE_Hidra.408.desc:0 "Even if I don't do this, \"Executors\" who don't want to cooperate with you will choose to play other Mods, or simply press ~ to open the console. This is their freedom."
+ SRA_RE_Hidra.409.desc:0 "Tsk."
+
+
+ ag_patron_ancient_ai: "$ag_extragalactic_galaxy_m106_ai_name$"
+ ag_patron_ancient_ai_article: "$ag_extragalactic_galaxy_m106_ai_name$"
+ ag_patron_ancient_ai_article_cap: "$ag_extragalactic_galaxy_m106_ai_name$"
+ ag_patron_ancient_ai_color: "§L$ag_extragalactic_galaxy_m106_ai_name$§!"
+ ag_patron_ancient_ai_color_article: "§H$ag_extragalactic_galaxy_m106_ai_name$§!"
+ ag_patron_ancient_ai_color_article_cap: "§H$ag_extragalactic_galaxy_m106_ai_name$§!"
+ #虚境实体
+ SRA_patron_Hidra:"Scar of Crimson"
+ SRA_patron_Hidra_article: "$SRA_patron_Hidra$"
+ SRA_patron_Hidra_article_cap: "$SRA_patron_Hidra$"
+ SRA_patron_Hidra_color: "§L$SRA_patron_Hidra$§!"
+ SRA_patron_Hidra_color_article: "§R$SRA_patron_Hidra$§!"
+ SRA_patron_Hidra_color_article_cap: "R$SRA_patron_Hidra$§!"
+ SRA_patron_Hidra_desc:"A horrifying scar left in §HThe Shroud§! by a single touch. Blood thorns grow, trauma spreads. Perhaps one day, §HThe Shroud§! will §Rwither and die because of this§!."
+ code_name_SRA_patron_Hidra:"Horrifying Thing"
+ SRA_patron_Hidra_passive_accord_effect:"§RThe moment of glory is approaching.§!"
+ SRA_patron_Hidra_passive_accord_modifier:"§RHesitation and bewilderment have ended.§!"
+
+ SRA_patron_Hidra_project_desc_end:0 "Until we know the true name of this entity, we will call it §H$code_name_SRA_patron_Hidra$§!."
+ SRA_patron_Hidra_project:0 "Commune with $code_name_SRA_patron_Hidra$"
+ SRA_patron_Hidra_project_DESC:0 "$MINOR_PATRON_FC_PROJECT_DESC$\n\n$SRA_patron_Hidra_project_desc_end$"
+ SRA_patron_Hidra_project_hive:0 "Commune with $code_name_SRA_patron_Hidra$"
+ SRA_patron_Hidra_project_hive_DESC:0 "$MINOR_PATRON_FC_PROJECT_HIVE_DESC$\n\n$SRA_patron_Hidra_project_desc_end$"
+ SRA_patron_Hidra_project_machine:0 "Commune with $code_name_SRA_patron_Hidra$"
+ SRA_patron_Hidra_project_machine_DESC:0 "$MINOR_PATRON_FC_PROJECT_ROBOT_DESC$\n\n$SRA_patron_Hidra_project_desc_end$"
+
+ SRA_RE_Hidra.500.desc:"The flow of §HThe Shroud§! suddenly became violent, sweeping us into a domain we had never discovered before.\nBlurred and hideous branches are everywhere here, growing and piercing every surface of §HThe Shroud§!. §RThe Shroud is bleeding.§! And we, facing all this, are also overwhelmed by the pain of §HThe Shroud§!. Our psionics shriek and shatter, emitting dying howls.\nJust as we were in despair, §Rsome existence§! cast its gaze upon us.\n\nThe pressure suddenly eased, died out, disappeared without a trace, and we could move freely in §HThe Shroud§! again. However, this scar of §HThe Shroud§! still exists. It is so horrifying, as if the boundless §HThe Shroud§! will weaken and die because of it.\n§RThat existence§! said nothing to us, but what He showed seemed to be a vague kindness? We don't know what He has to do with this scar, but He also carries the same disturbing feeling.\n\nWe are detaching from §HThe Shroud§!. Let's call §Rthis existence§! §R$code_name_SRA_patron_Hidra$§! for now. We may meet again soon."
+ SRA_RE_Hidra.500.a:0 "Disturbing."
+
+ SRA_RE_Hidra.501.name:0 "§R$code_name_SRA_patron_Hidra$§!"
+ SRA_RE_Hidra.501.desc:0 "§YFollowing the psionic imprint left earlier, we found the existence of §HThe Shroud§! we call §R$code_name_SRA_patron_Hidra$§! again. At this moment, He is not beside that terrible scar, but in a new domain of §HThe Shroud§!. Those crimson branches grow slowly beside Him, but have not torn open new wounds on §HThe Shroud§! yet.\n§R$code_name_SRA_patron_Hidra$§! looked at us, His gaze making us feel deeply uneasy.§!\n\nHello, outsider."
+ SRA_RE_Hidra.501.a:0 "You are?"
+ SRA_RE_Hidra.502.name:0 "§R$SRA_patron_Hidra$§!"
+ SRA_RE_Hidra.502.desc:0 "§Y§R$code_name_SRA_patron_Hidra$§! seemed to chuckle, then the mist shrouding Him gradually dissipated, revealing a figure quite familiar to you.§!\n\nHere, well, other §HThe Shroud§! existences call me §R$SRA_patron_Hidra$§!, let's borrow this title for now.\n\n§Y$Name_SRA_RE_leader_Hidra$, or according to her, §R$SRA_patron_Hidra$§! revealed a malicious smile.§!\n\nThis universe is really interesting. There are so many strange and vast planes that can be traveled at will, unlike some isolated islands that don't even have a higher plane.\n§HThe Shroud§! reflected some of my aspects, or rather, a part of my influence was magnified here. I just touched it lightly, and left such a trauma.\nTo the broad §HThe Shroud§!, this tiny spot is nothing, but since it chose such a nature, maybe there will be interesting scenes one day?\nBut right now, we can pretend nothing happened. You can continue to enjoy your exploration of §HThe Shroud§!, don't mind me."
+ SRA_RE_Hidra.502.a:0 "Scared..."
+##########################字体颜色代码
+##§W W白色
+##§R R红色
+##§L L暗金
+##§S S土黄
+##§H H金黄
+##§Y Y黄色
+##§G G绿色
+##§E E青色
+##§B B深蓝
+##§M M紫色
+##§g g灰色
+## 结束
+##########################字体颜色代码
+
+###
+#31冷漠32普通33微笑

@@ -1,0 +1,291 @@
+decision_SRA_GZ = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_strategic_resources
+	
+	resources = {
+		category = decisions
+	}
+	
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+		    }
+		}
+		is_planet_class = pc_ringworld_habitable_SRA_GZ
+	}
+	
+	effect = {
+		hidden_effect = {
+			carrier_event = {
+				id = SRA_StellarRegulator.10322
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+decision_SRA_Barrier_Guard_fleet = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_strategic_resources
+	
+	resources = {
+		category = decisions
+	}
+	
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+		    }
+		}
+		is_planet_class = pc_SRA_Barrier_Main_Station
+	}
+	allow = {
+		NOT = {
+			has_planet_flag = decision_SRA_Barrier_Guard_fleet_flag
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_timed_planet_flag = {
+				flag = decision_SRA_Barrier_Guard_fleet_flag days = 180
+			}
+			carrier_event = {
+				id = SRA_Barrier.1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+#流光星界
+decision_SRA_city_project = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 400
+			minerals = 40000
+			alloys = 20000
+		}
+	}
+
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+		    }
+		}
+		has_modifier = planet_SRA_orbital_ring_Buff_1
+		NOT = { SRA_is_SRA_planet = yes }
+	}
+
+	allow = {
+		if = {
+			limit = { owner = { is_ai = no } }
+			custom_tooltip = {
+				fail_text = legendary_leader_decision_arcology_project
+				NOT = { has_planet_flag = legendary_leader_planet }
+			}
+		}
+		num_uncleared_blockers < 1
+	}
+
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_SRA_city_project_effects
+		hidden_effect = {
+			clear_deposits = yes
+			change_pc = pc_SRA_city
+			owner = {
+				country_event = { id = distar.201 } # port for living planet distar.197, triggers in event
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_housing
+			}
+			carrier_event = { id = SRA_buildjobs.200 }
+			set_planet_entity = {
+				entity = "SRA_city_planet_01_entity"
+			}
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+decision_SRA_orbital_ring_repair = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_strategic_resources
+	
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 40000
+			influence = 200
+		}
+	}
+	
+	potential = {
+		has_modifier = planet_SRA_orbital_ring_Buff_1
+		owner = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+		    }
+		}
+		NOT = {
+			exists = orbital_defence
+		}
+	}
+	effect = {
+		hidden_effect = {
+			orbital_defence = {
+				fleet = {
+					delete_fleet = this
+				}
+			}
+			create_starbase = {
+				size = SRA_orbital_ring
+				owner = FROM
+				#module = <starbase_module>
+				#building = <starbase_building>
+				effect = {
+					set_ship_construction_type = starbase_shipyard
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+#星辉自动化
+decision_SRA_auto_clear = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_strategic_resources
+	resources = {
+		category = decisions
+	}
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+		    }
+			has_country_flag = SRA_Automation_on
+		}
+	}
+	effect = {
+		#remove_all_districts = yes
+		remove_all_buildings = yes
+		set_owner = FROM
+		if = {###旅游地
+			limit = { has_modifier = resort_colony }
+			add_building = building_resort_major_capital
+		}
+		else_if = {###流放地
+			limit = { has_modifier = slave_colony }
+			add_building = building_slave_major_capital
+		}
+		else_if = {###栖息地
+			limit = { is_planet_class = pc_habitat }
+			add_building = building_hab_system_capital
+		}
+		else_if = {###蜂群
+			limit = { owner = { is_hive_empire = yes } }
+			add_building = building_hive_major_capital
+		}
+		else_if = {###智械
+			limit = { owner = { is_machine_empire = yes } }
+			add_building = building_machine_system_capital
+		}
+		else = {###普通
+			add_building = building_system_capital
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+#铸星神械
+decision_SRA_world_machine = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	enactment_time = 10
+	resources = {
+		category = decisions
+	}
+	potential = {
+		owner = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+		    }
+			OR = {
+				has_ascension_perk = ap_SRA_world_machine
+				has_global_flag = SRA_AI_world_machine
+			}
+		}
+		NOT = {
+			has_deposit = d_SRA_world_machine
+		}
+	}
+	effect = {
+		create_SRA_world_machine = yes
+	}
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_SRA_world_machine_cancel = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_arcology_project
+	enactment_time = 10
+	resources = {
+		category = decisions
+	}
+	potential = {
+		has_deposit = d_SRA_world_machine
+	}
+	effect = {
+		remove_deposit = d_SRA_world_machine
+		remove_deposit = d_SRA_world_machine_A
+		remove_deposit = d_SRA_world_machine_B
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

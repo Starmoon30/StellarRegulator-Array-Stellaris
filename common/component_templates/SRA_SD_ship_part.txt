@@ -1,0 +1,270 @@
+
+utility_component_template = {
+	key = "SMALL_SRA_SD_ship_Part_Shield"
+	size = small
+	icon = "GFX_SRA_SD_ship_Part_Shield"
+	icon_frame = 1
+	power = -300
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_7
+		ship_armor_add = @SRA_ship_part_hull_add_4
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_7
+		ship_shield_add = @SRA_ship_part_hull_add_5
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_8
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_1
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_SD_ship_Part" }
+	component_set = "SRA_SD_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1200
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_SD_ship_Part_Shield"
+	size = medium
+	icon = "GFX_SRA_SD_ship_Part_Shield"
+	icon_frame = 1
+	power = -600
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_5
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_8
+		ship_armor_add = @SRA_ship_part_hull_add_5
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_8
+		ship_shield_add = @SRA_ship_part_hull_add_6
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_9
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_1
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_SD_ship_Part" }
+	component_set = "SRA_SD_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2400
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_SD_ship_Part_Shield"
+	size = large
+	icon = "GFX_SRA_SD_ship_Part_Shield"
+	icon_frame = 1
+	power = -1200
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_6
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_9
+		ship_armor_add = @SRA_ship_part_hull_add_6
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_9
+		ship_shield_add = @SRA_ship_part_hull_add_7
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_10
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_1
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_SD_ship_Part" }
+	component_set = "SRA_SD_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 4800
+		}
+	}
+}
+
+utility_component_template = {
+	upgrades_to = "SRA_SD_Anti_accuracy_2"
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 1
+	}
+}
+utility_component_template = {
+	upgrades_to = "SRA_SD_Anti_accuracy_3"
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 2
+	}
+}
+utility_component_template = {
+	upgrades_to = "SRA_SD_Anti_accuracy_4"
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 3
+	}
+}
+utility_component_template = {
+	upgrades_to = "SRA_SD_Anti_accuracy_5"
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 4
+	}
+}
+utility_component_template = {
+	upgrades_to = "SRA_SD_Anti_accuracy_6"
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 5
+	}
+}
+utility_component_template = {
+	upgrades_to = "SRA_SD_Anti_accuracy_7"
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 6
+	}
+}
+utility_component_template = {
+	upgrades_to = "SRA_SD_Anti_accuracy_8"
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 7
+	}
+}
+utility_component_template = {
+	upgrades_to = "SRA_SD_Anti_accuracy_9"
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 8
+	}
+}
+utility_component_template = {
+	inline_script = {
+		script = component_templates/SRA_SD_Anti_accuracy
+		TIER = 9
+	}
+}
+
+
+
+
+utility_component_template = {
+	key = "SRA_SD_Abyss_Hostile_Ship_Reactor"
+	size = large
+	icon = "GFX_SRA_T1_weapon_G"
+	icon_frame = 1
+	power = 8000000
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	hidden = yes
+	sensor_range = 15
+	hyperlane_range = 20
+	ftl = yes
+	jumpdrive = yes
+	modifier = {
+		ship_base_speed_mult = 2
+		ship_evasion_add = 100
+	}
+	ship_modifier = {
+		ship_windup_mult = -2
+		ship_winddown_mult = -2
+		relay_bypass_ship_windup_mult = 2
+		ship_ftl_jumpdrive_range_mult = 8
+		ship_jumpdrive_cooldown_mult = -2
+		ship_accuracy_add = 100
+		ship_tracking_add = 100
+		ship_weapon_range_mult = 0.5
+	}
+	triggered_ship_modifier = {
+		potential = { always = yes }
+		ship_damage_reduction_add = 0.01
+		mult = trigger:has_max_hp
+	}
+	custom_tooltip = SRA_ship_damage_reduction_001
+	ai_weight = {
+		weight = 50000
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	component_set = "power_core"
+}
+utility_component_template = {
+	key = "SRA_SD_Abyss_Hostile_Ship_Aura"
+	size = small
+	icon = "GFX_SRA_T1_weapon_G"
+	icon_frame = 1
+	power = -2000
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	hidden = yes
+	hostile_aura = {
+		name = "SRA_SD_Abyss_Hostile_Ship_Aura_1"
+		radius = 2000
+		apply_on = ships
+		limit = {
+			NOT = {
+				has_ship_flag = SRA_SD_Abyss_Hostile_Ship_Aura_1
+			}
+		}
+		stack_info = {			
+			id = SRA_SD_Abyss_Hostile_Ship_Aura_1
+			priority = 200
+		}
+		damage_per_day = {
+			accuracy = 1.0
+			damage = { min = 320000 max = 320000 }
+			shield_penetration = @SRA_weapon_penetration_7
+			armor_penetration = @SRA_weapon_penetration_7
+		}
+		modifier = {
+			ship_accuracy_mult = -32
+			ship_tracking_mult = -32
+			ship_evasion_mult = -32
+			ship_fire_rate_mult = -320
+			ship_shield_regen_add_static = -320000
+			ship_armor_regen_add_static = -320000
+			ship_hull_regen_add_static = -320000
+		}
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_SRA_Abyss_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

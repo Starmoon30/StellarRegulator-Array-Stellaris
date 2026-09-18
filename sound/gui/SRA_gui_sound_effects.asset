@@ -1,0 +1,109 @@
+
+soundeffect = {
+	name = BGM_ThirdFleetStage1
+	sounds = {
+		sound = BGM_ThirdFleetStage1
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_ThirdFleetStage2
+	sounds = {
+		sound = BGM_ThirdFleetStage2
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_ThirdFleetStage3
+	sounds = {
+		sound = BGM_ThirdFleetStage3
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_ThirdFleetStage4
+	sounds = {
+		sound = BGM_ThirdFleetStage4
+	}
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_CalamitiseaseStage1
+	sounds = {
+		sound = BGM_CalamitiseaseStage1
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_CalamitiseaseStage2
+	sounds = {
+		sound = BGM_CalamitiseaseStage2
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_CalamitiseaseStage3
+	sounds = {
+		sound = BGM_CalamitiseaseStage3
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_CalamitiseaseStage4
+	sounds = {
+		sound = BGM_CalamitiseaseStage4
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_CalamitiseaseStage5
+	sounds = {
+		sound = BGM_CalamitiseaseStage5
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_CalamitiseaseStage6
+	sounds = {
+		sound = BGM_CalamitiseaseStage6
+	}
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = BGM_ChiefStage1
+	sounds = {
+		sound = BGM_ChiefStage1
+	}
+	loop = yes
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}

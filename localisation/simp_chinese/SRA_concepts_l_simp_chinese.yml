@@ -1,0 +1,36 @@
+﻿l_simp_chinese:
+ ### Concepts
+ # Use §K for headers and §I for highlights in Concepts
+ # 语法：['concept_xxxx']
+ # ['concept_xxxx', 自定义文本]
+ concept_SRA_Stellarcrystal_Machine:0 "§B星辉机械§!"
+ concept_SRA_Stellarcrystal_Machine_desc:0 "一种基于星辉水晶技术制造的泛用型机械，可以和常规人口一样执行各种任务，并表现的更为优秀。\n星规阵列的子个体也使用类似的设计，这套方案最庞大的产物可能是肃星神械。"
+
+ concept_SRA_T4_tech:0 "§B四级技术§!"
+ concept_SRA_T4_tech_desc:0 "星规四级技术，基于['concept_SRA_Stellarcrystal_Fractal']材料构建的科技产物，相较于原始的提纯星辉水晶和['concept_SRA_Composite_Crystal_Lattice']技术，['concept_SRA_Stellarcrystal_Fractal']拥有压倒性的优势，相应的造物也都远胜它们的前辈。\n这一时期的项目大量应用了空间操纵技术和位面工程的研究成果，并广泛使用质能转换和控制技术。\n\n-相关科技在具有['civic:civic_SRAtechnology']时在§Y游戏末期年份§!之后可以自行研究，主要集中于军工和巨构领域。\n-产业建筑和法令则只能依靠通讯获取。"
+
+ concept_SRA_Stellarcrystal_Fractal:0 "§B星辉分形§!"
+ concept_SRA_Stellarcrystal_Fractal_desc:0 "星辉分形，经由难以想象的繁复建构，灌注了星辰般能量而铸成的造物。这种冰冷的、苍白的材料在质能之间流转，其悚骇与伟力几近超逾理解。§!"
+
+ concept_SRA_Composite_Crystal_Lattice:0 "§Y复合晶格§!"
+ concept_SRA_Composite_Crystal_Lattice_desc:0 "通过技术手段编辑星辉水晶内部的四维折叠结构，可以使其表现出各种不同的性质和功能。经过改造的星辉水晶表现出金色或橙黄色，在高度复杂的内部结构的支持下，它们能满足几乎任何需求，并在能量与力场操纵领域表现出极为优异的特性。"
+
+ concept_SRA_Stellarcrystal_industry:0 "§B星辉产业§!"
+ concept_SRA_Stellarcrystal_industry_desc:0 "星辉产业是由['building:building_SRA_RE_core']这一核心建筑，以及 ['building:building_SRA_RE_foundry'] ['building:building_SRA_RE_research_institute'] ['building:building_SRA_RE_alloys'] ['building:building_SRA_RE_factory'] 四种产业建筑组成的基础产业体系，不需要科技研发就能使用，涵盖了大部分早期发展所需的资源。在完成对['technology:tech_SRA_T3_Composite_Crystal_Lattice']的研发后，这些产业的产出会得到较大幅度的升级。"
+
+
+ concept_SRA_Damage_Inhibition:0 "伤害压制"
+ concept_SRA_Damage_Inhibition_desc:0 "某些存在能够具有伤害压制能力，这会使得它们所对抗的敌人的伤害降低一定比例。大部分伤害压制是可以被特定类型的攻击穿透的，这会直接标注于例外区块中。举例来说， §E伤害压制50%/守序§! 代表任何§Y非守序攻击§!所造成的伤害皆减少§R50%§!。某些类型的伤害压制对§Y一切攻击§!皆有效，这类伤害压制在例外区块会标注符号“§E-§!”，例如 §E伤害压制20%/-§! 。\n来源不同的伤害压制之间会互相叠加，并与被压制者本身的伤害加值抵扣，最终伤害加值可能低于§R-100%§!，这一情况下通常无法造成伤害。"
+
+
+ concept_SRA_set_terrified_3:0 "恐惧/神话3"
+ concept_SRA_set_terrified_3_desc:0 "使舰船陷入来源为自身的['concept_terrify']，直到战斗结束。\n具有§Y3§!或§Y更高§!的['concept_mod_SRA_SD_Myth_power']可以免疫这个效果。"
+
+
+ concept_SRA_Planet_Combat_Width_Attacker:0 "进攻方强制总陆军数量"
+ concept_SRA_Planet_Combat_Width_Attacker_desc:0 "在进攻这个星球时，超过$concept_SRA_Planet_Combat_Width_Attacker$的进攻方陆军将§R直接被移除§!。"
+
+ concept_SRA_clear_ship_damage_reduction_mult:0 "清空$MOD_SHIP_DAMAGE_REDUCTION_MULT$"
+ concept_SRA_clear_ship_damage_reduction_mult_desc:0 "读取目标的当前$MOD_SHIP_DAMAGE_REDUCTION_MULT$，为其添加一个符号翻转的$MOD_SHIP_DAMAGE_REDUCTION_MULT$修正，持续 1.00£time£ 。\n此效果会被$mod_mod_SRA_clear_ship_damage_reduction_mult_resistance$抵抗。"
+
+ mod_mod_SRA_clear_ship_damage_reduction_mult_resistance: "['concept_SRA_clear_ship_damage_reduction_mult', $concept_SRA_clear_ship_damage_reduction_mult$抗性]"

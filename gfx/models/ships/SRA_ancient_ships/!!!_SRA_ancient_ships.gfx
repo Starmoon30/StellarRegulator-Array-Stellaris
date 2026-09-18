@@ -1,0 +1,250 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_zeta_core_sphere_type1_mesh"
+		file = "gfx/models/ships/SRA_ancient_ships/SRA_zeta_core_sphere_type1.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" 			type = "SRA_zeta_core_sphere_type1_idle_animation" }
+
+		meshsettings = {
+			name = "sphereShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_sphere_diffuse.dds"
+			texture_normal = "SRA_zeta_sphere_normal.dds"
+			texture_specular = "SRA_zeta_sphere_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	##### SRA_Executor #####
+	pdxmesh = {
+		name = "SRA_zeta_titan_mesh"
+		file = "gfx/models/ships/SRA_ancient_ships/SRA_zeta_titan.mesh"
+		scale = 1.35 #1.0
+		
+		animation = { id = "idle" 			type = "SRA_zeta_titan_idle_animation" }
+		animation = { id = "attack" 			type = "SRA_zeta_titan_attack_animation" }
+		animation = { id = "death" 			type = "SRA_zeta_titan_death_animation" }
+
+		meshsettings = {
+			name = "core_sectionShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_core_section_diffuse.dds"
+			texture_normal = "SRA_zeta_core_section_normal.dds"
+			texture_specular = "SRA_zeta_core_section_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_type1_3Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_arm_type1_diffuse.dds"
+			texture_normal = "SRA_zeta_arm_type1_normal.dds"
+			texture_specular = "SRA_zeta_arm_type1_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ringShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_ring_diffuse.dds"
+			texture_normal = "SRA_zeta_ring_normal.dds"
+			texture_specular = "SRA_zeta_ring_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_type2_3Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_arm_type2_diffuse.dds"
+			texture_normal = "SRA_zeta_arm_type2_normal.dds"
+			texture_specular = "SRA_zeta_arm_type2_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_type3_3Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_arm_type3_diffuse.dds"
+			texture_normal = "SRA_zeta_arm_type3_normal.dds"
+			texture_specular = "SRA_zeta_arm_type3_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "connector_3Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_connector_diffuse.dds"
+			texture_normal = "SRA_zeta_connector_normal.dds"
+			texture_specular = "SRA_zeta_connector_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	##### SRA_Cruiser #####
+	pdxmesh = {
+		name = "SRA_zeta_battleship_mesh"
+		file = "gfx/models/ships/SRA_ancient_ships/SRA_zeta_battleship.mesh"
+		scale = 1.1 #1.0
+		
+		animation = { id = "idle" 			type = "SRA_zeta_battleship_idle_animation" }
+		animation = { id = "attack" 			type = "SRA_zeta_battleship_attack_animation" }
+		animation = { id = "death" 			type = "SRA_zeta_battleship_death_animation" }
+
+		meshsettings = {
+			name = "ringShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_ring_diffuse.dds"
+			texture_normal = "SRA_zeta_ring_normal.dds"
+			texture_specular = "SRA_zeta_ring_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "connector_1Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_connector_diffuse.dds"
+			texture_normal = "SRA_zeta_connector_normal.dds"
+			texture_specular = "SRA_zeta_connector_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_type3_1Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_arm_type4_diffuse.dds"
+			texture_normal = "SRA_zeta_arm_type4_normal.dds"
+			texture_specular = "SRA_zeta_arm_type4_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_type2_1Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_arm_type2_diffuse.dds"
+			texture_normal = "SRA_zeta_arm_type2_normal.dds"
+			texture_specular = "SRA_zeta_arm_type2_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_type1_1Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_arm_type1_diffuse.dds"
+			texture_normal = "SRA_zeta_arm_type1_normal.dds"
+			texture_specular = "SRA_zeta_arm_type1_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "core_sectionShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_core_section_diffuse.dds"
+			texture_normal = "SRA_zeta_core_section_normal.dds"
+			texture_specular = "SRA_zeta_core_section_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	##### SRA_Science_Ship #####
+	pdxmesh = {
+		name = "SRA_zeta_destroyer_mesh"
+		file = "gfx/models/ships/SRA_ancient_ships/SRA_zeta_destroyer.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" 			type = "SRA_zeta_destroyer_idle_animation" }
+		animation = { id = "attack" 			type = "SRA_zeta_destroyer_attack_animation" }
+		animation = { id = "death" 			type = "SRA_zeta_destroyer_death_animation" }
+
+		meshsettings = {
+			name = "core_sectionShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_core_section_diffuse.dds"
+			texture_normal = "SRA_zeta_core_section_normal.dds"
+			texture_specular = "SRA_zeta_core_section_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "spearShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_destroyer_part1_diffuse.dds"
+			texture_normal = "SRA_zeta_destroyer_part1_normal.dds"
+			texture_specular = "SRA_zeta_destroyer_part1_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "spear_core_Shape3"
+			index = 0
+			texture_diffuse = "SRA_zeta_destroyer_part2_diffuse.dds"
+			texture_normal = "SRA_zeta_destroyer_part2_normal.dds"
+			texture_specular = "SRA_zeta_destroyer_part2_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ringShape"
+			index = 0
+			texture_diffuse = "SRA_zeta_ring_diffuse.dds"
+			texture_normal = "SRA_zeta_ring_normal.dds"
+			texture_specular = "SRA_zeta_ring_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_type2_3Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_arm_type2_diffuse.dds"
+			texture_normal = "SRA_zeta_arm_type2_normal.dds"
+			texture_specular = "SRA_zeta_arm_type2_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_type3_3Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_arm_type4_diffuse.dds"
+			texture_normal = "SRA_zeta_arm_type4_normal.dds"
+			texture_specular = "SRA_zeta_arm_type4_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "connector_3Shape"
+			index = 0
+			texture_diffuse = "SRA_zeta_connector_diffuse.dds"
+			texture_normal = "SRA_zeta_connector_normal.dds"
+			texture_specular = "SRA_zeta_connector_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	##### SRA_Adjudicator #####
+	pdxmesh = {
+		name = "SRA_ancient_wandering_ship_frame_mesh"
+		file = "gfx/models/ships/SRA_ancient_ships/SRA_ancient_wandering_ship_frame.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_ancient_wandering_ship_frame_idle_animation" }
+		animation = { id = "death1" type = "SRA_ancient_wandering_ship_frame_death1_animation" }
+		animation = { id = "death2" type = "SRA_ancient_wandering_ship_frame_death2_animation" }
+		animation = { id = "death3" type = "SRA_ancient_wandering_ship_frame_death3_animation" }
+		animation = { id = "death4" type = "SRA_ancient_wandering_ship_frame_death_animation" }
+
+		meshsettings = {
+			name = "pCubeShape1"
+			index = 0
+			texture_diffuse = "SRA_dummy_diffuse.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_ancient_wandering_ship_1_mesh"
+		file = "gfx/models/ships/SRA_ancient_ships/SRA_ancient_wandering_ship.mesh"
+		scale = 2.40
+		
+		animation = { id = "idle" type = "SRA_ancient_wandering_ship_idle_animation" }
+		animation = { id = "opening" type = "SRA_ancient_wandering_ship_opening_animation" }
+		animation = { id = "opened" type = "SRA_ancient_wandering_ship_opened_animation" }
+		animation = { id = "closing" type = "SRA_ancient_wandering_ship_closing_animation" }
+		animation = { id = "idledeath1" type = "SRA_ancient_wandering_ship_idledeath1_animation" }
+		animation = { id = "idledeath2" type = "SRA_ancient_wandering_ship_idledeath2_animation" }
+		animation = { id = "combatdeath1" type = "SRA_ancient_wandering_ship_combatdeath1_animation" }
+		animation = { id = "combatdeath2" type = "SRA_ancient_wandering_ship_combatdeath2_animation" }
+
+		meshsettings = {
+			name = "ShipCoreShape"
+			index = 0
+			texture_diffuse = "SRA_ancient_wandering_ship_1_diffuse.dds"
+			texture_normal = "SRA_ancient_wandering_ship_1_normal.dds"
+			texture_specular = "SRA_ancient_wandering_ship_1_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+}

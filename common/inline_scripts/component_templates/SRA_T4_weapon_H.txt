@@ -1,0 +1,59 @@
+
+	#key = "SRA_T4_weapon_H"
+	size = LARGE
+	weapon_type = instant
+	icon = "GFX_SRA_T4_weapon_H"
+	icon_frame = 1
+	count = 1
+	regeneration_per_day = 0.05
+	launch_time = 0.2
+	health = @SRA_ship_part_hull_add_7
+	armor = @SRA_ship_part_hull_add_7
+	shield = @SRA_ship_part_hull_add_7
+	evasion = 2
+	ship_behavior = "bombers_behavior"
+	engagement_range = 320
+	speed = 1600
+	rotation_speed = 0.8
+	acceleration = 0.8
+	
+	damage = { min = 256 max = 384 }
+	cooldown = 1
+	range = 160
+	accuracy = 1.0
+	tracking = 1.0
+	shield_penetration = @SRA_weapon_penetration_4
+	armor_penetration = @SRA_weapon_penetration_4
+	#shield_damage = 4
+	#armor_damage = 4
+	#hull_damage = 3
+	power = -100
+	
+	
+	# ai_weight = {
+	# 	weight = 0
+	# 	modifier = {
+	# 		weight = 2500
+	# 		OR = {
+	# 			has_civic = civic_SRAtechnology
+	# 			has_civic = civic_SRARociviaEmpire
+	# 		}
+	# 	}
+	# }
+	# component_set = "SRA_T4_weapon_H"
+	# prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	#tags = { weapon_type_strike_craft weapon_type_energy weapon_type_kinetic weapon_type_explosive }
+	ai_tags = { weapon_role_point_defense carrier }
+	projectile_gfx = "SRA_sc_weapon_0"
+	entity = "bomber_entity"
+	point_defence_targets = { "missile" "strike_craft" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}

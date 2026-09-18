@@ -1,0 +1,38 @@
+key = "SRA_SD_Anti_accuracy_$TIER$"
+component_set = "SRA_SD_Anti_accuracy_$TIER$"
+icon = "GFX_SRA_SD_Anti_accuracy"
+size = aux
+icon_frame = 1
+power = -$TIER$00
+ship_limit = 1
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $TIER$000
+	}
+}
+hostile_aura = {
+	name = "SRA_Aura_SRA_SD_Anti_accuracy_$TIER$"
+	radius = 2000
+	apply_on = ships
+	
+	stack_info = {			
+		id = SRA_Aura_SRA_SD_Anti_accuracy
+		priority = $TIER$
+	}
+	modifier = {
+		ship_accuracy_mult = -$TIER$
+	}
+}
+prerequisites = {
+	"tech_SRA_SD_ship_Part"
+}
+ai_weight = {
+	weight = 0
+	modifier = {
+		weight = $TIER$000
+		OR = {
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+}

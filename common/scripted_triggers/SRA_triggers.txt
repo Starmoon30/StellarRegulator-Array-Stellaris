@@ -1,0 +1,46 @@
+SRA_is_SRA_ship_size = {
+	OR = {
+		is_ship_size = SRA_Barrier_Main_Station
+		is_ship_size = SRA_Barrier_Guard_Station
+		is_ship_size = SRA_Barrier_Guard_Titan
+		is_ship_size = SRA_Barrier_Guard_Cruiser
+		is_ship_size = SRA_Cruiser
+		is_ship_size = SRA_Executor
+		is_ship_size = SRA_Adjudicator
+		is_ship_size = SRA_Science_Ship
+		is_ship_size = SRA_Crisis_Fort
+		is_ship_size = SRA_Crisis_Mark
+		SRA_is_SOGZ_ship_size = yes
+		is_ship_size = SRA_fire_target_0
+		is_ship_size = SRA_Sentry_Platform
+		is_ship_size = SRA_GZ_Platform
+		is_ship_size = SRA_orbital_ring
+		is_ship_size = starbase_SRA_1
+		
+	}
+}
+SRA_is_SOGZ_ship_size = {
+	OR = {
+		is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+		is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+		is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+}
+SRA_is_boss_ship_size = {
+	OR = {
+		SRA_is_SOGZ_ship_size = yes
+		is_ship_size = SRA_fire_target_0
+		is_ship_size = SRA_Rokia_dragon_Ship
+		is_ship_size = SRA_Return_To_Calamitisease_Ship
+	}
+}
+SRA_is_abyss_ship_size = {
+	OR = {
+		is_ship_size = SRA_Rokia_dragon_Ship
+		is_ship_size = SRA_chaos_Ship
+		is_ship_size = SRA_Return_To_Calamitisease_Ship
+		is_ship_size = SRA_reanimated_leviathan_01_voidspawn
+		is_ship_size = SRA_SD_Abyss_Hostile_Ship
+	}
+}
+

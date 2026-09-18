@@ -1,0 +1,664 @@
+building_SRA_Fortress = {
+	base_buildtime = 320
+	icon = building_SRA_Fortress
+	can_build = yes
+	can_demolish = yes
+	category = army
+	position_priority = 3
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	country_modifier = {
+		country_naval_cap_add = 100
+	}
+	planet_modifier = {
+		mod_SRA_Planet_Combat_Width_Attacker = 20
+		planet_orbital_bombardment_damage = -0.75
+		planet_storm_devastation_mult = -0.75
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 800
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = 800
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+			alloys = 200
+		}
+		upkeep = {
+			energy = 100
+			alloys = 50
+		}
+	}
+	
+	prerequisites = { tech_SRA_T4_Armies }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			owner = {
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+}
+
+building_SRA_T3_Crystal_Node = {
+	base_buildtime = 320
+	icon = building_SRA_T3_Crystal_Node
+	can_build = yes
+	can_demolish = yes
+	category = government
+	position_priority = 2
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	planet_modifier = {
+		district_automated_workforce = 1
+		bonus_automated_workforce_mult = 0.1
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			alloys = 200
+			consumer_goods = 200
+			rare_crystals = 50
+		}
+		upkeep = {
+			energy = 120
+			rare_crystals = 10
+		}
+	}
+	
+	prerequisites = { tech_SRA_T3_Crystal_Node }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			owner = {
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+}
+building_SRA_T3_Storage = {
+	base_buildtime = 320
+	icon = building_SRA_T3_Storage
+	can_build = yes
+	can_demolish = yes
+	category = resource
+	position_priority = 10
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	country_modifier = {
+		country_resource_max_add = 500000
+		country_resource_max_astral_threads_add = 500000
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			alloys = 800
+		}
+		upkeep = {
+			energy = 50
+		}
+	}
+	
+	prerequisites = { tech_SRA_T3_Crystal_Node }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			owner = {
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+}
+building_SRA_T3_Planet_Mobilization = {
+	base_buildtime = 120
+	icon = building_SRA_T3_Planet_Mobilization
+	can_build = yes
+	can_demolish = yes
+	category = government
+	position_priority = 10
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	planet_modifier = {
+		planet_decision_enact_speed_mult = 10
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			alloys = 1000
+			consumer_goods = 3000
+		}
+		upkeep = {
+			energy = 1000
+			consumer_goods = 400
+		}
+	}
+	
+	prerequisites = { tech_SRA_T3_Planet_Mobilization }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			owner = {
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+}
+building_SRA_T3_Recovery_Nest = {
+	base_buildtime = 320
+	icon = building_SRA_T3_Recovery_Nest
+	can_build = yes
+	can_demolish = yes
+	category = amenity
+	position_priority = 3
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	# Extreme values: intentional design to effectively eliminate housing/crime/amenity constraints
+	planet_modifier = {
+		pop_happiness = 0.2
+		planet_housing_add = 8000
+		planet_crime_add = -8000
+		planet_amenities_add = 8000
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+			consumer_goods = 200
+		}
+		upkeep = {
+			energy = 40
+			consumer_goods = 10
+		}
+	}
+	
+	prerequisites = { tech_SRA_T3_Recovery_Nest }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			owner = {
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+}
+
+building_SRA_T3_Singularity_Controller = {
+	base_buildtime = 400
+	icon = building_SRA_T3_Singularity_Controller
+	can_build = yes
+	can_demolish = yes
+	category = manufacturing
+	position_priority = 3
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	planet_limit = 1
+	
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.2
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			alloys = 2000
+			sr_dark_matter = 500
+		}
+		produces = {
+			sr_dark_matter = 40
+			astral_threads = 40
+		}
+		upkeep = {
+			energy = 200
+			minerals = 200
+		}
+	}
+	
+	prerequisites = { tech_SRA_T3_Singularity_Gravitation_Control }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			owner = {
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+}
+
+building_SRA_T3_Psychic_Beacon = {
+	base_buildtime = 320
+	icon = building_SRA_T3_Psychic_Beacon
+	can_build = yes
+	can_demolish = yes
+	category = amenity
+	position_priority = 2
+	potential = {
+		owner? = {
+			has_country_flag = StellarRegulator_Array_restricted_tech_permit
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	planet_limit = 1
+	
+	# Extreme values: intentional design for powerful late-game building (stability caps at 100)
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_stability_add = 200
+		pop_happiness = 10
+		planet_amenities_add = 2000
+		planet_amenities_mult = 1
+		planet_housing_mult = 2
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			rare_crystals = 40
+			sr_zro = 200
+		}
+		upkeep = {
+			rare_crystals = 5
+			sr_zro = 10
+		}
+	}
+	
+	prerequisites = { tech_SRA_T3_Wide_Area_Mind_Control }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 5
+			owner = {
+				OR = {
+					has_civic = civic_SRAtechnology
+					has_civic = civic_SRARociviaEmpire
+					is_country_type = faction_SRA_Chief_country
+				}
+			}
+		}
+	}
+}
+building_SRA_RE_core = {
+	base_buildtime = 320
+	can_build = yes
+	can_demolish = yes
+	icon = building_SRA_SD_energy # Shares icon with SD_energy building; consider creating a dedicated RE_core icon
+	category = resource
+	planet_limit = 1
+	position_priority = 1
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+			NOT = { has_country_flag = SRA_RE_building_hidden }
+		}
+	}
+	
+	inline_script = "buildings/SRA_building_sets_all"
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		planet_crime_add = -2
+		planet_amenities_add = 200
+		job_SRA_RE_technician_drone_add = 100
+		pop_SRA_RE_technician_drone_bonus_workforce_mult = 0.02
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+			owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			NOT = { has_designation = col_SRA_auto_research }
+			NOT = { has_designation = col_SRA_auto_alloys }
+			NOT = { has_designation = col_SRA_auto_factory }
+		}
+		job_SRA_RE_technician_drone_add = 100
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+			owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			has_designation = col_SRA_auto_research
+		}
+		job_SRA_RE_research_institute_drone_add = 100
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+			owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			has_designation = col_SRA_auto_alloys
+		}
+		job_SRA_RE_alloys_drone_add = 100
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+			owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			has_designation = col_SRA_auto_factory
+		}
+		job_SRA_RE_factory_drone_add = 100
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_gestalt = no
+			}
+		}
+		planet_crime_add = -2
+		planet_amenities_add = 200
+		job_SRA_RE_technician_add = 100
+		pop_SRA_RE_technician_bonus_workforce_mult = 0.02
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_gestalt = no
+			}
+			owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			NOT = { has_designation = col_SRA_auto_research }
+			NOT = { has_designation = col_SRA_auto_alloys }
+			NOT = { has_designation = col_SRA_auto_factory }
+		}
+		job_SRA_RE_technician_add = 100
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_gestalt = no
+			}
+			owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			has_designation = col_SRA_auto_research
+		}
+		job_SRA_RE_research_institute_specialist_add = 100
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_gestalt = no
+			}
+			owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			has_designation = col_SRA_auto_alloys
+		}
+		job_SRA_RE_alloys_specialist_add = 100
+		mult = value:count_any_districts
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_gestalt = no
+			}
+			owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			has_designation = col_SRA_auto_factory
+		}
+		job_SRA_RE_factory_specialist_add = 100
+		mult = value:count_any_districts
+	}
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = no }
+	# 	}
+	# 	text = job_SRA_RE_technician_effect_desc
+	# }
+	# triggered_desc = {
+	# 	trigger = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = yes }
+	# 	}
+	# 	text = job_SRA_RE_technician_drone_effect_desc
+	# }
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+building_SRA_RE_foundry = {
+	base_buildtime = 320
+	can_build = yes
+	can_demolish = yes
+	icon = building_SRA_RE_foundry
+	category = resource
+	position_priority = 7
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+			NOT = { has_country_flag = SRA_RE_building_hidden }
+		}
+	}
+	inline_script = "buildings/SRA_building_sets_all"
+	inline_script = {
+		script = buildings/building_SRA_RE_jobs
+		JOB = SRA_RE_foundry
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+building_SRA_RE_research_institute = {
+	base_buildtime = 320
+	can_build = yes
+	can_demolish = yes
+	icon = building_SRA_RE_research_institute
+	category = research
+	position_priority = 8
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+			NOT = { has_country_flag = SRA_RE_building_hidden }
+		}
+	}
+	inline_script = "buildings/SRA_building_sets_all"
+	inline_script = {
+		script = buildings/building_SRA_RE_jobs
+		JOB = SRA_RE_research_institute
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+building_SRA_RE_alloys = {
+	base_buildtime = 320
+	can_build = yes
+	can_demolish = yes
+	icon = building_SRA_RE_alloys
+	category = manufacturing
+	position_priority = 9
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+			NOT = { has_country_flag = SRA_RE_building_hidden }
+		}
+	}
+	inline_script = "buildings/SRA_building_sets_all"
+	inline_script = {
+		script = buildings/building_SRA_RE_jobs
+		JOB = SRA_RE_alloys
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+building_SRA_RE_factory = {
+	base_buildtime = 320
+	can_build = yes
+	can_demolish = yes
+	icon = building_SRA_RE_factory
+	category = manufacturing
+	position_priority = 10
+	potential = {
+		owner? = {
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+				is_country_type = faction_SRA_Chief_country
+			}
+			NOT = { has_country_flag = SRA_RE_building_hidden }
+		}
+	}
+	inline_script = "buildings/SRA_building_sets_all"
+	inline_script = {
+		script = buildings/building_SRA_RE_jobs
+		JOB = SRA_RE_factory
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+	}
+	ai_weight = {
+		weight = 100
+	}
+}

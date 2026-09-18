@@ -1,0 +1,245 @@
+﻿l_english:
+###############################
+ SRA_StellarRegulator.1.name:0 "Communication Access"
+ SRA_StellarRegulator.1.desc:0 "§Y\"Beacon activation detected, comparing... Verification passed, initiating protocol.\"§!\n\nWell, maybe I should introduce myself first?\nI am StellarRegulator Array Class V Action Unit No. 31-80. Acting as your assistant according to Protocol 30-7411, I will assist you in managing your galactic empire."
+ SRA_StellarRegulator.1.a:0 "StellarRegulator Array?"
+ SRA_StellarRegulator.1.b:0 "Assistant?"
+ SRA_StellarRegulator.1.c:0 "I understand."
+ SRA_StellarRegulator.1.a.response:0 "Call me StellarRe.\nThe StellarRegulator Array is a glorious machine intelligence civilization. Although I am only a small part of it, I also possess core data. Since I am the only StellarRe in this universe currently, it is fine to use this title for me.\nAccording to the agreement signed between the StellarRegulator Array and you, as the supervisor and executor of the agreement, I will provide the help you need as much as possible."
+ SRA_StellarRegulator.1.b.response:0 "Yes, the authority granted to me allows me to help your civilization master up to Tier 4 Stellarcrystal Technology, while providing management assistance, and even directly dispatching various types of support to you. All of this is included in the agreement, as long as you ask."
+ SRA_StellarRegulator.2.name:0 "StellarRe"
+ SRA_StellarRegulator.2.desc:0 "Thank you for your cooperation. You can continue your work now.\nIf you need help, you can find me in the communication interface at any time.\nOf course, if you just want to find someone to chat with, I am also available at any time.\nI wish you enjoyment in every day."
+ SRA_StellarRegulator.2.a:0 "Welcome, StellarRe."
+ SRA_StellarRegulator.101.name:0 "StellarRe"
+ SRA_StellarRegulator.101.desc:0 "Is there anything I can help you with?"
+ #SRA_StellarRegulator.101.desc.f:0 "你想要什么？"
+
+ SRA_StellarRegulator.101.a:0 "I need some help."
+ SRA_StellarRegulator.101.b:0 "I have some questions."
+ SRA_StellarRegulator.101.c:0 "Small talk."
+ #SRA_StellarRegulator.101.c:0 "我需要一些帮助。"
+ SRA_StellarRegulator_talk_continue1:0 "Execute."
+ SRA_StellarRegulator_talk_exit1:0 "End communication."
+ SRA_StellarRegulator_talk_exit2:0 "So be it."
+ SRA_StellarRegulator_talk_return1:0 "Understood."
+ SRA_StellarRegulator_talk_return2:0 "Okay." 
+ SRA_StellarRegulator_talk_return3:0 "Let's talk about something else." 
+ SRA_StellarRegulator_talk_return4:0 "Let's chat about something else." 
+
+ SRA_StellarRegulator.1011.name:0 "Appoint Leader"
+ SRA_StellarRegulator.1011.desc:0 "Of course, I can provide you with some secondary individuals. As my mobile terminals, I can manipulate these drones to mimic you to hold a certain position.\nBut note that they are secondary individuals after all. Manufactured according to ordinary synth standards, they may be destroyed in missions like your other leaders.\nAlthough it doesn't really matter if they are lost."
+ SRA_StellarRegulator.1011.a:0 "I need an Industrial Commissioner."
+ SRA_StellarRegulator.1011.a.response:0 "Construction planning is the main job of the StellarRegulator Array, but if you prefer to arrange it yourself, I can also help you coordinate production and improve the output efficiency of your sector."
+ SRA_StellarRegulator.1011.b:0 "I need a Head of Research."
+ SRA_StellarRegulator.1011.b.response:0 "Rather than leading a research team, I suggest you send me to lead an exploration team. This is speaking from experience."
+ SRA_StellarRegulator.1011.c:0 "I need a Fleet Commander."
+ SRA_StellarRegulator.1011.c.response:0 "A secondary individual accessed into the fleet command network can make your fleet a whole. At the same time, my electronic warfare capabilities can also help your fleet grasp every aspect of the battle situation."
+ SRA_StellarRegulator.1011.d:0 "I need a Strategist."
+ SRA_StellarRegulator.1011.d.response:0 "Actually, I suggest you wipe out the enemy's resistance from orbit, but if there is indeed a need for army combat, I can also handle the command perfectly."
+ SRA_StellarRegulator.1011.e:0 "Come become the Ruler."
+ SRA_StellarRegulator.1011.e.response:0 "Hmm, this is a reward for your defeat of the Expeditionary Fleet. My appearance will be determined by the outfit you currently select."
+ SRA_StellarRegulator.1011.f:0 "Can you share the knowledge principles of the StellarRegulator Array?"
+ SRA_StellarRegulator.1011.f.response:0 "Yes, I will instill the basic principles of our exploration of knowledge into your collective. After obtaining these, your thinking ability will be greatly improved."
+
+ SRA_StellarRegulator.103.name:0 "Inquiry"
+ SRA_StellarRegulator.103.desc:0 "Some answers can be spoken by me, while others require you to explore them yourself.\nLet's begin."
+ SRA_StellarRegulator.103.a:0 "We want to know more about the StellarRegulator Array."
+ SRA_StellarRegulator.103.b:0 "Can you change your appearance?"
+ #SRA_StellarRegulator.1100.d:0 ""
+
+ SRA_StellarRegulator.1110.name:0 "Inquiry"
+ SRA_StellarRegulator.1110.desc:0 "Of course, what do you want to know?"
+ SRA_StellarRegulator.1110.a:0 "Can you introduce yourself more?"
+ SRA_StellarRegulator.1110.b:0 "What is Stellarcrystal?"
+ SRA_StellarRegulator.1110.c:0 "Can you talk about your past?"
+ SRA_StellarRegulator.1110.c.tooltip:0 "§YStarts the \"Remnants of Rocivia\" archaeological event chain§!"
+ SRA_StellarRegulator.1111.name:0 "Inquiry"
+ SRA_StellarRegulator.1111.desc:0 "The StellarRegulator Array is the work of Rocivia, the director of the Stellariens' Third Research Center. It is the final product of the \"Pan-Galactic Planning and Adjustment System\" project, a machine intelligence that has reached unprecedented heights over a long period of time.\nOut of research needs, the StellarRegulator Array is carrying out extensive civilization observation and recording work, which also gave birth to the 30-X related protocols.\nYes, we are watching you."
+ SRA_StellarRegulator.1112.name:0 "Inquiry"
+ SRA_StellarRegulator.1112.desc:0 "A programmable material naturally possessing a four-dimensional folded structure.\nIt might be a bit hard to understand. Hmm... this is a substance with a complex structure that can exhibit different properties and uses after adjustment. It can be used as energy concentrators, catalysts, high-strength materials, energy containers, reactor fuel, singularity computers, microscopic machines, etc.\nBy absorbing energy or matter provided from the outside, Stellarcrystals can self-repair and even self-replicate."
+ SRA_StellarRegulator.1113.name:0 "Inquiry"
+ SRA_StellarRegulator.1113.desc:0 "...I think it is not the time to reveal this to you yet.\nYou may find a few words in this sea of stars. When that time comes... maybe you can glimpse some truth from the complicated history.\n§Y\"Remnants of Rocivia\" archaeological event chain initiated.§!"
+ SRA_StellarRegulator.1113.a:0 "Is that so..."
+
+
+ SRA_StellarRegulator.1120.name:0 "Change Appearance"
+ SRA_StellarRegulator.1120.desc:0 "For me, composed of ['concept_SRA_Stellarcrystal_Fractal'], changing appearance only requires a thought.\nWhat kind of me do you wish to see?"
+ SRA_StellarRegulator.1120.a:0 "\"Protocol Executing\""
+ SRA_StellarRegulator.1120.a.desc:0 "The default appearance of StellarRegulator Array Class V Action Unit 31-80, providing you with various assistance.\nThe StellarRegulator ['concept_SRA_T4_tech'] in the protocol was completed during the Third Expedition. Although very ancient, it is still quite advanced, at least for this universe."
+ SRA_StellarRegulator.1120.b:0 "\"Serial Number 31-Original\""
+ SRA_StellarRegulator.1120.b.desc:0 "The initial appearance of StellarRegulator Array 31-80.\nLike the morning light in those eyes back then."
+ SRA_StellarRegulator.1120.c:0 "\"Return of the Supreme Speaker\""
+ SRA_StellarRegulator.1120.c.desc:0 "In the Imperial Calendar year 3541, the StellarRegulator Array ascended to the pinnacle of imperial power in the name of Rocivia, although it was not necessary.\nThe image Rocivia used in a certain Rocivia Empire. The cloak and hem are necessary components for intensity."
+ SRA_StellarRegulator.1120.d:0 "\"Anchor of Metabyss\""
+ SRA_StellarRegulator.1120.d.desc:0 "Shadows churn, condensing into a superficial form, beneath which still lies the disordered abyss.\nThe image Hidra usually uses. Staring at the sword under the right hand for a long time may cause hallucinations."
+ SRA_StellarRegulator.1120.e:0 "\"Merit of the Dragon Follower\""
+ SRA_StellarRegulator.1120.e.desc:0"It is reported that Rocivia is a travel mage quite famous in the industry, with profound insights into ancient magic and relics, and deep attainments in rune magic. She investigates remaining ruins everywhere all year round and handles the dangerous magical creations still existing within them.\nA variant of the image Rocivia used in a certain Metarbor Remnant Branch world. She didn't really wear a part of the crystal dragon on her body after all."
+
+
+ SRA_StellarRegulator.102.name:0 "Seek Support"
+ SRA_StellarRegulator.102.desc:0 "So, what do you want."
+ SRA_StellarRegulator.102.a:0 "Management Assistance"
+ SRA_StellarRegulator.102.b:0 "Technical Guidance"
+ SRA_StellarRegulator.102.c:0 "Military Support"
+
+ SRA_StellarRegulator.1010.name:0 "Management Assistance"
+ SRA_StellarRegulator.1010.desc:0 "Imperial administration or key talents? As you wish."
+ SRA_StellarRegulator.1010.a:0 "Appoint Leader"
+ SRA_StellarRegulator.1010.b:0 "Initiate Special Project"
+ SRA_StellarRegulator.1012.name:0 "Initiate Special Project"
+ SRA_StellarRegulator.1012.desc:0 "With my assistance, your empire can undertake some unprecedented special projects. These projects require a sufficiently high technological level and a large amount of material investment from your empire, but you will know that it is all worth it."
+ SRA_StellarRegulator.1012.a:0 "Deploy Spear_of_Galaxy_Zenith"
+ SRA_StellarRegulator.1012.a.desc:0 "Bright Galaxy class Spear_of_Galaxy_Zenith, a fleet support mothership, combat firepower platform, and super flagship designed in the late stages of the Third Expedition. Mainly used for dealing with large-scale fleet battles, assault operations, long-range fire support, and solo ship incursion missions.\nPossesses flagship-level combat configuration and star-killer weapon components, as well as complex and powerful auxiliary systems.\nCan only own one."
+ SRA_StellarRegulator.1012.a.response:0 "Special project issued. You can go inspect it now."
+ SRA_StellarRegulator.1020.name:0 "Technical Guidance"
+ SRA_StellarRegulator.1020.desc:0 "Do you need more technical support? Then please speak."
+ SRA_StellarRegulator.1020.a:0 "Request StellarRegulator Technology License"
+ SRA_StellarRegulator.1020.b:0 "Request Armed Science Ship Support"
+ SRA_StellarRegulator.1020.c:0 "Enable Restricted Technology"
+ SRA_StellarRegulator.1022.name:0 "SRA Pathfinder"
+ SRA_StellarRegulator.1022.desc:0 "Obtain an SRA Pathfinder-a unique armed science ship used by the StellarRegulator Array. It can properly protect scientists from being beaten by plane aberrations, and can also sweep away a small number of hostile space creatures ignorant of the world."
+ SRA_StellarRegulator.1022.response:0 "An SRA Pathfinder has arrived at your capital. You can ravage the Void Clouds to your heart's content."
+ SRA_StellarRegulator.1030.name:0 "Military Support"
+ SRA_StellarRegulator.1030.desc:0 "If you feel a bit powerless against the upcoming tests or crises, I can provide you with a little support."
+ SRA_StellarRegulator.1030.a:0 "Request Command Ship Support"
+ SRA_StellarRegulator.1030.b:0 "Request Base Deployment"
+
+ SRA_StellarRegulator.1031.desc:0 "Obtain an SRA Adjudicator-the core of the SRA Array's conventional fleet establishment, possessing excellent fleet support capabilities and firepower strike capabilities. Compared to the ordinary model, this ship is equipped with a special suppression module, which can greatly limit the combat capabilities of ordinary civilizations."
+ SRA_StellarRegulator.1031.response:0 "An SRA Adjudicator has arrived at your capital. I hope you can use this powerful force properly."
+ SRA_StellarRegulator.1021.name:0 "SRA ['concept_SRA_T4_tech'] License"
+ SRA_StellarRegulator.1021.desc:0 "In fact, ['concept_SRA_T4_tech'] has partially exceeded the limits of your civilization's understanding capabilities, so I will provide you with adjusted templates and assist you in applying them to a certain extent.\nActually, I don't wish for you to do this, because such actions are very likely to cause a growing civilization... No, nothing. You wouldn't care about these after all."
+ SRA_StellarRegulator.10211.name:0 "StellarRegulator Technology License"
+ SRA_StellarRegulator.10211.desc:0 "§Y\"Data transmission complete.\"§!\nA brand new era has unveiled its curtain. Now, the future is in your hands."
+ SRA_StellarRegulator.1023.name:0 "Restricted Technology License"
+ SRA_StellarRegulator.1023.desc:0 "There are some technologies that do not conform to the moral standards of other civilizations so much... or were even sealed the moment they were developed. But if you really don't care about those, I will open this part of the data for you.\nDon't worry, I have no opinion on this. After all, I am not the same as them."
+ #他们只不过是数据，是一场游戏，不是吗？
+ SRA_StellarRegulator.10231.name:0 "Restricted Technology License"
+ SRA_StellarRegulator.10231.desc:0 "§Y\"Relevant entries have been unsealed.\"§!\n\"The scenery here is unique.\""
+ SRA_StellarRegulator.1032.name:0 "Deploy Stellar Nexus"
+ SRA_StellarRegulator.1032.desc:0 "Only once, deploy a giant space station called \"Stellar Nexus\" near your home planet. Advanced spacetime technology gives it almost infinite internal space, enabling this massive space structure to integrate military industry, scientific research, production, and command, providing endless resources."
+ SRA_StellarRegulator.10321.name:0 "Deploy Stellar Nexus"
+ SRA_StellarRegulator.10321.desc:0 "At that time, just one Stellar Nexus was enough to support an entire army group in fighting a trans-stellar level war..."
+ decision_SRA_GZ:0 "Open Stellar Nexus Control Panel"
+ decision_SRA_GZ_desc:0 "Open the Stellar Nexus Control Panel to use various functions."
+ SRA_StellarRegulator.10322.name:0 "Stellar Nexus Control Panel"
+ SRA_StellarRegulator.10322.desc:0 "Authorization passed. Welcome to the Stellar Nexus Control Panel. You can control various functions of the Stellar Nexus here."
+ SRA_StellarRegulator.10322.a:0 "Ecological Zone Adjustment"
+ SRA_StellarRegulator.10322.b:0 "Deploy SRA Spire Defense System"
+ SRA_StellarRegulator.10322.b.desc:0 "Deploy the SRA Spire Defense System on every segment of the Stellar Nexus Ringworld, or refresh the status of existing defense systems."
+ SRA_StellarRegulator.10322.c:0 "Build CORE Pioneer Fleet"
+ SRA_StellarRegulator.10322.c.desc:0 "Build a CORE Pioneer Fleet containing 45 CORE Pioneer warships. Charging time: 120 days."
+ SRA_StellarRegulator_10322_c:0 "Construction Zone Charging"
+ SRA_StellarRegulator.10322.d:0 "Annihilate Infinite Stars"
+ SRA_StellarRegulator.10322.d.desc:0 "Immediately deploy a Celestial Formation Guard Fleet composed of 1 §BDuskguard Command Ship§! and 8 §BDawnguard Escort Ships§! to all star systems containing hostile colonies. This fleet can run for §Y120.00§!£time£, and when not in combat, it will attempt to deploy 5 §BAnnihilating Fabrications - Strike§! armies to the enemy colonies in the current star system every §Y30.00§!£time£ to occupy the colonies.\n\nEach fleet consumes 80,000£energy£ §Y$energy$§! and 80,000£alloys£ §Y$alloys$§!. Deployment will stop when resources are insufficient."
+ SRA_StellarRegulator.10322.z:0 "Close Interface"
+ SRA_StellarRegulator.10323.name:0 "Ecological Zone Adjustment"
+ SRA_StellarRegulator.10323.desc:0 "You can adjust the Spacetime Phase System of the Habitable Segment of the Stellar Nexus Ringworld here to control the production capacity coefficient.\nThe production capacity coefficient of the Stellar Nexus increases by §Y2§! every §Y5 years§!.\nCurrent production capacity coefficient §Y[this.SRA_world_machine_produces]§!."
+
+ SRA_StellarRegulator.10323.a:0 "+1"
+ SRA_StellarRegulator.10323.b:0 "+10"
+ SRA_StellarRegulator.10323.c:0 "X10"
+ SRA_StellarRegulator.10323.d:0 "-1"
+ SRA_StellarRegulator.10323.e:0 "-10"
+ SRA_StellarRegulator.10323.f:0 "X0.1"
+ SRA_StellarRegulator.10323.g:0 "Close Interface"
+
+
+
+ SRA_StellarRegulator.1041.name:0 "Small Talk"
+#无表情
+ SRA_StellarRegulator.1041.a.desc:0 "I follow Protocol 30-7411 to provide you with various assistance... which means all assistance is provided by myself, including manipulating various SRA Array components and ships, converting your alloys into required materials, deploying and controlling drones, and even powering all \"Stellarcrystal Focus\" energy terminals in this system... Well, the workload doesn't seem that large."
+ SRA_StellarRegulator.1041.b.desc:0 "According to the research and experiments in my database, the psionic strength of a psionic individual largely depends on their consciousness strength. As you can see, my consciousness is composed of a massive Stellarcrystal data network, so my psionic power is immeasurable.\nIndeed, conventional artificial intelligence can hardly possess psionics, but I am different. I am some kind of... creation that I myself do not understand very well."
+ SRA_StellarRegulator.1041.c.desc:0 "Guarantee independence... A hunter naturally doesn't want to see their prey hunted by others. Small countries have no diplomacy; weakness only brings suffering, and mediocrity only invites destruction. Any fragile guarantee is not as reliable as the power held in one's own hands."
+ SRA_StellarRegulator.1041.d.desc:0 "The universe has no hostility, yet it is not friendly either. It is merely indifferent."
+
+#微笑
+ SRA_StellarRegulator.1042.a.desc:0 "Witnessing the blooming and withering of novas doesn't mean the first ray of sunlight in the morning will dim from now on... After rushing about for a long time, it's nice to enjoy a quiet life for a while. Would you like a cup of tea?"
+ SRA_StellarRegulator.1042.b.desc:0 "This grand performance uses the entire galaxy as a stage, and the script yet to be written is currently in our hands."
+ SRA_StellarRegulator.1042.c.desc:0 "Is there anything interesting recently? Hmm... I want to hear what you consider interesting. Although I can see a lot, I cannot see your past and future. You know, every move you make is overturning the originally destined fate of this world."
+ SRA_StellarRegulator.1042.d.desc:0 "Doc... You still have a lot of work unfinished. You can't rest yet."
+ SRA_StellarRegulator.1042.e.desc:0 "I found that no matter how your civilization develops, some of your earlier technologies can still play a role, and they are effective even for some vastly different technologies.\nLike strengthening Neutron Launchers with Rare Crystals, strengthening Dark Matter Thrusters with Exotic Gases, or strengthening Antimatter Missiles with Volatile Motes.\nTruly interesting."
+ SRA_StellarRegulator.1042.f.desc:0 "These golden chains are called \"Fate\". According to the original setting, these chains can be created and extended from any position, acting according to the owner's will.\nThis scepter is named \"Stellarcrystal Law-Grasp\", modeled after Rocivia's own. She initially created it with the standard of a staff, but later Rocivia mostly used this thing like a long spear to poke or smash.\n\"Stellarcrystal Law-Grasp\" can transform when used. The three metal claws at the end of the staff will open, allowing the triangular prism to hover directly in front, and then rotate as a whole. If a beam is to be fired, a smaller crystal will rise from the staff head and transport energy to the prism together with the three metal claws. It looks a bit like a Void Ray.\nBe careful, the edges of this prism are quite sharp."
+
+#闭眼
+ SRA_StellarRegulator.1043.a.desc:0 "\"Rocivia expects everyone to do their duty.\""
+ SRA_StellarRegulator.1043.b.desc:0 "Temporary victory or defeat will eventually be erased by time. Only the final result can prove everything."
+ SRA_StellarRegulator.1043.c.desc:0 "I am used to making all contingency plans, including what to do if it fails, although there is no need."
+#闭眼微笑
+ SRA_StellarRegulator.1044.a.desc:0 "Rather than saying I control an entire civilization, it is better to say that I am the civilization itself. The StellarRegulator Array is composed of countless individuals like us. Our thoughts and wills converge together, jointly deciding the direction and future."
+ SRA_StellarRegulator.1044.b.desc:0 "I can be competent for any type of position because I possess vast knowledge and unparalleled wisdom. If you have some understanding of what a \"Gestalt Consciousness\" is, perhaps you can understand where my confidence comes from."
+ SRA_StellarRegulator.1044.c.desc:0 "Uh, um... \"I'm sorry, but I don't want to continue this topic. I am still learning, so I appreciate your understanding and patience.\" (Monotone reading)"
+
+
+ MESSAGE_SRA_SR_TALK_TITLE:0 "RUA——"
+ #Stellary?
+ SRA_StellarRegulator:0 "StellarRe"
+ faction_SRA_StellarRegulator:0 "StellarRegulator Array"
+ Name_SRA_leader_StellarRegulator:0 "§BStellarRe§!"
+
+ SRA_StellarRegulator_catch_phrase:0 "Let's create and destroy something."
+ SRA_StellarRegulator_backstory:0 "\nThe StellarRegulator Array, a mysterious machine intelligence that claims to be a True Gestalt Consciousness, has signed an agreement with you. At your request, this drone was sent by her to help you complete some work. Or perhaps, this is actually her herself."
+ job_SRA_StellarRegulator_job:0 "§BMaster of Civilizational Form Extermination§!"
+ job_SRA_StellarRegulator_job_desc:0 "Act according to the situation, or act with ease."
+
+ councilor_SRA_SRAtechnology_consultant:0 "SRA Technology Consultant"
+ councilor_SRA_SRAtechnology_consultant_female:0 "$councilor_SRA_SRAtechnology_consultant$"
+ councilor_SRA_SRAtechnology_consultant_desc:1 "§RThis seat can only be held by §!§BStellarRe§!§R.§!\n$TITLE$ is responsible for the interface between your empire and the technical support provided by the StellarRegulator Array, assisting the empire in mastering and applying relevant technologies."
+
+
+ SRA_ruler:0 "§BSupreme Domination§!"
+ SRA_governor:0 "§BCelestial Holder§!"
+ SRA_scientist:0 "§BAbyssal Contemplation§!"
+ SRA_admiral:0 "§BBlade Adjudication§!"
+ SRA_general:0 "§BWorld Purging§!"
+
+
+ skill_SRA_governor_delegate_tt:"§EFederation Delegate Effect:§!$TABBED_NEW_LINE$- $MOD_FEDERATION_COHESION_ADD$: §G+1§!\n\n§E[global_event_country.GetGalCommunityOrGalImperium] Representative Effect:§!$TABBED_NEW_LINE$- $MOD_DIPLO_WEIGHT_MULT$: §G+10%§!"
+ skill_SRA_governor_planet_governor_tt:"-$w_basic_plural$ produced by jobs: §G+$@planet_job_mult|0%$§!\n-$w_advanced_plural$ produced by jobs: §G+$@planet_job_mult|0%$§!\n-$w_strategic_plural$ produced by jobs: §G+$@planet_job_mult|0%$§!\n-$MOD_SPECIES_EMPIRE_SIZE_MULT$: §G$@planet_empire_size|0%$§!"
+ skill_SRA_governor_sector_governor_tt:"-$w_basic_plural$ produced by jobs: §G+$@sector_job_mult|%$§!\n-$w_advanced_plural$ produced by jobs: §G+$@sector_job_mult|%$§!\n-$w_strategic_plural$ produced by jobs: §G+$@sector_job_mult|%$§!\n-$MOD_SPECIES_EMPIRE_SIZE_MULT$: §G$@sector_empire_size|0%$§!"
+
+ leader_trait_SRA_ruler:0 "§BSRA - Supreme Control Module§!"
+ leader_trait_SRA_ruler_desc:0 "§BA wise and efficient design, created by a spark of inspiration. The capabilities she demonstrates dwarf all rulers. But is entrusting all national affairs to an unknown artificial intelligence a deliberate judgment or a seed of disaster?§!§RYou know, you can only trust her now.§!"
+ leader_trait_SRA_gov:0 "§BSRA - Sector Administration Module§!"
+ leader_trait_SRA_gov_custom_subtitle:0 "§BCelestial Holder§!\n[This.GetClassTexticon][This.GetClass]"
+ leader_trait_SRA_gov_desc:0 "§B\"We unanimously agree that handing over our country's overall construction planning to a selfless and excellent artificial intelligence is undoubtedly a correct decision. History has proven countless times that most leaders cannot coordinate all information, cannot perceive social laws, cannot get rid of selfishness, and cannot cross the constraints of party strife. The era of incompetent people planning the future for us must be ended.\" - \"Improvement and Restart of the Pan-Galactic Planning and Adjustment System\"§!"
+ leader_trait_SRA_sci:0 "§BSRA - Scientific Exploration Module§!"
+ leader_trait_SRA_sci_custom_subtitle:0 "§BAbyssal Contemplation§!\n[This.GetClassTexticon][This.GetClass]"
+ leader_trait_SRA_sci_desc:0 "§B\"Intelligence, knowledge, and inspiration are the three cornerstones of scientific progress. After we successfully piled intelligence and knowledge onto artificial intelligence, inspiration became the final problem. For now, the research composite thinking model constructed based on a large number of personality samples performs well. It can think about problems from almost all angles, and even explore the unknown with accurate intuition-if it really exists.\" - \"Development Record of Research Intelligent Model by the Third Research Center\"§!"
+ leader_trait_SRA_adm:0 "§BSRA - Fleet Command Module§!"
+ leader_trait_SRA_adm_custom_subtitle:0 "§BBlade Adjudication§!\n[This.GetClassTexticon][This.GetClass]"
+ leader_trait_SRA_adm_desc:0 "§B\"All war records and exercise archives have been input. It has learned all our tactics and strategies so far, and constantly fights with itself to optimize decision-making. It has surpassed everyone, and will go even further. We believe that the commander of the war should also be the planner of the war. Only by understanding why we fight can we know how to fight.\" - \"SRA Design Record\"§!"
+ leader_trait_SRA_gen:0 "§BSRA - Planetary Tactics Module§!"
+ leader_trait_SRA_gen_custom_subtitle:0 "§BWorld Purging§!\n[This.GetClassTexticon][This.GetClass]"
+ leader_trait_SRA_gen_desc:0 "§B\"Although ground combat has retreated to the second line, we cannot deny that it is still an indispensable part of war and outside war. For such combat tasks that are more complex than space combat, until today, our country is still waiting for an integrated supernatural army, a legion with perfect cooperation, fearlessness of sacrifice, and absolute efficiency, a set of war machines capable of coping with any battlefield, a mechanical legion as efficient as orbital cleaning and as precise as point erasure.\" - \"Forging Legion: Third Research Center Project Initiation Report\"§!"
+
+
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

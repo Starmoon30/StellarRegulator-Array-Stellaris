@@ -1,0 +1,23 @@
+
+### Nexus storm behaviour ###
+
+SRA_SD_chaos_star_habitable_storm_add = {
+	set_star_flag = storm_system
+	set_global_flag = cosmic_storm_has_occurred
+
+	inline_script = {
+		script = cosmic_storms/StormVisuals
+		STORM_NAME = "nexus_storm"
+	}
+}
+
+SRA_SD_chaos_star_habitable_storm_remove = {
+	remove_storm_visuals_effect = yes
+	remove_star_flag = storm_system
+	SRA_SD_chaos_star_habitable_storm_apply_aftermath_modifier = yes
+}
+
+
+SRA_SD_chaos_star_habitable_storm_apply_aftermath_modifier = {
+}
+

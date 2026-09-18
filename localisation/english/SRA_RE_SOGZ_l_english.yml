@@ -1,0 +1,168 @@
+﻿l_english:
+###############################
+
+ SRA_RE_SOGZ_Upkeep:0 "Spear_of_Galaxy_Zenith Upkeep"
+
+
+ SRA_RE_SOGZ.1.desc:0 "Thank you very much. This energy should be enough.\nI will go restore the energy storage crystals now."
+ SRA_RE_SOGZ.2.desc:0 "§Y\"Pseudo-Stasis Field deployed.\"§!\n§Y\"Warning: Energy running low.\"§!\nDon't worry, I can handle it."
+ SRA_RE_SOGZ.3.desc:0 "Okay, this is the last step.\n...\n§Y\"Warning: Current energy remaining 5%.\"§!\nRestoration successful!\nHmm, repair probably requires 4% energy.\nIt's up to you when to execute the repair program.\nUh, after flying up, I might still need you to provide a little energy support...\n§Y\"Initiate Repair Program\" Special Project issued.§!\n§YWarning: Estimated upkeep 400 Energy Credits per month.§!"
+ SRA_RE_SOGZ.4.desc:0 "Repair program complete, diverting energy to drive system.\nWarp engine ready, relevant data acquired.\nIt is time to return to the stars."
+ SRA_RE_SOGZ.5:0 "Set Sail"
+ SRA_RE_SOGZ.5.desc:0 "Blue streamers streaked across the white and black hull, and the engraved patterns lit up together with the crystals.\nThen.\nA dazzling blue light flashed.\nThe Spear_of_Galaxy_Zenith disappeared from the earth.\nAppeared in the endless starry sky."
+ SRA_RE_SOGZ.5.a:0 "Warp away from the surface..."
+ SRA_RE_SOGZ.6.desc:0 "Weapons system ready, shield system ready, jump drive ready, fleet combat system ready...\nExecutor!\nWhat is before your eyes is the glorious creation of the Rocivia Empire, the crystallization of the StellarRegulator Array's extraordinary technology, a super warship sufficient to sway the war situation.\nAh... the feeling of this power returning to my hands-"
+ SRA_RE_SOGZ.7.desc:0 "§Y\"Warning: Energy running low.\"§!\nEh eh eh?! Wait, no...\nExecutor! Lord Executor!\nUm... I'm warping the energy transmission terminal to the surface now, you know what I mean."
+ SRA_RE_SOGZ.7.a:0 "Hmm... Pfft"
+ SRA_RE_SOGZ.7.b:0 "Don't know."
+ SRA_RE_SOGZ.8.desc:0 "Don't laugh... No, you are not allowed to laugh...\nI will get angry, really angry.\nExecutor!"
+ SRA_RE_SOGZ.9.desc:0 "(She cut off the communication.)"
+ SRA_RE_SOGZ.10.desc:0 "Hmph...\n...\n...I didn't know it would be like this either... um... sorry to trouble you... (Whispering)"
+ SRA_RE_SOGZ.11.desc:0 "Don't play dumb at a time like this! It will fall, it will really fall!\nDon't look away...\nTsk."
+ SRA_RE_SOGZ.11.a:0 "Alright alright, I'll give it to you."
+ SRA_RE_SOGZ.11.b:0 "Mmhmm?"
+ SRA_RE_SOGZ.12.desc:0 "...\nUm... please... give me a little energy...\nWoo..."
+ SRA_RE_SOGZ.12.a:0 "Alright, I'll give it to you..."
+ SRA_RE_SOGZ.13.desc:0 "Executor, Executor, are you free now?\nHmm, I want to report to you about the situation of the Spear_of_Galaxy_Zenith."
+ SRA_RE_SOGZ.14.desc:0 "As for the current situation, most functions of the Spear_of_Galaxy_Zenith are still disabled. Although basic combat capabilities are normal, various special combat systems cannot operate normally.\nIt is not just because the Spacetime Phase Engine cannot be restarted; the collapse of the main control system is also an important reason why I cannot fully control this giant ship."
+ SRA_RE_SOGZ.15.desc:0 "...\nWell, there is always hope. Even if the main control system cannot be repaired now, when you find more relics, I might be able to find a way to restart these functions.\nI am adjusting the detection system to prepare for the next positioning. I will notify you when it is ready."
+ SRA_RE_SOGZ.16.desc:0 "Rua!\nWere you not scared... doesn't matter, I didn't think it was likely anyway.\nHow have you been lately? Is the Spear_of_Galaxy_Zenith, which wobbles around and eats a lot of upkeep, satisfying you? No? I thought so too.\nHmm, did you notice its weapons are a bit weak? That's right, after all, it is difficult to maintain the normal operation of a super flagship like the Spear_of_Galaxy_Zenith relying on externally input energy. StellarRegulator Array ships, which perennially rely on the Spacetime Phase Engine to provide near-infinite energy, do not consider low-energy operation capabilities much."
+ SRA_RE_SOGZ.17.desc:0 "However, even in this state, it is still fine to use it to bully those new civilizations that just went to space or old civilizations that make no progress.\nBecause the technology gap is there.\nOh, speaking of technology, I want to remind you.\nIf you have developed Zero Point Power technology, you can consider visiting the Science Division.\nAlthough those cute little guys are unambiguous when asking for funding, they only dare to quietly post a few small notes when establishing new projects.\nSo go check it out when you have nothing to do."
+
+
+ SRA_RE_SOGZ.20.desc:0 "I am preparing to repair the Space Manipulation System. This system involves a series of complex spatial adjusters, providing spatial positioning, structural bending, wormhole construction, and other functions. After repairs are complete, the Spear_of_Galaxy_Zenith will gain an additional set of allocatable system energy.\nHmm, the materials originally needed are too far away for your technological level, but I found a lower-tier alternative."
+ SRA_RE_SOGZ.21.desc:0 "There is a rare species called Enres Elemental Creature. Their unique physiological structure allows them to refine \"Warp Essence\" from external matter and store it in their bodies. Enres Elemental Creatures use \"Warp Essence\" to create spatial traps to capture prey, and I can use \"Warp Essence\" as a substitute to participate in the repair work."
+ SRA_RE_SOGZ.22.desc:0 "The planet where Enres Elemental Creatures exist has been marked on the star map for you. You need to dispatch armies to hunt them and recover \"Warp Essence\".\nUh, the database mentions that it is best to prepare some extra armies.\nThat's it."
+ SRA_RE_SOGZ_SP1:0 "Collect \"Warp Essence\""
+ SRA_RE_SOGZ_SP1_DESC:0 "There are Enres sunfi... Elemental Creatures on this planet. In order to further repair the Spear_of_Galaxy_Zenith, we need to collect sun... \"Warp Essence\" from them.\nHmm, that's it."
+ SRA_RE_SOGZ.23:0 "Retrieve \"Warp Essence\""
+ SRA_RE_SOGZ.23.desc:0 "We successfully killed that Enres Elemental Creature and recovered the required \"Warp Essence\" from its tattered body. Now we can continue the repair work of the Spear_of_Galaxy_Zenith.\n...Does \"refine from external matter\" mean eating? Then isn't this undigested and unabsorbed \"Warp Essence\" just... I didn't say anything."
+ SRA_RE_SOGZ.23.a:0 "Don't think too much... Don't think too much."
+ SRA_RE_SOGZ_SP3:0 "Repair Space Manipulation System"
+ SRA_RE_SOGZ_SP3_DESC:0 "\"Warp Essence\" is ready. It is time to start the repair work."
+ SRA_RE_SOGZ.24:0 "It Flipped"
+ SRA_RE_SOGZ.24.desc:0 "Just as our army was bombarding the Enres Elemental Creature with powerful firepower, an accident suddenly occurred.\nThe Enres Elemental Creature temporarily released a spatial trap after a brief charge, trapping our troops!\nNow these unfortunate guys are unable to escape. I'm afraid we need to send extra troops to solve all this."
+ SRA_RE_SOGZ.24.a:0 "Damn it."
+ SRA_RE_SOGZ_SP2:0 "Deal with Enres Elemental Creature"
+ SRA_RE_SOGZ_SP2_DESC:0 "The cunning Enres Elemental Creature trapped our troops with a spatial trap. We have to send extra troops over.\nReally, I clearly told that commander not to alt-tab when fighting the sunfish creature..."
+ SRA_RE_SOGZ.25.desc:0 "Test completed, system running well, looking forward to combat verification.\nYou can contact me at any time to begin the next stage of repair work."
+ SRA_RE_SOGZ.26.desc:0 "In addition, I found this in the hull.\n(She displays three \"shards,\" colored blue, red, and white respectively.)\nRegrettably, I don't know how they were put into my hull... Maybe someone secretly planned all this?\nAs before, I trust your choice, so please make a decision."
+ SRA_RE_SOGZ.26.a:0 "Absorb a shard"
+ SRA_RE_SOGZ.26.b:0 "Better wait for now"
+
+ SRA_RE_SOGZ.27.desc:0 "Executor, um, over here, ready to start repairing the Energy Modulation System.\nThis system is mainly responsible for coordinating the energy cycle of various equipment within the hull, while also ensuring the safety and stability of equipment under high-intensity operating environments. After repairs are complete, the Spear_of_Galaxy_Zenith will gain an additional set of allocatable system energy.\nThis part of the repair doesn't need any special resources... but I need \"some\" energy and Astral Threads for debugging work."
+ SRA_RE_SOGZ.27.a:0 "Resources are ready!"
+ SRA_RE_SOGZ.27.b:0 "Short on cash.jpg"
+ SRA_RE_SOGZ_SP4:0 "Repair Energy Modulation System"
+ SRA_RE_SOGZ_SP4_DESC:0 "We have provided StellarRe with sufficient resources. Repair work can start immediately.\nHope everything goes well."
+ SRA_RE_SOGZ.28:0 "Murphy's Law"
+ SRA_RE_SOGZ.28.desc:0 "Our observation station suddenly reported detecting huge energy fluctuations in the direction of the Spear_of_Galaxy_Zenith, and communication with the Spear_of_Galaxy_Zenith was also interrupted."
+ SRA_RE_SOGZ.28.a:0 "Good things don't happen but bad things do..."
+ SRA_RE_SOGZ.29.desc:0 "Cough cough, Executor...\nAre you there?"
+ SRA_RE_SOGZ.29.a:0 "What happened?"
+ SRA_RE_SOGZ.29.b:0 "Are you okay?"
+ SRA_RE_SOGZ.29.c:0 "What went wrong again?"
+ SRA_RE_SOGZ.30.desc:0 "Um... how should I put it...\nThe first half of the repair process was relatively smooth.\nIt's just... when I was testing later, there was a problem with the energy cycle in one area. I checked it several times but couldn't find what was wrong.\nThen, after testing a few more times and it still didn't work, I just..."
+ SRA_RE_SOGZ.30.a:0 "You just?"
+ SRA_RE_SOGZ.31.desc:0 "I just kicked it twice."
+ SRA_RE_SOGZ.31.a:0 "Standard repair method, right..."
+ SRA_RE_SOGZ.32.desc:0 "Then it... exploded.\nUm... at least there's no need to find the problem anymore. I estimate that whole area needs to be rebuilt.\nI need a science ship to help out, give me some computing power, and by the way...\nDig back my body which is probably stuck in the wall..."
+ SRA_RE_SOGZ.32.a:0 "Fair enough."
+ SRA_RE_SOGZ_SP5:0 "Assist Repair Work"
+ SRA_RE_SOGZ_SP5_DESC:0 "StellarRe used some rather... Greenskin repair methods, and as expected, it exploded.\nWe need to help her a little.\n\n§YIt is recommended to right-click the star system from the galaxy view to execute the Special Project.§!"
+ SRA_RE_SOGZ.33.desc:0 "Thanks...\nAnyway, the repair work of the Energy Modulation System has come to an end.\nYou can contact me at any time to begin the next stage of repair work."
+
+
+ SRA_RE_SOGZ.34.desc:0 "Executor, next is the repair of the Spacetime Phase Engine.\nHowever, given that this project is quite massive, the entire repair work needs to be divided into three stages.\nNow we are ready for the first stage, restoring basic functions, restoring the self-powering capability of the Spear_of_Galaxy_Zenith, and at the same time, gaining an additional set of allocatable system energy.\nHmm, this requires you to build an experimental facility at this location to prepare certain materials I need."
+ SRA_RE_SOGZ.34.a:0 "No problem."
+ SRA_RE_SOGZ.34.b:0 "Hmm... might need to wait a bit."
+ SRA_RE_SOGZ_SP6:0 "Construct Spacetime Phase Offset Device"
+ SRA_RE_SOGZ_SP6_DESC:0 "To repair the Spear_of_Galaxy_Zenith, we need to build a platform at this location to prepare some needed materials using the gravitational environment of the black hole."
+ SRA_RE_SOGZ.35:0 "Facility Completed"
+ SRA_RE_SOGZ.35.desc:0 "The Spacetime Phase Offset Device has been completed. You can order the preparation work to start at any time.\n\n§YUpgrade the Megastructure Spacetime Phase Offset Device to proceed to the next step§!"
+ SRA_RE_SOGZ.35.a:0 "Received."
+ SRA_RE_SOGZ_Repair_1:0 "Spacetime Phase Offset Device" 
+ SRA_RE_SOGZ_Repair_1_DESC:0 "This platform carries some mysterious equipment provided by StellarRe. Under the gravitational environment of the black hole, it can prepare some materials needed for the Spacetime Phase Engine."
+ SRA_RE_SOGZ_Repair_2:0 "Start Preparation" 
+ SRA_RE_SOGZ_Repair_2_DESC:0 "Start preparation work. The platform will be dismantled upon completion."
+ SRA_RE_SOGZ.36:0 "Preparation Completed"
+ SRA_RE_SOGZ.36.desc:0 "Materials have been prepared. We are carefully transporting them to the Spear_of_Galaxy_Zenith."
+ SRA_RE_SOGZ.36.a:0 "Hope everything goes well... Don't let anything go wrong this time."
+ SRA_RE_SOGZ.37.desc:0 "Executor, the first stage of the Spacetime Phase Engine repair work has ended successfully. Relevant equipment is running well, and maintenance progress is smooth.\nThe Spear_of_Galaxy_Zenith can now power itself, so you no longer need to continuously provide energy for the hull operation.\nIn addition, the power supply for the weapon system is also guaranteed. Energy output adjustment is completed, and now they can work normally.\nYou can contact me at any time to proceed to the next stage of repair work."
+
+ SRA_RE_SOGZ.38.desc:0 "This time we need to repair the Main Control System, which is used to implement the extended functions of the Spacetime Phase Engine.\nUm, including now, I control the Spear_of_Galaxy_Zenith through the computation array constructed by the Action Unit's personality. Its own control system has not yet been repaired. Although this control method covering the original system can achieve most functions, a few functions require the Main Control System to run stably."
+ SRA_RE_SOGZ.38.a:0 "Hope everything goes well... Don't let anything go wrong this time."
+ SRA_RE_SOGZ.39.desc:0 "Ah, this...\nHmm... You need to know that we are machine intelligence after all. The consciousness of most organic sapient creatures arises from their brains, while our consciousness arises from our computation arrays.\nEvery warship of the StellarRegulator Array has its own computation array to maintain the control system. In this way, when commanding, we don't need to personally calculate ballistics or adjust energy ratios or change thruster power for them, but only need to issue instructions like \"go where, use what, hit whom, where\". The Spear_of_Galaxy_Zenith additionally carries a computation array for constructing personality on this basis, after all, other ships don't have that much redundant space and energy \"bandwidth\"."
+ SRA_RE_SOGZ.40.desc:0 "You could say we are commanders aboard the Spear_of_Galaxy_Zenith.\nHowever, there are actually a series of measures protecting our consciousness, for example, equipping multiple Spears of Galaxy Zenith for the same personality, and also, manufacturing bodies specifically for carrying personality.\nI have many bodies, but only one truly carries my personality-together with the computation array on the Spear_of_Galaxy_Zenith."
+ SRA_RE_SOGZ.41.desc:0 "(She places her left hand on her chest.)\nThis body constructed with ['concept_SRA_Stellarcrystal_Fractal'] possesses computing power like an entire shipborne computation array, capable of carrying a complete personality. At the same time, its internal power supply system can maintain long-term independent operation, the miniature warp engine ensures mobility, and the freely flowing ['concept_SRA_Stellarcrystal_Fractal'] and my psionics together establish basic combat and survival capabilities."
+ SRA_RE_SOGZ.42.desc:0 "Although this design is useless under normal circumstances... When connected to the network, even if all Spears of Galaxy Zenith are destroyed, the personality can be saved through the Stellarcrystal Network, not to mention those computation arrays in the base... It's just providing a little insurance like now..."
+ SRA_RE_SOGZ.43.desc:0 "I digress. Regarding the repair of the Main Control System, as before, I need a little extra help.\nThat part of the original computation array was sintered together in the crash. To rebuild the system, I not only have to remanufacture the computation array but also restore the system architecture from the wreckage-at least most of the architecture.\nThe computation array part is easy, but regarding restoring the system, I need help from the Science Division."
+ SRA_RE_SOGZ.44.desc:0 "I will issue a series of Special Projects. You can start or interrupt the engineering at any time. I warn you in advance, I can't guarantee success on the first try."
+
+ SRA_RE_SOGZ_SP7:0 "SOGZ Main Control System Repair: I"
+ SRA_RE_SOGZ_SP7_DESC:0 "StellarRe needs our help to restore the Main Control System of the Spear_of_Galaxy_Zenith. We are now proceeding with the first stage."
+ SRA_RE_SOGZ.45:0 "First Stage Successful"
+ SRA_RE_SOGZ.45.desc:0 "Restoration progress is smooth, system structure is relatively clear, presumed to be the correct result. Can proceed to the next stage."
+ SRA_RE_SOGZ.45.a:0 "Confirm."
+ SRA_RE_SOGZ.46:0 "First Stage Failed"
+ SRA_RE_SOGZ.46.desc:0 "Structure error, adaptation failed. Need to restart restoration work."
+ SRA_RE_SOGZ.46.a:0 "How unfortunate."
+ SRA_RE_SOGZ_SP8:0 "SOGZ Main Control System Repair: II"
+ SRA_RE_SOGZ_SP8_DESC:0 "StellarRe needs our help to restore the Main Control System of the Spear_of_Galaxy_Zenith. We are now proceeding with the second stage."
+ SRA_RE_SOGZ.47:0 "Second Stage Successful"
+ SRA_RE_SOGZ.47.desc:0 "Structure connection is good, content supplementation is reasonable. Can proceed to the next stage of work."
+ SRA_RE_SOGZ.47.a:0 "Confirm."
+ SRA_RE_SOGZ.48:0 "Second Stage Failed"
+ SRA_RE_SOGZ.48.desc:0 "Obviously, the data structure does not match the previous result. We need to try again."
+ SRA_RE_SOGZ.48.a:0 "Alright."
+ SRA_RE_SOGZ_SP9:0 "SOGZ Main Control System Repair: III"
+ SRA_RE_SOGZ_SP9_DESC:0 "StellarRe needs our help to restore the Main Control System of the Spear_of_Galaxy_Zenith. We are now proceeding with the third stage."
+ SRA_RE_SOGZ.49:0 "Restoration Successful"
+ SRA_RE_SOGZ.49.desc:0 "System trial run normal, restoration work successful, mission accomplished."
+ SRA_RE_SOGZ.49.a:0 "Excellent."
+ SRA_RE_SOGZ.50:0 "Third Stage Failed"
+ SRA_RE_SOGZ.50.desc:0 "Run failed, error node confirmed, needs adjustment."
+ SRA_RE_SOGZ.50.a:0 "What a hassle."
+ SRA_RE_SOGZ.51:0 "Critical Error"
+ SRA_RE_SOGZ.51.desc:0 "\"StellarRe didn't tell you how the test results were, did she?\"\n\"StellarRe told me, the system structure is complete and reasonable, we are correct.\"\n\"No, the restoration is completely wrong. In fact, the test result was run failure.\"\n\"No... this is not true, this is impossible!\"\n\"Browse the test records, it's true.\"\n\"No-\""
+ SRA_RE_SOGZ.51.a:0 "Did both of these people lose their hands? (Annoyed)"
+ SRA_RE_SOGZ.52.desc:0 "Energy diversion normal, spacetime structure stable, backtracking cycle within error range, time point correct... Test completed, Singularity Outbreak running normally.\nMain Control System repair complete, updating configuration...\nExecutor, you can contact me at any time to proceed to the next step of repair work, or rather, the final step."
+
+ SRA_RE_SOGZ.53.desc:0 "The final repair work is ready to start. The targets this time are the Energy Container Group and Phase Amplifier. Once completed, the Spear_of_Galaxy_Zenith will gain an additional set of allocatable system energy again."
+ SRA_RE_SOGZ.54.desc:0 "Hmm, this doesn't require you to collect some magical material from some corner of the galaxy. All needed is \"a tiny bit\" of resources, um...\nWell, for the old me, it was probably a small resource."
+ SRA_RE_SOGZ.54.a:0 "Buy buy buy! This is military spending, can't skimp on it, right?"
+ SRA_RE_SOGZ.54.b:0 "I really can't cough up this \"tiny bit\" right now..."
+ SRA_RE_SOGZ.55.desc:0 "It doesn't matter, it doesn't matter, there's no rush. You can come to me when you have enough resources.\nSpeaking of which, I didn't feel these startup resources were so expensive before..."
+ SRA_RE_SOGZ.56.desc:0 "Actually, this is also an alternative operation... Originally there should be specialized equipment to reduce loss, but there is no relevant blueprint in my database...\nI will initiate local time adjustment as a trial run. This will also help the repair work complete quickly. Please wait."
+ SRA_RE_SOGZ.57.desc:0 "\"Now, time is on our side.\"\nCongratulations, Executor, the repair work of the Spear_of_Galaxy_Zenith is completely finished here. I hope this great creation can bring you victory together with me."
+
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

@@ -1,0 +1,27 @@
+opinion_country_to_SRA1 = {
+	trigger = {
+		FROM = {
+			has_edict = SRA_Diplomacy_1
+		}
+	}
+
+	opinion = {
+		modifier = {
+			add = 1000
+		}	
+	}
+}
+
+opinion_country_to_SRA_RE_StellarRegulator_debris_8 = {
+	trigger = {
+		FROM = {
+			has_country_flag = SRA_RE_StellarRegulator_debris_8
+		}
+	}
+
+	opinion = {
+		modifier = {
+			add = 200
+		}	
+	}
+}

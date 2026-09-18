@@ -1,0 +1,30 @@
+﻿l_simp_chinese:
+ faction_SRA_StellarRegulator:0 "星规阵列"
+
+
+ NAME_SRA_Rocivia_Empire:0 "§B路希维亚帝国§!"
+ NAME_SRA_Crisis_country:0 "§B第三远征舰队§!"
+
+
+ NAME_SRA_Crisis_Bright_Galaxy:0 "§B幻灭-薄暝§!"
+ NAME_SRA_Crisis_Adjudicator:0 "星辉-终结"
+ NAME_SRA_Crisis_Executor:0 "湮灭-执行"
+ NAME_SRA_Crisis_Cruiser:0 "猎杀-抹除"
+ NAME_SRA_Crisis_Cruiser_No_Aura:0 "§B猎杀-抹除§!"
+ NAME_SRA_Crisis_Fort:0 "遗世-门扉"
+ NAME_SRA_Crisis_Mark:0 "独行-航标"
+ NAME_SRA_Crisis_GZ_Platform:0 "星光-高塔"
+
+ NAME_SRA_Mutation_4309_target_fleet:0 "§B完型崩解§!"
+ NAME_SRA_Mutation_Boom_0:0 "即将发生的空间风暴"
+ NAME_SRA_Mutation_Boom_1:0 "空间风暴"
+ NAME_SRA_Mutation_Boom_2:0 "荣耀爆炸"
+ NAME_SRA_SOGZ_menu_sub_4_3_ship_1:0 "苍星陨灭"
+
+ NAME_SRA_Crisis_Cruiser_fleet:0 "巡航舰队"
+ NAME_SRA_Crisis_Executor_fleet:0 "执行舰队"
+ NAME_SRA_Crisis_Adjudicator_fleet:0 "裁决舰队"
+ NAME_SRA_Crisis_Adjudicator_Guard_fleet:0 "裁决舰队"
+ NAME_SRA_Crisis_Guard_fleet:0 "壁垒舰队"
+ NAME_SRA_Crisis_Fort_fleet:0 "主控星核"
+ NAME_SRA_Crisis_Mark_fleet:0 "同调节点" 

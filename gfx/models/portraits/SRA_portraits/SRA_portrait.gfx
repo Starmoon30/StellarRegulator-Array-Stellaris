@@ -1,0 +1,26 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_portrait_mesh"
+		file = "gfx/models/portraits/SRA_portraits/SRA_portrait.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "bodyShape"
+			index = 0
+			texture_diffuse = "SRA_empty_texture.dds"
+			shader = "PdxMeshPortrait"
+		}
+		meshsettings = {
+			name = "clothesShape"
+			index = 0
+			texture_diffuse = "SRA_empty_texture.dds"
+			shader = "PdxMeshPortraitClothes"
+		}
+		meshsettings = {
+			name = "attachmentShape"
+			index = 0
+			texture_diffuse = "SRA_empty_texture.dds"
+			shader = "PdxMeshPortraitHair"
+		}
+	}
+}

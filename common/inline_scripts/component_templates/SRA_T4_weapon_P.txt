@@ -1,0 +1,49 @@
+
+	
+	#key = "SRA_T4_weapon_P"
+	size = point_defence
+	type = point_defence
+	icon = "GFX_SRA_T4_weapon_P"
+	icon_frame = 1
+	
+
+	damage = { min = 32 max = 48 }
+	windup = { min = 0 max =  4 }
+	total_fire_time = 8
+	range = 120
+	accuracy = 1
+	tracking = 1
+	shield_penetration = @SRA_weapon_penetration_4
+	armor_penetration = @SRA_weapon_penetration_4
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	power = -25
+	
+	# ai_weight = {
+	# 	weight = 0
+	# 	modifier = {
+	# 		weight = 10000
+	# 		OR = {
+	# 			has_civic = civic_SRAtechnology
+	# 			has_civic = civic_SRARociviaEmpire
+	# 		}
+	# 	}
+	# }
+	#prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	#component_set = "SRA_T4_weapon_P"
+	#tags = { weapon_type_point_defense weapon_type_energy weapon_type_kinetic weapon_type_explosive }
+	ai_tags = { weapon_role_point_defense screen }
+	projectile_gfx = "SRA_pd_weapon_0"
+	point_defence_targets = { "missile" "strike_craft" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}

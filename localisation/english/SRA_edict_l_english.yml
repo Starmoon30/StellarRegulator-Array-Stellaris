@@ -1,0 +1,22 @@
+﻿l_english:
+ edict_SRA_Produce_1:0 "StellarRegulator Construction Protocol"
+ edict_SRA_Produce_1_desc:0 "\"Once you've learned my macro, the rest is just F2A.\"\n§YCheat Edict§!"
+ edict_SRA_Shipyard_Reduce_1:0 "StellarRegulator Shipyard Restriction Ordinance"
+ edict_SRA_Shipyard_Reduce_1_desc:0 "Shut up those Megastructures and Juggernauts that have few shipyards but love to steal orders."
+ edict_SRA_Diplomacy_1:0 "StellarRegulator Diplomatic Protocol"
+ edict_SRA_Diplomacy_1_desc:0 "\"Tribute is the advanced form of alliance.\"\n§YIncreases opinion of all countries by§! §G+1000§!\n\nAdditionally, activating it immediately gives you §G+100§! §YCurrent Intel§! on all countries, and your Federation immediately gains §G+20000§! XP.\n§YCheat Edict§!"
+ opinion_country_to_SRA1:0 "\"Cunning days end, kind days open.\""
+ edict_SRA_election_term:0 "Election Postponement"
+ edict_SRA_election_term_desc:0 "Massively postpone the time of the next election because the leader is the one you like.\n\n§BWill it be Rocivia?§!"
+
+
+ edict_SRA_Open_Menu:0 "Open StellarRegulator Comms Interface"
+ edict_SRA_Open_Menu_desc:0 "§B\"I am the only one you can trust.\"§!"
+ edict_SRA_Setting:0 "Open StellarRegulator Array - Settings Panel"
+ edict_SRA_Setting_desc:0 "You can manage StellarRegulator Array MOD related settings here.\n§B\"If you are truly fearless, then prepare to face the boundless darkness.\"§!"
+
+ edict_SRA_Spear_Of_Galaxy_Zenith_Menu:0 "Open Spear_of_Galaxy_Zenith Control Panel"
+ edict_SRA_Spear_Of_Galaxy_Zenith_Menu_desc:0 "§BFleet support mothership, combat fire platform, and super flagship designed during the late Third Expedition. Used for large-scale fleet battles, fortifications assaults, long-range fire support, and single-ship thrusts.\nThe only StellarRegulator Array combat vessel equipped with a Spacetime Phase Engine, which frees fleets supported by the Spear_of_Galaxy_Zenith from needing power supply from Expeditionary Fortresses and Expeditionary Beacons. At the same time, the Spacetime Phase Engine can provide extra support for the Spear_of_Galaxy_Zenith, creating huge advantages in battle.§!"
+
+ edict_SRA_Weapon_Adjust:0 "Open SRA Tuned Weapon Adjustment Interface"
+ edict_SRA_Weapon_Adjust_desc:0 "You can adjust the damage of your \"SRA Weapons\" arbitrarily, because the Lord does not care."

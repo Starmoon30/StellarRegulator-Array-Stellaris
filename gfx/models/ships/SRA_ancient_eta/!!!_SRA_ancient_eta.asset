@@ -1,0 +1,50 @@
+@SRA_eta_gateway_scale = 0.42
+@SRA_eta_gateway_size = 50.0
+
+animation = { name = "SRA_eta_gateway_idle_animation" file = "SRA_eta_gateway_idle.anim" }
+animation = { name = "SRA_eta_gateway_opening_animation" file = "SRA_eta_gateway_opening.anim" }
+animation = { name = "SRA_eta_gateway_idle2_animation" file = "SRA_eta_gateway_idle2.anim" }
+animation = { name = "SRA_eta_gateway_closing_animation" file = "SRA_eta_gateway_closing.anim" }
+animation = { name = "SRA_eta_gateway_death1_animation" file = "SRA_eta_gateway_death1.anim" }
+animation = { name = "SRA_eta_gateway_death2_animation" file = "SRA_eta_gateway_death2.anim" }
+animation = { name = "SRA_eta_gateway_death3_animation" file = "SRA_eta_gateway_death3.anim" }
+animation = { name = "SRA_eta_gateway_death4_animation" file = "SRA_eta_gateway_death4.anim" }
+
+entity = {
+	name = "SRA_eta_gateway_0_hull_entity"
+	pdxmesh = "SRA_eta_gateway_0_mesh"
+	scale = @SRA_eta_gateway_scale
+	
+	get_state_from_parent = no
+	default_state = "idle"
+	state = { name = "idle"	 animation = "idle2" animation_blend_time = 0
+		start_event = { node = "UpperPillar_locator_center" particle = "SRA_eta_gateway_pillar_core_blue" keep_particle = yes trigger_once = yes }
+		start_event = { node = "LowerPillar_locator_center" particle = "SRA_eta_gateway_pillar_core_blue" keep_particle = yes trigger_once = yes }
+		start_event = { node = "fa_locator_1" particle = "SRA_eta_gateway_platform_beam_blue" keep_particle = yes trigger_once = yes }
+		start_event = { node = "fa_locator_1" particle = "SRA_eta_gateway_beam_muzzle_0" keep_particle = yes trigger_once = yes }
+		start_event = { node = "fa_locator_2" particle = "SRA_eta_gateway_platform_beam_blue" keep_particle = yes trigger_once = yes }
+		start_event = { node = "fa_locator_2" particle = "SRA_eta_gateway_beam_muzzle_0" keep_particle = yes trigger_once = yes }
+		start_event = { node = "fa_locator_3" particle = "SRA_eta_gateway_platform_beam_blue" keep_particle = yes trigger_once = yes }
+		start_event = { node = "fa_locator_3" particle = "SRA_eta_gateway_beam_muzzle_0" keep_particle = yes trigger_once = yes }
+		start_event = { node = "fa_locator_4" particle = "SRA_eta_gateway_platform_beam_blue" keep_particle = yes trigger_once = yes }
+		start_event = { node = "fa_locator_4" particle = "SRA_eta_gateway_beam_muzzle_0" keep_particle = yes trigger_once = yes }
+	}
+	
+	game_data = { emissive_recolor_crunch = 0.0 }
+}
+entity = {
+	name = "SRA_eta_gateway_0_megastructure_entity"
+	pdxmesh = "locator_mesh"
+	scale = 0.15
+	locator = { name = "root" 	position = { 0 0 0 } }
+	default_state = "idle" state = { name = "idle" state_time = 0.01 }
+	attach = { root = "SRA_eta_gateway_0_hull_entity" }
+	game_data = { emissive_recolor_crunch = 0.0 }
+}
+
+entity = {
+	name = "SRA_eta_gateway_damaged_entity"
+	pdxmesh = "SRA_eta_gateway_damaged_mesh"
+	scale = @SRA_eta_gateway_scale
+	game_data = { emissive_recolor_crunch = 0.0 }
+}

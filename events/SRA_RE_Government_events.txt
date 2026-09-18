@@ -1,0 +1,769 @@
+namespace = SRA_RE_Government
+
+
+country_event = {
+	id = SRA_RE_Government.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+
+	immediate = {
+		create_country = {
+			name = "Name_SRA_RE_StellarRegulator_country"
+			species = event_target:SRA_StellarRegulator_species
+			type = faction_SRA_RE_StellarRegulator
+			flag = {
+				icon = {
+					category="SRA_flags"
+					file="SRA_flags_StellarRegulatorArray.dds"
+				}
+				background={
+					category="backgrounds"
+					file="double_triangles.dds"
+				}
+				colors={
+					"blue"
+					"indigo"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = protected_from_queen_storm
+				save_global_event_target_as = SRA_RE_StellarRegulator_country
+				set_country_flag = SRA_RE_StellarRegulator_country	
+			}
+		}
+		create_country = {
+			name = "Name_SRA_RE_Rocivia_country"
+			species = event_target:SRA_RE_species
+			type = faction_SRA_RE_Rocivia
+			flag = {
+				icon = {
+					category="SRA_flags"
+					file="SRA_flags_Rocivia.dds"
+				}
+				background={
+					category="backgrounds"
+					file="double_triangles.dds"
+				}
+				colors={
+					"blue"
+					"indigo"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = protected_from_queen_storm
+				save_global_event_target_as = SRA_RE_Rocivia_country
+				set_country_flag = SRA_RE_Rocivia_country	
+			}
+		}
+		create_country = {
+			name = "Name_SRA_RE_Hidra_country"
+			species = event_target:SRA_RE_species
+			type = faction_SRA_RE_Hidra
+			flag = {
+				icon = {
+					category="SRA_flags"
+					file="SRA_flags_Hidra.dds"
+				}
+				background={
+					category="backgrounds"
+					file="double_triangles.dds"
+				}
+				colors={
+					"red"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = protected_from_queen_storm
+				save_global_event_target_as = SRA_RE_Hidra_country
+				set_country_flag = SRA_RE_Hidra_country	
+			}
+		}
+		country_event = {
+			id = SRA_RE_Government.2
+		}
+	}
+}
+
+country_event = {
+	id = SRA_RE_Government.2
+	title = "SRA_RE_Government.2.name"
+	desc = "SRA_RE_Government.2.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+    }
+	option = {
+		name = SRA_RE_Government.2.a
+		custom_tooltip = SRA_RE_Government.2.a.custom_tooltip
+		hidden_effect = {
+			set_country_flag = SRA_RE_Rocivia_Empire_story
+			create_SRA_RE_Rocivia_ruler = yes
+			country_event = {
+				id = SRA_RE_Government.3
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Government.2.b
+		custom_tooltip = SRA_RE_Government.2.b.custom_tooltip
+		hidden_effect = {
+			create_country = {
+				name = "Name_SRA_SD_department_of_abyss_country"
+				species = event_target:SRA_RE_species
+				type = faction_SRA_SD_department_of_abyss
+				flag = {
+					icon = {
+						category="SRA_flags"
+						file="SRA_flags_Rocivia.dds"
+					}
+					background={
+						category="backgrounds"
+						file="double_triangles.dds"
+					}
+					colors={
+						"blue"
+						"indigo"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					set_country_flag = protected_from_queen_storm
+					save_global_event_target_as = SRA_SD_department_of_abyss_country
+					set_country_flag = SRA_SD_department_of_abyss_country
+					establish_communications_no_message = root
+				}
+			}
+			create_country = {
+				name = "Name_SRA_SD_Abyss"
+				species = event_target:SRA_RE_species
+				type = faction_SRA_SD_Abyss
+				flag = {
+					icon = {
+						category="SRA_flags"
+						file="SRA_flags_Abyss.dds"
+					}
+					background={
+						category="backgrounds"
+						file="circle.dds"
+					}
+					colors={
+						"red"
+						"black"
+						"black"
+						"null"
+					}
+				}
+				effect = {
+					set_country_flag = protected_from_queen_storm
+					save_global_event_target_as = SRA_SD_Abyss_country
+					set_country_flag = SRA_SD_Abyss_country
+					establish_communications_no_message = root
+				}
+			}
+			# create_country = {
+			# 	name = "NAME_SRA_SD_AT_Wisdom_Pivot_Order"
+			# 	species = event_target:SRA_RE_species
+			# 	type = faction_SRA_SD_AT_Wisdom_Pivot_Order
+			# 	flag = {
+			# 		icon = {
+			# 			category="SRA_flags"
+			# 			file="SRA_flags_All_Territory.dds"
+			# 		}
+			# 		background={
+			# 			category="backgrounds"
+			# 			file="circle.dds"
+			# 		}
+			# 		colors={
+			# 			"shadow_blue"
+			# 			"white"
+			# 			"black"
+			# 			"null"
+			# 		}
+			# 	}
+			# 	effect = {
+			# 		set_country_flag = protected_from_queen_storm
+			# 		save_global_event_target_as = SRA_SD_department_of_abyss_country
+			# 		set_country_flag = SRA_SD_department_of_abyss_country
+			# 		establish_communications_no_message = root
+			# 	}
+			# }
+			set_country_flag = has_SRA_SD_department_of_abyss_country
+			set_country_flag = SRA_SD_Shadow_Of_Hidra_story
+			add_relic = SRA_SD_Arcane_relic
+			add_relic = SRA_SD_Divine_relic
+			create_ship_design = { design = "NAME_SRA_SD_metabyss_orbital_ring" }
+			add_ship_design = last_created_design
+			capital_scope = {
+				add_modifier = { modifier = planet_SRA_SD_old_home_planet }
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					max_jumps = 1
+					hyperlane = no
+					is_discovered = yes
+					initializer = SRA_SD_1_start_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = SRA_SD_1_start_system
+				}
+				set_star_flag = SRA_chaos_star
+				# create_starbase = {
+				# 	size = starbase_SRA_chaos_1
+				# 	owner = ROOT
+				# 	#module = <starbase_module>
+				# 	#building = <starbase_building>
+				# 	effect = {
+				# 	}
+				# }
+				# last_created_fleet = {
+				# 	set_cloaking_active = yes
+				# 	set_event_locked = yes
+				# }
+				add_hyperlane = {
+					from = this
+					to = root.capital_scope.solar_system
+				}
+				star = {
+					# spawn_random_storm = {
+					# 	name = "NAME_SRA_SD_chaos_star_habitable_storm"
+					# 	type = SRA_SD_chaos_star_habitable_storm
+					# 	immediate = yes
+					# 	cosmic_storm_start_position = this.solar_system
+					# }
+					# last_created_cosmic_storm = {
+					# 	set_name = "NAME_SRA_SD_chaos_star_habitable_storm"
+					# }
+					set_planet_size = 25
+					change_pc = pc_SRA_SD_chaos_star_habitable
+					set_planet_entity = { entity = "SRA_chaos_star_extra_entity" }
+					set_owner = root
+					set_timed_planet_flag = {
+						flag = SRA_SD_abyss_no_army_attack days = 1800
+					}
+					create_ambient_object = {
+						type = SRA_nexus_storm_red
+						location = this
+					}
+					create_pop_group = {
+						species = root.owner_main_species
+						size = 1000
+					}
+					save_global_event_target_as = SRA_SD_chaos_star_habitable
+					add_deposit = d_SRA_SD_star_chaos
+					add_deposit = d_SRA_SD_star_babel
+					add_deposit = d_SRA_SD_star_department_of_abyss
+					add_deposit = d_SRA_SD_star_lapis_lazuli
+					add_deposit = d_SRA_SD_star_emerald_tower
+					add_deposit = d_SRA_SD_star_forest_of_moon_shadow
+					add_deposit = d_SRA_SD_star_isolated_island
+					add_deposit = d_SRA_SD_star_the_borderland
+					add_deposit = d_SRA_SD_star_the_under_furnaces
+					add_district = district_SRA_SD_mineral
+					add_district = district_SRA_SD_food
+					add_district = district_SRA_SD_alloys
+					add_district = district_SRA_SD_consumer_goods
+					add_district = district_SRA_SD_research
+					add_district = district_SRA_SD_rare
+					add_building = {
+						district = district_SRA_SD_energy
+						zone = zone_default
+						building = building_SRA_SD_energy
+					}
+					add_building = {
+						district = district_SRA_SD_mineral
+						zone = zone_SRA_SD
+						building = building_SRA_SD_mineral
+					}
+					add_building = {
+						district = district_SRA_SD_food
+						zone = zone_SRA_SD
+						building = building_SRA_SD_food
+					}
+					add_building = {
+						district = district_SRA_SD_alloys
+						zone = zone_SRA_SD
+						building = building_SRA_SD_alloys
+					}
+					add_building = {
+						district = district_SRA_SD_consumer_goods
+						zone = zone_SRA_SD
+						building = building_SRA_SD_consumer_goods
+					}
+					add_building = {
+						district = district_SRA_SD_research
+						zone = zone_SRA_SD
+						building = building_SRA_SD_research
+					}
+					add_building = {
+						district = district_SRA_SD_rare
+						zone = zone_SRA_SD
+						building = building_SRA_SD_rare
+					}
+					#add_building = building_SRA_SD_unity
+					#add_building = building_SRA_SD_explore
+					add_modifier = {
+						modifier = planet_SRA_SD_chaos_star_habitable_Buff_1
+					}
+					set_variable = {
+						which = pc_SRA_SD_chaos_star_habitable_vitality
+						value = 16
+					}
+					set_variable = {
+						which = pc_SRA_SD_chaos_star_habitable_vitality
+						value = 32
+					}
+					set_variable = {
+						which = pc_SRA_SD_chaos_star_habitable_vitality
+						value = 20
+					}
+					set_variable = {
+						which = pc_SRA_SD_chaos_star_habitable_max_districts
+						value = 1
+					}
+					set_capital = yes
+					carrier_event = {
+						id = SRA_SD_event.10
+					}
+					orbital_defence = {
+						fleet = {
+							delete_fleet = this
+						}
+					}
+					create_starbase = {
+						size = SRA_SD_metabyss_orbital_ring
+						owner = ROOT
+						#module = <starbase_module>
+						#building = <starbase_building>
+						effect = {
+							set_ship_construction_type = starbase_shipyard
+						}
+					}
+					last_created_fleet = {
+						every_owned_ship = {
+							set_name = "NAME_SRA_SD_metabyss_orbital_ring"
+						}
+						set_cloaking_active = yes
+						set_event_locked = yes
+					}
+				}
+				random_system_planet = {
+					limit = { has_modifier = planet_SRA_SD_1_start_system_4 }
+					set_owner = root
+					create_pop_group = {
+						species = root.owner_main_species
+						size = 100
+					}
+					add_deposit = d_planet_SRA_SD_1_start_system_4_1
+					add_deposit = d_planet_SRA_SD_1_start_system_4_2
+				}
+			}
+			every_owned_species = {
+				limit = {
+					NOT = {
+						has_trait = trait_pc_SRA_SD_chaos_star_habitable_preference
+					}
+				}
+				set_habitability_trait = { trait = trait_pc_SRA_SD_chaos_star_habitable_preference }
+			}
+			country_event = {
+				id = SRA_SD_Story_event.1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_RE_Government.3
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Government.3.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+		set_country_flag = has_SRA_RE_StellarRegulator_country
+		event_target:SRA_RE_StellarRegulator_country = {
+			establish_communications_no_message = root
+		}
+		set_country_flag = has_SRA_RE_Rocivia_country
+		event_target:SRA_RE_Rocivia_country = {
+			establish_communications_no_message = root
+		}
+		set_country_flag = has_SRA_RE_Hidra_country
+		event_target:SRA_RE_Hidra_country = {
+			establish_communications_no_message = root
+		}
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.4 days = 5 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.4 days = 5 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.4
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Government.4.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.5 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.9 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.5
+	title = "SRA_RE_Hidra"
+	desc = "SRA_RE_Government.5.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.6 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.9 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.6
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Government.6.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.7 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.9 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.7
+	title = "SRA_RE_Hidra"
+	desc = "SRA_RE_Government.7.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 35 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.8 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.9 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.8
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Government.8.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 22 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.9 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.9 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.9
+	title = "SRA_RE_Hidra"
+	desc = "SRA_RE_Government.9.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 37 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.10 days = 1 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.10 days = 1 }}
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = SRA_RE_Government.10
+	title = "SRA_RE_no_title"
+	desc = "SRA_RE_Government.10.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.11 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.13 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.11
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Government.11.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.12 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.13 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.12
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Government.12.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Government.13 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Government.13 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Government.13
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Government.13.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		set_country_flag = SRA_StellarRegulator_Cloth_1
+		set_country_flag = SRA_Chief_target_country
+		country_event = {
+			id = SRA_RE_Start.2
+		}
+		country_event = {
+			id = SRA_RE_Government.14 days = 360
+		}
+    }
+	option = {
+		name = SRA_RE_Government.13.a
+	}
+	option = {
+		name = SRA_RE_Government.13.b
+	}
+	option = {
+	    name = SRA_RE_Government.13.c
+	}
+}
+
+country_event = {
+	id = SRA_RE_Government.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+		NOT = {
+			has_global_flag = created_SRA_Chief	
+		}
+	}
+	immediate = {
+		country_event = { id = SRA_RE_Government.14 days = 360 }
+		if = {
+			limit = { has_global_flag = SRA_RE_Crisis_end }
+			country_event = { id = SRA_Chief.1 }
+		}
+		else_if = {
+			limit = { 
+				mid_game_years_passed >= 0
+			}
+			random = {
+				chance = 5
+				country_event = { id = SRA_Chief.1 }
+			}
+		}
+	}
+}

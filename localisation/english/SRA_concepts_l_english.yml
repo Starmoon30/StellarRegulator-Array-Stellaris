@@ -1,0 +1,33 @@
+﻿l_english:
+ ### Concepts
+ # Use §K for headers and §I for highlights in Concepts
+ # 语法：['concept_xxxx']
+ # ['concept_xxxx', 自定义文本]
+ concept_SRA_Stellarcrystal_Machine:0 "§BStellarcrystal Machine§!"
+ concept_SRA_Stellarcrystal_Machine_desc:0 "A generic machine manufactured based on Stellarcrystal technology, capable of performing various tasks like normal pops, and performing them better.\nThe drones of the StellarRegulator Array also use similar designs. The largest product of this scheme is likely Annihilating Fabrications."
+
+ concept_SRA_T4_tech:0 "§BTier 4 Technology§!"
+ concept_SRA_T4_tech_desc:0 "SRA Tier 4 technology, technological products built based on ['concept_SRA_Stellarcrystal_Fractal'] materials. Compared to primitive purified Stellarcrystal and ['concept_SRA_Composite_Crystal_Lattice'] technology, ['concept_SRA_Stellarcrystal_Fractal'] has overwhelming advantages, and corresponding creations are far superior to their predecessors.\nProjects in this period make extensive use of spatial manipulation technology and plane engineering research results, and widely use mass-energy conversion and control technology.\n\n-Related technologies can be researched independently after the §YEnd-Game Year§! if possessing ['civic:civic_SRAtechnology'], mainly concentrated in military industry and megastructure fields.\n-Industrial buildings and edicts can only be obtained through communication."
+
+ concept_SRA_Stellarcrystal_Fractal:0 "§BStellarcrystal Fractal§!"
+ concept_SRA_Stellarcrystal_Fractal_desc:0 "Stellarcrystal Fractal, creations cast by infusing star-like energy through unimaginably complex construction. This cold, pale material flows between matter and energy, its horror and might nearly exceeding understanding.§!"
+
+ concept_SRA_Composite_Crystal_Lattice:0 "§YComposite Crystal Lattice§!"
+ concept_SRA_Composite_Crystal_Lattice_desc:0 "By editing the internal four-dimensional folded structure of Stellarcrystal through technical means, it can be made to exhibit various different properties and functions. Modified Stellarcrystals appear golden or orange-yellow. Supported by highly complex internal structures, they can meet almost any need and exhibit extremely excellent characteristics in the fields of energy and field manipulation."
+
+ concept_SRA_Stellarcrystal_industry:0 "§BStarlight Industry§!"
+ concept_SRA_Stellarcrystal_industry_desc:0 "Starlight Industry is a basic industrial system composed of the core building ['building:building_SRA_RE_core'] and four industrial buildings: ['building:building_SRA_RE_foundry'] ['building:building_SRA_RE_research_institute'] ['building:building_SRA_RE_alloys'] ['building:building_SRA_RE_factory']. It does not require technology research to use and covers most resources needed for early development. After researching ['technology:tech_SRA_T3_Composite_Crystal_Lattice'], the output of these industries will be significantly upgraded."
+
+
+
+ concept_SRA_Damage_Inhibition:0 "Damage Inhibition"
+ concept_SRA_Damage_Inhibition_desc:0 "Certain existences can possess damage inhibition abilities, which reduce the damage of enemies they confront by a certain percentage. Most damage inhibition can be penetrated by specific types of attacks, which will be directly noted in the exception block. For example, §EDamage Inhibition 50%/Lawful§! means damage caused by any §Ynon-Lawful attack§! is reduced by §R50%§!. Certain types of damage inhibition are effective against §Yall attacks§!; these damage inhibitions will mark the damage symbol as \"§E-§!\" in the exception block, e.g., §EDamage Inhibition 20%/-§!.\nDamage inhibition from different sources stacks and is deducted from the suppressed party's own damage bonus. The final damage bonus may be lower than §R-100%§!, in which case damage usually cannot be dealt."
+
+
+ concept_SRA_Damage_Inhibition:0 "Damage Inhibition"
+ concept_SRA_Damage_Inhibition_desc:0 "Certain existences can possess damage inhibition abilities, which reduce the damage of enemies they confront by a certain percentage. Most damage inhibition can be penetrated by specific types of attacks, which will be directly noted in the exception block. For example, §EDamage Inhibition 50%/Lawful§! means damage caused by any §Ynon-Lawful attack§! is reduced by §R50%§!. Certain types of damage inhibition are effective against §Yall attacks§!; these damage inhibitions will mark the damage symbol as \"§E-§!\" in the exception block, e.g., §EDamage Inhibition 20%/-§!.\nDamage inhibition from different sources stacks and is deducted from the suppressed party's own damage bonus. The final damage bonus may be lower than §R-100%§!, in which case damage usually cannot be dealt."
+
+
+
+ concept_SRA_set_terrified_3:0 "Fear/Myth 3"
+ concept_SRA_set_terrified_3_desc:0 "Inflicts ['concept_terrify'] sourced from self on ships until combat ends.\nPossessing 3 or higher ['concept_mod_SRA_SD_Myth_power'] grants immunity to this effect."

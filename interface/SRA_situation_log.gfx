@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_SRA_situation_approach_time"
+		texturefile = "gfx/interface/icons/situation_log/situations/approaches/SRA_situation_approach_time.dds"
+	}
+}

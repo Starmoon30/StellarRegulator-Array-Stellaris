@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_origin_SRA_Rokia"
+		texturefile = "gfx/event_pictures/origins/origin_SRA_Rokia.dds"
+		alwaystransparent = yes
+	}
+	# spriteType = {
+	# 	name = "GFX_origin_SRA_Rokia_2"
+	# 	texturefile = "gfx/event_pictures/origins/origin_SRA_Rokia_2.dds"
+	# 	alwaystransparent = yes
+	# }
+}

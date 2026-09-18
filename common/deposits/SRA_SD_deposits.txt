@@ -1,0 +1,273 @@
+#能量币12 矿物8 食物12 合金6/6 消费品12/12 科研6/4 凝聚力8/4 稀有资源1 0.5/30 
+d_SRA_SD_star_chaos = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_SRA_chaos
+	planet_modifier = {
+		army_damage_taken_mult = 1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = no }
+		}
+		job_SRA_SD_chaos_explorer_add = 100
+		multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts #每第n个区划需要1000n个人口
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		job_SRA_SD_chaos_explorer_drone_add = 100
+		multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts #每第n个区划需要1000n个人口
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+	d_SRA_SD_star_babel = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_station_cargo
+	
+	triggered_planet_modifier = {
+		planet_max_districts_add = 1
+		planet_housing_add = 100
+		planet_amenities_add = 100
+		multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts #每第n个区划需要1000n个人口
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_SRA_SD_star_department_of_abyss = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_surreal_visions
+	
+	resources = {
+		category = planet_bureaucrats
+		produces = {
+			unity = 8
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+		upkeep = {
+			consumer_goods = 4
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = no }
+		}
+		job_enforcer_add = 1000
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		job_patrol_drone_add = 1000
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+d_SRA_SD_star_lapis_lazuli = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_tradestation_interior
+	
+	resources = {
+		category = planet_artisans
+		produces = {
+			consumer_goods = 12
+			trade = 24
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+		upkeep = {
+			minerals = 12
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+	}
+	country_modifier = {
+		add_base_country_intel = 20
+		planet_jobs_trade_produces_mult = 0.2
+	}
+	planet_modifier = {
+		planet_stability_add = 10
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+d_SRA_SD_star_emerald_tower = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_central_spire
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 6
+			society_research = 6
+			engineering_research = 6
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+		upkeep = {
+			consumer_goods = 4
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+	}
+	country_modifier = {
+		all_technology_research_speed = 0.2
+		pop_ethic_materialist_attraction_mult = 0.1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+d_SRA_SD_star_forest_of_moon_shadow = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_dense_jungle
+	
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 12
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+	}
+	planet_modifier = {
+		planet_farmers_produces_mult = 0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = no }
+		}
+		job_soldier_add = 200
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		job_warrior_drone_add = 200
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_SRA_SD_star_isolated_island = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_ruins_large
+	
+	country_modifier = {
+		pop_ethic_xenophobe_attraction_mult = 0.1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_SRA_SD_star_the_borderland = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_mountain_range
+	
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 8
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_SRA_SD_star_the_under_furnaces = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_SRA_SD_star_the_under_furnaces
+	
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 6
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+		upkeep = {
+			minerals = 6
+			multiplier = planet.pc_SRA_SD_chaos_star_habitable_max_districts
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_planet_SRA_SD_1_start_system_4_1 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_SRA_chaos
+	
+	triggered_planet_modifier = {
+		planet_researchers_produces_mult = 0.002
+		multiplier = trigger:sapient_pop_amount
+	}
+	triggered_planet_modifier = {
+		planet_researchers_upkeep_mult = 0.0001
+		multiplier = value:sapient_pop_amount_pow_1_2
+	}
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 0.16
+			engineering_research = 0.16
+			society_research = 0.16
+			multiplier = trigger:sapient_pop_amount
+		}
+		upkeep = {
+			energy = 0.4
+			minerals = 0.4
+			alloys = 0.1
+			multiplier = trigger:sapient_pop_amount
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_planet_SRA_SD_1_start_system_4_2 = {
+	time = 3600
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+	icon = d_SRA_Alushinyrra
+	potential = { always = no }
+	triggered_planet_modifier = {
+		planet_researchers_produces_mult = -0.002
+		multiplier = trigger:sapient_pop_amount
+	}
+	triggered_planet_modifier = {
+		planet_researchers_upkeep_mult = -0.0001
+		multiplier = value:sapient_pop_amount_pow_1_2
+	}
+	drop_weight = {
+		weight = 0
+	}
+	resources = {
+		category = deposit_blockers
+		cost = {
+			influence = 200
+			alloys = 80000
+			astral_threads = 8000
+		}
+	}
+}

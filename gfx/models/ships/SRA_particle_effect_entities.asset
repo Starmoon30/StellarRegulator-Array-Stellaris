@@ -1,0 +1,785 @@
+#灾疫恒星阵列
+entity = {
+	name = "SRA_dyson_swarm_phase_3_Ship_entity"
+	pdxmesh = "SRA_ancient_large_ship_frame_mesh"
+	default_state = idle
+	attach = { root = "dyson_swarm_phase_3_entity" }
+	attach = { root = "SRA_dyson_swarm_phase_3_Ship_entity_2X" }
+	attach = { root = "SRA_dyson_swarm_phase_3_Ship_entity_4X" }
+	attach = { root = "nexus_storm_entity" }
+	state = { name = "idle"	animation = "idle" animation_blend_time = 0.3 animation_speed = 1.0 
+	}
+	state = { name = "death"	animation = "death" animation_blend_time = 0.0 animation_speed = 0.5 looping = no
+	}
+	game_data = {
+		size = 15
+	}
+	scale = 0.1
+}
+entity = {
+	name = "SRA_dyson_swarm_phase_3_Ship_entity_2X"
+	pdxmesh = "SRA_ancient_large_ship_frame_mesh"
+	default_state = idle
+	attach = { root = "dyson_swarm_phase_3_entity" }
+	state = { name = "idle"	animation = "idle" animation_blend_time = 0.3 animation_speed = 0.5
+	}
+	state = { name = "death"	animation = "death" animation_blend_time = 0.0 animation_speed = 0.5 looping = no
+	}
+	game_data = {
+		size = 15
+	}
+	scale = 2
+}
+entity = {
+	name = "SRA_dyson_swarm_phase_3_Ship_entity_4X"
+	pdxmesh = "SRA_ancient_large_ship_frame_mesh"
+	default_state = idle
+	attach = { root = "dyson_swarm_phase_3_entity" }
+	state = { name = "idle"	animation = "idle" animation_blend_time = 0.3 animation_speed = 0.25
+	}
+	state = { name = "death"	animation = "death" animation_blend_time = 0.0 animation_speed = 0.5 looping = no
+	}
+	game_data = {
+		size = 15
+	}
+	scale = 4
+}
+#耀红黑星
+entity = {
+	name = "SRA_Rokia_dragon_entity"
+	pdxmesh = "space_cloud_mesh"
+	locator = { name = "part1" }
+	default_state = idle
+	state = { name = "idle"	animation = "idle" animation_blend_time = 0.3 animation_speed = 1.0 
+		#event = { time = 0 node = "root" particle = "SRA_Rokia_particles_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "root" particle = "wraith_tentacle_electricity_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "wraith_tentacle_electricity_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "star_mid" particle = "cloud_entity_center_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "right_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "right_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "top_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "top_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "left_leg_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_leg_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "right_leg_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "right_leg_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+	
+		start_event = { trigger_once = yes sound = { soundeffect = "space_cloud_idle" } }
+	}
+	
+	state = { name = "attack"	animation = "attack" animation_blend_time = 0.3 animation_speed = 1.0 
+		#event = { time = 0 node = "root" particle = "SRA_Rokia_particles_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "root" particle = "wraith_tentacle_electricity_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "wraith_tentacle_electricity_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "cloud_entity_center_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "right_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "right_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "top_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "top_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "left_leg_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_leg_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "right_leg_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "right_leg_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+	}
+	
+	state = { name = "moving"	animation = "move" animation_blend_time = 0.3 animation_speed = 0.5
+		#event = { time = 0 node = "root" particle = "SRA_Rokia_particles_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "root" particle = "wraith_tentacle_electricity_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "wraith_tentacle_electricity_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_1" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_2" particle = "energy_core_red_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "star_mid" particle = "cloud_entity_center_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 0 node = "right_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 0 node = "top_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 0 node = "left_leg_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 0 node = "right_leg_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+	}
+	
+	state = { name = "death"	animation = "death" animation_blend_time = 0.0 animation_speed = 0.5 looping = no
+		event = { time = 0.9 node = "root" particle = "cloud_entity_death_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "space_cloud_death" } }
+	}
+	
+	game_data = {
+		size = 15
+	}
+	scale = 8
+}
+#混沌实体
+entity = {
+	name = "SRA_chaos_Ship_entity"
+	pdxmesh = "SRA_ancient_large_ship_frame_mesh"
+	locator = { name = "part1" }
+	default_state = idle
+	state = { name = "idle"	animation = "idle" animation_blend_time = 0.3 animation_speed = 1.0 
+		event = { time = 0 node = "root" particle = "wraith_tentacle_electricity_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "wraith_tentacle_electricity_red_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "star_mid" particle = "SRA_anchor_station_energy_field_red_effect" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 0 node = "star_mid" particle = "cloud_entity_center_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "right_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "right_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "top_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "top_arm_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "top_arm_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "left_leg_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "left_leg_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "left_leg_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "right_leg_shoulder" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_1" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "right_leg_2" particle = "cloud_entity_arm_big_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "right_leg_tip" particle = "cloud_entity_arm_small_particle" keep_particle = yes trigger_once = yes }
+	
+		start_event = { trigger_once = yes sound = { soundeffect = "space_cloud_idle" } }
+	}
+	
+	state = { name = "death"	animation = "death" animation_blend_time = 0.0 animation_speed = 0.5 looping = no
+		event = { time = 0.9 node = "root" particle = "cloud_entity_death_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "space_cloud_death" } }
+	}
+	
+	game_data = {
+		size = 15
+	}
+	scale = 2
+}
+entity = {
+	name = "SRA_chaos_star_entity"
+	pdxmesh = "space_cloud_mesh"
+	locator = { name = "part1" }
+	default_state = idle
+	attach = { root = "extra_dimensional_portal_effect" }
+	attach = { root = "SRA_Rokia_dragon_entity" }
+	attach = { star_mid = "system_lightning_ani_1_entity" }
+	attach = { top_shoulder = "system_lightning_ani_2_entity" }
+	attach = { right_leg_1 = "system_lightning_ani_3_entity" }
+	state = { name = "idle"	animation = "idle" animation_blend_time = 0.3 animation_speed = 1.0 
+		
+		# event = {	time = 0 		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 4 		node = "root" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		# event = {	time = 8 		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 12 		node = "root" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		# event = {	time = 17		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 21 		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 25		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 30		node = "root" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		# event = {	time = 36		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 44		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 48		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 55		node = "root" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+																											   
+		# event = {	time = 1 		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 6 		node = "root" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		# event = {	time = 7 		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 11 		node = "root" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		# event = {	time = 15		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 20 		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 27		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 33		node = "root" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		# event = {	time = 38		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 49		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 52		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 59		node = "root" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+
+		start_event = { trigger_once = yes sound = { soundeffect = "space_cloud_idle" } }
+	}
+	game_data = {
+		size = 15
+	}
+	scale = 1
+}
+entity = {
+	name = "SRA_chaos_star_extra_entity"
+	pdxmesh = "space_cloud_mesh"
+	locator = { name = "part1" }
+	default_state = idle
+	attach = { root = "extra_dimensional_portal_effect" }
+	attach = { root = "SRA_Rokia_dragon_entity" }
+	#attach = { star_mid = "system_lightning_ani_1_entity" }
+	#attach = { top_shoulder = "system_lightning_ani_2_entity" }
+	#attach = { right_leg_1 = "system_lightning_ani_3_entity" }
+	attach = { root = "strange_wormhole_entity" }
+	attach = { root = "crystal_rift_entity" }
+	state = { name = "idle"	animation = "idle" animation_blend_time = 0.3 animation_speed = 1.0 
+		
+		# event = {	time = 0 		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 4 		node = "root" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		# event = {	time = 8 		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 12 		node = "root" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		# event = {	time = 17		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 21 		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 25		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 30		node = "root" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		# event = {	time = 36		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 44		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 48		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 55		node = "root" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+																											   
+		# event = {	time = 1 		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 6 		node = "root" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		# event = {	time = 7 		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 11 		node = "root" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		# event = {	time = 15		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 20 		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 27		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 33		node = "root" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		# event = {	time = 38		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 49		node = "root" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		# event = {	time = 52		node = "root" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		# event = {	time = 59		node = "root" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+
+		start_event = { trigger_once = yes sound = { soundeffect = "space_cloud_idle" } }
+	}
+	game_data = {
+		size = 15
+	}
+	scale = 1
+}
+##Nexus Storm Entity
+entity = {
+	name = "SRA_nexus_storm_entity"
+	locator = { name = "core" position = { 0 -5 0 }}
+	scale = 35
+	attach = { "core" = "SRA_Nexus_lightning_entity" }
+	attach = { "core" = "SRA_Nexus_storm_mesh_entity" }
+	attach = { "core" = "SRA_Nexus_wisp1_entity" }
+	attach = { "core" = "SRA_Nexus_wisp2_entity" }
+	default_state = "idle"
+	state = { name = "idle" 		state_time = 5
+		event = { time = 0 node = "core" particle = "SRA_nexus_storm_1_effect" keep_particle = yes trigger_once = yes }
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "sfx_amb_nexus_storm" }
+            }
+        }
+
+	cull_radius = 20000
+}
+entity = {
+	name = "SRA_Nexus_lightning_entity"
+	pdxmesh = "SRA_Nexus_lightning_mesh"
+	locator = { name = "root" position = { 0 -45 0 }}
+	game_data = {
+
+		bloom_factor			= .8
+		uv_animation_speed 		= .365
+		uv_animation_direction 	= { -1 .04 }
+	}
+	scale = 1
+	erosion_in = 2
+	erosion_out = 2
+	default_state = "idle"
+	cull_radius = 20000
+}
+
+entity = {
+	name = "SRA_Nexus_storm_mesh_entity"
+	pdxmesh = "SRA_Nexus_storm_mesh"
+	locator = { name = "root" position = { 0 0 0 }}
+	game_data = {
+			shader_type = VFX
+
+		bloom_factor			= .6
+		uv_animation_speed 		= .02
+		uv_animation_direction 	= { 1 .5 }
+
+		wpo_animation_speed = 0.04
+		wpo_animation_direction = { 0.2 1.0 }
+		wpo_animation_scale = 1.0
+		wpo_animation_big_scale = .5
+		wpo_animation_offset_strength = 8
+	}
+	scale = .8
+	erosion_in = 2
+	erosion_out = 2
+	default_state = "idle"
+	cull_radius = 20000
+}
+
+entity = {
+	name = "SRA_Nexus_wisp1_entity"
+	pdxmesh = "SRA_Nexus_wisp1_mesh"
+	locator = { name = "root" position = { 0 -55 0 }}
+	game_data = {
+		shader_type = VFX
+		bloom_factor			= .8
+		uv_animation_speed 		= .006
+		uv_animation_direction 	= { -1 0 }
+		wpo_animation_speed = 0.06
+		wpo_animation_direction = { 0.2 1.0 }
+		wpo_animation_scale = 1.0
+		wpo_animation_big_scale = 1
+		wpo_animation_offset_strength = 10
+	}
+	scale = .8
+	erosion_in = 2
+	erosion_out = 2
+	default_state = "idle"
+	cull_radius = 20000
+}
+entity = {
+	name = "SRA_Nexus_wisp2_entity"
+	pdxmesh = "SRA_Nexus_wisp2_mesh"
+	locator = { name = "root" position = { 0 -55 0 }}
+	game_data = {
+		shader_type = VFX
+		bloom_factor			= .8
+		uv_animation_speed 		= .006
+		uv_animation_direction 	= { -1 0 }
+		wpo_animation_speed = 0.06
+		wpo_animation_direction = { 0.2 1.0 }
+		wpo_animation_scale = 1.0
+		wpo_animation_big_scale = 1
+		wpo_animation_offset_strength = 10
+	}
+	scale = .8
+	erosion_in = 2
+	erosion_out = 2
+	default_state = "idle"
+	cull_radius = 20000
+}
+
+entity = {
+	name = "SRA_chaos_planet_entity"
+	pdxmesh = "space_cloud_mesh"
+	locator = { name = "part1" }
+	default_state = idle
+	attach = { root = "extra_dimensional_portal_effect" }
+	attach = { root = "SRA_Rokia_dragon_entity" }
+	attach = { star_mid = "system_lightning_ani_1_entity" }
+	attach = { top_shoulder = "system_lightning_ani_2_entity" }
+	attach = { right_leg_1 = "system_lightning_ani_3_entity" }
+	state = { name = "idle"	animation = "idle" animation_blend_time = 0.3 animation_speed = 1.0 
+	
+		start_event = { trigger_once = yes sound = { soundeffect = "space_cloud_idle" } }
+	}
+	game_data = {
+		size = 15
+	}
+	scale = 0.1
+}
+
+
+entity = {
+	name = "SRA_pulsar_star_outburst_effect"
+	cull_radius = 2000.0
+	
+	scale = 10
+	
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+	
+		event = { time = 0 node = "root" particle = "pulsar_star_outburst_effect" keep_particle = yes trigger_once = yes }
+		
+    }
+	
+	
+	game_data = {
+		emissive_recolor_crunch = 0.0
+	}
+}
+#爆华绽放
+entity = {
+	name = "SRA_SOGZ_menu_sub_4_1_ship_entity_2"
+	cull_radius = 2000.0
+	
+	scale = 0.6
+	
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 node = "root" particle = "SRA_T4_weapon_planet_killer_hit_explosion" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes  sound = { soundeffect = "SRA_psionic_storm_lightning" }  }
+		start_event = { trigger_once = yes  sound = { soundeffect = "sfx_star_eater_weapon_hit_distance" }  }
+    }
+	
+	
+	game_data = {
+		emissive_recolor_crunch = 0.0
+	}
+}
+#苍星陨灭
+entity = {
+	name = "SRA_SOGZ_menu_sub_4_3_ship_entity_1"
+	cull_radius = 2000.0
+	
+	scale = 1
+	
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 node = "root" particle = "SRA_eta_titan_system_fast_effect" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes  sound = { soundeffect = "SRA_psionic_storm_base" }  }
+		start_event = { trigger_once = yes  sound = { soundeffect = "SRA_psionic_storm_lightning" }  }
+    }
+	
+	
+	game_data = {
+		emissive_recolor_crunch = 0.0
+	}
+}
+entity = {
+	name = "SRA_SOGZ_menu_sub_4_3_ship_entity_2"
+	cull_radius = 2000.0
+	
+	scale = 3
+	
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1 looping = no
+		event = { time = 0 node = "root" particle = "SRA_T4_weapon_planet_killer_hit_explosion" keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes  sound = { soundeffect = "SRA_psionic_storm_lightning" }  }
+		start_event = { trigger_once = yes  sound = { soundeffect = "sfx_star_eater_weapon_hit_distance" }  }
+    }
+	
+	
+	game_data = {
+		emissive_recolor_crunch = 0.0
+	}
+}
+# Star killer explonsion.
+entity = {
+	name = "SRA_T4_weapon_planet_killer_hit_explosion_entity"
+	pdxmesh = "locator_mesh"
+	cull_radius = 2000.0
+	scale = 1.0
+	default_state = "default"
+	state = { name = "default" state_time = 1 looping = no
+		event = { time = 0.0 particle = "SRA_T4_weapon_planet_killer_hit_explosion" }
+		event = { trigger_once = yes sound = { soundeffect = "sfx_star_eater_weapon_hit" } }	
+		event = { trigger_once = yes sound = { soundeffect = "sfx_star_eater_weapon_hit_distance" } }
+	}
+}
+entity = {
+	name = "SRA_T4_weapon_planet_killer_hit_explosion_small_entity"
+	pdxmesh = "locator_mesh"
+	cull_radius = 2000.0
+	scale = 1.0
+	default_state = "default"
+	state = { name = "default" state_time = 1 looping = no
+		event = { time = 0.0 particle = "SRA_T4_weapon_planet_killer_hit_explosion_small" }
+		event = { trigger_once = yes sound = { soundeffect = "sfx_star_eater_weapon_hit" } }	
+		event = { trigger_once = yes sound = { soundeffect = "sfx_star_eater_weapon_hit_distance" } }
+	}
+}
+
+# Eta Titan Portal
+entity = {
+	name = "SRA_eta_titan_system_portal_entity"
+	pdxmesh = "locator_mesh"
+	cull_radius = 2000.0
+	scale = 1.0
+	default_state = "default"
+	state = { name = "default" state_time = 1 looping = no
+		event = { time = 0.0 particle = "SRA_eta_titan_system_effect" }
+		event = { trigger_once = yes sound = { soundeffect = "sfx_star_eater_weapon_hit" } }	
+		event = { trigger_once = yes sound = { soundeffect = "sfx_star_eater_weapon_hit_distance" } }
+	}
+}
+
+
+entity = {
+	name = "SRA_pre_ftl_laser_ship_mesh_entity"
+	locator = { name = "part1" }
+	scale = 50
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	# state = { name = "moving" state_time = 5 }
+	# state = { name = "combat_idle" state_time = 5 }
+	# state = { name = "combat_moving" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no }
+	locator = { name = "root"	position = { 0 0 0} rotation = { 0 90 0 } }
+	#attach = { root = "SRA_shattered_planet_01_entity" }
+	locator = { name = "root2"	position = { 0 0 0 } rotation = { 0 90 0 } }
+	attach = { root2 = "pre_ftl_laser_ship_mesh_entity" }
+	#attach = { root3 = "SRA_shattered_planet_01_entity" }
+	
+}
+#############################################
+###				Explosion Effects
+#############################################
+
+#####		red		#####
+entity = {
+	name = "SRA_s_explosion_red_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_red" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_red_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_red" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_red_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_red" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_red_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_red" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+#####		pink		#####
+entity = {
+	name = "SRA_s_explosion_pink_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_pink" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_pink_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_pink" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_pink_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_pink" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_pink_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_pink" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+#####		orange		#####
+entity = {
+	name = "SRA_s_explosion_orange_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_orange" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_orange_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_orange" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_orange_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_orange" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_orange_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_orange" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+#####		yellow		#####
+entity = {
+	name = "SRA_s_explosion_yellow_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_yellow" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_yellow_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_yellow" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_yellow_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_yellow" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_yellow_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_yellow" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+#####		green		#####
+entity = {
+	name = "SRA_s_explosion_green_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_green" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_green_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_green" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_green_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_green" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_green_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_green" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+#####		teal		#####
+entity = {
+	name = "SRA_s_explosion_teal_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_teal" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_teal_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_teal" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_teal_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_teal" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_teal_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_teal" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+#####		blue		#####
+entity = {
+	name = "SRA_s_explosion_blue_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_blue" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_blue_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_blue" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_blue_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_blue" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_blue_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_blue" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+#####		violet		#####
+entity = {
+	name = "SRA_s_explosion_violet_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_violet" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_violet_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_violet" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_violet_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_violet" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_violet_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_violet" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+#####		white		#####
+entity = {
+	name = "SRA_s_explosion_white_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_s_white" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_m_explosion_white_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_m_white" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_l_explosion_white_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_l_white" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+entity = {
+	name = "SRA_xl_explosion_white_entity" pdxmesh = "locator_mesh" cull_radius = 2000.0 scale = 1.0
+	default_state = "default" state = { name = "default" state_time = 1 looping = no event = { time = 0.0 particle = "SRA_ship_explosion_xl_white" } event = { sound = { soundeffect = "station_explosion_energy" } } }
+}
+
+
+
+
+entity = {
+	name = "ship_aura_SRA_Abyss_entity"
+
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "ship_aura_SRA_Abyss_effect" }
+	}
+
+	scale = 8
+}
+
+entity = {
+	name = "ship_aura_SRA_Rocivia_flag_entity"
+
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "ship_aura_SRA_Rocivia_flag_effect" }
+	}
+
+	scale = 8
+}

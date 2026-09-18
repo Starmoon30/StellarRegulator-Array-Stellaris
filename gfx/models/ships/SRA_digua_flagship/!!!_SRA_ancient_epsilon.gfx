@@ -1,0 +1,28 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_epsilon_titan_1_mesh"
+		file = "gfx/models/ships/SRA_digua_flagship/SRA_epsilon_titan.mesh"
+		scale = 7.5   #1.0
+		
+		animation = { id = "idle" type = "SRA_epsilon_titan_idle_animation" }
+		animation = { id = "opening" type = "SRA_epsilon_titan_opening_animation" }
+		animation = { id = "opened" type = "SRA_epsilon_titan_opened_animation" }
+		animation = { id = "closing" type = "SRA_epsilon_titan_closing_animation" }
+		animation = { id = "working_opening" type = "SRA_epsilon_titan_working_opening_animation" }
+		animation = { id = "working_opened" type = "SRA_epsilon_titan_working_opened_animation" }
+		animation = { id = "working_closing" type = "SRA_epsilon_titan_working_closing_animation" }
+		animation = { id = "death1" type = "SRA_epsilon_titan_death1_animation" }
+		animation = { id = "death2" type = "SRA_epsilon_titan_death2_animation" }
+		animation = { id = "death3" type = "SRA_epsilon_titan_death3_animation" }
+		animation = { id = "death4" type = "SRA_epsilon_titan_death4_animation" }
+
+		meshsettings = {
+			name = "main_hullShape"
+			index = 0
+			texture_diffuse = "SRA_epsilon_titan_diffuse.dds"
+			texture_normal = "SRA_epsilon_titan_normal.dds"
+			texture_specular = "SRA_epsilon_titan_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

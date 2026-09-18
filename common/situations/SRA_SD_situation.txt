@@ -1,0 +1,122 @@
+SRA_BoM_main_situation = {
+	picture = GFX_evt_astral_rift_microverse
+	situation_log_category = ambitions
+
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_ascension
+	fail_icon_frame = GFX_situation_outcome_frame_blue
+	fail_icon = GFX_situation_outcome_ascension
+	category = positive
+	initial_progress = 0
+	on_progress_complete = {
+		# Situation completion is intentionally empty; resolved via external events
+		custom_tooltip = SRA_BoM_main_situation_progress_complete
+		hidden_effect = { destroy_situation = this }
+	}
+	
+	on_fail = {
+		custom_tooltip = SRA_BoM_main_situation_fail
+	}
+	stages = { #你妈的为什么这里不能用大写字母
+		sra_bom_main_situation_stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+			custom_tooltip = sra_bom_main_situation_stage_1_effects
+		}
+		sra_bom_main_situation_stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 200
+			custom_tooltip = sra_bom_main_situation_stage_2_effects
+		}
+		sra_bom_main_situation_stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 300
+			custom_tooltip = sra_bom_main_situation_stage_3_effects
+		}
+		sra_bom_main_situation_stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 400
+			custom_tooltip = sra_bom_main_situation_stage_4_effects
+		}
+	}
+	#审视自我
+	approach = {
+		name = "SRA_BoM_main_situation_100"
+		icon = GFX_situation_approach_influence
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+			category = situations
+			upkeep = {
+				trigger = {}
+			}
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					if = {
+						limit = { NOT = { has_active_event = { SRA_SD_event.100 } } }
+						country_event = { id = SRA_SD_event.100 }
+					}
+				}
+				set_situation_approach = "SRA_BoM_main_situation_default"
+			}
+			custom_tooltip = SRA_BoM_main_situation_100_tooltip
+		}
+	}
+	#阅读他人
+	approach = {
+		name = "SRA_BoM_main_situation_200"
+		icon = GFX_situation_approach_handshake
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+			category = situations
+			upkeep = {
+				trigger = {}
+			}
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					if = {
+						limit = { NOT = { has_active_event = { SRA_SD_event.200 } } }
+						country_event = { id = SRA_SD_event.200 }
+					}
+				}
+				set_situation_approach = "SRA_BoM_main_situation_default"
+			}
+			custom_tooltip = SRA_BoM_main_situation_200_tooltip
+		}
+	}
+	#常规
+	approach = {
+		name = "SRA_BoM_main_situation_default"
+		icon = GFX_SRA_situation_approach_time
+		icon_background = GFX_situation_approach_bg_green
+		resources = {
+			category = situations
+			upkeep = {
+			}
+		}
+		on_select = { custom_tooltip = SRA_BoM_main_situation_default_tooltip }
+	}
+	# This situation serves as a UI panel for approach-based event triggers; progress is not used
+	monthly_progress = {
+		base = 0
+	}
+	on_monthly = {
+		events = {
+		}
+	}
+	abort_trigger = {
+		always = no
+		# OR = {
+		# 	NOT = { exists = target.owner }
+		# 	target.owner = { NOT = { is_same_value = root.owner } }
+		# }
+	}
+}
+

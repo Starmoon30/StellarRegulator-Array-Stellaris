@@ -1,0 +1,158 @@
+create_SRA_SD_abyss_army_attack_010 = {
+	optimize_memory
+    event_target:SRA_SD_chaos_star_habitable = {
+        owner = {
+            export_trigger_value_to_variable = { trigger = num_researched_techs variable = SRA_num_researched_techs }
+            event_target:SRA_SD_Abyss_country = {
+			    add_modifier = {
+				    modifier = SRA_SD_abyss_army_attack_buff
+				    multiplier = prev.SRA_num_researched_techs
+                }
+            }
+        }
+	    set_variable = {
+	        which = pc_SRA_SD_chaos_star_habitable_attack_num
+		    value = pc_SRA_SD_chaos_star_habitable_vitality
+		}
+		multiply_variable = {
+			which = pc_SRA_SD_chaos_star_habitable_attack_num
+			value = 0.01
+		}
+		round_variable_to_closest = {
+    	    which = pc_SRA_SD_chaos_star_habitable_attack_num
+			value = 1
+		}
+		change_variable = {
+			which = pc_SRA_SD_chaos_star_habitable_attack_num
+			value = 1
+		}
+		multiply_variable = {
+			which = pc_SRA_SD_chaos_star_habitable_vitality
+			value = 0.9
+		}
+		set_timed_planet_flag = {
+			flag = SRA_SD_abyss_no_army_attack days = 720
+		}
+		while = { 
+			count = this.pc_SRA_SD_chaos_star_habitable_attack_num
+			random_list = {
+				1 = {
+					create_army = {
+						name = "SRA_Hunter_Of_Chaos_Attacker"
+						owner = event_target:SRA_SD_Abyss_country
+						species = event_target:SRA_RE_species
+						type = "SRA_Hunter_Of_Chaos_Attacker"
+						#land_army = yes
+					}
+				}
+				1 = {
+					create_army = {
+						name = "SRA_Machine_Army_Of_Chaos_Attacker"
+						owner = event_target:SRA_SD_Abyss_country
+						species = event_target:SRA_RE_species
+						type = "SRA_Machine_Army_Of_Chaos_Attacker"
+						#land_army = yes
+					}
+				}
+			}
+		}
+	}
+}
+leader_SRA_Abyss_Erosion_effect = {
+	if = {
+		limit = { nor = {
+			has_trait = leader_trait_SRA_Abyss_Erosion_Alter
+			has_trait = leader_trait_SRA_SD_Myth
+			has_trait = leader_trait_SRA_SD_Bard_of_Metarbor
+		} }
+		leader_event = { id = SRA_SD_event.97 }
+		random_list = {
+			10 = {
+				modifier = { add = trigger:has_total_skill }
+				modifier = {
+					mult = 2
+					has_base_skill >= 8
+				}
+				leader_event = { id = SRA_SD_event.98 days = 720 }
+			}
+			200 = {
+				modifier = {
+					mult = 0.1
+					species = { has_trait = trait_pc_SRA_SD_chaos_star_habitable_preference }
+				}
+				leader_event = { id = SRA_SD_event.95 days = 720 }
+			}
+		}
+	}
+	else_if = {
+		limit = { has_trait = leader_trait_SRA_SD_Bard_of_Metarbor }
+		leader_event = { id = SRA_SD_event.96 }
+	}
+	else = {
+		if = {
+			limit = {
+				has_trait = leader_trait_SRA_Abyss_Erosion_Alter
+				has_base_skill >= 10
+			}
+			random = {
+				chance = 20
+				leader_event = { id = SRA_SD_event.1 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait = leader_trait_SRA_SD_Myth
+				check_variable = { which = SRA_SD_Myth_power_level value < 10 }
+			}
+			random = {
+				chance = 40
+				if = { limit = { or = {
+					check_variable = { which = SRA_SD_Myth_power_level value = 1 }
+					check_variable = { which = SRA_SD_Myth_power_level value = 3 }
+					check_variable = { which = SRA_SD_Myth_power_level value = 5 }
+					check_variable = { which = SRA_SD_Myth_power_level value = 7 }
+					} }
+					leader_event = { id = SRA_SD_event.2 }
+				}
+				else_if = { limit = { or = {
+					check_variable = { which = SRA_SD_Myth_power_level value = 2 }
+					check_variable = { which = SRA_SD_Myth_power_level value = 4 }
+					check_variable = { which = SRA_SD_Myth_power_level value = 6 }
+					check_variable = { which = SRA_SD_Myth_power_level value = 8 }
+					} }
+					leader_event = { id = SRA_SD_event.3 }
+				}
+				else_if = { limit = {
+					check_variable = { which = SRA_SD_Myth_power_level value = 9 }
+					}
+					leader_event = { id = SRA_SD_event.4 }
+				}
+			}
+		}
+	}
+}
+
+SRA_SD_Myth_accuracy_debuff_effect = {
+	export_modifier_to_variable = {
+		modifier = mod_SRA_SD_Myth_power
+		variable = mod_SRA_SD_Myth_power
+	}
+	subtract_variable = {
+		which = $SOURCE$
+		value = mod_SRA_SD_Myth_power
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = $SOURCE$
+				value > 0
+			}
+		}
+		add_modifier = {
+			modifier = SRA_SD_Myth_accuracy_debuff_effect_buff
+			multiplier = $SOURCE$
+			days = 2
+			time_multiplier = $SOURCE$
+		}
+	}
+}

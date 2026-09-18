@@ -1,0 +1,338 @@
+﻿l_english:
+##############################
+ #修复星穹之矛
+ SRA_RE_SOGZ_repair_chain_title:0 "§BFallen Star§!"
+ SRA_RE_SOGZ_repair_chain_desc:0 "Spear_Of_Galaxy_Zenith, a massive starship condensing unimaginable technology.\nWe don't know when it crashed on our homeworld, but time has left no trace on its smooth exterior.\nIt was supposed to sleep forever, but we can make it sail again."
+
+ SRA_RE_Start_SP1:0 "§BAnalyze Existing Databanks§!"
+ SRA_RE_Start_SP1_DESC:0 "The entire interior of the ship was nearly torn apart by some terrible force, but at least some components are still usable. If we can retrieve all existing records, we can go further in repairing the Spear_Of_Galaxy_Zenith."
+ SRA_RE_Start.3:0 "Analysis of Existing Databanks Complete"
+ SRA_RE_Start.3.desc:0 "With the efforts of the research team and the assistance of StellarRegulator, we successfully recovered some precious data from those scattered storage crystals. Of course, we need further research."
+ SRA_RE_Start.3.a:0 "Well done."
+ SRA_RE_Start.4.desc:0 "Good morning, good afternoon, and good evening, friend.\nToday I am here to tell you about Little StellarRe.\nAs you can see, she is different from the StellarRegulator you know well. She is flawed, incomplete, fragile.\nShe lost too much: power, knowledge, memory. This is both a misfortune and an opportunity.\nShe forgot all sorrow and regained dreams and fantasies.\nShe can walk a brand new, unimagined path."
+ SRA_RE_Start.5.desc:0 "However, the past does not cease to exist just because it is forgotten.\nThis galaxy is not as peaceful as it seems on the surface.\nThe past will eventually arrive.\nBut how to welcome its arrival is up to you."
+ SRA_RE_Start.6.desc:0 "However, you don't need to be too hasty.\nWe still have plenty of time to enjoy the sunshine, the breeze, and all beautiful things.\nYou also have plenty of time to explore, conquer, and vie for the galaxy.\nTo pioneer the future, create brilliance.\nI look forward to it."
+ SRA_RE_Start.7.desc:0 "Executor, you don't need to open your eyes. I am StellarRegulator Array, an Artificial Intelligence from the Rocivia Empire.\nAhem, well, actually I am here to report the latest research results to you.\nI successfully obtained a special piece of information from that data regarding the peculiar phenomenon of mutual induction between Stellarcrystals.\nIf further research can be conducted, perhaps I can use this to discover other SRA ruins.\nBut I need some scientific resource support from you. If you think it is time, go to the Special Project interface to start the next phase."
+ SRA_RE_Start_SP2:0 "§BResearch Crystal Resonance§!"
+ SRA_RE_Start_SP2_DESC:0 "Stellarcrystal, a mysterious programmable matter. After changing its internal structure through special means, it can exhibit various different properties.\nResearch indicates that a unique super-distance network can form between processed Stellarcrystals, transmitting energy and information without delay regardless of distance. Current research shows that a weak similar connection also exists between unprocessed Stellarcrystals.\nIn-depth research in this area might allow us to discover other SRA ruins."
+
+ SRA_RE_Start.8:0 "Crystal Resonance Research Ended"
+ SRA_RE_Start.8.desc:0 "With the support of our scientific resources, StellarRegulator completed the research on the resonance phenomenon between Stellarcrystals.\nThe Stellarcrystal network requires special structures and continuous energy input to maintain, but in fact, other crystals also possess the ability to connect to the network, only too weakly to be used.\nHowever, if a group of special Stellarcrystals is used to excite the feedback signal of target Stellarcrystals, we can at least locate the approximate position of the target.\n§YFunction Unlocked: Crystal Resonance Location\nCommunicate with StellarRegulator to issue this command and reveal the location of the next SRA ruin.§!"
+ SRA_RE_Start.8.a:0 "Received."
+
+
+ SRA_RE_Start.9:0 "Detection Successful"
+ SRA_RE_Start.9.desc:0 "After constant correction and analysis, we successfully located a group of Stellarcrystals. It is time to start archaeological work."
+ SRA_RE_Start.9.a:0 "Confirmed."
+
+ SRA_RE_archaeological_1:"§BBroken Wings§!"
+ SRA_RE_archaeological_Text_1:"Coordinate One: The Frozen Land of Broken Wings"
+
+ SRA_RE_Start.11.name:"Frozen Earth"
+ SRA_RE_Start.11.desc:"At first glance, this is just an ordinary frozen planet. However, deep scans indicate that under the thick ice layer lies a slender civilization artifact."
+ SRA_RE_Start.11.a:"Start excavation!"
+ SRA_RE_Start.12.name:"Digging"
+ SRA_RE_Start.12.desc:"A massive engineering team followed close behind, erecting a series of huge machines on the ice surface.\nThermal fusion drills dug a five-kilometer-wide deep hole within a few weeks and found the target at a depth of eleven kilometers: a sharp-edged Spear_Of_Galaxy_Zenith Float-Wing.\nHowever, how to get it up became a huge problem.\nAfter all, this Float-Wing is a full 45 kilometers long, inserted obliquely deep into the ice layer and crust."
+ SRA_RE_Start.12.a:"Shall we turn it around and hoist it up?"
+ SRA_RE_Start.13.name:"Safety First"
+ SRA_RE_Start.13.desc:"It took a rather long time, but we successfully stood the Float-Wing upright at the bottom of the hole so it could pass through the opening. However, when we attempted the hoisting work, an accident occurred.\nEven with the support of anti-gravity systems, the surface ice layer failed to bear the weight of the Float-Wing and collapsed.\nThe engineering site was instantly in chaos, but fortunately, everyone strictly followed the requirement to wear hard hats, and no one was injured.\nThe next hoisting plan is under discussion."
+ SRA_RE_Start.13.a:"Does this hard hat... add Army Health?"
+ SRA_RE_Start.14.name:"Forceful Extraction"
+ SRA_RE_Start.14.desc:"Given the currently poor construction environment, the engineering team proposed a new plan: build a hoisting frame around the Float-Wing, then draft a group of tugs to directly pull the entire frame out of the planet's gravitational pull.\nAlthough this plan seemed very wasteful, we really didn't have any other good way to drag this big thing out.\nHowever, just when everything was ready and the tugs started moving.\nStellarRegulator accidentally activated the gravity shielding system inside the Float-Wing via the Stellarcrystal network.\nSo the massive Float-Wing soared into the air, flipping over a large chunk of the surface.\nThen, because the residual energy ran out and the gravity shielding system shut down, it yanked the tugs hard, nearly tearing the towing mechanism apart."
+ SRA_RE_Start.14.a:"A giant structure larger than a Titan warship yanked up like a yo-yo..."
+ SRA_RE_Start.15.name:"Final Inspection"
+ SRA_RE_Start.15.desc:"The massive Float-Wing is being transported to the location of the Spear_Of_Galaxy_Zenith remains. We sincerely hope for a safe journey.\nThis Float-Wing will be placed in the corresponding position on the Spear_Of_Galaxy_Zenith. To this end, the engineering team has cleared the surroundings of the Spear_Of_Galaxy_Zenith, which is half-buried in the stratum.\nThe scientific team inspected the original location of the Float-Wing and found no other anomalies.\nAnyway, this matter is considered to have come to an end."
+ SRA_RE_Start.15.a:"I suspect there are Orks mixed in the engineering team."
+
+ SRA_RE_Start.16.desc:"Kutu, my Kutu, you're finally back.\nAh, Executor... Er, this Float-Wing you retrieved is called Cuthbertus... Anyway, thank you very much.\nOriginally, these Float-Wings had spatial stabilizers to stabilize around my hull, but before I crashed, I might not have been able to maintain their state well, so Kutu fell onto another planet.\nSo now the four Float-Wings are complete again. The estimated energy required to repair the hull has dropped to 2% of the original target-though that's still a lot...\nSo Executor, you can perform the next positioning at any time."
+ SRA_RE_Start.16.a:"Mhm."
+ SRA_RE_Start.16.b:"...So do the other Float-Wings have names?"
+ SRA_RE_Start.17.desc:"Ah... Er... Yes...\n...\nFrom number one to four, they are... Elinis, Saenorian, Cuthbertus, Ezernal.\nAlright, you know enough, no need to ask more, thank you, see you next time-\n\n§YShe ran away blushing.§!"
+ SRA_RE_Start.17.MESSAGE_SRA_RE_Rocivia:"Heh... these names are somewhat nostalgic."
+
+
+ SRA_RE_Start.18:0 "Detection Successful"
+ SRA_RE_Start.18.desc:0 "After constant correction and analysis, we successfully located a group of Stellarcrystals. It is time to start archaeological work."
+ SRA_RE_Start.18.a:0 "Confirmed."
+
+ SRA_RE_archaeological_2:"§BBurned out in Warfire§!"
+ SRA_RE_archaeological_Text_2:"Coordinate Two: The Dead Fertile Soil of Yesterday"
+
+ SRA_RE_Start.20.name:"Radioactive Wasteland"
+ SRA_RE_Start.20.desc:"Terrible scars remain on this dead planet; those deep fissures are traces left by warfire. Amidst the drifting fallout dust, an imperceptible clue is calling to us."
+ SRA_RE_Start.20.a:"Explore, then discover."
+ SRA_RE_Start.21.name:"Establish Base"
+ SRA_RE_Start.21.desc:"Intense radiation can destroy flesh and machinery. To traverse through it, we must make full preparations.\nA small outpost has been established. After strict protective work, we deployed a group of large geological probes, trying to find some relics of the past.\nProbe results show obvious excavation traces in the stratum. Analysis of the magmatic rock belt indicates that there was once a large-scale drilling project penetrating the crust on this planet. In the surrounding strata, we found many anomalous parts with vastly different properties."
+ SRA_RE_Start.21.a:"Go dig and see."
+ SRA_RE_Start.22.name:"Radioactive Mantle"
+ SRA_RE_Start.22.desc:"After learning from the last project, the engineering team pre-laid a large support structure before starting excavation work in this area.\nNotably, the radiation intensity of these magmatic rocks is more than one level higher than the surrounding rocks. We have reason to speculate that the magma under the thick crust of this planet has a high content of radioactive elements.\nQuite a few white-and-black building remains were dug out. The outer walls of these buildings are composed of a series of almost \"frozen\" particles, with many tiny Stellarcrystals interspersed, forming a weak maintenance field. Even after experiencing a considerable amount of time without power supply, these materials still possess incredible strength.\nExcavation work continues. We eagerly hope to learn the secrets of these facility remains."
+ SRA_RE_Start.22.a:"Looking forward to it."
+ SRA_RE_Start.23.name:"Crystal Factory"
+ SRA_RE_Start.23.desc:"More harvests allowed us to find clues left by the past from a large amount of debris. After searching like looking for a needle in a haystack, we successfully pieced together the history of this base through surviving data.\nThis was a factory, a massive factory providing Stellarcrystals for an interstellar fleet.\nStellarcrystals in a specific mode can assimilate surrounding matter, and this factory was accelerating this process.\nVast amounts of resources were warped into this facility, then converted into Stellarcrystals to replenish those damaged SRA ships.\nBut... what happened?"
+ SRA_RE_Start.23.a:"A fleet..."
+ SRA_RE_Start.24.name:"Catastrophe"
+ SRA_RE_Start.24.desc:"Not much data was preserved in this facility.\nEverything about that war remains a mystery. We can only speculate that an SRA fleet was fighting some faction at that time. No one knows the outcome of the war, only that few traces of them remain in the galaxy today.\nThis factory was destroyed in the war. Some powerful weapon destroyed the entire facility from top to bottom, penetrating the crust and mantle, nearly shattering the core.\nThe planet did not explode, but radioactive elements inside the star core were scattered everywhere, turning this place into a dead wasteland."
+ SRA_RE_Start.24.a:"Whoa."
+ SRA_RE_Start.25.name:"Mysterious Crystal"
+ SRA_RE_Start.25.desc:"While the engineering team was organizing the discovered equipment, StellarRegulator, who came to inspect, accidentally found a unique Stellarcrystal.\nUnlike other Stellarcrystals that guide energy or create force fields, this crystal carried a trace of unfathomable power.\nIt was protected by complex energy fields, shielding the connection between inside and outside, but StellarRegulator indicated that important information might be hidden within.\nShe needs our support to launch cracking work."
+ SRA_RE_Start.25.a:"Bring the crystal back first."
+
+ SRA_RE_Start_SP3:0 "Crack Crystal"
+ SRA_RE_Start_SP3_DESC:0"Secrets unknown to anyone are hidden in the crystal retrieved from the wreckage of the Crystal Factory. To crack the barrier, StellarRegulator needs the support of our scientific facilities."
+ SRA_RE_Start.26.desc:"Executor, the deciphering of the storage crystal is complete, and there is indeed a lot of valuable information inside.\nI found a lot of data on how to adjust Stellarcrystals. With the support of this data, I found a way to repair the Spear_Of_Galaxy_Zenith consuming a small amount of energy.\nMy energy storage crystals are not all depleted. In fact, several groups of crystals did not output energy because their internal structures were damaged.\nNow I can stabilize these crystals and repair the internal structure, so I have enough energy to start the repair program.\nIf there is enough energy, you can contact me to execute the repair program.\n§YRepair options are in the \"Issue Orders\" interface.§!"
+ SRA_RE_Start_SP4:0 "Initiate Repair Program"
+ SRA_RE_Start_SP4_DESC:0"Make Spear_Of_Galaxy_Zenith sail again."
+
+
+
+ SRA_RE_Start.27.name:"Detection Successful"
+ SRA_RE_Start.27.desc:"After constant correction and analysis, we successfully located a group of Stellarcrystals. It is time to start archaeological work."
+ SRA_RE_Start.27.a:"Confirmed."
+
+ SRA_RE_archaeological_3:"§BRadio Waves Not Yet Faded§!"
+ SRA_RE_archaeological_Text_3:"Coordinate Three: Desolate Crashed Relay"
+
+ SRA_RE_Start.29.name:"Silent Earth"
+ SRA_RE_Start.29.desc:"This desolate planet is silent all year round, but deep in the earth, something is responding to our call."
+ SRA_RE_Start.29.a:"Prepare for landing."
+ SRA_RE_Start.30.name:"Magmatic Rock Belt"
+ SRA_RE_Start.30.desc:"After some investigation, we soon discovered anomalies on the surface.\nIn one hemisphere, the surface structure is not much different from ordinary barren planets; but in the other hemisphere, many vertical magmatic rock belts are distributed with high density.\nReferencing the last discovery, some archaeologists speculate that a ground bombardment also occurred here, believing that these magmatic rock belts are the result of deep pits caused by orbital bombardment being refilled by molten rock.\nThe feedback signal seems to be emitting from this magmatic rock area."
+ SRA_RE_Start.30.a:"Continue investigation."
+ SRA_RE_Start.31.name:"\"Yamato with only a steering wheel left\""
+ SRA_RE_Start.31.desc:"The engineering team is used to digging holes. After finding the target area, large-scale excavation operations began immediately. Before long, we found the thing that had been emitting signals.\nThis may have once been a small space station, but its basic structure has been completely destroyed. Massive tiny shell fragments indicate that it received a devastating blow before. After testing the strength of these fragments, we even suspect that the traces on the planet are just the aftershocks of this attack.\nHowever, under such damage, its core is still running."
+ SRA_RE_Start.31.a:"Repairing it only costs a quarter of the build cost... what am I saying?"
+ SRA_RE_Start.32.name:"One who tied the bell must untie it"
+ SRA_RE_Start.32.desc:"What did it receive, and what is it conveying? The super-distance action principle of the Stellarcrystal network determines that its communication is almost impossible to intercept. If we want to know what it is doing, we must hack into it.\nHowever, the consequences of rash intrusion are unpredictable. No one knows if destroying the shell will trigger some countermeasures, or if intrusion to obtain data will cause the anti-leak self-destruct system to trigger.\nWe agreed that this kind of thing should be handled by more professional people."
+ SRA_RE_Start.32.a:"StellarRegulator, it's your turn."
+ SRA_RE_Start.33.name:"Pathetic Desperate Bet"
+ SRA_RE_Start.33.desc:"§Y<Accepting access request... Confirmation ID: 03-34... Error: Identifier library incomplete... Re-verifying... Confirmation ID: 03-34-21-626... Permission granted...>§!\n\"...\"\n\"...StellarRegulator?\"\nAs if waking from a dream, she apologized while reporting her results.\nAfter obtaining operational authority, StellarRegulator gained a general understanding of the purpose and experience of this relay station.\nAs a unique small communication relay, it is responsible for transmitting Stellarcrystal resonance signals under extreme conditions known as \"spatial structure tearing\". Records show that a powerful automated fleet, in order to block the command of the fleet to which this relay station belonged, created a spatial structure tear zone spanning dozens of star systems. But with the deployment of this relay station, such resistance seemed pale and weak. In the end, the automated fleet forcibly destroyed this relay station with huge losses, but the second, the third... had already arrived.\nAs corroborating evidence, we indeed found some subtle abnormal spatial wrinkles around, which may be traces left from that time."
+ SRA_RE_Start.33.a:"……"
+ SRA_RE_Start.34.name:"Storage Crystal"
+ SRA_RE_Start.34.desc:"After careful dismantling, StellarRegulator found something that shouldn't exist in the core of the relay station.\nA small storage crystal, protected by a completely different encryption method.\nIn the design of the relay station, such a crystal does not exist. Comparison shows that its location is a gap formed between internal structures, not a specially reserved position.\nIt's as if someone stuffed it in.\nHowever, without destroying the external structure, this crystal was either stuffed in during manufacture, or entered inside through some extremely precise warp."
+ SRA_RE_Start.34.a:"Bring it back and take a look."
+ SRA_RE_Start.35.name:"Crystal in Place"
+ SRA_RE_Start.35.desc:"The core of the relay station has been brought back whole. Relevant facilities are ready, and StellarRegulator can preside over the research work at any time."
+ SRA_RE_Start.35.a:"Confirmed."
+ SRA_RE_Start_SP6:0 "Research Relay Station Crystal"
+ SRA_RE_Start_SP6_DESC:0 "The mysterious crystal found in the core of the crashed relay station is waiting for us to explore."
+ SRA_RE_Start.36.name:"Research Complete"
+ SRA_RE_Start.36.desc:"Research on the mysterious crystal in the crashed relay station core has been successfully completed. After a series of complex work, StellarRegulator obtained a signal sequence.\nRelevant data inside the crystal indicates that this signal can call a massive space station called \"Stellar Nexus\" and order it to warp to the target location. This massive space structure integrates military industry, scientific research, production, and command, providing endless resources and greatly enhancing our strength."
+ SRA_RE_Start.36.a:"Very nice."
+ SRA_RE_Start.37.desc:"Ah, Executor, you must have received news about the Stellar Nexus.\nEven by our SRA standards, this is an extraordinary megastructure. Advanced spacetime technology grants it nearly infinite internal space, allowing just one Stellar Nexus to support an entire... fleet."
+ SRA_RE_Start.38.desc:"However, what I want to notify you about is another thing found in the crystal, specifically, three.\n\n§YShe displays three \"fragments\", colored cyan, green, and orange respectively.§!"
+ SRA_RE_Start.39.desc:"This is a \"Consciousness Fragment\", something condensing emotion, knowledge, power, and wisdom.\nThese three consciousness fragments were left by \"StellarRegulator Array\": possibly my past self, or possibly other StellarRegulators.\nBefore proceeding with the only way to interpret-that is, directly absorbing the fragments-the contents of the consciousness fragments are unknowable.\nTherefore, we can only infer their contents through some... characteristics... floating on the surface."
+ SRA_RE_Start.40.desc:"The impact of absorbing these fragments is unknown... I don't know what harvest it can bring, nor do I know if I will still be me after that...\nExecutor...\nI trust your choice, so please make a decision."
+ SRA_RE_Start.40.a:"Absorb one fragment."
+ SRA_RE_Start.40.b:"Let's wait a bit first."
+ SRA_RE_Start.41.desc:"Understood. If you want to change your mind, you can find me in \"Issue Orders\"."
+ SRA_RE_Start.41.a:"Mhm"
+
+
+ SRA_RE_Start_SP7:0 "Deploy Stellar Nexus"
+ SRA_RE_Start_SP7_DESC:0 "Send signal sequence to deploy Stellar Nexus near the homeworld system."
+
+ SRA_RE_Start.42.name:"Stellar Nexus Arrives"
+ SRA_RE_Start.42.desc:"The massive space structure known as Stellar Nexus has arrived near our homeworld system and built a hyperlane by itself.\nThe trouble is, the Stellar Nexus seems to be in a dormant state. Hope StellarRegulator has a way to restart it."
+ SRA_RE_Start.42.a:"I choose you, go, Science Ship!"
+
+
+ SRA_RE_Start_SP8:0 "Phase I: System Docking"
+ SRA_RE_Start_SP8_DESC:0 "Dock with Stellar Nexus system and deactivate shields on the habitable segment."
+ SRA_RE_Start.43.name:"Shield Deactivated"
+ SRA_RE_Start.43.desc:"After obtaining system authorization, we successfully deactivated the shields on the habitable segment of the Stellar Nexus Ringworld. Now we can colonize this segment at any time.\nHowever, note that since the energy circuit tuning the star core has not been activated, the production capacity of this facility is greatly affected."
+ SRA_RE_Start.43.a:"Prepare for next step."
+ SRA_RE_Start_SP9:0 "Phase II: Circuit Activation"
+ SRA_RE_Start_SP9_DESC:0 "Activate the energy circulation circuit tuning the star core to restore the Stellar Nexus to normal state."
+ SRA_RE_Start.44.name:"Tuning Star Core Circuit Activated"
+ SRA_RE_Start.44.desc:"The energy circuit tuning the star core has been activated. The massive energy generated by the Spacetime Phase Engine is now being supplied to the entire Stellar Nexus, and the output of the habitable segment has returned to normal."
+ SRA_RE_Start.44.a:"Excellent."
+ SRA_RE_Start.44.MESSAGE_SRA_RE_Rocivia:"Ah, I like this design, expanding extra space inside the structure to increase industrial density, as long as care is taken to maintain the facility from destruction."
+
+
+
+
+
+ SRA_RE_Start.60.name:"Detection Successful"
+ SRA_RE_Start.60.desc:"After constant correction and analysis, we successfully located a group of Stellarcrystals. This is a star system that has been unnoticed before.\n\nWait...\nSomething not quite good seems to have restarted because of our detection signal."
+ SRA_RE_Start.60.a:"Prepare for battle!"
+ SRA_RE_Start.60.MESSAGE_SRA_RE_Rocivia:"Finally something to fight; it's been too calm to be true."
+
+ SRA_RE_archaeological_4:"§BGuardianship Long Lost§!"
+ SRA_RE_archaeological_Text_4:"Coordinate Four: Molten Shield Remains"
+
+ SRA_RE_Start.61.name:"Molten Hell"
+ SRA_RE_Start.61.desc:"The wreckage of the defense station turned into meteorites, shattering the brownish-black rocky ground. Obviously, conducting archaeological operations in such a molten hell is extremely unreasonable.\nUltimately, our scientific team decided to move the wreckage off the surface.\nAfter towing it to orbital altitude, we can finally study this wreckage properly."
+ SRA_RE_Start.61.a:"Oh this."
+ SRA_RE_Start.62.name:"Integrated Design"
+ SRA_RE_Start.62.desc:"Just such a piece of wreckage made our engineers praise it endlessly.\nThe inability to dismantle Spear_Of_Galaxy_Zenith-even a tiny part-to study its internal structure has always been a grudge for these engineering enthusiasts. Now they finally have a chance to glimpse the SRA design.\nThe structure of this defense station is almost integrated; in other words, its internal structure is a seamless whole, tightly combined without gaps. Thanks to the excellent properties and performance of its materials, relevant equipment can be manufactured in various shapes and sizes, minimizing redundant space as much as possible. Massive partitions and bulkheads enhance safety and survivability, while the use of microscopic machine swarms guarantees maintenance and damage control capabilities while abolishing access tunnels. Coupled with the unimaginable versatility of Stellarcrystals, these creations can even maintain basic function operation when almost completely destroyed.\nAlthough what we can do is quite limited due to technology and material levels, we still benefited greatly."
+ SRA_RE_Start.62.a:"Very good."
+ SRA_RE_Buff_1:0 "SRA Integrated Design Philosophy"
+ SRA_RE_Start.63.name:"Revelation"
+ SRA_RE_Start.63.desc:"Intelligence indicates that the SRA has a fairly reliable anti-leak mechanism. Any existing act of dismantling or intruding into the core area will trigger the anti-leak mechanism, erasing all data or destroying the data core itself.\nFortunately, we are not conducting cracking work solely as outsiders.\nWith the help of \"authorized personnel\", we quickly obtained data inside the data core.\nThese sparse records tell of a... war that shouldn't have happened.\nThis defense station belonged to SRA Aspect Army 03-34-21. Its affiliated fleet was executing a military operation called \"Third Expedition\" and was in a lost state.\nHere they encountered a massive automated fleet marked as \"CORE Civilization\", a discovery that seemed to be outside their expectations.\nThey seemed familiar with these automated fleets and believed they shouldn't appear here.\nRegardless, the Expeditionary Fleet launched an attack on the automated fleet, which quickly evolved into a protracted galaxy-scale war.\nIn fact, the battle was one-sided almost from the start. The technological level of the automated fleet was hard to match against its opponent, and its tactics were completely countered. Battle losses were often five to one or even ten to one, only sustained by massive numbers.\nWith numbers decreasing rapidly, the automated fleet increasingly concentrated towards a certain star system. Finally, the decisive battle unfolded near that star system, ending with the near-total annihilation of the automated fleet.\nHowever, after the blockade was lifted, the Expeditionary Fleet seemed to realize what this automated fleet was guarding. They ultimately did not enter that star system, and began to evacuate this galaxy completely."
+ SRA_RE_Start.63.a:"Yes, a war that shouldn't have happened..."
+ SRA_RE_Start.64.name:"Escaped Disaster"
+ SRA_RE_Start.64.desc:"Perhaps we should rejoice that our galaxy brushed past the Grim Reaper but ultimately escaped.\nThe remaining records contain a report on the deployment of a device called the \"Dead Zone Oblivion Engine\". According to the description, it uses a special technology to detonate the black hole in the center of the galaxy, tearing open a chaotic planar rift. This rift is extremely unstable and thus almost no extra-planar invasions would occur, but the entire galaxy would be destroyed by devastating spatial structure collapse and difficult to recover for tens of millions of years.\nHowever, its startup process was terminated by a command from the \"Key\".\nAfter that, the fleet never returned here, and this defense station entered a dormant state."
+ SRA_RE_Start.64.a:"If the galaxy were destroyed, we wouldn't have the chance to mourn."
+ SRA_RE_Start.65.name:"Encrypted Data Packet"
+ SRA_RE_Start.65.desc:"Beyond the records, we also discovered a unique encrypted data packet.\nInterestingly, its memo file contained many questions and indicated that solving the questions would yield the password for the data packet.\nOne of the questions is as follows:\nThere are two planets here. One is a dead planet with multiple harsh features containing five billion Kemonomimi girls, and the other is a perfect Gaia planet containing one billion very delicious Starfish.\nNow, a Galaxy Zenith class Spear_Of_Galaxy_Zenith is preparing to fire §BSupernova Termination§! at the dead planet, and a Speaker who wishes to remain anonymous stipulated that fire must be opened on one of these two planets.\nAnd you-\n\n\n\n\n\nCan choose the firing mode.\nDo you want to abandon the cool planet-explosion animation to save a colonial ball by switching §BSupernova Termination§! from Destruction Mode to Purification Mode?"
+ SRA_RE_Start.65.a:"Huh?"
+ SRA_RE_Start.65.MESSAGE_SRA_RE_Rocivia:"Mhm, which one would you choose?"
+ SRA_RE_Start.66.name:"Details Determine Success or Failure (Confirmed)"
+ SRA_RE_Start.66.desc:"After long contemplation and repeated attempts, our scientists were on the verge of giving up-finding an answer from these damn cunning variants of the trolley problem and other various outrageous questions was probably impossible.\nJust then, one researcher discovered a button marked with a question mark on the first page of the document.\n\"Welcome to browse the help document.\"\nThe first question example therein was \"What is the password for the data packet?\"\nWe incredulously entered the password provided by the answer.\nThen successfully opened the data packet."
+ SRA_RE_Start.66.a:"I'm a StarCraft player, I can't see this (Angry)"
+ SRA_RE_Start.67.name:"<Repairing Spaceships in Stellaris>"
+ SRA_RE_Start.67.desc:"The data packet contained a large number of files our scientists found difficult to understand. After browsing, StellarRegulator stated that these files were a series of blueprints and instructions related to Spear_Of_Galaxy_Zenith, which would be very helpful for the repair work on Spear_Of_Galaxy_Zenith.\nArchaeological work comes to an end here. The remaining wreckage is being transported back for in-depth research."
+ SRA_RE_Start.67.a:"Finally..."
+
+ SRA_RE_Start.68.desc:"\"We are the surging tide, and the enemy is but duckweed.\"\nExecutor, with excitement, I report to you: the first phase of repair work on the internal systems of Spear_Of_Galaxy_Zenith can begin.\nThe target of the first repair is tentatively set as the spatial manipulation system. This system involves a series of complex spatial adjusters, providing spatial positioning, structural bending, wormhole construction, and other functions. Upon completion of repairs, Spear_Of_Galaxy_Zenith will restore warp guidance and interstellar strike capabilities."
+ SRA_RE_Start.69.desc:"I need some materials and computational resource support from the Science Academy, so you can start the repair project when you have free time. When you have prepared the resources, contact me to issue the order.\nHmm?\nThe Supreme Speaker is initiating a communication with you. I'll patch it through."
+ SRA_RE_Start.70.desc:"Ah, Executor, I am currently at the Science Academy.\n\n§YNoisy background, vaguely hearing voices like \"I'm so excited!\"§!\n\nTurned on stealth.\nIt's just, er, the Science Academy had a Eureka moment when studying that pile of wreckage.\nThe first paper on \"['concept_SRA_Composite_Crystal_Lattice'] Technology\" has come out. Now this bunch is acting crazy, burning through all research funds in just a few days.\nI've received forty-two calls asking for funding just now."
+ SRA_RE_Start.71.desc:"Just saying, you don't have to agree. Leave them be for a while and they'll quiet down.\nBut this technology indeed has relatively epoch-making significance. I suggest allocating some resources over here earlier.\nOf course, how to decide is up to you."
+
+ SRA_RE_Start.81.desc:"Executor, did you see?\nSecrets buried under the sands of time, sealed away.\nIt is calling you to explore, to harvest.\nBecause the long night is approaching, and the sharp sword must be cast. We must face the past to embrace the future."
+ SRA_RE_Start.82.desc:"Riddles end here!"
+ SRA_RE_Start.83.desc:"Eh?"
+ SRA_RE_Start.84.desc:"Your observation department discovered some fleet wreckage on a planet during a routine inspection. The armor materials used on them are unheard of by us, so excavation work has preliminarily begun.\nComparison results from the StellarRegulator database indicate that these wrecks highly likely come from the ancient CORE Pioneer Fleet. I think your scientists are already fighting to submit archaeological applications to you."
+ SRA_RE_Start.85.desc:"To me."
+ SRA_RE_Start.86.desc:"Ah, forgot, you are still the leader.\nMaybe you've been slacking off at my place for too long these days; I've run out of a box of tea because of you."
+ SRA_RE_Start.87.desc:"No such thing!\n...Probably.\nI work a full 162,000 seconds every month, and adding various meetings, this number can double or triple."
+ SRA_RE_Start.88.desc:"Is this pride accumulated from before?"
+ SRA_RE_Start.89.desc:"Mhm~\nAlright, Executor, go issue the archaeological order."
+
+ SRA_RE_archaeological_5:"§BArmada - The Platinum Grand Fleet§!"
+ SRA_RE_archaeological_Text_5:"Coordinate Five: Silent Fleet Among Mountains"
+
+ SRA_RE_Start.92.name:"Among the Ranges"
+ SRA_RE_Start.92.desc:"The continuous mountain ranges are shrouded in misty clouds. The peaks are covered with snow, contrasting moderately with the exposed black rocks.\nHowever, our archaeologists are not here to admire the scenery and write two articles for some unknown magazine to earn a few manuscript fees.\nWhen we stepped into the valley, a huge broken armor plate stood before us like a road sign, guiding us into this secret realm, this... graveyard."
+ SRA_RE_Start.92.a:"Let's begin."
+ SRA_RE_Start.93.name:"Bones of Giants"
+ SRA_RE_Start.93.desc:"The ecological integrity of this planet is surprising, after all, the number and size of the wreckage in this valley far exceeded our expectations.\nA huge platinum half-starship is inserted obliquely into the ground, its top piercing the clouds. The armor on it has peeled off massively, and traces of explosions on turret bases are still clearly visible.\nAnd this is just the tip of the iceberg.\nReports indicate that similar wreckage is scattered throughout the valley, most buried in strata or mountains, with only a few exposed.\nThe archaeological team filed in from the breach in the hull. The dimmed Pioneer armor still maintains unimaginable strength."
+ SRA_RE_Start.93.a:"Send more personnel."
+ SRA_RE_Start.94.name:"Pioneer Warship"
+ SRA_RE_Start.94.desc:"Basic investigation has come to an end. The appearance of these warships is somewhat similar to the Battlecruisers of Fallen Empires, but the interior is not.\nRegarding the half-ship currently being mainly studied, if its design is symmetrical, then these warships installed one-by our standards-Titan-class main gun, two Battleship-class main guns, sixteen large weapon clusters, and a series of projectile weapons and point-defense weapons.\nNotably, we did not find any reactor on this huge starship estimated to be twelve kilometers high. The entire ship's energy circuit converges on several strange devices; perhaps it used an energy supply technology we do not know.\nFurther investigation is unfolding. Our team is trying to figure out its internal composition and find storage units or similar things to obtain more data."
+ SRA_RE_Start.94.a:"It can't possibly run on batteries..."
+ SRA_RE_Start.95.name:"In-depth Investigation"
+ SRA_RE_Start.95.desc:"Results of massive partition scans are being aggregated, and our understanding of this starship is further improving.\nScans and disassembly indicate that this warship used a variety of weapon systems. Its main gun, what we call a Titan-class main gun, is a unique energy weapon with a charging mechanism difficult for us to understand; secondary main guns are relatively conventional kinetic-like weapons, and their ammunition was also found-solid projectiles mainly composed of materials similar to the armor of this warship, but with different internal material composition; the remaining weapons are mainly energy orb and energy beam weapons, and several missile-like weapons were set at small openings on the rear side of the hull.\nAnalysis of its armor material is still ongoing. Existing results indicate it possesses an extremely complex topological structure, but material composition remains unknown. It seems that these armors receive extra charging during normal operation, and the energy contained within strengthens the material. Even now, residual energy makes the strength of these materials superior to almost all armors.\nIn addition, we found several small compartments near the convergence of energy circuits, storing many cubes glowing with golden light. Probes indicate their energy level is incredibly high, perhaps..."
+ SRA_RE_Start.95.a:"Really runs on batteries?"
+ SRA_RE_Start.95.MESSAGE_SRA_RE_Rocivia:"Isn't using normal reactors just because energy storage capacity can't go up so one has to use other forms waiting for conversion? If energy storage capacity goes up, isn't it better to do it in one step?"
+ SRA_RE_Start.96.name:"CORE Pioneer"
+ SRA_RE_Start.96.desc:"We physically separated the ship's remaining weapons, propulsion systems, FTL engines, and other components, then experimentally placed a golden cube inside those facilities that looked very corresponding.\nThe next moment, the interior of the hull, silent for unknown ages, lit up again.\nAs indicated by instruments, a continuous stream of energy flowed from that compressed energy block, reaching everywhere in the ship.\nThe decoding team, which had been on standby for a long time, immediately launched hacking work on the restarting processor with the support of StellarRegulator.\nMhm, precisely speaking, at the beginning of the hacking, StellarRegulator had already taken over all our computer groups, as our technicians unsurprisingly were helpless against the completely unfamiliar data architecture before them.\nAnd when the decoding work was completed, StellarRegulator suddenly began to wander inside this ship, touching the bulkheads, whispering languages we do not know.\nHowever, she had already uploaded all decoding results beforehand.\nThis ship belongs to-\nCORE Civilization."
+ SRA_RE_Start.96.a:"！"
+ SRA_RE_Start.97.name:"Lost Fleet"
+ SRA_RE_Start.97.desc:"/Interstellar Combat Unit Type II 284-24601, affiliated with CORE Civilization <Grand Fleet> No. 3484, served in Third Cycle 368 Galactic Year, current cruise time: <Data Corrupted>/\n/Encountered fleet affiliated with <Data Corrupted> at <Data Corrupted>, design unrecorded, engaged/\n/Encountered fleet affiliated with <Data Corrupted> at <Data Corrupted>, design unrecorded, engaged/\n/Encountered fleet affiliated with <Data Corrupted> at <Data Corrupted>, design unrecorded, engaged, No. 2 secondary main gun penetrated, processor dam-dam-dam-damage <Error><Error>/\n/<Error><Error>----Activate backup unit, self-check program initiate <Warning: Insufficient Energy>--/\n/----<Data Lost>----/\n/Self-check program restart/\n/407723rd self-check start/\n/Current Energy: 0.0032%/\n/Hull Integrity: 13%; Shield System <Error: Object Does Not Exist>/\n/Current Mission: Protect <Quiet Clock Tower>--<Error>/\n/Self-check program restart/\n/Self-check program restart/\n/Self-check program restart/\n/410147th self-check start/\n/----/\n/Self-check program abort/\n/<Error>Command currently executed <Error><Error>This override <Error>Integrity/"
+ SRA_RE_Start.97.a:"Nemesis of CORE Pioneer..."
+ SRA_RE_Start.98.name:"Foundry Chip"
+ SRA_RE_Start.98.desc:"In fact, it was not just turning this ship inside out, but turning the entire valley inside out.\nWreckage scattered on the surface, inserted in mountains, buried deep in strata, was found one by one, followed by meticulous inspection, organization, and analysis.\nSuch massive work took a rather long time, but the return was worth it.\nBy aggregating records from all storage units, we pieced together more information.\nThis fleet was not an ordinary fleet, at least not when they were destroyed.\nThey shouldered an important mission.\nFor some reason we don't know, CORE Pioneer did not use any \"omnipotent\" artificial intelligence. Every CORE Pioneer artificial intelligence was set with duties and thinking modes, even capability scopes, when manufactured: warship AI only fights, shipyard AI only builds ships, command AI can only command and cannot do any actual operations.\nAnd this fleet was carrying a shipyard AI, or rather its data chip.\nWith the help of warship AI cache data, we successfully found the wreckage of the warship carrying the chip.\nFortunately, the chip was undamaged. We dismantled and searched every piece, finally finding the hidden chip.\nDecryption of the chip awaits its transport back. We also contacted a batch of transport ships to bring back all CORE Pioneer fleet wreckage, waiting for further research or dismantling.\nAdditionally, StellarRegulator reported that it is possible to recover the coordinates of this fleet's destination based on fragment data; relevant work is in progress.\nJudging from the technological level of CORE Pioneer creations seen, further research on them will bring us huge harvests."
+ SRA_RE_Start.98.a:"Wrap it up."
+
+ SRA_RE_Start.99.desc:"...\nPhew... Executor."
+ SRA_RE_Start.100.desc:"<The CORE Civilization is an extremely advanced ancient civilization, mastering technology far surpassing other intelligent life in the galaxy. They can create almost out of thin air, easily invert physical laws, convert mass-energy at will, and interfere with spatial structures on a galactic scale.>\n...This is the record in my database.\nDid you know, they once created an FTL barrier spanning the entire galaxy, cooperating with their fleets to divide the galaxy in two for tens of thousands of years.\nThey were countless times stronger than the peak period of this galaxy's Fallen Empires. They did not expand outside the galactic core, did not become an intergalactic civilization simply because they didn't want to, they didn't need to.\nI don't doubt they had the ability to send fleets to other universes, but, why?"
+ SRA_RE_Start.101.desc:"What does a fleet carrying a foundry chip represent?\nHow long did the previous shipyard operate? How many such shipyards were there? How many fleets arrived originally? And how many did they build here?\nThe Fallen Empires don't know, the Curators don't know, the Precursors don't know.\nWe can only infer from previous records that this fleet was once massive enough to fight the SRA Expeditionary Fleet for decades, to the point where the word \"blotting out the sun\" seemed pale and weak.\nHaving built such a massive fleet, what were they originally doing? Why did the SRA fleet leave in the end? What did they see?"
+ SRA_RE_Start.102.desc:"And..."
+ SRA_RE_Start.103.desc:"Why would these be in the CORE Pioneer's foundry chip?\n\n§YShe opened her hand, and three \"fragments\" lay impressively in her palm.\nGolden flowing, purple flickering, and pitch-black fragments churning like thick fog.§!\n\nWho left these fragments, and what was the purpose?"
+ SRA_RE_Start.104.desc:"Executor...\nIf someone is really plotting all this in the dark...\nBe careful, be very careful."
+ SRA_RE_Start.105.name:"C.O.R.E. Construction Chip"
+ SRA_RE_Start.105.desc:"We completed the decryption of the chip with fruitful results.\nAlthough we cannot replicate the shipyards originally used by CORE Pioneer, luckily, the shipyard segment of Stellar Nexus is unexpectedly compatible with CORE Pioneer's construction mode. As long as the chip is connected to Stellar Nexus, we can let Stellar Nexus handle the construction process from manufacturing materials.\nSoon, we will be able to build CORE Pioneer warships under our command.\n§YBuild CORE Pioneer warships in the decision panel at the habitable segment of Stellar Nexus§!"
+ SRA_RE_Start.105.a:"Excellent."
+ SRA_RE_Start.105.MESSAGE_SRA_RE_Rocivia:"Remember, §Ybuild CORE Pioneer warships in the decision panel at the habitable segment of Stellar Nexus§!, don't blame me for not reminding you.\n\nBackward compatibility is a good habit; I thought StellarRegulator threw away CORE technology after mastering it."
+
+ SRA_RE_Core_relic:0 "C.O.R.E. Construction Chip"
+ SRA_RE_Core_relic_desc:0 "This data chip once belonging to the CORE Pioneer civilization stores a series of construction programs related to the massive automated cruise fleets of CORE Pioneer, capable of guiding us to build those powerful warships from scratch."
+
+ #90天后
+ SRA_RE_Start.106.desc:"Executor, positioning of the CORE Pioneer fleet's destination is complete. We observed some CORE Pioneer defense fleets existing at the target location. Considering their current condition, you may need to first dispatch enough fleets to defeat them before archaeological work can begin."
+ SRA_RE_Start.107.desc:"Also, regarding the previous consciousness fragments.\nYou can make a choice."
+ SRA_RE_Start.107.a:"Absorb one fragment"
+ SRA_RE_Start.107.b:"Let's wait a bit first"
+
+ SRA_RE_Start.108.desc:"Understood. If you want to change your mind, you can find me in \"Issue Orders\"."
+ SRA_RE_Start.108.a:"Mhm"
+
+#第六个坟头
+ planet_SRA_RE_Core_1:0 "Pioneer Type III Decay Reactor"
+ planet_SRA_RE_Core_1_desc:0 "Great technology of CORE Pioneer. Decay reactors convert ordinary matter into strange matter and release massive amounts of energy. These reactors once powered the entire planet."
+ planet_SRA_RE_Core_2:0 "CORE Pioneer Planetary Shaping"
+ planet_SRA_RE_Core_2_desc:0 "Every building is an expression of extreme efficiency, and every corner is a crystallization of design."
+
+ 
+ SRA_RE_archaeological_6:"§BUniversal Malady§!"
+ SRA_RE_archaeological_Text_6:"Coordinate Six: The Lost Casket of Calamity"
+
+ SRA_RE_Start.120.name:"Brilliant Reverberation"
+ SRA_RE_Start.120.desc:"Massive, towering, innumerable buildings containing cold efficient aesthetics cover the entire surface of the planet.\nThey are planned with reason and order, closely connected and joined everywhere. Their structure is ingenious and precise, intricate and densely arranged.\nCORE Pioneer's automated fleet designed and built this city with the supreme logic of its artificial intelligence, reshaping this planet into a unity, interlocking like gears, implementing the eternal pursuit of pure pragmatism.\nEven though ruthlessly eroded by time so long it is cruel, it remains a great masterpiece of engineering, a brilliant artwork of materialism."
+ SRA_RE_Start.120.a:"This is... CORE Pioneer."
+ SRA_RE_Start.120.MESSAGE_SRA_RE_Rocivia:"How should I put it, this situation is actually quite strange. The duties and capabilities of CORE artificial intelligence are strictly divided. Theoretically, it is impossible for a war fleet to do this kind of urban construction. Perhaps other engineering teams appeared here together with the fleet."
+ SRA_RE_Start.121.name:"Treading the Past"
+ SRA_RE_Start.121.desc:"Our investigation team landed at a damaged docking port and began a preliminary investigation of the entire planet.\nAlthough most facilities have aged and failed, a considerable number of machines are still operating. The investigation team encountered many still-functioning guards, whose powerful firepower caused considerable casualties.\nAfter sending several batches of support teams, we cleared an area and found a usable data interface.\nCombining previous experience and StellarRegulator's help, the investigation team believes we have the ability to obtain the information we need from it."
+ SRA_RE_Start.121.a:"Good."
+ SRA_RE_Start.122.name:"Burial"
+ SRA_RE_Start.122.desc:"Decryption work is progressing smoothly. We carefully searched for the intelligence we need in the control systems of these facilities, trying hard to avoid our infiltration being discovered.\nThese ancient intelligent systems are highly developed. Even with such long lack of maintenance, they are still very powerful. Other civilizations probably couldn't break through their strict defense.\nFortunately, we have a professional who can provide strong support.\nSoon, we obtained the first piece of data.\nData shows that this planet was shaped into a huge prison, used to bury something forever."
+ SRA_RE_Start.122.a:"Continue."
+ SRA_RE_Start.123.name:"Plague Heart Malignant Colonization"
+ SRA_RE_Start.123.desc:"The outer layer of the planet is a complex and complete-though now stopped-defense system, used to isolate all external interference.\nBelow this are countless wandering war machines, used to clean up possible slip-throughs.\nSubsequently, heavy armor layers and constantly operating shield systems can resist powerful penetrating attacks, preventing the reactor arrays beneath from suffering even the slightest damage.\nUnder such strict defense, a highly advanced stasis field is maintained to permanently freeze the dangerous structure located at the planet's core, isolating it from the entire universe.\nA brief description describes this structure as having an extremely high threat of \"erasing sapient life in the entire galaxy\", composed of a special microorganism and the mechanical and biological structures it controls. Any act destroying its structural stability will lead to a galaxy-level biological disaster.\nPerhaps we should leave here quickly to prevent accidents?"
+ SRA_RE_Start.123.a:"Leaving now is more dangerous; we must obtain more information."
+ SRA_RE_Start.124.name:"Soul-Eater Evolution"
+ SRA_RE_Start.124.desc:"The storage unit here contained no more information; perhaps this place existed not to store information. The shapers of this planet only needed this place to be sealed forever.\nBut we need more data, even if there is a one in a billion chance of the blockade measures here failing.\nSitting and waiting for death is intolerable.\nMore reinforcements arrived and began searching the entire planet. We avoided destroying facilities as much as possible, but exchanges of fire with remaining defense machines inevitably caused some impact. Hope this won't bring unbearable consequences.\nData aggregation shows that sealed in this prison is an aggregated microbial intelligence called \"Calamitisease\".\nThis special microorganism can gather together to form macroscopic structures, thereby exhibiting intelligence similar to a hive mind.\nThey will devour everything devourable, and can imitate those things; they can also absorb electronic data and even biological memories, and apply them.\nThis creature has mastered a large amount of advanced technology in a long-term state of war. Letting even a negligible amount of \"Calamitisease\" develop will quickly produce a massive military force capable of threatening the entire galaxy."
+ SRA_RE_Start.124.a:"Shuddering."
+ SRA_RE_Start.125.name:"Seeping into Marrow"
+ SRA_RE_Start.125.desc:"\"Calamitisease\" exhibits unimaginable survivability: they can obtain energy through other matter, light, or heat sources, and can also minimally absorb background radiation; individuals of \"Calamitisease\" can maintain activity at temperatures ranging from at least near 0K to 2000K, surviving under extreme high pressure and large doses of gamma rays.\nIt is like a cosmic virus: once brought into a new star system, \"Calamitisease\" will actively disperse in dust clouds and asteroid belts and rely on the matter therein to replicate itself in large numbers. Individuals brought to planetary surfaces will travel underground while hiding themselves as much as possible, breeding in deep layers. Just a small amount of \"Calamitisease\" can quickly \"infect\" the entire star system, penetrating into various celestial bodies and even the mantles of solid planets. Moreover, even detonating the star cannot eradicate these creatures that can reproduce relying on cosmic dust.\n\"Calamitisease\" can absorb and utilize almost all conventional elements-by manipulating nucleons and electrons.\nThey can also use absorbed technology to manipulate other matter they cannot directly manipulate, such as strange matter, dark matter, and tachyons. However, fortunately, this requires them to first simulate devices used to manipulate these materials.\nThis is also why \"Calamitisease\" still needs strongholds-the technology they use has not been miniaturized, and they cannot develop technology independently due to lack of a clear scientific research system.\nThe biological warships that \"Calamitisease\" can directly manufacture are difficult to improve in performance due to material limitations, and the production capacity of imitating other civilizations to build warships is not that high, so the main threat of \"Calamitisease\" is still in its spread capability.\nBut even so, such an existence is a crisis the galaxy cannot bear."
+ SRA_RE_Start.125.a:"So, since they can lock \"Calamitisease\" here, why not eradicate them?"
+ SRA_RE_Start.126.name:"Hand of Ereshkigal"
+ SRA_RE_Start.126.desc:"Further investigation revealed certain hidden history.\nAccording to analysis of fleet logs, this planet was originally marked as \"a planet completely controlled by Calamitisease\". When the CORE fleet's cleanup of Calamitisease was nearing its end, the fleet began attacking this fortress.\nHowever, when the CORE fleet began to systematically destroy this planet, they encountered a dilemma.\nThis giant \"Calamitisease\" entity built a unique jump facility inside its body. Records show it is maintained in a special high-energy state. Once an attack breaks through the barrier and destroys its stability, the entire structure will be \"ejected\" by out-of-control energy-randomly scattered in the galaxy in the form of fragments.\nThis is a naked threat: once it is attacked, Calamitisease will spread across the entire galaxy again, and the CORE fleet's efforts will be in vain.\nFTL walls and space storms cannot completely prevent \"ejection\", so the CORE fleet had to use a stasis field to permanently seal it, and built massive energy supply and maintenance facilities here to isolate this place for a time long beyond words, until the end of time.\nThis situation has exceeded our handling capacity. The expedition team strongly recommends leaving and blockading this planet before causing more unstable factors."
+ SRA_RE_Start.126.a:"Cancel that order, we must try to repair these facilities to avoid accidents."
+ SRA_RE_Start.126.MESSAGE_SRA_RE_Rocivia:"Why didn't Calamitisease just eject itself? This option is all gain and no loss... Or is it also unsure if it can do it?"
+
+ SRA_RE_Start_SP10:0 "Repair Quiet Clock Tower"
+ SRA_RE_Start_SP10_DESC:0 "We must try to repair these facilities, at least repair the surface defense facilities."
+ SRA_RE_Start.127.name:"Repair Complete"
+ SRA_RE_Start.127.desc:"Repair of the Quiet Clock Tower declared successful. Presumably, \"Calamitisease\" will no longer have the possibility of escape."
+ SRA_RE_Start.127.a:"It's better not to colonize this planet next."
+
+
+ SRA_RE_Start.200.name:"CORE Pioneer Watcher"
+ SRA_RE_Start.200.desc:"Communication request received, invoking response...\n\n§Y<You are conversing with CORE.>\n\n<Notice: Planning Area C-0076, commonly known as \"Quiet Clock Tower\", is under full control. Any entity access will be considered a direct declaration of war on CORE. Please maintain a safe distance from this star system to avoid unnecessary losses.>§!"
+
+
+ SRA_RE_Start.200.a:"CORE?"
+ SRA_RE_Start.200.a.response:"Query request received, calculating response... Calculation complete.\n\n§Y<Response: CORE Civilization is the custodian of the galaxy, guardian of civilization, striving to guarantee your evolution and development, creating this automated fleet to contain external threats.>§!"
+ SRA_RE_Start.200.b:"Why blockade this place?"
+ SRA_RE_Start.200.b.response:"Query request received, calculating response... Calculation complete.\n\n§Y<Response: Planning Area C-0076 is the galactic delivery facility for galactic biological threat \"Calamitisease\", maintained in a stable stasis state. This state must be maintained permanently.>\n\n<Supplement: \"Calamitisease\" is a massive microbial cluster with advanced technical capabilities. Its spread and proliferation are highly secretive and dangerous. This galaxy does not possess any handling capability.>§!"
+ SRA_RE_Start.200.c:"In that case why not completely destroy them?"
+ SRA_RE_Start.200.c.response:"Query request received, calculating response... Calculation complete.\n\n§Y<Response: \"Calamitisease\" delivery facility exists in Planning Area C-0076, already in fully charged state. Its operation will immediately scatter \"Calamitisease\" throughout the galaxy. At present stage, there is no proper disposal plan other than time stasis.>§!"
+ SRA_RE_Start.200.d:"We won't listen to your dictation."
+ SRA_RE_Start.200.d.response:"Communication received, calculating response... Calculation complete.\n\n§Y<Response: Oh.>§!"
+ SRA_RE_Start.200.e:"Soulless abomination."
+ SRA_RE_Start.200.e.response:"Communication received, calculating response... Calculation complete.\n\n§Y<Response: Truly pathetic.>§!"
+ #科尔Core 克尔Kuur
+ SRA_RE_Start.200.x:"CORE? What is your relationship with the Kuur Precursors?"
+ SRA_RE_Start.200.x.response:"Query request received, calculating response... Acquiring \"Kuur\" related information... Calculation complete.\n\n§Y<Organizing Record: Kuur, extinct civilization, creator of large collective machine consciousness \"Cybrex\". Relevant information archiving complete.>\n\n<Response: CORE is unrelated to Kuur.>§!"
+ SRA_RE_Start.200.z:"End transmission"
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

@@ -1,0 +1,10 @@
+SRA_can_do_orbital_bombardment_country = {
+	OR = {
+		is_country_type = faction_SRA_Crisis_country
+		is_country_type = faction_SRA_RE_Crisis_country_1
+		is_country_type = faction_SRA_Chief_country
+		is_country_type = faction_SRA_RE_End_2_country
+		is_country_type = faction_SRA_Rokia
+	}
+}
+

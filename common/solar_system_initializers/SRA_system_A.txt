@@ -1,0 +1,425 @@
+#星规行动基地
+SRA_system_A = {
+	name = "NAME_SRA_system_A"
+	class = "sc_rift_star"
+	usage = fallen_empire_init
+	flags = { SRA_system_A }
+
+	planet = {
+		name = "NAME_SRA_system_A_star"
+		class = pc_rift_star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 0
+		init_effect = {
+			save_event_target_as = SRA_system_A_star
+		}	
+		
+	}
+	
+	init_effect = {
+		spawn_megastructure = { 
+			type = "SRA_GZ_Core" 
+			# graphical_culture = "mammalian_01"
+			coords_from = event_target:SRA_system_A_star
+			init_effect = {
+				save_event_target_as = SRA_GZ_Core
+			}
+		}
+	}
+	change_orbit = 45
+	
+	
+	planet = {
+		name = "NAME_SRA_system_A_ring1"
+		class = "pc_ringworld_habitable_SRA_GZ"
+		orbit_angle = 30
+		orbit_distance = 0
+		deposit_blockers = none
+		size = 10
+			
+		init_effect = {
+			save_event_target_as = SRA_system_A_ring1
+			set_planet_flag = megastructure
+			prevent_anomaly = yes
+			add_building = building_system_capital
+			add_building = building_SRA_control_centre
+			add_building = building_SRA_ground_yards
+			set_planet_flag = colony_event
+			
+			set_variable = { which = SRA_world_machine_produces value = 5 }
+			carrier_event = { id = SRA_Start.5 days = 3600 }
+	
+		}			
+	}
+
+	init_effect = {
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring2"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring2
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring3"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring3
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring4"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring4
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}		
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring5"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring5
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring6"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring6
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring7"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring6
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring8"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring8
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring9"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring9
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring10"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring10
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring11"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring11
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring12"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring12
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+}
+
+#星规行动基地（帝国线）
+SRA_system_B = {
+	name = "NAME_SRA_system_A"
+	class = "sc_rift_star"
+	usage = fallen_empire_init
+	flags = { SRA_system_A }
+
+	planet = {
+		name = "NAME_SRA_system_A_star"
+		class = pc_rift_star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 0
+		init_effect = {
+			save_event_target_as = SRA_system_A_star
+		}	
+		
+	}
+	
+	init_effect = {
+		spawn_megastructure = { 
+			type = "SRA_GZ_Core_0" 
+			# graphical_culture = "mammalian_01"
+			coords_from = event_target:SRA_system_A_star
+			init_effect = {
+				save_event_target_as = SRA_GZ_Core
+			}
+		}
+	}
+	change_orbit = 45
+	
+	
+	planet = {
+		name = "NAME_SRA_system_A_ring1"
+		class = "pc_ringworld_habitable_SRA_GZ"
+		orbit_angle = 30
+		orbit_distance = 0
+		deposit_blockers = none
+		size = 10
+			
+		init_effect = {
+			save_event_target_as = SRA_system_A_ring1
+			set_planet_flag = megastructure
+			prevent_anomaly = yes
+			add_building = building_system_capital
+			add_building = building_SRA_control_centre
+			add_building = building_SRA_ground_yards
+			set_planet_flag = colony_event
+			
+			set_variable = { which = SRA_world_machine_produces value = 5 }
+			carrier_event = { id = SRA_Start.5 days = 3600 }
+	
+		}			
+	}
+
+	init_effect = {
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring2"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring2
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring3"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring3
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring4"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring4
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}		
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring5"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring5
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring6"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring6
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring7"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring6
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring8"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring8
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring9"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring9
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring10"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring10
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring11"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring11
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_system_A_ring12"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			set_planet_entity = {
+				entity = SRA_ancient_ringworld_tech_blue_entity
+			}
+			save_event_target_as = SRA_system_A_ring12
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+		}	
+	}
+}

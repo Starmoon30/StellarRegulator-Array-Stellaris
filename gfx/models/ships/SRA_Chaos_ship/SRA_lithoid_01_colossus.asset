@@ -1,0 +1,26 @@
+entity = {
+	name = "SRA_lithoid_01_colossus_ship_entity"
+	pdxmesh = "SRA_lithoid_01_colossus_mesh"
+	scale = 1.15
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "open" 
+		event = { time = 0 node = "light_locator_01" particle = "lithoid_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "lithoid_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_03" particle = "lithoid_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_04" particle = "lithoid_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_05" particle = "lithoid_01_ship_light_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "lithoid_colossus_idle" stop_on_state_change = yes } }
+		
+	}
+	attach = { ship_main = "lithoid_01_colossus_core_entity" }
+}
+entity = {
+	name = "SRA_lithoid_01_colossus_planet_entity"
+	scale = 8
+	default_state = "idle"
+	locator = { name = "root"	position = { 0 0 0 } rotation = { 0 180 0 } }
+	attach = { root = "SRA_lithoid_01_colossus_ship_entity" }
+	
+}

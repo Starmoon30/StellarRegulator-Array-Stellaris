@@ -1,0 +1,116 @@
+﻿l_english:
+###############################
+ SRA_ag_StarLightII_species:0 "Ancient Artificial Intelligence"
+ SRA_ag_StarLightII:0 "Starlight II"
+ SRA_ag_StarinAurora:0 "Star in Aurora"
+ SRA_ag_Illustelia:0 "Illustelia I"
+ SRA_ag_StarLightII_back:0 "Return to Previous Level"
+ SRA_ag_StarLightII_cancel:0 "End Communication"
+ leader_trait_SRA_ag_StarLightII_sci1:0 "§PAncient Civilization Database§!"
+ leader_trait_SRA_ag_StarLightII_sci1_desc:0 "§PThis leader possesses a database containing a massive amount of scientific research materials from the Ancient Civilization. When participating in research projects related to the Ancient Civilization, they can make more progress.\n§YWhen this leader participates in research projects related to the Ancient Civilization, the effective level of project researchers and the Head of Research is increased by §G+1§!.§!§!"
+ leader_trait_SRA_ag_StarLightII_sci2:0 "§PStarlight II§!"
+ leader_trait_SRA_ag_StarLightII_sci2_desc:0 "§PAs an advanced artificial intelligence from the Ancient Civilization, Starlight II performs exceptionally well in the field of scientific research, and is especially adept at scientific exploration.§!"
+ leader_trait_SRA_ag_StarLightII_adm1:0 "§PAncient Civilization Database§!"
+ leader_trait_SRA_ag_StarLightII_adm1_custom_tooltip:0 "Damage to Ancient Civilization Creations and Shroud Invaders: §G+200%§!\nDamage to Eternal Fleet: §G+200%§!"
+ leader_trait_SRA_ag_StarLightII_adm1_desc:0 "§PThis leader possesses a database containing a massive amount of military materials from the Ancient Civilization. When fighting against certain enemies, they can gain a greater advantage, and will not be killed by certain special weapons.§!"
+ leader_trait_SRA_ag_StarLightII_adm2:0 "§PStarlight II§!"
+ leader_trait_SRA_ag_StarLightII_adm2_desc:0 "§PAs an advanced artificial intelligence from the Ancient Civilization, Starlight II performs exceptionally well in the field of fleet command, and is especially adept at commanding Ancient Warships.§!"
+
+
+ SRA_ag_StarLightII.1.name:0 "Unexpected Harvest"
+ SRA_ag_StarLightII.1.desc:0 "Starlight II has been with our civilization for some time. This intelligent starship from the Ancient Civilization is now widely popular. Although compared to those powerful Ancient Titans, the battleship-class Starlight II is not adept at sweeping across battlefields, as the only AI left by the glorious Ancient Civilization willing to share knowledge, every insight she offers is invaluable.\nRecently, we noticed a blue figure appearing in Starlight II's hull from time to time, seeming to communicate something. Perhaps you could ask about it?"
+ SRA_ag_StarLightII.1.a:0 "Interesting"
+ SRA_ag_StarLightII.1.b:0 "What, is it finally going to change?"
+
+#以下为技术线文案
+ SRA_ag_StarLightII.2.desc:0 "Ah, you are here.\nI thought it was about time. If you hadn't come over, I would probably have gone to you to talk about this matter.\nWhat matter?\nDon't ask what you already know, of course it's about Starlight II."
+ SRA_ag_StarLightII.3.desc:0 "Starlight II's intelligence has always been in a delicately unstable state. Although there are no adverse effects, she occasionally has an indescribable feeling, as if something is missing.\nSo during this time, I have been conducting source tracing searches based on the database provided by Starlight II, trying to find something about Starlight II or artificial intelligence systems from the remaining materials of various Ancient Civilizations."
+ SRA_ag_StarLightII.4.desc:0 "So this is the harvest, \"Composite Artificial Intelligence Interaction System\".\nAlthough this project was abandoned by the Ancient Civilization, most of the work has been completed.\nAccording to the data, this system can greatly enhance the behavioral capabilities and interactivity of artificial intelligence. Its learning and intelligent evolution rate is 23.3% higher than ordinary ones. However, because the problem of unstable personality models could not be solved, this project was eventually shelved."
+ SRA_ag_StarLightII.5.desc:0 "The relevant interface on Starlight II's intelligence has not been removed, which is why she feels something is missing.\nIf you want, I can perfect this mechanism. In this way, Starlight II can act in the form of a humanoid terminal and can provide you with additional help.\nOf course, you can choose not to do so. I will remove the relevant interface on Starlight II's intelligence, so she won't feel uncomfortable."
+ SRA_ag_StarLightII.5.a:0 "Change it for me!"
+ SRA_ag_StarLightII.5.b:0 "No 2D waifus, no 2D waifus"
+
+ SRA_AG_STARLIGHTII:0 "Starlight II Mechanism Completion"
+ SRA_AG_STARLIGHTII_DESC:0 "StellarRe tells you that Starlight II has a... whatever mechanism, anyway, it can turn into a beautiful girl form, yeah.\nChange!"
+
+ SRA_ag_StarLightII.26.name:0 "Project Complete"
+ SRA_ag_StarLightII.26.desc:0 "After four months of slacking off, StellarRe finally completed the replenishment work on that Ancient Civilization project. After giving you a simple report, she ended the communication: \"Ah, calculating the time, that person is about to initiate communication with you too, I'll slip away first~\""
+ SRA_ag_StarLightII.26.a:0 "Oh my"
+
+ SRA_ag_StarLightII.27.desc:0 "...No, StellarRe, I didn't detect any communication interference at all. Why hasn't it connected yet? Did you do something?\nWhat, behind me?\n(Turns around)\n..."
+ SRA_ag_StarLightII.27.a:0 "(Smile)"
+ SRA_ag_StarLightII.28.desc:0 "...\n...H...Hello?"
+ SRA_ag_StarLightII.28.a:0 "Long time no see, Starlight II."
+ SRA_ag_StarLightII.29.desc:0 "Mm... been busy with this lately...\nAh, that...\nHow do I look?"
+ SRA_ag_StarLightII.29.a:0 "Pretty good, suits you very well."
+ SRA_ag_StarLightII.30.desc:0 "That's good... This image was designed by an engineer of the Ancient Civilization. To be honest, those ancient facilities designed by this engineer codenamed \"Funny\" are really cunning, but it seems he finally did a kind thing this time.\nThen, my hull and this brand new form will continue to serve you.\n§YIf Starlight II is destroyed without an emergency repair system installed, you can initiate a reconstruction Special Project by contacting her.§!"
+ SRA_ag_StarLightII.30.a:0 "Pleasant cooperation."
+
+ SRA_ag_StarLightII.31.b:0 "Special Project: H-Sector Cracking"
+ SRA_ag_StarLightII.31.b.desc:0 "§PWarning, the Special Project requires collecting all Ancient Ship - Vortex Spirit traits to complete successfully.§!"
+ SRA_ag_StarLightII.31.c:0 "Special Acquisition: Lone Star Brilliance Shipborne Database Records"
+ SRA_ag_StarLightII.31.c.desc:0 "§PStarlight II will spend some time trying to acquire other record entry information in the Lone Star Brilliance shipborne database.§!"
+
+
+
+
+ SRA_ag_StarLightII.39.a:0 "Reconstruct Starlight II"
+
+ SRA_AG_STARLIGHTII_REPAIR:0 "Starlight II Reconstruction"
+ SRA_AG_STARLIGHTII_REPAIR_DESC:0 "Although completely destroyed, Starlight II can still reconstruct herself with the help of backup data and StellarRe, but this will take quite some time."
+
+ SRA_ag_StarLightII.117.name:0 "Special Project: H-Sector Cracking"
+ SRA_ag_StarLightII.117.desc:0 "After learning about the problem we face, Starlight II proposed a method that could theoretically crack the ancient security system and stably close the ancient gateway without relying on providing control talismans to obtain the authority of the ancient space station. With the support of the Ancient Civilization database, this project can be completed in just one month."
+ SRA_ag_StarLightII.117.a:0 "Good proposal, let's start the action."
+ SRA_ag_StarLightII.117.b:0 "Forget it."
+
+ SRA_ag_StarLightII_eta_gateway_event_overwrite_project:0 "§PH-Sector: Crack Ancient Space Station§!"
+ SRA_ag_StarLightII_eta_gateway_event_overwrite_project_DESC:0 "With the help of Starlight II, we designed an operation method capable of cracking the system of $ag_ancient_eta_gateway_control_megastructure_name$ without relying on providing it with control talismans."
+
+
+ SRA_ag_StarLightII.118.name:0 "Special Acquisition: Lone Star Brilliance Shipborne Database Records"
+ SRA_ag_StarLightII.118.desc:0 "Ah, hello. After receiving your order, with the assistance of StellarRe, I carried out a series of operations involving complex psionic effects and acquired part of the record entries in the Lone Star Brilliance shipborne database in batches. You can go and review the content now."
+ SRA_ag_StarLightII.118.a:0 "Thank you very much for your help."
+
+
+ SRA_ag_StarLightII.1001.name:0 "Follow Suit"
+ SRA_ag_StarLightII.1001.desc:0 "After completing the transformation project of Starlight II, we have gained a deeper understanding of the composition of ancient AI. Perhaps the \"Composite Artificial Intelligence Interaction System\" can be applied to other ancient AIs, for example..."
+ SRA_ag_StarLightII.1001.a:0 "Star in Aurora?"
+ SRA_ag_StarLightII.1001.b:0 "Illustelia I?"
+ SRA_ag_StarLightII.1001.z:0 "Forget it."
+ SRA_ag_StarLightII.1001.z.tooltip:0 "§RThis will cancel all subsequent ancient AI transformation projects.§!"
+ SRA_ag_StarLightII.1002.name:0 "Dangerous Person"
+ SRA_ag_StarLightII.1002.desc:0 "Obviously, unlike the easy-going Starlight II, Star in Aurora's AI has quite... distinctive personality. Whether due to simulated personality deviation caused by long-term lack of maintenance, or indeed affected by the destruction of the Ancient Civilization, in short, Star in Aurora's personality is dangerous to a certain extent.\nAlthough we have gained her trust through communication, we cannot confirm her attitude towards non-Ancient Civilizations changing her own code.\nWe can choose to be open with her, or secretly change her code and adjust relevant data to make her accept the change results."
+ SRA_ag_StarLightII.1002.a:0 "Propose it to her face to face,"
+ SRA_ag_StarLightII.1002.b:0 "Carry out transformation secretly."
+
+ SRA_ag_StarLightII.1003.desc:0 "...Searching database... No relevant records...\n\n...You... what do you mean...\n\n...Starlight Series... unfinished technology?\n\n...Low credibility..."
+ SRA_ag_StarLightII.1003.a:0 "Why don't you go and understand the changes in Starlight II yourself?"
+
+ SRA_ag_StarLightII.1004.desc:0 "...Strange technology... Why did the Core Systems make this kind of thing...\n\n...Considering benefits... Acceptable..."
+ SRA_ag_StarLightII.1004.a:0 "Good, let's begin"
+
+ SRA_ag_epsilon_titan:0 "Star in Aurora Mechanism Completion"
+ SRA_ag_epsilon_titan_DESC:0 "Based on the previous experience of transforming Starlight II, we can try to reproduce this process on Star in Aurora. Considering that a certain engineer of the Ancient Civilization also designed an image for Star in Aurora, there should be no problem with this project."
+
+ SRA_ag_StarLightII.1005.desc:0 "...Strange posture... Extra expenses...\n\n...Hope it's worth it...\n\n..."
+ SRA_ag_StarLightII.1005.a:0 "Trust me, no problem"
+
+ SRA_ag_StarLightII.1006.desc:0 "...What did you... do to me...\n\n..."
+ SRA_ag_StarLightII.1006.a:0 "This is the Ancient Civilization's technology for optimizing AI. Starlight II has already participated in this project"
+
+ SRA_ag_StarLightII.1007.desc:0 "...Self-check no abnormality... Potential optimization...\n\n...Strange design of Core Sector... Unreasonable...\n\n..."
+ SRA_ag_StarLightII.1007.a:0 "Trust me, no problem"
+
+
+ SRA_ag_StarLightII.1101.name:0 "Illustelia Remnant"
+ SRA_ag_StarLightII.1101.desc:0 "As an ancient computer management intelligence surviving to this day, Illustelia I appears calm and indifferent most of the time. She probably won't have any opinion on this transformation plan, or should we better ask for her opinion?"
+ SRA_ag_StarLightII.1101.a:0 "Talk to her,"
+ SRA_ag_StarLightII.1102.desc:0 "I don't remember such a project, but there is no problem with the data packet signature. It's really strange.\n\nWell, I have no opinion. I can accept this project."
+ SRA_ag_StarLightII.1102.a:0 "Good."
+
+ SRA_ag_kappa_computer:0 "Illustelia I Mechanism Completion"
+ SRA_ag_kappa_computer_DESC:0 "Based on the previous experience of transforming Starlight II, we can try to reproduce this process on Illustelia I. Considering that a certain engineer of the Ancient Civilization also designed an image for Illustelia I, there should be no problem with this project."
+
+ SRA_ag_StarLightII.1103.desc:0 "...\nSelf-check results show that there is no considerable improvement in relevant performance.\nI have reason to suspect that this is simply a change in appearance, out of some people's strange personal interests...\nI don't hate it, but please be direct next time."
+ SRA_ag_StarLightII.1103.a:0 "Hmm."

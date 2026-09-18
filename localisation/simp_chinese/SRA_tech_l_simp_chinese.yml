@@ -1,0 +1,96 @@
+﻿l_simp_chinese:
+###############################
+ war_goal_wg_SRA_AI_world_machine_attack:0 "铸星神械-统合"
+ war_goal_wg_SRA_AI_world_machine_attack_desc:0 "威胁值达标，肃清开始。"
+ 
+ war_goal_wg_SRA_AI_world_machine_defense:0 "铸星神械-统合"
+ war_goal_wg_SRA_AI_world_machine_defense_desc:0 "检测到进攻，肃清开始。"
+
+
+
+ SRA_category: "星辉技术"
+ SRA_category_desc: "基于星辉水晶的各项性质建立的技术体系，比绝大多数常规科技更加高效。"
+
+ SRA_SD_category: "树海之艺"
+ SRA_SD_category_desc: "基于超凡体系建立的星际时代技术，有时是对应需求设计的新创造，有时是简单搬上太空的旧技艺。"
+
+ tech_SRA_T4_weapon_SML_Mass_Drivers:0 "星规常规武器系统"
+ tech_SRA_T4_weapon_SML_Mass_Drivers_desc:0 "星规阵列所使用的常规武器系统，主要由多功能能量速射炮和重型湮灭武器组成，对大多数防御拥有极强的侵彻力，特殊的能量诱导技术则保证了对机动目标的精确性。"
+ tech_SRA_T4_weapon_TX_Laser:0 "星规抹除光矛"
+ tech_SRA_T4_weapon_TX_Laser_desc:0 "星规阵列的标志性武器，通过破坏时空结构或位面本身来撕裂敌人，并且释放出大量能量造成二次毁伤。\n位面探索工程表明了位面之外所谓“混沌海”的存在，这些未定义的事物在通过位面缝隙抵达我们位面的时候会转化成基本的能量，这推动了武器技术的革新。就目前而言，这项技术尚未产生不可控的后果。"
+ tech_SRA_T4_weapon_HGP_weapon:0 "星规副武器系统"
+ tech_SRA_T4_weapon_HGP_weapon_desc:0 "星规阵列所使用的舰载机组、导弹组以及点防御组，拥有极佳的兼容性和可靠性。"
+ tech_SRA_T4_ship_Part:0 "星规舰船系统"
+ tech_SRA_T4_ship_Part_desc:0 "星规阵列的舰船由['concept_SRA_Stellarcrystal_Fractal']建造，使用一套极为优异的组件，能够在兼容各种其他设计的情况下以极高的效率工作。"
+
+ tech_SRA_T4_Armies:0 "星规行星肃清单元"
+ tech_SRA_T4_Armies_desc:0 "肃星神械，或称星规行星肃清单元，是一系列由['concept_SRA_Stellarcrystal_Fractal']所打造的先进战争机械的总称，这一集合作为地表战争的最终解决方案，能以超乎想象的速度摧毁一切抵抗。\n大多数情况下，肃星神械表现为一座巨大的悬浮作战平台，主要搭载空间撕裂武器、抹除武器以及脉冲能量束。考虑到复杂的地表战况和外星生命形式，它同时还可以构建出电磁脉冲、中子羽流等特化武器以高效的清除任何抵抗者。如有需求，肃星神械也能重组成为任意大小的作战机械，系统性的肃清多样化的防御工事。"
+
+ tech_SRA_nano_shipyard:0 "星规-质能构筑框架"
+ tech_SRA_nano_shipyard_desc:0 "得益于星规阵列先进的质能操纵技术，我们可以直接在太空中利用军工材料直接构筑出舰船，这使得恒星基地能够迅速生产大量舰船。"
+
+ tech_SRA_starbase_turret:0 "星规-深空哨兵"
+ tech_SRA_starbase_turret_desc:0 "这座大型防御平台为恒星基地提供强大的火力援助。不仅如此，其上独特的信号发生器能让这座防御平台在敌人眼中威胁更大，从而在一定程度上替恒星基地吸引火力。"
+
+ tech_SRA_Barrier_megastructure_0:0 "星规-流天星阵"
+ tech_SRA_Barrier_megastructure_0_desc:0 "流天星阵战斗要塞，设计用于在战争前线提供舰队补给，收集周围的资源并加工，快速组建船只，以及直接参与正面战斗，为舰队提供强有力的火力支援和战斗系统支持。"
+
+ tech_SRA_T4_hidden_tech:0 "星规技术-权限未开放"
+ tech_SRA_T4_hidden_tech_desc:0 "§Y你不该拥有这个。§!"
+
+ tech_SRA_GZ_repair:0 "调谐星核重启"
+ tech_SRA_GZ_repair_desc:0 "运用大量的星界丝缕，我们可以逐渐恢复调谐星核的运行功率。"
+
+ tech_SRA_T3_Composite_Crystal_Lattice:0 "星辉水晶复合晶格技术"
+ tech_SRA_T3_Composite_Crystal_Lattice_desc:0 "对星辉水晶独特性质的研究揭示了一条前景远大的道路——我们可以通过技术手段编辑其内部的四维折叠结构，以使它表现出我们所需要的性质。\n§Y将会使所有['concept_SRA_Stellarcrystal_industry']升级，提升产能和岗位数量。§!"
+ tech_SRA_T3_Crystal_Node:0 "星辉水晶网络"
+ tech_SRA_T3_Crystal_Node_desc:0 "星辉水晶之间独特的关联能使它们成为优秀的通讯网络核心组件，这允许我们建设一套特殊的控制系统来控制更多的设施。"
+ tech_SRA_T3_Planet_Mobilization:0 "星球级动员调令"
+ tech_SRA_T3_Planet_Mobilization_desc:0 "实施决议的速度往往不尽人意，所以我们研发出了一套全新的，能更好的发动我们执行力的组织系统。"
+ tech_SRA_T3_Recovery_Nest:0 "星辉复苏之巢"
+ tech_SRA_T3_Recovery_Nest_desc:0 "结合了微观修复技术和思维调整技术的修护舱能恢复一切劳损，让你以最好的姿态开始新的一天。"
+ tech_SRA_T3_Singularity_Gravitation_Control:0 "奇异级引力控制"
+ tech_SRA_T3_Singularity_Gravitation_Control_desc:0 "通过['concept_SRA_Composite_Crystal_Lattice']技术，我们可以做到小尺度内的黑洞级引力场模拟，并将其影响隔离在一定范围内。这可以创造出一座独特的物理实验室，还提供了人工合成大量暗物质的可能。与此同时，我们拥有了组建使用引力武器的特殊军队的能力。\n\n精妙的视界奇点核心是引力理论的结晶，它赋予了我们的造物统一基本力的权能，这种技术将颠覆整个世界。"
+ tech_SRA_T3_Wide_Area_Mind_Control:0 "广域思维控制"
+ tech_SRA_T3_Wide_Area_Mind_Control_desc:0 "实验表明，星辉水晶可以引导灵能，并以特定模式向外发射，这使得持续性的思维干涉成为了可能……\n我们可以让我们的公民认同我们想让他们认同的，执行我们想让他们执行的，让他们真正成为国家的一部分……\n§R为什么不这么做呢？§!"
+ tech_SRA_T3_Directional_Thinking_Patterns_Erase:0 "定向思维模式抹除"
+ tech_SRA_T3_Directional_Thinking_Patterns_Erase_desc:0 "什么思想该有，什么思想不该有，他们应当对此心知肚明。\n如果他们不明白，我们会让他们永远明白。\n§R站好队列 汝等顺从的机器\n大声欢呼 你当知思考乃重罪§!"
+
+ tech_SRA_T3_weapon_SML_Plasma:0 "晶格聚合发射器"
+ tech_SRA_T3_weapon_SML_Plasma_desc:0 "使用['concept_SRA_Composite_Crystal_Lattice']技术构建的火炮组，释放出独特的能量团，能够渗透护盾和主要装甲，直接破坏船体。"
+ tech_SRA_T3_weapon_TX_Laser:0 "晶格裂解光束"
+ tech_SRA_T3_weapon_TX_Laser_desc:0 "使用['concept_SRA_Composite_Crystal_Lattice']技术构建的轴基光束武器，能够借助能级跌落或空间操纵，轻松撕裂物质结构。\n\n空间操纵技术允许我们通过直接破坏空间结构来摧毁其上的物质，这极大地推动了军事技术的发展。考虑到空间本身的自还原性会自行修复这种损伤，大规模的武器化仍然是安全的。"
+ tech_SRA_T3_weapon_HGP_weapon:0 "晶格副武器系统"
+ tech_SRA_T3_weapon_HGP_weapon_desc:0 "使用['concept_SRA_Composite_Crystal_Lattice']技术构建的舰载机组、导弹组以及点防御组，拥有极高的能量密度和稳定性。"
+ tech_SRA_T3_ship_Part:0 "晶格舰船系统"
+ tech_SRA_T3_ship_Part_desc:0 "使用['concept_SRA_Composite_Crystal_Lattice']技术构建的舰船组件，大幅度提升了舰船的运行效率。\n\n['concept_SRA_Composite_Crystal_Lattice']硬光，一种由静光子和包含复杂拓扑结构的星辉水晶粒子构成的材料，制造简便，质地轻盈，结构强度优越，是星辉水晶极化装甲的升级版本，同时做到了低成本和高性能。在['concept_SRA_Composite_Crystal_Lattice']技术的支持下，这种接近于可编程的材料可以按照指令维持所需的形态，并在数十万年内不需要能量输入来维系。而在有外部能量支持的情况下，其强度还能提升到更高的水平，并做到高效的自我修复。"
+
+
+ tech_SRA_T2_weapon_SML_Laser:0 "星辉水晶激光器"
+ tech_SRA_T2_weapon_SML_Laser_desc:0 "使用成熟的星辉水晶技术构建的激光器，对各种目标都有优秀的毁伤效果。"
+ tech_SRA_T2_weapon_TX_Laser:0 "星辉水晶光矛"
+ tech_SRA_T2_weapon_TX_Laser_desc:0 "使用成熟的星辉水晶技术构建的轴基光束武器，能提供巨量的能量输出和破坏力。"
+ tech_SRA_T2_weapon_HGP_weapon:0 "星辉水晶副武器系统"
+ tech_SRA_T2_weapon_HGP_weapon_desc:0 "使用成熟的星辉水晶技术构建的舰载机组、导弹组以及点防御组，使用高效率的能量武器。"
+ tech_SRA_T2_ship_Part:0 "星辉水晶舰船系统"
+ tech_SRA_T2_ship_Part_desc:0 "使用成熟的星辉水晶技术构建的舰船防御部件，相较于初型更为优秀。\n\n在一系列工序后再结晶的星辉水晶拥有规整的内部结构，颜色会转为深蓝色，并在几乎所有方面表现的更加优秀。然而，很显然，这种物质的潜力不止于此。"
+
+
+ tech_SRA_T1_weapon_SML_Space_Whale_Weapon:0 "初型水晶放能器"
+ tech_SRA_T1_weapon_SML_Space_Whale_Weapon_desc:0 "使用星辉水晶技术构建的试验性能量武器，能释放出充满破坏力的能量束。"
+ tech_SRA_T1_weapon_TX_Laser:0 "初型水晶光矛"
+ tech_SRA_T1_weapon_TX_Laser_desc:0 "使用星辉水晶技术构建的试验性轴基光束武器，相较于常规光矛武器对护盾效率更高。"
+ tech_SRA_T1_weapon_HGP_weapon:0 "初型水晶副武器系统"
+ tech_SRA_T1_weapon_HGP_weapon_desc:0 "使用星辉水晶技术构建的试验性舰载机组、导弹组以及点防御组，统一了设计模式后效率更高。"
+ tech_SRA_T1_ship_Part:0 "初型水晶舰船系统"
+ tech_SRA_T1_ship_Part_desc:0 "使用星辉水晶技术构建的试验性舰船防御组件。\n\n未经提纯的星辉水晶表现出鲜艳的红色，这是其中内含的结构裂痕和其他粒子导致的。尽管如此，这种材料仍然展现出了独特的优势，特别是在接受了充能后的优异强度，和制造能量护盾的高效性质。对这种物质的进一步研究表明，操纵能量并不仅仅可以用来防御，更多军工技术有待发展。"
+
+
+ tech_SRA_SD_ship_Part:0 "树海残枝-舰船系统"
+ tech_SRA_SD_ship_Part_desc:0 "汝之创造即宿命。"
+ ### RE Core & Erlius Trait Tech (Missing Loc) ###
+ tech_SRA_RE_Core_tech:0 "星规-罗西维亚帝国核心系统"
+ tech_SRA_RE_Core_tech_desc:0 "罗西维亚帝国战舰的核心系统。这些专有组件与帝国独特的作战理念无缝融合，提供无与伦比的力量与韧性。"
+ ### Erlius Trait Tech ###
+ tech_SRA_Erlius_trait:0 "艾尔琉斯生物适应"
+ tech_SRA_Erlius_trait_desc:0 "针对艾尔琉斯种族量身定制的实验性生物改造技术，通过定向适应协议解锁独特的基因特性强化。\n§Y该技术被归类为危险技术。§!"

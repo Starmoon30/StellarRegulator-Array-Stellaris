@@ -1,0 +1,976 @@
+namespace = SRA_RE_Hidra
+
+country_event = {
+	id = SRA_RE_Hidra.2
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.2.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		from = { 
+			is_country_type = faction_SRA_RE_Hidra
+		}
+		has_country_flag = has_SRA_RE_Hidra_country
+		NOT = {
+			has_country_flag = SRA_RE_Hidra_country_talked
+		}
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 32 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.1 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.1 }}
+		default_hide_option = yes
+	}
+}
+
+
+country_event = {
+	id = SRA_RE_Hidra.1
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.1.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_RE_Hidra
+				is_same_value = ROOT
+			}
+		}
+		has_country_flag = has_SRA_RE_Hidra_country
+		has_country_flag = SRA_RE_Hidra_country_talked
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 32 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Hidra_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Hidra_engaged
+		}
+	}
+
+	#寻求支援
+	option = {
+		name = SRA_RE_Hidra.1.a
+		trigger = {
+			NOT = {
+				has_country_flag = SRA_chaos_ascension_leader
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.100
+			}
+		}
+	}
+	#就任领袖
+	option = {
+		name = SRA_RE_Hidra.1.b
+		trigger = {
+			NOT = {
+				has_country_flag = SRA_chaos_ascension_leader
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.200
+			}
+		}
+	}
+	#闲聊
+	option = {
+		name = SRA_RE_Hidra.1.c
+		trigger = {
+		}
+		hidden_effect = {
+			SRA_RE_Hidra_talk_random = yes
+			country_event = { id = SRA_RE_Hidra.301 }
+		}
+	}
+	#寻求深渊的指引
+	option = {
+		name = SRA_RE_Hidra.1.d
+		trigger = {
+			has_country_flag = SRA_RE_Hidra_Cheat
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.401
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Hidra_talk_exit1
+		hidden_effect = {
+			remove_country_flag = RE_Hidra_engaged
+		}
+		default_hide_option = yes
+	}
+}
+
+
+#闲聊
+country_event = {
+	id = SRA_RE_Hidra.301
+	title = SRA_RE_Hidra
+	#无表情
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+		}
+		text = SRA_RE_Hidra.3011.a.desc
+		text = SRA_RE_Hidra.3011.b.desc
+		text = SRA_RE_Hidra.3011.c.desc
+		text = SRA_RE_Hidra.3011.d.desc
+		text = SRA_RE_Hidra.3011.e.desc
+	}
+	#微笑
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 2 }
+		}
+		text = SRA_RE_Hidra.3012.a.desc
+		text = SRA_RE_Hidra.3012.b.desc
+		text = SRA_RE_Hidra.3012.c.desc
+	}
+	#闭眼
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 3 }
+		}
+		text = SRA_RE_Hidra.3013.a.desc
+		text = SRA_RE_Hidra.3013.b.desc
+		text = SRA_RE_Hidra.3013.c.desc
+	}
+	#闭眼微笑
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 4 }
+		}
+		text = SRA_RE_Hidra.3014.a.desc
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		if = {
+			limit ={ check_variable = { which = SRA_RE_dialogue_talk value = 1 }}
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 32 }
+		}
+		if = {
+			limit ={ check_variable = { which = SRA_RE_dialogue_talk value = 2 }}
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+		}
+		if = {
+			limit ={ check_variable = { which = SRA_RE_dialogue_talk value = 3 }}
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 35 }
+		}
+		if = {
+			limit ={ check_variable = { which = SRA_RE_dialogue_talk value = 4 }}
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 37 }
+		}
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Hidra_engaged
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Hidra_engaged
+		}
+	}
+	option = {
+		name = SRA_RE_Hidra.1.c
+		hidden_effect = {
+			SRA_RE_Hidra_talk_random = yes
+			country_event = { id = SRA_RE_Hidra.301 }
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_return4
+		hidden_effect = { 
+			country_event = {
+				id = SRA_RE_Hidra.1
+			}
+		}
+	}
+}
+#寻求支援
+country_event = {
+	id = SRA_RE_Hidra.100
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.100.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_RE_Hidra
+				is_same_value = ROOT
+			}
+		}
+		has_country_flag = has_SRA_RE_Hidra_country
+		has_country_flag = SRA_RE_Hidra_country_talked
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+	option = { 
+		name = SRA_RE_Hidra.100.a
+		is_dialog_only = yes
+		custom_tooltip = SRA_RE_Hidra.100.a.desc
+		response_text = SRA_RE_Hidra.100.a.response
+		allow = {
+			NOT = {
+				has_modifier = SRA_RE_Hidra_101
+			}
+		}
+		add_modifier = {
+			modifier = SRA_RE_Hidra_101 days = 1800
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.101 days = 1800
+			}
+		}
+	}
+	option = { 
+		name = SRA_RE_Hidra.100.b
+		custom_tooltip = SRA_RE_Hidra.100.b.desc
+		allow = {
+			NOT = {
+				has_country_flag = SRA_RE_Hidra_102_cooldown
+			}
+			custom_tooltip = SRA_RE_Hidra.100.b.allow
+		}
+		hidden_effect = {
+			SRA_RE_Hidra_102_effect_1 = yes
+			country_event = {
+				id = SRA_RE_Hidra.102
+			}
+		}
+	}
+	option = { 
+		name = SRA_RE_Hidra.100.c
+		custom_tooltip = SRA_RE_Hidra.100.c.desc
+		trigger = {
+			has_country_flag = breached_shroud
+		}
+		allow = {
+			NOT = {
+				has_modifier = SRA_RE_Hidra_103_cooldown
+			}
+		}
+		hidden_effect = {
+			add_modifier = {
+				modifier = SRA_RE_Hidra_103_cooldown days = 1800
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						mult = 0
+						has_country_flag = SRA_RE_Hidra_500
+					}
+					set_country_flag = SRA_RE_Hidra_500
+					country_event = {
+						id = SRA_RE_Hidra.500
+					}
+				}
+				90 = {
+            		fire_on_action = { on_action = on_patron_delve_failed }
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Hidra_talk_return4
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.1
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Hidra_talk_exit1
+	}
+}
+
+country_event = {
+	id = SRA_RE_Hidra.101
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.101.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_RE_Hidra_country
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	option = { 
+		name = SRA_RE_Hidra.101.a
+		add_modifier = {
+			modifier = SRA_RE_Hidra_101 days = 1800
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.101 days = 1800
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Hidra.101.a
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.102
+	title = SRA_RE_Hidra
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_a } text = SRA_RE_Hidra_102_resource_a }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_b } text = SRA_RE_Hidra_102_resource_b }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_c } text = SRA_RE_Hidra_102_resource_c }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_d } text = SRA_RE_Hidra_102_resource_d }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_e } text = SRA_RE_Hidra_102_resource_e }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_f } text = SRA_RE_Hidra_102_resource_f }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_g } text = SRA_RE_Hidra_102_resource_g }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_h } text = SRA_RE_Hidra_102_resource_h }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_i } text = SRA_RE_Hidra_102_resource_i }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_j } text = SRA_RE_Hidra_102_resource_j }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_k } text = SRA_RE_Hidra_102_resource_k }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_l } text = SRA_RE_Hidra_102_resource_l }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_m } text = SRA_RE_Hidra_102_resource_m }
+	desc = { trigger = { has_country_flag = SRA_RE_Hidra_102_resource_n } text = SRA_RE_Hidra_102_resource_n }
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	show_sound = event_lootbox_good
+	trigger = {
+		has_country_flag = has_SRA_RE_Hidra_country
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		if = {
+			limit = { years_passed <= 20 }
+			set_timed_country_flag = {
+				flag = SRA_RE_Hidra_102_cooldown days = 3600
+			}
+		}
+		else_if = {
+			limit = { years_passed <= 40 }
+			set_timed_country_flag = {
+				flag = SRA_RE_Hidra_102_cooldown days = 1800
+			}
+		}
+		else = {
+			set_timed_country_flag = {
+				flag = SRA_RE_Hidra_102_cooldown days = 720
+			}
+		}
+	}
+	after = {   
+		switch = {
+			trigger = has_country_flag
+			SRA_RE_Hidra_102_resource_a = { remove_country_flag = SRA_RE_Hidra_102_resource_a }
+			SRA_RE_Hidra_102_resource_b = { remove_country_flag = SRA_RE_Hidra_102_resource_b }
+			SRA_RE_Hidra_102_resource_c = { remove_country_flag = SRA_RE_Hidra_102_resource_c }
+			SRA_RE_Hidra_102_resource_d = { remove_country_flag = SRA_RE_Hidra_102_resource_d }
+			SRA_RE_Hidra_102_resource_e = { remove_country_flag = SRA_RE_Hidra_102_resource_e }
+			SRA_RE_Hidra_102_resource_f = { remove_country_flag = SRA_RE_Hidra_102_resource_f }
+			SRA_RE_Hidra_102_resource_g = { remove_country_flag = SRA_RE_Hidra_102_resource_g }
+			SRA_RE_Hidra_102_resource_h = { remove_country_flag = SRA_RE_Hidra_102_resource_h }
+			SRA_RE_Hidra_102_resource_i = { remove_country_flag = SRA_RE_Hidra_102_resource_i }
+			SRA_RE_Hidra_102_resource_j = { remove_country_flag = SRA_RE_Hidra_102_resource_j }
+			SRA_RE_Hidra_102_resource_k = { remove_country_flag = SRA_RE_Hidra_102_resource_k }
+			SRA_RE_Hidra_102_resource_l = { remove_country_flag = SRA_RE_Hidra_102_resource_l }
+			SRA_RE_Hidra_102_resource_m = { remove_country_flag = SRA_RE_Hidra_102_resource_m }
+			SRA_RE_Hidra_102_resource_n = { remove_country_flag = SRA_RE_Hidra_102_resource_n }
+		}
+	}
+	option = { 
+		name = SRA_RE_Hidra_talk_return1
+		switch = {
+			trigger = has_country_flag
+			SRA_RE_Hidra_102_resource_a = {
+				add_resource = { minerals = 8000 }
+			}
+			SRA_RE_Hidra_102_resource_b = {
+				add_monthly_resource_mult = {
+					resource = consumer_goods
+					value = 6
+					min = 100
+				}
+			}
+			SRA_RE_Hidra_102_resource_c = {
+				add_resource = { rare_crystals = 2000 }
+			}
+			SRA_RE_Hidra_102_resource_d = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = 24
+					min = 2000
+				}
+			}
+			SRA_RE_Hidra_102_resource_e = {
+				add_monthly_resource_mult = {
+					resource = alloys
+					value = 6
+					min = 2000
+				}
+			}
+			SRA_RE_Hidra_102_resource_f = {
+				add_monthly_resource_mult = {
+					resource = food
+					value = 24
+					min = 2000
+				}
+			}
+			SRA_RE_Hidra_102_resource_g = {
+				add_monthly_resource_mult = {
+					resource = alloys
+					value = 24
+					min = 2000
+				}
+			}
+			SRA_RE_Hidra_102_resource_h = {
+				add_monthly_resource_mult = {
+					resource = consumer_goods
+					value =  6
+					min = 2000
+				}
+			}
+			SRA_RE_Hidra_102_resource_i = {
+				add_resource = { energy = 4000 }
+				add_resource = { minerals = 4000 }
+			}
+			SRA_RE_Hidra_102_resource_j = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = 24
+					min = 2000
+				}
+			}
+			SRA_RE_Hidra_102_resource_k = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = 24
+					min = 1000
+				}
+			}
+			SRA_RE_Hidra_102_resource_l = {
+				add_resource = { sr_zro = 200 }
+			}
+			SRA_RE_Hidra_102_resource_m = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = 24
+					min = 2000
+				}
+			}
+			SRA_RE_Hidra_102_resource_n = {
+				add_monthly_resource_mult = {
+					resource = alloys
+					value = 24
+					min = 2000
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.100
+			}
+		}
+	}
+}
+
+
+
+				
+#就任领袖
+country_event = {
+	id = SRA_RE_Hidra.200
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.200.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		has_country_flag = has_SRA_RE_Hidra_country
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+	option = { 
+		name = SRA_RE_Hidra.200.a
+		trigger = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_SRA_RE_Hidra_gov
+				}
+			}
+		}
+		hidden_effect = {
+			create_SRA_RE_Hidra_governor = yes
+			hidden_effect = { country_event = { id = SRA_RE_Hidra.1 }}
+		}
+	}
+	option = { 
+		name = SRA_RE_Hidra.200.b
+		trigger = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_SRA_RE_Hidra_sci
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = has_ancient_empire_mod
+				}
+				create_SRA_RE_Hidra_scientist_ag = yes
+			}
+			else = {
+				create_SRA_RE_Hidra_scientist = yes
+			}
+			hidden_effect = { country_event = { id = SRA_RE_Hidra.1 }}
+		}
+	}
+	option = { 
+		name = SRA_RE_Hidra.200.c
+		trigger = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_SRA_RE_Hidra_adm
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = has_ancient_empire_mod
+				}
+				create_SRA_RE_Hidra_admiral_ag = yes
+			}
+			else = {
+				create_SRA_RE_Hidra_admiral = yes
+			}
+			hidden_effect = { country_event = { id = SRA_RE_Hidra.1 }}
+		}
+	}
+	option = { 
+		name = SRA_RE_Hidra.200.d
+		trigger = {
+			NOT = {
+				any_owned_leader = {
+					has_trait = leader_trait_SRA_RE_Hidra_gen
+				}
+			}
+		}
+		hidden_effect = {
+			create_SRA_RE_Hidra_general = yes
+		}
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.1 }}
+	}
+	option = {
+		name = SRA_RE_Hidra_talk_return4
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.1
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Hidra_talk_exit1
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.401
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.401.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_RE_Hidra
+				is_same_value = ROOT
+			}
+		}
+		has_country_flag = has_SRA_RE_Hidra_country
+		has_country_flag = SRA_RE_Hidra_country_talked
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+
+	option = {
+		name = SRA_RE_Hidra.401.a
+		custom_tooltip = SRA_RE_Hidra.401.a.desc
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.402
+			}
+			set_country_flag = StellarRegulator_Array_tech_permit
+		}
+	}
+	option = {
+		name = SRA_RE_Hidra.401.b
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.1
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.402
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.402.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 37 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.403 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.409 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.403
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.403.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.404 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.409 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.404
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.404.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 32 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.405 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.409 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.405
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.405.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 26 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.406 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.409 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.406
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.406.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.407 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.409 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.407
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.407.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 22 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.408 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.409 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.408
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.408.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 37 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.409 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Hidra.409 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Hidra.409
+	title = SRA_RE_Hidra
+	desc = SRA_RE_Hidra.409.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 26 }
+		set_country_flag = SRA_RE_Hidra_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}
+
+
+country_event = {
+    id = SRA_RE_Hidra.500
+    title = shroud.whispers_in_the_shroud.title
+    diplomatic_title = shroud.3.diplo_title
+    desc = "SRA_RE_Hidra.500.desc"
+    diplomatic = yes
+    force_open = yes
+    show_sound = { trigger = { is_robot_empire = no } sound = event_psionic }
+    show_sound = { trigger = { is_robot_empire = yes } sound = event_psionic_robot }
+    is_triggered_only = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 10 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 0 }
+    }
+    option = {
+        name = SRA_RE_Hidra.500.a
+        if = {
+            limit = { is_robot_empire = yes }
+            enable_patron_first_contact_project = { name = SRA_patron_Hidra_project_machine patron = SRA_patron_Hidra owner = this }
+        }
+        else_if = {
+            limit = { is_hive_empire = yes }
+            enable_patron_first_contact_project = { name = SRA_patron_Hidra_project_hive patron = SRA_patron_Hidra owner = this }
+        }
+        else = {
+            enable_patron_first_contact_project = { name = SRA_patron_Hidra_project patron = SRA_patron_Hidra owner = this }
+        }
+    }
+}
+
+country_event = {
+    id = SRA_RE_Hidra.501
+    title = "SRA_RE_Hidra.501.name"
+    desc = "SRA_RE_Hidra.501.desc"
+    diplomatic = yes
+    force_open = yes
+    show_sound = { trigger = { is_robot_empire = no } sound = event_psionic }
+    show_sound = { trigger = { is_robot_empire = yes } sound = event_psionic_robot }
+    is_triggered_only = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 10 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 0 }
+    }
+    option = {
+        name = "SRA_RE_Hidra.501.a"
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Hidra.502
+			}
+		}
+    }
+}
+country_event = {
+    id = SRA_RE_Hidra.502
+    title = "SRA_RE_Hidra.502.name"
+    desc = "SRA_RE_Hidra.502.desc"
+    diplomatic = yes
+    force_open = yes
+    is_triggered_only = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 10 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+		set_patron_first_contact_state = { patron = SRA_patron_Hidra state = completed }
+    }
+    option = {
+        name = "SRA_RE_Hidra.502.a"
+        tooltip = { set_patron_first_contact_state = { patron = SRA_patron_Hidra state = completed } }
+    }
+}

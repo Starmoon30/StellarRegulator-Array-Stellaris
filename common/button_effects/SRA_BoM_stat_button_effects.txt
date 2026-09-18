@@ -1,0 +1,138 @@
+SRA_BoM_stat_a_effect = {
+    potential = {}
+    allow = {}
+    effect = {
+		custom_tooltip = "SRA_BoM_stat_a_tooltip"
+        hidden_effect = {
+            if = {
+                limit = {
+                    FROM = { check_variable = { which = SRA_BoM_stat_choose value = 1 } }
+                }
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 0 } }
+            }
+            else = {
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 1 } }
+            }
+        }
+    }
+}
+SRA_BoM_stat_a_box_effect = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_BoM_stat_choose value = 1 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_BoM_stat_b_effect = {
+    potential = {}
+    allow = {}
+    effect = {
+		custom_tooltip = "SRA_BoM_stat_b_tooltip"
+        hidden_effect = {
+            if = {
+                limit = {
+                    FROM = { check_variable = { which = SRA_BoM_stat_choose value = 2 } }
+                }
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 0 } }
+            }
+            else = {
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 2 } }
+            }
+        }
+    }
+}
+SRA_BoM_stat_b_box_effect = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_BoM_stat_choose value = 2 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_BoM_stat_c_effect = {
+    potential = {}
+    allow = {}
+    effect = {
+		custom_tooltip = "SRA_BoM_stat_c_tooltip"
+        hidden_effect = {
+            if = {
+                limit = {
+                    FROM = { check_variable = { which = SRA_BoM_stat_choose value = 3 } }
+                }
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 0 } }
+            }
+            else = {
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 3 } }
+            }
+        }
+    }
+}
+SRA_BoM_stat_c_box_effect = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_BoM_stat_choose value = 3 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_BoM_stat_d_effect = {
+    potential = {}
+    allow = {}
+    effect = {
+		custom_tooltip = "SRA_BoM_stat_d_tooltip"
+        hidden_effect = {
+            if = {
+                limit = {
+                    FROM = { check_variable = { which = SRA_BoM_stat_choose value = 4 } }
+                }
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 0 } }
+            }
+            else = {
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 4 } }
+            }
+        }
+    }
+}
+SRA_BoM_stat_d_box_effect = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_BoM_stat_choose value = 4 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_BoM_stat_e_effect = {
+    potential = {}
+    allow = {}
+    effect = {
+		custom_tooltip = "SRA_BoM_stat_e_tooltip"
+        hidden_effect = {
+            if = {
+                limit = {
+                    FROM = { check_variable = { which = SRA_BoM_stat_choose value = 5 } }
+                }
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 0 } }
+            }
+            else = {
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 5 } }
+            }
+        }
+    }
+}
+SRA_BoM_stat_e_box_effect = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_BoM_stat_choose value = 5 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}
+SRA_BoM_stat_f_effect = {
+    potential = {}
+    allow = {}
+    effect = {
+		custom_tooltip = "SRA_BoM_stat_f_tooltip"
+        hidden_effect = {
+            if = {
+                limit = {
+                    FROM = { check_variable = { which = SRA_BoM_stat_choose value = 6 } }
+                }
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 0 } }
+            }
+            else = {
+                FROM = { set_variable = { which = SRA_BoM_stat_choose value = 6 } }
+            }
+        }
+    }
+}
+SRA_BoM_stat_f_box_effect = {
+	potential = { hidden_trigger = { FROM = { check_variable = { which = SRA_BoM_stat_choose value = 6 } } } }
+	allow = { always = yes }
+    effect = { custom_tooltip = "SRA_settings_box" }
+}

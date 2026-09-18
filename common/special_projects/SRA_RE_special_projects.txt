@@ -1,0 +1,859 @@
+# 	on_success = { 					# Effect happens when project completes
+# 		# Scopes:
+# 		# 	THIS = project scope (matches setting in "event_scope" i.e. ship/planet/country)
+# 		# 	FROM = location scope, if set (usually a planet)
+# 		# 	PREV = country
+# 	}
+	
+# 	on_start = { 					# Effect happens when you start researching the project
+# 		# Scopes: see on_success
+# 	}
+	
+# 	on_progress_25/50/75 = {  		# Effect happens when you have researched X% of the research costs
+# 		# Scopes: see on_success
+# 	}
+	
+# 	on_fail = { 					# Effect happens if you allow the timelimit to expire
+# 		# Scopes:
+# 		# 	THIS = country
+# 		# 	FROM = project scope (matches setting in "event_scope" i.e. ship/planet/country). Might not exist!
+# 		# 	FROMFROM = location scope, if set (usually a planet)
+# 	}
+
+# 	on_cancel = { 					# Effect happens if you choose to stop researching or if the abort_trigger returns true
+# 		# Scopes: See on_fail
+# 	}
+
+# 	abort_trigger = { 				# Trigger for aborting the project and removing it from the situation log. Fires on_cancel effect
+# 		# Scopes: See on_fail
+# 	}
+# }
+
+#星穹之矛
+#分析现存资料库
+special_project = {
+	key = "SRA_RE_Start_SP1"
+	cost = 8000
+	event_chain = SRA_RE_SOGZ_repair_chain
+	tech_department = engineering_technology
+	picture = GFX_evt_mysterious_signal
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Start.3 }
+	}
+}
+#研究水晶共鸣
+special_project = {
+	key = "SRA_RE_Start_SP2"
+	cost = 16000
+	event_chain = SRA_RE_SOGZ_repair_chain
+	tech_department = physics_technology
+	picture = GFX_evt_decryption
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Start.8 }
+	}
+}
+#破解水晶
+special_project = {
+	key = "SRA_RE_Start_SP3"
+	cost = 24000
+	event_chain = SRA_RE_SOGZ_repair_chain
+	tech_department = physics_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Start.26 days = 1 }
+	}
+}
+#启动修复程序
+special_project = {
+	key = "SRA_RE_Start_SP4"
+	days_to_research = 120
+	event_chain = SRA_RE_SOGZ_repair_chain
+	tech_department = engineering_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_SOGZ.4 }
+		end_event_chain = SRA_RE_SOGZ_repair_chain
+	}
+}
+#第三个坟头的水晶
+special_project = {
+	key = "SRA_RE_Start_SP6"
+	cost = 60000
+	tech_department = physics_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Start.36 }
+	}
+}
+
+#星穹枢纽
+special_project = {
+	key = "SRA_RE_Start_SP7"
+	days_to_research = 5
+	tech_department = physics_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Start.42 }
+	}
+}
+#解锁星穹枢纽宜居段
+special_project = {
+	key = "SRA_RE_Start_SP8"
+	days_to_research = 120
+	tech_department = physics_technology
+	picture = GFX_evt_ringworld
+
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 6
+	}
+	
+	on_success = {
+		from = {
+			carrier_event = { id = SRA_RE_Start.43 }
+			enable_special_project = {
+				name = SRA_RE_Start_SP9
+				location = THIS
+				owner = root
+			}
+		}
+	}
+}
+#解锁调谐星核
+special_project = {
+	key = "SRA_RE_Start_SP9"
+	cost = 200000
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 6
+	}
+	
+	on_success = {
+		owner = {
+			country_event = { id = SRA_RE_Start.44 }
+		}
+	}
+}
+#加固灾疫封印
+special_project = {
+	key = "SRA_RE_Start_SP10"
+	days_to_research = 120
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 6
+	}
+	
+	on_success = {
+		owner = {
+			country_event = { id = SRA_RE_Start.127 }
+		}
+	}
+}
+#灾疫项目
+special_project = {
+	key = "SRA_RE_Crisis_1_SP1"
+	cost = 500000
+	tech_department = society_technology
+	picture = GFX_evt_fleet_evil
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Crisis.41 }
+	}
+}
+special_project = {
+	key = "SRA_RE_Crisis_1_SP2"
+	cost = 500000
+	tech_department = society_technology
+	picture = GFX_evt_fleet_evil
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Crisis.42 }
+	}
+}
+special_project = {
+	key = "SRA_RE_Crisis_1_SP3"
+	cost = 500000
+	tech_department = physics_technology
+	picture = GFX_evt_fleet_evil
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Crisis.43 }
+	}
+}
+special_project = {
+	key = "SRA_RE_Crisis_1_SP4"
+	cost = 500000
+	tech_department = engineering_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Crisis.44 }
+	}
+}
+special_project = {
+	key = "SRA_RE_Crisis_1_SP5"
+	cost = 5000
+	tech_department = engineering_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_Crisis.47 }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_1_project }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_2_project }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_3_project }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_4_project }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_5_project }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_6_project }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_7_project }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_8_project }
+		abort_special_project = { type = SRA_RE_StellarRegulator_debris_9_project }
+		end_event_chain = SRA_RE_StellarRegulator_debris_chain
+	}
+}
+
+#星穹之矛修复
+special_project = {
+	key = "SRA_RE_SOGZ_SP1"
+	days_to_research = 120
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+
+	event_scope = ship_event
+	requirements = {
+		shipclass_transport = 3
+	}
+	
+	on_success = {
+		random_list = {
+			8 = {
+				owner = {
+					country_event = { id = SRA_RE_SOGZ.23 }
+				}
+			}
+			2 = {
+				fleet = {
+					fleet_event = { id = SRA_RE_SOGZ.24 }
+				}
+			}
+		}
+	}
+}
+special_project = {
+	key = "SRA_RE_SOGZ_SP2"
+	days_to_research = 120
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+
+	event_scope = ship_event
+	requirements = {
+		shipclass_transport = 3
+	}
+	
+	on_success = {
+		event_target:SRA_RE_SOGZ_SP1_Fleet = {
+			set_event_locked = no
+		}
+		owner = {
+			country_event = { id = SRA_RE_SOGZ.23 }
+		}
+	}
+}
+special_project = {
+	key = "SRA_RE_SOGZ_SP3"
+	cost = 200000
+	tech_department = physics_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_SOGZ.25 }
+	}
+}
+special_project = {
+	key = "SRA_RE_SOGZ_SP4"
+	days_to_research = 120
+	tech_department = physics_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		country_event = { id = SRA_RE_SOGZ.28 }
+	}
+}
+special_project = {
+	key = "SRA_RE_SOGZ_SP5"
+	days_to_research = 120
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+	}
+	
+	on_success = {
+		owner = {
+			country_event = { id = SRA_RE_SOGZ.33 }
+		}
+	}
+}
+
+special_project = {
+	key = "SRA_RE_SOGZ_SP6"
+	days_to_research = 720
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+
+	event_scope = planet_event
+	requirements = {
+	}
+	
+	on_success = {
+		carrier_event = { id = SRA_RE_SOGZ.35 }
+	}
+}
+
+special_project = {
+	key = "SRA_RE_SOGZ_SP7"
+	cost = 80000
+	tech_department = physics_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		random_list = {
+			8 = { country_event = { id = SRA_RE_SOGZ.45 } }
+			2 = { country_event = { id = SRA_RE_SOGZ.46 } }
+		}
+	}
+}
+special_project = {
+	key = "SRA_RE_SOGZ_SP8"
+	cost = 160000
+	tech_department = physics_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		random_list = {
+			15 = { country_event = { id = SRA_RE_SOGZ.47 } }
+			5 = { country_event = { id = SRA_RE_SOGZ.48 } }
+		}
+	}
+}
+special_project = {
+	key = "SRA_RE_SOGZ_SP9"
+	cost = 320000
+	tech_department = physics_technology
+	picture = GFX_evt_baol_datacrystals
+
+	event_scope = country_event
+	
+	on_success = {
+		random_list = {
+			14 = { country_event = { id = SRA_RE_SOGZ.49 } }
+			5 = { country_event = { id = SRA_RE_SOGZ.50 } }
+			1 = { country_event = { id = SRA_RE_SOGZ.51 } }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+#科学院科研
+#星辉水晶技术
+
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP1"
+# 	cost = 20000
+# 	tech_department = physics_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				9 = {
+# 					country_event = { id = SRA_RE_Rocivia.3003 }
+# 				}
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3004 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP2"
+# 	cost = 20000
+# 	tech_department = society_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3005 }
+# 				}
+# 				9 = {
+# 					country_event = { id = SRA_RE_Rocivia.3006 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP3"
+# 	cost = 20000
+# 	tech_department = engineering_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				4 = {
+# 					country_event = { id = SRA_RE_Rocivia.3007 }
+# 				}
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3008 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP4"
+# 	cost = 40000
+# 	tech_department = physics_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				9 = {
+# 					country_event = { id = SRA_RE_Rocivia.3010 }
+# 				}
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3011 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP5"
+# 	cost = 40000
+# 	tech_department = society_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3012 }
+# 				}
+# 				49 = {
+# 					country_event = { id = SRA_RE_Rocivia.3013 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP6"
+# 	cost = 40000
+# 	tech_department = engineering_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				9 = {
+# 					country_event = { id = SRA_RE_Rocivia.3014 }
+# 				}
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3015 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP7"
+# 	cost = 80000
+# 	tech_department = physics_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3017 }
+# 				}
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3018 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP8"
+# 	cost = 80000
+# 	tech_department = society_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3019 }
+# 				}
+# 				99 = {
+# 					country_event = { id = SRA_RE_Rocivia.3020 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+# special_project = {
+# 	key = "SRA_RE_Rocivia_SP9"
+# 	cost = 80000
+# 	tech_department = engineering_technology
+# 	picture = GFX_evt_baol_datacrystals
+
+# 	event_scope = country_event
+	
+# 	on_success = {
+# 		owner = {
+# 			random_list = {
+# 				1 = {
+# 					country_event = { id = SRA_RE_Rocivia.3021 }
+# 				}
+# 				3 = {
+# 					country_event = { id = SRA_RE_Rocivia.3022 }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+
+#####首席
+# special_project = {
+# 	key = "SRA_Chief_SP1"
+# 	days_to_research = 120
+# 	tech_department = physics_technology
+# 	picture = GFX_evt_partition
+#
+# 	event_scope = ship_event
+# 	requirements = {
+# 		shipclass_transport = 1
+# 	}
+#
+# 	on_success = {
+# 		owner = {
+# 			country_event = { id = SRA_Chief.218 }
+# 		}
+# 	}
+# }
+		
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_1_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_1_project_TOOLTIP
+	}
+}
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_2_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_2_project_TOOLTIP
+	}
+}
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_3_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_3_project_TOOLTIP
+	}
+}
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_4_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_4_project_TOOLTIP
+	}
+}
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_5_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_5_project_TOOLTIP
+	}
+}
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_6_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_6_project_TOOLTIP
+	}
+}
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_7_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_7_project_TOOLTIP
+	}
+}
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_8_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_8_project_TOOLTIP
+	}
+}
+special_project = {
+	key = "SRA_RE_StellarRegulator_debris_9_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_chain = SRA_RE_StellarRegulator_debris_chain
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_StellarRegulator_debris_9_project_TOOLTIP
+	}
+}
+
+#用于提示如何进入后期
+special_project = {
+	key = "SRA_RE_end_game_chain_project"
+	timelimit = -1
+	picture = GFX_evt_treasure_hunt_4
+	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
+	event_scope = country_event
+	requirements = {
+		handled_by_event_tooltip = SRA_RE_end_game_chain_project_TOOLTIP
+	}
+}
+
+
+special_project = {
+	key = "SRA_RE_Anti_Rocivia_Crisis_chain_SP1"
+	event_chain = SRA_RE_Anti_Rocivia_Crisis_chain
+	days_to_research = 30
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+	event_scope = ship_event
+	requirements = {
+		shipclass_military = 1
+	}
+	on_success = {
+		owner = {
+			country_event = { id = SRA_Chief.406 } 
+		}
+	}
+}
+special_project = {
+	key = "SRA_RE_Anti_Rocivia_Crisis_chain_SP2"
+	event_chain = SRA_RE_Anti_Rocivia_Crisis_chain
+	days_to_research = 30
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+	event_scope = ship_event
+	requirements = {
+		shipclass_military = 1
+	}
+	on_success = {
+		owner = {
+			country_event = { id = SRA_Chief.406 } 
+		}
+	}
+}
+special_project = {
+	key = "SRA_RE_Anti_Rocivia_Crisis_chain_SP3"
+	event_chain = SRA_RE_Anti_Rocivia_Crisis_chain
+	days_to_research = 30
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+	event_scope = ship_event
+	requirements = {
+		shipclass_military = 1
+	}
+	on_success = {
+		owner = {
+			country_event = { id = SRA_Chief.406 } 
+		}
+	}
+}
+special_project = {
+	key = "SRA_RE_Anti_Rocivia_Crisis_chain_SP4"
+	event_chain = SRA_RE_Anti_Rocivia_Crisis_chain
+	days_to_research = 30
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+	event_scope = ship_event
+	requirements = {
+		shipclass_military = 1
+	}
+	on_success = {
+		owner = {
+			country_event = { id = SRA_Chief.406 } 
+		}
+	}
+}
+
+special_project = {
+	key = "SRA_RE_Anti_Rocivia_Crisis_chain_SP5"
+	event_chain = SRA_RE_Anti_Rocivia_Crisis_chain
+	days_to_research = 5
+	tech_department = physics_technology
+	picture = GFX_evt_partition
+	event_scope = ship_event
+	requirements = {
+		size_requirement = {
+			ship_size = SRA_Return_To_Calamitisease_Ship
+			count = 1
+		}
+	}
+	on_success = {
+		owner = {
+			country_event = { id = SRA_Chief.460 } 
+		}
+	}
+}
+
+
+
+ #虚境中的希德拉
+special_project = {
+    key = SRA_patron_Hidra_project
+    cost = 5000
+    tech_department = society_technology
+    timelimit = -1
+    picture = GFX_evt_psionics
+    icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
+    location = no
+    event_scope = country_event
+    on_success = { prev = { country_event = { id = SRA_RE_Hidra.501 } } }
+}
+special_project = {
+    key = SRA_patron_Hidra_project_hive
+    cost = 5000
+    tech_department = society_technology
+    timelimit = -1
+    picture = GFX_evt_shroud_psionic_hive_mind
+    icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
+    location = no
+    event_scope = country_event
+    on_success = { prev = { country_event = { id = SRA_RE_Hidra.501 } } }
+}
+special_project = {
+    key = SRA_patron_Hidra_project_machine
+    cost = 5000
+    tech_department = society_technology
+    timelimit = -1
+    picture = GFX_evt_machine_sapience
+    icon = "gfx/interface/icons/situation_log/situation_log_tick.dds"
+    location = no
+    event_scope = country_event
+    on_success = { prev = { country_event = { id = SRA_RE_Hidra.501 } } }
+}
+

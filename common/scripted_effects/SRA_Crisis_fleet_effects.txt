@@ -1,0 +1,220 @@
+create_SRA_Crisis_fleet_and_admiral = {
+	optimize_memory
+    random_list = {
+        65 = {
+            modifier = { add = -25 has_global_flag = SRA_Crisis_hard }
+            modifier = { add = -40 has_global_flag = SRA_Crisis_lunatic }
+            create_SRA_Crisis_Cruiser_Fleet = { SRA_Crisis_Executor = 4 SRA_Crisis_Cruiser = 8 }
+            #4 8
+        }
+        30 = {
+            modifier = { add = 25 has_global_flag = SRA_Crisis_hard }
+            modifier = { add = 40 has_global_flag = SRA_Crisis_lunatic }
+            # VAR_6 = SRA_Crisis_Adjudicator  VAR_8 = SRA_Crisis_Executor  VAR_15 = SRA_Crisis_Cruiser
+            create_SRA_Crisis_Executor_Fleet = { SRA_Crisis_Executor = 8 SRA_Crisis_Cruiser = 16 }
+            #8 16
+        }
+        5 = {
+            modifier = { add = 5 has_global_flag = SRA_Crisis_hard }
+            modifier = { add = 15 has_global_flag = SRA_Crisis_lunatic }
+            # VAR_15 = SRA_Crisis_Adjudicator
+            create_SRA_Crisis_Adjudicator_Fleet = { SRA_Crisis_Adjudicator = 2  SRA_Crisis_Executor = 16 SRA_Crisis_Cruiser = 32 }
+            #2 8 16
+        }
+    }
+}
+
+create_SRA_Crisis_Cruiser_Fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_Crisis_Cruiser_Fleet"
+        effect = {
+            set_owner = event_target:SRA_Crisis_country			
+            [[SRA_Crisis_Executor] set_variable = { which = num_SRA_Crisis_Executor value = $SRA_Crisis_Executor$ }
+            set_variable = { which = num_SRA_Crisis_Executor_exist value = $SRA_Crisis_Executor$ }
+            while = { count = $SRA_Crisis_Executor$ create_ship = { design = "NAME_SRA_Crisis_Executor" } }]
+
+            [[SRA_Crisis_Cruiser] set_variable = { which = num_SRA_Crisis_Cruiser value = $SRA_Crisis_Cruiser$ }
+            set_variable = { which = num_SRA_Crisis_Cruiser_exist value = $SRA_Crisis_Cruiser$ }
+            while = { count = $SRA_Crisis_Cruiser$ create_ship = { design = "NAME_SRA_Crisis_Cruiser" } }]
+            [[SRA_Crisis_Cruiser_No_Aura] set_variable = { which = num_SRA_Crisis_Cruiser_No_Aura value = $SRA_Crisis_Cruiser_No_Aura$ }
+            set_variable = { which = num_SRA_Crisis_Cruiser_No_Aura_exist value = $SRA_Crisis_Cruiser_No_Aura$ }
+            while = { count = $SRA_Crisis_Cruiser_No_Aura$ create_ship = { design = "NAME_SRA_Crisis_Cruiser_No_Aura" } }]
+            set_location = { target = PREV distance = 5 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+			set_formation_scale = 5
+            set_fleet_flag = SRA_attack_fleet
+			set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+            fleet_event = { id = SRA_Crisis.40 days = 5 }
+            event_target:SRA_Crisis_country = { change_variable = { which = "fleet_id" value = 1 }}
+            set_variable = { which = "fleet_id" value = event_target:SRA_Crisis_country.fleet_id }
+            solar_system = { set_variable = { which = SRA_Crisis_fleet_id value = prev.fleet_id } }
+            if = {
+                limit = { has_global_flag = SRA_Mutation_2305 }
+                fleet_event = {
+                    id = SRA_Mutation.23051 days = 1
+                }
+            }
+        }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}
+
+
+#VAR_6 = Lost_Empire_extra_large_ship/SRA_Crisis_Adjudicator  VAR_8 = SRA_Crisis_Executor  VAR_15 = SRA_Crisis_Cruiser
+create_SRA_Crisis_Executor_Fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_Crisis_Executor_Fleet"
+        effect = {
+            set_owner = event_target:SRA_Crisis_country
+            [[SRA_Crisis_Executor] set_variable = { which = num_SRA_Crisis_Executor value = $SRA_Crisis_Executor$ }
+            set_variable = { which = num_SRA_Crisis_Executor_exist value = $SRA_Crisis_Executor$ }
+            while = { count = $SRA_Crisis_Executor$ create_ship = { design = "NAME_SRA_Crisis_Executor" } }]
+
+            [[SRA_Crisis_Cruiser] set_variable = { which = num_SRA_Crisis_Cruiser value = $SRA_Crisis_Cruiser$ }
+            set_variable = { which = num_SRA_Crisis_Cruiser_exist value = $SRA_Crisis_Cruiser$ }
+            while = { count = $SRA_Crisis_Cruiser$ create_ship = { design = "NAME_SRA_Crisis_Cruiser" } }]	
+            [[SRA_Crisis_Cruiser_No_Aura] set_variable = { which = num_SRA_Crisis_Cruiser_No_Aura value = $SRA_Crisis_Cruiser_No_Aura$ }
+            set_variable = { which = num_SRA_Crisis_Cruiser_No_Aura_exist value = $SRA_Crisis_Cruiser_No_Aura$ }
+            while = { count = $SRA_Crisis_Cruiser_No_Aura$ create_ship = { design = "NAME_SRA_Crisis_Cruiser_No_Aura" } }]	
+
+            set_location = { target = PREV distance = 5 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+			set_formation_scale = 5
+            set_fleet_flag = SRA_attack_fleet
+			set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+            fleet_event = { id = SRA_Crisis.40 days = 5 }
+            event_target:SRA_Crisis_country = { change_variable = { which = "fleet_id" value = 1 }}
+            set_variable = { which = "fleet_id" value = event_target:SRA_Crisis_country.fleet_id }
+            solar_system = { set_variable = { which = SRA_Crisis_fleet_id value = prev.fleet_id } }
+            #fleet_event = { id = SRA_Crisis.110 days = 60 } # 补船
+            if = {
+                limit = { has_global_flag = SRA_Mutation_2305 }
+                fleet_event = {
+                    id = SRA_Mutation.23051 days = 1
+                }
+            }
+        }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}
+
+
+#VAR_15 = SRA_Crisis_Adjudicator
+create_SRA_Crisis_Adjudicator_Fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_Crisis_Adjudicator_Fleet"
+        effect = {
+            set_owner = event_target:SRA_Crisis_country
+
+            [[SRA_Crisis_Adjudicator] set_variable = { which = num_SRA_Crisis_Adjudicator value = $SRA_Crisis_Adjudicator$ }
+            set_variable = { which = num_SRA_Crisis_Adjudicator_exist value = $SRA_Crisis_Adjudicator$ }
+            while = { count = $SRA_Crisis_Adjudicator$ create_ship = { design = "NAME_SRA_Crisis_Adjudicator" } }]	
+
+            [[SRA_Crisis_Executor] set_variable = { which = num_SRA_Crisis_Executor value = $SRA_Crisis_Executor$ }
+            set_variable = { which = num_SRA_Crisis_Executor_exist value = $SRA_Crisis_Executor$ }
+            while = { count = $SRA_Crisis_Executor$ create_ship = { design = "NAME_SRA_Crisis_Executor" } }]
+
+            [[SRA_Crisis_Cruiser] set_variable = { which = num_SRA_Crisis_Cruiser value = $SRA_Crisis_Cruiser$ }
+            set_variable = { which = num_SRA_Crisis_Cruiser_exist value = $SRA_Crisis_Cruiser$ }
+            while = { count = $SRA_Crisis_Cruiser$ create_ship = { design = "NAME_SRA_Crisis_Cruiser" } }]		
+            [[SRA_Crisis_Cruiser_No_Aura] set_variable = { which = num_SRA_Crisis_Cruiser_No_Aura value = $SRA_Crisis_Cruiser_No_Aura$ }
+            set_variable = { which = num_SRA_Crisis_Cruiser_No_Aura_exist value = $SRA_Crisis_Cruiser_No_Aura$ }
+            while = { count = $SRA_Crisis_Cruiser_No_Aura$ create_ship = { design = "NAME_SRA_Crisis_Cruiser_No_Aura" } }]
+
+            set_location = { target = PREV distance = 25 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+			set_formation_scale = 5
+            set_fleet_flag = SRA_attack_fleet
+			set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+            fleet_event = { id = SRA_Crisis.40 days = 5 }
+            event_target:SRA_Crisis_country = { 
+                change_variable = { which = "fleet_id" value = 1 }
+            }
+            set_variable = { which = "fleet_id" value = event_target:SRA_Crisis_country.fleet_id }
+            solar_system = { set_variable = { which = SRA_Crisis_fleet_id value = prev.fleet_id } }
+            #fleet_event = { id = SRA_Crisis.110 days = 60 } # 补船
+            if = {
+                limit = { has_global_flag = SRA_Mutation_2305 }
+                fleet_event = {
+                    id = SRA_Mutation.23051 days = 1
+                }
+            }
+        }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}
+create_SRA_Crisis_Guard_Fleet = {
+	optimize_memory
+    create_fleet = {
+        name = "NAME_SRA_Crisis_Guard_Fleet"
+        effect = {
+            set_owner = event_target:SRA_Crisis_country
+
+            while = { count = 4 create_ship = { design = "NAME_SRA_Crisis_Adjudicator" } }	
+            while = { count = 32 create_ship = { design = "NAME_SRA_Crisis_Executor" } }
+            while = { count = 64 create_ship = { design = "NAME_SRA_Crisis_Cruiser" } }	
+            set_variable = { which = num_SRA_Crisis_Adjudicator value = 4 }
+            set_variable = { which = num_SRA_Crisis_Adjudicator_exist value = 4 }	
+            set_variable = { which = num_SRA_Crisis_Executor value = 32 }
+            set_variable = { which = num_SRA_Crisis_Executor_exist value = 32 }
+            set_variable = { which = num_SRA_Crisis_Cruiser value = 64 }
+            set_variable = { which = num_SRA_Crisis_Cruiser_exist value = 64 }
+
+            set_location = { target = PREV distance = 25 angle = random }
+            set_fleet_stance = aggressive
+            set_fleet_bombardment_stance = SRA_doom2
+            set_aggro_range_measure_from = self
+            set_aggro_range = 500
+			set_formation_scale = 5
+            set_fleet_flag = SRA_defence_fleet
+			set_timed_fleet_flag = { flag = SRA_Mutation_Blocked days = 1 }
+            #fleet_event = { id = SRA_Crisis.110 days = 60 } # 补船
+            #4 32 64
+            }
+        settings = { 
+            can_upgrade = no 
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+    }
+}

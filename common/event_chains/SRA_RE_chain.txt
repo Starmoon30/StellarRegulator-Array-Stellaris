@@ -1,0 +1,62 @@
+
+
+SRA_RE_SOGZ_repair_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	situation_log_category = developments
+	picture = GFX_evt_SRA_SOGZ
+}
+SRA_RE_StellarRegulator_debris_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	situation_log_category = developments
+	picture = GFX_evt_treasure_hunt_4
+	counter = {
+		SRA_RE_StellarRegulator_debris_num = {
+			max = 9
+		}
+	}
+}
+SRA_RE_Crisis_chain_1 = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	situation_log_category = crises
+	picture = GFX_evt_fleet_evil
+	counter = {
+		SRA_RE_Crisis_1_kills_us = {
+		}
+		SRA_RE_Crisis_1_kills_others = {
+		}
+		SRA_RE_Crisis_1_victims = {
+		}
+		SRA_RE_Crisis_1_planets = {
+		}
+	}
+}
+SRA_RE_Anti_Rocivia_Crisis_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	situation_log_category = crises
+	picture = GFX_evt_SRA_SOGZ
+	counter = {
+		SRA_RE_Anti_Rocivia_Crisis_chain_kills_us = {
+		}
+		SRA_RE_Anti_Rocivia_Crisis_chain_kills_others = {
+		}
+		SRA_RE_Anti_Rocivia_Crisis_chain_victims = {
+		}
+		SRA_RE_Anti_Rocivia_Crisis_chain_planets = {
+		}
+	}
+}
+SRA_chaos_ascension_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	situation_log_category = ambitions
+	picture = GFX_evt_vortex
+	counter = {
+		SRA_chaos_ascension_leader = {
+		}
+		SRA_chaos_ascension_pop = {
+		}
+		SRA_chaos_ascension_ship = {
+		}
+		SRA_chaos_ascension_system = {
+		}
+	}
+}

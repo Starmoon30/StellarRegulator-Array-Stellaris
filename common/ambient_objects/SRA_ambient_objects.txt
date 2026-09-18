@@ -1,0 +1,29 @@
+
+ambient_object = { name = "SRA_T4_weapon_planet_killer_hit_explosion" entity = "SRA_T4_weapon_planet_killer_hit_explosion_entity" selectable = no show_name = no }
+ambient_object = { name = "SRA_T4_weapon_planet_killer_star_hit_in_range" entity = "SRA_T4_weapon_planet_killer_star_hit_in_range_entity" selectable = no show_name = no }
+ambient_object = { name = "SRA_T4_weapon_planet_killer_star_windup_in_range" entity = "SRA_T4_weapon_planet_killer_star_windup_in_range_entity" selectable = no show_name = no }
+ambient_object = { name = "SRA_eta_titan_system_portal" entity = "SRA_eta_titan_system_portal_entity" selectable = no show_name = no }
+ambient_object = { name = "SRA_nemesis_system_effect_1" entity = "SRA_nemesis_system_effect_1_entity" selectable = no show_name = no }
+ambient_object = { name = "SRA_nemesis_system_effect_2" entity = "SRA_nemesis_system_effect_2_entity" selectable = no show_name = no }
+ambient_object = { name = "SRA_nemesis_system_effect_3" entity = "SRA_nemesis_system_effect_3_entity" selectable = no show_name = no }
+
+ambient_object = {
+	name = "SRA_Chaos_galaxy_map_object"
+	entity = "SRA_Chaos_galaxy_map_object_effect_entity"
+	selectable = no
+	show_name = no
+}
+
+
+ambient_object = {
+	name = "SRA_nexus_storm_red"
+	entity = "nexus_storm_entity"
+	selectable = no
+	show_name = no
+}
+ambient_object = {
+	name = "SRA_nexus_storm_blue"
+	entity = "SRA_nexus_storm_entity"
+	selectable = no
+	show_name = no
+}

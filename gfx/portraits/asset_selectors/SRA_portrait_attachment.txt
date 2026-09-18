@@ -1,0 +1,20 @@
+SRA_portrait_attachment = {
+	default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds"
+	game_setup = { default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" }
+	species = { default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" }
+	pop = { default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" }
+	leader = {
+		default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds"
+		"gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" = {
+			check_variable = { which = SRA_portrait_attachment_var value = 302 }
+		}
+		# 可以扩展更多的差分。
+	}
+	ruler = {
+		default = "gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds"
+		"gfx/models/portraits/SRA_portraits/SRA_empty_texture.dds" = {
+			check_variable = { which = SRA_portrait_attachment_var value = 302 }
+		}
+		# 可以扩展更多的差分。
+	}
+}

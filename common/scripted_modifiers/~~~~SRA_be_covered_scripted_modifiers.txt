@@ -1,0 +1,1 @@
+begin_modifier_updated_batch = { icon = mod_ship_hull_mult good = yes hidden = yes category = ship }

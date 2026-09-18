@@ -1,0 +1,549 @@
+namespace = SRA_Barrier
+#防御系统重设
+carrier_event = {
+	id = SRA_Barrier.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		solar_system = {
+			every_ship_in_system = {
+				limit = {
+					OR = {
+						is_ship_size = SRA_Barrier_Main_Station
+						is_ship_size = SRA_Barrier_Guard_Station
+						is_ship_size = SRA_Barrier_Guard_Titan
+						is_ship_size = SRA_Barrier_Guard_Cruiser
+						is_ship_size = SRA_GZ_Platform
+						
+					}
+				}
+				delete_ship = this
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_Barrier_Main_Station_fleet"
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_Barrier_Main_Station_Name"
+					design = "NAME_SRA_Barrier_Main_Station"
+					prefix = no
+					effect = {
+						set_disable_at_health = 0.01
+					}
+				}
+				set_location = {
+					target = root.solar_system.star
+					distance = -1
+					angle = 0
+				}
+			}
+			settings = { 
+				can_upgrade = no 
+				uses_naval_capacity = no
+				can_change_composition = no
+				spawn_debris = no
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_Barrier_Guard_Station_fleet_1"
+			effect = {
+				set_owner = root.owner
+				set_location = {
+					target = root
+					distance = 90
+					angle = 0
+				}
+				while = {
+					count = 32
+					create_ship = {
+						design = NAME_SRA_Barrier_Guard_Cruiser
+					}
+				}
+				while = {
+					count = 4
+					create_ship = {
+						design = NAME_SRA_Barrier_Guard_Titan
+					}
+				}
+				create_ship = {
+					name = "NAME_SRA_Barrier_Guard_Station_Name_1"
+					design = "NAME_SRA_Barrier_Guard_Station"
+					prefix = no
+				}
+				# set_fleet_formation = {
+				# 	position = { x = 0.0	y = 0.0		} #1
+				# }
+			}
+			settings = { 
+				can_upgrade = no 
+				uses_naval_capacity = no
+				can_change_composition = no
+				spawn_debris = no
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_Barrier_Guard_Station_fleet_2"
+			effect = {
+				set_owner = root.owner
+				set_location = {
+					target = root
+					distance = 90
+					angle = 120
+				}
+				while = {
+					count = 32
+					create_ship = {
+						design = NAME_SRA_Barrier_Guard_Cruiser
+					}
+				}
+				while = {
+					count = 4
+					create_ship = {
+						design = NAME_SRA_Barrier_Guard_Titan
+					}
+				}
+				create_ship = {
+					name = "NAME_SRA_Barrier_Guard_Station_Name_2"
+					design = "NAME_SRA_Barrier_Guard_Station"
+					prefix = no
+				}
+				# set_fleet_formation = {
+				# 	position = { x = 0.0	y = 0.0		} #1
+				# }
+			}
+			settings = { 
+				can_upgrade = no 
+				uses_naval_capacity = no
+				can_change_composition = no
+				spawn_debris = no
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_Barrier_Guard_Station_fleet_3"
+			effect = {
+				set_owner = root.owner
+				set_location = {
+					target = root
+					distance = 90
+					angle = 240
+				}
+				while = {
+					count = 32
+					create_ship = {
+						name = "NAME_SRA_Barrier_Guard_Cruiser_Name"
+						design = "NAME_SRA_Barrier_Guard_Cruiser"
+					}
+				}
+				while = {
+					count = 4
+					create_ship = {
+						name = "NAME_SRA_Barrier_Guard_Titan_Name"
+						design = "NAME_SRA_Barrier_Guard_Titan"
+					}
+				}
+				create_ship = {
+					name = "NAME_SRA_Barrier_Guard_Station_Name_3"
+					design = "NAME_SRA_Barrier_Guard_Station"
+					prefix = no
+				}
+				# set_fleet_formation = {
+				# 	position = { x = 0.0	y = 0.0		} #1
+				# }
+			}
+			settings = { 
+				can_upgrade = no 
+				uses_naval_capacity = no
+				can_change_composition = no
+				spawn_debris = no
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 30 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 60
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 90
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 120 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 150 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 180 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 210 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 240 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 270 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 300 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 330 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = root
+					distance = 150
+					angle = 360 
+				}
+			}
+		}
+	}
+}
+carrier_event = {
+	id = SRA_Barrier.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		carrier_event = {
+			id = SRA_Barrier.1 days = 1
+		}
+	}
+}
+
+#主要塞被摧毁
+ship_event = {
+	id = SRA_Barrier.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ship_size = SRA_Barrier_Main_Station
+		exists = owner
+	}
+	immediate = {
+		fleet = {
+			set_event_locked = yes
+			fleet_event = {
+				id = SRA_Barrier.101 days = 180
+			}
+		}
+	}
+}
+fleet_event = {
+	id = SRA_Barrier.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ship_size = SRA_Barrier_Main_Station
+		exists = owner
+	}
+	immediate = {
+		if = {
+			limit = {
+				solar_system = {
+					any_system_planet = {
+						is_colony = yes
+					}
+				}
+			}
+			fleet_event = {
+				id = SRA_Barrier.102
+			}
+		}
+		else = {
+			fleet_event = {
+				id = SRA_Barrier.103
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = SRA_Barrier.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		solar_system = {
+			random_system_planet = {
+				limit = {
+					is_planet_class = pc_SRA_Barrier_Main_Station
+				}
+				carrier_event = {
+					id = SRA_Barrier.1
+				}
+			}
+		}
+		delete_fleet = this
+	}
+}
+
+fleet_event = {
+	id = SRA_Barrier.103
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		solar_system = {
+			every_megastructure = {
+				limit = {
+					is_megastructure_type = SRA_Barrier_megastructure_4
+				}
+				delete_megastructure = this
+			}
+			spawn_megastructure = {
+				type = "SRA_Barrier_megastructure_ruined" 
+				coords_from = star
+			}
+		}
+		destroy_fleet = {
+			target = this
+			kill_leader= no
+			destroy_template = yes
+		}
+	}
+}
+
+
+carrier_event = {
+	id = SRA_Barrier.110
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		colony = {
+			check_modifier_value = {
+				modifier = mod_SRA_Planet_Combat_Width_Attacker
+				value >= 1
+			}
+		}
+	}
+	immediate = {
+		carrier_event = {
+			id = SRA_Barrier.111 days = 1
+		}
+	}
+}
+carrier_event = {
+	id = SRA_Barrier.111
+	hide_window = yes
+	is_triggered_only = yes
+	pre_triggers = {
+		has_ground_combat = yes
+	}
+	trigger = {
+		colony = {
+			check_modifier_value = {
+				modifier = mod_SRA_Planet_Combat_Width_Attacker
+				value >= 1
+			}
+		}
+	}
+	immediate = {
+		if	= {
+			limit = {
+				colony = {
+					check_modifier_value = {
+						modifier = mod_SRA_Planet_Combat_Width_Attacker
+						value < prev.trigger:count_ground_combat_attacker
+					}
+				}
+			}
+			set_variable = {
+				which = SRA_Planet_Combat_Width_Attacker
+				value = colony.modifier:mod_SRA_Planet_Combat_Width_Attacker
+			}
+			multiply_variable = {
+				which = SRA_Planet_Combat_Width_Attacker
+				value = -1
+			}
+			change_variable = {
+				which = SRA_Planet_Combat_Width_Attacker
+				value = trigger:count_ground_combat_attacker
+			}
+			while = {
+				count = SRA_Planet_Combat_Width_Attacker
+				random_ground_combat_attacker = {
+					owner = {
+						fire_on_action = {
+							on_action = on_army_killed_in_combat
+							scopes = {
+								From = prev
+								FromFrom = prevprev.owner
+								FromFromFrom = prevprev
+							}
+						}
+					}
+					remove_army = yes
+				}
+			}
+			clear_variable = SRA_Planet_Combat_Width_Attacker
+		}
+		carrier_event = {
+			id = SRA_Barrier.111 days = 1
+		}
+	}
+}

@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+###############################
+
+# point of interest
+ SRA_SD_Crisis_2_1_poi:0 "第一坐标"
+ SRA_SD_Crisis_2_1_poi_desc:0 "行动模式分析表明，远征舰队和灾疫都在试图占领 [SRA_SD_Crisis_2_target_system_1.GetName] 星系。它们的目的依然不得而知。"
+ SRA_SD_Crisis_2_2_poi:0 "第二坐标"
+ SRA_SD_Crisis_2_2_poi_desc:0 "行动模式分析表明，远征舰队和灾疫都在试图占领 [SRA_SD_Crisis_2_target_system_2.GetName] 星系。它们的目的依然不得而知。"
+ SRA_SD_Crisis_2_3_poi:0 "第三坐标"
+ SRA_SD_Crisis_2_3_poi_desc:0 "行动模式分析表明，远征舰队和灾疫都在试图占领 [SRA_SD_Crisis_2_target_system_3.GetName] 星系。它们的目的依然不得而知。"
+ # event chins
+ SRA_SD_Crisis_2_chain_title:0 "无序片影-灾疫战争"
+ SRA_SD_Crisis_2_chain_desc:0 "历史，无数的历史，被歼灭轰鸣撕碎的无数文明，被深渊扩张抹去的无数时代，被无数个萨塔瑞兹的过去，重演无数次。\n\n正如此刻，两支被从历史碎片中再铸的力量现身于此，将往日的战争带到这片星海。\n"

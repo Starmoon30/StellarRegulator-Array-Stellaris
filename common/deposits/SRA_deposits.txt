@@ -1,0 +1,179 @@
+d_SRA_world_machine = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_SRA_world_machine
+	planet_modifier = {
+		# planet_max_buildings_add = -1000
+		# pop_growth_speed = -20
+		planet_resettlement_unemployed_mult = 2.00
+	}
+	triggered_planet_modifier = {
+		planet_max_districts_add = -1
+		multiplier = trigger:planet_size
+	}
+	country_modifier = {
+		country_naval_cap_add = 100
+		country_resource_max_add = 80000
+	}
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 16
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			alloys = 16
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_SRA_world_machine_A = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_SRA_world_machine
+	planet_modifier = {
+		# pop_amenities_usage_mult = -1
+		# pop_housing_usage_mult = -1
+		# planet_pops_upkeep_mult = -1
+		# pop_happiness = 1
+		# planet_crime_mult = -1
+		# planet_crime_add = -1000
+		# planet_amenities_add = 100000
+		# planet_stability_add = 1000
+		# planet_housing_add = 100000
+	}
+	resources = {
+		category = planet_artisans
+		produces = {
+			consumer_goods = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			consumer_goods = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	resources = {
+		category = planet_chemists
+		produces = {
+			rare_crystals = 0.1
+			exotic_gases = 0.1
+			volatile_motes = 0.1
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			rare_crystals = 0.1
+			exotic_gases = 0.1
+			volatile_motes = 0.1
+			sr_dark_matter = 0.1
+			sr_living_metal = 0.1
+			sr_zro = 0.1
+			nanites = 0.1
+			astral_threads = 0.1
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 8
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			minerals = 8
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			food = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 16
+			trade = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			energy = 16
+			trade = 2
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+d_SRA_world_machine_B = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_SRA_world_machine
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+		planet_army_build_speed_mult = 1
+		planet_defense_armies_add = 10
+	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		NOR = {
+	# 			owner = { is_hive_empire = yes }
+	# 			owner = { is_machine_empire = yes }
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_SRA_world_machine_job_add = 1000
+	# 	}
+	# }
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		OR = {
+	# 			owner = { is_hive_empire = yes }
+	# 			owner = { is_machine_empire = yes }
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_SRA_world_machine_drone_add = 1000
+	# 	}
+	# }
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 16
+			society_research = 16
+			engineering_research = 16
+			unity = 4
+			multiplier = value:SRA_world_machine_produces_value
+		}
+		produces = {
+			trigger = { owner = { has_technology = tech_SRA_T3_Composite_Crystal_Lattice } }
+			physics_research = 16
+			society_research = 16
+			engineering_research = 16
+			unity = 4
+			multiplier = value:SRA_world_machine_produces_value
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

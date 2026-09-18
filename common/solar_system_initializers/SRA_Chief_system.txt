@@ -1,0 +1,710 @@
+#“首席”
+#命运钟摆
+SRA_Chief_colony_1_system = {
+	name = "NAME_SRA_Chief_colony_1_system"
+	class = "sc_rift_star"
+	flags = { SRA_Chief_colony_1_system }
+
+	planet = {
+		name = "NAME_SRA_Chief_colony_1_system_star"
+		class = pc_rift_star
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_star
+		}	
+		
+	}
+	planet = {
+		name = "NAME_SRA_Chief_colony_1_system_Main_Station"
+		class = "pc_SRA_Barrier_Main_Station"
+		orbit_angle = 0
+		orbit_distance = 0
+		deposit_blockers = none
+		size = 10
+			
+		init_effect = {	
+			set_owner = event_target:SRA_Chief_country
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			save_global_event_target_as = SRA_Chief_colony_1_system_Main_Station
+			prevent_anomaly = yes
+			set_planet_flag = megastructure
+			add_building = building_system_capital
+			add_building = building_SRA_databank
+			add_building = building_SRA_foundry
+			add_building = building_SRA_ground_yards
+			add_building = building_SRA_Fortress
+			set_planet_flag = pc_SRA_Barrier_Main_Station
+			set_planet_flag = colony_event
+			set_variable = { which = SRA_world_machine_produces value = 5 }
+			while = {
+				count = 25
+				add_district = district_SRA_GZ_science
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+			carrier_event = {
+				id = SRA_Barrier.2 days = 10
+			}
+		}			
+	}
+
+	change_orbit = 45
+	
+	planet = {
+		name = "NAME_SRA_Chief_colony_1_system_ring1"
+		class = "pc_SRA_Barrier_ringworld_habitable"
+		orbit_angle = 30
+		orbit_distance = 0
+		deposit_blockers = none
+		size = 10
+			
+		init_effect = {	
+			set_owner = event_target:SRA_Chief_country
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring1
+			prevent_anomaly = yes
+			set_planet_flag = megastructure
+			add_building = building_system_capital
+			add_building = building_SRA_databank
+			add_building = building_SRA_foundry
+			add_building = building_SRA_ground_yards
+			add_building = building_SRA_Fortress
+			set_planet_flag = pc_SRA_Barrier_ringworld_habitable
+			set_planet_flag = colony_event
+			set_variable = { which = SRA_world_machine_produces value = 5 }
+			while = {
+				count = 25
+				add_district = district_SRA_GZ_alloys
+			}
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+		}			
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_Chief_colony_1_system_ring2"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring2
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			set_planet_entity = {
+				entity = "SRA_ancient_ringworld_tech_blue_entity"
+			}
+		}
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_SRA_Chief_colony_1_system_ring3"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring3
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			set_planet_entity = {
+				entity = "SRA_ancient_ringworld_tech_blue_entity"
+			}
+		}	
+	}
+	planet = {
+		class = "pc_SRA_Barrier_ringworld_habitable"
+		name = "NAME_SRA_Chief_colony_1_system_ring4"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 10
+		modifiers = none
+		init_effect = {
+			set_owner = event_target:SRA_Chief_country
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring4
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+
+			add_building = building_system_capital
+			add_building = building_SRA_databank
+			add_building = building_SRA_foundry
+			add_building = building_SRA_ground_yards
+			add_building = building_SRA_Fortress
+			set_planet_flag = pc_SRA_Barrier_ringworld_habitable
+			set_planet_flag = colony_event
+			set_variable = { which = SRA_world_machine_produces value = 5 }
+			while = {
+				count = 25
+				add_district = district_SRA_GZ_foundry
+			}
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+		}				
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_Chief_colony_1_system_ring5"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring5
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			set_planet_entity = {
+				entity = "SRA_ancient_ringworld_tech_blue_entity"
+			}
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_SRA_Chief_colony_1_system_ring6"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring6
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			set_planet_entity = {
+				entity = "SRA_ancient_ringworld_tech_blue_entity"
+			}
+		}	
+	}
+	planet = {
+		class = "pc_SRA_Barrier_ringworld_habitable"
+		name = "NAME_SRA_Chief_colony_1_system_ring7"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 10
+		deposit_blockers = none
+		modifiers = none
+		init_effect = {
+			set_owner = event_target:SRA_Chief_country
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring7
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			add_building = building_system_capital
+			add_building = building_SRA_databank
+			add_building = building_SRA_foundry
+			add_building = building_SRA_ground_yards
+			add_building = building_SRA_Fortress
+			set_planet_flag = pc_SRA_Barrier_ringworld_habitable
+			set_planet_flag = colony_event
+			set_variable = { which = SRA_world_machine_produces value = 5 }
+			while = {
+				count = 25
+				add_district = district_SRA_GZ_alloys
+			}
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_Chief_colony_1_system_ring8"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring8
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			set_planet_entity = {
+				entity = "SRA_ancient_ringworld_tech_blue_entity"
+			}
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_SRA_Chief_colony_1_system_ring9"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring9
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			set_planet_entity = {
+				entity = "SRA_ancient_ringworld_tech_blue_entity"
+			}
+		}	
+	}
+	planet = {
+		class = "pc_SRA_Barrier_ringworld_habitable"
+		name = "NAME_SRA_Chief_colony_1_system_ring10"
+		orbit_angle = 30
+		orbit_distance = 0
+		size = 10
+		deposit_blockers = none
+		modifiers = none
+		init_effect = {
+			set_owner = event_target:SRA_Chief_country
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring10
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			add_building = building_system_capital
+			add_building = building_SRA_databank
+			add_building = building_SRA_foundry
+			add_building = building_SRA_ground_yards
+			add_building = building_SRA_Fortress
+			set_planet_flag = pc_SRA_Barrier_ringworld_habitable
+			set_planet_flag = colony_event
+			set_variable = { which = SRA_world_machine_produces value = 5 }
+			while = {
+				count = 25
+				add_district = district_SRA_GZ_foundry
+			}
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+		}	
+	}				
+	planet = {
+		class = "pc_ringworld_tech"
+		name = "NAME_SRA_Chief_colony_1_system_ring11"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring11
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			set_planet_entity = {
+				entity = "SRA_ancient_ringworld_tech_blue_entity"
+			}
+		}	
+	}
+	planet = {
+		class = "pc_ringworld_seam"
+		name = "NAME_SRA_Chief_colony_1_system_ring12"
+		orbit_angle = 30
+		orbit_distance = 0
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_1_system_ring12
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			set_planet_entity = {
+				entity = "SRA_ancient_ringworld_tech_blue_entity"
+			}
+		}	
+	}
+	init_effect = {
+		save_global_event_target_as = SRA_Chief_colony_1_system
+		spawn_megastructure = { 
+			type = "SRA_Barrier_megastructure_4" 
+			owner = event_target:SRA_Chief_country
+			coords_from = event_target:SRA_Chief_colony_1_system_star
+			init_effect = {
+				set_megastructure_flag = ag_ancient_construction_section_megashipyard
+			}
+		}
+	}
+}
+
+
+SRA_Chief_colony_2_system = {
+	name = "NAME_SRA_Chief_colony_2_system"
+	flags = { SRA_Chief_colony_2_system }
+	class = sc_black_hole
+	planet = {
+		class = star
+		orbit_distance = 0
+		size = { min = 20 max = 25 }	
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_2_system_star
+			clear_deposits = yes
+		}
+	}
+	planet = {
+		count = 2
+		class = rl_unhabitable_planets
+		orbit_distance = 80
+		orbit_angle = { min = 100 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			class = rl_unhabitable_planets
+			orbit_angle = { min = 30 max = 270 }
+			orbit_distance = 10
+		}
+	}
+	change_orbit = 80
+	planet = {
+		name = "NAME_SRA_Chief_colony_2_system_1"
+		class = pc_SRA_city
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 200 }
+		size = 25
+		deposit_blockers = none
+		modifiers = none
+		init_effect = {
+			set_owner = event_target:SRA_Chief_country
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			add_building = building_system_capital
+			add_building = building_SRA_databank
+			add_building = building_SRA_foundry
+			add_building = building_SRA_ground_yards
+			add_building = building_SRA_Fortress
+			add_building = building_SRA_T3_Recovery_Nest	
+			set_planet_flag = colony_event
+			set_planet_entity = {
+				entity = "SRA_city_planet_01_entity"
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_housing
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_foundry
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_alloys
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_science
+			}
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+			add_modifier = {
+				modifier = planet_SRA_orbital_ring_Buff_1
+			}
+			create_starbase = {
+				size = SRA_orbital_ring
+				owner = event_target:SRA_Chief_country
+				#module = <starbase_module>
+				#building = <starbase_building>
+				effect = {
+					set_ship_construction_type = starbase_shipyard
+				}
+			}
+		}
+	}
+
+	init_effect = {
+		save_global_event_target_as = SRA_Chief_colony_2_system
+	}
+}
+
+SRA_Chief_colony_3_system = {
+	name = "NAME_SRA_Chief_colony_3_system"
+	class = sc_b
+	flags = { SRA_Chief_colony_3_system }
+
+	prevent_anomalies = yes
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_colony_3_system_star
+			clear_deposits = yes
+			add_deposit = d_astral_threads_deposit_3
+		}
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		name = "NAME_SRA_Chief_colony_3_system_1"
+		class = pc_gaia
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 200 }
+		size = 25
+		moon = {
+			count = 1
+			class = rl_habitable_normal
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 10
+		}
+		deposit_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			set_owner = event_target:SRA_Chief_country
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = colony_event
+			reroll_deposits = yes
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			add_building = building_system_capital
+			add_building = building_SRA_databank
+			add_building = building_SRA_foundry
+			add_building = building_SRA_ground_yards
+			add_building = building_SRA_Fortress
+			add_building = building_SRA_T3_Recovery_Nest
+			while = {
+				count = 20
+				add_district = district_city
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+		}
+	}
+	planet = {
+		count = 2
+		class = rl_habitable_special
+		orbit_distance = 35
+		orbit_angle = { min = 100 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			class = rl_unhabitable_planets
+			orbit_angle = { min = 30 max = 270 }
+			orbit_distance = 10
+		}
+	}
+	init_effect = {
+		save_global_event_target_as = SRA_Chief_colony_3_system
+		spawn_megastructure = { 
+			type = "dyson_swarm_3" 
+			graphical_culture = "mammalian_01"
+			planet = star
+		}
+		every_system_planet = {
+			limit = {
+				has_deposit_for = shipclass_mining_station
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = event_target:SRA_Chief_country
+			}
+		}
+		every_system_planet = {
+			limit = {
+				has_deposit_for = shipclass_research_station
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = event_target:SRA_Chief_country
+			}
+		}
+	}
+}
+SRA_Chief_capital_system = {
+	name = "NAME_SRA_Chief_capital_system"
+	class = sc_g
+	flags = { SRA_Chief_capital_system }
+
+	prevent_anomalies = yes
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_capital_system_star
+		}	
+	
+	}
+	
+	change_orbit = 45
+	
+	planet = {
+		count = { min = 1 max = 1 }
+		class = rl_unhabitable_planets
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 200 }
+		
+		
+	}
+
+	planet = {
+		name = "NAME_SRA_Chief_capital_system_1"
+		class = pc_SRA_city
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 200 }
+		size = 25
+		deposit_blockers = none
+		modifiers = none
+		init_effect = {
+			save_global_event_target_as = SRA_Chief_capital
+			set_owner = event_target:SRA_Chief_country
+			prevent_anomaly = yes
+			trigger_megastructure_icon = yes
+			set_planet_flag = megastructure
+			add_building = building_system_capital
+			add_building = building_SRA_control_centre
+			add_building = building_SRA_databank
+			add_building = building_SRA_foundry
+			add_building = building_SRA_ground_yards
+			add_building = building_SRA_Fortress
+			add_building = building_SRA_T3_Recovery_Nest
+			set_planet_flag = colony_event	
+			set_planet_entity = {
+				entity = "SRA_city_planet_01_entity"
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_housing
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_foundry
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_alloys
+			}
+			while = {
+				count = 5
+				add_district = district_SRA_city_science
+			}
+			create_pop_group = {
+				species = event_target:SRA_Chief_species
+				size = 1000
+			}
+			while = { 
+				count = 10
+				create_army = {
+					name = "sentinel_army"
+					owner = event_target:SRA_Chief_country
+					species = event_target:SRA_Chief_species
+					type = "SRA_Eliminater_Defender"
+					#land_army = yes
+				}
+			}
+			add_modifier = {
+				modifier = planet_SRA_orbital_ring_Buff_1
+			}
+			create_starbase = {
+				size = SRA_orbital_ring
+				owner = event_target:SRA_Chief_country
+				#module = <starbase_module>
+				#building = <starbase_building>
+				effect = {
+					set_ship_construction_type = starbase_shipyard
+				}
+			}
+		}	
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = rl_unhabitable_planets
+		orbit_distance = 35
+		orbit_angle = { min = 100 max = 270 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 2 }
+			class = rl_unhabitable_planets
+			orbit_angle = { min = 30 max = 270 }
+			orbit_distance = 5
+		}
+	}	
+	init_effect = {
+		save_global_event_target_as = SRA_Chief_capital_system
+		every_system_planet = {
+			limit = {
+				has_deposit_for = shipclass_mining_station
+				has_mining_station = no
+			}
+			create_mining_station = {
+				owner = event_target:SRA_Chief_country
+			}
+		}
+		every_system_planet = {
+			limit = {
+				has_deposit_for = shipclass_research_station
+				has_research_station = no
+			}
+			create_research_station = {
+				owner = event_target:SRA_Chief_country
+			}
+		}
+	}
+}

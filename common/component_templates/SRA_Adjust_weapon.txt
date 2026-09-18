@@ -1,0 +1,430 @@
+#####可调整武器#####
+###设计不可用###
+#星规-星河碎裂炮
+weapon_component_template = {
+	key = "SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event"
+	inline_script = {
+		script = component_templates/SMALL_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event"
+	inline_script = {
+		script = component_templates/MEDIUM_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+weapon_component_template = {
+	key = "LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust_Event"
+	inline_script = {
+		script = component_templates/LARGE_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+#星规-虚空撕裂弹
+weapon_component_template = {
+	key = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_L_Particle_Launcher
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+#星规-命运之枪
+weapon_component_template = {
+	key = "SRA_T4_weapon_L_Laser_Adjust_Event"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_L_Laser
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+#星规-归虚之光
+weapon_component_template = {
+	key = "SRA_T4_weapon_X_Laser_Adjust_Event"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_X_Laser
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+#星规-破晓之星
+weapon_component_template = {
+	key = "SRA_T4_weapon_T_Laser_Adjust_Event"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_T_Laser
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+#星规-渊宇之狩
+strike_craft_component_template = {
+	key = "SRA_T4_weapon_H_Adjust_Event"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_H
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+#星规-寰宇追迹之火
+weapon_component_template = {
+	key = "SRA_T4_weapon_G_Adjust_Event"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_G
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+#星规-光辉之冠
+weapon_component_template = {
+	key = "SRA_T4_weapon_P_Adjust_Event"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_P
+	}
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+#####可调整武器#####
+#星规-星河碎裂炮
+weapon_component_template = {
+	key = "SMALL_SRA_T4_weapon_SML_Mass_Drivers_Adjust"
+	inline_script = {
+		script = component_templates/SMALL_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_SML_Mass_Drivers_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SRA_T4_weapon_SML_Mass_Drivers_Adjust"
+	inline_script = {
+		script = component_templates/MEDIUM_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_SML_Mass_Drivers_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+weapon_component_template = {
+	key = "LARGE_SRA_T4_weapon_SML_Mass_Drivers_Adjust"
+	inline_script = {
+		script = component_templates/LARGE_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_SML_Mass_Drivers_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_SRA_Adjust }
+}
+#星规-虚空撕裂弹
+weapon_component_template = {
+	key = "SRA_T4_weapon_L_Particle_Launcher_Adjust"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_L_Particle_Launcher
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_L_Particle_Launcher_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_SRA_Adjust }
+}
+#星规-命运之枪
+weapon_component_template = {
+	key = "SRA_T4_weapon_L_Laser_Adjust"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_L_Laser
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_L_Laser_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_SRA_Adjust }
+}
+#星规-归虚之光
+weapon_component_template = {
+	key = "SRA_T4_weapon_X_Laser_Adjust"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_X_Laser
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_X_Laser_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_TX_Laser" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+#星规-破晓之星
+weapon_component_template = {
+	key = "SRA_T4_weapon_T_Laser_Adjust"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_T_Laser
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_T_Laser_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_TX_Laser" }
+	tags = { weapon_type_SRA_Adjust }
+}
+#星规-渊宇之狩
+strike_craft_component_template = {
+	key = "SRA_T4_weapon_H_Adjust"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_H
+	}
+	component_set = "SRA_T4_weapon_H_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+#星规-寰宇追迹之火
+weapon_component_template = {
+	key = "SRA_T4_weapon_G_Adjust"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_G
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_G_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	tags = { weapon_type_SRA_Adjust }
+}
+
+#星规-光辉之冠
+weapon_component_template = {
+	key = "SRA_T4_weapon_P_Adjust"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_P
+	}
+	entity = "invisible_turret_entity"
+	component_set = "SRA_T4_weapon_P_Adjust"
+	potential = {
+		from = {
+			has_country_flag = SRA_Weapon_Adjust
+		}
+	}
+	show_tech_unlock_if = {
+		has_country_flag = SRA_Weapon_Adjust
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	tags = { weapon_type_SRA_Adjust }
+}
+

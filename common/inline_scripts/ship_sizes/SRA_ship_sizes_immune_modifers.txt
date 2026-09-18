@@ -1,0 +1,6 @@
+#SRA_ship_sizes_immune_modifers
+storm_ship_hull_breaker_mult = -10.0
+psionic_aura_resistance_mult = 100
+ag_immune_to_confuse = 1
+immune_to_terrify = 1
+ag_ship_aoe_damage_reduction = 1

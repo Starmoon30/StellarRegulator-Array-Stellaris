@@ -1,0 +1,288 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_relic_SRA_RE_Core_relic"
+		texturefile = "gfx/interface/icons/relics/SRA_RE_Core_relic.dds"			
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_RE_Core_relic_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_RE_Core_relic_shine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 15
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_relic_SRA_SD_First_Murder"
+		texturefile = "gfx/interface/icons/relics/SRA_SD_First_Murder.dds"			
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_First_Murder.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_First_Murder.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 15
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_relic_SRA_SD_Fire_of_Lightkeeper"
+		texturefile = "gfx/interface/icons/relics/SRA_SD_Fire_of_Lightkeeper.dds"			
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_Fire_of_Lightkeeper.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_Fire_of_Lightkeeper.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 15
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_relic_SRA_SD_Annihilating_Growl"
+		texturefile = "gfx/interface/icons/relics/SRA_SD_Annihilating_Growl.dds"			
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_Annihilating_Growl.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_Annihilating_Growl.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 15
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_relic_SRA_SD_Arcane_relic"
+		texturefile = "gfx/interface/icons/relics/SRA_SD_Arcane_relic.dds"			
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_Arcane_relic.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_Arcane_relic.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 15
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_relic_SRA_SD_Divine_relic"
+		texturefile = "gfx/interface/icons/relics/SRA_SD_Divine_relic.dds"			
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_Divine_relic.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 8
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/SRA_SD_Divine_relic.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 15
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	frameAnimatedSpriteType = { name = "GFX_edict_SRA" texturefile = "gfx/interface/icons/SRA_icon_edicts.dds" noOfFrames = 16 transparencecheck = no animation_rate_fps = 18 looping = yes play_on_show = yes alwaystransparent = yes }
+	spriteType = { name = "GFX_wg_SRA_SOGZ" texturefile = "gfx/interface/icons/diplomacy/SRA_SOGZ_total_war.dds" }
+	spriteType = { name = "GFX_wg_SRA_stop_SOGZ" texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_wg_SRA_AI_world_machine_attack" texturefile = "gfx/interface/icons/diplomacy/SRA_SOGZ_total_war.dds" }
+	spriteType = { name = "GFX_wg_SRA_AI_world_machine_defense" texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_SRA_apocalypse_faction" texturefile = "gfx/interface/icons/diplomacy/SRA_apocalypse_faction.dds" }
+	
+	spriteType = {
+		name = "GFX_SRA_research_button_150_animated"
+		texturefile = "gfx/interface/SRA_misc_ui/SRA_research_button_150_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_misc_ui/SRA_research_button_150_animated_mask.dds"
+			animationtexturefile = "gfx/interface/SRA_misc_ui/SRA_button_268_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_ap_SRA_world_machine"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_SRA_world_machine.dds"
+		alwaystransparent = yes	
+		#一闪而过
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ascension_perks/ap_SRA_world_machine.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+
+	#Megas#megastructure
+	spriteType = {
+		name = "GFX_SRA_GZ_Platform_megastructure_0_build_icon"
+		textureFile = "gfx/interface/icons/technologies/tech_SRA_T4_weapon_SML_Mass_Drivers.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Barrier_Guard_Station_megastructure_0_build_icon"
+		textureFile = "gfx/interface/icons/technologies/tech_SRA_T4_Armies.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_orbital_ring_megastructure_0_build_icon"
+		textureFile = "gfx/interface/icons/technologies/tech_orbital_ring_tier_1.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Barrier_megastructure_0_build_icon"
+		textureFile = "gfx/interface/icons/technologies/tech_SRA_T4_ship_Part.dds"
+	}
+	#区划背景
+	spriteType = {
+		name = "GFX_district_SRA_GZ_housing_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_SRA_GZ_foundry_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_SRA_GZ_alloys_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_SRA_GZ_science_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_SRA_city_housing_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_SRA_city_foundry_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_SRA_city_alloys_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_SRA_city_science_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+	}
+	#区域特化图（并没有使用
+	spriteType = {
+		name = "GFX_zone_SRA_city"
+		textureFile = "gfx/interface/icons/zones/zone_SRA_city.dds"
+	}
+	#虚境超主
+	
+	spriteType = { name = "GFX_SRA_patron_Hidra_icon" texturefile = "gfx/interface/icons/patrons/SRA_patron_Hidra.dds" effectFile = "gfx/FX/buttonstate_onlydisable.shader" }
+}
+

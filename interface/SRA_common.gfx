@@ -1,0 +1,166 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_SRA_workforce_starbase_building"
+		texturefile = "gfx/interface/icons/modules/SRA_workforce_starbase_building.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_databan_starbase_building"
+		texturefile = "gfx/interface/icons/modules/SRA_databan_starbase_building.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_foundry_starbase_building"
+		texturefile = "gfx/interface/icons/modules/SRA_foundry_starbase_building.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_alloys_starbase_building"
+		texturefile = "gfx/interface/icons/modules/SRA_alloys_starbase_building.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_nano_shipyard"
+		texturefile = "gfx/interface/icons/modules/SRA_nano_shipyard.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_nano_shipyard"
+		texturefile = "gfx/interface/icons/modules/SRA_T3_nano_shipyard.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump"
+		texturefile = "gfx/interface/icons/modules/SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump.dds"
+	}
+	spriteType = {
+		name = "GFX_planet_modifier_ground_support_SRA_doom1"
+		sprite_sheet_sprite_type = "GFX_planet_view_bombarded"
+		default_frame = 3
+	}
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_SRA_doom1"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_armageddon_action.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_SRA_doom1_selected"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_armageddon_selected.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_planet_modifier_ground_support_SRA_doom2"
+		sprite_sheet_sprite_type = "GFX_planet_view_bombarded"
+		default_frame = 3
+	}
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_SRA_doom2"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_armageddon_action.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_fleet_order_button_ground_support_SRA_doom2_selected"
+		texturefile = "gfx/interface/fleet_view/fleet_task_ground_support_armageddon_selected.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/fleet_task_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/action_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+
+    spriteType = {
+		name = "GFX_SRA_army_icons"
+		textureFile = "gfx/interface/icons/armies/SRA_army.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_army_1"
+		sprite_sheet_sprite_type = "GFX_SRA_army_icons"
+		default_frame = 1
+	}
+	spriteType = {
+		name = "GFX_SRA_army_2"
+		sprite_sheet_sprite_type = "GFX_SRA_army_icons"
+		default_frame = 2
+	}
+	spriteType = {
+		name = "GFX_SRA_army_3"
+		sprite_sheet_sprite_type = "GFX_SRA_army_icons"
+		default_frame = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_army_1_A"
+		textureFile = "gfx/interface/icons/armies/SRA_army_1_A.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_army_2_A"
+		textureFile = "gfx/interface/icons/armies/SRA_army_2_A.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_army_Hidra"
+		textureFile = "gfx/interface/icons/armies/SRA_army_Hidra.dds"
+	}
+	spriteType = { name = "GFX_SRA_GZ_Core" textureFile = "gfx/interface/planetview/SRA_GZ_Core.dds" }
+	spriteType = { name = "GFX_SRA_Barrier_megastructure" textureFile = "gfx/interface/planetview/SRA_Barrier_megastructure.dds" }
+	spriteType = { name = "GFX_SRA_SOGZ_Ark_blueprint" textureFile = "gfx/interface/planetview/arkship_blueprints/SRA_SOGZ_Ark_blueprint.dds" }
+
+	spriteType = { name = "GFX_SRA_ship_size_SOGZ" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_SOGZ.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_SOGZ_top" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_SOGZ_top.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_SOGZ_top_damaged" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_SOGZ_top_damaged.dds" }
+	spriteType = { name = "GFX_text_SRA_ship_size_SOGZ" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_SOGZ_icon.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Executor" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Executor.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Executor_top" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Executor_top.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Executor_top_damaged" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Executor_top_damaged.dds" }
+	spriteType = { name = "GFX_text_SRA_ship_size_Executor" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Executor_icon.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Cruiser" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Cruiser.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Cruiser_top" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Cruiser_top.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Cruiser_top_damaged" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Cruiser_top_damaged.dds" }
+	spriteType = { name = "GFX_text_SRA_ship_size_Cruiser" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Cruiser_icon.dds" }
+}

@@ -1,0 +1,101 @@
+portraits = {
+	SRA_01		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_01.dds"  }
+	SRA_02		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_02.dds"  }
+	SRA_03		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_03.dds"  }
+	SRA_04		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_04.dds"  }
+	SRA_05		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_05.dds"  }
+	SRA_06		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_06.dds"  }
+	SRA_07		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_07.dds"  }
+	SRA_11		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_11.dds"  }
+	SRA_22		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_22.dds"  }
+	SRA_32		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_32.dds"  }
+	SRA_33		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_33.dds"  }
+	SRA_41		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_41.dds"  }
+	SRA_42		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_42.dds"  }
+	SRA_00001		= {texturefile = "gfx/models/portraits/SRA_StellarRegulator/SRA_00001.dds"  }
+   
+}	
+	
+portrait_groups = {
+
+
+"SRA_StellarRegulator" = {
+		default = SRA_01
+		game_setup = { 
+			
+			add = {
+				portraits = {
+					SRA_01
+					SRA_11
+				}
+			}
+
+		}
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					SRA_01
+					SRA_11
+					SRA_12
+					SRA_13
+					SRA_21
+					SRA_22
+					SRA_31
+					SRA_32
+					SRA_33
+					SRA_41
+					SRA_42
+				}
+			}
+
+
+		}
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					SRA_01
+					SRA_11
+					SRA_12
+					SRA_13
+					SRA_21
+					SRA_22
+					SRA_31
+					SRA_32
+					SRA_33
+					SRA_41
+					SRA_42
+				}
+			}
+
+		}
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					SRA_11
+					SRA_12
+					SRA_13
+					SRA_21
+					SRA_22
+					SRA_31
+					SRA_32
+					SRA_33
+					SRA_41
+					SRA_42
+				}
+			}
+
+		}	
+		#leader scope 
+		ruler = {
+			add = {
+				portraits = {
+					SRA_01
+					SRA_11
+				}
+			}
+		}
+	}
+}

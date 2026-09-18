@@ -1,0 +1,49 @@
+
+	#key = "SRA_T4_weapon_L_Particle_Launcher"
+	size = large
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_T4_weapon_L_Particle_Launcher"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 1536 max = 2304 }
+	
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 240
+	accuracy = 1
+	tracking = 1
+	shield_penetration = @SRA_weapon_penetration_4
+	armor_penetration = @SRA_weapon_penetration_4
+	#shield_damage = 3
+	#armor_damage = 3
+	#hull_damage = 2
+	power = -80
+	
+	# ai_weight = {
+	# 	weight = 0
+	# 	modifier = {
+	# 		weight = 7500
+	# 		OR = {
+	# 			has_civic = civic_SRAtechnology
+	# 			has_civic = civic_SRARociviaEmpire
+	# 		}
+	# 	}
+	# }
+	# prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	# component_set = "SRA_T4_weapon_L_Particle_Launcher"
+	#tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive l_slot artillery }
+	ai_tags = { weapon_role_anti_shield gunship artillery }
+	projectile_gfx = "SRA_torpedo_0"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}

@@ -1,0 +1,173 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_SOGZ_main_action1_opening_mesh"
+		file = "gfx/models/ships/SRA_SOGZ_ship/SRA_SOGZ_main_action1.mesh"
+		scale = 1.0
+
+		animation = { id = "idle" type = "SRA_SOGZ_main_action1_opening_animation" }
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 0
+			texture_diffuse = "SRA_SOGZ_planet_killer_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_planet_killer_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_planet_killer_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 1
+			texture_diffuse = "SRA_SOGZ_main_middle_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_middle_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_middle_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 2
+			texture_diffuse = "SRA_SOGZ_main_back_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_back_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_back_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 3
+			texture_diffuse = "SRA_SOGZ_main_front_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_front_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_front_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 4
+			texture_diffuse = "SRA_SOGZ_front_armor_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_front_armor_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_front_armor_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_SOGZ_main_action1_opened_mesh"
+		file = "gfx/models/ships/SRA_SOGZ_ship/SRA_SOGZ_main_action1.mesh"
+		scale = 1.0
+
+		animation = { id = "idle" type = "SRA_SOGZ_main_action1_opened_animation" }
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 0
+			texture_diffuse = "SRA_SOGZ_planet_killer_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_planet_killer_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_planet_killer_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 1
+			texture_diffuse = "SRA_SOGZ_main_middle_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_middle_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_middle_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 2
+			texture_diffuse = "SRA_SOGZ_main_back_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_back_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_back_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 3
+			texture_diffuse = "SRA_SOGZ_main_front_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_front_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_front_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 4
+			texture_diffuse = "SRA_SOGZ_front_armor_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_front_armor_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_front_armor_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_SOGZ_main_action1_closing_mesh"
+		file = "gfx/models/ships/SRA_SOGZ_ship/SRA_SOGZ_main_action1.mesh"
+		scale = 1.0
+
+		animation = { id = "idle" type = "SRA_SOGZ_main_action1_closing_animation" }
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 0
+			texture_diffuse = "SRA_SOGZ_planet_killer_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_planet_killer_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_planet_killer_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 1
+			texture_diffuse = "SRA_SOGZ_main_middle_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_middle_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_middle_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 2
+			texture_diffuse = "SRA_SOGZ_main_back_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_back_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_back_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 3
+			texture_diffuse = "SRA_SOGZ_main_front_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_main_front_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_main_front_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "SRA_SOGZ_main_attachmentShape"
+			index = 4
+			texture_diffuse = "SRA_SOGZ_front_armor_Grp_diffuse.dds"
+			texture_normal = "SRA_SOGZ_front_armor_Grp_normal.dds"
+			texture_specular = "SRA_SOGZ_front_armor_Grp_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_nemesis_system_effect_1_mesh"
+		file = "gfx/models/effects/nemesis_system_effect_1.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUVErosion"
+			texture_diffuse = "SRA_nemesis_system_effect_1.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+}

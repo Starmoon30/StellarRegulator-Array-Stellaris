@@ -1,0 +1,327 @@
+SRA_SD_First_Murder = {
+	activation_duration = 3600
+	portrait = "GFX_relic_SRA_SD_First_Murder"
+	sound = "relic_activation_isolated_contingency_core"
+	can_be_stolen = no
+
+	score = 10000
+
+	resources = {
+		category = relics
+		cost = { influence = 500 }
+	}
+	
+	triggered_country_modifier = {
+		potential = { always = yes }
+		custom_tooltip = SRA_SD_First_Murder_modifier
+	}
+
+	
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = SRA_SD_First_Murder
+		}
+	}
+
+	active_effect = {
+		custom_tooltip = SRA_SD_First_Murder_effect
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_hostile = root
+				}
+				ruler = {
+					kill_leader = { show_notification = yes }
+				}
+				add_modifier = {
+					modifier = "SRA_SD_First_Murder_debuff"
+					days = 3600
+				}
+			}
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}
+SRA_SD_Fire_of_Lightkeeper = {
+	activation_duration = 3600
+	portrait = "GFX_relic_SRA_SD_Fire_of_Lightkeeper"
+	sound = "relic_activation_isolated_contingency_core"
+	can_be_stolen = no
+
+	score = 10000
+
+	resources = {
+		category = relics
+		cost = { influence = 500 }
+	}
+	
+	triggered_country_modifier = {
+		potential = { always = yes }
+		custom_tooltip = SRA_SD_Fire_of_Lightkeeper_modifier
+	}
+
+	
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = SRA_SD_Fire_of_Lightkeeper
+		}
+	}
+
+	active_effect = {
+		custom_tooltip = SRA_SD_Fire_of_Lightkeeper_effect
+		add_modifier = {
+			modifier = SRA_SD_Fire_of_Lightkeeper_buff days = 3600
+		}
+		custom_tooltip = SRA_SD_Fire_of_Lightkeeper_effect_2
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}
+SRA_SD_Annihilating_Growl = {
+	activation_duration = 3600
+	portrait = "GFX_relic_SRA_SD_Annihilating_Growl"
+	sound = "relic_activation_isolated_contingency_core"
+	can_be_stolen = no
+
+	score = 10000
+
+	resources = {
+		category = relics
+		cost = {}
+	}
+	
+	triggered_country_modifier = {
+		potential = { always = yes }
+		custom_tooltip = SRA_SD_Annihilating_Growl_modifier
+	}
+
+	
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = SRA_SD_Annihilating_Growl
+		}
+		custom_tooltip = {
+			fail_text = r_the_tempest_invocator_started_placing_fail_tt
+			NOT = { has_country_flag = "started_placing_storm" }
+		}
+	}
+
+	active_effect = {
+		custom_tooltip = SRA_SD_Annihilating_Growl_effect
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+		set_country_flag = "started_placing_storm"
+
+		# start_storm_area_placing = {
+		# 	sacrifice_leader_with_ui = no
+		# 	cosmic_storm = nexus_storm
+		# 	immediate = yes
+
+		# 	reticle_radius = {
+		# 		base = 20
+		# 	}
+
+		# 	max_range = {
+		# 		base = 15000
+		# 	}
+
+		# 	on_confirm = {
+		# 		custom_tooltip = relic_triumph_cooldown
+
+		# 		hidden_effect = {
+		# 			add_modifier = {
+		# 				modifier = "relic_activation_cooldown"
+		# 				days = @triumph_duration
+		# 			}
+		# 		}
+		# 		remove_country_flag = "started_placing_storm"
+		# 	}
+
+		# 	on_cancel = {
+		# 		remove_country_flag = "started_placing_storm"
+		# 	}
+		# }
+	}
+
+	ai_weight = { weight = 0 }
+}
+
+SRA_SD_Arcane_relic = {
+	activation_duration = 3600
+	portrait = "GFX_relic_SRA_SD_Arcane_relic"
+	sound = "relic_activation_isolated_contingency_core"
+	can_be_stolen = no
+
+	score = 10000
+
+	resources = {
+		category = relics
+		cost = { influence = 500 }
+	}
+	
+	triggered_country_modifier = {
+		potential = { always = yes }
+		custom_tooltip = SRA_SD_Arcane_relic_modifier
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_SRA_SD_Arcane_weapon_damage_mult = 0.5
+		mult = modifier:weapon_type_energy_weapon_damage_mult
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_SRA_SD_Arcane_weapon_fire_rate_mult = 0.5
+		mult = modifier:weapon_type_energy_weapon_fire_rate_mult
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_SRA_SD_Arcane_weapon_damage_mult = 0.5
+		mult = modifier:weapon_type_explosive_weapon_damage_mult
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_SRA_SD_Arcane_weapon_fire_rate_mult = 0.5
+		mult = modifier:weapon_type_explosive_weapon_fire_rate_mult
+	}
+
+	
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = SRA_SD_Arcane_relic
+		}
+	}
+
+	active_effect = {
+		custom_tooltip = SRA_SD_Arcane_relic_effect
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			export_modifier_to_variable = {
+				modifier = weapon_type_SRA_SD_Arcane_weapon_damage_mult
+				variable = SRA_SD_Arcane_relic_buff_A
+			}
+			export_modifier_to_variable = {
+				modifier = weapon_type_SRA_SD_Arcane_weapon_fire_rate_mult
+				variable = SRA_SD_Arcane_relic_buff_B
+			}
+			add_modifier = {
+				modifier = SRA_SD_Arcane_relic_buff_A
+				multiplier = SRA_SD_Arcane_relic_buff_A
+				days = 1800
+			}
+			add_modifier = {
+				modifier = SRA_SD_Arcane_relic_buff_B
+				multiplier = SRA_SD_Arcane_relic_buff_B
+				days = 1800
+			}
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}
+SRA_SD_Divine_relic = {
+	activation_duration = 3600
+	portrait = "GFX_relic_SRA_SD_Divine_relic"
+	sound = "relic_activation_isolated_contingency_core"
+	can_be_stolen = no
+
+	score = 10000
+
+	resources = {
+		category = relics
+		cost = { influence = 500 }
+	}
+	
+	triggered_country_modifier = {
+		potential = { always = yes }
+		custom_tooltip = SRA_SD_Divine_relic_modifier
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_SRA_SD_Divine_weapon_damage_mult = 0.25
+		mult = modifier:weapon_type_strike_craft_weapon_damage_mult
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_SRA_SD_Divine_weapon_fire_rate_mult = 0.25
+		mult = modifier:weapon_type_strike_craft_weapon_fire_rate_mult
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_SRA_SD_Divine_weapon_damage_mult = 0.5
+		mult = modifier:weapon_type_kinetic_weapon_damage_mult
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_SRA_SD_Divine_weapon_fire_rate_mult = 0.5
+		mult = modifier:weapon_type_kinetic_weapon_fire_rate_mult
+	}
+	
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = SRA_SD_Divine_relic
+		}
+	}
+
+	active_effect = {
+		custom_tooltip = SRA_SD_Divine_relic_effect
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			export_modifier_to_variable = {
+				modifier = weapon_type_SRA_SD_Divine_weapon_damage_mult
+				variable = SRA_SD_Divine_relic_buff_A
+			}
+			export_modifier_to_variable = {
+				modifier = weapon_type_SRA_SD_Divine_weapon_fire_rate_mult
+				variable = SRA_SD_Divine_relic_buff_B
+			}
+			add_modifier = {
+				modifier = SRA_SD_Divine_relic_buff_A
+				multiplier = SRA_SD_Divine_relic_buff_A
+				days = 1800
+			}
+			add_modifier = {
+				modifier = SRA_SD_Divine_relic_buff_B
+				multiplier = SRA_SD_Divine_relic_buff_B
+				days = 1800
+			}
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}

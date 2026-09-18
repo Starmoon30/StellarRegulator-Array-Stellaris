@@ -1,0 +1,921 @@
+namespace = SRA_SD_event
+leader_event = {
+	id = SRA_SD_event.1
+	title = "SRA_SD_event.1.name"
+	desc = "SRA_SD_event.1.desc"
+	picture = GFX_evt_cosmic_storms_solar_storm
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = this
+		room = root.owner
+	}
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		add_trait = { trait = leader_trait_SRA_SD_Myth show_message = yes }
+		set_variable = { which = SRA_SD_Myth_power_level value = 1 }
+    }
+	option = {
+		name = "concept_SRA_SD_Myth_councilor_skill"
+		custom_tooltip = "concept_SRA_SD_Myth_councilor_skill_desc"
+		trigger = {
+			not = { has_leader_flag = SRA_SD_Myth_councilor_skill }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_councilor_skill
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_damage_mult"
+		custom_tooltip = "concept_SRA_SD_Myth_damage_mult_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_damage_mult }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_damage_mult
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_evasion_mult"
+		custom_tooltip = "concept_SRA_SD_Myth_evasion_mult_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_evasion_mult }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_evasion_mult
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_accuracy_debuff"
+		custom_tooltip = "concept_SRA_SD_Myth_accuracy_debuff_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_accuracy_debuff }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_accuracy_debuff
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_army_damage_taken"
+		custom_tooltip = "concept_SRA_SD_Myth_army_damage_taken_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_army_damage_taken }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_army_damage_taken
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_alone"
+		custom_tooltip = "concept_SRA_SD_Myth_alone_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_alone }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_alone
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_sector_speed"
+		custom_tooltip = "concept_SRA_SD_Myth_sector_speed_desc"
+		trigger = {
+			not = { has_leader_flag = SRA_SD_Myth_sector_speed }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_sector_speed
+		}
+	}
+}
+leader_event = {
+	id = SRA_SD_event.2
+	title = "SRA_SD_event.2.name"
+	desc = "SRA_SD_event.2.desc"
+	picture = GFX_evt_cosmic_storms_solar_storm
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = this
+		room = root.owner
+	}
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		change_variable = { which = SRA_SD_Myth_power_level value = 1 }
+	}
+	option = {
+		name = "SRA_SD_event.2.a"
+	}
+}
+leader_event = {
+	id = SRA_SD_event.3
+	title = "SRA_SD_event.3.name"
+	desc = "SRA_SD_event.3.desc"
+	picture = GFX_evt_cosmic_storms_solar_storm
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = this
+		room = root.owner
+	}
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		change_variable = { which = SRA_SD_Myth_power_level value = 1 }
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_councilor_skill"
+		custom_tooltip = "concept_SRA_SD_Myth_councilor_skill_desc"
+		trigger = {
+			not = { has_leader_flag = SRA_SD_Myth_councilor_skill }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_councilor_skill
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_damage_mult"
+		custom_tooltip = "concept_SRA_SD_Myth_damage_mult_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_damage_mult }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_damage_mult
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_evasion_mult"
+		custom_tooltip = "concept_SRA_SD_Myth_evasion_mult_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_evasion_mult }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_evasion_mult
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_accuracy_debuff"
+		custom_tooltip = "concept_SRA_SD_Myth_accuracy_debuff_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_accuracy_debuff }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_accuracy_debuff
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_army_damage_taken"
+		custom_tooltip = "concept_SRA_SD_Myth_army_damage_taken_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_army_damage_taken }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_army_damage_taken
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_alone"
+		custom_tooltip = "concept_SRA_SD_Myth_alone_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_alone }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_alone
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_sector_speed"
+		custom_tooltip = "concept_SRA_SD_Myth_sector_speed_desc"
+		trigger = {
+			not = { has_leader_flag = SRA_SD_Myth_sector_speed }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_sector_speed
+		}
+	}
+}
+leader_event = {
+	id = SRA_SD_event.4
+	title = "SRA_SD_event.4.name"
+	desc = "SRA_SD_event.4.desc"
+	picture = GFX_evt_cosmic_storms_solar_storm
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = this
+		room = root.owner
+	}
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		set_variable = { which = SRA_SD_Myth_power_level value = 10 }
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_councilor_skill"
+		custom_tooltip = "concept_SRA_SD_Myth_councilor_skill_desc"
+		trigger = {
+			not = { has_leader_flag = SRA_SD_Myth_councilor_skill }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_councilor_skill
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_damage_mult"
+		custom_tooltip = "concept_SRA_SD_Myth_damage_mult_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_damage_mult }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_damage_mult
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_evasion_mult"
+		custom_tooltip = "concept_SRA_SD_Myth_evasion_mult_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_evasion_mult }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_evasion_mult
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_accuracy_debuff"
+		custom_tooltip = "concept_SRA_SD_Myth_accuracy_debuff_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_accuracy_debuff }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_accuracy_debuff
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_army_damage_taken"
+		custom_tooltip = "concept_SRA_SD_Myth_army_damage_taken_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_army_damage_taken }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_army_damage_taken
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_alone"
+		custom_tooltip = "concept_SRA_SD_Myth_alone_desc"
+		trigger = {
+			leader_class = commander
+			not = { has_leader_flag = SRA_SD_Myth_alone }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_alone
+		}
+	}
+	option = {
+		name = "concept_SRA_SD_Myth_sector_speed"
+		custom_tooltip = "concept_SRA_SD_Myth_sector_speed_desc"
+		trigger = {
+			not = { has_leader_flag = SRA_SD_Myth_sector_speed }
+		}
+		hidden_effect = {
+			set_leader_flag = SRA_SD_Myth_sector_speed
+		}
+	}
+}
+carrier_event = {
+	id = SRA_SD_event.10
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_planet_class = pc_SRA_SD_chaos_star_habitable
+	}
+	immediate = {
+		random_list = {
+			1000 = {
+			}
+			1000 = {
+				multiply_variable = {
+					which = pc_SRA_SD_chaos_star_habitable_vitality
+					value = 1.1
+				}
+			}
+			100 = {
+				modifier = { 
+					add = pc_SRA_SD_chaos_star_habitable_vitality
+					always = yes
+		    	}
+				modifier = {
+					mult = 0
+					has_planet_flag = SRA_SD_abyss_no_army_attack
+				}
+				create_SRA_SD_abyss_army_attack_010 = yes
+			}
+		}
+
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_gestalt = no }
+				free_jobs_of_type = {
+					job = SRA_SD_chaos_explorer
+					value <= 0
+				}
+			}
+			random_owned_pop_job = {
+				limit = {
+					has_job_type = SRA_SD_chaos_explorer
+				}
+				kill_assigned_pop_amount = {
+					percentage = 1
+				}
+			}
+			change_variable = {
+				which = pc_SRA_SD_chaos_star_habitable_max_districts
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				exists = owner
+				owner = { is_gestalt = yes }
+				free_jobs_of_type = {
+					job = SRA_SD_chaos_explorer_drone
+					value <= 0
+				}
+			}
+			random_owned_pop_job = {
+				limit = {
+					has_job_type = SRA_SD_chaos_explorer_drone
+				}
+				kill_assigned_pop_amount = {
+					percentage = 1
+				}
+			}
+			change_variable = {
+				which = pc_SRA_SD_chaos_star_habitable_max_districts
+				value = 1
+			}
+		}
+		carrier_event = {
+			id = SRA_SD_event.10 days = 180
+		}
+	}
+}
+
+country_event = { #神话力量相关的交战事件
+	id = SRA_SD_event.18
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		FromFrom = {
+			leader? = {
+				OR = {
+					check_modifier_value = {
+						modifier = mod_SRA_SD_Myth_accuracy_debuff
+						value > 0
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				FromFrom = {
+					leader? = {
+						OR = {
+							check_modifier_value = {
+								modifier = mod_SRA_SD_Myth_accuracy_debuff
+								value > 0
+							}
+						}
+					}
+				}
+			}
+			FromFromFrom = {
+				every_owned_ship = {
+					set_variable = {
+						which = mod_SRA_SD_Myth_accuracy_debuff
+						value = root.FromFrom.leader.SRA_SD_Myth_power_level
+					}
+					SRA_SD_Myth_accuracy_debuff_effect = {
+						SOURCE = mod_SRA_SD_Myth_accuracy_debuff
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_SD_event.19
+	title = SRA_SD_event.19.name
+	is_triggered_only = yes
+	force_open = yes	
+	picture = GFX_evt_physics_research
+	desc = "SRA_SD_event.19.desc"
+	trigger = {
+		has_civic = civic_SRARociviaEmpire
+		has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_SD_event.19.a
+		custom_tooltip = SRA_SD_event.19.a.tooltip
+		hidden_effect = {
+			add_modifier = {
+				modifier = SRA_SD_event_19_buff days = 14400
+			}
+			copy_techs_from = { target = event_target:SRA_SD_department_of_abyss_country }
+		}
+	}
+	option = {
+		name = SRA_SD_event.19.b
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = {
+	id = SRA_SD_event.20
+	title = SRA_SD_event.20.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	desc = "SRA_SD_event.20.desc"
+	trigger = {
+		has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+		has_civic = civic_SRARociviaEmpire
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_SD_department_of_abyss
+				is_same_value = ROOT
+			}
+		}
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+	}
+	option = {
+		name = SRA_SD_event.20.a
+		custom_tooltip = SRA_SD_event.20.a.tooltip
+		trigger = {
+			always = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_SD_event.21
+			}
+		}
+	}
+	option = {
+		name = SRA_SD_event.20.b
+		custom_tooltip = SRA_SD_event.20.b.tooltip
+		hidden_effect = {
+			country_event = {
+				id = SRA_SD_event.22
+			}
+		}
+	}
+	option = {
+		name = SRA_SD_event.20.c
+		custom_tooltip = SRA_SD_event.20.c.tooltip
+		allow = { any_owned_leader = { is_councilor_type = councilor_SRA_SD_lost_presbyter } }
+		hidden_effect = {
+			random = {
+				chance = 20
+				create_SRA_SD_abyss_army_attack_010 = yes
+			}
+			event_target:SRA_SD_chaos_star_habitable = {
+				multiply_variable = {
+					which = pc_SRA_SD_chaos_star_habitable_vitality
+					value = 2
+				}
+				add_planet_devastation = 50
+				leader = {
+					random = {
+						chance = 50
+						leader_SRA_Abyss_Erosion_effect = yes
+					}
+				}
+				remove_planet_flag = SRA_SD_abyss_no_army_attack
+			}
+			every_owned_leader = {
+				limit = { is_councilor_type = councilor_SRA_SD_lost_presbyter }
+				random_list = {
+					50 = {
+						leader_SRA_Abyss_Erosion_effect = yes
+					}
+					50 = {
+						leader_event = { id = SRA_SD_event.95 }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_SD_event.20.d
+		custom_tooltip = SRA_SD_event.20.d.tooltip
+		allow = { not = { event_target:SRA_SD_chaos_star_habitable = { has_modifier = SRA_SD_event_20_d_buff } } }
+		hidden_effect = {
+			event_target:SRA_SD_chaos_star_habitable = {
+				multiply_variable = {
+					which = pc_SRA_SD_chaos_star_habitable_vitality
+					value = 0.5
+				}
+				add_planet_devastation = 50
+				add_modifier = { modifier = SRA_SD_event_20_d_buff days = 360 }
+				if = {
+					limit = { check_variable = { which = pc_SRA_SD_chaos_star_habitable_max_districts value >= 4 } }
+					change_variable = { which = pc_SRA_SD_chaos_star_habitable_max_districts value = -2}
+				}
+				leader = {
+					random = {
+						chance = 50
+						leader_SRA_Abyss_Erosion_effect = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit1
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_SD_event.21
+	title = SRA_SD_event.21.name
+	is_triggered_only = yes
+	force_open = yes	
+	picture = GFX_evt_astral_rift_psionic_stranger
+	desc = "SRA_SD_event.21.desc"
+	trigger = {
+		has_civic = civic_SRARociviaEmpire
+		has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_SD_event.21.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_SD_event.22
+	title = SRA_SD_event.22.name
+	is_triggered_only = yes
+	force_open = yes
+	picture = GFX_evt_astral_rift_psionic_stranger
+	desc = "SRA_SD_event.22.desc"
+	trigger = {
+		has_civic = civic_SRARociviaEmpire
+		has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_SD_event.22.a
+		hidden_effect = {
+			create_SRA_SD_abyss_army_attack_010 = yes
+		}
+	}
+}
+
+country_event = {
+	id = SRA_SD_event.23
+	title = SRA_SD_event.23.name
+	desc = "SRA_SD_event.23.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+		has_civic = civic_SRARociviaEmpire
+		from = {
+			nand = {
+				has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+		FROMFROM = {
+			is_same_value = event_target:SRA_SD_chaos_star_habitable
+		}
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 61 }
+    }
+	option = {
+		name = SRA_SD_event.23.a
+		destroy_country = yes
+	}
+	option = {
+		name = SRA_SD_event.23.b
+		custom_tooltip = SRA_SD_event.23.b.tooltip
+		hidden_effect = {
+			FROMFROM = {
+				while = {
+					count = 5
+					create_army = {
+						name = "SRA_Machine_Army_Of_Chaos_Attacker"
+						owner = root
+						species = event_target:SRA_RE_species
+						type = "SRA_Machine_Army_Of_Chaos_Attacker"
+						}
+					}
+				every_ground_combat_defender = {
+					remove_army = yes
+				}
+			}
+		}
+	}
+}
+
+leader_event = {
+	id = SRA_SD_event.95
+	title = "SRA_SD_event.95.name"
+	desc = "SRA_SD_event.95.desc"
+	picture = GFX_evt_cosmic_storms_nexus_storm
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = this
+		room = root.owner
+	}
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+
+	}
+	option = {
+		name = "SRA_SD_event.95.a"
+		hidden_effect = {
+			kill_leader = { fire = yes show_notification = no }
+		}
+	}
+}
+leader_event = {
+	id = SRA_SD_event.96
+	title = "SRA_SD_event.96.name"
+	desc = "SRA_SD_event.96.desc"
+	picture = GFX_evt_cosmic_storms_nexus_storm
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = this
+		room = root.owner
+	}
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+
+	}
+	option = {
+		name = "SRA_SD_event.96.a"
+		hidden_effect = {
+			owner = {
+				random_list = {
+					1 = { change_variable = { which = SRA_SD_element_forge_value value = 1 } }
+					1 = { change_variable = { which = SRA_SD_element_edge_value value = 1 } }
+					1 = { change_variable = { which = SRA_SD_element_stone_value value = 1 } }
+					1 = { change_variable = { which = SRA_SD_element_lantern_value value = 1 } }
+					1 = { change_variable = { which = SRA_SD_element_chalice_value value = 1 } }
+					1 = { change_variable = { which = SRA_SD_element_secret_value value = 1 } }
+					6 = {}
+				}
+			}
+		}
+	}
+}
+leader_event = {
+	id = SRA_SD_event.97
+	title = "SRA_SD_event.97.name"
+	desc = "SRA_SD_event.97.desc"
+	picture = GFX_evt_cosmic_storms_nexus_storm
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = this
+		room = root.owner
+	}
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+
+	}
+	option = {
+		name = "SRA_SD_event.97.a"
+		hidden_effect = { add_trait = { trait = leader_trait_SRA_Abyss_Erosion } }
+	}
+}
+leader_event = {
+	id = SRA_SD_event.98
+	title = "SRA_SD_event.98.name"
+	desc = "SRA_SD_event.98.desc"
+	picture = GFX_evt_cosmic_storms_solar_storm
+	event_window_type = leader_story
+
+	picture_event_data = {
+		portrait = this
+		room = root.owner
+	}
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+
+	}
+	option = {
+		name = "SRA_SD_event.98.a"
+		hidden_effect = { add_trait = { trait = leader_trait_SRA_Abyss_Erosion_Alter } }
+	}
+}
+leader_event = {
+	id = SRA_SD_event.99
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+	}
+	immediate = {
+		kill_leader = {
+			show_notification = no fire = yes
+		}
+	}
+}
+country_event = {
+	id = SRA_SD_event.100
+	title = SRA_SD_event.100.title
+	desc = "SRA_SD_event.100.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_BoM_stat_ui
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 66 }
+		set_variable = { which = SRA_BoM_stat_choose value = 0 }
+    }
+	option = {
+		name = "SRA_SD_event.100.a"
+	}
+	option = {
+		name = "SRA_SD_event.100.b"
+		custom_tooltip = SRA_SD_event.100.b.tooltip
+		allow = {
+        	custom_tooltip = {
+            	fail_text = SRA_SD_event.100.b.allow
+				OR = {
+					check_variable = { which = SRA_BoM_stat_choose value = 1 }
+					check_variable = { which = SRA_BoM_stat_choose value = 2 }
+					check_variable = { which = SRA_BoM_stat_choose value = 3 }
+					check_variable = { which = SRA_BoM_stat_choose value = 4 }
+					check_variable = { which = SRA_BoM_stat_choose value = 5 }
+					check_variable = { which = SRA_BoM_stat_choose value = 6 }
+				}
+       		}
+		}
+		hidden_effect = {
+			if = {
+				limit = { check_variable = { which = SRA_BoM_stat_choose value = 1 } }
+				create_SRA_Bard_of_Metarbor_fleet = yes
+				custom_tooltip = SRA_SD_event.100.b.tooltip.a
+			}
+			else_if = {
+				limit = { check_variable = { which = SRA_BoM_stat_choose value = 2 } }
+				create_SRA_Bard_of_Metarbor_army = yes
+				custom_tooltip = SRA_SD_event.100.b.tooltip.b
+			}
+		}
+		
+	}
+}
+
+
+country_event = {
+	id = SRA_SD_event.200
+	title = SRA_SD_event.200.title
+	desc = "SRA_SD_event.200.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_BoM_stat_ui
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 62 }
+		set_variable = { which = SRA_BoM_stat_choose value = 0 }
+    }
+	option = {
+		name = SRA_SD_event.200.a
+	}
+	option = {
+		name = SRA_SD_event.200.b
+		custom_tooltip = SRA_SD_event.200.b.tooltip
+		hidden_effect = {
+			if = {
+				limit = { check_variable = { which = SRA_BoM_stat_choose value = 1 } }
+				custom_tooltip = SRA_SD_event.200.b.tooltip.a
+			}
+			else_if = {
+				limit = { check_variable = { which = SRA_BoM_stat_choose value = 2 } }
+				custom_tooltip = SRA_SD_event.200.b.tooltip.b
+			}
+			else_if = {
+				limit = { check_variable = { which = SRA_BoM_stat_choose value = 3 } }
+				custom_tooltip = SRA_SD_event.200.b.tooltip.c
+			}
+			else_if = {
+				limit = { check_variable = { which = SRA_BoM_stat_choose value = 4 } }
+				custom_tooltip = SRA_SD_event.200.b.tooltip.d
+			}
+			else_if = {
+				limit = { check_variable = { which = SRA_BoM_stat_choose value = 5 } }
+				custom_tooltip = SRA_SD_event.200.b.tooltip.e
+			}
+			else_if = {
+				limit = { check_variable = { which = SRA_BoM_stat_choose value = 6 } }
+				custom_tooltip = SRA_SD_event.200.b.tooltip.f
+			}
+			else = {
+				custom_tooltip = SRA_SD_event.200.b.tooltip.g
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_SD_event.507
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	custom_gui_option = "enclave_curator_option"
+	picture_event_data = {
+		portrait = event_target:curator_enclave_country
+		room = enclave_curator_room
+	}
+	location = event_target:curator_enclave_system
+	event_message_type = ENCLAVE_DIPLOMACY
+
+	title = SRA_SD_event.507.name
+	desc = SRA_SD_event.507.desc
+
+	immediate = {
+		event_target:curator_enclave_country = {
+			if = {
+				limit = { NOT = { has_communications = root }}
+				establish_communications_no_message = root
+			}
+		}
+	}
+
+	option = {
+		name = SRA_SD_event.507.a
+		hidden_effect = {
+
+		}
+	}
+}

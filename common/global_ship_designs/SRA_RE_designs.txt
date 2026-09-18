@@ -1,0 +1,395 @@
+ship_design = {
+	name = "NAME_SRA_RE_Crisis_Mark"
+	ship_size = SRA_Crisis_Mark
+	is_event_design = yes
+
+	section = {
+		template = "SRA_Crisis_Mark_mid"
+		slot = "mid"
+	
+		component = {
+			slot = "t_weapon_01"
+			template = "SRA_T4_weapon_T_Laser_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_01"
+			template = "SRA_T4_weapon_L_Laser_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_02"
+			template = "SRA_T4_weapon_L_Laser_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_03"
+			template = "SRA_T4_weapon_L_Laser_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_04"
+			template = "SRA_T4_weapon_L_Laser_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_05"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_06"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_07"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_08"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_09"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_10"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_11"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_12"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_13"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_14"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_15"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "l_weapon_16"
+			template = "SRA_T4_weapon_L_Particle_Launcher_Adjust_Event"
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_T4_weapon_P_Adjust_Event"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_T4_weapon_P_Adjust_Event"
+		}
+		component = {
+			slot = "pd_weapon_03"
+			template = "SRA_T4_weapon_P_Adjust_Event"
+		}
+		component = {
+			slot = "pd_weapon_04"
+			template = "SRA_T4_weapon_P_Adjust_Event"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_SRA_T4_ship_Part"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SRA_T4_Armor_Intensifier"
+		}		
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "SRA_T4_Armor_Intensifier"
+		}		
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "SRA_T4_Weapon_Intensifier"
+		}		
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "SRA_T4_Weapon_Intensifier"
+		}
+	}	
+	required_component = "SRA_T4_Reactor_Core"
+	required_component = "SRA_T4_Sensor"
+	required_component = "SRA_T4_Computer"
+	required_component = "SRA_Aura_2"
+	required_component = "SRA_Aura_3"
+	required_component = "SRA_Aura_4"
+}
+
+ship_design = {
+	name = "NAME_SRA_RE_Core_Battleship"
+	ship_size = SRA_RE_Core_Battleship
+	is_event_design = yes
+
+	section = {
+		template = "SRA_RE_Core_Battleship_MID"
+		slot = "mid"
+	
+		component = {
+			slot = "t_weapon_01"
+			template = "SRA_RE_Core_weapon_T_Laser"
+		}
+		component = {
+			slot = "xl_weapon_01"
+			template = "SRA_RE_Core_weapon_X_Cannon"
+		}
+		component = {
+			slot = "xl_weapon_02"
+			template = "SRA_RE_Core_weapon_X_Cannon"
+		}
+		component = {
+			slot = "l_weapon_01"
+			template = "SRA_RE_Core_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_02"
+			template = "SRA_RE_Core_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_03"
+			template = "SRA_RE_Core_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_04"
+			template = "SRA_RE_Core_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_05"
+			template = "SRA_RE_Core_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_06"
+			template = "SRA_RE_Core_weapon_L_Laser"
+		}
+		component = {
+			slot = "l_weapon_07"
+			template = "SRA_RE_Core_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_08"
+			template = "SRA_RE_Core_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_09"
+			template = "SRA_RE_Core_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_10"
+			template = "SRA_RE_Core_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_11"
+			template = "SRA_RE_Core_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "l_weapon_12"
+			template = "SRA_RE_Core_weapon_L_Particle_Launcher"
+		}
+		component = {
+			slot = "torpedo_01" 
+			template = "SRA_RE_Core_weapon_G" 
+		}
+		component = {
+			slot = "strike_craft_01"
+			template = "SRA_RE_Core_weapon_H" 
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_RE_Core_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_RE_Core_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_03"
+			template = "SRA_RE_Core_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_04"
+			template = "SRA_RE_Core_weapon_P"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_SRA_RE_Core_ship_Part_Armor"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SRA_RE_Core_A"
+		}		
+	}	
+	required_component = "SRA_RE_Core_Reactor"
+	required_component = "SRA_RE_Core_Jump"
+	required_component = "SRA_RE_Core_SHIP_Thruster"
+	required_component = "SRA_RE_Core_Sensor"
+	required_component = "SRA_RE_Core_Computer"
+}
+
+ship_design = {
+	name = "NAME_starbase_SRA_RE_Calamitisease"
+	ship_size = starbase_SRA_RE_Calamitisease
+	is_event_design = yes
+
+	section = {
+		template = "starbase_SRA_RE_Calamitisease_STARBASE_SECTION"
+		slot = "core"
+	
+		component = {
+			slot = "t_weapon_01"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_T"
+		}
+		component = {
+			slot = "t_weapon_02"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_T"
+		}
+		component = {
+			slot = "t_weapon_03"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_T"
+		}
+		component = {
+			slot = "t_weapon_04"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_T"
+		}
+		component = {
+			slot = "t_weapon_05"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_T"
+		}
+		component = {
+			slot = "t_weapon_06"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_T"
+		}
+		component = {
+			slot = "pd_weapon_01"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_02"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_03"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_04"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_05"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_P"
+		}
+		component = {
+			slot = "pd_weapon_06"
+			template = "SRA_starbase_SRA_RE_Calamitisease_weapon_P"
+		}
+	}	
+	required_component = "SRA_starbase_SRA_RE_Calamitisease_Reactor"
+}

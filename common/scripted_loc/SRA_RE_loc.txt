@@ -1,0 +1,77 @@
+defined_text = {
+	name = GetScriptedcivic_SRARociviaEmpire_desc
+	text = {
+		localization_key = civic_SRARociviaEmpire_a_desc
+		trigger = {
+			has_country_flag = SRA_RE_Rocivia_Empire_story
+		}
+	}
+	text = {
+		localization_key = civic_SRARociviaEmpire_b_desc
+		trigger = {
+			has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+		}
+	}
+	text = {
+		localization_key = civic_SRARociviaEmpire_0_desc
+		trigger = {
+			NAND = {
+				has_country_flag = SRA_RE_Rocivia_Empire_story
+				has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+			}
+		}
+	}
+}
+defined_text = {
+	name = GetScriptedcivic_SRARociviaEmpire_effects
+	text = {
+		localization_key = civic_SRARociviaEmpire_a_effects
+		trigger = {
+			has_country_flag = SRA_RE_Rocivia_Empire_story
+		}
+	}
+	text = {
+		localization_key = civic_SRARociviaEmpire_b_effects
+		trigger = {
+			has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+		}
+	}
+	text = {
+		localization_key = civic_SRARociviaEmpire_0_effects
+		trigger = {
+			NAND = {
+				has_country_flag = SRA_RE_Rocivia_Empire_story
+				has_country_flag = SRA_SD_Shadow_Of_Hidra_story
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = GetScriptedSRA_diplomacy_name_cognitive_filtration_desc
+	random = yes
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_1 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_2 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_3 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_4 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_5 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_6 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_7 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_8 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_9 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_10 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_11 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_12 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_13 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_14 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_15 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_16 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_17 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_18 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_19 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_20 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_21 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_22 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_23 }
+	text = { localization_key = GetScriptedSRA_diplomacy_name_cognitive_filtration_24 }
+}

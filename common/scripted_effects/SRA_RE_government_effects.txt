@@ -1,0 +1,19 @@
+SRA_RE_Hidra_102_effect_1 = {
+	optimize_memory
+	random_list = {
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_a }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_b }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_c }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_d }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_e }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_f }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_g }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_h }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_i }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_j }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_k }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_l }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_m }
+		100 = { set_country_flag = SRA_RE_Hidra_102_resource_n }
+	}
+}

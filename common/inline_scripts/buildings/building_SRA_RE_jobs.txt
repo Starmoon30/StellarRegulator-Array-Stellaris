@@ -1,0 +1,56 @@
+#building_SRA_RE_jobs
+triggered_planet_modifier = {
+	potential = {
+		owner? = { is_gestalt = no }
+	}
+	pop_$JOB$_specialist_bonus_workforce_mult = 0.004
+	job_$JOB$_specialist_add = 20
+	mult = value:count_any_districts
+}
+triggered_planet_modifier = {
+	potential = {
+		owner? = { is_gestalt = no has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+	}
+	job_$JOB$_specialist_add = 20
+	mult = value:count_any_districts
+}
+triggered_planet_modifier = {
+	potential = {
+		owner? = {
+			OR = {
+				is_hive_empire = yes
+				is_machine_empire = yes
+			}
+		}
+	}
+	pop_$JOB$_drone_bonus_workforce_mult = 0.004
+	job_$JOB$_drone_add = 20
+	mult = value:count_any_districts
+}
+triggered_planet_modifier = {
+	potential = {
+		owner? = {
+			OR = {
+				AND = { is_hive_empire = yes has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+				AND = { is_machine_empire = yes has_technology = tech_SRA_T3_Composite_Crystal_Lattice }
+			}
+		}
+	}
+	job_$JOB$_drone_add = 20
+	mult = value:count_any_districts
+}
+
+# triggered_desc = {
+# 	trigger = {
+# 		exists = owner
+# 		owner = { is_gestalt = no }
+# 	}
+# 	text = job_$JOB$_specialist_effect_desc
+# }
+# triggered_desc = {
+# 	trigger = {
+# 		exists = owner
+# 		owner = { is_gestalt = yes }
+# 	}
+# 	text = job_$JOB$_drone_effect_desc
+# }

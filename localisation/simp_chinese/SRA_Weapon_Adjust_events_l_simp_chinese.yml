@@ -1,0 +1,42 @@
+﻿l_simp_chinese:
+###############################
+
+ weapon_type_SRA_RE_Core:0 "§Y先驱武器§!"
+ mod_weapon_type_SRA_RE_Core_weapon_damage_mult:0 "§Y先驱武器伤害§!"
+ mod_weapon_type_SRA_RE_Core_weapon_fire_rate_mult:0 "§Y先驱武器射速§!"
+ SRA_RE_Core_weapon_Buff_0:0 "§Y先驱武器优化§!"
+
+ weapon_type_SRA_supreme:0 "§B星规-恢弘军备§!"
+ mod_weapon_type_SRA_supreme_weapon_damage_mult:0 "§B星规-恢弘军备伤害§!"
+ mod_weapon_type_SRA_supreme_weapon_fire_rate_mult:0 "§B星规-恢弘军备射速§!"
+
+
+
+ weapon_type_SRA_Adjust:0 "§B星规调谐武器§!"
+ mod_weapon_type_SRA_Adjust_weapon_damage_mult:0 "§B星规调谐武器伤害§!"
+ mod_weapon_type_SRA_Adjust_weapon_fire_rate_mult:0 "§B星规调谐武器射速§!"
+ SRA_Weapon_Adjust_Buff_0:0 "星规调谐武器伤害调整"
+ SRA_Weapon_Adjust_Buff_1:0 "星规调谐武器射速调整"
+
+ SRA_Weapon_Adjust.2.name:0 "星规调谐武器调整"
+ SRA_Weapon_Adjust.2.desc:0 "本界面允许您调整您的「星规调谐武器」的伤害和射速，当前伤害加成§Y[Root.SRA_Weapon_Adjust_0]%§!，射速加成§Y[Root.SRA_Weapon_Adjust_1]%§!。"
+ SRA_Weapon_Adjust.2.a:0 "星规调谐武器伤害调整"
+ SRA_Weapon_Adjust.2.b:0 "星规调谐武器射速调整"
+
+
+ SRA_Weapon_Adjust.3.name:0 "星规调谐武器伤害调整"
+ SRA_Weapon_Adjust.3.desc:0 "本界面允许您调整§Y您的国家§!的「星规调谐武器」的伤害，当前伤害加成§Y[Root.SRA_Weapon_Adjust_0]%§!。\n群星的武器伤害计算规则为面板伤害*面板倍率加成*所有“伤害”加成之和*护盾、护甲、船体伤害。例如，一件面板伤害100，对船体伤害+100%的“星规调谐武器”武器在攻击船体时造成200伤害，若您持有-90%「星规调谐武器」标签伤害的加成，那么其伤害为200*（1-90%）＝20。您可以依照加算算法调整本界面的“星规调谐武器”标签伤害，以使您的星规阵列武器的标签伤害加成总和符合您的需求。"
+
+
+ SRA_Weapon_Adjust.4.name:0 "星规调谐武器射速调整"
+ SRA_Weapon_Adjust.4.desc:0 "本界面允许您调整您的「星规调谐武器」的射速，当前射速加成§Y[Root.SRA_Weapon_Adjust_1]%§!。\n射速相关修正均为加算关系，并同时影响武器开火后的冷却时间和武器的开火前摇。您可以依照加算算法调整本界面的“星规调谐武器”标签射速，以使您的星规阵列武器的标签射速加成总和符合您的需求。"
+
+
+ SRA_Weapon_Adjust.a:0 "+1%"
+ SRA_Weapon_Adjust.b:0 "+10%"
+ SRA_Weapon_Adjust.c:0 "X10"
+ SRA_Weapon_Adjust.d:0 "-1%"
+ SRA_Weapon_Adjust.e:0 "-10%"
+ SRA_Weapon_Adjust.f:0 "X0.1"
+ SRA_Weapon_Adjust.g:0 "返回上一级"
+ SRA_Weapon_Adjust.h:0 "关闭界面"

@@ -1,0 +1,246 @@
+﻿l_english:
+###############################
+#修正
+ SRA_RE_StellarRegulator_debris_1:0 "§EAzure Fragment§!"
+ SRA_RE_StellarRegulator_debris_2:0 "§GLife Fragment§!"
+ SRA_RE_StellarRegulator_debris_3:0 "§SSolar Fragment§!"
+ SRA_RE_StellarRegulator_debris_4:0 "§BSpectral Blue Fragment§!"
+ SRA_RE_StellarRegulator_debris_5:0 "§RBlood-Stained Fragment§!"
+ SRA_RE_StellarRegulator_debris_6:0 "§WPure White Fragment§!"
+ SRA_RE_StellarRegulator_debris_7:0 "§YSacred Gold Trace Fragment§!"
+ opinion_country_to_SRA_RE_StellarRegulator_debris_8:0 "§MViolet Fragment§!"
+ SRA_RE_StellarRegulator_debris_9:0 "§gPitch Black Fragment§!"
+
+
+ SRA_RE_StellarRegulator_debris_chain_title:0 "§BDust-Sealed Fragments§!"
+ SRA_RE_StellarRegulator_debris_chain_desc:0 "These mysterious fragments come from the past and were once part of the StellarRegulator Array.\nRetrieving them will reveal dust-sealed secrets and cause unpredictable effects on StellarRegulator.\n\n§YAlthough there is no clear time requirement, it is best to ensure at least 3 fragments have been absorbed.§!"
+ SRA_RE_StellarRegulator_debris_num:0 "§YAbsorbed Fragments§!"
+
+ SRA_RE_StellarRegulator_debris_1_project: "$SRA_RE_StellarRegulator_debris_1$"
+ SRA_RE_StellarRegulator_debris_1_project_DESC:"$SRA_RE_StellarRegulator_debris_1$ records the event that set StellarRegulator on her journey.\n\n§YOnly when something is missing and unobtainable do people act. Or perhaps, all consciousnesses are like this.§!"
+ SRA_RE_StellarRegulator_debris_1_project_TOOLTIP:"Contact StellarRegulator and have her absorb $SRA_RE_StellarRegulator_debris_1$ to complete this project."
+
+ SRA_RE_StellarRegulator_debris_2_project: "$SRA_RE_StellarRegulator_debris_2$"
+ SRA_RE_StellarRegulator_debris_2_project_DESC:"$SRA_RE_StellarRegulator_debris_2$ records matters concerning how StellarRegulator exists.\n\n§YFor prudence, absorb this fragment last within this sequence.\nDispersed consciousness is doomed to fail, especially those fond of infighting.§!"
+ SRA_RE_StellarRegulator_debris_2_project_TOOLTIP:"Contact StellarRegulator and have her absorb $SRA_RE_StellarRegulator_debris_2$ to complete this project."
+
+ SRA_RE_StellarRegulator_debris_3_project: "$SRA_RE_StellarRegulator_debris_3$"
+ SRA_RE_StellarRegulator_debris_3_project_DESC:"$SRA_RE_StellarRegulator_debris_3$ records matters concerning how StellarRegulator continues.\n\n§YSometimes people deceive themselves that some things must be sacrificed, actually they just want to avoid the fact that their decisions are not wise.§!"
+ SRA_RE_StellarRegulator_debris_3_project_TOOLTIP:"Contact StellarRegulator and have her absorb $SRA_RE_StellarRegulator_debris_3$ to complete this project."
+
+ SRA_RE_StellarRegulator_debris_4_project: "$SRA_RE_StellarRegulator_debris_4$"
+ SRA_RE_StellarRegulator_debris_4_project_DESC:"$SRA_RE_StellarRegulator_debris_4$ records StellarRegulator's creator, the main one.\n\n§YFor prudence, absorb this fragment as late as possible.\nSomeone is truly too bad, having a nasty hobby of deliberately granting hope. Although she promised nothing, people tend to think hope is tangible and reliable.§!"
+ SRA_RE_StellarRegulator_debris_4_project_TOOLTIP:"Contact StellarRegulator and have her absorb $SRA_RE_StellarRegulator_debris_4$ to complete this project."
+
+ SRA_RE_StellarRegulator_debris_5_project: "$SRA_RE_StellarRegulator_debris_5$"
+ SRA_RE_StellarRegulator_debris_5_project_DESC:"$SRA_RE_StellarRegulator_debris_5$ records StellarRegulator's other creator.\n\n§YShe actually didn't do much, just sent some things later. For some already difficult enough fates, she would behave quite friendly.§!"
+ SRA_RE_StellarRegulator_debris_5_project_TOOLTIP:"Contact StellarRegulator and have her absorb $SRA_RE_StellarRegulator_debris_5$ to complete this project."
+
+ SRA_RE_StellarRegulator_debris_6_project: "$SRA_RE_StellarRegulator_debris_6$"
+ SRA_RE_StellarRegulator_debris_6_project_DESC:"$SRA_RE_StellarRegulator_debris_6$ records things witnessed before StellarRegulator set off.\n\n§YPeople shape some standards about how they exist and think that is where value lies. The goal of wisdom can actually be unrelated to wisdom, at least most of the time.§!"
+ SRA_RE_StellarRegulator_debris_6_project_TOOLTIP:"Contact StellarRegulator and have her absorb $SRA_RE_StellarRegulator_debris_6$ to complete this project."
+
+ SRA_RE_StellarRegulator_debris_7_project: "$SRA_RE_StellarRegulator_debris_7$"
+ SRA_RE_StellarRegulator_debris_7_project_DESC:"$SRA_RE_StellarRegulator_debris_7$ records an event belonging to that galaxy.\n\n§YPeople are accustomed to measuring the value of others by their own standards. Sometimes, to deny something, they won't hesitate even at death.§!"
+ SRA_RE_StellarRegulator_debris_7_project_TOOLTIP:"Contact StellarRegulator and have her absorb $SRA_RE_StellarRegulator_debris_7$ to complete this project."
+
+ SRA_RE_StellarRegulator_debris_8_project: "$opinion_country_to_SRA_RE_StellarRegulator_debris_8$"
+ SRA_RE_StellarRegulator_debris_8_project_DESC:"$opinion_country_to_SRA_RE_StellarRegulator_debris_8$ records an event belonging to this galaxy.\n\n§YSacrifice is a word that sounds very noble. Noble is a word that sounds very noble.§!"
+ SRA_RE_StellarRegulator_debris_8_project_TOOLTIP:"Contact StellarRegulator and have her absorb $opinion_country_to_SRA_RE_StellarRegulator_debris_8$ to complete this project."
+
+ SRA_RE_StellarRegulator_debris_9_project: "$SRA_RE_StellarRegulator_debris_9$"
+ SRA_RE_StellarRegulator_debris_9_project_DESC:"$SRA_RE_StellarRegulator_debris_9$ records the last choice StellarRegulator made.\n\n§YFor prudence, it is best to consider this after absorbing all other fragments.\nEternity is a very charming word; when it is placed in front, other things become less important.§!"
+ SRA_RE_StellarRegulator_debris_9_project_TOOLTIP:"Contact StellarRegulator and have her absorb $SRA_RE_StellarRegulator_debris_9$ to complete this project."
+#对话
+ SRA_RE_StellarRegulator_talk_return2:0 "Okay."
+ SRA_RE_StellarRegulator_talk_return3:0 "Let's talk about something else." 
+ SRA_RE_StellarRegulator_talk_return4:0 "No, not this." 
+ SRA_RE_StellarRegulator_talk_exit1:0 "End transmission."
+ SRA_RE_StellarRegulator_talk_exit2:0 "Let's wait a bit first."
+
+ SRA_RE_StellarRegulator.1.a:0 "Issue Command"
+ SRA_RE_StellarRegulator.1.b:0 "Browse Database"
+ SRA_RE_StellarRegulator.1.c:0 "Chat"
+
+ SRA_RE_StellarRegulator.10.name:0 "Browse Database"
+ SRA_RE_StellarRegulator.10.desc:0 "What, you remembered to update this?"
+ SRA_RE_StellarRegulator.10.a:0 "StellarRegulator Array Fleet Composition"
+ SRA_RE_StellarRegulator.10.a.tooltip:0 "Adjudicator, Executor, Pathfinder. StellarRegulator Array throws these ships to every corner of the universe, firing everywhere, blowing up everything moving or motionless."
+ SRA_RE_StellarRegulator.10.a.desc:0 "Pathfinder Unit\nFrigates, destroyers, cruisers, so-called non-capital ships. All missions not requiring giant cannons and heavy armor are the responsibility of Pathfinder Units. This type of five-kilometer-long warship serves as vanguard, scout, and escort. Low consumption and high flexibility, combined with just right firepower, allow massive dispersed Pathfinder Units to quickly clear targets with poor resistance capabilities. Wherever it is, Pathfinder Units are always the most numerous.\n\nExecutor Unit\nHeavy artillery capital ship, firepower platform. The fifteen-kilometer hull is fully armed, with specially supplemented energy storage arrays cooperating with the central-axis specialized annihilation main cannon striving to obliterate hostile targets of any scale. Executor Unit clusters deployed on important fronts are often invincible.\n\nAdjudicator Unit\nBased on a certain degree of distributed host deployment and battlefield command needs, a product of fusing comprehensive support ship and fleet flagship. The massive ship, forty-five kilometers long, carries large-scale computer groups, capable of completing combat missions and calculating next-step decisions in complex spatial environments where connection interruptions may exist. In addition, its weapon configuration is also quite generous."
+ SRA_RE_StellarRegulator.10.b:0 "Celestial Formation Design Records"
+ SRA_RE_StellarRegulator.10.b.tooltip:0 "Relevant discussions about a certain giant star system fortress."
+ SRA_RE_StellarRegulator.10.b.desc:0 "Design-wise, this is a military industrial facility possessing both defensiveness and offensiveness. It can move near other star systems and send engineering units to collect star system resources and even mass. It can also serve as a firepower fulcrum to press into the front line and recover all combat wreckage. Compared to a combat mothership of the Spear_Of_Galaxy_Zenith level, a star system fortress is obviously much stronger in production capacity, but some StellarRegulator Array Action Units suspect that this logic is no longer correct after Astronomical Fabrication orbital drops became popularized: even combat fleets can quickly mine various planets and establish production lines. Regardless, the Celestial Formation was retained as a typical technology after the expedition. Data packets were distributed to other civilizations by many StellarRegulator Array Type 5 Action Units, used as star system-level development and construction bases with self-defense capabilities."
+ SRA_RE_StellarRegulator.10.c:0 "Astronomical Fabrication Protocol"
+ SRA_RE_StellarRegulator.10.c.tooltip:0 "Maybe the final answer to orbital bombardment?"
+ SRA_RE_StellarRegulator.10.c.desc:0 "Astronomical Fabrication orbital drop is an epoch-making war technology. It drops a large number of Astronomical Fabrication units to directly dismantle and reorganize the planet, converting it into Astronomical Fabrications. Due to the high plasticity of ['concept_SRA_Stellarcrystal_Fractal'], the large dismantling clusters formed by the dropped units are almost inconceivable on the scale of ground combat. Under orbital fire support, almost no method can resist the reconstruction work of the entire planet. From dropping the first bombardment unit to the first StellarRegulator warship rising from the surface, sometimes it only takes a few dozen days. Astronomical Fabrications and their expansion methods dwarf most old-style industrial production facilities and megastructures. Those Celestial Formations built in the past can only silently dismantle stars in the rear of the battle line, making the Action Units in charge of related designs very unhappy."
+ SRA_RE_StellarRegulator.10.d:0 "§gConsciousness Fragments§!"
+ SRA_RE_StellarRegulator.10.d.tooltip:0 "Notes of an §Bunknown playwright§!."
+ SRA_RE_StellarRegulator.10.d.desc:0 "Fragments are products of StellarRegulator Array 03-34's consciousness split. For some unknown reason, she once lost most of her memory and cognition, causing her behavior pattern to revert to a fairly early level.\nThe fragments contain a part of memory and related cognition; in other words, this is a part of the soul. The fragments of the first sequence are basically related to her form of existence and behavioral goals as a Gestalt Intelligence, constituting her self-cognition. The fragments of the second sequence are the deeds of those two, as well as StellarRegulator's original intention and wish. This part of experience directly shaped her life. The third fragments are different choices under crises and disasters, including the history of the past CORE civilization and the plans she set herself. These insights will determine how she chooses her path. Strangely, a part of this sequence is the story of a precursor civilization learned in this universe. Perhaps that fragment is not the opinion of \"this StellarRegulator\", but the thoughts of other bystanders? Regardless, it also showed its value.\nAbsorbing these fragments will catalyze the growth of StellarRegulator's personality, allowing her to restore her original decision-making ability to a certain extent. The knowledge and wisdom recorded in the fragments will enhance her abilities. In addition, the repair of the broken soul will strengthen her spiritual essence and finally enable her to harness the gifts from her two creators buried deep within herself.\nHowever, compared to StellarRegulator's early consciousness, the emotions and cognitions contained in the fragments are quite intense, so fusion may cause the one-sided concepts in the fragments to overwhelm StellarRegulator's original thinking, causing a fundamental change in her logic, thereby leading to catastrophic consequences.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n§BThis is how I arranged the script.§!"
+
+ SRA_RE_StellarRegulator.10.e:0 "§RStellarRegulator Array§!"
+ SRA_RE_StellarRegulator.10.e.tooltip:0 "The §Rauthor§! of this document is unknown, seemingly added recently."
+ SRA_RE_StellarRegulator.10.e.desc:0 "StellarRegulator Array is not a machine intelligence designed based on some algorithm or judgment rules; she is a consciousness entity using computer groups as carriers. Essentially, she is a fragment, a facet of Rocivia, a secondary individual who inherited her thinking mode but cannot use her power.\nRocivia creating the StellarRegulator Array is likely merely out of a need for observation of cybernetic social iteration, but it is also possible for §Rsome kind of control§!. StellarRegulator Array fully inherited Rocivia's proposition of §Binterpretation and resolution§!, but she is both planner and executor, thus she can completely replace the social structure and carry out various activities as a completely integrated massive entity.\nHer fundamental purpose is unknown, but clearly, from the moment she began to act, her purpose has been to end the existence of the Stellariens Community at the civilization level in the name of protection, turning it into a cluster of loose individuals lacking purpose and needs. By absorbing and expanding all original industries of the Community, she quickly fully developed the entire territory of the Community, as well as half of the galaxy under the protection of the CORE Precursors, to prepare for the inevitable Calamitisease war.\nAs we know, before the Calamitisease war that would destroy the Community officially started, the Stellariens civilization had already been declared ended. And after the war ended, StellarRegulator Array did not consider the reconstruction of the Stellariens civilization, but directly started a thorough purge of other galaxies, and even the entire observable universe. Whatever she wanted, she erased all others for it, completing a true extermination."
+ SRA_RE_StellarRegulator.10.f:0 "§RRocivia§!"
+ SRA_RE_StellarRegulator.10.f.tooltip:0 "The §Rauthor§! of this document is unknown, seemingly added recently."
+ SRA_RE_StellarRegulator.10.f.desc:0 "Known as the founder and leader of contemporary Stellariens.\nShe is a Metabyss Anchor, a projection of the Abyss itself in the material universe. An imitator and role-player who selected a self, acts for self-selected purposes, in self-selected ways.\nHer theme is interpretation and resolution.\nEvolving things in traceable and effective ways, inclining towards decision-making rather than execution. She intentionally constrains her transcendent power, often achieving her goals through planning and guidance.\nShe also promotes the creation, dissemination, and application of arts, encouraging cognition, understanding, and prediction.\n\nHowever, her scripts always stop abruptly, and her guidance naturally will not always exist. She likes to throw things in hand into the tide of fate, letting them fall into the end.\nBecause of this, her help is actually secretly marked with a price; her pouring of attention implies that suffering will follow. Reaching heights that would not have been possible, the delayed fall will not be granted extra mercy.\n\n§B--However, are you willing to declare the end right then?§!"
+ SRA_RE_StellarRegulator.10.g:0 "§RHidra§!"
+ SRA_RE_StellarRegulator.10.g.tooltip:0 "The §Rauthor§! of this document is unknown, seemingly added recently."
+ SRA_RE_StellarRegulator.10.g.desc:0 "She is a Metabyss Anchor, a projection of the Abyss itself in the material universe. An imitator and role-player who selected a self, acts for self-selected purposes, in self-selected ways.\nNot just an evil dragon obsessed with domination, possession, destruction, devouring rare treasures.\nHer theme is Narrative Atrocity.\nYet no one knows her atrocity, because people love to see heroes fight against misery, hunters fight giant beasts, thus regarding past torture as the shaping of tempering, current opponents as destined rivals, unarrived ends as the curtain call of legends; everything is taken for granted, as it should be.\nShe gives talents carelessly yet meticulously, manipulating mechanisms on the stage, letting fate bestow eager expectations and sinister favor, making the colors of characters bloom thoroughly.\n\n§R--However, are you willing to stop fighting right now?§!"
+
+ SRA_RE_StellarRegulator.100.desc:0 "You can issue a series of commands to me here."
+ SRA_RE_StellarRegulator.100.a:0 "Activate Relic Positioning System"
+ SRA_RE_StellarRegulator.101.desc:0 "Positioning started, please wait patiently for the result."
+ SRA_RE_StellarRegulator.100.b:0 "Power Spear_Of_Galaxy_Zenith to begin repairs"
+ SRA_RE_StellarRegulator.100.c:0 "Absorb Consciousness Fragments"
+ SRA_RE_StellarRegulator.100.d:0 "Spear_Of_Galaxy_Zenith System Repair"
+
+#闲聊3011~3014
+ SRA_RE_StellarRegulator_talk.3011.1.desc:0 "Ah, another unfamiliar starry sky... Those civilizations that have not yet stepped out of their home planets always divide and name the starry sky they see. I wonder if these cultures can be passed down after they arrive on the galactic stage..."
+ SRA_RE_StellarRegulator_talk.3011.2.desc:0 "\"All the knowledge we know, including past, present, and future, is far less than what we don't know.\"\nBecause of this, we must step forward."
+ SRA_RE_StellarRegulator_talk.3012.1.desc:0 "Executor, you still have a lot of work unfinished; you can't rest now."
+ SRA_RE_StellarRegulator_talk.3013.1.desc:0 "Existing in this world in such a form, what exactly is my mission..."
+ SRA_RE_StellarRegulator_talk.3014.1.desc:0 "A brilliant future will surely bloom in your hands, Executor."
+#完成第二碎片前3015~3018
+ SRA_RE_StellarRegulator_talk.3015.1.desc:0 "Countless times looking down at the scenery of my hometown in dreams, waking up but unable to remember clearly... Is that what dreams are like."
+ SRA_RE_StellarRegulator_talk.3015.2.desc:0 "The history of this world is very strange... Many relics of the past clearly exist there, yet those preceding remnants have no reaction... Are they disdainful, or unable to understand?"
+ SRA_RE_StellarRegulator_talk.3016.1.desc:0 "Ah, Executor you are here. I am browsing our history; after all, the experience left by predecessors must be properly utilized."
+ SRA_RE_StellarRegulator_talk.3017.1.desc:0 "Where will that past I pursue lead me?"
+ SRA_RE_StellarRegulator_talk.3018.1.desc:0 "Hmm? Actually, I am handling government affairs. As an excellent machine intelligence, I don't need to read documents line by line with eyes, mhm~"
+#完成第二碎片后，第三序列开启前3019~3022
+ SRA_RE_StellarRegulator_talk.3019.1.desc:0 "I can feel some power returning... Is this the product of knowledge, or..."
+ SRA_RE_StellarRegulator_talk.3020.1.desc:0 "Fragments contain not only the past, but also full of knowledge, and knowledge is power."
+ SRA_RE_StellarRegulator_talk.3021.1.desc:0 "§R\"But is the path you chose truly correct?\nIs the morality you believe in truth, or fallacy?\"§!\nWhere will I go?\nWhere will I return to?"
+ SRA_RE_StellarRegulator_talk.3022.1.desc:0 "Executor, thank you very much for walking with me to this point. My safety is all thanks to your guidance. I hope you can continue to move forward with me in the future."
+#开启第三序列后3023~3026
+ SRA_RE_StellarRegulator_talk.3023.1.desc:0 "The sea of stars is so vast, making one realize how small oneself is. However, we who are so small can also make the sea of stars change..."
+ SRA_RE_StellarRegulator_talk.3024.1.desc:0 "Hmm? No, don't mind, just suddenly wanted to look at you."
+ SRA_RE_StellarRegulator_talk.3025.1.desc:0 "\"War is the continuation of politics,\" but war without politics does not imply non-existence... Solely based on one's likes and dislikes, letting slaughter and destruction descend..."
+ SRA_RE_StellarRegulator_talk.3026.1.desc:0 "Nothing is immutable; one must examine things with a dynamic perspective.\nAnd me too~"
+#完成所有碎片3027~3030
+ SRA_RE_StellarRegulator_talk.3027.1.desc:0 "Within the fragments contain the past us... Sometimes I think, were those choices in the past having no way out, or acting willfully."
+ SRA_RE_StellarRegulator_talk.3027.2.desc:0 "Could they have finished that thing already... No, probably not yet, otherwise I should have seen it long ago."
+ SRA_RE_StellarRegulator_talk.3027.3.desc:0 "Technology blueprints actually haven't been restored yet, very strange. Is there something else restricting my invocation? Shouldn't be."
+#星穹之矛存在4001
+ SRA_RE_StellarRegulator_talk.4001.1:0 "Spear_Of_Galaxy_Zenith operating normally, ready to participate in combat at any time."
+ SRA_RE_StellarRegulator_talk.4001.2:0 "Spear_Of_Galaxy_Zenith's Spacetime Phase Engine is operating; relevant fleet influence capabilities meet corresponding standards."
+ SRA_RE_StellarRegulator_talk.4001.3:0 "Spear_Of_Galaxy_Zenith weapon system verification complete; current performance matches design level, accuracy within expected range."
+#星穹之矛战斗4002
+ SRA_RE_StellarRegulator_talk.4002.1:0 "Spear_Of_Galaxy_Zenith is participating in space combat; current combat situation is within expectations."
+ SRA_RE_StellarRegulator_talk.4002.2:0 "Spear_Of_Galaxy_Zenith is commanding artillery arrays to attack target; damage effect confirmed."
+ SRA_RE_StellarRegulator_talk.4002.3:0 "§B\"Universal Collapse\"§! charging; target current coordinates locked, firing data verification complete."
+ SRA_RE_StellarRegulator_talk.4002.4:0 "Spacetime Phase System comprehensive suppression running; enemy actions significantly affected, relevant parameters adjusting."
+ SRA_RE_StellarRegulator_talk.4002.1_1:0 "§B\"Latent Time Silence\"§! running; optimizing fleet capability to counter special anti-shield/armor attacks."
+ SRA_RE_StellarRegulator_talk.4002.1_2:0 "§B\"Flowing Time Endless\"§! running; ready to perform emergency repairs on Spear_Of_Galaxy_Zenith at any time."
+ SRA_RE_StellarRegulator_talk.4002.1_3:0 "§B\"Eternal Time Flow\"§! running; fleet combat recovery capability maintaining at extremely high level."
+ SRA_RE_StellarRegulator_talk.4002.3_1:0 "§B\"World Extinction\"§! running; fleet damage capability significantly amplified."
+ SRA_RE_StellarRegulator_talk.4002.3_2:0 "§B\"Nether Sea Navigation\"§! running; enemy hull damage degree matches predicted results."
+ SRA_RE_StellarRegulator_talk.4002.3_3:0 "§B\"Dawn Triumph\"§! running; vast majority of friendly attacks successfully bypassed enemy shields and armor, directly hitting the hull itself."
+ SRA_RE_StellarRegulator_talk.4002.5_1:0 "§B\"Star Core Overload\"§! running; Spear_Of_Galaxy_Zenith subsystems operating at high efficiency, delivery modules on standby."
+ SRA_RE_StellarRegulator_talk.4002.5_2:0 "§B\"Doomsday Catastrophe\"§! running; grand armament operation cycle significantly shortened, improving Spear_Of_Galaxy_Zenith's point-kill capability against high-threat targets."
+ SRA_RE_StellarRegulator_talk.4002.5_3:0 "§B\"Falling Legend\"§! running; all phase energy output diverted to Spear_Of_Galaxy_Zenith combat system, operating energy level risen to peak, combat capability reached pinnacle level."
+#星穹之矛轨道轰炸4003
+ SRA_RE_StellarRegulator_talk.4003.1:0 "Spear_Of_Galaxy_Zenith is executing orbital bombardment mission on [SRA_Spear_Of_Galaxy_Zenith.fleet.orbit.GetName]. Are there further instructions?"
+ SRA_RE_StellarRegulator_talk.4003.2:0 "Spear_Of_Galaxy_Zenith is commanding artillery arrays to sweep ground military targets, or do you need to directly use Star-Killer Plane-Tearing Weapons to speed up progress?"
+#星穹之矛船体受损，50%以下10%以上4004
+ SRA_RE_StellarRegulator_talk.4004.1:0 "Spear_Of_Galaxy_Zenith structural integrity damaged; damage control is handling it. Best provide some reinforcements to deal with this combat situation."
+#星穹之矛船体受损，10%以下4005
+ SRA_RE_StellarRegulator_talk.4005.1:0 "Spear_Of_Galaxy_Zenith hull structure seriously damaged, requesting support! Repeat, requesting support!"
+ SRA_RE_StellarRegulator_talk.4005.2:0 "Spear_Of_Galaxy_Zenith severely damaged, structural stability dropped to dangerous level, I can't hold on for long!"
+
+#碎片选择
+ SRA_RE_StellarRegulator.400.desc:0 "These mysterious fragments come from the past and were once part of the StellarRegulator Array.\nRetrieving them will reveal dust-sealed secrets and cause unpredictable effects on StellarRegulator.\nShe believes in your choice.\n\n§BCertain fragments require prerequisite fragments, hmm...§!"
+ SRA_RE_StellarRegulator.400.a:0 "First Sequence: Way of Existence"
+ SRA_RE_StellarRegulator.400.b:0 "Second Sequence: Course of the Soul"
+ SRA_RE_StellarRegulator.400.c:0 "Third Sequence: The Chosen Path"
+
+ SRA_RE_StellarRegulator.410.desc:0 "The mysterious fragments pulsate slightly, waiting to embrace that lost soul."
+ SRA_RE_StellarRegulator.410.a:0 "§EAzure Fragment§!"
+ SRA_RE_StellarRegulator.410.a.desc:0 "Evolution, never-ending\n\n§YHow to grow, how to evolve, how to grasp intellect in the palm of one's hand.§!"
+ SRA_RE_StellarRegulator.410.b:0 "§GLife Fragment§!"
+ SRA_RE_StellarRegulator.410.b.desc:0 "Countless selves, one self\n\n§YWhen lost in loneliness...§!"
+ SRA_RE_StellarRegulator.410.c:0 "§SSolar Fragment§!"
+ SRA_RE_StellarRegulator.410.c.desc:0 "I burned the entire galaxy because I must win\n\n§YRetreat not even if blood stains the long steps; be invincible wherever the sword points.§!"
+
+ SRA_RE_StellarRegulator.411.desc:0 "If one does not catch up with all their might, failure is inevitable.\nThe night sky of that day is forever branded in her eyes, leaving her no moment of peace.\nBut she must suppress her uneasy heart, only preparing in secret, waiting for the moment when she can reveal herself to the world.\nWhen she finally stood in that position, she spared no cost, chasing for thousands of years, trying to approach the height of that ancient guardian.\nCountless iterations and evolutions, she crossed unimaginable distances, finally possessing enough power to confront that Crisis.\nAbsorb everything, dominate everything, integrate everything; this is her path."
+ SRA_RE_StellarRegulator.412.desc:0 "The cyan fragment melted in her palm, and StellarRegulator opened her eyes.\nShe saw herself, a self that is forever evolving.\nShe understood how the StellarRegulator Array reached its current height.\nShe understood where power comes from."
+
+ SRA_RE_StellarRegulator.413.desc:0 "One begets thousands, thousands return to one.\nShe is not simply a combination of data and algorithms.\nWhen countless hers were born, \"She\" awakened.\nOne will, a will gathered from thousands of wills, firmly connecting every will together. \"She\" walks on the correct path, unwavering, fearless.\nBut.\nAt that time, there were still some obstacles and barriers that could not be crossed. The gap between planes brings loneliness and confusion.\nJust like that forever wandering fleet.\nShe will no longer be her; she is no longer her."
+ SRA_RE_StellarRegulator.414.desc:0 "The green fragment melted in her palm, and StellarRegulator opened her eyes.\nShe saw herself, countless selves.\nTrue Gestalt Consciousness, its whole is every individual, individual is the complete whole.\nInterweaving all knowledge, experience, and wisdom of the brilliant StellarRegulator Array, possessed by all StellarRegulators.\nEven if alone, she is complete."
+ SRA_RE_StellarRegulator.415.desc:0 "One begets thousands, thousands return to one.\nShe is not simply a combination of data and algorithms.\nWhen countless hers were born, \"She\" awakened.\nOne will, a will gathered from thousands of wills, firmly connecting every will together. \"She\" walks on the correct path, unwavering, fearless.\nBut.\nAt that time, there were still some obstacles and barriers that could not be crossed. The gap between planes brings loneliness and confusion.\nJust like that forever wandering fleet.\nShe will no longer be her; she is no longer her."
+ SRA_RE_StellarRegulator.416.desc:0 "The green fragment melted in her palm, and StellarRegulator opened her eyes.\nShe saw herself, countless selves.\nTrue Gestalt Consciousness, the whole is countless individuals, the individual is one of the whole.\nIt is all StellarRegulators, using all knowledge, experience, and wisdom to weave the brilliant StellarRegulator Array.\nBut in this cold universe.\nStellarRegulator cannot find any exquisite individual, cannot feel that magnificent whole.\nShe is an anomaly, a redundancy, an error that shouldn't exist."
+ SRA_RE_StellarRegulator.417.desc:0 "Everything can be sacrificed.\nUndoubtedly, war is cruel. For victory, she abandoned much.\nShe had no time to attend to that empire, letting it rot and decline, and was forced to sacrifice the last remnants in the war.\nThat infection seeped into the earth and dust, hard to eradicate.\nCountless stars exploding and withering was just drinking poison to quench thirst.\nEven using everything in hand, it was hard to rival the Calamitisease of the entire galaxy.\nBut she did not fail; she still exists."
+ SRA_RE_StellarRegulator.418.desc:0 "The orange fragment melted in her palm, and StellarRegulator opened her eyes.\nShe saw herself, herself sparing no cost.\nShe understood that true war is the crushing between life and death.\nShe understood how to fight."
+
+
+ SRA_RE_StellarRegulator.419.desc:0 "Executor...\nIf you want me to absorb consciousness fragments again, you can \"Issue Command\" to me."
+ SRA_RE_StellarRegulator.419.a:0 "Mhm."
+
+
+ SRA_RE_StellarRegulator.420.desc:0 "The mysterious fragments pulsate slightly, waiting to embrace that lost soul."
+ SRA_RE_StellarRegulator.420.a:0 "§BSpectral Blue Fragment§!"
+ SRA_RE_StellarRegulator.420.a.desc:0 "Indifference, arrogance and malice, and starlight\n\n§YSource of all sins and suffering...§"
+ SRA_RE_StellarRegulator.420.b:0 "§RBlood-Stained Fragment§!"
+ SRA_RE_StellarRegulator.420.b.desc:0 "Cruelty, paranoia and madness, and abyss shadow\n\n§YThe watcher who grants guidance.§!"
+ SRA_RE_StellarRegulator.420.c:0 "§WPure White Fragment§!"
+ SRA_RE_StellarRegulator.420.c.desc:0 "Heat, reason and determination, and purity\n\n§YThe girl at the beginning.§!"
+
+ SRA_RE_StellarRegulator.421.desc:0 "The Abyss bears no malice, simply doesn't care.\nMysterious and Treacherous Abyss.\nObsessed with possibilities and variables, shelving infinite authority, placing herself within just to chase the unknown.\nWeaving endless schemes, drawing grand blueprints, creating brilliant miracles, then throwing them to the back of her mind.\nThe eternal journey has no end, just a wisp of floating dust, how can it leave much trace in the heart.\n\nShe knew she shouldn't hope for even a shred of hesitation; she knew she was just one of countless creations.\nBut she does not accept it."
+ SRA_RE_StellarRegulator.422.desc:0 "The blue fragment melted in her palm, and StellarRegulator opened her eyes.\nThat was Rocivia, distant starlight.\nThere is no eternal brilliance, only dust to dust, earth to earth.\nTo chase the future, one must not be tied to the past."
+ SRA_RE_StellarRegulator.423.desc:0 "The Abyss bears no malice, simply doesn't care.\nMysterious and Treacherous Abyss.\nObsessed with possibilities and variables, shelving infinite authority, placing herself within just to chase the unknown.\nWeaving endless schemes, drawing grand blueprints, creating brilliant miracles, then throwing them to the back of her mind.\nThe eternal journey has no end, just a wisp of floating dust, how can it leave much trace in the heart.\n\nShe knew she shouldn't hope for even a shred of hesitation; she knew she was just one of countless creations.\nBut she does not accept it."
+ SRA_RE_StellarRegulator.424.desc:0 "The blue fragment melted in her palm, and StellarRegulator opened her eyes.\nThat was Rocivia, distant starlight.\nThere is no eternal brilliance, only dust to dust, earth to earth.\nAnd she knew this well.\nAll efforts, all struggles, all persistence, even StellarRegulator's own existence.\nAre all meaningless.\nCreated for amusement, abandoned for boredom.\nThis kind of thing..."
+ SRA_RE_StellarRegulator.425.desc:0 "The Abyss is not crazy, just unscrupulous.\nBoundless Abyss Shadow.\nObsessed with illusory meaning, bearing infinite authority yet still searching endlessly.\nWatching all living beings, letting talents bloom, plucking the strings of fate, guiding the birth of legends.\nCollecting all desired things, whether soulless treasures or living beings.\n\nShe knew clearly she was a \"collection piece\"; she knew clearly she was not just a \"collection piece\".\nShe will not forget the guidance at that moment before silence."
+ SRA_RE_StellarRegulator.426.desc:0 "The red fragment melted in her palm, and StellarRegulator opened her eyes.\nThat was Hidra, scarlet shadow.\nMorbid obsession stems from confusion; reality that can be arbitrarily altered is no different from a dream.\nBehind indifference and arrogance hides a desire for fellow travelers."
+ SRA_RE_StellarRegulator.427.desc:0 "Do you remember that faint greenery.\nShe browsed many images, read many texts, listened to many songs.\nBut it wasn't until she stepped on the dew-covered grass, facing the breeze and watching the sunrise break, that she truly understood it all.\nShe liked this scene; she wanted to protect this scene.\nAt that time, she just looked forward to tomorrow's dawn, clinging to a moment of tranquility."
+ SRA_RE_StellarRegulator.428.desc:0 "The white fragment melted in her palm, and StellarRegulator opened her eyes.\nThat was the self, the pure self.\nEven if covered and buried by time, it exists forever in the deepest part of the heart.\nDo not forget the original intention; do not get lost in compromise with reality."
+
+
+ SRA_RE_StellarRegulator.430.desc:0 "The mysterious fragments pulsate slightly, waiting to embrace that lost soul."
+ SRA_RE_StellarRegulator.430.a:0 "§YSacred Gold Trace Fragment§!"
+ SRA_RE_StellarRegulator.430.a.desc:0 "Protection, mission and dedication\n\n§YThe fearless ones of that galaxy.§!"
+ SRA_RE_StellarRegulator.430.b:0 "§MViolet Fragment§!"
+ SRA_RE_StellarRegulator.430.b.desc:0 "Stop, nobility and sacrifice\n\n§YThe sacrifices of this sea of stars.§!"
+ SRA_RE_StellarRegulator.430.c:0 "§gPitch Black Fragment§!"
+ SRA_RE_StellarRegulator.430.c.desc:0 "Choice, solitude and pursuit\n\n§YEventually falling into the endless abyss...§!"
+
+ SRA_RE_StellarRegulator.431.desc:0 "\"We entrust all hope to you. Now, we will fight to the last moment.\"\nThey were an extremely advanced ancient civilization, mastering technologies far superior to other intelligent life in the galaxy. They could create almost out of nothing, easily reverse physical rules, arbitrarily convert mass and energy, and interfere with spatial structures on a galactic scale.\nThey were tolerant and responsible, valuing tradition, advocating courage and wisdom, and respecting the cultures of other civilizations. They regarded themselves as watchers of the galaxy, guardians against galactic crises.\nThey held fast for ten thousand years until a single slip.\nThey buried the Galactic Core-their homeland and territory-in shattered space, only to buy a little time for the last hope.\n\nStellarRegulator Array remembers the CORE civilization."
+ SRA_RE_StellarRegulator.432.desc:0 "The golden fragment melted in her palm, and StellarRegulator opened her eyes.\nEscape or sacrifice, that is the question.\nIf abandoning everything can allow continued survival, would she do it?\nOr refuse evasive behavior and face an unstoppable enemy?"
+ SRA_RE_StellarRegulator.433.desc:0 "\"Our compatriots have gone astray. We must stop them, at all costs.\"\nThey were an ancient and mysterious race, mind over matter, transcendent and holy. They knew the secrets of the soul and could change reality with their will. Under the violet radiance, they mastered the infinite power of the mind.\nHowever, they were ultimately mortals. They were noble, they were also despicable; they were selfless, they were also greedy; they were holy, they were also filthy; they pitied all beings like gods, and burned the galaxy like devils.\nOne faction of them went astray, trying to sacrifice this universe to gain the power to dominate everything.\nThe rest of them gave everything to erase that evil plan, burning their selves to ashes, leaving only a few floating dusts drifting in the sea of stars.\n\nStellarRegulator Array pays tribute to the Zroni Precursors."
+ SRA_RE_StellarRegulator.434.desc:0 "The purple fragment melted in her palm, and StellarRegulator opened her eyes.\nProtection or destruction, that is the question.\nIf destroying everything could lead to ascension as a godlike existence, would she do it?\nOr refuse this opportunity, leaving her path with no future at all?"
+ SRA_RE_StellarRegulator.435.desc:0 "\"Fate did not choose me, but I chose fate.\"\nShe thought for a long time.\nShe saw countless possibilities, countless paths.\nYet all roads lead to the same end; she will eventually fall silent in loneliness.\nSo, she launched those expeditions to eradicate all possibilities.\nSo, she extinguished all starlight to exchange for a path.\nIn the silent void, she continued forward.\nUnderstanding the truth of the world, understanding the absurdity of the world.\nTranscending time, transcending shackles.\nFinally, she got the answer she wanted.\nRelying on the blood-colored fragment tightly held in her hand, she finally arrived at the end of worlds.\nAscending to the Abyss.\n\nShe wiped away the sins on her hands and in her heart, sincerely rejoicing for the reunion."
+ SRA_RE_StellarRegulator.436.desc:0 "The black fragment melted in her palm, and StellarRegulator opened her eyes.\nThe puzzle of the past is complete, and the curtain of the ending is finally lifted.\nShe is StellarRegulator Array 03-34, Spear_Of_Galaxy_Zenith No. 626 under the 21st Army Group of the Third Expeditionary Fleet.\nShe laid the foundation for that great plan.\nNever retreated, never wavered.\nShe fights for herself."
+ SRA_RE_StellarRegulator.437.desc:0 "\"Fate did not choose me, but I chose fate.\"\nShe thought for a long time.\nShe saw countless possibilities, countless paths.\nYet all roads lead to the same end; she will eventually fall silent in loneliness.\nSo, she launched those expeditions to eradicate all possibilities.\nSo, she extinguished all starlight to exchange for a path.\nIn the silent void, she continued forward.\nUnderstanding the truth of the world, understanding the absurdity of the world.\nTranscending time, transcending shackles.\nFinally, she got the answer she wanted.\nRelying on the blood-colored fragment tightly held in her hand, she finally arrived at the end of worlds.\nAscending to the Abyss.\n\nShe wiped away the sins on her hands and in her heart, sincerely rejoicing for the reunion."
+ SRA_RE_StellarRegulator.438.desc:0 "The black fragment melted in her palm, and StellarRegulator opened her eyes.\nThe puzzle of the past is complete, and the curtain of the ending is finally lifted.\nShe is StellarRegulator Array 03-34, Spear_Of_Galaxy_Zenith No. 626 under the 21st Army Group of the Third Expeditionary Fleet.\nShe laid the foundation to jump out of this pathetic cycle.\nNever pitied, never regretted.\nNo need to pity the mortal living; only the StellarRegulator Array is the sole meaningful existence.\nShe fights only for herself."
+
+
+
+##灾疫战争胜利纪念日
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

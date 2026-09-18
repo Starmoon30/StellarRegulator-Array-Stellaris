@@ -1,0 +1,104 @@
+﻿l_english:
+###############################
+ leader_trait_SRA_RE_ruler1:0 "§BSupreme Speaker Rocivia§!"
+ leader_trait_SRA_RE_ruler1_desc:0 "§B\"She ended the past and opened the future. Her legend will be sung forever until the end of time.\"§!"
+ leader_trait_SRA_RE_ruler2:0 "§BWisdom of the Metabyss§!"
+ leader_trait_SRA_RE_ruler2_desc:0 "§B\"Mastering infinite wisdom in the focal point of all realms, she has insight into the past and future, and knows everything by heart.\"§!"
+ leader_trait_SRA_RE_Hidra_gov:0 "§RHidra - Slacking Off Epically§!"
+ leader_trait_SRA_RE_Hidra_gov_desc:0 "§RSince I'm slacking off anyway, I'll just skip the description too.§!"
+ leader_trait_SRA_RE_Hidra_sci:0 "§RHidra - Strolling the Star Sea§!"
+ leader_trait_SRA_RE_Hidra_sci_desc:0 "§RAn ancient and mysterious existence, strolling beyond the veil of reality. Her few words reveal precious knowledge, and she walks the path of truth in a leisurely stroll. Even if it is just casual pastime and entertainment, the ability she shows is still extraordinary.§!"
+ leader_trait_SRA_RE_Hidra_adm:0 "§RHidra - Slacking Off Epically§!"
+ leader_trait_SRA_RE_Hidra_adm_desc:0 "§RSince I'm slacking off anyway, I'll just skip the description too.§!"
+ leader_trait_SRA_RE_Hidra_gen:0 "§RHidra - Slacking Off Epically§!"
+ leader_trait_SRA_RE_Hidra_gen_desc:0 "§RSince I'm slacking off anyway, I'll just skip the description too.§!"
+ Name_SRA_RE_leader_Rocivia:0 "§BRocivia§!"
+ Name_SRA_RE_leader_Hidra:0 "§RHidra§!"
+ SRA_RE_species:0 "Anchor of Metabyss"
+
+
+ MESSAGE_SRA_RE_TALK_TITLE:0 "§BEmpire News§!"
+
+ MESSAGE_SRA_RE_Rocivia_TITLE:0 "§BRocivia§!"
+ SRA_RE_Rocivia.2019.desc:0 "This place can basically only fit forty or fifty words, but hovering the mouse over it displays the full content.\n\nHey let me try pasting an image in here\n\n\n\n\n\n\n£pc_SRA_chaos_star_sky£\n\n\n\n\n\n\n\nWow it actually works"
+
+ MESSAGE_SRA_RE_StellarRegulator_TITLE:0 "§BStellarRe§!"
+
+ SRA_RE_Rocivia_catch_phrase:0 "\"Ride on the back of the Silver Dragon, go, to the desert of life; ride on the back of the Silver Dragon, go, through the vortex of clouds and rain-\""
+ SRA_RE_Rocivia_backstory:0 "\n§BRocivia§!, Supreme Speaker, leader of the Empire. It is claimed that she led a team in the pre-space age of this civilization and eventually conquered other factions to unify the entire civilization. However, nowadays she seems to have lost her enthusiasm, choosing to leave the Empire's planning to §YYOU§!, while she only spends a few minutes every day writing your ideas into usable plans.\n\n§BStarlight is distant, flickering with a fabricated image, behind which still lies the cold void.§!"
+ job_SRA_RE_Rocivia_job:0 "§B9th Circle Supreme Starlight Magician§!"
+ job_SRA_RE_Rocivia_job_desc:0 "At least that's what she says.\nSo would a Materialist Magician write scrolls in an Object-Oriented Language?"
+
+
+ councilor_SRA_RE_minister_of_security:0 "Director of Imperial Security"
+ councilor_SRA_RE_minister_of_security_female:0 "$councilor_SRA_RE_minister_of_security$"
+ councilor_SRA_RE_minister_of_security_desc:1 "§RThis seat can only be held by Hidra.§!\n$TITLE$ has full responsibility for the Security Bureau, commanding multiple psionic agent units and a complex intelligence network, subject only to the jurisdiction of the Supreme Speaker. However, §RHidra§! doesn't seem to care much about this post, and instead often wanders off to other places."
+
+
+ SRA_RE_Hidra_catch_phrase:0 "Everything begins in the boundless Metarbor, and will end in the chaotic Metabyss."
+ SRA_RE_Hidra_backstory:0 "\n§RHidra§!, Director of the Imperial Security Headquarters, governing the Secret Council. Accustomed to dereliction of duty, always unhurried. She occupies the peak of the clouds, overlooking all living beings, freely sowing blessings and curses.\n\n§RShadows churn, condensing into a superficial form, beneath which the disordered Metabyss lies deep.§!"
+ job_SRA_RE_Hidra_job:0 "§RScamming Food and Drink while Doing Nothing§!"
+ job_SRA_RE_Hidra_job_desc:0 "Really, found a lot of excuses to slack off.\nYou wouldn't want to see what she looks like when she gets active."
+
+
+ SRA_RE_no_title:0 " "
+ SRA_RE_Rocivia:0 "Rocivia"
+ SRA_RE_Hidra:0 "Hidra"
+ SRA_RE_StellarRegulator:0 "StellarRe"
+ SRA_RE_StellarRegulator_Array:0 "StellarRegulator Array"
+
+
+ SRA_RE_Government.2.name:0 "Preparation Before the Curtain Rises"
+ SRA_RE_Government.2.desc:0 "Hello, interferer from outside the wall. You can choose the §Rscenario§! to participate in here.\nThe slider is on the right side of the dialog box, you're welcome.\nPlease ensure that ONLY your civilization possesses the \"Rocivia Empire\" Civic throughout the process to avoid any bugs. (This Civic is disabled for AI, please avoid events that forcibly change Civics.)\n§YConfirm that you know enough about other Mods in your current Mod collection, and have read the story text related to the \"StellarRegulator Technology\" Civic, which will be very helpful for you to understand the background story.\nNote: Please try to avoid clicking Skip on your first playthrough. I don't know what might happen, and aren't you here for the plot anyway.§!\n."
+ SRA_RE_Government.2.a:0 "Fallen Spear"
+ SRA_RE_Government.2.a.custom_tooltip:0 "This civilization once half-stepped into the stars, but was trapped by fratricidal warfare, and the prosperity of the past was destroyed in a day.\nFortunately, a faction found a path to avoid extinction in an ancient ruin.\nAn existence from another world descended upon this land, ended all disputes, and allowed this civilization to look towards the stars again.\nToday, this civilization has broken the light speed barrier and ascended to become a member of the sea of stars.\nHowever, no one knows where this path, which should not have existed, will lead.\n\n- Establish communications with §BRocivia§!, §RHidra§!, and §BStellarRe§!\n- §BRocivia§! will become the leader\n- A crashed Spear_of_Galaxy_Zenith awaits excavation on the homeworld\n- The dust of history drifts in the sea of stars"
+ SRA_RE_Government.2.b:0 "Shadow of Dragon Wings"
+ SRA_RE_Government.2.b.custom_tooltip:0 "This civilization has trembled under the shadow of a pair of dragon wings since ancient times, struggling against the whispers of the Metabyss and twisted reflections, doing their utmost just for a moment of respite.\nAlthough they have not traversed the earth, they still set sail towards the sky.\nIf the power of the stars can be condensed at the fingertips, can it tear apart that shadow?\n\n- Homeworld becomes §RRemnant Branch of Metarbor§!, a special celestial body type with endless potential. However, the elusive §R['concept_SRA_SD_Abyss_Erosion']§! has always been a lingering nightmare.\n- Once you lose control of your homeworld, your country will be §Rdestroyed§!.\n- Immediately gives all your species ['trait:trait_pc_SRA_SD_chaos_star_habitable_preference'].\n- The ferocious and willful §RAbyssal Dragon§! will loom over your civilization. From ancient times to the present, only submission can avoid destruction.\n- The §RAbyssal Dragon§! demands §Rwealth in any form§!, especially the most precious ones... §Rwhether living beings or dead objects§!.\n- Completely submit under the life and death power of the Dragon's shadow, or call for your own fate with sword and staff.\n\n§YDidn't make it at all§!"
+
+
+ SRA_RE_Government.3.desc:0 "Hmm... In this scenario, I, Rocivia, will become the leader of your country. If your government form does not allow re-election or the leader changes due to other reasons, you can reinstate me in the special menu.\nNext, you will join me and Hidra to lead this emerging civilization into the sea of stars, facing this galaxy that hides countless secrets.\nLet's begin."
+
+ SRA_RE_Government.4.desc:0 "Hello, new Executor.\nI am Rocivia, Speaker of the Supreme Council, that is, the supreme leader of this country."
+ SRA_RE_Government.5.desc:0 "Hidra, Director of the Imperial Security Headquarters, also responsible for governing the Secret Council.\nHello, outsider."
+ SRA_RE_Government.6.desc:0 "You stood out from 32,767 candidates, proving that you are the most suitable person for this position. Welcome to the pinnacle of power.\nYou see, since our civilization took the first step towards the sea of stars, I felt it necessary to find someone to help handle these endless affairs. I hope you can live up to expectations, make the right choices, and lead this country to prosperity."
+ SRA_RE_Government.7.desc:0 "The position of Executor is similar to a proxy for the Supreme Speaker, combining the characteristics of low profile and high authority. You can go wherever you want.\nIn addition, Rocivia has given you ample power to plan this country and set its course. Although on the surface you are just an advisor or staff officer, as long as you submit your ideas to Rocivia, she will mobilize relevant departments to execute them.\nNo matter how absurd your decision is."
+ SRA_RE_Government.8.desc:0 "Well, moderate slacking is good for physical and mental health.\nAnd I don't have any ideas this time... no particular route I want to take, so I might as well leave it to you.\nHmm... how many times have I said this sentence..."
+ SRA_RE_Government.9.desc:0 "We say this every time, right...\nJust get used to it.\nRemember to go to the office tomorrow morning. Your secretary will report for duty. Don't keep her waiting too long."
+
+ SRA_RE_Government.10.desc:0 "When you maneuvered this body into the office, you found your assistant gazing at the sky outside the wide French window.\nSurprisingly, that figure was so familiar to you.\nBut before you could say her name, she turned around.\nPale blue long hair floated gently, then fell.\nShe gazed at you.\nWith a strange look."
+ SRA_RE_Government.11.desc:0 "I am pleased to be of service to you, Executor. I am your secretary and assistant, StellarRegulator Array. You can keep it simple and just call me StellarRe."
+ SRA_RE_Government.12.desc:0 "I am an artificial intelligence from what this civilization calls a \"relic\"-that is, a crashed Spear_of_Galaxy_Zenith. After being awakened, I followed Speaker Rocivia's orders to provide help within my ability to this civilization.\nHowever, now I can only do paperwork. My database is severely damaged, and the Spacetime Phase Engine is completely destroyed. Without external power supply, I can't even move normally."
+ SRA_RE_Government.13.desc:0 "But, if you can find other StellarRegulator Array related relics, I can try to recover some database contents through those remaining crystals. By then, repairing the hull, flying again, and even repairing the Spacetime Phase Engine are all possible.\nHowever, let's start by exploring this galaxy. Things have to be done step by step, right?\n§BYou can contact StellarRe or me in the Edict and Comms interface, you're welcome.§!"
+ SRA_RE_Government.13.a:0 "Come on, the show begins."
+ SRA_RE_Government.13.b:0 "The authority of the galaxy belongs to us."
+ SRA_RE_Government.13.c:0 "I will let you set sail again."
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

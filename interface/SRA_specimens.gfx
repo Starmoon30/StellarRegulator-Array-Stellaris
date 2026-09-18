@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_SRA_specimen_metabyss_special_drinks"
+		texturefile = "gfx/interface/icons/specimens/SRA_specimen_metabyss_special_drinks.dds"
+	}
+}

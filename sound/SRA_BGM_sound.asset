@@ -1,0 +1,55 @@
+sound = {
+	name = "BGM_ThirdFleetStage1"
+	file = "CrisisBGM/ThirdFleetStage1.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_ThirdFleetStage2"
+	file = "CrisisBGM/ThirdFleetStage2.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_ThirdFleetStage3"
+	file = "CrisisBGM/ThirdFleetStage3.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_ThirdFleetStage4"
+	file = "CrisisBGM/ThirdFleetStage4.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_CalamitiseaseStage1"
+	file = "CrisisBGM/CalamitiseaseStage1.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_CalamitiseaseStage2"
+	file = "CrisisBGM/CalamitiseaseStage2.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_CalamitiseaseStage3"
+	file = "CrisisBGM/CalamitiseaseStage3.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_CalamitiseaseStage4"
+	file = "CrisisBGM/CalamitiseaseStage4.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_CalamitiseaseStage5"
+	file = "CrisisBGM/CalamitiseaseStage5.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_CalamitiseaseStage6"
+	file = "CrisisBGM/CalamitiseaseStage6.wav"
+	volume = 0.7
+}
+sound = {
+	name = "BGM_ChiefStage1"
+	file = "CrisisBGM/ChiefStage1.wav"
+	volume = 1.2
+}

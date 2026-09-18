@@ -1,0 +1,80 @@
+﻿l_simp_chinese:
+##############################
+ origin_SRA_Rokia:0 "§B走过漫漫时空§!"
+ origin_SRA_Rokia_desc:1 "§R此起源全局唯一且无法与['civic:civic_SRARociviaEmpire']国民理念在同一局内共存！§!\n发生了什么？谁也不知道。但可以确认的是，神秘的星辉智能暂且赢得了诡异的耀红黑星的信任，匪夷所思地让她同意了把积攒的财产放任给你来打理。你可以好好享受这些恢宏的造物与先进的技术，顺便思考一下，在似乎什么都不缺的情况下，你到底该做点啥。"
+ START_SCREEN_origins_SRA_Rokia:0 "？"
+ origin_tooltip_SRA_Rokia_effects:1 "-获得['civic:civic_SRAtechnology']国民理念。\n-获得一组位于银河系左下角的恒星系，包含一座流天星阵和两个流光星界，建设有星规阵列的特殊建筑。\n-获得原本负责防卫这些恒星系的星规阵列式舰队。\n-获得一批['concept_SRA_Stellarcrystal_Machine']人口，拥有强大特质。\n-允许你切断这组恒星系与银河系之间的超空间航道。\n-在一开始便获得大量常规技术，并完成大多数高级星规技术的研究。\n-与本不该出现的耀红黑星建立联系。"
+ origin_tooltip_SRA_Rokia_negative_effects:1 "-§R使得你几乎无法享受努力并获得成果的乐趣。§!\n-§R可能使你感到无事可做。§!\n-§R潜在的虚无主义倾向。§!\n\n-§R使用这个起源的AI可能会迅速摧毁整个银河，或者认为自己根本没有宣战来扩张的需要。§!"
+
+
+ origin_SRA_Rokia_2:0 "§R对天穹的一瞥§!"
+ origin_SRA_Rokia_2_desc:1 "你是灾疫。\n前面的忘了，后面的忘了，总之你一无所知的醒来，发现世界如此可爱，该出去觅食，探险，以及见证奇特的外星生命了。\n\n\n"
+ origin_tooltip_SRA_Rokia_2_effects:1 "-§R成为灾疫§!。\n-除了你自己，你什么都没有。\n-你很饿，需要觅食，你可以尝试自己捕猎，或者让其他人包养你。\n-到处旅行，和许多人交朋友，以及和她们亲 密 接 触。\n-用你自己的办法获取知识和记忆，了解各种各样的存在方式，然后成长。\n-想做什么就做什么。"
+
+ gov_origin_SRA_Rokia: "§B铸星无垠§!"
+ gov_origin_SRA_Rokia_desc: "§B这个文明实际上是某个盘踞在银河一角的神秘机械文明的延伸，其底蕴之深厚连失落帝国都难以望其项背。§!"
+ ruler_origin_SRA_Rokia:0 "统治者"
+ ruler_origin_SRA_Rokia:0 "统治者"
+ heir_origin_SRA_Rokia:0 "继承人"
+ heir_origin_SRA_Rokia:0 "继承人"
+
+ SRA_Rokia_origin.3.name:0 "起源初始化"
+ SRA_Rokia_origin.3.desc:0 "在星规的协助下，我们可以调整一下某些内容。"
+ SRA_Rokia_origin.3.a:0 "移除特殊恒星基地"
+ SRA_Rokia_origin.3.a.tooltip:0 "移除恒星系内的「星辉哨塔」恒星基地，因为它们不是擎天堡，或者单纯只是你不喜欢。"
+ SRA_Rokia_origin.3.a.desc:0 "恒星系内的「星辉哨塔」恒星基地移除完毕，哨站将在下个月自动重建。"
+ SRA_Rokia_origin.3.b:0 "移除超空间航道"
+ SRA_Rokia_origin.3.b.tooltip:0 "移除与你的小星团相连的其他航道，因为你是军事孤立者或者别的什么，不喜欢和银河系接壤。"
+ SRA_Rokia_origin.3.b.desc:0 "与你的小星团相连的其他航道移除完毕，你可能需要等待时间流逝才能观察到变化。"
+ SRA_Rokia_origin.3.c:0 "将星辉机械设为主体物种"
+ SRA_Rokia_origin.3.c.desc:0 "已将星辉机械设为主体物种"
+ SRA_Rokia_origin.3.d:0 "用主体物种替换所有星辉机械"
+ SRA_Rokia_origin.3.d.desc:0 "已用主体物种替换所有星辉机械"
+ SRA_Rokia_origin.3.e:0 "移除所有自动化生产建筑"
+ SRA_Rokia_origin.3.e.tooltip:0 "移除所有殖民地上的星规阵列数据库终端与星规阵列复合构建中心，因为你觉得产出太高，或者单纯不喜欢。"
+ SRA_Rokia_origin.3.e.desc:0 "所有殖民地上的星规阵列数据库终端与星规阵列复合构建中心已移除"
+ SRA_Rokia_origin.3.z:0 "结束初始化"
+
+ 
+
+ SRA_Rokia_origin.4.desc:0 "好吧好吧，你们的小星规跟我做了笔交易，现在你爱干什么就干什么吧。比如假装你的母星只是一座银河系里的前哨站而你其实是个堕落帝国之类的隐居文明，或者拿起这些产业和舰队就开始屠杀全银河，随你便。\n先暂时不用找我，§Y我还没想好后面该干嘛。§!\n\n以及，这里有一些小小的礼物，我希望你会喜欢这个。\n倒也没有人拒绝过。"
+ SRA_Rokia_origin.4.a:0 "……"
+
+ SRA_Rokia_origin.6.desc:0 "你……\n好吧，既然你这么想跟我聊聊，那我就不客气了。先说好，我可不保证我不会干什么坏事。"
+ SRA_Rokia_origin.6.a:0 "啥？"
+
+
+ SRA_specimen_metabyss_special_drinks: "树海特调"
+ SRA_specimen_metabyss_special_drinks_desc_short: "一杯荡漾着的神秘红色流质"
+ SRA_specimen_metabyss_special_drinks_desc_details: "荒原教派在仪式上使用的致幻性饮品，据称是直接从深渊裂隙中萃取的精华，能使人触碰到隐藏在丛丛面纱下的真实世界。\n\n不过实际上只是从九重铸炉高价走私的昂贵瓶装酒。"
+ SRA_specimen_metabyss_special_drinks_origin: "路希维亚典藏2126"
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

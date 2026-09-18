@@ -1,0 +1,149 @@
+entity = {
+	name = "SRA_Chaos_galaxy_map_object_effect_entity"
+	pdxmesh = "SRA_Chaos_galaxy_map_object_locators_mesh"
+	locator = { name = "root" rotation = {0 0 0 } }
+	locator = { name = "root_2" rotation = {90 0 0 } scale = 0.9}
+	locator = { name = "root_3" rotation = {-35 0 0 } scale = 1.1 }
+	scale = 25
+
+#	attach = { "orb_01" = "SRA_Chaos_galaxy_map_object_orb_entity" }
+	attach = { "orb_02" = "SRA_Chaos_galaxy_map_object_orb_entity" }
+#	attach = { "orb_03" = "SRA_Chaos_galaxy_map_object_orb_entity" }
+#	attach = { "orb_04" = "SRA_Chaos_galaxy_map_object_orb_entity" }
+	attach = { "orb_05" = "SRA_Chaos_galaxy_map_object_orb_entity" }
+#	attach = { "orb_06" = "SRA_Chaos_galaxy_map_object_orb_entity" }
+	attach = { "orb_14" = "SRA_Chaos_galaxy_map_object_orb_entity" }
+	attach = { "orb_13" = "SRA_Chaos_galaxy_map_object_orb_entity" }
+
+	attach = { "orb_15" = "SRA_Chaos_galaxy_map_object_orb_2_entity" }
+	attach = { "orb_16" = "SRA_Chaos_galaxy_map_object_orb_2_entity" }
+	attach = { "orb_17" = "SRA_Chaos_galaxy_map_object_orb_2_entity" }
+	attach = { "orb_18" = "SRA_Chaos_galaxy_map_object_orb_2_entity" }
+#	attach = { "orb_11" = "SRA_Chaos_galaxy_map_object_orb_2_entity" }
+#	attach = { "orb_12" = "SRA_Chaos_galaxy_map_object_orb_2_entity" }
+
+
+	attach = { "root" = "SRA_Chaos_galaxy_map_object_cylinder_entity" }
+	attach = { "root_2" = "synth_queen_swarm_effect_entity" }
+	attach = { "root_3" = "synth_queen_swarm_effect_entity" }
+
+
+	default_state = "idle"
+	state = {
+		name = "idle" looping = yes 	state_time = 5
+#		event = { time = 0.0 node = "orb_01" particle = "SRA_Chaos_galaxy_map_object_orb_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "orb_02" particle = "SRA_Chaos_galaxy_map_object_orb_effect" trigger_once = yes keep_particle = yes }
+#		event = { time = 0.0 node = "orb_03" particle = "SRA_Chaos_galaxy_map_object_orb_effect" trigger_once = yes keep_particle = yes }
+#		event = { time = 0.0 node = "orb_04" particle = "SRA_Chaos_galaxy_map_object_orb_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "orb_05" particle = "SRA_Chaos_galaxy_map_object_orb_effect" trigger_once = yes keep_particle = yes }
+#		event = { time = 0.0 node = "orb_06" particle = "SRA_Chaos_galaxy_map_object_orb_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "orb_13" particle = "SRA_Chaos_galaxy_map_object_orb_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "orb_14" particle = "SRA_Chaos_galaxy_map_object_orb_effect" trigger_once = yes keep_particle = yes }
+
+		event = { time = 0.0 node = "orb_15" particle = "SRA_Chaos_galaxy_map_object_orb_06_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "orb_16" particle = "SRA_Chaos_galaxy_map_object_orb_06_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "orb_17" particle = "SRA_Chaos_galaxy_map_object_orb_06_effect" trigger_once = yes keep_particle = yes }
+		event = { time = 0.0 node = "orb_18" particle = "SRA_Chaos_galaxy_map_object_orb_06_effect" trigger_once = yes keep_particle = yes }
+#		event = { time = 0.0 node = "orb_11" particle = "SRA_Chaos_galaxy_map_object_orb_06_effect" trigger_once = yes keep_particle = yes }
+#		event = { time = 0.0 node = "orb_12" particle = "SRA_Chaos_galaxy_map_object_orb_06_effect" trigger_once = yes keep_particle = yes }
+	}
+	
+	cull_radius = 3500
+
+#	attach = { "core_1" = "SRA_Chaos_galaxy_map_object_arms_entity" }
+#	attach = { "core_2" = "SRA_Chaos_galaxy_map_object_arms_entity" }
+#	attach = { "core_3" = "SRA_Chaos_galaxy_map_object_arms_entity" }
+#	attach = { "core_4" = "SRA_Chaos_galaxy_map_object_arms_entity" }
+#	attach = { "core_5" = "SRA_Chaos_galaxy_map_object_arms_entity" }
+#	attach = { "core_6" = "SRA_Chaos_galaxy_map_object_arms_entity" }
+#	attach = { "core_7" = "SRA_Chaos_galaxy_map_object_arms_entity" }
+#	attach = { "core_8" = "SRA_Chaos_galaxy_map_object_arms_entity" }
+#
+#	attach = { "core_1" = "	a" }
+#	attach = { "core_2" = "SRA_Chaos_galaxy_map_object_short_arms_entity" }
+#	attach = { "core_3" = "SRA_Chaos_galaxy_map_object_short_arms_entity" }
+#	attach = { "core_4" = "SRA_Chaos_galaxy_map_object_short_arms_entity" }
+#	attach = { "core_5" = "SRA_Chaos_galaxy_map_object_short_arms_entity" }
+#	attach = { "core_6" = "SRA_Chaos_galaxy_map_object_short_arms_entity" }
+#	attach = { "core_7" = "SRA_Chaos_galaxy_map_object_short_arms_entity" }
+#	attach = { "core_8" = "SRA_Chaos_galaxy_map_object_short_arms_entity" }
+
+		
+}
+
+
+entity = {
+	name = "SRA_Chaos_galaxy_map_object_orb_entity"
+	pdxmesh = "SRA_Chaos_galaxy_map_object_orb_mesh"
+
+
+	
+	scale = 1
+		game_data = {
+		bloom_factor			= 1
+		uv_animation_speed 		= 0.25
+		uv_animation_direction 	= { 0.7 -0.8 }
+		}		
+}
+
+entity = {
+	name = "SRA_Chaos_galaxy_map_object_orb_2_entity"
+	pdxmesh = "SRA_Chaos_galaxy_map_object_orb_mesh"
+
+
+	
+	scale = 0.6
+		game_data = {
+		bloom_factor			= 1
+		uv_animation_speed 		= 0.25
+		uv_animation_direction 	= { 0.7 -0.8 }
+		}		
+}
+
+entity = {
+	name = "SRA_Chaos_galaxy_map_object_cylinder_entity"
+	pdxmesh = "SRA_Chaos_galaxy_map_object_cylinder_mesh"
+
+	scale = 1
+		game_data = {
+		bloom_factor			= 1
+		uv_animation_speed 		= 0.05
+		uv_animation_direction 	= { 0. 1.0 }
+		}		
+}
+
+entity = {
+	name = "SRA_Chaos_galaxy_map_object_arms_entity"
+	pdxmesh = "SRA_Chaos_galaxy_map_object_arms_mesh"
+
+	scale = 0
+		game_data = {
+		bloom_factor			= 1.25
+		uv_animation_speed 		= 0.055
+		uv_animation_direction 	= { 0.6 1.0 }
+		}		
+}
+
+entity = {
+	name = "SRA_Chaos_galaxy_map_object_short_arms_entity"
+	pdxmesh = "SRA_Chaos_galaxy_map_object_short_arms_mesh"
+
+	scale = 1
+		game_data = {
+		bloom_factor			= 0.8
+		uv_animation_speed 		= 0.15
+		uv_animation_direction 	= { 0.6 1.0 }
+		}		
+}
+
+entity = {
+	name = "synth_queen_swarm_effect_entity"
+	pdxmesh = "SRA_Chaos_galaxy_map_object_swarm_mesh"
+
+	scale = 0.7
+		game_data = {
+		bloom_factor			= 1
+		uv_animation_speed 		= 0.05
+		uv_animation_direction 	= { 0.6 -1.0 }
+		}		
+}

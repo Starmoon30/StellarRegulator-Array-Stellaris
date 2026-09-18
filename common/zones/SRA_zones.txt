@@ -1,0 +1,294 @@
+# Planet District Zones
+
+# zone_test_01 = {
+#   potential = {                           # Trigger that defines whether the zone can potentially be built on the Planet. Scope = Planet
+#       always = yes
+#   }
+#
+#   unlock = {                              # Trigger that defines whether the zone is unlocked for building on the planet. Scope = Planet
+#       always = yes
+# 	}
+#
+# 	resources = {                           # Cost of building. Scope = Planet
+#       category = planet_districts
+# 		cost = {
+# 			minerals = 50
+# 		}
+# 	}
+#
+#   max_buildings = 3      					# Number of slots for buildings.
+#
+#   planet_modifier = {						# Planet modifier from the zone
+#   }
+#
+#   triggered_planet_modifier = { 			# Triggered planet modifier from the zone. Scope = Planet
+#       potential = {
+#           always = yes
+#       }
+#   }
+#
+#   triggered_planet_pop_group_modifier = { # Triggered modifier applied to pop groups on planet.
+#       potential = {						# Modifier values are divided in proportion to size between pop groups for which the trigger is true.
+#           always = yes					# Scope = Pop group
+#       }
+#   }
+#
+#   district_planet_modifier = {    		# Planet modifier from the zone. Modifier value is multiplied by the District Level
+#   }
+#
+#   triggered_district_planet_modifier = {  # Triggered planet modifier from the zone. Modifier value is multiplied by the District Level. Scope = Planet
+#       potential = {
+#           always = yes
+#       }
+#   }
+#
+#   include = {    }                       # Buildings listed here can be constructed in this zone.
+#
+#   exclude = {    }                       # Buildings listed here cannot be constructed in this zone.
+#
+#   included_building_sets = {
+#                                           # Buildings belonging to any building set listed here can be constructed in this zone.
+#    }
+#
+#   excluded_building_sets = {
+#                                           # Buildings belonging to any building set listed here cannot be constructed in this zone.
+#    }
+#
+#	triggered_desc = {       		        # Triggered description of the zone's effect. Scope = Planet
+#		trigger = {
+#			exists = owner
+#		}
+#		text = job_clerk_effect_desc
+#	}
+# }
+
+
+zone_SRA_GZ = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = 120
+	potential = { # planet scope
+		always = yes
+	}
+	unlock = { # planet scope
+		always = yes
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+		}
+	}
+	include = {
+		all
+	}
+	included_building_sets = {
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		# planet_housing_add = 2000
+		# planet_crime_add = -20
+		# planet_amenities_add = 2000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+
+
+
+zone_SRA_city_housing = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = 120
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+		}
+	}
+
+	include = {
+		all
+	}
+	included_building_sets = {
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		planet_housing_add = 2000
+		planet_crime_add = -20
+		planet_amenities_add = 2000
+	}
+	
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+
+zone_SRA_city_foundry = {
+	icon = GFX_district_specialization_foundry
+	base_buildtime = 120
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+		}
+	}
+
+	include = {
+		all
+	}
+	included_building_sets = {
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = no }
+		}
+		modifier = {
+			job_SRA_foundry_specialist_add = 500
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		modifier = {
+			job_SRA_foundry_drone_add = 500
+		}
+	}
+	
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+zone_SRA_city_alloys = {
+	icon = GFX_district_specialization_foundry
+	base_buildtime = 120
+	potential = { # planet scope
+		always = yes
+	}
+	unlock = { # planet scope
+		always = yes
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+		}
+	}
+	include = {
+		all
+	}
+	included_building_sets = {
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = no }
+		}
+		modifier = {
+			job_SRA_alloys_specialist_add = 500
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		modifier = {
+			job_SRA_alloys_drone_add = 500
+		}
+	}
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+zone_SRA_city_science = {
+	icon = GFX_district_specialization_research
+	base_buildtime = 120
+	potential = { # planet scope
+		always = yes
+	}
+	unlock = { # planet scope
+		always = yes
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+		}
+	}
+	include = {
+		all
+	}
+	included_building_sets = {
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = no }
+		}
+		modifier = {
+			job_SRA_databan_specialist_add = 500
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		modifier = {
+			job_SRA_databan_drone_add = 500
+		}
+	}
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+
+
+
+zone_SRA_SD = {
+	icon = GFX_district_specialization_knight_commander
+	base_buildtime = 120
+	potential = { # planet scope
+		always = yes
+	}
+	unlock = { # planet scope
+		always = yes
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+		}
+	}
+	include = {
+		all
+	}
+	included_building_sets = {
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		# planet_housing_add = 2000
+		# planet_crime_add = -20
+		# planet_amenities_add = 2000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}

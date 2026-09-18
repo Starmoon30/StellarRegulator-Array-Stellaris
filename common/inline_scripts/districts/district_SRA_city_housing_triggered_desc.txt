@@ -1,0 +1,33 @@
+#district_SRA_city_housing_triggered_desc
+# triggered district names will pick the first one that they hit.
+triggered_name = {
+	trigger = {
+		is_homeworld = yes
+		is_capital = yes
+	}
+	text = district_SRA_city_housing_triggered_desc_1
+}
+
+triggered_flavor_desc = {
+	trigger = {
+		is_homeworld = yes
+		is_capital = yes
+	}
+	text = district_SRA_city_housing_triggered_desc_1_desc
+}
+
+triggered_name = {
+	trigger = {
+		is_homeworld = no
+		is_capital = yes
+	}
+	text = district_SRA_city_housing_triggered_desc_2
+}
+
+triggered_flavor_desc = {
+	trigger = {
+		is_homeworld = no
+		is_capital = yes
+	}
+	text = district_SRA_city_housing_triggered_desc_2_desc
+}

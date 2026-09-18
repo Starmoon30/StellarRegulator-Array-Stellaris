@@ -1,0 +1,352 @@
+pc_ringworld_habitable_SRA_GZ = {
+	ringworld = yes
+	entity = "SRA_ancient_ringworld_habitable_gaia_blue_shielded_blue"
+	picture = pc_SRA_city
+	tile_set = pc_city
+	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
+	entity_scale = 1
+	enable_tilt = no
+	fixed_entity_scale = yes
+	atmosphere_color		= hsv { 0.0 0.0 1.0 }
+	atmosphere_intensity = 1
+	atmosphere_width = 0.5
+	show_city = yes
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0
+	planet_size = 10
+	moon_size = 1
+	climate = "artificial"
+	colonizable = yes
+	ideal = yes
+	starting_planet = no
+	orbit_lines = no
+	has_colonization_influence_cost = no	# applies when within own borders
+	fixed_city_level = 0
+	is_artificial_planet = yes
+	district_set = SRA_GZ_rw_world
+	starting_district = district_SRA_GZ_foundry
+	carry_cap_per_free_district = @carry_cap_high
+	modifier = {
+		pop_amenities_usage_mult = -1
+		pop_amenities_usage_no_happiness_mult = -1
+		pop_housing_usage_mult = -1
+		pop_happiness = 1
+		planet_crime_mult = -1
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+		planet_crime_add = -100
+		planet_stability_add = 100
+		planet_amenities_add = 10000
+		planet_housing_add = 10000
+		planet_jobs_produces_mult = 0.4
+		pop_environment_tolerance = 1.0
+		planet_max_districts_add = 15
+		planet_defense_armies_add = 5
+	}
+}
+
+pc_SRA_Spear_Of_Galaxy_Zenith_Ark = {
+	entity = "continental_planet"  # Ignored for arkships; the actual ship model is used instead
+	icon = GFX_planet_type_generic_arkship
+	icon_large = GFX_planet_type_generic_arkship_big
+
+	conditional_icon = {
+		trigger = {
+			always = yes
+		}
+		icon = GFX_planet_type_military_arkship_3
+		icon_large = GFX_planet_type_military_arkship_3_big
+	}
+
+	climate = "artificial"
+	initial = yes
+
+	starting_planet = no
+
+	district_set = SRA_GZ_rw_world
+	starting_district = district_SRA_GZ_foundry
+
+	atmosphere_color		= hsv { 0.59 0.45 0.95 }
+	atmosphere_intensity	= 1.0
+	atmosphere_width		= 0.5
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+	spawn_odds = 0
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	planet_size = 10
+
+	colonizable = yes
+	uses_alternative_skies_for_moons = no
+	uses_alternative_skies_if_has_orbital_ring = no
+	is_artificial_planet = yes
+	default_planet_selection = no
+
+	carry_cap_per_free_district = @carry_cap_high
+	modifier = {
+		pop_amenities_usage_mult = -1
+		pop_amenities_usage_no_happiness_mult = -1
+		pop_housing_usage_mult = -1
+		pop_happiness = 1
+		planet_crime_mult = -1
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+		planet_crime_add = -100
+		planet_stability_add = 100
+		planet_amenities_add = 10000
+		planet_housing_add = 10000
+		planet_jobs_produces_mult = 0.4
+		habitability_floor_add = 1
+		pop_environment_tolerance = 1.0
+		planet_defense_armies_add = 5
+	}
+
+	single_build_queue = yes
+}
+
+pc_SRA_Barrier_Main_Station = {
+	entity = ""
+	picture = pc_SRA_city
+	tile_set = pc_city
+	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
+	entity_scale = 1
+	enable_tilt = no
+	fixed_entity_scale = yes
+	atmosphere_color		= hsv { 0.0 0.0 1.0 }
+	atmosphere_intensity = 1
+	atmosphere_width = 0.5
+	show_city = yes
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0
+	planet_size = 10
+	moon_size = 1
+	climate = "artificial"
+	colonizable = yes
+	ideal = yes
+	starting_planet = no
+	orbit_lines = no
+	has_colonization_influence_cost = no	# applies when within own borders
+	fixed_city_level = 0
+	is_artificial_planet = yes
+	district_set = SRA_GZ_rw_world
+	starting_district = district_SRA_GZ_foundry
+	carry_cap_per_free_district = @carry_cap_high
+	modifier = {
+		pop_amenities_usage_mult = -1
+		pop_amenities_usage_no_happiness_mult = -1
+		pop_housing_usage_mult = -1
+		pop_happiness = 1
+		planet_crime_mult = -1
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+		planet_crime_add = -100
+		planet_stability_add = 100
+		planet_amenities_add = 10000
+		planet_housing_add = 10000
+		planet_jobs_produces_mult = 0.4
+		pop_environment_tolerance = 1.0
+		planet_max_districts_add = 15
+		planet_defense_armies_add = 5
+	}
+}
+
+pc_SRA_Barrier_ringworld_habitable = {
+	ringworld = yes
+	entity = "SRA_ancient_ringworld_habitable_gaia_blue_shielded_blue"
+	picture = pc_SRA_city
+	tile_set = pc_city
+	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
+	entity_scale = 1
+	enable_tilt = no
+	fixed_entity_scale = yes
+	atmosphere_color		= hsv { 0.0 0.0 1.0 }
+	atmosphere_intensity = 1
+	atmosphere_width = 0.5
+	show_city = yes
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0
+	planet_size = 10
+	moon_size = 1
+	climate = "artificial"
+	colonizable = yes
+	ideal = yes
+	starting_planet = no
+	orbit_lines = no
+	has_colonization_influence_cost = no	# applies when within own borders
+	fixed_city_level = 0
+	is_artificial_planet = yes
+	district_set = SRA_GZ_rw_world
+	starting_district = district_SRA_GZ_foundry
+	carry_cap_per_free_district = @carry_cap_high
+	modifier = {
+		pop_amenities_usage_mult = -1
+		pop_amenities_usage_no_happiness_mult = -1
+		pop_housing_usage_mult = -1
+		pop_happiness = 1
+		planet_crime_mult = -1
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+		planet_crime_add = -100
+		planet_stability_add = 100
+		planet_amenities_add = 10000
+		planet_housing_add = 10000
+		planet_jobs_produces_mult = 0.4
+		pop_environment_tolerance = 1.0
+		planet_max_districts_add = 15
+		planet_defense_armies_add = 5
+	}
+}
+
+pc_SRA_city = {
+	entity = "SRA_city_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_SRA_city
+	icon_large = GFX_planet_type_SRA_city_big
+	picture = pc_SRA_city
+	climate = "artificial"
+	atmosphere_color		= hsv { 0.0 0.0 1.0 }
+	atmosphere_intensity = 1
+	atmosphere_width = 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+	modifier = {
+		planet_jobs_produces_mult = 0.25
+		logistic_growth_mult = 0.2
+		planet_pop_assembly_mult = 0.2
+		bonus_pop_growth_mult = 0.2
+		planet_resettlement_unemployed_destination_mult = 0.5
+		pop_environment_tolerance = 1.0
+		planet_defense_armies_add = 5
+	}
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.2
+	fixed_city_level = 0
+	planet_size = {
+		min = @habitable_planet_min_size
+		max = @habitable_planet_max_size
+	}
+	moon_size = {
+		min = @habitable_moon_min_size
+		max = @habitable_moon_max_size
+	}
+	colonizable = yes
+	district_set = SRA_city_world
+	starting_district = district_SRA_city_housing
+	is_artificial_planet = yes
+	starting_planet = no
+	ideal = yes
+	uses_alternative_skies_for_moons = no
+	carry_cap_per_free_district = @carry_cap_high
+}
+
+pc_SRA_chaos_star_habitable = {
+	entity = "SRA_chaos_star_entity"
+	picture = pc_SRA_chaos_star
+	icon = GFX_planet_type_SRA_chaos_star
+	icon_large = GFX_planet_type_SRA_chaos_star_big
+	enable_tilt = no
+	planet_size = 10
+	colonizable = yes
+	starting_planet = no
+	orbit_lines = no
+	star = yes
+	star_gfx = no
+	climate = "SRA_SD_chaos"
+	has_colonization_influence_cost = no	# applies when within own borders
+	fixed_city_level = 0
+	is_artificial_planet = yes
+	carry_cap_per_free_district = @carry_cap_high
+	district_set = standard
+	modifier = {
+		habitability_floor_add = 1
+		pop_amenities_usage_mult = -1
+		pop_amenities_usage_no_happiness_mult = -1
+		pop_housing_usage_mult = -1
+		pop_happiness = 1
+		planet_crime_mult = -1
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+		planet_crime_add = -100
+		planet_amenities_add = 10000
+		planet_stability_add = 100
+		planet_housing_add = 10000
+		# planet_max_buildings_add = 120
+		planet_max_districts_add = 15
+		planet_defense_armies_add = 10
+	}
+}
+
+pc_SRA_chaos_star = {
+	entity = "SRA_chaos_star_entity"
+	entity_scale = 10
+	picture = pc_SRA_chaos_star
+	icon = GFX_planet_type_SRA_chaos_star
+	icon_large = GFX_planet_type_SRA_chaos_star_big
+
+	atmosphere_color		= hsv { 0.71 0.6 0.7 }
+	atmosphere_intensity	= 0.8
+	atmosphere_width		= 1.4
+
+
+	climate = "luminosity_4"
+	star = yes
+	star_gfx = no
+
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	spawn_odds = 0
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = { min = 20 max = 35 }
+
+	colonizable = no
+}
+
+pc_SRA_SD_chaos_star_habitable = {
+	entity = "SRA_chaos_star_extra_entity"
+	picture = pc_SRA_chaos_star
+	icon = GFX_planet_type_SRA_chaos_star
+	icon_large = GFX_planet_type_SRA_chaos_star_big
+	enable_tilt = no
+	planet_size = 25
+	colonizable = yes
+	starting_planet = no
+	orbit_lines = no
+	star = yes
+	star_gfx = no
+	climate = "SRA_SD_chaos"
+	has_colonization_influence_cost = no	# applies when within own borders
+	fixed_city_level = 0
+	is_artificial_planet = yes
+	carry_cap_per_free_district = @carry_cap_high
+	district_set = SRA_SD_chaos_star_habitable
+	starting_district = district_SRA_SD_energy
+	modifier = {
+		habitability_floor_add = 1
+		# planet_max_buildings_add = 32
+		planet_amenities_add = 3200
+		planet_stability_add = 32
+		planet_housing_add = 3200
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+	}
+}

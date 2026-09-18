@@ -1,0 +1,246 @@
+#星辉壁垒主要塞
+SRA_Barrier_Main_Station = {
+	graphical_culture = no
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = 640000
+		ship_shield_add = 640000
+		#ship_weapon_damage = 1 完全失效
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_3
+		ship_armor_hardening_add = @SRA_ship_hardening_add_3
+	}
+	max_hitpoints = 1280000
+	map_counter_icon = ship_counter_128
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	# section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = @build_block_radius_civilian
+	
+	enable_default_design = no
+	class = shipclass_military_station
+	never_lost = yes
+	is_designable = no
+	can_have_federation_design = no
+    can_disable = yes
+
+	required_component_set = "power_core"
+	required_component_set = "combat_computers"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_6 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+#星辉壁垒卫戍要塞
+SRA_Barrier_Guard_Station = {
+	graphical_culture = no
+	max_speed = 0.0
+	rotation_speed = 0.0
+	acceleration = 0.0
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = 320000
+		ship_shield_add = 320000
+		#ship_weapon_damage = 1 完全失效
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_3
+		ship_armor_hardening_add = @SRA_ship_hardening_add_3
+	}
+	max_hitpoints = 640000
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = @build_block_radius_civilian
+	
+	enable_default_design = no
+	class = shipclass_military_station
+	never_lost = yes
+	is_designable = no
+	can_have_federation_design = no
+
+	required_component_set = "power_core"
+	required_component_set = "combat_computers"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_6 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+#星辉壁垒卫戍泰坦
+SRA_Barrier_Guard_Titan = {
+	max_speed = 120
+	acceleration = 0.35
+	rotation_speed = 0.15
+	collision_radius = 24
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = 40000
+		ship_shield_add = 40000
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_target_weight_mult = 8
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_3
+		ship_armor_hardening_add = @SRA_ship_hardening_add_3
+	}
+	max_hitpoints = 40000
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_battleship
+	fleet_slot_size = 8
+	base_buildtime = 720
+	section_slots = { "mid" = { locator = "part1" }  }
+	num_target_locators = 4
+	is_space_station = yes
+
+	enable_default_design = no
+	class = shipclass_military_station
+	never_lost = yes
+	is_designable = no
+	can_have_federation_design = no
+
+	required_component_set = "power_core"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	
+	prerequisites = { "tech_SRA_T4_hidden_tech" }		
+	use_shipnames_from = battleship
+	
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_5 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+
+#星辉壁垒卫戍巡航
+SRA_Barrier_Guard_Cruiser = {
+	max_speed = 180
+	acceleration = 0.35
+	rotation_speed = 0.15
+	collision_radius = 24
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = 48000
+		ship_shield_add = 48000
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_target_weight_mult = 8
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_1
+		ship_armor_hardening_add = @SRA_ship_hardening_add_1
+	}
+	max_hitpoints = 48000
+	map_counter_icon = ship_counter_8
+	size_multiplier = @SRA_size_multiplier_destroyer
+	combat_size_multiplier = @SRA_size_multiplier_destroyer
+	fleet_slot_size = 2
+	base_buildtime = 640
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = yes
+
+	enable_default_design = no
+	class = shipclass_military_station
+	never_lost = yes
+	is_designable = no
+	can_have_federation_design = no
+
+	required_component_set = "power_core"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	
+	prerequisites = { "tech_SRA_T4_hidden_tech" }		
+	use_shipnames_from = cruiser
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_3 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}

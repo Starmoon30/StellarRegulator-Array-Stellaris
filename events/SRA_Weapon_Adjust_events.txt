@@ -1,0 +1,266 @@
+namespace = SRA_Weapon_Adjust
+
+
+country_event = {
+	id = SRA_Weapon_Adjust.1
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		set_country_flag = SRA_Weapon_Adjust
+		set_variable = { which =  SRA_Weapon_Adjust_0 value = 0 }
+		set_variable = { which =  SRA_Weapon_Adjust_1 value = 0 }
+	}
+}
+
+country_event = {
+	id = SRA_Weapon_Adjust.2
+	title = SRA_Weapon_Adjust.2.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_Weapon_Adjust.2.desc"
+	trigger = {
+		has_country_flag = StellarRegulator_Array_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_Weapon_Adjust.2.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.3
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.2.b
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.4
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.h
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_Weapon_Adjust.3
+	title = SRA_Weapon_Adjust.3.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_Weapon_Adjust.3.desc"
+	trigger = {
+		has_country_flag = StellarRegulator_Array_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_Weapon_Adjust.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.3
+			}
+			change_variable = {
+				which = SRA_Weapon_Adjust_0
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.b
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.3
+			}
+			change_variable = {
+				which = SRA_Weapon_Adjust_0
+				value = 10
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.c
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.3
+			}
+			multiply_variable = {
+				which = SRA_Weapon_Adjust_0
+				value = 10
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.d
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.3
+			}
+			change_variable = {
+				which = SRA_Weapon_Adjust_0
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.e
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.3
+			}
+			change_variable = {
+				which = SRA_Weapon_Adjust_0
+				value = -10
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.f
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.3
+			}
+			multiply_variable = {
+				which = SRA_Weapon_Adjust_0
+				value = 0.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.g
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.2
+			}
+			add_modifier = {
+				modifier = SRA_Weapon_Adjust_Buff_0
+				multiplier = SRA_Weapon_Adjust_0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Weapon_Adjust.4
+	title = SRA_Weapon_Adjust.4.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_Weapon_Adjust.4.desc"
+	trigger = {
+		has_country_flag = StellarRegulator_Array_tech_permit
+		OR = {
+			has_civic = civic_SRAtechnology
+			has_civic = civic_SRARociviaEmpire
+		}
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_Weapon_Adjust.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.4
+			}
+			change_variable = {
+				which = SRA_Weapon_Adjust_1
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.b
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.4
+			}
+			change_variable = {
+				which = SRA_Weapon_Adjust_1
+				value = 10
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.c
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.4
+			}
+			multiply_variable = {
+				which = SRA_Weapon_Adjust_1
+				value = 10
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.d
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.4
+			}
+			change_variable = {
+				which = SRA_Weapon_Adjust_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.e
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.4
+			}
+			change_variable = {
+				which = SRA_Weapon_Adjust_1
+				value = -10
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.f
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.4
+			}
+			multiply_variable = {
+				which = SRA_Weapon_Adjust_1
+				value = 0.1
+			}
+		}
+	}
+	option = {
+		name = SRA_Weapon_Adjust.g
+		hidden_effect = {
+			country_event = {
+				id = SRA_Weapon_Adjust.2
+			}
+			add_modifier = {
+				modifier = SRA_Weapon_Adjust_Buff_1
+				multiplier = SRA_Weapon_Adjust_1
+			}
+		}
+	}
+}

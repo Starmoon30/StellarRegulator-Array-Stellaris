@@ -1,0 +1,409 @@
+#星规星环基地
+
+planet_SRA_orbital_ring_Buff_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_fortress_trophy.dds"
+	icon_frame = 1
+	planet_buildings_upkeep_mult = -0.25
+	planet_districts_upkeep_mult = -0.25
+	planet_jobs_produces_mult = 0.1
+	planet_max_districts_mult = 0.2
+}
+#树海残枝
+planet_SRA_SD_chaos_star_habitable_Buff_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_dimensional_defenders.dds"
+	icon_frame = 1
+}
+#坟1
+SRA_Rocivia_Legacy_Buff_1 = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_sr_neutronium_mult.dds"
+	weapon_type_kinetic_weapon_damage_mult = 0.05
+	ship_armor_mult = 0.05
+}
+
+#坟2
+SRA_Rocivia_Legacy_Buff_2 = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_sr_neutronium_mult.dds"
+	all_technology_research_speed = 0.1
+}
+
+SRA_Weapon_Adjust_Buff_0 = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_sr_neutronium_mult.dds"
+	weapon_type_SRA_Adjust_weapon_damage_mult = 0.01
+}
+SRA_Weapon_Adjust_Buff_1 = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_sr_neutronium_mult.dds"
+	weapon_type_SRA_Adjust_weapon_fire_rate_mult = 0.01
+}
+
+SRA_Spear_Of_Galaxy_Zenith_nearly_repair = {
+	ship_damage_reduction_mult = 2
+	mod_SRA_clear_ship_damage_reduction_mult_resistance = 1
+	ship_target_weight_mult = 8
+}
+SRA_Spear_Of_Galaxy_Zenith_Buff_1 = {
+	weapon_type_SRA_supreme_weapon_fire_rate_mult = 30
+	ship_shield_damage_mult = 2
+	ship_armor_damage_mult = 2
+	ship_hull_damage_mult = 2
+	ship_shield_penetration_mult = 20
+	ship_armor_penetration_mult = 20
+	ship_damage_reduction_mult = 2
+	mod_SRA_clear_ship_damage_reduction_mult_resistance = 1
+	ship_target_weight_mult = 8
+}
+
+SRA_Spear_Of_Galaxy_Zenith_Buff_2 = {
+	ship_disengage_chance_reduction = 10
+	ship_speed_mult = -40
+	ship_weapon_range_mult = -40
+	ship_evasion_mult = -40
+	ship_accuracy_mult = -40
+	ship_tracking_mult = -40
+}
+
+SRA_fire_target_Buff_0 = {
+	ship_tracking_mult = -40
+}
+
+SRA_fire_target_Buff_1 = {
+	ship_tracking_mult = 40
+}
+SRA_SOGZ_menu_sub_2_1_Buff = {
+	ship_speed_mult = 2
+	ship_evasion_mult = 1
+	ship_windup_mult = -2
+	ship_winddown_mult = -2
+	relay_bypass_ship_windup_mult = 2
+	ship_ftl_jumpdrive_range_mult = 8
+	ship_jumpdrive_cooldown_mult = -2
+}
+SRA_SOGZ_menu_sub_4_2_Buff = {
+	ship_shield_reduction = 0.8
+	ship_armor_reduction = 0.8
+	ship_shield_hardening_add = -2
+	ship_armor_hardening_add = -2
+}
+SRA_SOGZ_menu_sub_5_2_Buff = {
+	weapon_type_SRA_supreme_weapon_fire_rate_mult = 3
+}
+SRA_SOGZ_menu_sub_5_3_Buff = {
+	ship_hull_mult = 32
+	ship_armor_mult = 32
+	ship_shield_mult = 32
+	ship_shield_damage_mult = 2
+	ship_armor_damage_mult = 2
+	ship_hull_damage_mult = 2
+	ship_shield_regen_add_static = 64000000
+	ship_armor_regen_add_static = 64000000
+	ship_hull_regen_add_static = 64000000	
+}
+
+
+SRA_SOGZ_menu_sub_5_4_Buff = {
+	ship_hull_mult = 32
+	ship_armor_mult = 32
+	ship_shield_mult = 32
+	ship_shield_damage_mult = 2
+	ship_armor_damage_mult = 2
+	ship_hull_damage_mult = 2
+	ship_shield_regen_add_static = 64000000
+	ship_armor_regen_add_static = 64000000
+	ship_hull_regen_add_static = 64000000	
+}
+
+SRA_weapon_type_SRA_supreme_base_buff = {
+	weapon_type_SRA_supreme_weapon_damage_mult = 1
+}
+SRA_T_weapon_supreme_buff = {
+	ship_shield_regen_add_static = -6400000
+	ship_armor_regen_add_static = -6400000
+	ship_hull_regen_add_static = -6400000
+	ship_damage_reduction_mult = -1
+	ship_evasion_mult = -1
+	ship_shield_reduction = 1
+	ship_armor_reduction = 1
+}
+SRA_T4_weapon_G_supreme_buff = {
+	ship_damage_reduction_mult = 2
+	mod_SRA_clear_ship_damage_reduction_mult_resistance = 1
+}
+
+SRA_Rokia_dragon_weapon_L_Particle_Launcher_buff = {
+	ship_shield_regen_add_static = -6400000
+	ship_armor_regen_add_static = -6400000
+	ship_hull_regen_add_static = -6400000
+	ship_damage_reduction_add = -2560000
+	ship_damage_reduction_mult = -1
+	ship_evasion_mult = -1
+	ship_shield_reduction = 1
+	ship_armor_reduction = 1
+}
+
+SRA_clear_ship_damage_reduction_mult_base_buff = {
+	ship_damage_reduction_mult = 1
+}
+
+
+##星辉自动化
+planet_SRA_auto_foundry = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+}
+planet_SRA_auto_research = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+}
+planet_SRA_auto_alloys = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+}
+planet_SRA_auto_factory = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+}
+
+
+
+
+
+
+SRA_RE_Rocivia_Magic_1 = {
+	ship_accuracy_add = 100
+	ship_tracking_add = 100
+}
+SRA_RE_Rocivia_Magic_2 = {
+	all_technology_research_speed = 0.5
+}
+SRA_RE_Rocivia_Magic_3 = {
+	ship_speed_mult = 2
+	ship_windup_mult = -2
+	ship_winddown_mult = -2
+	relay_bypass_ship_windup_mult = 2
+}
+SRA_RE_Rocivia_Magic_4 = {
+	ship_shield_damage_mult = 0.5
+	ship_armor_damage_mult = 0.5
+	ship_hull_damage_mult = 0.5
+	ship_experience_gain_mult = 2
+}
+SRA_RE_Rocivia_Magic_5 = {
+	pop_government_ethic_attraction = 1
+	country_unity_produces_mult = 1
+}
+
+SRA_RE_Hidra_101 = {
+	intel_decryption_add = -10
+	intel_encryption_add = 10
+	pop_citizen_happiness = -0.2
+	planet_jobs_produces_mult = -0.1
+	planet_stability_add = 20
+	planet_crime_add = -150
+}
+
+SRA_RE_Hidra_103_cooldown = {
+}
+
+planet_SRA_RE_Core_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/capital.dds"
+	icon_frame = 1
+	planet_jobs_energy_produces_mult = 0.25
+	planet_jobs_alloys_produces_mult = 0.25
+	planet_jobs_upkeep_mult = -0.25
+}
+planet_SRA_RE_Core_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+	planet_buildings_upkeep_mult = -0.75
+	planet_districts_upkeep_mult = -0.75
+	planet_jobs_produces_mult = 0.5
+	planet_jobs_physics_research_produces_mult = 1
+	planet_jobs_society_research_produces_mult = 1
+	planet_jobs_engineering_research_produces_mult = 1
+}
+
+
+SRA_RE_Core_weapon_Buff_0 = {
+	weapon_type_SRA_RE_Core_weapon_damage_mult = 2
+	weapon_type_SRA_RE_Core_weapon_fire_rate_mult = 2
+}
+
+SRA_RE_SOGZ_Upkeep = {
+	country_base_energy_produces_add = -400
+}
+
+SRA_RE_Buff_1 = {
+	ship_hull_mult = 0.15
+	planet_jobs_engineering_research_produces_mult = 0.1
+}
+
+SRA_RE_StellarRegulator_debris_1 = {
+	planet_jobs_physics_research_produces_mult = 0.5
+	planet_jobs_society_research_produces_mult = 0.5
+	planet_jobs_engineering_research_produces_mult = 0.5
+}
+SRA_RE_StellarRegulator_debris_2 = {
+	planet_jobs_unity_produces_mult = 0.5
+}
+SRA_RE_StellarRegulator_debris_3 = {
+	country_influence_produces_mult = 0.5
+}
+SRA_RE_StellarRegulator_debris_4 = {
+	planet_jobs_produces_mult = 0.3
+}
+SRA_RE_StellarRegulator_debris_5 = {
+	country_resource_max_add = 5000000
+}
+SRA_RE_StellarRegulator_debris_6 = {
+	planet_jobs_upkeep_mult = -0.2
+}
+SRA_RE_StellarRegulator_debris_7 = {
+	starbase_shipyard_build_cost_mult = -0.2
+}
+SRA_RE_StellarRegulator_debris_9 = {
+	country_produces_mult = 0.5
+}
+SRA_RE_End_2_Buff_0 = {
+	ship_hull_mult = 4
+	ship_armor_mult = 4
+	ship_shield_mult = 4
+	weapon_type_energy_weapon_damage_mult = 2
+	weapon_type_kinetic_weapon_damage_mult = 2
+	weapon_type_explosive_weapon_damage_mult = 2
+	weapon_type_energy_weapon_fire_rate_mult = 1
+	weapon_type_kinetic_weapon_fire_rate_mult = 1
+	weapon_type_explosive_weapon_fire_rate_mult = 1
+	planet_army_build_speed_mult = -10
+	starbase_shipyard_build_speed_mult = -20
+	starbase_shipyard_capacity_add = -3200
+	psionic_aura_resistance_mult = 100
+}
+
+SRA_Chief_trade_cost_buff = {
+	country_produces_mult = -1
+}
+
+SRA_Rokia_8004_Buff = {
+	all_technology_research_speed = 5
+	country_leader_pool_size = -320
+	external_leader_pool_add = -320
+}
+SRA_Rokia_8005_Buff = {
+	ship_hull_mult = 4
+	ship_armor_mult = 4
+	ship_shield_mult = 4
+	weapon_type_energy_weapon_damage_mult = 2
+	weapon_type_kinetic_weapon_damage_mult = 2
+	weapon_type_explosive_weapon_damage_mult = 2
+	weapon_type_energy_weapon_fire_rate_mult = 1
+	weapon_type_kinetic_weapon_fire_rate_mult = 1
+	weapon_type_explosive_weapon_fire_rate_mult = 1
+	planet_army_build_speed_mult = -10
+	starbase_shipyard_build_speed_mult = -20
+	starbase_shipyard_capacity_add = -3200
+}
+SRA_Rokia_8006_Buff = {
+	country_produces_mult = 5
+	# pop_growth_speed = -20
+	# planet_pop_assembly_organic_mult = -20
+	# planet_pop_assembly_mult = -20
+}
+SRA_Rokia_8007_Buff = {
+	all_technology_research_speed = 5
+	country_leader_pool_size = -320
+	external_leader_pool_add = -320
+	weapon_type_energy_weapon_damage_mult = 16
+	weapon_type_kinetic_weapon_damage_mult = 16
+	weapon_type_explosive_weapon_damage_mult = 16
+	weapon_type_energy_weapon_fire_rate_mult = 8
+	weapon_type_kinetic_weapon_fire_rate_mult = 8
+	weapon_type_explosive_weapon_fire_rate_mult = 8
+	planet_army_build_speed_mult = -10
+	starbase_shipyard_build_speed_mult = -20
+	starbase_shipyard_capacity_add = -3200
+	country_produces_mult = 5
+	ship_hull_mult = 64
+	ship_armor_mult = 64
+	ship_shield_mult = 64
+	ship_shield_damage_mult = 4
+	ship_armor_damage_mult = 4
+	ship_hull_damage_mult = 4
+	ship_shield_regen_add_static = 64000000
+	ship_armor_regen_add_static = 64000000
+	ship_hull_regen_add_static = 64000000	
+}
+
+SRA_planet_killer_4_buff = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_assist_research.dds"
+	icon_frame = 3
+	planet_jobs_produces_mult = 1
+	planet_stability_add = 100
+}
+
+SRA_SD_event_19_buff = {
+	all_technology_research_speed = -4
+}
+
+SRA_SD_event_20_d_buff = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_nexus_storm.dds"
+	icon_frame = 1
+	pop_government_ethic_attraction = -0.3
+	planet_stability_add = -30
+}
+SRA_SD_abyss_army_attack_buff = {
+	army_damage_mult = 0.01
+	army_health = 0.01
+}
+
+SRA_SD_First_Murder_debuff = {
+	planet_stability_add = -100
+}
+SRA_SD_Fire_of_Lightkeeper_buff = {
+	pop_government_ethic_attraction = 3
+	planet_stability_add = 30
+}
+
+SRA_SD_Arcane_relic_buff_A = {
+	weapon_type_SRA_SD_Arcane_weapon_damage_mult = 1
+	ships_upkeep_mult = 0.5
+}
+SRA_SD_Arcane_relic_buff_B = {
+	weapon_type_SRA_SD_Arcane_weapon_fire_rate_mult = 1
+	ships_upkeep_mult = 0.5
+}
+SRA_SD_Divine_relic_buff_A = {
+	weapon_type_SRA_SD_Divine_weapon_damage_mult = 1
+	ships_upkeep_mult = 0.5
+}
+SRA_SD_Divine_relic_buff_B = {
+	weapon_type_SRA_SD_Divine_weapon_fire_rate_mult = 1
+	ships_upkeep_mult = 0.5
+}
+
+planet_SRA_SD_old_home_planet = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_nexus_storm.dds"
+	icon_frame = 1
+}
+planet_SRA_SD_1_start_system_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_nexus_storm.dds"
+	icon_frame = 1
+}
+planet_SRA_SD_1_start_system_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_nexus_storm.dds"
+	icon_frame = 3
+}
+planet_SRA_SD_1_start_system_4 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_nexus_storm.dds"
+	icon_frame = 1
+	pop_environment_tolerance = 1
+	# planet_max_buildings_add = 12
+	district_hab_energy_max_add = 2
+	district_hab_mining_max_add = 2
+	district_hab_science_max_add = 2
+}
+
+
+SRA_SD_Myth_accuracy_debuff_effect_buff = {
+	ship_evasion_mult = -0.05
+	ship_accuracy_mult = -0.05
+	ship_tracking_mult = -0.05
+}

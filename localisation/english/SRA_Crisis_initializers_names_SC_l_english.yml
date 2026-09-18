@@ -1,0 +1,30 @@
+﻿l_english:
+ faction_SRA_StellarRegulator:0 "StellarRegulator Array"
+
+
+ NAME_SRA_Rocivia_Empire:0 "§BRocivia Empire§!"
+ NAME_SRA_Crisis_country:0 "§BThird Expeditionary Fleet§!"
+
+
+ NAME_SRA_Crisis_Bright_Galaxy:0 "§BDisillusionment - Dusk§!"
+ NAME_SRA_Crisis_Adjudicator:0 "Starlight - Termination"
+ NAME_SRA_Crisis_Executor:0 "Annihilation - Execution"
+ NAME_SRA_Crisis_Cruiser:0 "Hunt - Erasure"
+ NAME_SRA_Crisis_Cruiser_No_Aura:0 "§BHunt - Erasure§!"
+ NAME_SRA_Crisis_Fort:0 "Expeditionary Fortress"
+ NAME_SRA_Crisis_Mark:0 "Expeditionary Beacon"
+ NAME_SRA_Crisis_GZ_Platform:0 "Starlight - Tower"
+
+ NAME_SRA_Mutation_4309_target_fleet:0 "§BGestalt Disintegration§!"
+ NAME_SRA_Mutation_Boom_0:0 "Imminent Space Storm"
+ NAME_SRA_Mutation_Boom_1:0 "Space Storm"
+ NAME_SRA_Mutation_Boom_2:0 "Glory Explosion"
+ NAME_SRA_SOGZ_menu_sub_4_3_ship_1:0 "Pale Starfall"
+
+ NAME_SRA_Crisis_Cruiser_fleet:0 "Cruiser Fleet"
+ NAME_SRA_Crisis_Executor_fleet:0 "Executor Fleet"
+ NAME_SRA_Crisis_Adjudicator_fleet:0 "Adjudicator Fleet"
+ NAME_SRA_Crisis_Adjudicator_Guard_fleet:0 "Adjudicator Fleet"
+ NAME_SRA_Crisis_Guard_fleet:0 "Bulwark Fleet"
+ NAME_SRA_Crisis_Fort_fleet:0 "Main Control Star Core"
+ NAME_SRA_Crisis_Mark_fleet:0 "Synchronization Node" 

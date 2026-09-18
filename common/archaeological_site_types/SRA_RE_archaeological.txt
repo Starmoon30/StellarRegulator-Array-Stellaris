@@ -1,0 +1,350 @@
+SRA_RE_archaeological_1 = {
+	desc = "SRA_RE_archaeological_Text_1"
+	picture = GFX_evt_frozen
+	situation_log_category = empire_concerns
+	stages = 5
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = SRA_RE_Rocivia_Empire_story
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.11
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A2
+		event = SRA_RE_Start.12
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A3
+		event = SRA_RE_Start.13
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A4
+		event = SRA_RE_Start.14
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A5
+		event = SRA_RE_Start.15
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+SRA_RE_archaeological_2 = {
+	desc = "SRA_RE_archaeological_Text_2"
+	picture = GFX_evt_tomb_world
+	situation_log_category = empire_concerns
+	stages = 6
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = SRA_RE_Rocivia_Empire_story
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.20
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = SRA_RE_Start.21
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A3
+		event = SRA_RE_Start.22
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A4
+		event = SRA_RE_Start.23
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A5
+		event = SRA_RE_Start.24
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A6
+		event = SRA_RE_Start.25
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+SRA_RE_archaeological_3 = {
+	desc = "SRA_RE_archaeological_Text_3"
+	picture = GFX_evt_crashed_station
+	situation_log_category = empire_concerns
+	stages = 6
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = SRA_RE_Rocivia_Empire_story
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.29
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = SRA_RE_Start.30
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A3
+		event = SRA_RE_Start.31
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A4
+		event = SRA_RE_Start.32
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = SRA_RE_Start.33
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A6
+		event = SRA_RE_Start.34
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+SRA_RE_archaeological_4 = {
+	desc = "SRA_RE_archaeological_Text_4"
+	picture = GFX_evt_crashed_station
+	situation_log_category = empire_concerns
+	stages = 7
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = SRA_RE_Rocivia_Empire_story
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.61
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = SRA_RE_Start.62
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A3
+		event = SRA_RE_Start.63
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A4
+		event = SRA_RE_Start.64
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = SRA_RE_Start.65
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A6
+		event = SRA_RE_Start.66
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.67
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+
+SRA_RE_archaeological_5 = {
+	desc = "SRA_RE_archaeological_Text_5"
+	picture = GFX_evt_crashed_station
+	situation_log_category = empire_concerns
+	stages = 7
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = SRA_RE_Rocivia_Empire_story
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.92
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A2
+		event = SRA_RE_Start.93
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A3
+		event = SRA_RE_Start.94
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A4
+		event = SRA_RE_Start.95
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = SRA_RE_Start.96
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A6
+		event = SRA_RE_Start.97
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.98
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+SRA_RE_archaeological_6 = {
+	desc = "SRA_RE_archaeological_Text_6"
+	picture = GFX_evt_ai_planet
+	situation_log_category = empire_concerns
+	stages = 7
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = SRA_RE_Rocivia_Empire_story
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.120
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A2
+		event = SRA_RE_Start.121
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A3
+		event = SRA_RE_Start.122
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A4
+		event = SRA_RE_Start.123
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = SRA_RE_Start.124
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A6
+		event = SRA_RE_Start.125
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A1
+		event = SRA_RE_Start.126
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}

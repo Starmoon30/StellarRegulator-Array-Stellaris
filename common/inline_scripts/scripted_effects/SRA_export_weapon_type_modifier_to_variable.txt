@@ -1,0 +1,10 @@
+#SRA_export_modifier_to_variable
+export_modifier_to_variable = {
+	modifier = $SRA_EXPORT_MODIFIER$
+	variable = SRA_export_modifier_to_variable
+}
+change_variable = {
+	which = $SRA_TARGET_VARIABLE$
+	value = SRA_export_modifier_to_variable
+}
+clear_variable = SRA_export_modifier_to_variable

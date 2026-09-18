@@ -1,0 +1,1004 @@
+#无表情
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3011.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3011.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3011.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3011.2
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3011.2.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3011.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+#微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3012.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3012.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3012.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 13
+		}
+	}
+}
+
+#闭眼
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3013.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3013.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3013.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 15
+		}
+	}
+}
+
+#闭眼微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3014.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3014.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3014.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 17
+		}
+	}
+}
+
+#前期对话，在第一序列结束后不再显示
+#无表情
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3015.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3015.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3015.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3015.2
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3015.2.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3015.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+#微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3016.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3016.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3016.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 13
+		}
+	}
+}
+
+#闭眼
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3017.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3017.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3017.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 15
+		}
+	}
+}
+
+#闭眼微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3018.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3018.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3018.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 17
+		}
+	}
+}
+
+#中期对话，在第一序列结束后显示，在开始第三序列后不再显示
+#无表情
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3019.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3019.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3019.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+#微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3020.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3020.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3020.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 13
+		}
+	}
+}
+
+#闭眼
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3021.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3021.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3021.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 15
+		}
+	}
+}
+
+#闭眼微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3022.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3022.1.desc
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 3022.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 17
+		}
+	}
+}
+
+#后期对话，在开启第三序列后显示
+#无表情
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3023.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3023.1.desc
+}
+
+#微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3024.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3024.1.desc
+}
+
+#闭眼
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3025.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3025.1.desc
+}
+
+
+#闭眼微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3026.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3026.1.desc
+}
+
+#后期对话，完成所有碎片
+#无表情
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3027.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3027.1.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3027.2
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3027.2.desc
+}
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3027.3
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3027.3.desc
+}
+
+#微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3028.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3028.1.desc
+}
+
+#闭眼
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3029.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3029.1.desc
+}
+
+
+#闭眼微笑
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 3030.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.3030.1.desc
+}
+
+
+#星穹之矛存在
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4001.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4001.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4001.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 15
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4001.2
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4001.2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4001.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 15
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4001.3
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4001.3
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4001.3
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 15
+		}
+	}
+}
+
+#星穹之矛战斗
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.2
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.3
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.3
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.3
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.4
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.4
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.4
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.101
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.1_1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.101
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.102
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.1_2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.102
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.103
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.1_3
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.103
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.301
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.3_1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.301
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.302
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.3_2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.302
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.303
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.3_3
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.303
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.501
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.5_1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.501
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.502
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.5_2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.502
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4002.503
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4002.5_3
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4002.503
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+#星穹之矛轨道轰炸
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4003.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4003.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4003.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 17
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4003.2
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4003.2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4003.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 17
+		}
+	}
+}
+
+#星穹之矛船体受损，50%以下10%以上
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4004.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4004.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4004.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+#星穹之矛船体受损，10%以下
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4005.1
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4005.1
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4005.1
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}
+
+desc = {
+	trigger = {
+		check_variable = {
+			which = SRA_RE_StellarRegulator_talk
+			value = 4005.2
+		}
+	}
+	text = SRA_RE_StellarRegulator_talk.4005.2
+}
+
+immediate = {
+	if = {
+		limit = {
+			check_variable = {
+				which = SRA_RE_StellarRegulator_talk
+				value = 4005.2
+			}
+		}
+		set_variable = {
+			which = SRA_diplomacy_SRA_portrait
+			value = 12
+		}
+	}
+}

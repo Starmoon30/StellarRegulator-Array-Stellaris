@@ -1,0 +1,32 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_evt_SRA_event_01"
+		texturefile = "gfx/event_pictures/SRA_event_01.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes	
+	}
+	spriteType = {
+		name = "GFX_evt_SRA_city_planet"
+		texturefile = "gfx/event_pictures/SRA_city_planet.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_SRA_Chaos_event_picture"
+		texturefile = "gfx/event_pictures/SRA_Chaos_event_picture.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_SRA_nexus_storm"
+		texturefile = "gfx/event_pictures/SRA_nexus_storm.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_SRA_SOGZ"
+		texturefile = "gfx/event_pictures/SRA_SOGZ.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+}

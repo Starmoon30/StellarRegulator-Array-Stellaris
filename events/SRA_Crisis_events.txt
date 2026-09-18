@@ -1,0 +1,4233 @@
+namespace = SRA_Crisis
+#调整难度菜单
+
+
+# country_event = {
+# 	id = SRA_Crisis.1
+# 	title = "SRA_Crisis.1.name"
+# 	desc = "SRA_Crisis.1.desc"
+	
+# 	diplomatic = yes
+# 	is_triggered_only = yes
+	
+# 	custom_gui = SRA_diplomacy_window
+# 	custom_gui_option = SRA_diplomacy_button
+
+# 	trigger = {
+# 		is_ai = no
+# 		NOR = { 
+# 			has_global_flag = SRA_invasion_happened
+# 			has_global_flag = SRA_invasion_end
+# 			has_civic = civic_SRARociviaEmpire
+# 		}
+# 	}
+# 	immediate = {
+# 		set_variable = { which = SRA_diplomacy_bg value = 1 }
+# 		if = {
+# 			limit ={ has_country_flag = SRA_StellarRegulator_Cloth_1 }
+# 			set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+# 		}
+# 		else_if = {
+# 			limit ={ has_country_flag = SRA_StellarRegulator_Cloth_2 }
+# 			set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+# 		}
+# 		else_if = {
+# 			limit ={ has_country_flag = SRA_StellarRegulator_Cloth_3 }
+# 			set_variable = { which = SRA_diplomacy_SRA_portrait value = 37 }
+# 		}
+# 		else = {
+# 			set_variable = { which = SRA_diplomacy_SRA_portrait value = 7 }
+# 		}
+# 		remove_global_flag = SRA_Crisis_normal
+# 		remove_global_flag = SRA_Crisis_hard
+# 		remove_global_flag = SRA_Crisis_lunatic
+# 		remove_global_flag = SRA_Crisis_disabled
+# 	}
+# 	option = {
+# 		name = "SRA_Crisis.1.a"
+# 		custom_tooltip = SRA_Crisis.1.a.desc
+# 		hidden_effect = {
+# 			set_global_flag = SRA_Crisis_normal
+# 			country_event = {
+# 				id = SRA_Mutation.1
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "SRA_Crisis.1.b"
+# 		custom_tooltip = SRA_Crisis.1.b.desc
+# 		hidden_effect = {
+# 			set_global_flag = SRA_Crisis_hard
+# 			country_event = {
+# 				id = SRA_Mutation.1
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "SRA_Crisis.1.c"
+# 		custom_tooltip = SRA_Crisis.1.c.desc
+# 		hidden_effect = {
+# 			set_global_flag = SRA_Crisis_lunatic
+# 			country_event = {
+# 				id = SRA_Mutation.1
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = "SRA_Crisis.1.d"
+# 		custom_tooltip = SRA_Crisis.1.d.desc
+# 		hidden_effect = {
+# 			set_global_flag = SRA_Crisis_disabled
+# 		}
+# 	}
+# }
+
+
+#狡猾人
+country_event = {
+	id = SRA_Crisis.23366
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			has_global_flag = SRA_invasion_end
+		}
+	}
+
+	immediate = {
+		set_faction_hostility = {
+			target = event_target:ag_kuat_invasion_country
+			set_hostile = no
+			set_friendly = yes
+		}
+		set_faction_hostility = {
+			target = event_target:eternal_support_country
+			set_hostile = no
+			set_friendly = yes
+		}
+		set_faction_hostility = {
+			target = event_target:Infinite_empire
+			set_hostile = no
+			set_friendly = yes
+		}
+		set_faction_hostility = {
+			target = event_target:wg_crisis_country
+			set_hostile = no
+			set_friendly = yes
+		}
+		set_faction_hostility = {
+			target = event_target:wg_crisis_2_country
+			set_hostile = no
+			set_friendly = yes
+		}
+		country_event = { id = SRA_Crisis.23366 days = 180 }
+	}
+}
+
+#入侵开始
+country_event = {
+	id = SRA_Crisis.3
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		NOR = {
+			has_global_flag = SRA_Crisis_disabled			#危机没有被禁用
+			has_global_flag = SRA_invasion_happened			#入侵没有已经开始
+			has_global_flag = SRA_invasion_end              #入侵没有被击败过
+		}
+	}
+	immediate = {
+		set_update_modifiers_batch = begin
+		set_variable = { which =  SRA_Mutation_5202 value = 0 }
+		if = {
+			limit = { NOT = { has_global_flag = SRA_no_crisis_sound } }
+			stop_crisis_sound = yes
+			set_crisis_sound = BGM_ThirdFleetStage1
+		}
+		set_global_flag = SRA_invasion_happened
+		set_global_flag = SRA_Crisis_insane
+		initialize_SRA_Crisis_system_select = yes
+		random_system = {
+			limit = {
+				NOT = { has_star_flag = forbit_spawn_system }
+			}
+			set_star_flag = SRA_first_portal_system
+			save_global_event_target_as = SRA_first_portal_system
+			random_system_planet = {
+				create_country = {
+					name = "NAME_SRA_Crisis_country"
+					type = "faction_SRA_Crisis_country"
+					species = event_target:SRA_StellarRegulator_species
+					name_list = SRA_Rocivia_Empire
+					flag = {
+                        icon= {
+                            category="SRA_flags"
+                            file="SRA_flags_Rocivia.dds"
+                        }
+                        background= {
+                            category = "backgrounds"
+                            file = "double_triangles.dds"
+                        }
+                        colors={
+							"blue"
+							"black"
+                            "null"
+                            "null"
+                        }
+                    }
+					effect = {
+						set_country_flag = protected_from_queen_storm
+						set_country_flag = SRA_Crisis_country
+						set_country_flag = community_mod_rules_trigger
+						set_country_flag = community_can_orbital_bombard_ture
+						SRA_enable_crisis_country_orbital_bombardment = yes
+						save_global_event_target_as = SRA_Crisis_country
+						set_global_flag = has_SRA_invasion_fleet_country
+						set_global_flag = SRA_first_portal_system_opened
+						if = {
+							limit = { has_global_flag = SRA_Crisis_normal }
+							add_modifier = { modifier = SRA_Crisis_Buff_0 days = -1 }
+						}
+						else_if = {
+							limit = { has_global_flag = SRA_Crisis_hard }
+							add_modifier = { modifier = SRA_Crisis_Buff_1 days = -1 }
+						}
+						else_if = {
+							limit = { has_global_flag = SRA_Crisis_lunatic }
+							add_modifier = { modifier = SRA_Crisis_Buff_2 days = -1 }
+						}
+					}
+				}
+				create_SRA_Crisis_Guard_Fleet = yes
+				create_SRA_Crisis_Guard_Fleet = yes
+				event_target:SRA_Crisis_country = {
+					create_fleet = {
+						name = "NAME_SRA_Crisis_Fort_Fleet"
+						effect = {
+							set_owner = event_target:SRA_Crisis_country
+							create_SRA_Crisis_Fort = yes
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_global_event_target_as = first_SRA_Crisis_Fort
+							set_fleet_flag = first_SRA_Crisis_Fort
+							set_event_locked = yes
+						}
+					}
+					last_created_fleet = {
+						set_name = "NAME_SRA_Crisis_Guard_Fleet"
+						set_timed_fleet_flag = { flag = SRA_Crisis_Guard_fleet days = 6000 }
+						fleet_event = { id = SRA_Crisis.401 days = 6001 }
+					}
+					set_variable = {
+						which = SRA_Crisis_revive_1
+						value = 0
+					}
+					set_variable = {
+						which = SRA_Crisis_revive_2
+						value = 0
+					}
+					set_variable = {
+						which = SRA_Crisis_revive_3
+						value = 0
+					}
+					set_variable = {
+						which = SRA_Crisis_revive_4
+						value = 0
+					}
+					set_variable = {
+						which = SRA_Crisis_revive_5
+						value = 0
+					}
+					set_variable = {
+						which = SRA_Crisis_revive_6
+						value = 0
+					}
+					#锚点debug
+					country_event = { id = SRA_Crisis.1999 days = 30 }
+					#狡猾同盟
+					country_event = { id = SRA_Crisis.23366 }
+					#突变
+					country_event = { id = SRA_Mutation.4000 }
+					# 4队进攻舰队
+					country_event = { id = SRA_Crisis.3040  days = 50 }
+					country_event = { id = SRA_Crisis.3040  days = 100 }
+					country_event = { id = SRA_Crisis.3040  days = 200 }
+					country_event = { id = SRA_Crisis.3040  days = 250 }
+					if = {
+						limit = { has_global_flag = SRA_Crisis_lunatic }
+						# 额外4队进攻舰队
+						country_event = { id = SRA_Crisis.3040  days = 100 }
+						country_event = { id = SRA_Crisis.3040  days = 200 }
+						country_event = { id = SRA_Crisis.3040  days = 400 }
+						country_event = { id = SRA_Crisis.3040  days = 500 }
+						#循环刷辅助守家舰队
+					} else = { country_event = { id = SRA_Crisis.100 days = 5000 } }
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						country_event = { id = SRA_Crisis.14 days = 750 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						country_event = { id = SRA_Crisis.14 days = 650 }
+					} else = { country_event = { id = SRA_Crisis.14 days = 500 } }
+				}
+			}
+		}
+		every_playable_country = {
+			if = {
+				limit = {
+					intel_level = {
+						level = high
+						system = event_target:SRA_first_portal_system
+					}
+				}
+				country_event = { id = SRA_Crisis.5 }
+			}
+			if = {
+				limit = {
+					NOT = {
+						intel_level = {
+							level = high
+							system = event_target:SRA_first_portal_system
+						}
+					}
+				}
+				country_event = { id = SRA_Crisis.6 }
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = faction_SRA_Crisis_country
+			}
+			country_event = { id = SRA_Crisis.15 days = 5 }
+		}
+		set_update_modifiers_batch = end
+	}
+}
+#轰炸殖民地
+carrier_event = {
+	id = SRA_Crisis.10
+	title = "SRA_Crisis.10.name"
+	desc = "SRA_Crisis.10.desc"
+	picture = GFX_evt_planet_beam
+	show_sound = event_ghost_town
+	is_triggered_only = yes
+	trigger = {
+		planet_devastation = 100
+		OR = {
+			FROM = { is_country_type = faction_SRA_Crisis_country }
+			FROM = { is_country_type = faction_SRA_RE_Crisis_country_1 }
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_5201
+				any_fleet_in_orbit = {
+					owner = {
+						is_country_type = faction_SRA_Crisis_country
+					}
+					has_fleet_flag = SRA_attack_fleet
+				}
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random_fleet_in_orbit = {
+					limit = {
+						owner = {
+							is_country_type = faction_SRA_Crisis_country
+						}
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+				}
+				event_target:SRA_Crisis_country = {
+					if = {
+						limit = { has_modifier = SRA_Mutation_5201 }
+						change_variable = { which = SRA_Mutation_5201_variable value = 1 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 180 }
+					}
+					else = {
+						set_variable = { which = SRA_Mutation_5201_variable value = 1 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 180 }
+					}
+				}
+			}
+			if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random_fleet_in_orbit = {
+					limit = {
+						owner = {
+							is_country_type = faction_SRA_Crisis_country
+						}
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+				}
+				event_target:SRA_Crisis_country = {
+					if = {
+						limit = { has_modifier = SRA_Mutation_5201 }
+						change_variable = { which = SRA_Mutation_5201_variable value = 2 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 270 }
+					}
+					else = {
+						set_variable = { which = SRA_Mutation_5201_variable value = 2 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 270 }
+					}
+				}
+			}
+			if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random_fleet_in_orbit = {
+					limit = {
+						owner = {
+							is_country_type = faction_SRA_Crisis_country
+						}
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+				}
+				event_target:SRA_Crisis_country = {
+					if = {
+						limit = { has_modifier = SRA_Mutation_5201 }
+						change_variable = { which = SRA_Mutation_5201_variable value = 8 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 360 }
+					}
+					else = {
+						set_variable = { which = SRA_Mutation_5201_variable value = 8 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 360 }
+					}
+				}
+			}
+		}
+		# 相位星球
+		if = {
+			limit = { has_planet_flag = phaseshifting_active }
+			remove_planet_flag = phaseshifting_active
+			remove_modifier = phaseshifted
+		}
+		add_threat = { who = from amount = 2 }
+		reset_planet = yes
+		destroy_colony = yes
+		if = {
+			limit = { is_ringworld = yes }
+			spawn_ringworld_cracker_effect = yes
+			SRA_destroy_habitable_ringworld = yes
+		}
+		else_if = {
+			limit = { SRA_is_habitat = yes }
+			remove_planet = yes
+		} else = { change_pc = pc_shattered }
+		if = {
+			limit = {
+				FROM = { is_country_type = faction_SRA_Crisis_country }
+			}
+			every_country = {
+				limit = { has_event_chain = "SRA_invasion_chain" }
+				add_event_chain_counter = {
+					event_chain = "SRA_invasion_chain"
+					counter = "SRA_invastor_planets"
+					amount = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { is_country_type = faction_SRA_RE_Crisis_country_1 }
+			}
+			every_country = {
+				limit = { has_event_chain = "SRA_RE_Crisis_chain_1" }
+				add_event_chain_counter = {
+					event_chain = "SRA_RE_Crisis_chain_1"
+					counter = "SRA_RE_Crisis_1_planets"
+					amount = 1
+				}
+			}
+		}
+	}
+	option = { name = SRA_Crisis.10.a }
+}
+
+#第一次入侵开始的通知1（无视野）
+country_event = {
+	id = SRA_Crisis.5
+	title = "SRA_Crisis.5.name"
+	desc = "SRA_Crisis.5.desc"
+	picture = GFX_evt_SRA_event_01
+	show_sound = event_ex_started
+	location = event_target:SRA_first_portal_system
+
+	is_triggered_only = yes
+
+	after = {
+		if = {
+			limit = { has_country_flag = has_SRA_StellarRegulator_country }
+			begin_event_chain = {
+				event_chain = "SRA_invasion_chain"
+				target = ROOT
+			}
+			create_point_of_interest = {
+				id = SRA_invasion_poi.1
+				name = "SRA_invasion_1_poi"
+				desc = "SRA_invasion_1_poi_desc_a"
+				event_chain = "SRA_invasion_chain"
+				location = event_target:SRA_first_portal_system
+			}
+			hidden_effect = {
+				country_event = { id = SRA_Crisis.8 }
+			}
+		}
+		else = {
+		begin_event_chain = {
+			event_chain = "SRA_invasion_chain"
+			target = ROOT
+		}
+		create_point_of_interest = {
+			id = SRA_invasion_poi.1
+			name = "SRA_invasion_1_poi"
+			desc = "SRA_invasion_1_poi_desc_b"
+			event_chain = "SRA_invasion_chain"
+			location = event_target:SRA_first_portal_system
+		}
+		hidden_effect = {
+			country_event = { id = SRA_Crisis.8 }
+		}
+		}
+	}
+
+	option = {
+		name = SRA_Crisis.5.a
+	}
+	option = {
+		name = SRA_Crisis.5.b
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.6
+	title = "SRA_Crisis.6.name"
+	desc = "SRA_Crisis.6.desc"
+	picture = GFX_evt_SRA_event_01
+	show_sound = event_alien_signal
+	is_triggered_only = yes
+	option = {
+		name = SRA_Crisis.6.a
+		hidden_effect = { country_event = { id = SRA_Crisis.7 days = 30 } }
+	}
+}
+
+#第一次入侵开始的通知2（无视野）
+country_event = {
+	id = SRA_Crisis.7
+	title = "SRA_Crisis.7.name"
+	desc = "SRA_Crisis.7.desc"
+	picture = GFX_evt_SRA_event_01
+	show_sound = event_ex_started
+	location = event_target:SRA_first_portal_system
+	is_triggered_only = yes
+	after = {
+		if = {
+			limit = { has_country_flag = has_SRA_StellarRegulator_country }
+			begin_event_chain = {
+				event_chain = "SRA_invasion_chain"
+				target = ROOT
+			}
+			create_point_of_interest = {
+				id = SRA_invasion_poi.1
+				name = "SRA_invasion_1_poi"
+				desc = "SRA_invasion_1_poi_desc_a"
+				event_chain = "SRA_invasion_chain"
+				location = event_target:SRA_first_portal_system
+			}
+			hidden_effect = {
+				country_event = { id = SRA_Crisis.8 }
+			}
+		}
+		else = {
+		begin_event_chain = {
+			event_chain = "SRA_invasion_chain"
+			target = ROOT
+		}
+		create_point_of_interest = {
+			id = SRA_invasion_poi.1
+			name = "SRA_invasion_1_poi"
+			desc = "SRA_invasion_1_poi_desc_b"
+			event_chain = "SRA_invasion_chain"
+			location = event_target:SRA_first_portal_system
+		}
+		hidden_effect = {
+			country_event = { id = SRA_Crisis.8 }
+		}
+		}
+	}
+	option = { name = SRA_Crisis.7.a }
+	option = { name = SRA_Crisis.7.b }
+}
+
+#第一次入侵开始的通知3（无视野）
+country_event = {
+	id = SRA_Crisis.8
+	title = "SRA_Crisis.8.name"
+	desc = "SRA_Crisis.8.desc"
+
+	diplomatic = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 21 }
+		set_variable = { which = SRA_diplomacy_bg value = 2 }
+		establish_communications_no_message = event_target:SRA_Crisis_country
+	}
+	option = {
+		name = SRA_Crisis.8.a
+		trigger = {
+				has_country_flag = has_SRA_StellarRegulator_country
+		}
+		hidden_effect = {
+		country_event = { id = SRA_Crisis.9 days = 5 }
+	    }
+	}
+	option = {
+		name = SRA_Crisis.8.b
+		trigger = {
+			NOT = {
+				has_country_flag = has_SRA_StellarRegulator_country
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.9
+	title = "SRA_Crisis.9.name"
+	desc = "SRA_Crisis.9.desc"
+
+	diplomatic = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_5 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = SRA_Crisis.9.a
+	}
+}
+
+
+country_event = {
+	id = SRA_Crisis.14
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		NOT = { has_global_flag = SRA_first_portal_destroyed }
+	}
+	immediate = {
+		event_target:SRA_first_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			country_event = { id = SRA_Crisis.14 days = 1800 random = 100 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			country_event = { id = SRA_Crisis.14 days = 1080 random = 30 }
+		} 
+		else = { country_event = { id = SRA_Crisis.14 days = 360 } }
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.141
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		NOT = { has_global_flag = SRA_second_portal_destroyed }
+	}
+	immediate = {
+		event_target:SRA_second_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			country_event = { id = SRA_Crisis.141 days = 1800 random = 100 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			country_event = { id = SRA_Crisis.141 days = 1080 random = 100 }
+		} 
+		else = { country_event = { id = SRA_Crisis.141 days = 360 } }
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.142
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		NOT = { has_global_flag = SRA_third_portal_destroyed }
+	}
+	immediate = {
+		event_target:SRA_third_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			country_event = { id = SRA_Crisis.142 days = 1800 random = 100 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			country_event = { id = SRA_Crisis.142 days = 1080 random = 50 }
+		} 
+		else = { country_event = { id = SRA_Crisis.142 days = 360 } }
+	}
+}
+country_event = {
+	id = SRA_Crisis.143
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		NOT = { has_global_flag = SRA_fourth_portal_destroyed }
+	}
+	immediate = {
+		event_target:SRA_fourth_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			country_event = { id = SRA_Crisis.143 days = 1800 random = 100 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			country_event = { id = SRA_Crisis.143 days = 1080 random = 50 }
+		} 
+		else = { country_event = { id = SRA_Crisis.143 days = 360 } }
+	}
+}
+country_event = {
+	id = SRA_Crisis.144
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		NOT = { has_global_flag = SRA_fifth_portal_destroyed }
+	}
+	immediate = {
+		event_target:SRA_fifth_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			country_event = { id = SRA_Crisis.144 days = 1800 random = 100 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			country_event = { id = SRA_Crisis.144 days = 1080 random = 50 }
+		} 
+		else = { country_event = { id = SRA_Crisis.144 days = 360 } }
+	}
+}
+country_event = {
+	id = SRA_Crisis.145
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		NOT = { has_global_flag = SRA_sixth_portal_destroyed }
+	}
+	immediate = {
+		event_target:SRA_sixth_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			country_event = { id = SRA_Crisis.145 days = 1800 random = 100 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			country_event = { id = SRA_Crisis.145 days = 1080 random = 50 }
+		} 
+		else = { country_event = { id = SRA_Crisis.145 days = 360 } }
+	}
+}
+country_event = {
+	id = SRA_Crisis.146
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		NOT = { has_global_flag = SRA_seventh_portal_destroyed }
+	}
+	immediate = {
+		event_target:SRA_seventh_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+		if = {
+			limit = { has_global_flag = SRA_Crisis_normal }
+			country_event = { id = SRA_Crisis.146 days = 1800 random = 100 }
+		}
+		else_if = {
+			limit = { has_global_flag = SRA_Crisis_hard }
+			country_event = { id = SRA_Crisis.146 days = 1080 random = 50 }
+		} 
+		else = { country_event = { id = SRA_Crisis.146 days = 360 } }
+	}
+}
+# 循环刷辅助防守舰队
+country_event = {
+	id = SRA_Crisis.100
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		event_target:SRA_first_portal_system = { has_star_flag = SRA_first_portal_system }
+	}
+	immediate = {
+		event_target:SRA_first_portal_system = {
+			random_system_planet = {
+				carrier_event = { id = SRA_Crisis.500 days = 90 }
+				carrier_event = { id = SRA_Crisis.500 days = 270 }
+				if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					ROOT = { country_event = { id = SRA_Crisis.100 days = 5400 } }
+				}
+				if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					carrier_event = { id = SRA_Crisis.500 days = 630 }
+					carrier_event = { id = SRA_Crisis.500 days = 450 }
+					ROOT = { country_event = { id = SRA_Crisis.100 days = 3600 } }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.101
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		event_target:SRA_second_portal_system = { has_star_flag = SRA_second_portal_system }
+	}
+	immediate = {
+		event_target:SRA_second_portal_system = {
+			random_system_planet = {
+				carrier_event = { id = SRA_Crisis.501 days = 90 }
+				carrier_event = { id = SRA_Crisis.501 days = 270 }
+				carrier_event = { id = SRA_Crisis.501 days = 630 }
+				carrier_event = { id = SRA_Crisis.501 days = 450 }
+				ROOT = { country_event = { id = SRA_Crisis.101 days = 2400 } }
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.102
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		event_target:SRA_third_portal_system = { has_star_flag = SRA_third_portal_system }
+	}
+	immediate = {
+		event_target:SRA_third_portal_system = {
+			random_system_planet = {
+				carrier_event = { id = SRA_Crisis.502 days = 90 }
+				carrier_event = { id = SRA_Crisis.502 days = 270 }
+				carrier_event = { id = SRA_Crisis.502 days = 630 }
+				carrier_event = { id = SRA_Crisis.502 days = 450 }
+				ROOT = { country_event = { id = SRA_Crisis.102 days = 2400 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.103
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		event_target:SRA_fourth_portal_system = { has_star_flag = SRA_fourth_portal_system }
+	}
+	immediate = {
+		event_target:SRA_fourth_portal_system = {
+			random_system_planet = {
+				carrier_event = { id = SRA_Crisis.503 days = 90 }
+				carrier_event = { id = SRA_Crisis.503 days = 270 }
+				carrier_event = { id = SRA_Crisis.503 days = 630 }
+				carrier_event = { id = SRA_Crisis.503 days = 450 }
+				ROOT = { country_event = { id = SRA_Crisis.103 days = 2400 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.104
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		event_target:SRA_fifth_portal_system = { has_star_flag = SRA_fifth_portal_system }
+	}
+	immediate = {
+		event_target:SRA_fifth_portal_system = {
+			random_system_planet = {
+				carrier_event = { id = SRA_Crisis.504 days = 90 }
+				carrier_event = { id = SRA_Crisis.504 days = 270 }
+				carrier_event = { id = SRA_Crisis.504 days = 630 }
+				carrier_event = { id = SRA_Crisis.504 days = 450 }
+				ROOT = { country_event = { id = SRA_Crisis.104 days = 2400 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.105
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		event_target:SRA_sixth_portal_system = { has_star_flag = SRA_sixth_portal_system }
+	}
+	immediate = {
+		event_target:SRA_sixth_portal_system = {
+			random_system_planet = {
+				carrier_event = { id = SRA_Crisis.505 days = 90 }
+				carrier_event = { id = SRA_Crisis.505 days = 270 }
+				carrier_event = { id = SRA_Crisis.505 days = 630 }
+				carrier_event = { id = SRA_Crisis.505 days = 450 }
+				ROOT = { country_event = { id = SRA_Crisis.105 days = 2400 } }
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = SRA_Crisis.106
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		event_target:SRA_seventh_portal_system = { has_star_flag = SRA_seventh_portal_system }
+	}
+	immediate = {
+		event_target:SRA_seventh_portal_system = {
+			random_system_planet = {
+				carrier_event = { id = SRA_Crisis.506 days = 90 }
+				carrier_event = { id = SRA_Crisis.506 days = 270 }
+				carrier_event = { id = SRA_Crisis.506 days = 630 }
+				carrier_event = { id = SRA_Crisis.506 days = 450 }
+				ROOT = { country_event = { id = SRA_Crisis.106 days = 2400 } }
+			}
+		}
+	}
+}
+
+#初始化进攻舰队
+country_event = {
+	id = SRA_Crisis.3040
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+		    has_global_flag = SRA_first_portal_destroyed
+		}
+		event_target:SRA_first_portal_system = { has_star_flag = SRA_first_portal_system }
+	}
+	immediate = {
+		event_target:SRA_first_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.3041
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+		    has_global_flag = SRA_second_portal_destroyed
+		}
+		event_target:SRA_second_portal_system = { has_star_flag = SRA_second_portal_system }
+	}
+	immediate = {
+		event_target:SRA_second_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.3042
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+		    has_global_flag = SRA_third_portal_destroyed
+		}
+		event_target:SRA_third_portal_system = { has_star_flag = SRA_third_portal_system }
+	}
+	immediate = {
+		event_target:SRA_third_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.3043
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+		    has_global_flag = SRA_fourth_portal_destroyed
+		}
+		event_target:SRA_fourth_portal_system = { has_star_flag = SRA_fourth_portal_system }
+	}
+	immediate = {
+		event_target:SRA_fourth_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.3044
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+		    has_global_flag = SRA_fifth_portal_destroyed
+		}
+		event_target:SRA_fifth_portal_system = { has_star_flag = SRA_fifth_portal_system }
+	}
+	immediate = {
+		event_target:SRA_fifth_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.3045
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+		    has_global_flag = SRA_sixth_portal_destroyed
+		}
+		event_target:SRA_sixth_portal_system = { has_star_flag = SRA_sixth_portal_system }
+	}
+	immediate = {
+		event_target:SRA_sixth_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.3046
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+		    has_global_flag = SRA_seventh_portal_destroyed
+		}
+		event_target:SRA_seventh_portal_system = { has_star_flag = SRA_seventh_portal_system }
+	}
+	immediate = {
+		event_target:SRA_seventh_portal_system = {
+			random_system_planet = {
+				create_SRA_Crisis_fleet_and_admiral = yes
+			}
+		}
+	}
+}
+
+
+#循环补壁垒舰队
+carrier_event = {
+	id = SRA_Crisis.500
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		event_target:SRA_Crisis_country = {
+			count_owned_ship = {
+				limit = { is_ship_size = SRA_Crisis_Mark }
+				count > 0
+			}
+		}
+		event_target:SRA_first_portal_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = faction_SRA_Crisis_country } }
+		}
+	}
+	immediate = {
+		event_target:SRA_first_portal_system = {
+			random_system_planet = {
+				
+				create_SRA_Crisis_Guard_Fleet = yes
+				last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				}
+			}
+		}
+	}
+}
+
+carrier_event = {
+	id = SRA_Crisis.501
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		event_target:SRA_Crisis_country = {
+			count_owned_ship = {
+				limit = { is_ship_size = SRA_Crisis_Mark }
+				count > 0
+			}
+		}
+		event_target:SRA_second_portal_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = faction_SRA_Crisis_country } }
+		}
+	}
+	immediate = {
+		event_target:SRA_second_portal_system = {
+			random_system_planet = {
+				
+				create_SRA_Crisis_Guard_Fleet = yes
+				last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				}
+			}
+		}
+	}
+}
+
+carrier_event = {
+	id = SRA_Crisis.502
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		event_target:SRA_Crisis_country = {
+			count_owned_ship = {
+				limit = { is_ship_size = SRA_Crisis_Mark }
+				count > 0
+			}
+		}
+		event_target:SRA_third_portal_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = faction_SRA_Crisis_country } }
+		}
+	}
+	immediate = {
+		event_target:SRA_third_portal_system = {
+			random_system_planet = {
+				
+				create_SRA_Crisis_Guard_Fleet = yes
+				last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				}
+			}
+		}
+	}
+}
+carrier_event = {
+	id = SRA_Crisis.503
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		event_target:SRA_Crisis_country = {
+			count_owned_ship = {
+				limit = { is_ship_size = SRA_Crisis_Mark }
+				count > 0
+			}
+		}
+		event_target:SRA_fourth_portal_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = faction_SRA_Crisis_country } }
+		}
+	}
+	immediate = {
+		event_target:SRA_fourth_portal_system = {
+			random_system_planet = {
+				
+				create_SRA_Crisis_Guard_Fleet = yes
+				last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				}
+			}
+		}
+	}
+}
+
+carrier_event = {
+	id = SRA_Crisis.504
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		event_target:SRA_Crisis_country = {
+			count_owned_ship = {
+				limit = { is_ship_size = SRA_Crisis_Mark }
+				count > 0
+			}
+		}
+		event_target:SRA_fifth_portal_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = faction_SRA_Crisis_country } }
+		}
+	}
+	immediate = {
+		event_target:SRA_fifth_portal_system = {
+			random_system_planet = {
+				
+				create_SRA_Crisis_Guard_Fleet = yes
+				last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				}
+			}
+		}
+	}
+}
+
+carrier_event = {
+	id = SRA_Crisis.505
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		event_target:SRA_Crisis_country = {
+			count_owned_ship = {
+				limit = { is_ship_size = SRA_Crisis_Mark }
+				count > 0
+			}
+		}
+		event_target:SRA_sixth_portal_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = faction_SRA_Crisis_country } }
+		}
+	}
+	immediate = {
+		event_target:SRA_sixth_portal_system = {
+			random_system_planet = {
+				
+				create_SRA_Crisis_Guard_Fleet = yes
+				last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				}
+			}
+		}
+	}
+}
+
+carrier_event = {
+	id = SRA_Crisis.506
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		event_target:SRA_Crisis_country = {
+			count_owned_ship = {
+				limit = { is_ship_size = SRA_Crisis_Mark }
+				count > 0
+			}
+		}
+		event_target:SRA_seventh_portal_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = faction_SRA_Crisis_country } }
+		}
+	}
+	immediate = {
+		event_target:SRA_seventh_portal_system = {
+			random_system_planet = {
+				
+				create_SRA_Crisis_Guard_Fleet = yes
+				last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				}
+			}
+		}
+	}
+}
+
+
+#防守舰队进攻
+fleet_event = {
+	id = SRA_Crisis.401
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		remove_fleet_flag = SRA_defence_fleet
+		set_fleet_flag = SRA_attack_fleet
+		owner = { change_variable = { which = "fleet_id" value = 1 } }
+		if = {
+			limit = { is_scope_type = fleet }
+			set_variable = { which = "fleet_id" value = owner.fleet_id }
+		}
+		fleet_event = { id = SRA_Crisis.40 days = 5 }
+	}
+}
+
+#基地被摧毁
+country_event = {
+	id = SRA_Crisis.11
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = SRA_Crisis_disabled }
+		is_country_type = faction_SRA_Crisis_country
+		FROMFROM = { OR = {
+			is_ship_size = SRA_Crisis_Fort 
+			is_ship_size = SRA_Crisis_Mark 
+		}}
+	}
+	immediate = {
+		set_update_modifiers_batch = begin
+		set_variable = { which = SRA_Crisis_revive_1 value = 0 }
+		set_variable = { which = SRA_Crisis_revive_2 value = 0 }
+		set_variable = { which = SRA_Crisis_revive_3 value = 0 }
+		set_variable = { which = SRA_Crisis_revive_4 value = 0 }
+		set_variable = { which = SRA_Crisis_revive_5 value = 0 }
+		set_variable = { which = SRA_Crisis_revive_6 value = 0 }
+		if = {
+			limit = { has_global_flag = SRA_Mutation_5202 }
+			remove_modifier = SRA_Mutation_52020
+			remove_modifier = SRA_Mutation_52021
+			remove_modifier = SRA_Mutation_52022
+			change_variable = {
+				which = SRA_Mutation_5202
+				value = 0.1
+			}
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				add_modifier = {
+					modifier = SRA_Mutation_52020
+					multiplier = SRA_Mutation_5202
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				add_modifier = {
+					modifier = SRA_Mutation_52021
+					multiplier = SRA_Mutation_5202
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				add_modifier = {
+					modifier = SRA_Mutation_52022
+					multiplier = SRA_Mutation_5202
+				}
+			}
+		}
+		FROM = { save_event_target_as = portal_killer }
+		FROM = {
+			if = {
+				limit = { has_global_flag = SRA_Mutation_5301 }
+				if = {
+					limit = { has_global_flag = SRA_Crisis_normal }
+					add_modifier = {
+						modifier = SRA_Mutation_5301
+						multiplier = 1
+						days = 720
+					}
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_hard }
+					add_modifier = {
+						modifier = SRA_Mutation_5301
+						multiplier = 2
+						days = 720
+					}
+				}
+				else_if = {
+					limit = { has_global_flag = SRA_Crisis_lunatic }
+					add_modifier = {
+						modifier = SRA_Mutation_5301
+						multiplier = 8
+						days = 720
+					}
+				}
+				add_resource = {
+					energy = -32000000
+					minerals = -32000000
+					food = -32000000
+					alloys = -32000000
+					consumer_goods = -32000000
+					rare_crystals = -32000000
+					exotic_gases = -32000000
+					volatile_motes = -32000000
+					sr_dark_matter = -32000000
+					sr_living_metal = -32000000
+					sr_zro = -32000000
+					nanites = -32000000
+					astral_threads = -32000000
+				}
+			}
+		}
+		FROMFROM.FLEET = {
+			if = {
+				# 第一节点被破坏
+				limit = {
+					has_fleet_flag = first_SRA_Crisis_Fort
+					#event_target:SRA_first_portal_system = { has_star_flag = SRA_first_portal_system }
+				}
+				set_global_flag = SRA_first_portal_destroyed
+				event_target:SRA_first_portal_system = { remove_star_flag = SRA_first_portal_system }
+				clear_global_event_target = SRA_first_portal_system
+				every_country = {
+					limit = { has_point_of_interest = { poi = SRA_invasion_poi.1 } }
+					remove_point_of_interest = SRA_invasion_poi.1
+					country_event = {
+						id = SRA_Crisis.55
+					}
+				}
+				event_target:SRA_Crisis_country = {
+					country_event = { id = SRA_Crisis.52 days = 30 }
+				}
+			}
+			else_if = {
+				# 第二节点被破坏
+				limit = {
+					has_fleet_flag = second_SRA_Crisis_Mark
+					#event_target:SRA_second_portal_system = { has_star_flag = SRA_second_portal }
+				}
+				set_global_flag = SRA_second_portal_destroyed
+				event_target:SRA_second_portal_system = { remove_star_flag = SRA_second_portal }
+				clear_global_event_target = SRA_second_portal_system
+				owner = {
+					country_event = {
+						id = SRA_Crisis.2201
+					}
+				}
+				every_country = {
+					limit = { has_point_of_interest = { poi = SRA_invasion_poi.2 } }
+					remove_point_of_interest = SRA_invasion_poi.2
+					country_event = {
+						id = SRA_Crisis.12
+					}
+				}
+			}
+			else_if = {
+				# 第三节点被破坏
+				limit = {
+					has_fleet_flag = third_SRA_Crisis_Mark
+					#event_target:SRA_third_portal_system = { has_star_flag = SRA_third_portal }
+				}
+				set_global_flag = SRA_third_portal_destroyed
+				event_target:SRA_third_portal_system = { remove_star_flag = SRA_third_portal }
+				clear_global_event_target = SRA_third_portal_system
+				owner = {
+					country_event = {
+						id = SRA_Crisis.2201
+					}
+					country_event = {
+						id = SRA_Crisis.2202
+					}
+				}
+				every_country = {
+					limit = { has_point_of_interest = { poi = SRA_invasion_poi.3 } }
+					remove_point_of_interest = SRA_invasion_poi.3
+					country_event = {
+						id = SRA_Crisis.12
+					}
+				}
+			}
+			else_if = {
+				# 第四节点被破坏
+				limit = {
+					has_fleet_flag = fourth_SRA_Crisis_Mark
+					#event_target:SRA_fourth_portal_system = { has_star_flag = SRA_fourth_portal }
+				}
+				event_target:SRA_fourth_portal_system = { remove_star_flag = SRA_fourth_portal }
+				clear_global_event_target = SRA_fourth_portal_system
+				owner = {
+					country_event = {
+						id = SRA_Crisis.2201
+					}
+					country_event = {
+						id = SRA_Crisis.2202
+					}
+					country_event = {
+						id = SRA_Crisis.2203
+					}
+					country_event = {
+						id = SRA_Crisis.3040 days = 10
+					}
+					country_event = {
+						id = SRA_Crisis.3041 days = 13
+					}
+					country_event = {
+						id = SRA_Crisis.3042 days = 16
+					}
+					country_event = {
+						id = SRA_Crisis.3040 days = 19
+					}
+					country_event = {
+						id = SRA_Crisis.3041 days = 22
+					}
+					country_event = {
+						id = SRA_Crisis.3042 days = 25
+					}
+					country_event = {
+						id = SRA_Crisis.3040 days = 28
+					}
+					country_event = {
+						id = SRA_Crisis.3041 days = 31
+					}
+					country_event = {
+						id = SRA_Crisis.3042 days = 34
+					}
+					country_event = {
+						id = SRA_Crisis.3040 days = 37
+					}
+					country_event = {
+						id = SRA_Crisis.3041 days = 40
+					}
+					country_event = {
+						id = SRA_Crisis.3042 days = 43
+					}
+					country_event = {
+						id = SRA_Crisis.984 days = 50
+					}
+				}
+				event_target:portal_killer = {
+					country_event = {
+						id = SRA_Crisis.983 days = 2
+					}
+				}
+				every_country = {
+					limit = { has_point_of_interest = { poi = SRA_invasion_poi.4 } }
+					remove_point_of_interest = SRA_invasion_poi.4
+					country_event = {
+						id = SRA_Crisis.12
+					}
+				}
+			}
+			else_if = {
+				# 第五节点被破坏
+				limit = {
+					has_fleet_flag = fifth_SRA_Crisis_Mark
+					#event_target:SRA_fifth_portal_system = { has_star_flag = SRA_fifth_portal }
+				}
+				set_global_flag = SRA_fifth_portal_destroyed
+				event_target:SRA_fifth_portal_system = { remove_star_flag = SRA_fifth_portal }
+				clear_global_event_target = SRA_fifth_portal_system
+				owner = {
+					country_event = {
+						id = SRA_Crisis.2201
+					}
+					country_event = {
+						id = SRA_Crisis.2202
+					}
+					country_event = {
+						id = SRA_Crisis.2203
+					}
+					country_event = {
+						id = SRA_Crisis.2204
+					}
+				}
+				every_country = {
+					limit = { has_point_of_interest = { poi = SRA_invasion_poi.5 } }
+					remove_point_of_interest = SRA_invasion_poi.5
+					country_event = {
+						id = SRA_Crisis.12
+					}
+				}
+			}
+			else_if = {
+				# 第六节点被破坏
+				limit = {
+					has_fleet_flag = sixth_SRA_Crisis_Mark
+					#event_target:SRA_sixth_portal_system = { has_star_flag = SRA_sixth_portal }
+				}
+				set_global_flag = SRA_sixth_portal_destroyed
+				event_target:SRA_sixth_portal_system = { remove_star_flag = SRA_sixth_portal }
+				clear_global_event_target = SRA_seventh_portal_system
+				owner = {
+					country_event = {
+						id = SRA_Crisis.2201
+					}
+					country_event = {
+						id = SRA_Crisis.2202
+					}
+					country_event = {
+						id = SRA_Crisis.2203
+					}
+					country_event = {
+						id = SRA_Crisis.2204
+					}
+					country_event = {
+						id = SRA_Crisis.2205
+					}
+				}
+				every_country = {
+					limit = { has_point_of_interest = { poi = SRA_invasion_poi.6 } }
+					remove_point_of_interest = SRA_invasion_poi.6
+					country_event = {
+						id = SRA_Crisis.12
+					}
+				}
+			}
+			else_if = {
+				# 第七节点被破坏
+				limit = {
+					has_fleet_flag = seventh_SRA_Crisis_Mark
+					#event_target:SRA_seventh_portal_system = { has_star_flag = SRA_seventh_portal }
+				}
+				event_target:SRA_seventh_portal_system = { remove_star_flag = SRA_seventh_portal }
+				clear_global_event_target = SRA_seventh_portal_system
+				owner = {
+					country_event = {
+						id = SRA_Crisis.2201
+					}
+					country_event = {
+						id = SRA_Crisis.2202
+					}
+					country_event = {
+						id = SRA_Crisis.2203
+					}
+					country_event = {
+						id = SRA_Crisis.2204
+					}
+					country_event = {
+						id = SRA_Crisis.2205
+					}
+					country_event = {
+						id = SRA_Crisis.2206
+					}
+					country_event = {
+						id = SRA_Crisis.3040 days = 10
+					}
+					country_event = {
+						id = SRA_Crisis.3041 days = 12
+					}
+					country_event = {
+						id = SRA_Crisis.3042 days = 14
+					}
+					country_event = {
+						id = SRA_Crisis.3043 days = 16
+					}
+					country_event = {
+						id = SRA_Crisis.3044 days = 18
+					}
+					country_event = {
+						id = SRA_Crisis.3045 days = 20
+					}
+					country_event = {
+						id = SRA_Crisis.3040 days = 32
+					}
+					country_event = {
+						id = SRA_Crisis.3041 days = 34
+					}
+					country_event = {
+						id = SRA_Crisis.3042 days = 36
+					}
+					country_event = {
+						id = SRA_Crisis.3043 days = 38
+					}
+					country_event = {
+						id = SRA_Crisis.3044 days = 40
+					}
+					country_event = {
+						id = SRA_Crisis.3045 days = 42
+					}
+					country_event = {
+						id = SRA_Crisis.982 days = 50
+					}
+				}
+				event_target:portal_killer = {
+					country_event = {
+						id = SRA_Crisis.981 days = 2
+					}
+				}
+				every_country = {
+					limit = { has_point_of_interest = { poi = SRA_invasion_poi.7 } }
+					remove_point_of_interest = SRA_invasion_poi.7
+					country_event = {
+						id = SRA_Crisis.12
+					}
+				}
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+
+
+# 信标被摧毁
+country_event = {
+	id = SRA_Crisis.12
+	title = SRA_Crisis.12.name
+	desc = SRA_Crisis.12.desc
+	is_triggered_only = yes
+	picture = GFX_evt_wormhole
+	show_sound = event_super_explosion
+
+	option = {
+		name = EXCELLENT
+	}
+}
+#舰队补船触发
+# fleet_event = {
+# 	id = SRA_Crisis.110
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		exists = this
+# 		OR = {
+# 			has_global_flag = SRA_Crisis_normal
+# 			has_global_flag = SRA_Crisis_hard
+# 			has_global_flag = SRA_Crisis_lunatic
+# 		}
+# 	}
+# 	immediate = {
+# 		random_list = {
+# 			40 = {
+# 				modifier = {
+# 					factor = 0
+# 					OR = {
+# 						check_variable = { which = num_SRA_Crisis_Cruiser value <= 0 }
+# 						check_variable = { which = num_SRA_Crisis_Cruiser_exist value >= num_SRA_Crisis_Cruiser }
+# 						is_in_combat = yes
+# 					}
+# 				}
+# 				create_ship = { design = "NAME_SRA_Crisis_Cruiser" }
+# 				change_variable = { which = num_SRA_Crisis_Cruiser_exist value = 1 }
+# 				switch = {
+# 					trigger = has_global_flag
+# 					SRA_Crisis_normal = { fleet_event = { id = SRA_Crisis.110 days = 40 } }
+# 					SRA_Crisis_hard = { fleet_event = { id = SRA_Crisis.110 days = 25 } }
+# 					SRA_Crisis_lunatic = { fleet_event = { id = SRA_Crisis.110 days = 10 } }
+# 				}
+# 			}
+# 			20 = {
+# 				modifier = {
+# 					factor = 0
+# 					OR = {
+# 						check_variable = { which = num_SRA_Crisis_Executor value <= 0 }
+# 						check_variable = { which = num_SRA_Crisis_Executor_exist value >= num_SRA_Crisis_Executor }
+# 						is_in_combat = yes
+# 					}
+# 				}
+# 				create_ship = { design = "NAME_SRA_Crisis_Executor" }
+# 				change_variable = { which = num_SRA_Crisis_Executor_exist value = 1 }
+# 				switch = {
+# 					trigger = has_global_flag
+# 					SRA_Crisis_normal = { fleet_event = { id = SRA_Crisis.110 days = 40 } }
+# 					SRA_Crisis_hard = { fleet_event = { id = SRA_Crisis.110 days = 25 } }
+# 					SRA_Crisis_lunatic = { fleet_event = { id = SRA_Crisis.110 days = 10 } }
+# 				}
+# 			}
+# 			1 = {
+# 				modifier = {
+# 					factor = 0
+# 					is_in_combat = yes
+# 				}
+# 				fleet_event = { id = SRA_Crisis.110 days = 2 }
+# 			}
+# 		}
+# 	}
+# }
+
+
+#第二个锚点
+country_event = {
+	id = SRA_Crisis.15
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		NOT = { has_global_flag = SRA_second_portal_opened }
+	}
+	immediate = {
+		set_update_modifiers_batch = begin
+		country_event = { id = SRA_Crisis.16 days = 5 }
+		set_global_flag = SRA_second_portal_opened
+		initialize_SRA_Crisis_system_select = yes
+		initialize_SRA_second_portal_system_select = yes
+		random_system = {
+			limit = { NOT = { has_star_flag = forbit_spawn_system } }
+			set_star_flag = SRA_second_portal_system
+			save_global_event_target_as = SRA_second_portal_system
+			random_system_planet = {
+				ROOT = {
+					create_fleet = {
+						name = "NAME_SRA_Crisis_Mark"
+						effect = {
+							set_owner = event_target:SRA_Crisis_country
+							create_SRA_Crisis_Mark = yes
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_global_event_target_as = second_SRA_Crisis_Mark
+							set_fleet_flag = second_SRA_Crisis_Mark
+                            set_event_locked = yes
+						}
+					}
+					country_event = { id = SRA_Crisis.3041 days = 200 }
+					country_event = { id = SRA_Crisis.3041 days = 202 }
+					country_event = { id = SRA_Crisis.3041 days = 204 }
+					country_event = { id = SRA_Crisis.3041 days = 206 }
+					country_event = { id = SRA_Crisis.3041 days = 360 } 
+					country_event = { id = SRA_Crisis.3041 days = 420 } 
+					country_event = { id = SRA_Crisis.101 days = 5000 } #循环刷辅助守家舰队
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						country_event = { id = SRA_Crisis.141 days = 750 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						country_event = { id = SRA_Crisis.141 days = 650 }
+					} else = { country_event = { id = SRA_Crisis.141 days = 550 } }
+				}
+				
+				system_star = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = { set_fleet_flag = SRA_second_portal_guard_fleet }
+				}
+			}
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			set_star_flag = SRA_second_portal
+			save_global_event_target_as = SRA_second_portal_system
+		}
+		SRA_spawn_fleets_insane_2 = yes
+		every_playable_country = {
+			create_point_of_interest = {
+				id = SRA_invasion_poi.2
+				name = "SRA_invasion_2_poi"
+				desc = "SRA_invasion_2_poi_desc"
+				event_chain = "SRA_invasion_chain"
+				location = event_target:SRA_second_portal_system
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+
+#第三个锚点
+country_event = {
+	id = SRA_Crisis.16
+	hide_window = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		has_global_flag = SRA_second_portal_opened
+		NOT = { has_global_flag = SRA_third_portal_opened }
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_update_modifiers_batch = begin
+		country_event = { id = SRA_Crisis.17 days = 5 }
+		set_global_flag = SRA_third_portal_opened
+		initialize_SRA_Crisis_system_select = yes
+		initialize_SRA_third_portal_system_select = yes
+		random_system = {
+			limit = { NOT = { has_star_flag = forbit_spawn_system } }
+			set_star_flag = SRA_third_portal_system
+			save_global_event_target_as = SRA_third_portal_system
+			random_system_planet = {
+				ROOT = {
+					create_fleet = {
+						name = "NAME_SRA_Crisis_Mark"
+						effect = {
+							set_owner = event_target:SRA_Crisis_country
+							create_SRA_Crisis_Mark = yes
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_global_event_target_as = third_SRA_Crisis_Mark
+							set_fleet_flag = third_SRA_Crisis_Mark
+                            set_event_locked = yes
+						}
+					}
+					country_event = { id = SRA_Crisis.3042 days = 200 }
+					country_event = { id = SRA_Crisis.3042 days = 360 } 
+					country_event = { id = SRA_Crisis.3042 days = 420 } 
+					country_event = { id = SRA_Crisis.3042 days = 480 } 
+					country_event = { id = SRA_Crisis.3042 days = 540 }
+					country_event = { id = SRA_Crisis.3042 days = 600 }
+					country_event = { id = SRA_Crisis.102 days = 5000 } #循环刷辅助守家舰队
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						country_event = { id = SRA_Crisis.142 days = 750 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						country_event = { id = SRA_Crisis.142 days = 650 }
+					} else = { country_event = { id = SRA_Crisis.142 days = 550 } }
+				}
+				
+				system_star = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = { set_fleet_flag = SRA_third_portal_guard_fleet }
+				}
+			}
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			set_star_flag = SRA_third_portal
+			save_global_event_target_as = SRA_third_portal_system
+		}
+		SRA_spawn_fleets_insane_3 = yes
+		every_playable_country = {
+			create_point_of_interest = {
+				id = SRA_invasion_poi.3
+				name = "SRA_invasion_3_poi"
+				desc = "SRA_invasion_3_poi_desc"
+				event_chain = "SRA_invasion_chain"
+				location = event_target:SRA_third_portal_system
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+#第四个锚点
+country_event = {
+	id = SRA_Crisis.17
+	hide_window = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		has_global_flag = SRA_third_portal_opened
+		NOT = { has_global_flag = SRA_fourth_portal_opened }
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_update_modifiers_batch = begin
+		country_event = { id = SRA_Crisis.18 days = 5 }
+		set_global_flag = SRA_fourth_portal_opened
+		initialize_SRA_Crisis_system_select = yes
+		initialize_SRA_fourth_portal_system_select = yes
+		random_system = {
+			limit = { NOT = { has_star_flag = forbit_spawn_system } }
+			set_star_flag = SRA_fourth_portal_system
+			save_global_event_target_as = SRA_fourth_portal_system
+			random_system_planet = {
+				ROOT = {
+					create_fleet = {
+						name = "NAME_SRA_Crisis_Mark"
+						effect = {
+							set_owner = event_target:SRA_Crisis_country
+							create_SRA_Crisis_Mark = yes
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_global_event_target_as = fourth_SRA_Crisis_Mark
+							set_fleet_flag = fourth_SRA_Crisis_Mark
+                            set_event_locked = yes
+						}
+					}
+					country_event = { id = SRA_Crisis.3043 days = 200 }
+					country_event = { id = SRA_Crisis.3043 days = 360 } 
+					country_event = { id = SRA_Crisis.3043 days = 420 } 
+					country_event = { id = SRA_Crisis.3043 days = 480 } 
+					country_event = { id = SRA_Crisis.3043 days = 540 }
+					country_event = { id = SRA_Crisis.3043 days = 600 }
+					country_event = { id = SRA_Crisis.103 days = 5000 } #循环刷辅助守家舰队
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						country_event = { id = SRA_Crisis.142 days = 750 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						country_event = { id = SRA_Crisis.143 days = 650 }
+					} else = { country_event = { id = SRA_Crisis.143 days = 550 } }
+				}
+				
+				system_star = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = { set_fleet_flag = SRA_fourth_portal_guard_fleet }
+				}
+			}
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			set_star_flag = SRA_fourth_portal
+			save_global_event_target_as = SRA_fourth_portal_system
+		}
+		SRA_spawn_fleets_insane_4 = yes
+		every_playable_country = {
+			create_point_of_interest = {
+				id = SRA_invasion_poi.4
+				name = "SRA_invasion_4_poi"
+				desc = "SRA_invasion_4_poi_desc"
+				event_chain = "SRA_invasion_chain"
+				location = event_target:SRA_fourth_portal_system
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+#第五个锚点
+country_event = {
+	id = SRA_Crisis.18
+	hide_window = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		has_global_flag = SRA_fourth_portal_opened
+		NOT = { has_global_flag = SRA_fifth_portal_opened }
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_update_modifiers_batch = begin
+		country_event = { id = SRA_Crisis.19 days = 5 }
+		set_global_flag = SRA_fifth_portal_opened
+		initialize_SRA_Crisis_system_select = yes
+		initialize_SRA_fifth_portal_system_select = yes
+		random_system = {
+			limit = { NOT = { has_star_flag = forbit_spawn_system } }
+			set_star_flag = SRA_fifth_portal_system
+			save_global_event_target_as = SRA_fifth_portal_system
+			random_system_planet = {
+				ROOT = {
+					create_fleet = {
+						name = "NAME_SRA_Crisis_Mark"
+						effect = {
+							set_owner = event_target:SRA_Crisis_country
+							create_SRA_Crisis_Mark = yes
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_global_event_target_as = fifth_SRA_Crisis_Mark
+							set_fleet_flag = fifth_SRA_Crisis_Mark
+                            set_event_locked = yes
+						}
+					}
+					country_event = { id = SRA_Crisis.3044 days = 200 }
+					country_event = { id = SRA_Crisis.3044 days = 360 } 
+					country_event = { id = SRA_Crisis.3044 days = 420 } 
+					country_event = { id = SRA_Crisis.3044 days = 480 } 
+					country_event = { id = SRA_Crisis.3044 days = 540 }
+					country_event = { id = SRA_Crisis.3044 days = 600 }
+					country_event = { id = SRA_Crisis.104 days = 5000 } #循环刷辅助守家舰队
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						country_event = { id = SRA_Crisis.144 days = 750 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						country_event = { id = SRA_Crisis.144 days = 650 }
+					} else = { country_event = { id = SRA_Crisis.144 days = 550 } }
+				}
+				
+				system_star = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = { set_fleet_flag = SRA_fifth_portal_guard_fleet }
+				}
+			}
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			set_star_flag = SRA_fifth_portal
+			save_global_event_target_as = SRA_fifth_portal_system
+		}
+		SRA_spawn_fleets_insane_5 = yes
+		every_playable_country = {
+			create_point_of_interest = {
+				id = SRA_invasion_poi.5
+				name = "SRA_invasion_5_poi"
+				desc = "SRA_invasion_5_poi_desc"
+				event_chain = "SRA_invasion_chain"
+				location = event_target:SRA_fifth_portal_system
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+#第六个锚点
+country_event = {
+	id = SRA_Crisis.19
+	hide_window = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		has_global_flag = SRA_fifth_portal_opened
+		NOT = { has_global_flag = SRA_sixth_portal_opened }
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_update_modifiers_batch = begin
+		country_event = { id = SRA_Crisis.20 days = 5 }
+		set_global_flag = SRA_sixth_portal_opened
+		initialize_SRA_Crisis_system_select = yes
+		initialize_SRA_sixth_portal_system_select = yes
+		random_system = {
+			limit = { NOT = { has_star_flag = forbit_spawn_system } }
+			set_star_flag = SRA_sixth_portal_system
+			save_global_event_target_as = SRA_sixth_portal_system
+			random_system_planet = {
+				ROOT = {
+					create_fleet = {
+						name = "NAME_SRA_Crisis_Mark"
+						effect = {
+							set_owner = event_target:SRA_Crisis_country
+							create_SRA_Crisis_Mark = yes
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_global_event_target_as = sixth_SRA_Crisis_Mark
+							set_fleet_flag = sixth_SRA_Crisis_Mark
+                            set_event_locked = yes
+						}
+					}
+					country_event = { id = SRA_Crisis.3045 days = 200 }
+					country_event = { id = SRA_Crisis.3045 days = 360 } 
+					country_event = { id = SRA_Crisis.3045 days = 420 } 
+					country_event = { id = SRA_Crisis.3045 days = 480 } 
+					country_event = { id = SRA_Crisis.3045 days = 540 }
+					country_event = { id = SRA_Crisis.3045 days = 600 }
+					country_event = { id = SRA_Crisis.105 days = 5000 } #循环刷辅助守家舰队
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						country_event = { id = SRA_Crisis.145 days = 750 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						country_event = { id = SRA_Crisis.145 days = 650 }
+					} else = { country_event = { id = SRA_Crisis.145 days = 550 } }
+				}
+				
+				system_star = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = { set_fleet_flag = SRA_sixth_portal_guard_fleet }
+				}
+			}
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			set_star_flag = SRA_sixth_portal
+			save_global_event_target_as = SRA_sixth_portal_system
+		}
+		SRA_spawn_fleets_insane_6 = yes
+		every_playable_country = {
+			create_point_of_interest = {
+				id = SRA_invasion_poi.6
+				name = "SRA_invasion_6_poi"
+				desc = "SRA_invasion_6_poi_desc"
+				event_chain = "SRA_invasion_chain"
+				location = event_target:SRA_sixth_portal_system
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+#第七个锚点
+country_event = {
+	id = SRA_Crisis.20
+	hide_window = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		has_global_flag = SRA_sixth_portal_opened
+		NOT = { has_global_flag = SRA_seventh_portal_opened }
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_update_modifiers_batch = begin
+		set_global_flag = SRA_seventh_portal_opened
+		initialize_SRA_Crisis_system_select = yes
+		initialize_SRA_seventh_portal_system_select = yes
+		random_system = {
+			limit = { NOT = { has_star_flag = forbit_spawn_system } }
+			set_star_flag = SRA_seventh_portal_system
+			save_global_event_target_as = SRA_seventh_portal_system
+			random_system_planet = {
+				ROOT = {
+					create_fleet = {
+						name = "NAME_SRA_Crisis_Mark"
+						effect = {
+							set_owner = event_target:SRA_Crisis_country
+							create_SRA_Crisis_Mark = yes
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_global_event_target_as = seventh_SRA_Crisis_Mark
+							set_fleet_flag = seventh_SRA_Crisis_Mark
+                            set_event_locked = yes
+						}
+					}
+					country_event = { id = SRA_Crisis.3046 days = 200 }
+					country_event = { id = SRA_Crisis.3046 days = 360 } 
+					country_event = { id = SRA_Crisis.3046 days = 420 } 
+					country_event = { id = SRA_Crisis.3046 days = 480 } 
+					country_event = { id = SRA_Crisis.3046 days = 540 }
+					country_event = { id = SRA_Crisis.3046 days = 600 }
+					country_event = { id = SRA_Crisis.106 days = 5000 } #循环刷辅助守家舰队
+					if = {
+						limit = { has_global_flag = SRA_Crisis_normal }
+						country_event = { id = SRA_Crisis.146 days = 750 }
+					}
+					else_if = {
+						limit = { has_global_flag = SRA_Crisis_hard }
+						country_event = { id = SRA_Crisis.146 days = 650 }
+					} else = { country_event = { id = SRA_Crisis.146 days = 550 } }
+				}
+				
+				system_star = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = { set_fleet_flag = SRA_seventh_portal_guard_fleet }
+				}
+			}
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			set_star_flag = SRA_seventh_portal
+			save_global_event_target_as = SRA_seventh_portal_system
+		}
+		SRA_spawn_fleets_insane_7 = yes
+		every_playable_country = {
+			create_point_of_interest = {
+				id = SRA_invasion_poi.7
+				name = "SRA_invasion_7_poi"
+				desc = "SRA_invasion_7_poi_desc"
+				event_chain = "SRA_invasion_chain"
+				location = event_target:SRA_seventh_portal_system
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+
+#舰队行为主触发（寻路）
+fleet_event = {
+	id = SRA_Crisis.40
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = this
+		has_global_flag = SRA_invasion_happened
+		has_fleet_flag = SRA_attack_fleet
+		owner = { is_country_type = faction_SRA_Crisis_country }
+	}
+	immediate = { SRA_pathfinder_fleet_action = { ID = SRA_Crisis.40 TYPE = SRA_Crisis_country OWNER = SRA_Crisis_country OWNER_2 = SRA_Crisis_country ATTACK_COLONIZABLE = yes } }
+}
+# fleet_event = {
+# 	id = SRA_Crisis.40
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		exists = this
+# 		has_global_flag = SRA_invasion_happened
+# 		has_fleet_flag = SRA_attack_fleet
+# 		owner = { is_country_type = faction_SRA_Crisis_country }
+# 	}
+# 	immediate = {
+# 		queue_actions = {
+# 			repeat = {
+# 				effect = {
+# 					id = SRA_Crisis.40.e0
+# 					if = {
+# 						limit = { count_system = { 
+# 							limit = { check_variable = { which = SRA_Crisis_fleet_id value > 0 } } 
+# 							count = all 
+# 						} }
+# 						every_system = {
+# 							clear_variable = SRA_Crisis_fleet_id 
+# 						}
+# 					}
+# 					if = {
+# 						limit = {
+# 							has_fleet_flag = SRA_Crisis_cannot_find_path
+# 						}
+# 						remove_fleet_flag = SRA_Crisis_cannot_find_path
+# 						if = {
+# 							limit = {
+# 								any_system = { OR = {
+# 									AND = { exists = starbase starbase = { owner = { is_hostile = root.owner } } }
+# 									any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+# 								   }
+# 								}
+# 							}
+# 							random_system = {
+# 								limit = { OR = {
+# 									AND = { exists = starbase starbase = { owner = { is_hostile = root.owner } } }
+# 									any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+# 								} }
+# 								random_system_planet = { ROOT = { set_location = { target = PREV distance = 5 angle = random } } }
+# 							}
+# 						}
+# 						else = {
+# 							clear_orders = yes clear_fleet_actions = this 
+# 							fleet_event = {
+# 								id = SRA_Crisis.40 days = 720
+# 							}
+# 						}
+# 					}
+# 				}
+# 				find_closest_system = {
+# 					trigger = {
+# 						id = SRA_Crisis.40.t1
+# 						OR = {
+# 							AND = {
+# 								exists = starbase
+# 								starbase = { owner = { is_hostile = root.owner } }
+# 							}
+# 							any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+# 						}
+# 						ROOT = { can_access_system = prev }
+# 						check_variable = { which = SRA_Crisis_fleet_id value < 1 }
+# 					}
+# 					found_system = {
+# 						effect = {
+# 							id = SRA_Crisis.40.e1
+# 							set_variable = { which = SRA_Crisis_fleet_id value = root.fleet_id }
+# 						}
+# 						move_to = this
+# 						repeat = {
+# 							while = {
+# 								id = SRA_Crisis.40.t2
+# 								any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+# 							}
+# 							find_closest_planet = {
+# 								trigger = {
+# 									id = SRA_Crisis.40.t3
+# 									OR = { is_colony = yes is_colonizable = yes }
+# 								}
+# 								found_planet = {
+# 									orbit_planet = this
+# 									effect = {
+# 										id = SRA_Crisis.40.e2
+# 										ROOT = { set_fleet_flag = SRA_Crisis_bombarding_planet }
+# 										if = {
+# 											#未殖民宜居星球过1个月炸掉
+# 											limit = { is_colony = no is_colonizable = yes }
+# 											set_planet_flag = SRA_Crisis_target_planet
+# 											carrier_event = { id = SRA_Crisis.47 days = 30 }
+# 										}
+# 										if = {
+# 											#已殖民宜居星球过3个月炸掉
+# 											limit = { is_colony = yes is_colonizable = yes }
+# 											set_planet_flag = SRA_Crisis_target_planet
+# 											carrier_event = { id = SRA_Crisis.47 days = 90 }
+# 										}
+# 										if = {
+# 											#高难度下炸球后概率跃迁
+# 											limit = {
+# 												has_global_flag = SRA_Crisis_lunatic
+# 											}
+# 											random = {
+# 												chance = 5
+# 												ROOT = { set_fleet_flag = SRA_Crisis_cannot_find_path }
+# 											}
+# 										}
+# 									}
+# 									repeat = {
+# 										while = {
+# 											id = SRA_Crisis.40.t4
+# 											ROOT = { has_fleet_flag = SRA_Crisis_bombarding_planet }
+# 										}
+# 										effect = {
+# 											id = SRA_Crisis.40.e3
+# 											if = {
+# 												limit = { is_colony = no is_colonizable = no }
+# 												ROOT = { remove_fleet_flag = SRA_Crisis_bombarding_planet }
+# 											}
+# 										} 
+# 										wait = { duration = 5 random = 10 }
+# 									}
+# 								}
+# 							}
+# 							move_to = this							# move away from the planet
+# 							wait = { duration = 5 random = 10 }
+# 						} 
+# 						wait = { duration = 5 random = 10 }
+# 					}					
+# 					failed = { find_closest_system = {
+# 						trigger = {
+# 							id = SRA_Crisis.40.t9
+# 							ROOT = { can_access_system = prev }
+# 							check_variable = { which = SRA_Crisis_fleet_id value < 1 }
+# 						}
+# 						found_system = {
+# 							effect = {
+# 								id = SRA_Crisis.40.t91
+# 								set_variable = { which = SRA_Crisis_fleet_id value = root.fleet_id }
+# 							}
+# 							move_to = this
+# 							repeat = {
+# 								while = {
+# 									id = SRA_Crisis.40.t10
+# 									any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+# 								}
+# 								find_closest_planet = {
+# 									trigger = {
+# 										id = SRA_Crisis.40.t11
+# 										OR = { is_colony = yes is_colonizable = yes }
+# 									}
+# 									found_planet = {
+# 										orbit_planet = this
+# 										effect = {
+# 											id = SRA_Crisis.40.e10
+# 											ROOT = { set_fleet_flag = SRA_Crisis_bombarding_planet }
+# 											if = {
+# 												limit = { is_colony = no is_colonizable = yes }
+# 												set_planet_flag = SRA_Crisis_target_planet
+# 												carrier_event = { id = SRA_Crisis.47 days = 30 }
+# 											}
+# 										}
+# 										repeat = {
+# 											while = {
+# 												id = SRA_Crisis.40.t12
+# 												ROOT = { has_fleet_flag = SRA_Crisis_bombarding_planet }
+# 											}
+# 											effect = {
+# 												id = SRA_Crisis.40.e11
+# 												if = {
+# 													limit = { is_colony = no is_colonizable = no }
+# 													ROOT = { remove_fleet_flag = SRA_Crisis_bombarding_planet }
+# 												}
+# 											} 
+# 											wait = { duration = 5 random = 10 }
+# 										}
+# 									}
+# 								}
+# 								move_to = this											# move away from the planet
+# 								wait = { duration = 5 random = 10 }
+# 							} 
+# 							wait = { duration = 5 random = 10 }
+# 						}
+# 						failed = { effect = { id = SRA_Crisis.40.e13 ROOT = { set_fleet_flag = SRA_Crisis_cannot_find_path } } wait = 200 }
+# 					} }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+#攻击舰队被击破,移除对应目标星系变量
+country_event = {
+	id = SRA_Crisis.46
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+		FROMFROM = { has_fleet_flag = SRA_attack_fleet }
+	}
+	immediate = {
+		FROMFROM = { save_event_target_as = destroyed_fleet }
+		random_system = {
+			limit = { check_variable = { which = SRA_Crisis_fleet_id value = event_target:destroyed_fleet.fleet_id } }
+			set_variable = { which = SRA_Crisis_fleet_id value = 0 }
+		}
+	}
+}
+
+#开始摧毁星球倒计时
+carrier_event = {
+	id = SRA_Crisis.47
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			is_colonizable = yes
+			is_colony = yes
+			has_planet_flag = phaseshifting_active
+		}
+		any_fleet_in_orbit = {
+			owner = {
+				OR = {
+					is_country_type = faction_SRA_Crisis_country
+					is_country_type = faction_SRA_RE_Crisis_country_1
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = SRA_Mutation_5201
+				any_fleet_in_orbit = {
+					owner = {
+						is_country_type = faction_SRA_Crisis_country
+					}
+					has_fleet_flag = SRA_attack_fleet
+				}
+		    }
+			if = {
+				limit = { has_global_flag = SRA_Crisis_normal }
+				random_fleet_in_orbit = {
+					limit = {
+						owner = {
+							is_country_type = faction_SRA_Crisis_country
+						}
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+				}
+				event_target:SRA_Crisis_country = {
+					if = {
+						limit = { has_modifier = SRA_Mutation_5201 }
+						change_variable = { which = SRA_Mutation_5201_variable value = 1 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 180 }
+					}
+					else = {
+						set_variable = { which = SRA_Mutation_5201_variable value = 1 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 180 }
+					}
+				}
+			}
+			if = {
+				limit = { has_global_flag = SRA_Crisis_hard }
+				random_fleet_in_orbit = {
+					limit = {
+						owner = {
+							is_country_type = faction_SRA_Crisis_country
+						}
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+				}
+				event_target:SRA_Crisis_country = {
+					if = {
+						limit = { has_modifier = SRA_Mutation_5201 }
+						change_variable = { which = SRA_Mutation_5201_variable value = 2 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 270 }
+					}
+					else = {
+						set_variable = { which = SRA_Mutation_5201_variable value = 2 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 270 }
+					}
+				}
+			}
+			if = {
+				limit = { has_global_flag = SRA_Crisis_lunatic }
+				random_fleet_in_orbit = {
+					limit = {
+						owner = {
+							is_country_type = faction_SRA_Crisis_country
+						}
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+					random = {
+						chance = 50
+						create_SRA_Crisis_fleet_and_admiral = yes
+					}
+				}
+				event_target:SRA_Crisis_country = {
+					if = {
+						limit = { has_modifier = SRA_Mutation_5201 }
+						change_variable = { which = SRA_Mutation_5201_variable value = 8 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 360 }
+					}
+					else = {
+						set_variable = { which = SRA_Mutation_5201_variable value = 8 }
+						add_modifier = { modifier = SRA_Mutation_5201 multiplier = SRA_Mutation_5201_variable days = 360 }
+					}
+				}
+			}
+		}
+		reset_planet = yes
+		if = {
+			limit = {
+				has_planet_flag = phaseshifting_active
+			}
+			remove_planet_flag = phaseshifting_active
+			remove_modifier = phaseshifted
+		}
+		if = {
+			limit = { is_ringworld = yes }
+			spawn_ringworld_cracker_effect = yes
+			SRA_destroy_habitable_ringworld = yes
+		}
+		else_if = {
+			limit = {
+				SRA_is_habitat = yes
+			}
+			remove_planet = yes
+		}
+		else = {
+			change_pc = pc_shattered
+		}
+	}
+}
+
+#击杀计数
+country_event = {
+	id = SRA_Crisis.44
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { is_country_type = faction_SRA_Crisis_country }
+	immediate = {
+		if = {
+			limit = {
+				FROM = { has_event_chain = "SRA_invasion_chain" }
+			}
+			FROM = {
+				add_event_chain_counter = {
+					event_chain = "SRA_invasion_chain"
+					counter = "SRA_invastor_kills_us"
+					amount = 1
+				}
+			}
+		} else = {
+			every_country = {
+				limit = {
+					has_event_chain = "SRA_invasion_chain"
+					NOT = { is_same_value = FROM }
+				}
+				add_event_chain_counter = {
+					event_chain = "SRA_invasion_chain"
+					counter = "SRA_invastor_kills_others"
+					amount = 1
+				}
+			}
+		}
+	}
+}
+
+#危机被击杀计数
+country_event = {
+	id = SRA_Crisis.45
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { is_country_type = faction_SRA_Crisis_country }
+	immediate = {
+		every_country = {
+			limit = { has_event_chain = "SRA_invasion_chain" }
+			add_event_chain_counter = {
+				event_chain = "SRA_invasion_chain"
+				counter = "SRA_invastor_victims"
+				amount = 1
+			}
+		}
+	}
+}
+
+#危机被摧毁
+
+
+country_event = {
+	id = SRA_Crisis.55
+	title = SRA_Crisis.55.name
+	is_triggered_only = yes
+	picture = GFX_evt_wormhole
+	show_sound = event_super_explosion
+	desc = "SRA_Crisis.55.desc"
+	immediate = {
+	}
+	option = {
+		# Spiritualist Response
+		name = SRA_Crisis.55.a
+	}
+}
+
+
+country_event = {
+	id = SRA_Crisis.52
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		random_country = {
+			limit = { is_country_type = faction_SRA_Crisis_country }
+			country_event = { id = SRA_Crisis.50 days = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.50
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { is_country_type = faction_SRA_Crisis_country }
+	immediate = {
+		set_global_flag = SRA_invasion_end
+		if = {
+			limit = { exists = event_target:SRA_Crisis_country }
+			destroy_country = yes
+		}
+		every_playable_country = { country_event = { id = SRA_Crisis.51 } }
+	}
+}
+
+#最后一个基地被摧毁
+country_event = {
+	id = SRA_Crisis.51
+	title = SRA_Crisis.51.name
+	is_triggered_only = yes
+	picture = GFX_evt_metropolis
+	show_sound = event_celebration
+	fire_only_once = yes
+	desc = "SRA_Crisis.51.desc"
+	immediate = {
+		end_event_chain = SRA_invasion_chain
+	}
+	option = {
+		# Spiritualist Response
+		name = SRA_Crisis.51.a
+		hidden_effect = {
+			if = {
+				limit = {
+					#校验所有锚点在交战中被正常摧毁
+					has_global_flag = SRA_first_portal_destroyed
+					has_global_flag = SRA_second_portal_destroyed
+					has_global_flag = SRA_third_portal_destroyed
+					has_global_flag = SRA_fifth_portal_destroyed
+					has_global_flag = SRA_sixth_portal_destroyed
+					OR = {
+						NOT = {
+							has_global_flag = SRA_Crisis_lunatic
+						}
+						AND = {
+							#校验所有锚点在解锁后被正常摧毁
+							has_global_flag = SRA_first_portal_unlocked
+							has_global_flag = SRA_second_portal_unlocked
+							has_global_flag = SRA_third_portal_unlocked
+							has_global_flag = SRA_fourth_portal_unlocked
+							has_global_flag = SRA_fifth_portal_unlocked
+							has_global_flag = SRA_sixth_portal_unlocked
+							has_global_flag = SRA_seventh_portal_unlocked
+						}
+					}
+				}
+				country_event = { id = SRA_Crisis.998 days = 10 }
+			}
+			else = {
+				country_event = { id = SRA_Crisis.991 days = 10 }
+			}
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier5unityreward
+		}
+	}
+}
+
+#转阶段
+#对话
+#放BGM
+country_event = {
+	id = SRA_Crisis.981
+	title = "SRA_Crisis.3000"
+	desc = "SRA_Crisis.981.desc.1"
+	desc = "SRA_Crisis.981.desc.2"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 21 }
+		if = {
+			limit = { NOT = { has_global_flag = SRA_no_crisis_sound } }
+			stop_crisis_sound = yes
+			set_crisis_sound = BGM_ThirdFleetStage2
+		}
+		event_target:SRA_portrait_leader_StellarRegulator = {
+			set_variable = { which = SRA_portrait_clothes_var value = 001 }
+		}
+		create_message = {
+			type = MESSAGE_SRA_RE_StellarRegulator
+			localization =  SRA_Crisis.981.MESSAGE_SRA_StellarRegulator
+			days = @toast_message_days
+			target = event_target:SRA_portrait_leader_StellarRegulator
+			variable = {
+				type = name
+				localization = SRA_StellarRegulator
+				scope = event_target:SRA_portrait_leader_StellarRegulator
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Crisis.982
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		event_target:SRA_portrait_leader_StellarRegulator = {
+			set_variable = { which = SRA_portrait_clothes_var value = 001 }
+		}
+		every_playable_country = {
+			limit = {
+				has_country_flag = has_SRA_StellarRegulator_country
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_StellarRegulator
+				localization =  SRA_Crisis.982.MESSAGE_SRA_StellarRegulator
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_StellarRegulator
+				variable = {
+					type = name
+					localization = SRA_StellarRegulator
+					scope = event_target:SRA_portrait_leader_StellarRegulator
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+		set_global_flag = SRA_seventh_portal_destroyed
+		country_event = {
+			id = SRA_Crisis.2201
+		}
+		country_event = {
+			id = SRA_Crisis.2202
+		}
+		country_event = {
+			id = SRA_Crisis.2203
+		}
+		country_event = {
+			id = SRA_Crisis.2204
+		}
+		country_event = {
+			id = SRA_Crisis.2205
+		}
+		country_event = {
+			id = SRA_Crisis.2206
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.983
+	title = "SRA_Crisis.3000"
+	desc = "SRA_Crisis.983.desc.1"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 21 }
+		if = {
+			limit = { NOT = { has_global_flag = SRA_no_crisis_sound } }
+			stop_crisis_sound = yes
+			set_crisis_sound = BGM_ThirdFleetStage3
+		}
+		event_target:SRA_portrait_leader_StellarRegulator = {
+			set_variable = { which = SRA_portrait_clothes_var value = 001 }
+		}
+		create_message = {
+			type = MESSAGE_SRA_RE_StellarRegulator
+			localization =  SRA_Crisis.981.MESSAGE_SRA_StellarRegulator
+			days = @toast_message_days
+			target = event_target:SRA_portrait_leader_StellarRegulator
+			variable = {
+				type = name
+				localization = SRA_StellarRegulator
+				scope = event_target:SRA_portrait_leader_StellarRegulator
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Crisis.984
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		event_target:SRA_portrait_leader_StellarRegulator = {
+			set_variable = { which = SRA_portrait_clothes_var value = 001 }
+		}
+		every_playable_country = {
+			limit = {
+				has_country_flag = has_SRA_StellarRegulator_country
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_StellarRegulator
+				localization =  SRA_Crisis.982.MESSAGE_SRA_StellarRegulator
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_StellarRegulator
+				variable = {
+					type = name
+					localization = SRA_StellarRegulator
+					scope = event_target:SRA_portrait_leader_StellarRegulator
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+		set_global_flag = SRA_fourth_portal_destroyed
+		country_event = {
+			id = SRA_Crisis.2201
+		}
+		country_event = {
+			id = SRA_Crisis.2202
+		}
+		country_event = {
+			id = SRA_Crisis.2203
+		}
+	}
+}
+#结束
+
+country_event = {
+	id = SRA_Crisis.991
+	title = "SRA_Crisis.991.name"
+	desc = "SRA_Crisis.991.desc"
+	
+	diplomatic = yes
+	is_triggered_only = yes
+	
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 21 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		if = {
+			limit = { NOT = { has_global_flag = SRA_no_crisis_sound } }
+			stop_crisis_sound = yes
+			play_sound = BGM_ThirdFleetStage4
+		}
+	}
+	trigger = {
+		has_country_flag = has_SRA_StellarRegulator_country
+	}
+	
+	option = {
+		name = "SRA_Crisis.991.a"
+		custom_tooltip = SRA_Crisis.991.a.desc
+		hidden_effect = {
+			set_update_modifiers_batch = begin
+			every_system = { destroy_star_system = yes }
+			set_update_modifiers_batch = end
+		}
+	}
+	option = {
+		name = "SRA_Crisis.991.b"
+		custom_tooltip = SRA_Crisis.991.b.desc
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.998
+	title = "SRA_Crisis.998.name"
+	desc = "SRA_Crisis.998.desc"
+	
+	diplomatic = yes
+	is_triggered_only = yes
+	
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 21 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		if = {
+			limit = { NOT = { has_global_flag = SRA_no_crisis_sound } }
+			stop_crisis_sound = yes
+			play_sound = BGM_ThirdFleetStage4
+		}
+	}
+	trigger = {
+		has_country_flag = has_SRA_StellarRegulator_country
+	}
+	
+	option = {
+		name = "SRA_Crisis.998.a"
+		trigger = {
+				has_country_flag = has_SRA_StellarRegulator_country
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_Crisis.999
+			}
+		}
+	}
+	option = {
+		name = "SRA_Crisis.998.b"
+		custom_tooltip = SRA_Crisis.998.b.desc
+		trigger = {
+			NOT = {
+				has_country_flag = has_SRA_StellarRegulator_country
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.999
+	title = SRA_Crisis.999.name
+	desc = SRA_Crisis.999.desc
+	location = fromfrom
+	picture = GFX_evt_ai_planet
+	force_open = yes
+	immediate = {
+		set_global_flag = SRA_Crisis_end_speaking
+	}
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = SRA_Crisis.999.a
+		hidden_effect = {
+			country_event = { id = SRA_Crisis.1000 }
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.1000
+	title = SRA_Crisis.1000.name
+	desc = SRA_Crisis.1000.desc
+	location = fromfrom
+
+	diplomatic = yes
+	force_open = yes		
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_5 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SRA_Crisis.1000.a
+		is_dialog_only = yes
+		response_text = SRA_Crisis.1000.a.response
+	}
+	option = {
+		name = SRA_Crisis.1000.b
+		is_dialog_only = yes
+		response_text = SRA_Crisis.1000.b.response
+	}
+	option = {
+		name = SRA_Crisis.1000.c
+		custom_tooltip = SRA_Crisis.1000.c.desc
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = SRA_Crisis_end_speaking_return }
+				country_event = { id = SRA_Crisis.1003 }
+			}
+			else = {
+				country_event = { id = SRA_Crisis.1001 }
+			}
+		}
+	}
+	option = {
+		name = SRA_Crisis.1000.d
+		default_hide_option = yes
+		hidden_effect = {
+			remove_global_flag = SRA_Crisis_end_speaking
+			if = {
+				limit = { has_global_flag = SRA_Crisis_end_speaking_return }
+				country_event = { id = SRA_Crisis.1003 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.1001
+	title = SRA_Crisis.1001.name
+	desc = SRA_Crisis.1001.desc
+	location = fromfrom
+	
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_3 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	diplomatic = yes
+	force_open = yes	
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SRA_Crisis.1001.a
+		hidden_effect = {
+			set_update_modifiers_batch = begin
+			every_system = { destroy_star_system = yes }
+			set_update_modifiers_batch = end
+		}
+	}
+}
+
+
+event = {
+	id = SRA_Crisis.1002
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { has_global_flag = SRA_Crisis_end_speaking }
+	immediate = {
+		set_global_flag = SRA_Crisis_end_speaking_return
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.1003
+	title = SRA_Crisis.1003.name
+	desc = SRA_Crisis.1003.desc
+	location = fromfrom
+
+	diplomatic = yes
+	force_open = yes		
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_5 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		add_relic = SRA_Crisis_Metabyss_File
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = SRA_Crisis.1003.a
+		custom_tooltip = SRA_Crisis.1003.a.desc
+	}
+	option = {
+		name = SRA_Crisis.1003.a
+		custom_tooltip = SRA_Crisis.1003.a.desc
+	}
+	option = {
+		name = SRA_Crisis.1003.a
+		custom_tooltip = SRA_Crisis.1003.a.desc
+	}
+}
+#解锁
+country_event = {
+	id = SRA_Crisis.1999
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+	}
+
+	immediate = {
+		country_event = { id = SRA_Crisis.2000 }
+		country_event = { id = SRA_Crisis.1999 days = 30 }
+	}
+}
+
+country_event = {
+	id = SRA_Crisis.2000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = faction_SRA_Crisis_country
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = { exists = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet }
+				has_global_flag = SRA_second_portal_destroyed
+				event_target:SRA_first_portal_system = {
+					count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 3
+					}
+				}
+			}
+			event_target:first_SRA_Crisis_Fort = {
+				set_global_flag = SRA_first_portal_unlocked
+				set_event_locked = no
+		    }
+		}
+		if = {
+			limit = { 
+				NOT = { exists = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet }
+				has_global_flag = SRA_third_portal_destroyed
+				event_target:SRA_second_portal_system = {
+					count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 3
+					}
+				}
+			}
+			event_target:second_SRA_Crisis_Mark = {
+				set_global_flag = SRA_second_portal_unlocked
+				set_event_locked = no
+		    }
+		}
+		if = {
+			limit = { 
+				NOT = { exists = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet }
+				has_global_flag = SRA_fourth_portal_destroyed
+				event_target:SRA_third_portal_system = {
+					count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 3
+					}
+				}
+			}
+			event_target:third_SRA_Crisis_Mark = {
+				set_global_flag = SRA_third_portal_unlocked
+				set_event_locked = no
+		    }
+		}
+		if = {
+			limit = { 
+				NOT = { exists = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet }
+				has_global_flag = SRA_fifth_portal_destroyed
+				event_target:SRA_fourth_portal_system = {
+					count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 3
+					}
+				}
+			}
+			event_target:fourth_SRA_Crisis_Mark = {
+				set_global_flag = SRA_fourth_portal_unlocked
+				set_event_locked = no
+		    }
+		}
+		if = {
+			limit = { 
+				NOT = { exists = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet }
+				has_global_flag = SRA_sixth_portal_destroyed
+				event_target:SRA_fifth_portal_system = {
+					count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 3
+					}
+				}
+			}
+			event_target:fifth_SRA_Crisis_Mark = {
+				set_global_flag = SRA_fifth_portal_unlocked
+				set_event_locked = no
+		    }
+		}
+		if = {
+			limit = { 
+				NOT = { exists = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet }
+				has_global_flag = SRA_seventh_portal_destroyed
+				event_target:SRA_sixth_portal_system = {
+					count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 3
+					}
+				}
+			}
+			event_target:sixth_SRA_Crisis_Mark = {
+				set_global_flag = SRA_sixth_portal_unlocked
+				set_event_locked = no
+		    }
+		}
+		if = {
+			limit = {
+				NOT = { exists = event_target:SRA_Crisis_Spear_Of_Galaxy_Zenith_fleet }
+				event_target:SRA_seventh_portal_system = {
+					count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 3
+					}
+				}
+			}
+			event_target:seventh_SRA_Crisis_Mark = {
+				set_global_flag = SRA_seventh_portal_unlocked
+				set_event_locked = no
+		    }
+		}
+	}
+}
+
+###防御舰队刷新
+country_event = {
+	id = SRA_Crisis.2201
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = SRA_first_portal_destroyed
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_Crisis_lunatic
+			    event_target:SRA_first_portal_system = {
+				    count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 400
+					}
+				}
+			}
+			event_target:SRA_first_portal_system = {
+				count_ship_in_system = {
+					limit = {
+						owner = { is_country_type = faction_SRA_Crisis_country }
+					} count < 200
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { check_variable = { which = SRA_Crisis_revive_1 value < 10 } }
+			event_target:SRA_first_portal_system = {
+				random_system_planet = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				    }
+			    }
+		    }
+			change_variable = {
+				which = SRA_Crisis_revive_1
+				value = 1
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2201 days = 2
+		    }
+		}
+		else = {
+			set_variable = {
+				which = SRA_Crisis_revive_1
+				value = 0
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2201 days = 2
+		    }
+			event_target:SRA_first_portal_system = {
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							is_ai = no
+						}
+					}
+					set_mia = mia_emergency_ftl
+				}
+				star = {
+					create_fleet = {
+						name = "NAME_SRA_Mutation_Boom_0"
+						effect = {
+							set_owner = Root
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Mutation_Boom_0"
+								upgradable = no
+								effect = {
+									ship_event = {
+										id = SRA_Mutation.23011 days = 10
+									}
+								}
+							}		
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_event_locked = yes
+						}
+					}
+				}
+		    }
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.2202
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = SRA_second_portal_destroyed
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_Crisis_lunatic
+			    event_target:SRA_second_portal_system = {
+				    count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 400
+					}
+				}
+			}
+			event_target:SRA_second_portal_system = {
+				count_ship_in_system = {
+					limit = {
+						owner = { is_country_type = faction_SRA_Crisis_country }
+					} count < 200
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { check_variable = { which = SRA_Crisis_revive_2 value < 10 } }
+			event_target:SRA_second_portal_system = {
+				random_system_planet = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				    }
+			    }
+		    }
+			change_variable = {
+				which = SRA_Crisis_revive_2
+				value = 1
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2202 days = 2
+		    }
+		}
+		else = {
+			set_variable = {
+				which = SRA_Crisis_revive_2
+				value = 0
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2202 days = 2
+		    }
+			event_target:SRA_second_portal_system = {
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							is_ai = no
+						}
+					}
+					set_mia = mia_emergency_ftl
+				}
+				star = {
+					create_fleet = {
+						name = "NAME_SRA_Mutation_Boom_0"
+						effect = {
+							set_owner = Root
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Mutation_Boom_0"
+								upgradable = no
+								effect = {
+									ship_event = {
+										id = SRA_Mutation.23011 days = 10
+									}
+								}
+							}		
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_event_locked = yes
+						}
+					}
+				}
+		    }
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.2203
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = SRA_third_portal_destroyed
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_Crisis_lunatic
+			    event_target:SRA_third_portal_system = {
+				    count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 400
+					}
+				}
+			}
+			event_target:SRA_third_portal_system = {
+				count_ship_in_system = {
+					limit = {
+						owner = { is_country_type = faction_SRA_Crisis_country }
+					} count < 200
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { check_variable = { which = SRA_Crisis_revive_3 value < 10 } }
+			event_target:SRA_third_portal_system = {
+				random_system_planet = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				    }
+			    }
+		    }
+			change_variable = {
+				which = SRA_Crisis_revive_3
+				value = 1
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2203 days = 2
+		    }
+		}
+		else = {
+			set_variable = {
+				which = SRA_Crisis_revive_3
+				value = 0
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2203 days = 2
+		    }
+			event_target:SRA_third_portal_system = {
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							is_ai = no
+						}
+					}
+					set_mia = mia_emergency_ftl
+				}
+				star = {
+					create_fleet = {
+						name = "NAME_SRA_Mutation_Boom_0"
+						effect = {
+							set_owner = Root
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Mutation_Boom_0"
+								upgradable = no
+								effect = {
+									ship_event = {
+										id = SRA_Mutation.23011 days = 10
+									}
+								}
+							}		
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_event_locked = yes
+						}
+					}
+				}
+		    }
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.2204
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = SRA_fourth_portal_destroyed
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_Crisis_lunatic
+			    event_target:SRA_fourth_portal_system = {
+				    count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 400
+					}
+				}
+			}
+			event_target:SRA_fourth_portal_system = {
+				count_ship_in_system = {
+					limit = {
+						owner = { is_country_type = faction_SRA_Crisis_country }
+					} count < 200
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { check_variable = { which = SRA_Crisis_revive_4 value < 10 } }
+			event_target:SRA_fourth_portal_system = {
+				random_system_planet = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				    }
+			    }
+		    }
+			change_variable = {
+				which = SRA_Crisis_revive_4
+				value = 1
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2204 days = 2
+		    }
+		}
+		else = {
+			set_variable = {
+				which = SRA_Crisis_revive_4
+				value = 0
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2204 days = 2
+		    }
+			event_target:SRA_fourth_portal_system = {
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							is_ai = no
+						}
+					}
+					set_mia = mia_emergency_ftl
+				}
+				star = {
+					create_fleet = {
+						name = "NAME_SRA_Mutation_Boom_0"
+						effect = {
+							set_owner = Root
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Mutation_Boom_0"
+								upgradable = no
+								effect = {
+									ship_event = {
+										id = SRA_Mutation.23011 days = 10
+									}
+								}
+							}		
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_event_locked = yes
+						}
+					}
+				}
+		    }
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.2205
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = SRA_fifth_portal_destroyed
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_Crisis_lunatic
+			    event_target:SRA_fifth_portal_system = {
+				    count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 400
+					}
+				}
+			}
+			event_target:SRA_fifth_portal_system = {
+				count_ship_in_system = {
+					limit = {
+						owner = { is_country_type = faction_SRA_Crisis_country }
+					} count < 200
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { check_variable = { which = SRA_Crisis_revive_5 value < 10 } }
+			event_target:SRA_fifth_portal_system = {
+				random_system_planet = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				    }
+			    }
+		    }
+			change_variable = {
+				which = SRA_Crisis_revive_5
+				value = 1
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2205 days = 2
+		    }
+		}
+		else = {
+			set_variable = {
+				which = SRA_Crisis_revive_5
+				value = 0
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2205 days = 2
+		    }
+			event_target:SRA_fifth_portal_system = {
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							is_ai = no
+						}
+					}
+					set_mia = mia_emergency_ftl
+				}
+				star = {
+					create_fleet = {
+						name = "NAME_SRA_Mutation_Boom_0"
+						effect = {
+							set_owner = Root
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Mutation_Boom_0"
+								upgradable = no
+								effect = {
+									ship_event = {
+										id = SRA_Mutation.23011 days = 10
+									}
+								}
+							}		
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_event_locked = yes
+						}
+					}
+				}
+		    }
+		}
+	}
+}
+country_event = {
+	id = SRA_Crisis.2206
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = SRA_sixth_portal_destroyed
+		}
+		OR = {
+			AND = {
+				has_global_flag = SRA_Crisis_lunatic
+			    event_target:SRA_sixth_portal_system = {
+				    count_ship_in_system = {
+						limit = {
+							owner = { is_country_type = faction_SRA_Crisis_country }
+						} count < 400
+					}
+				}
+			}
+			event_target:SRA_sixth_portal_system = {
+				count_ship_in_system = {
+					limit = {
+						owner = { is_country_type = faction_SRA_Crisis_country }
+					} count < 200
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { check_variable = { which = SRA_Crisis_revive_6 value < 10 } }
+			event_target:SRA_sixth_portal_system = {
+				random_system_planet = {
+					create_SRA_Crisis_Guard_Fleet = yes
+					last_created_fleet = {
+					set_name = "NAME_SRA_Crisis_Guard_Fleet"
+					set_timed_fleet_flag = { flag = SRA_defence_fleet days = 4500 }
+					fleet_event = { id = SRA_Crisis.401 days = 4501 }
+				    }
+			    }
+		    }
+			change_variable = {
+				which = SRA_Crisis_revive_6
+				value = 1
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2206 days = 2
+		    }
+		}
+		else = {
+			set_variable = {
+				which = SRA_Crisis_revive_6
+				value = 0
+			}
+		    country_event = {
+		    	id = SRA_Crisis.2206 days = 2
+		    }
+			event_target:SRA_sixth_portal_system = {
+				every_fleet_in_system = {
+					limit = {
+						owner = {
+							is_ai = no
+						}
+					}
+					set_mia = mia_emergency_ftl
+				}
+				star = {
+					create_fleet = {
+						name = "NAME_SRA_Mutation_Boom_0"
+						effect = {
+							set_owner = Root
+							create_ship = {
+								name = random
+								design = "NAME_SRA_Mutation_Boom_0"
+								upgradable = no
+								effect = {
+									ship_event = {
+										id = SRA_Mutation.23011 days = 10
+									}
+								}
+							}		
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_event_locked = yes
+						}
+					}
+				}
+		    }
+		}
+	}
+}
+
+
+# country_event = {
+# 	id = SRA_Crisis.4000
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		NOT = { has_global_flag = SRA_Crisis_disabled }
+# 		is_country_type = faction_SRA_Crisis_country
+# 	}
+# 	immediate = {
+# 		if = {
+# 			limit = { 
+# 				NOT = {
+# 					has_global_flag = SRA_first_portal_destroyed
+# 				}
+# 				NOT = {
+# 					any_owned_fleet = {
+# 						has_fleet_flag = first_SRA_Crisis_Fort
+# 					}
+# 				}
+# 			}
+# 			set_global_flag = SRA_first_portal_destroyed
+# 			event_target:SRA_first_portal_system = { remove_star_flag = SRA_first_portal_system }
+# 			clear_global_event_target = SRA_first_portal_system
+# 			every_country = {
+# 				limit = { has_point_of_interest = { poi = SRA_invasion_poi.1 } }
+# 				remove_point_of_interest = SRA_invasion_poi.1
+# 				country_event = {
+# 					id = SRA_Crisis.52
+# 				}
+# 			}
+# 		}	
+# 		if = {
+# 			limit = { 
+# 				NOT = {
+# 					has_global_flag = SRA_second_portal_destroyed
+# 				}
+# 				NOT = {
+# 					any_owned_fleet = {
+# 						has_fleet_flag = second_SRA_Crisis_Mark
+# 					}
+# 				}
+# 			}
+# 			set_global_flag = SRA_second_portal_destroyed
+# 			event_target:SRA_second_portal_system = { remove_star_flag = SRA_second_portal_system }
+# 			clear_global_event_target = SRA_second_portal_system
+# 			every_country = {
+# 				limit = { has_point_of_interest = { poi = SRA_invasion_poi.2 } }
+# 				remove_point_of_interest = SRA_invasion_poi.2
+# 				country_event = {
+# 					id = SRA_Crisis.12
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				NOT = {
+# 					has_global_flag = SRA_third_portal_destroyed
+# 				}
+# 				NOT = {
+# 					any_owned_fleet = {
+# 						has_fleet_flag = third_SRA_Crisis_Mark
+# 					}
+# 				}
+# 			}
+# 			set_global_flag = SRA_third_portal_destroyed
+# 			event_target:SRA_third_portal_system = { remove_star_flag = SRA_third_portal_system }
+# 			clear_global_event_target = SRA_third_portal_system
+# 			every_country = {
+# 				limit = { has_point_of_interest = { poi = SRA_invasion_poi.3 } }
+# 				remove_point_of_interest = SRA_invasion_poi.3
+# 				country_event = {
+# 					id = SRA_Crisis.12
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				NOT = {
+# 					has_global_flag = SRA_fourth_portal_destroyed
+# 				}
+# 				NOT = {
+# 					any_owned_fleet = {
+# 						has_fleet_flag = fourth_SRA_Crisis_Mark
+# 					}
+# 				}
+# 			}
+# 			set_global_flag = SRA_fourth_portal_destroyed
+# 			event_target:SRA_fourth_portal_system = { remove_star_flag = SRA_fourth_portal_system }
+# 			clear_global_event_target = SRA_fourth_portal_system
+# 			every_country = {
+# 				limit = { has_point_of_interest = { poi = SRA_invasion_poi.4 } }
+# 				remove_point_of_interest = SRA_invasion_poi.4
+# 				country_event = {
+# 					id = SRA_Crisis.12
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				NOT = {
+# 					has_global_flag = SRA_fifth_portal_destroyed
+# 				}
+# 				NOT = {
+# 					any_owned_fleet = {
+# 						has_fleet_flag = fifth_SRA_Crisis_Mark
+# 					}
+# 				}
+# 			}
+# 			set_global_flag = SRA_fifth_portal_destroyed
+# 			event_target:SRA_fifth_portal_system = { remove_star_flag = SRA_fifth_portal_system }
+# 			clear_global_event_target = SRA_fifth_portal_system
+# 			every_country = {
+# 				limit = { has_point_of_interest = { poi = SRA_invasion_poi.5 } }
+# 				remove_point_of_interest = SRA_invasion_poi.5
+# 				country_event = {
+# 					id = SRA_Crisis.12
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				NOT = {
+# 					has_global_flag = SRA_sixth_portal_destroyed
+# 				}
+# 				NOT = {
+# 					any_owned_fleet = {
+# 						has_fleet_flag = sixth_SRA_Crisis_Mark
+# 					}
+# 				}
+# 			}
+# 			set_global_flag = SRA_sixth_portal_destroyed
+# 			event_target:SRA_sixth_portal_system = { remove_star_flag = SRA_sixth_portal_system }
+# 			clear_global_event_target = SRA_sixth_portal_system
+# 			every_country = {
+# 				limit = { has_point_of_interest = { poi = SRA_invasion_poi.6 } }
+# 				remove_point_of_interest = SRA_invasion_poi.6
+# 				country_event = {
+# 					id = SRA_Crisis.12
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = { 
+# 				NOT = {
+# 					has_global_flag = SRA_seventh_portal_destroyed
+# 				}
+# 				NOT = {
+# 					any_owned_fleet = {
+# 						has_fleet_flag = seventh_SRA_Crisis_Mark
+# 					}
+# 				}
+# 			}
+# 			set_global_flag = SRA_seventh_portal_destroyed
+# 			event_target:SRA_seventh_portal_system = { remove_star_flag = SRA_seventh_portal_system }
+# 			clear_global_event_target = SRA_seventh_portal_system
+# 			every_country = {
+# 				limit = { has_point_of_interest = { poi = SRA_invasion_poi.7 } }
+# 				remove_point_of_interest = SRA_invasion_poi.7
+# 				country_event = {
+# 					id = SRA_Crisis.12
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+#对话
+country_event = {
+	id = SRA_Crisis.3000
+	title = "SRA_Crisis.3000"
+
+    desc = "SRA_Crisis.3000.desc"
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 21 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+
+
+    trigger = {
+		FROM = {
+			is_country_type = faction_SRA_Crisis_country
+		}
+	}
+
+    option = {
+        name = SRA_Crisis.3000.a
+		is_dialog_only = yes
+        response_text = SRA_Crisis.3000.a.response
+    }
+
+    option = {
+        name = SRA_Crisis.3000.b
+		is_dialog_only = yes
+        response_text = SRA_Crisis.3000.b.response
+        trigger = {
+			has_country_flag = has_SRA_StellarRegulator_country
+		}
+    }
+    option = {
+        name = SRA_Crisis.3000.c
+		is_dialog_only = yes
+        response_text = SRA_Crisis.3000.c.response
+    }
+    option = {
+        name = SRA_Crisis.3000.d
+		hidden_effect = {
+			country_event = {
+				id = SRA_Crisis.3001
+			}
+		}
+    }
+}
+
+country_event = {
+	id = SRA_Crisis.3001
+	title = "SRA_Crisis.3001"
+
+    desc = "SRA_Crisis.3001.desc"
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 21 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+
+
+    trigger = {
+	}
+
+    option = {
+        name = SRA_Crisis.3001.a
+    }
+}
+
+
+ship_event = {
+	id = SRA_Crisis.4001
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_arkship_ship = yes
+		FROM.owner = { SRA_can_do_orbital_bombardment_country = yes }
+	}
+
+	immediate = {
+		create_ambient_object = {
+			type = arkship_debris_wreckage
+			entity_offset_height = { min = -5 max = -5 }
+			is_wreck = yes
+		}
+		root.owner = {
+			country_event = {
+				id = arkship.1010
+				scopes = {
+					fromfrom = root
+				}
+			}
+		}
+		destroy_ship = this
+	}
+}

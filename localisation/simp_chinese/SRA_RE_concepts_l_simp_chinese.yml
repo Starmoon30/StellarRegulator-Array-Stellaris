@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ ### Concepts
+ # Use §K for headers and §I for highlights in Concepts
+ # 语法：['concept_xxxx']
+ # ['concept_xxxx', 自定义文本]
+

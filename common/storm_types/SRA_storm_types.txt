@@ -1,0 +1,69 @@
+SRA_SD_chaos_star_habitable_storm = {
+	inline_script = {
+		script = "cosmic_storms/StormConfig"
+		MIN_RADIUS = 3
+		MAX_RADIUS = 3
+		MIN_RANGE = 666
+		MAX_RANGE = 666
+		STORM_SPEED = 0
+		ACTIVATION_PERIOD_IN_MONTHS = 12
+		MONTHLY_ADDED_DEVASTATION = -20
+	}
+
+	spawn_weight = 0
+	description = SRA_SD_chaos_star_habitable_storm_lore_description
+
+	triggered_fleet_modifier = {
+		potential = {
+			always = yes
+		}
+		#SRA_SD_chaos_star_habitable_storm_modifier = 1
+		custom_tooltip = SRA_SD_chaos_star_habitable_storm_fleet_tt
+		show_only_custom_tooltip = no
+	}
+
+	on_start = {
+		every_system_within_storm = {
+			added_to_storm_base_effect = yes
+			SRA_SD_chaos_star_habitable_storm_add = yes
+		}
+	}
+
+	on_finished = {
+		every_system_within_storm = {
+			removed_from_storm_base_effect = yes
+			SRA_SD_chaos_star_habitable_storm_remove = yes
+		}
+	}
+
+	on_moved = {
+		every_system_added_to_storm = {
+			added_to_storm_base_effect = yes
+			SRA_SD_chaos_star_habitable_storm_add = yes
+		}
+
+		every_system_removed_from_storm = {
+			removed_from_storm_base_effect = yes
+			SRA_SD_chaos_star_habitable_storm_remove = yes
+		}
+	}
+
+	cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
+	cosmic_storm_texture_color_path = "gfx/map/storms/nexus_storm_color.dds"
+	cosmic_storm_event_sprite = "GFX_nexus_storm"
+	icon = GFX_planetview_storm_nexus_modifier_frame
+
+	cosmic_storm_texture_lightning_paths = {
+		"gfx/map/storms/lightning/lightning_big_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_big_storm_02.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_02.dds"
+	}
+
+	cosmic_storm_galaxy_lightning_time = 5.0
+	cosmic_storm_galaxy_max_opacity = 0.4
+
+	show_notification = {
+		always = no
+	}
+}

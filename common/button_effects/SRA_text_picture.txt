@@ -1,0 +1,10 @@
+#文本用事件框的图
+SRA_text_picture_diff00_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_text_picture value = 0 }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}

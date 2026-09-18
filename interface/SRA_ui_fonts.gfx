@@ -1,0 +1,32 @@
+# bitmapfonts = {
+# 	bitmapfont_override = {
+# 		name = "SRA_malgun_goth_24"
+# 		ttf_font = "malgun_goth_24"
+# 		ttf_size = "24"
+# 		color = 0xff000000
+# 		text_color_code = "b"
+# 		vertical_offset = "0"
+# 		cursor_offset = { -4 -3 }
+# 		selection_offset = { 0 1 }
+# 		languages = { "l_simp_chinese" }
+# 		multiline = {
+# 			line_break = { "，" "。" "！" "？" }
+# 			forbidden_start = { "，" "。" "！" "？" }
+# 		}
+# 	}
+# 	bitmapfont_override = {
+# 		name = "SRA_cg_16b"
+# 		ttf_font = "cg_16b"
+# 		ttf_size = "16"
+# 		color = 0xff000000
+# 		text_color_code = "b"
+# 		vertical_offset = "-2"
+# 		cursor_offset = { -3 -5 }
+# 		selection_offset = { 0 3 }
+# 		languages = { "l_simp_chinese" }
+# 		multiline = {
+# 			line_break = { "，" "。" "！" "？" }
+# 			forbidden_start = { "，" "。" "！" "？" }
+# 		}
+# 	}
+# }

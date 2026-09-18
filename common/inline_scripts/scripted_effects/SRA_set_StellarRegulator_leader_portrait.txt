@@ -1,0 +1,36 @@
+#SRA_set_StellarRegulator_leader_portrait
+owner = {
+	switch = {
+		trigger = has_country_flag
+		SRA_StellarRegulator_Cloth_1 = {
+			prev = {
+				change_leader_portrait = SRA_portrait
+				set_variable = { which = SRA_portrait_clothes_var value = 102 }
+			}
+		}
+		SRA_StellarRegulator_Cloth_2 = {
+			prev = {
+				change_leader_portrait = SRA_portrait
+				set_variable = { which = SRA_portrait_clothes_var value = 202 }
+			}
+		}
+		SRA_StellarRegulator_Cloth_3 = {
+			prev = {
+				change_leader_portrait = SRA_portrait
+				set_variable = { which = SRA_portrait_clothes_var value = 302 }
+			}
+		}
+		SRA_StellarRegulator_Cloth_7 = {
+			prev = {
+				change_leader_portrait = SRA_portrait
+				set_variable = { which = SRA_portrait_clothes_var value = 702 }
+			}
+		}
+		default = {
+			prev = {
+				change_leader_portrait = SRA_portrait
+				set_variable = { which = SRA_portrait_clothes_var value = 2 }
+			}
+		}
+	}
+}

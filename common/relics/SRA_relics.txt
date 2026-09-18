@@ -1,0 +1,37 @@
+
+SRA_Crisis_Metabyss_File = {
+	activation_duration = 0
+	portrait = "GFX_relic_omnicodex"
+	sound = "relic_activation_the_omnicodex"
+	can_be_stolen = no
+
+	score = 0
+
+	resources = {
+		category = relics
+		cost = { influence = 1 }
+	}
+	
+	triggered_country_modifier = {
+		potential = { always = yes }
+		custom_tooltip = SRA_Crisis_Metabyss_File_modifier
+	}
+
+	
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = SRA_Crisis_Metabyss_File
+		}
+	}
+
+	active_effect = {
+		custom_tooltip = SRA_Crisis_Metabyss_File_effect
+		hidden_effect = {
+			remove_relic = SRA_Crisis_Metabyss_File
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}

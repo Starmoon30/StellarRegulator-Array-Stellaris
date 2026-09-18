@@ -1,0 +1,257 @@
+SRA_Rocivia_Legacy_1 = {
+	desc = "SRA_Rocivia_Legacy_Text_1"
+	picture = GFX_evt_frozen
+	situation_log_category = empire_concerns
+	stages = 7
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = has_SRA_StellarRegulator_country
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_A1
+		event = SRA_Rocivia_Legacy.3
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A2
+		event = SRA_Rocivia_Legacy.4
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A3
+		event = SRA_Rocivia_Legacy.5
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A4
+		event = SRA_Rocivia_Legacy.6
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A5
+		event = SRA_Rocivia_Legacy.7
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A6
+		event = SRA_Rocivia_Legacy.8
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_A1
+		event = SRA_Rocivia_Legacy.9
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+SRA_Rocivia_Legacy_2 = {
+	desc = "SRA_Rocivia_Legacy_Text_2"
+	picture = GFX_evt_relic_world
+	situation_log_category = empire_concerns
+	stages = 7
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = has_SRA_StellarRegulator_country
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = SRA_Rocivia_Legacy.12
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A2
+		event = SRA_Rocivia_Legacy.13
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A3
+		event = SRA_Rocivia_Legacy.14
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_A4
+		event = SRA_Rocivia_Legacy.15
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_A5
+		event = SRA_Rocivia_Legacy.16
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_A6
+		event = SRA_Rocivia_Legacy.17
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_A1
+		event = SRA_Rocivia_Legacy.18
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+ 
+SRA_Rocivia_Legacy_3 = {
+	desc = "SRA_Rocivia_Legacy_Text_3"
+	picture = GFX_evt_relic_shipyard
+	situation_log_category = empire_concerns
+	stages = 6
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = has_SRA_StellarRegulator_country
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = SRA_Rocivia_Legacy.20
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A2
+		event = SRA_Rocivia_Legacy.21
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A3
+		event = SRA_Rocivia_Legacy.22
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_A4
+		event = SRA_Rocivia_Legacy.23
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_A5
+		event = SRA_Rocivia_Legacy.24
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_A6
+		event = SRA_Rocivia_Legacy.25
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+SRA_Rocivia_Legacy_4 = {
+	desc = "SRA_Rocivia_Legacy_Text_4"
+	picture = GFX_evt_gas_giant_station
+	situation_log_category = empire_concerns
+	stages = 10
+	weight = 0
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = has_SRA_StellarRegulator_country
+			}
+		}
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A1
+		event = SRA_Rocivia_Legacy.27
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_A2
+		event = SRA_Rocivia_Legacy.28
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_A3
+		event = SRA_Rocivia_Legacy.29
+	}
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_A4
+		event = SRA_Rocivia_Legacy.30
+	}
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_A5
+		event = SRA_Rocivia_Legacy.31
+	}
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_A6
+		event = SRA_Rocivia_Legacy.32
+	}
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_A1
+		event = SRA_Rocivia_Legacy.33
+	}
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_A2
+		event = SRA_Rocivia_Legacy.34
+	}
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_A3
+		event = SRA_Rocivia_Legacy.35
+	}
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_A4
+		event = SRA_Rocivia_Legacy.36
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}

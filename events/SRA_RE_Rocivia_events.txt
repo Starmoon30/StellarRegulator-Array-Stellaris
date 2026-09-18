@@ -1,0 +1,1428 @@
+namespace = SRA_RE_Rocivia
+
+
+country_event = {
+	id = SRA_RE_Rocivia.2
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_Rocivia.2.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		from = { 
+			is_country_type = faction_SRA_RE_Rocivia
+		}
+		has_country_flag = has_SRA_RE_Rocivia_country
+		NOT = {
+			has_country_flag = SRA_RE_Rocivia_country_talked
+		}
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+		set_country_flag = SRA_RE_Rocivia_country_talked
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Rocivia.1 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Rocivia.1 }}
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = SRA_RE_Rocivia.2019
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:SRA_portrait_leader_Rocivia = {
+			set_variable = { which = SRA_portrait_clothes_var value = 202 }
+		}
+		create_message = {
+			type = MESSAGE_SRA_RE_Rocivia
+			localization =  SRA_RE_Rocivia.2019.desc
+			days = @toast_message_days
+			target = event_target:SRA_portrait_leader_Rocivia
+			variable = {
+			 	type = name
+			 	localization = SRA_RE_Rocivia
+				scope = event_target:SRA_portrait_leader_Rocivia
+			}
+			variable = {
+			 	key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
+    }
+}
+
+
+country_event = {
+	id = SRA_RE_Rocivia.1
+	title = SRA_RE_Rocivia
+	desc = {
+		trigger = { 
+			NOT = { has_country_flag = SRA_RE_Rocivia_Ciallo }
+		}
+		text = SRA_RE_Rocivia.1.desc
+	}
+	desc = {
+		trigger = { 
+			has_country_flag = SRA_RE_Rocivia_Ciallo
+		}
+		text = SRA_RE_Rocivia.1.desc.b
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_RE_Rocivia
+				is_same_value = ROOT
+			}
+		}
+		has_country_flag = has_SRA_RE_Rocivia_country
+		has_country_flag = SRA_RE_Rocivia_country_talked
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		random_list = {
+			1 =	{
+				set_country_flag = SRA_RE_Rocivia_Ciallo
+				set_variable = { which = SRA_diplomacy_SRA_portrait value = 29 }
+				reroll_random = yes
+			}
+			99 = {
+				set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+			}
+		}
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+			remove_country_flag = SRA_RE_Rocivia_Ciallo
+		}
+	}
+
+	#来点帮助
+	option = {
+		name = SRA_RE_Rocivia.1.a
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.100
+			}
+		}
+	}
+	#向科学院发布项目
+	option = {
+		name = SRA_RE_Rocivia.1.b
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3
+			}
+		}
+	}
+	#闲聊
+	option = {
+		name = SRA_RE_Rocivia.1.c
+		trigger = {
+		}
+		hidden_effect = {
+			SRA_RE_Rocivia_talk_random = yes
+			country_event = { id = SRA_RE_Rocivia.301 }
+		}
+	}
+	#让路希维亚回归领袖之位
+	option = {
+		name = SRA_RE_Rocivia.1.d
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.401
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit1
+		hidden_effect = {
+			remove_country_flag = RE_Rocivia_engaged
+		}
+		default_hide_option = yes
+	}
+}
+
+
+
+
+
+#闲聊
+country_event = {
+	id = SRA_RE_Rocivia.301
+	title = SRA_RE_Rocivia
+	#无表情
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+		}
+		text = SRA_RE_Rocivia.3011.b.desc
+		text = SRA_RE_Rocivia.3011.c.desc
+		text = SRA_RE_Rocivia.3011.e.desc
+		text = SRA_RE_Rocivia.3011.f.desc
+		text = SRA_RE_Rocivia.3011.g.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = has_ancient_empire_mod
+		}
+		text = SRA_RE_Rocivia.3011.d.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = install_kuat_mod
+		}
+		text = SRA_RE_Rocivia.3011.a.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = gigastructures_enabled
+		}
+		text = SRA_RE_Rocivia.3011.i.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = acot_activated
+		}
+		text = SRA_RE_Rocivia.3011.j.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = sofe_activated
+		}
+		text = SRA_RE_Rocivia.3011.k.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = has_wsg_mod
+		}
+		text = SRA_RE_Rocivia.3011.l.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			KZ_VOY_MOD = yes
+		}
+		text = SRA_RE_Rocivia.3011.m.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = has_NYTO_mod
+		}
+		text = SRA_RE_Rocivia.3011.n.desc
+	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = AOW_installed
+		}
+		text = SRA_RE_Rocivia.3011.o.desc
+	}
+	#微笑
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 2 }
+		}
+		text = SRA_RE_Rocivia.3012.a.desc
+	}
+	#闭眼
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 3 }
+		}
+		text = SRA_RE_Rocivia.3013.a.desc
+		text = SRA_RE_Rocivia.3013.b.desc
+	}
+	#闭眼微笑
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 4 }
+		}
+		text = SRA_RE_Rocivia.3014.a.desc
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		if = {
+			limit ={ check_variable = { which = SRA_RE_dialogue_talk value = 1 }}
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 22 }
+		}
+		if = {
+			limit ={ check_variable = { which = SRA_RE_dialogue_talk value = 2 }}
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+		}
+		if = {
+			limit ={ check_variable = { which = SRA_RE_dialogue_talk value = 3 }}
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 25 }
+		}
+		if = {
+			limit ={ check_variable = { which = SRA_RE_dialogue_talk value = 4 }}
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+		}
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.1.c
+		hidden_effect = {
+			SRA_RE_Rocivia_talk_random = yes
+			country_event = { id = SRA_RE_Rocivia.301 }
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_return4
+		hidden_effect = { 
+			country_event = {
+				id = SRA_RE_Rocivia.1
+			}
+		}
+	}
+}
+
+#回归领袖
+country_event = {
+	id = SRA_RE_Rocivia.401
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_Rocivia.401.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_RE_Rocivia
+				is_same_value = ROOT
+			}
+		}
+		has_country_flag = has_SRA_RE_Rocivia_country
+		has_country_flag = SRA_RE_Rocivia_country_talked
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.401.a
+		trigger = {
+		}
+		hidden_effect = {
+			create_SRA_RE_Rocivia_ruler = yes
+			country_event = {
+				id = SRA_RE_Rocivia.1
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.401.b
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.1
+			}
+		}
+	}
+}
+
+#帮助
+country_event = {
+	id = SRA_RE_Rocivia.100
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_Rocivia.100.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+
+	#法术
+	option = {
+		name = SRA_RE_Rocivia.100.a
+		trigger = {
+			NOT = {
+				has_country_flag = SRA_RE_Rocivia_Magic_cool_down
+			} 
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = SRA_RE_Rocivia_Magic_1
+						has_country_flag = SRA_RE_Rocivia_Magic_2
+						has_country_flag = SRA_RE_Rocivia_Magic_3
+						has_country_flag = SRA_RE_Rocivia_Magic_4
+						has_country_flag = SRA_RE_Rocivia_Magic_5
+						has_country_flag = SRA_RE_Rocivia_Magic_6
+						has_country_flag = SRA_RE_Rocivia_Magic_7
+						has_country_flag = SRA_RE_Rocivia_Magic_8
+						has_country_flag = SRA_RE_Rocivia_Magic_9
+						has_country_flag = SRA_RE_Rocivia_Magic_10
+						has_country_flag = SRA_RE_Rocivia_Magic_11
+						has_country_flag = SRA_RE_Rocivia_Magic_12
+						has_country_flag = SRA_RE_Rocivia_Magic_13
+						has_country_flag = SRA_RE_Rocivia_Magic_14
+					}
+				}
+				random_list = {
+					1 = {
+						set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_1 days = 90 }
+					}
+					1 = {
+						set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_2 days = 90 }
+					}
+					1 = {
+						set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_3 days = 90 }
+					}
+					1 = {
+						set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_4 days = 90 }
+					}
+					1 = {
+						set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_5 days = 90 }
+					}
+				}
+			}
+			country_event = {
+				id = SRA_RE_Rocivia.101
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_return4
+		hidden_effect = { 
+			country_event = {
+				id = SRA_RE_Rocivia.1
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit1
+		hidden_effect = {
+			remove_country_flag = RE_Rocivia_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#法术
+country_event = {
+	id = SRA_RE_Rocivia.101
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_Rocivia.101.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+
+	#法术
+	option = {
+		name = SRA_RE_Rocivia.101.a
+		custom_tooltip = SRA_RE_Rocivia.101.a.desc
+		trigger = {
+			NOT = {
+				has_country_flag =SRA_RE_Rocivia_Magic_cool_down
+			} 
+			has_country_flag = SRA_RE_Rocivia_Magic_1
+		}
+		allow = {
+			resource_stockpile_compare = { resource = consumer_goods value >= 4000 }
+			resource_stockpile_compare = { resource = rare_crystals value >= 1000 }
+		}
+	    add_resource = {
+			consumer_goods = -4000
+			rare_crystals = -1000
+	    }
+		hidden_effect = {
+			set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_cool_down days = 90 }
+			remove_country_flag = SRA_RE_Rocivia_Magic_1
+			add_modifier = {
+				modifier = SRA_RE_Rocivia_Magic_1 days = 90
+			}
+			country_event = {
+				id = SRA_RE_Rocivia.102
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.101.b
+		custom_tooltip = SRA_RE_Rocivia.101.b.desc
+		trigger = {
+			NOT = {
+				has_country_flag =SRA_RE_Rocivia_Magic_cool_down
+			} 
+			has_country_flag = SRA_RE_Rocivia_Magic_2
+		}
+		allow = {
+			resource_stockpile_compare = { resource = consumer_goods value >= 4000 }
+			resource_stockpile_compare = { resource = exotic_gases value >= 1000 }
+		}
+	    add_resource = {
+			consumer_goods = -4000
+			exotic_gases = -1000
+	    }
+		hidden_effect = {
+			set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_cool_down days = 90 }
+			remove_country_flag = SRA_RE_Rocivia_Magic_2
+			add_modifier = {
+				modifier = SRA_RE_Rocivia_Magic_2 days = 90
+			}
+			country_event = {
+				id = SRA_RE_Rocivia.102
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.101.c
+		custom_tooltip = SRA_RE_Rocivia.101.c.desc
+		trigger = {
+			NOT = {
+				has_country_flag = SRA_RE_Rocivia_Magic_cool_down
+			} 
+			has_country_flag = SRA_RE_Rocivia_Magic_3
+		}
+		allow = {
+			resource_stockpile_compare = { resource = consumer_goods value >= 4000 }
+			resource_stockpile_compare = { resource = exotic_gases value >= 1000 }
+		}
+	    add_resource = {
+			consumer_goods = -4000
+			exotic_gases = -1000
+	    }
+		hidden_effect = {
+			set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_cool_down days = 90 }
+			remove_country_flag = SRA_RE_Rocivia_Magic_3
+			add_modifier = {
+				modifier = SRA_RE_Rocivia_Magic_3 days = 90
+			}
+			country_event = {
+				id = SRA_RE_Rocivia.102
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.101.d
+		custom_tooltip = SRA_RE_Rocivia.101.d.desc
+		trigger = {
+			NOT = {
+				has_country_flag = SRA_RE_Rocivia_Magic_cool_down
+			} 
+			has_country_flag = SRA_RE_Rocivia_Magic_4
+		}
+		allow = {
+			resource_stockpile_compare = { resource = consumer_goods value >= 4000 }
+			resource_stockpile_compare = { resource = alloys value >= 1000 }
+		}
+	    add_resource = {
+			consumer_goods = -4000
+			alloys = -1000
+	    }
+		hidden_effect = {
+			set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_cool_down days = 90 }
+			remove_country_flag = SRA_RE_Rocivia_Magic_4
+			add_modifier = {
+				modifier = SRA_RE_Rocivia_Magic_4 days = 90
+			}
+			country_event = {
+				id = SRA_RE_Rocivia.102
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.101.e
+		custom_tooltip = SRA_RE_Rocivia.101.e.desc
+		trigger = {
+			NOT = {
+				has_country_flag = SRA_RE_Rocivia_Magic_cool_down
+			} 
+			has_country_flag = SRA_RE_Rocivia_Magic_5
+		}
+		allow = {
+			resource_stockpile_compare = { resource = consumer_goods value >= 4000 }
+			resource_stockpile_compare = { resource = minerals value >= 1000 }
+		}
+	    add_resource = {
+			consumer_goods = -4000
+			minerals = -1000
+	    }
+		hidden_effect = {
+			set_timed_country_flag = { flag = SRA_RE_Rocivia_Magic_cool_down days = 90 }
+			remove_country_flag = SRA_RE_Rocivia_Magic_5
+			add_modifier = {
+				modifier = SRA_RE_Rocivia_Magic_5 days = 90
+			}
+			country_event = {
+				id = SRA_RE_Rocivia.102
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_RE_Rocivia.100
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit1
+		hidden_effect = {
+			remove_country_flag = RE_Rocivia_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#施法完毕
+country_event = {
+	id = SRA_RE_Rocivia.102
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_Rocivia.102.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_return2
+		hidden_effect = { 
+			country_event = {
+				id = SRA_RE_Rocivia.100
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit1
+		hidden_effect = {
+			remove_country_flag = RE_Rocivia_engaged
+		}
+		default_hide_option = yes
+	}
+}
+
+
+
+
+country_event = {
+	id = SRA_RE_Rocivia.3
+	title = SRA_RE_Rocivia.3
+	desc = SRA_RE_Rocivia.3.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_RE_Rocivia
+				is_same_value = ROOT
+			}
+		}
+		has_country_flag = has_SRA_RE_Rocivia_country
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = RE_Rocivia_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = RE_Rocivia_engaged
+		}
+	}
+
+	#星辉水晶项目
+	option = {
+		name = SRA_RE_Rocivia.3.a
+		trigger = {
+			has_technology = tech_zero_point_power
+			NOR = {
+				has_country_flag = SRA_RE_Rocivia_SP_1_Finished
+				any_situation = {
+					is_situation_type = SRA_RE_research_situation
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3001
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_return4
+		hidden_effect = { 
+			country_event = {
+				id = SRA_RE_Rocivia.1
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit1
+		hidden_effect = {
+			remove_country_flag = RE_Rocivia_engaged
+		}
+		default_hide_option = yes
+	}
+}
+
+
+#星辉水晶项目
+situation_event = {
+	id = SRA_RE_Rocivia.3000
+	hide_window = yes
+	is_triggered_only = yes
+	situation = this
+
+	immediate = {
+		if = {
+			limit = { has_situation_flag = SRA_RE_Rocivia_SP_1 }
+			if = {
+				limit = { current_stage = sra_re_research_situation_stage_1 }
+				if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_physics }
+					random = {
+						chance = 10
+						add_situation_progress = -10
+					}
+				}
+				else_if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_society }
+					random = {
+						chance = 90
+						add_situation_progress = -10
+					}
+				}
+				else_if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_engineering }
+					random = {
+						chance = 20
+						add_situation_progress = -10
+					}
+				}
+			}
+			else_if = {
+				limit = { current_stage = sra_re_research_situation_stage_2 }
+				if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_physics }
+					random = {
+						chance = 10
+						add_situation_progress = -10
+					}
+				}
+				else_if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_society }
+					random = {
+						chance = 98
+						add_situation_progress = -10
+					}
+				}
+				else_if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_engineering }
+					random = {
+						chance = 50
+						add_situation_progress = -10
+					}
+				}
+			}
+			else_if = {
+				limit = { current_stage = sra_re_research_situation_stage_3 }
+				if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_physics }
+					random = {
+						chance = 50
+						add_situation_progress = -10
+					}
+				}
+				else_if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_society }
+					random = {
+						chance = 99
+						add_situation_progress = -10
+					}
+				}
+				else_if = {
+					limit = { current_situation_approach = SRA_RE_research_situation_engineering }
+					random = {
+						chance = 75
+						add_situation_progress = -10
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = SRA_RE_Rocivia.3001
+	title = SRA_RE_Rocivia.3001
+	desc = SRA_RE_Rocivia.3001.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3001.a
+		allow = {
+			resource_income_compare = { resource = physics_research value >= 10000 }
+			resource_income_compare = { resource = society_research value >= 10000 }
+			resource_income_compare = { resource = engineering_research value >= 10000 }
+		}
+		hidden_effect = {
+			start_situation = {
+				type = SRA_RE_research_situation
+				effect = {
+					set_situation_flag = SRA_RE_Rocivia_SP_1
+				}
+			}
+			country_event = {
+				id = SRA_RE_Rocivia.3002
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_return3
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3
+			}
+		}
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = SRA_RE_Rocivia.3002
+	title = SRA_RE_Rocivia.3002
+	desc = SRA_RE_Rocivia.3002.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3002.a
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_physics"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.3002.b
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_society"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.3002.c
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_engineering"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit3
+		default_hide_option = yes
+	}
+}
+
+
+country_event = {
+	id = SRA_RE_Rocivia.3003
+	title = SRA_RE_Rocivia.3003
+	desc = SRA_RE_Rocivia.3003.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3003.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3009
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3004
+	title = SRA_RE_Rocivia.3004
+	desc = SRA_RE_Rocivia.3004.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3007.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3002
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3005
+	title = SRA_RE_Rocivia.3005
+	desc = SRA_RE_Rocivia.3005.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3005.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3009
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3006
+	title = SRA_RE_Rocivia.3006
+	desc = SRA_RE_Rocivia.3006.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3006.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3002
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3007
+	title = SRA_RE_Rocivia.3007
+	desc = SRA_RE_Rocivia.3007.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3007.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3009
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3008
+	title = SRA_RE_Rocivia.3008
+	desc = SRA_RE_Rocivia.3008.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3008.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3002
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_RE_Rocivia.3009
+	title = SRA_RE_Rocivia.3009
+	desc = SRA_RE_Rocivia.3009.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	option = {
+		name = SRA_RE_Rocivia.3009.a
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_physics"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.3009.b
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_society"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.3009.c
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_engineering"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit3
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3010
+	title = SRA_RE_Rocivia.3010
+	desc = SRA_RE_Rocivia.3010.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3010.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3016
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3011
+	title = SRA_RE_Rocivia.3011
+	desc = SRA_RE_Rocivia.3011.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3011.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3009
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3012
+	title = SRA_RE_Rocivia.3012
+	desc = SRA_RE_Rocivia.3012.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3012.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3016
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3013
+	title = SRA_RE_Rocivia.3013
+	desc = SRA_RE_Rocivia.3013.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3013.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3009
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3014
+	title = SRA_RE_Rocivia.3014
+	desc = SRA_RE_Rocivia.3014.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3014.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3016
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3015
+	title = SRA_RE_Rocivia.3015
+	desc = SRA_RE_Rocivia.3015.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3015.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3009
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3016
+	title = SRA_RE_Rocivia.3016
+	desc = SRA_RE_Rocivia.3016.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3016.a
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_physics"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.3016.b
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_society"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia.3016.c
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_RE_research_situation
+				}
+				set_situation_approach = "SRA_RE_research_situation_engineering"
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Rocivia_talk_exit3
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3017
+	title = SRA_RE_Rocivia.3017
+	desc = SRA_RE_Rocivia.3017.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3017.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3018
+	title = SRA_RE_Rocivia.3018
+	desc = SRA_RE_Rocivia.3018.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3018.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3016
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3019
+	title = SRA_RE_Rocivia.3019
+	desc = SRA_RE_Rocivia.3019.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3019.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3020
+	title = SRA_RE_Rocivia.3020
+	desc = SRA_RE_Rocivia.3020.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3020.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3016
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3021
+	title = SRA_RE_Rocivia.3021
+	desc = SRA_RE_Rocivia.3021.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3021.a
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3022
+	title = SRA_RE_Rocivia.3022
+	desc = SRA_RE_Rocivia.3022.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3022.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Rocivia.3016
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Rocivia.3023
+	title = SRA_RE_Rocivia.3023
+	desc = SRA_RE_Rocivia.3023.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+
+	option = {
+		name = SRA_RE_Rocivia.3023.a
+		hidden_effect = {
+			set_country_flag = SRA_RE_Rocivia_SP_1_Finished
+		}
+	}
+}

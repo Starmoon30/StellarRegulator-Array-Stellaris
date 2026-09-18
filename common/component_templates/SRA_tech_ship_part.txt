@@ -1,0 +1,1969 @@
+#####T4####
+#星规装甲
+utility_component_template = {
+	key = "SMALL_SRA_T4_ship_Part"
+	size = small
+	icon = "GFX_SRA_T4_ship_Part"
+	icon_frame = 1
+	power = -300
+	modifier = {
+		ship_shield_add = @SRA_ship_part_hull_add_5
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+		ship_armor_add = @SRA_ship_part_hull_add_5
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+		ship_hull_add = @SRA_ship_part_hull_add_5
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_5
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	component_set = "SRA_T4_ship_Part"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_T4_ship_Part"
+	size = medium
+	icon = "GFX_SRA_T4_ship_Part"
+	icon_frame = 1
+	power = -600
+	modifier = {
+		ship_shield_add = @SRA_ship_part_hull_add_6
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_6
+		ship_armor_add = @SRA_ship_part_hull_add_6
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_6
+		ship_hull_add = @SRA_ship_part_hull_add_6
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_6
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_6
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	component_set = "SRA_T4_ship_Part"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_T4_ship_Part"
+	size = large
+	icon = "GFX_SRA_T4_ship_Part"
+	icon_frame = 1
+	power = -1200
+	modifier = {
+		ship_shield_add = @SRA_ship_part_hull_add_7
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_7
+		ship_armor_add = @SRA_ship_part_hull_add_7
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_7
+		ship_hull_add = @SRA_ship_part_hull_add_7
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_7
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_7
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	component_set = "SRA_T4_ship_Part"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#星规debuff光环
+utility_component_template = {
+	key = "SRA_Aura_1"
+	size = medium
+	icon = "GFX_SRA_T4_Computer"
+	icon_frame = 1
+	power = -2000
+	component_set = "ship_aura_components"
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	hidden = yes
+
+	hostile_aura = {
+		name = "SRA_Aura_1_1"
+		radius = 2000
+		apply_on = ships
+		
+		stack_info = {			
+			id = SRA_Aura_1_1
+			priority = 200
+		}
+		modifier = {
+			ship_accuracy_mult = -20
+		}
+
+
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "SRA_Aura_2"
+	size = medium
+	icon = "GFX_SRA_Aura_1"
+	icon_frame = 1
+	power = -2000
+	component_set = "ship_aura_components"
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	hostile_aura = {
+		name = "SRA_Aura_2_1"
+		radius = 2000
+		apply_on = ships
+		
+		stack_info = {			
+			id = SRA_Aura_2_1
+			priority = 200
+		}
+
+		modifier = {
+			ship_weapon_range_mult = -0.3
+			ship_armor_penetration_mult = -1
+			ship_shield_penetration_mult = -1
+			ship_accuracy_mult = -0.5
+			ship_tracking_mult = -0.5
+		}
+		
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+#星规buff光环
+utility_component_template = {
+	key = "SRA_Aura_3"
+	size = medium
+	icon = "GFX_SRA_Aura_3"
+	icon_frame = 1
+	power = -2000
+	component_set = "ship_aura_components"
+	prerequisites = { "tech_SRA_T4_ship_Part" }	
+	friendly_aura = {
+		name = "SRA_Aura_3_1"
+		radius = 2000
+		system_wide = yes
+		apply_on = ships
+		
+		stack_info = {			
+			id = SRA_Aura_3_1
+			priority = 200
+		}
+		
+		modifier = {
+			ship_weapon_range_mult = 0.3
+			ship_accuracy_mult = 0.3
+			ship_tracking_mult = 0.3
+		}
+
+
+		
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SRA_Aura_4"
+	size = medium
+	icon = "GFX_SRA_Aura_4"
+	icon_frame = 1
+	power = -2000
+	component_set = "ship_aura_components"
+	prerequisites = { "tech_SRA_T4_ship_Part" }	
+	friendly_aura = {
+		name = "SRA_Aura_4_1"
+		radius = 2000
+		system_wide = yes
+		apply_on = ships
+		
+		stack_info = {			
+			id = SRA_Aura_4_1
+			priority = 200
+		}
+		
+		modifier = {
+			ship_armor_mult = 0.5
+			ship_shield_mult = 0.5
+			ship_evasion_mult = 0.5
+		}
+
+
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SRA_Aura_5"
+	size = medium
+	icon = "GFX_SRA_T4_Computer"
+	icon_frame = 1
+	power = -2000
+	component_set = "ship_aura_components"
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	hidden = yes
+	
+	friendly_aura = {
+		name = "SRA_Aura_5_1"
+		radius = 2000
+		system_wide = yes
+		apply_on = ships
+		
+		stack_info = {			
+			id = SRA_Aura_5_1
+			priority = 200
+		}
+		
+		modifier = {
+			ship_shield_damage_mult = 0.5
+			ship_armor_damage_mult = 0.5
+			ship_hull_damage_mult = 0.5
+		}
+
+
+	}
+	hostile_aura = {
+		name = "SRA_Aura_5_2"
+		radius = 2000
+		apply_on = ships
+		
+		limit = {
+			is_in_combat = yes
+		}
+		stack_info = {			
+			id = SRA_Aura_5_2
+			priority = 200
+		}
+		
+		damage_per_day = {
+			accuracy = 1.0
+			damage = { min = 6400 max = 6400 }
+			
+			shield_penetration = @SRA_weapon_penetration_4
+			armor_penetration = @SRA_weapon_penetration_4
+		}		
+		modifier = {
+			ship_shield_damage_mult = -0.5
+			ship_armor_damage_mult = -0.5
+			ship_hull_damage_mult = -0.5
+			ship_weapon_range_mult = -0.5
+		}
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_SRA_Rocivia_flag_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "SRA_Aura_6"
+	size = medium
+	icon = "GFX_SRA_T4_Computer"
+	icon_frame = 1
+	power = -2000
+	component_set = "ship_aura_components"
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	hidden = yes
+	hostile_aura = {
+		name = "SRA_Aura_6"
+		radius = 2000
+		apply_on = ships
+		
+		limit = {
+			is_in_combat = yes
+		}
+		stack_info = {			
+			id = SRA_Aura_6
+			priority = 200
+		}
+		damage_per_day = {
+			accuracy = 1.0
+			damage = { min = 6400 max = 6400 }
+			
+			shield_penetration = @SRA_weapon_penetration_4
+			armor_penetration = @SRA_weapon_penetration_4
+		}		
+		modifier = {
+			ship_weapon_range_mult = -0.3
+			ship_disengage_chance_reduction = 1
+			ship_evasion_mult = -2
+			ship_base_speed_mult = -0.3
+		}
+	}
+	#硬化
+	friendly_aura = {
+		name = "SRA_Aura_6_1"
+		radius = 2000
+		system_wide = yes
+		apply_on = ships
+		limit = { owner = { has_country_flag = SRA_SOGZ_menu_sub_1_1 } }
+		stack_info = {			
+			id = SRA_Aura_6_1
+			priority = 200
+		}
+		modifier = {
+			ship_shield_reduction = -1
+			ship_armor_reduction = -1
+			ship_shield_hardening_add = @SRA_ship_hardening_add_4
+			ship_armor_hardening_add = @SRA_ship_hardening_add_4
+		}
+	}
+	#恢复
+	friendly_aura = {
+		name = "SRA_Aura_6_3"
+		radius = 2000
+		system_wide = yes
+		apply_on = ships
+		limit = { owner = { has_country_flag = SRA_SOGZ_menu_sub_1_3 } }
+		stack_info = {			
+			id = SRA_Aura_6_3
+			priority = 200
+		}
+		modifier = {
+			ship_shield_regen_add_static = 256000
+			ship_armor_regen_add_static = 256000
+			ship_hull_regen_add_static = 256000
+		}
+	}
+	#进攻泛用
+	friendly_aura = {
+		name = "SRA_Aura_6_4"
+		radius = 2000
+		system_wide = yes
+		apply_on = ships
+		limit = { owner = { has_country_flag = SRA_SOGZ_menu_sub_3_1 } }
+		stack_info = {			
+			id = SRA_Aura_6_4
+			priority = 200
+		}
+		modifier = {
+			ship_shield_damage_mult = 0.5
+			ship_armor_damage_mult = 0.5
+			ship_hull_damage_mult = 0.5
+		}
+	}
+	#极限船体伤害
+	friendly_aura = {
+		name = "SRA_Aura_6_5"
+		radius = 2000
+		system_wide = yes
+		apply_on = ships
+		limit = { owner = { has_country_flag = SRA_SOGZ_menu_sub_3_2 } }
+		stack_info = {			
+			id = SRA_Aura_6_5
+			priority = 200
+		}
+		modifier = {
+			ship_shield_damage_mult = -2
+			ship_armor_damage_mult = -2
+			ship_hull_damage_mult = 4
+		}
+	}
+	#穿透
+	friendly_aura = {
+		name = "SRA_Aura_6_6"
+		radius = 2000
+		system_wide = yes
+		apply_on = ships
+		limit = { owner = { has_country_flag = SRA_SOGZ_menu_sub_3_3 } }
+		stack_info = {			
+			id = SRA_Aura_6_6
+			priority = 200
+		}
+		modifier = {
+			ship_armor_penetration_mult = 8
+			ship_shield_penetration_mult = 8
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#星规虚引力推进器
+utility_component_template = {
+	key = "SRA_T4_SHIP_Thruster"
+	size = small
+	icon = "GFX_SRA_T4_SHIP_Thruster"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	modifier = {
+		ship_base_speed_mult = 2
+		ship_evasion_add = 100
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	component_set = "thruster_components"
+}
+#星规探测器
+utility_component_template = {
+	key = "SRA_T4_Sensor"
+	size = medium
+	icon = "GFX_SRA_T4_Sensor"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	sensor_range = 15
+	hyperlane_range = 20
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	ship_modifier = {
+		ship_tracking_add = 100
+	}
+	
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	component_set = "sensor_components"
+}
+
+
+#星规反应堆
+utility_component_template = {
+	key = "SRA_T4_Reactor"
+	size = large
+	icon = "GFX_SRA_T4_Reactor"
+	icon_frame = 1
+	power = 8000000
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	component_set = "power_core"
+	#ftl_magnet = yes #超空间陷阱/超光速陷阱
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+utility_component_template = {
+	key = "SRA_T4_Reactor_Core"
+	size = large
+	icon = "GFX_SRA_T4_Reactor"
+	icon_frame = 1
+	power = 8000000
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	component_set = "power_core"
+	hidden = yes
+	triggered_ship_modifier = {
+		potential = { always = yes }
+		ship_damage_reduction_add = 0.01
+		mult = trigger:has_max_hp
+	}
+	custom_tooltip = SRA_ship_damage_reduction_001
+	ai_weight = {
+		weight = 0
+	}
+}
+#星规跃迁引擎
+utility_component_template = {
+	key = "SRA_T4_Jump"
+	size = small
+	icon = "GFX_SRA_T4_Jump"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -2
+		ship_winddown_mult = -2
+		relay_bypass_ship_windup_mult = 2
+		ship_ftl_jumpdrive_range_mult = 8
+		ship_jumpdrive_cooldown_mult = -2
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	component_set = "ftl_components"
+}
+
+
+#星规作战电脑
+
+utility_component_template = {
+	key = "SRA_T4_Computer"
+	size = small
+	icon = "GFX_SRA_T4_Computer"
+	icon_frame = 1
+	scripted_action = {
+		SRA_ship_auto_attack_planet
+		SRA_ship_auto_attack_fleet
+	}
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	upgrade_path = SRA_Computer
+	component_set = "combat_computers"
+	ship_behavior = "SRA_longrange_behavior"
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	potential = {
+		NOR = {
+			is_ship_class = shipclass_military_station
+			ship_uses_starbase_components = yes
+			is_arkship_ship = yes
+		}
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_weapon_range_mult = 0.5
+		ship_accuracy_add = 50
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+utility_component_template = {
+	key = "SRA_T4_Platform_Computer"
+	size = small
+	icon = "GFX_SRA_T4_Computer"
+	icon_frame = 1
+	scripted_action = {
+		SRA_ship_auto_attack_planet
+		SRA_ship_auto_attack_fleet
+	}
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	upgrade_path = SRA_Computer
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	potential = {
+		OR = {
+			ship_uses_starbase_components = yes
+			is_ship_class = shipclass_military_station
+		}
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_weapon_range_mult = 0.5
+		ship_accuracy_add = 50
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+utility_component_template = {
+	key = "SRA_T4_swarm_Computer"
+	size = small
+	icon = "GFX_SRA_T4_Computer"
+	icon_frame = 1
+	scripted_action = {
+		SRA_ship_auto_attack_planet
+		SRA_ship_auto_attack_fleet
+	}
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	upgrade_path = SRA_Computer
+	component_set = "combat_computers"
+	ship_behavior = "SRA_swarm_behavior"
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	potential = {
+		NOR = {
+			is_ship_class = shipclass_military_station
+			ship_uses_starbase_components = yes
+			is_arkship_ship = yes
+		}
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_weapon_range_mult = 0.5
+		ship_accuracy_add = 50
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+utility_component_template = {
+	key = "SRA_T4_science_Computer"
+	size = small
+	icon = "GFX_SRA_T4_Computer"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	upgrade_path = SRA_Computer
+	component_set = "combat_computers"
+	ship_behavior = "SRA_longrange_behavior"
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	hidden = yes
+	ship_modifier = {
+		science_ship_survey_speed = 0.5
+		ship_archaeological_site_clues_add = 2
+		ship_astral_rift_clues_add = 2
+		ship_anomaly_generation_chance_mult = 0.5
+		ship_anomaly_research_speed_mult = 1
+		ship_astral_rift_speed_mult = 1
+		ship_archaeological_site_excavation_speed_mult = 1
+	}
+	scripted_action = {
+		SRA_ship_auto_attack_planet
+		SRA_ship_auto_attack_fleet
+		SRA_science_ship_scripted_action
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "SRA_T4_ark_Computer"
+	size = small
+	icon = "GFX_SRA_T4_Computer"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	upgrade_path = SRA_Computer
+	component_set = "combat_computers"
+	ship_behavior = "SRA_ark_behavior"
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	potential = {
+		is_ship_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_weapon_range_mult = 0.5
+		ship_accuracy_add = 50
+	}
+	
+	scripted_action = {
+		SRA_ship_auto_attack_planet
+		SRA_ship_auto_attack_fleet
+		arkship_build_megastructure
+		arkship_survey
+		SRA_arkship_deep_scan
+		arkship_harvest_resources
+		SRA_arkship_strip_mine
+		SRA_arkship_subspace_image
+		SRA_arkship_reprocess_planet
+		SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+#星规a槽部件
+utility_component_template = {
+	key = "SRA_T4_Armor_Intensifier"
+	size = aux
+	icon = "GFX_SRA_T4_Armor_Intensifier"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	modifier = {
+		ship_armor_mult = 0.5
+		ship_shield_mult = 0.5
+		ship_cloaking_strength_add = 16
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_4
+	}
+	# triggered_ship_modifier = {
+	# 	potential = { always = yes }
+	# 	ship_damage_reduction_add = 0.1
+	# 	mult = trigger:has_shield_hp
+	# }
+	# custom_tooltip = SRA_ship_damage_reduction_shield
+	prerequisites = {
+		"tech_SRA_T4_ship_Part"
+	}
+	component_set = "SRA_T4_Armor_Intensifier"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "SRA_T4_Weapon_Intensifier"
+	size = aux
+	icon = "GFX_SRA_T4_Weapon_Intensifier"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	ship_modifier = {
+		ship_shield_damage_mult = 0.2
+		ship_armor_damage_mult = 0.2
+		ship_hull_damage_mult = 0.2
+	}
+	prerequisites = {
+		"tech_SRA_T4_ship_Part"
+	}
+	component_set = "SRA_T4_Weapon_Intensifier"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SRA_T4_Auxiliarm_Motor"
+	size = aux
+	icon = "GFX_SRA_T4_Auxiliarm_Motor"
+	icon_frame = 1
+	power = -300
+	resources = {
+		category = ship_components
+	}
+	modifier = {
+		ship_speed_mult = 0.5
+		ship_evasion_mult = 0.5
+	}
+
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	component_set = "SRA_T4_Auxiliarm_Motor"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+####T3######
+#护盾
+utility_component_template = {
+	key = "SMALL_SRA_T3_ship_Part_Shield"
+	size = small
+	icon = "GFX_SRA_T3_ship_Part"
+	icon_frame = 1
+	power = -100
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+		ship_shield_add = @SRA_ship_part_hull_add_4
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_3
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_T3_ship_Part_Shield"
+	size = medium
+	icon = "GFX_SRA_T3_ship_Part"
+	icon_frame = 1
+	power = -200
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+		ship_shield_add = @SRA_ship_part_hull_add_5
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_4
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_T3_ship_Part_Shield"
+	size = large
+	icon = "GFX_SRA_T3_ship_Part"
+	icon_frame = 1
+	power = -400
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_5
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+		ship_shield_add = @SRA_ship_part_hull_add_6
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_6
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_5
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#装甲
+utility_component_template = {
+	key = "SMALL_SRA_T3_ship_Part_Armor"
+	size = small
+	icon = "GFX_SRA_T3_Armor"
+	icon_frame = 1
+	power = -50
+	modifier = {
+		ship_armor_add = @SRA_ship_part_hull_add_4
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+		ship_hull_add = @SRA_ship_part_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_3
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_T3_ship_Part_Armor"
+	size = medium
+	icon = "GFX_SRA_T3_Armor"
+	icon_frame = 1
+	power = -100
+	modifier = {
+		ship_armor_add = @SRA_ship_part_hull_add_5
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+		ship_hull_add = @SRA_ship_part_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_4
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_T3_ship_Part_Armor"
+	size = large
+	icon = "GFX_SRA_T3_Armor"
+	icon_frame = 1
+	power = -200
+	modifier = {
+		ship_armor_add = @SRA_ship_part_hull_add_6
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_6
+		ship_hull_add = @SRA_ship_part_hull_add_5
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = @SRA_ship_part_damage_reduction_add_5
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_2
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+#甲槽反应堆
+utility_component_template = {
+	key = "SMALL_SRA_T3_ship_Part_Reactor"
+	size = small
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1
+	power = 500
+	modifier = {
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Reactor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_T3_ship_Part_Reactor"
+	size = medium
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1
+	power = 1000
+	modifier = {
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Reactor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_T3_ship_Part_Reactor"
+	size = large
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1
+	power = 2000
+	modifier = {
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "SRA_T3_ship_Part_Reactor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+#探测器
+utility_component_template = {
+	key = "SRA_T3_Sensor"
+	size = medium
+	icon = "GFX_SRA_T3_Sensor"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+	}
+	sensor_range = 10
+	hyperlane_range = 15
+	
+	ship_modifier = {
+		ship_tracking_add = 50
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "sensor_components"
+}
+
+#跃迁引擎
+utility_component_template = {
+	key = "SRA_T3_Jump"
+	size = small
+	icon = "GFX_SRA_T3_Jump"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -1
+		ship_winddown_mult = -1
+		relay_bypass_ship_windup_mult = 1
+		ship_ftl_jumpdrive_range_mult = 4
+		ship_jumpdrive_cooldown_mult = -1
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 150
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "ftl_components"
+}
+
+#作战电脑
+
+utility_component_template = {
+	key = "SRA_T3_Computer"
+	size = small
+	icon = "GFX_SRA_T3_Computer"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+	}
+	upgrade_path = SRA_Computer
+	component_set = "combat_computers"
+	ship_behavior = "SRA_longrange_behavior"
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	potential = {
+		NOR = {
+			is_arkship_ship = yes
+		}
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.3
+		ship_weapon_range_mult = 0.3
+		ship_accuracy_add = 30
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+#推进器
+utility_component_template = {
+	key = "SRA_T3_SHIP_Thruster"
+	size = small
+	icon = "GFX_SRA_T3_SHIP_Thruster"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+	}
+	modifier = {
+		ship_base_speed_mult = 1
+		ship_evasion_add = 50
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 150
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "thruster_components"
+}
+#光环
+utility_component_template = {
+	key = "SRA_T3_Aura_1"
+	size = medium
+	icon = "GFX_SRA_T3_Aura_1"
+	icon_frame = 1
+	power = -1000
+	component_set = "ship_aura_components"
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	hostile_aura = {
+		name = "SRA_T3_Aura_1_1"
+		radius = 2000
+		apply_on = ships
+		
+		stack_info = {			
+			id = SRA_Aura_2_1
+			priority = 100
+		}
+		
+		modifier = {
+			ship_weapon_range_mult = -0.2
+			ship_armor_penetration_mult = -1
+			ship_shield_penetration_mult = -1
+			ship_accuracy_mult = -0.2
+			ship_tracking_mult = -0.2
+		}
+
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+#A槽组件
+utility_component_template = {
+	key = "SRA_T3_Armor_Intensifier"
+	size = aux
+	icon = "GFX_SRA_T3_Armor_Intensifier"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+	}
+	modifier = {
+		ship_armor_mult = 0.2
+		ship_shield_mult = 0.2
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @SRA_ship_part_hardening_add_3
+		ship_armor_hardening_add = @SRA_ship_part_hardening_add_3
+	}
+	prerequisites = {
+		"tech_SRA_T3_ship_Part"
+	}
+	component_set = "SRA_T3_Armor_Intensifier"
+	ai_weight = {
+		weight = 0
+	}
+}
+utility_component_template = {
+	key = "SRA_T3_Weapon_Intensifier"
+	size = aux
+	icon = "GFX_SRA_T3_Weapon_Intensifier"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+	}
+	ship_modifier = {
+		ship_shield_damage_mult = 0.1
+		ship_armor_damage_mult = 0.1
+		ship_hull_damage_mult = 0.1
+	}
+	prerequisites = {
+		"tech_SRA_T3_ship_Part"
+	}
+	component_set = "SRA_T3_Weapon_Intensifier"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+#反应堆
+utility_component_template = {
+	key = "CORVETTE_SRA_T3_Reactor"
+	size = small
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1
+	power = 800
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+	
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "power_core"
+	potential = {
+		ship_size_multiplier <= 5
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SRA_T3_Reactor"
+	size = small
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1
+	power = 1500
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+	
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "power_core"
+	potential = {
+		ship_size_multiplier >= 5
+		ship_size_multiplier <= 10
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SRA_T3_Reactor"
+	size = small
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1
+	power = 4000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+	
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "power_core"
+	potential = {
+		ship_size_multiplier >= 10
+		ship_size_multiplier <= 20
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SRA_T3_Reactor"
+	size = small
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1
+	power = 10000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+	
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "power_core"
+	potential = {
+		ship_size_multiplier >= 20
+		ship_size_multiplier <= 40
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SRA_T3_Reactor"
+	size = small
+	icon = "GFX_SRA_T3_Reactor"
+	icon_frame = 1
+	power = 30000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+	
+	prerequisites = { "tech_SRA_T3_ship_Part" }
+	component_set = "power_core"
+	potential = {
+		ship_size_multiplier > 8
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+}
+
+
+####T2######
+#护盾
+utility_component_template = {
+	key = "SMALL_SRA_T2_ship_Part_Shield"
+	size = small
+	icon = "GFX_SRA_T2_ship_Part"
+	icon_frame = 1
+	power = -100
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_2
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_2
+		ship_shield_add = @SRA_ship_part_hull_add_3
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+	}
+	upgrades_to = "SMALL_SRA_T3_ship_Part_Shield"
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+	component_set = "SRA_T2_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_T2_ship_Part_Shield"
+	size = medium
+	icon = "GFX_SRA_T2_ship_Part"
+	icon_frame = 1
+	power = -200
+	modifier = {
+	ship_hull_add = @SRA_ship_part_hull_add_3
+	ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+	ship_shield_add = @SRA_ship_part_hull_add_4
+	ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+	}
+	
+	upgrades_to = "MEDIUM_SRA_T3_ship_Part_Shield"
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+	component_set = "SRA_T2_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_T2_ship_Part_Shield"
+	size = large
+	icon = "GFX_SRA_T2_ship_Part"
+	icon_frame = 1
+	power = -400
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+		ship_shield_add = @SRA_ship_part_hull_add_5
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+	}
+	
+	upgrades_to = "LARGE_SRA_T3_ship_Part_Shield"
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+	component_set = "SRA_T2_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#装甲
+utility_component_template = {
+	key = "SMALL_SRA_T2_ship_Part_Armor"
+	size = small
+	icon = "GFX_SRA_T2_Armor"
+	icon_frame = 1
+	power = -50
+	modifier = {
+		ship_armor_add = @SRA_ship_part_hull_add_3
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+		ship_hull_add = @SRA_ship_part_hull_add_2
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_2
+	}
+	
+	upgrades_to = "SMALL_SRA_T3_ship_Part_Armor"
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+	component_set = "SRA_T2_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_T2_ship_Part_Armor"
+	size = medium
+	icon = "GFX_SRA_T2_Armor"
+	icon_frame = 1
+	power = -100
+	modifier = {
+	ship_armor_add = @SRA_ship_part_hull_add_4
+	ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+	ship_hull_add = @SRA_ship_part_hull_add_3
+	ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+	}
+	
+	upgrades_to = "MEDIUM_SRA_T3_ship_Part_Armor"
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+	component_set = "SRA_T2_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_T2_ship_Part_Armor"
+	size = large
+	icon = "GFX_SRA_T2_Armor"
+	icon_frame = 1
+	power = -200
+	modifier = {
+		ship_armor_add = @SRA_ship_part_hull_add_5
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_5
+		ship_hull_add = @SRA_ship_part_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+	}
+	
+	upgrades_to = "LARGE_SRA_T3_ship_Part_Armor"
+	prerequisites = { "tech_SRA_T2_ship_Part" }
+	component_set = "SRA_T2_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+####T1######
+#护盾
+utility_component_template = {
+	key = "SMALL_SRA_T1_ship_Part_Shield"
+	size = small
+	icon = "GFX_SRA_T1_ship_Part"
+	icon_frame = 1
+	power = -100
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_1
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_1
+		ship_shield_add = @SRA_ship_part_hull_add_2
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_2
+	}
+	upgrades_to = "SMALL_SRA_T2_ship_Part_Shield"
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+	component_set = "SRA_T1_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_T1_ship_Part_Shield"
+	size = medium
+	icon = "GFX_SRA_T1_ship_Part"
+	icon_frame = 1
+	power = -200
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_2
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_2
+		ship_shield_add = @SRA_ship_part_hull_add_3
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+	}
+	upgrades_to = "MEDIUM_SRA_T2_ship_Part_Shield"
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+	component_set = "SRA_T1_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_T1_ship_Part_Shield"
+	size = large
+	icon = "GFX_SRA_T1_ship_Part"
+	icon_frame = 1
+	power = -400
+	modifier = {
+		ship_hull_add = @SRA_ship_part_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+		ship_shield_add = @SRA_ship_part_hull_add_4
+		ship_shield_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+	}
+	upgrades_to = "LARGE_SRA_T2_ship_Part_Shield"
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+	component_set = "SRA_T1_ship_Part_Shield"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#装甲
+utility_component_template = {
+	key = "SMALL_SRA_T1_ship_Part_Armor"
+	size = small
+	icon = "GFX_SRA_T1_Armor"
+	icon_frame = 1
+	power = -50
+	modifier = {
+		ship_armor_add = @SRA_ship_part_hull_add_2
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_2
+		ship_hull_add = @SRA_ship_part_hull_add_1
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_1
+	}
+	upgrades_to = "SMALL_SRA_T2_ship_Part_Armor"
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+	component_set = "SRA_T1_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SRA_T1_ship_Part_Armor"
+	size = medium
+	icon = "GFX_SRA_T1_Armor"
+	icon_frame = 1
+	power = -100
+	modifier = {
+		ship_armor_add = @SRA_ship_part_hull_add_3
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+		ship_hull_add = @SRA_ship_part_hull_add_2
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_2
+	}
+	upgrades_to = "MEDIUM_SRA_T2_ship_Part_Armor"
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+	component_set = "SRA_T1_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SRA_T1_ship_Part_Armor"
+	size = large
+	icon = "GFX_SRA_T1_Armor"
+	icon_frame = 1
+	power = -200
+	modifier = {
+		ship_armor_add = @SRA_ship_part_hull_add_4
+		ship_armor_regen_add_static = @SRA_ship_part_hull_regen_add_static_4
+		ship_hull_add = @SRA_ship_part_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_part_hull_regen_add_static_3
+	}
+	upgrades_to = "LARGE_SRA_T2_ship_Part_Armor"
+	prerequisites = { "tech_SRA_T1_ship_Part" }
+	component_set = "SRA_T1_ship_Part_Armor"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+

@@ -1,0 +1,20 @@
+# SRA_powerword_death = {
+# 	fire_and_forget = yes
+# 	potential = {
+# 		from = {
+# 			is_ai = no
+# 		}
+# 	}
+# 	on_traded_effect = { destroy_country = yes }
+# 	ai_weight = { weight = -5000 }
+# }
+# SRA_powerword_death_2 = {
+# 	fire_and_forget = yes
+# 	potential = {
+# 		from = {
+# 			is_ai = no
+# 		}
+# 	}
+# 	on_traded_effect = {}
+# 	ai_weight = { weight = -100 }
+# }

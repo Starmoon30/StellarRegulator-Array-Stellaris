@@ -1,0 +1,228 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_gamma_station_frame_mesh"
+		file = "gfx/models/ships/SRA_gamma_ships/SRA_gamma_station_frame.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_gamma_station_frame_idle_animation" }
+		animation = { id = "death1" type = "SRA_gamma_station_frame_death1_animation" }
+		animation = { id = "death2" type = "SRA_gamma_station_frame_death2_animation" }
+		animation = { id = "death3" type = "SRA_gamma_station_frame_death3_animation" }
+
+		meshsettings = {
+			name = "pCubeShape1"
+			index = 0
+			texture_diffuse = "SRA_dummy_diffuse.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_gamma_station_1_mesh"
+		file = "gfx/models/ships/SRA_gamma_ships/SRA_gamma_station.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_gamma_station_idle_animation" }
+		animation = { id = "death" type = "SRA_gamma_station_death_animation" }
+
+		meshsettings = {
+			name = "core_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_core_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_core_normal.dds"
+			texture_specular = "SRA_gamma_station_core_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_hull_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_hull_normal.dds"
+			texture_specular = "SRA_gamma_station_hull_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "prism_b_top_4Shape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_prism_b_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_prism_b_normal.dds"
+			texture_specular = "SRA_gamma_station_prism_b_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ring_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_ring_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_ring_normal.dds"
+			texture_specular = "SRA_gamma_station_ring_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "pf_top_4Shape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_platform_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_platform_normal.dds"
+			texture_specular = "SRA_gamma_station_platform_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "prism_a_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_prism_a_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_prism_a_normal.dds"
+			texture_specular = "SRA_gamma_station_prism_a_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "SRA_gamma_station_dirty_mesh"
+		file = "gfx/models/ships/SRA_gamma_ships/SRA_gamma_station_dirty.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "core_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_core_dirty_diffuse.dds"
+			texture_normal = "SRA_gamma_station_core_dirty_normal.dds"
+			texture_specular = "SRA_gamma_station_core_dirty_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_hull_dirty_diffuse.dds"
+			texture_normal = "SRA_gamma_station_hull_dirty_normal.dds"
+			texture_specular = "SRA_gamma_station_hull_dirty_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "prism_a_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_prism_a_dirty_diffuse.dds"
+			texture_normal = "SRA_gamma_station_prism_a_dirty_normal.dds"
+			texture_specular = "SRA_gamma_station_prism_a_dirty_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ring_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_ring_dirty_diffuse.dds"
+			texture_normal = "SRA_gamma_station_ring_dirty_normal.dds"
+			texture_specular = "SRA_gamma_station_ring_dirty_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "prism_b_top_1Shape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_prism_b_dirty_diffuse.dds"
+			texture_normal = "SRA_gamma_station_prism_b_dirty_normal.dds"
+			texture_specular = "SRA_gamma_station_prism_b_dirty_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "pf_top_1Shape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_platform_dirty_diffuse.dds"
+			texture_normal = "SRA_gamma_station_platform_dirty_normal.dds"
+			texture_specular = "SRA_gamma_station_platform_dirty_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "SRA_gamma_station_small_moving_1_mesh"
+		file = "gfx/models/ships/SRA_gamma_ships/SRA_gamma_station_small_moving.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_gamma_station_small_moving_idle_animation" }
+		animation = { id = "death1" type = "SRA_gamma_station_small_moving_death1_animation" }
+		animation = { id = "death2" type = "SRA_gamma_station_small_moving_death2_animation" }
+		animation = { id = "death3" type = "SRA_gamma_station_small_moving_death3_animation" }
+
+		meshsettings = {
+			name = "core_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_core_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_core_normal.dds"
+			texture_specular = "SRA_gamma_station_core_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "pf_top_4Shape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_platform_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_platform_normal.dds"
+			texture_specular = "SRA_gamma_station_platform_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ring_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_ring_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_ring_normal.dds"
+			texture_specular = "SRA_gamma_station_ring_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "prism_a_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_station_prism_a_white_diffuse.dds"
+			texture_normal = "SRA_gamma_station_prism_a_normal.dds"
+			texture_specular = "SRA_gamma_station_prism_a_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "SRA_gamma_titan_1_mesh"
+		file = "gfx/models/ships/SRA_gamma_ships/SRA_gamma_titan.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_gamma_titan_idle_animation" }
+		animation = { id = "opening" type = "SRA_gamma_titan_opening_animation" }
+		animation = { id = "opened" type = "SRA_gamma_titan_opened_animation" }
+		animation = { id = "closing" type = "SRA_gamma_titan_closing_animation" }
+		animation = { id = "death1" type = "SRA_gamma_titan_death1_animation" }
+		animation = { id = "death2" type = "SRA_gamma_titan_death2_animation" }
+		animation = { id = "death3" type = "SRA_gamma_titan_death3_animation" }
+		animation = { id = "death4" type = "SRA_gamma_titan_death4_animation" }
+
+		meshsettings = {
+			name = "main_hullShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_titan_white_diffuse.dds"
+			texture_normal = "SRA_gamma_titan_normal.dds"
+			texture_specular = "SRA_gamma_titan_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "SRA_gamma_escort_1_mesh"
+		file = "gfx/models/ships/SRA_gamma_ships/SRA_gamma_escort.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_gamma_escort_idle_animation" }
+		animation = { id = "attack" type = "SRA_gamma_escort_attack_animation" }
+		animation = { id = "death1" type = "SRA_gamma_escort_death1_animation" }
+		animation = { id = "death2" type = "SRA_gamma_escort_death2_animation" }
+		animation = { id = "death3" type = "SRA_gamma_escort_death3_animation" }
+
+		meshsettings = {
+			name = "core_sectionShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_escort_white_diffuse.dds"
+			texture_normal = "SRA_gamma_escort_normal.dds"
+			texture_specular = "SRA_gamma_escort_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "floating_arm_topShape"
+			index = 0
+			texture_diffuse = "SRA_gamma_escort_white_diffuse.dds"
+			texture_normal = "SRA_gamma_escort_normal.dds"
+			texture_specular = "SRA_gamma_escort_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

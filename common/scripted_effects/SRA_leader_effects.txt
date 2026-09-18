@@ -1,0 +1,879 @@
+
+
+#can_manually_change_location = no 不能被任命到内阁之外
+#hide_leader = yes 不显示在领袖列表
+create_StellarRegulator_ruler = {
+	optimize_memory
+	create_leader = {
+		class = official
+		species = event_target:SRA_StellarRegulator_species
+		name = "Name_SRA_leader_StellarRegulator"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 14
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+		custom_description = SRA_StellarRegulator_backstory
+		background_ethic = ethic_materialist
+		hide_age = yes
+		traits = {
+			trait = subclass_official_economy_councilor
+			trait = leader_trait_SRA_ruler
+			trait = trait_ruler_charismatic_2
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_StellarRegulator_job
+			change_background_ethic = ethic_gestalt_consciousness
+			inline_script = {
+				script = scripted_effects/SRA_set_StellarRegulator_leader_portrait
+			}
+			owner = {
+				set_leader = prev
+			}
+			if = {
+				limit = { owner = { is_gestalt = yes } }
+				remove_subclass = yes
+				add_trait = { trait = subclass_official_economy_councilor show_message = no }
+				add_trait = { trait = leader_trait_SRA_ruler show_message = no }
+			}
+		}
+	}
+}
+create_StellarRegulator_governor = {
+	optimize_memory
+	create_leader = {
+		class = official
+		species = event_target:SRA_StellarRegulator_species
+		name = "Name_SRA_leader_StellarRegulator"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 14
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+		custom_description = SRA_StellarRegulator_backstory
+		background_ethic = ethic_materialist
+		hide_age = yes
+		traits = {
+			trait = subclass_official_governor
+			trait = leader_trait_SRA_gov
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_StellarRegulator_job
+			change_background_ethic = ethic_gestalt_consciousness
+			inline_script = {
+				script = scripted_effects/SRA_set_StellarRegulator_leader_portrait
+			}
+		}
+	}
+}
+
+create_StellarRegulator_scientist = {
+	optimize_memory
+	create_leader = {
+		class = scientist
+		species = event_target:SRA_StellarRegulator_species
+		name = "Name_SRA_leader_StellarRegulator"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 14
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+		custom_description = SRA_StellarRegulator_backstory
+		background_ethic = ethic_materialist
+		hide_age = yes
+		traits = {
+			trait = leader_trait_SRA_sci
+			trait = leader_trait_towel
+			trait = leader_trait_sapient_AI_assistant
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_StellarRegulator_job
+			change_background_ethic = ethic_gestalt_consciousness
+			inline_script = {
+				script = scripted_effects/SRA_set_StellarRegulator_leader_portrait
+			}
+		}
+	}
+}
+
+create_StellarRegulator_admiral = {
+	optimize_memory
+	create_leader = {
+		class = commander
+		species = event_target:SRA_StellarRegulator_species
+		name = "Name_SRA_leader_StellarRegulator"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 14
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+		custom_description = SRA_StellarRegulator_backstory
+		background_ethic = ethic_materialist
+		hide_age = yes
+		traits = {
+			trait = subclass_commander_admiral
+			trait = leader_trait_SRA_adm
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_StellarRegulator_job
+			change_background_ethic = ethic_gestalt_consciousness
+			inline_script = {
+				script = scripted_effects/SRA_set_StellarRegulator_leader_portrait
+			}
+		}
+	}
+}
+
+create_StellarRegulator_general = {
+	optimize_memory
+	create_leader = {
+		class = commander
+		species = event_target:SRA_StellarRegulator_species
+		name = "Name_SRA_leader_StellarRegulator"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 14
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+		custom_description = SRA_StellarRegulator_backstory
+		background_ethic = ethic_materialist
+		hide_age = yes
+		traits = {
+			trait = subclass_commander_councilor
+			trait = leader_trait_SRA_gen
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_StellarRegulator_job
+			change_background_ethic = ethic_gestalt_consciousness
+			inline_script = {
+				script = scripted_effects/SRA_set_StellarRegulator_leader_portrait
+			}
+		}
+	}
+}
+
+
+
+create_SRA_Adjudicator = {
+	optimize_memory
+	if = {
+		limit = {
+			owner = { OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			} }
+		}
+		create_fleet = {
+			name = "NAME_SRA_Adjudicator"
+			effect = {
+                set_owner = event_target:StellarRegulator_own_country
+				create_ship = {
+					name = "NAME_SRA_Adjudicator"
+					design = "NAME_SRA_Adjudicator"
+					upgradable = no
+				}			
+                set_location = {
+                    target = event_target:SRA_Adjudicator_capital_location
+                    distance = 0
+                    angle = random
+                }
+                set_fleet_stance = aggressive
+            }	
+		}						
+	}					
+}
+
+
+
+create_StellarRegulator_scientist_ag = {
+	optimize_memory
+	create_leader = {
+		class = scientist
+		species = event_target:SRA_StellarRegulator_species
+		name = "Name_SRA_leader_StellarRegulator"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 14
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+		custom_description = SRA_StellarRegulator_backstory
+		background_ethic = ethic_materialist
+		hide_age = yes
+		traits = {
+			trait = leader_trait_SRA_sci
+			trait = leader_trait_towel
+			trait = leader_trait_sapient_AI_assistant
+			trait = leader_trait_spark_of_genius
+			trait = leader_trait_SRA_ag_StarLightII_sci1
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_StellarRegulator_job
+			change_background_ethic = ethic_gestalt_consciousness
+			inline_script = {
+				script = scripted_effects/SRA_set_StellarRegulator_leader_portrait
+			}
+		}
+	}
+}
+
+create_StellarRegulator_admiral_ag = {
+	optimize_memory
+	create_leader = {
+		class = commander
+		species = event_target:SRA_StellarRegulator_species
+		name = "Name_SRA_leader_StellarRegulator"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 14
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+		custom_description = SRA_StellarRegulator_backstory
+		background_ethic = ethic_materialist
+		hide_age = yes
+		traits = {
+			trait = subclass_commander_admiral
+			trait = leader_trait_SRA_adm
+			trait = leader_trait_SRA_ag_StarLightII_adm1
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_StellarRegulator_job
+			change_background_ethic = ethic_gestalt_consciousness
+			inline_script = {
+				script = scripted_effects/SRA_set_StellarRegulator_leader_portrait
+			}
+		}
+	}
+}
+
+#################
+######帝国线######
+#################
+
+create_SRA_RE_Rocivia_ruler = {
+	optimize_memory
+	create_leader = {
+		class = official
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_RE_leader_Rocivia"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 16
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_RE_Rocivia_catch_phrase
+		custom_description = SRA_RE_Rocivia_backstory
+		background_ethic = ethic_materialist
+		hide_age = yes
+		traits = {
+			trait = subclass_official_economy_councilor
+			trait = leader_trait_SRA_RE_ruler1
+			trait = leader_trait_SRA_RE_ruler2
+			trait = leader_trait_psionic
+			trait = leader_trait_legendary_natural_ruler
+		}
+		effect = {
+			set_leader_flag = restored_node
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_RE_Rocivia_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 202 }
+			if = {
+				limit = {
+					owner.ruler = {
+						has_trait = leader_trait_legendary_leader
+					}
+				}
+				owner.ruler = {
+					remove_trait = leader_trait_legendary_leader
+					remove_leader_flag = paragon_origin_legendary_leader
+				}
+				set_leader_flag = paragon_origin_legendary_leader
+				add_trait = { trait = leader_trait_legendary_leader show_message = no }
+			}
+			owner = {
+				set_leader = prev
+				every_owned_leader = {
+					limit = {
+						has_trait = leader_trait_SRA_RE_ruler1
+						NOT = { is_same_value = ruler }
+					}
+					kill_leader = { show_notification = no fire = yes }
+				}
+			}
+			if = {
+				limit = { owner = { is_gestalt = yes } }
+				remove_subclass = yes
+				add_trait = { trait = subclass_official_economy_councilor show_message = no }
+				add_trait = { trait = leader_trait_SRA_RE_ruler1 show_message = no }
+				add_trait = { trait = leader_trait_SRA_RE_ruler2 show_message = no }
+				add_trait = { trait = leader_trait_legendary_natural_ruler show_message = no }
+			}
+		}
+	}
+}
+create_SRA_RE_Hidra_governor = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			OR = {
+				has_trait = leader_trait_SRA_RE_Hidra_sci
+				has_trait = leader_trait_SRA_RE_Hidra_adm
+				has_trait = leader_trait_SRA_RE_Hidra_gen
+			}
+		}
+		kill_leader = { show_notification = no fire = yes }
+	}
+	create_leader = {
+		class = official
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_RE_leader_Hidra"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 16
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_RE_Hidra_catch_phrase
+		custom_description = SRA_RE_Hidra_backstory
+		background_ethic = ethic_fanatic_spiritualist
+		hide_age = yes
+		traits = {
+			trait = subclass_official_governor
+			trait = leader_trait_SRA_RE_Hidra_gov
+			trait = leader_trait_retired_fleet_officer
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_RE_Hidra_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 302 }
+		}
+	}
+}
+create_SRA_RE_Hidra_scientist = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			OR = {
+				has_trait = leader_trait_SRA_RE_Hidra_gov
+				has_trait = leader_trait_SRA_RE_Hidra_adm
+				has_trait = leader_trait_SRA_RE_Hidra_gen
+			}
+		}
+		kill_leader = { show_notification = no fire = yes }
+	}
+	create_leader = {
+		class = scientist
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_RE_leader_Hidra"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 16
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_RE_Hidra_catch_phrase
+		custom_description = SRA_RE_Hidra_backstory
+		background_ethic = ethic_fanatic_spiritualist
+		hide_age = yes
+		traits = {
+			trait = leader_trait_SRA_RE_Hidra_sci
+			trait = leader_trait_towel
+			trait = leader_trait_sapient_AI_assistant
+			trait = leader_trait_spark_of_genius
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_RE_Hidra_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 302 }
+		}
+	}
+}
+create_SRA_RE_Hidra_admiral = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			OR = {
+				has_trait = leader_trait_SRA_RE_Hidra_gov
+				has_trait = leader_trait_SRA_RE_Hidra_sci
+				has_trait = leader_trait_SRA_RE_Hidra_gen
+			}
+		}
+		kill_leader = { show_notification = no fire = yes }
+	}
+	create_leader = {
+		class = commander
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_RE_leader_Hidra"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 16
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_RE_Hidra_catch_phrase
+		custom_description = SRA_RE_Hidra_backstory
+		background_ethic = ethic_fanatic_spiritualist
+		hide_age = yes
+		traits = {
+			trait = subclass_commander_admiral
+			trait = leader_trait_SRA_RE_Hidra_adm
+			trait = leader_trait_cautious
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_RE_Hidra_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 302 }
+		}
+	}
+}
+create_SRA_RE_Hidra_general = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			OR = {
+				has_trait = leader_trait_SRA_RE_Hidra_gov
+				has_trait = leader_trait_SRA_RE_Hidra_sci
+				has_trait = leader_trait_SRA_RE_Hidra_adm
+			}
+		}
+		kill_leader = { show_notification = no fire = yes }
+	}
+	create_leader = {
+		class = commander
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_RE_leader_Hidra"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 16
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_RE_Hidra_catch_phrase
+		custom_description = SRA_RE_Hidra_backstory
+		background_ethic = ethic_fanatic_spiritualist
+		hide_age = yes
+		traits = {
+			trait = subclass_commander_councilor
+			trait = leader_trait_SRA_RE_Hidra_gen
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_RE_Hidra_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 302 }
+		}
+	}
+}
+
+create_SRA_RE_Hidra_scientist_ag = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			OR = {
+				has_trait = leader_trait_SRA_RE_Hidra_gov
+				has_trait = leader_trait_SRA_RE_Hidra_adm
+				has_trait = leader_trait_SRA_RE_Hidra_gen
+			}
+		}
+		kill_leader = { show_notification = no fire = yes }
+	}
+	create_leader = {
+		class = scientist
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_RE_leader_Hidra"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 16
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_RE_Hidra_catch_phrase
+		custom_description = SRA_RE_Hidra_backstory
+		background_ethic = ethic_fanatic_spiritualist
+		hide_age = yes
+		traits = {
+			trait = leader_trait_SRA_RE_Hidra_sci
+			trait = leader_trait_SRA_ag_StarLightII_sci1
+			trait = leader_trait_towel
+			trait = leader_trait_sapient_AI_assistant
+			trait = leader_trait_spark_of_genius
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_RE_Hidra_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 302 }
+		}
+	}
+}
+
+create_SRA_RE_Hidra_admiral_ag = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			OR = {
+				has_trait = leader_trait_SRA_RE_Hidra_gov
+				has_trait = leader_trait_SRA_RE_Hidra_sci
+				has_trait = leader_trait_SRA_RE_Hidra_gen
+			}
+		}
+		kill_leader = { show_notification = no fire = yes }
+	}
+	create_leader = {
+		class = commander
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_RE_leader_Hidra"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 16
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_RE_Hidra_catch_phrase
+		custom_description = SRA_RE_Hidra_backstory
+		background_ethic = ethic_fanatic_spiritualist
+		hide_age = yes
+		traits = {
+			trait = subclass_commander_admiral
+			trait = leader_trait_SRA_RE_Hidra_adm
+			trait = leader_trait_SRA_ag_StarLightII_adm1
+			trait = leader_trait_cautious
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_RE_Hidra_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 302 }
+		}
+	}
+}
+
+
+create_SRA_Rokia_1_scientist = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			OR = {
+				has_trait = leader_trait_SRA_Rokia_sci
+			}
+		}
+		kill_leader = { show_notification = no fire = yes }
+	}
+	every_owned_ship = {
+		limit = {
+			is_ship_size = SRA_Rokia_dragon_Ship
+		}
+		delete_ship = this
+	}
+	create_leader = {
+		class = scientist
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_Rokia_1"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 23
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_Rokia_1_catch_phrase
+		custom_description = SRA_Rokia_1_backstory
+		background_ethic = ethic_gestalt_consciousness
+		hide_age = yes
+		traits = {
+			trait = subclass_scientist_scholar
+			trait = leader_trait_SRA_Rokia_sci
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_world_machine_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 402 }
+			freeze_leader_age = yes
+		}
+	}
+	create_fleet = {
+		name = "Name_SRA_Rokia_1"
+		settings = {
+			can_upgrade = no
+			can_change_composition = no
+			can_change_leader = no
+			can_disband = no
+			spawn_debris = no
+		}
+		effect = {
+			set_owner = root
+			create_ship = {
+				design = NAME_SRA_Rokia_dragon_Ship
+				name = "Name_SRA_Rokia_1"
+				prefix = no
+				upgradable = no
+				effect = {
+					set_ship_flag = SRA_Rokia_dragon_Ship
+					save_global_event_target_as = SRA_Rokia_dragon_Ship
+				}
+			}
+			set_fleet_stance = passive
+			set_location = root.capital_scope
+			assign_leader = last_created_leader
+		}
+	}
+}
+create_SRA_Rokia_1_ruler = {
+	optimize_memory
+	create_leader = {
+		class = scientist
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_Rokia_1"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 23
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_Rokia_1_catch_phrase
+		custom_description = SRA_Rokia_1_backstory
+		background_ethic = ethic_gestalt_consciousness
+		hide_age = yes
+		traits = {
+			trait = subclass_scientist_councilor
+			trait = leader_trait_SRA_Rokia_1_ruler
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_world_machine_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 402 }
+			freeze_leader_age = yes
+			owner = {
+				set_leader = prev
+			}
+			if = {
+				limit = { owner = { is_gestalt = yes } }
+				remove_subclass = yes
+				add_trait = { trait = subclass_scientist_councilor show_message = no }
+				add_trait = { trait = leader_trait_SRA_Rokia_1_ruler show_message = no }
+			}
+		}
+	}
+}
+create_SRA_Rokia_2_ruler = {
+	optimize_memory
+	create_leader = {
+		class = scientist
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_Rokia_2"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 23
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_Rokia_2_catch_phrase
+		custom_description = SRA_Rokia_2_backstory
+		background_ethic = ethic_gestalt_consciousness
+		hide_age = yes
+		traits = {
+			trait = subclass_scientist_councilor
+			trait = leader_trait_SRA_Rokia_ruler
+			trait = leader_trait_psionic
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_world_machine_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 402 }
+			freeze_leader_age = yes
+			owner = {
+				set_leader = prev
+			}
+			if = {
+				limit = { owner = { is_gestalt = yes } }
+				remove_subclass = yes
+				add_trait = { trait = subclass_scientist_councilor show_message = no }
+				add_trait = { trait = leader_trait_SRA_Rokia_ruler show_message = no }
+			}
+		}
+	}
+}
+
+create_SRA_Irrica_official = {
+	optimize_memory
+	create_leader = {
+		class = official
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_Irrica"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 21
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_Irrica_catch_phrase
+		custom_description = SRA_Irrica_backstory
+		background_ethic = ethic_fanatic_materialist
+		hide_age = yes
+		traits = {
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_world_machine_job
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 1001 }
+		}
+	}
+}
+
+
+create_SRA_Bard_of_Metarbor_fleet = {
+	optimize_memory
+	create_leader = {
+		class = commander
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_Bard_of_Metarbor"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 18
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_Bard_of_Metarbor_catch_phrase
+		custom_description = SRA_Bard_of_Metarbor_backstory
+		background_ethic = ethic_fanatic_authoritarian
+		hide_age = yes
+		traits = {
+			trait = subclass_commander_admiral
+			trait = leader_trait_SRA_Abyss_Erosion_Alter
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_Bard_of_Metarbor_job
+			change_background_ethic = ethic_gestalt_consciousness
+			set_variable = { which = SRA_SD_element_forge_value value = root.SRA_SD_element_forge_value }
+			set_variable = { which = SRA_SD_element_edge_value value = root.SRA_SD_element_edge_value }
+			set_variable = { which = SRA_SD_element_stone_value value = root.SRA_SD_element_stone_value }
+			set_variable = { which = SRA_SD_element_lantern_value value = root.SRA_SD_element_lantern_value }
+			set_variable = { which = SRA_SD_element_chalice_value value = root.SRA_SD_element_chalice_value }
+			set_variable = { which = SRA_SD_element_secret_value value = root.SRA_SD_element_secret_value }
+			set_variable = { which = SRA_SD_element_stone_days value = root.SRA_SD_element_stone_value }
+			multiply_variable = { which = SRA_SD_element_stone_days value = 100 }
+			leader_event = { id = SRA_SD_event.99 days = SRA_SD_element_stone_days }
+			add_timed_trait = { trait = leader_trait_SRA_SD_Bard_of_Metarbor days = SRA_SD_element_stone_days }
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 601 }
+		}
+	}
+}
+create_SRA_Bard_of_Metarbor_army = {
+	optimize_memory
+	create_leader = {
+		class = commander
+		species = event_target:SRA_RE_species
+		name = "Name_SRA_Bard_of_Metarbor"
+		event_leader = yes
+		gender = female
+		immortal = yes
+		skill = 10
+		set_age = 18
+		skip_background_generation = yes
+		custom_catch_phrase = SRA_Bard_of_Metarbor_catch_phrase
+		custom_description = SRA_Bard_of_Metarbor_backstory
+		background_ethic = ethic_fanatic_authoritarian
+		hide_age = yes
+		traits = {
+			trait = subclass_commander_general
+			trait = leader_trait_SRA_Abyss_Erosion_Alter
+		}
+		effect = {
+			set_leader_flag = leader_death_events_blocked
+			set_leader_tier = leader_tier_legendary
+			set_leader_flag = immune_to_negative_traits
+			change_background_job = SRA_Bard_of_Metarbor_job
+			change_background_ethic = ethic_gestalt_consciousness
+			set_variable = { which = SRA_SD_element_forge_value value = root.SRA_SD_element_forge_value }
+			set_variable = { which = SRA_SD_element_edge_value value = root.SRA_SD_element_edge_value }
+			set_variable = { which = SRA_SD_element_stone_value value = root.SRA_SD_element_stone_value }
+			set_variable = { which = SRA_SD_element_lantern_value value = root.SRA_SD_element_lantern_value }
+			set_variable = { which = SRA_SD_element_chalice_value value = root.SRA_SD_element_chalice_value }
+			set_variable = { which = SRA_SD_element_secret_value value = root.SRA_SD_element_secret_value }
+			set_variable = { which = SRA_SD_element_stone_days value = root.SRA_SD_element_stone_value }
+			multiply_variable = { which = SRA_SD_element_stone_days value = 100 }
+			leader_event = { id = SRA_SD_event.99 days = SRA_SD_element_stone_days }
+			add_timed_trait = { trait = leader_trait_SRA_SD_Bard_of_Metarbor days = SRA_SD_element_stone_days }
+			change_leader_portrait = SRA_portrait
+			set_variable = { which = SRA_portrait_clothes_var value = 601 }
+		}
+	}
+}
+

@@ -1,0 +1,1054 @@
+
+SRA_GZ_Core = {
+	entity = "SRA_GZ_Core_station_entity"
+	portrait = "GFX_SRA_GZ_Core"
+	build_time = 36000
+	country_modifier = {
+		country_produces_mult = 0.2
+		country_naval_cap_add = 2000
+		fleet_mia_time_mult = -0.6
+		country_resource_max_astral_threads_add = 40000
+	}
+	station_modifier = {
+		catapult_spread_base = 2
+		catapult_range_base = 6400
+		quantum_catapult_megastructure_bypass_windup_mult = -1
+	}
+	bypass_type = quantum_catapult
+	show_galactic_map_icon = no
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000000
+			astral_threads = 40000000
+		}
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_civic = civic_SRAtechnology
+						has_country_flag = SRA_RE_GE_Core_enabled
+					}
+				}
+			}
+			energy = 20000
+			astral_threads = 400
+		}
+	}
+	potential = {
+		always = no
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	show_prereqs = yes
+
+	on_build_complete = {
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+SRA_GZ_Core_0 = {
+	entity = "SRA_GZ_Core_station_entity"
+	portrait = "GFX_SRA_GZ_Core"
+	build_time = 36000
+	country_modifier = {
+		country_naval_cap_add = 200
+	}
+	show_galactic_map_icon = no
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000000
+			astral_threads = 40000000
+		}
+		produces = {
+			energy = 2000
+			astral_threads = 20
+		}
+	}
+
+	potential = {
+		always = no
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	show_prereqs = yes
+
+	on_build_complete = {
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+SRA_GZ_Core_1 = {
+	entity = "SRA_GZ_Core_station_entity"
+	portrait = "GFX_SRA_GZ_Core"
+	build_time = 3600
+	country_modifier = {
+		country_naval_cap_add = 1000
+		country_resource_max_astral_threads_add = 40000
+	}
+	station_modifier = {
+		catapult_spread_base = 20
+		catapult_range_base = 640
+		quantum_catapult_megastructure_bypass_windup_mult = -0.8
+	}
+	bypass_type = quantum_catapult
+	show_prereqs = no
+	show_galactic_map_icon = no
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 400000
+			astral_threads = 40000
+		}
+		produces = {
+			energy = 8000
+			astral_threads = 160
+		}
+	}
+	prerequisites = { "tech_SRA_GZ_repair" }
+	show_prereqs = yes
+
+	upgrade_from = {
+		SRA_GZ_Core_0
+	}
+	on_build_complete = {
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+SRA_GZ_Core_2 = {
+	entity = "SRA_GZ_Core_station_entity"
+	portrait = "GFX_SRA_GZ_Core"
+	build_time = 3600
+	country_modifier = {
+		country_produces_mult = 0.2
+		country_naval_cap_add = 2000
+		fleet_mia_time_mult = -0.6
+		country_resource_max_astral_threads_add = 40000
+	}
+	show_prereqs = no
+	show_galactic_map_icon = no
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 400000
+			astral_threads = 40000
+		}
+		produces = {
+			energy = 20000
+			astral_threads = 400
+		}
+	}
+
+	prerequisites = { "tech_SRA_GZ_repair" }
+	show_prereqs = yes
+
+	upgrade_from = {
+		SRA_GZ_Core_1
+	}
+	on_build_complete = {
+		spawn_megastructure = { 
+			type = "SRA_GZ_Core" 
+			# graphical_culture = "mammalian_01"
+			coords_from = fromfrom
+			init_effect = {
+				set_owner = from
+				save_event_target_as = SRA_GZ_Core
+			}
+		}
+		remove_megastructure = fromfrom
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+SRA_RE_SOGZ_Repair_1 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -7 y = -7 }
+	build_time = 18000
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 500000
+			unity = 100000
+		}
+	}
+
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+
+	upgrade_from = {
+		SRA_RE_SOGZ_Repair_1
+	}
+
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 0
+	}
+}
+SRA_RE_SOGZ_Repair_2 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -7 y = -7 }
+	build_time = 360
+	resources = {
+		category = megastructures
+		cost = {
+			energy = 40000
+			alloys = 8000
+			astral_threads = 4000
+		}
+	}
+	upgrade_from = {
+		SRA_RE_SOGZ_Repair_1
+	}
+	on_build_complete = {
+		owner = {
+			country_event = {
+				id = SRA_RE_SOGZ.36
+			}
+		}
+		remove_megastructure = fromfrom
+	}
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 0
+	}
+}
+
+
+SRA_GZ_Platform_megastructure_0 = {
+	entity = "SRA_GZ_Platform_hull_entity"
+	construction_entity = "SRA_GZ_Platform_hull_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_type = inside_gravity_well
+	show_galactic_map_icon = no
+	show_in_outliner = no
+	construction_blocks_and_blocked_by = none
+
+	entity_offset = { x = -7 y = -7 }
+	build_time = 360
+	potential = {
+		OR = {
+			has_civic = civic_SRARociviaEmpire
+			has_civic = civic_SRAtechnology
+		}
+	}
+	resources = {
+		category = megastructures
+		cost = { alloys = 48000 }
+	}
+	prerequisites = { "tech_SRA_T4_ship_Part" }
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system" # or is in my subject's territory
+			OR = {
+				NOT = {
+					any_system_planet = {
+						is_surveyed = {
+							who = prev.from
+							status = no
+						}
+					}
+				}
+				AND = {
+					exists = owner
+					owner = {
+						is_subject = yes
+						overlord = { is_same_value = from }
+					}
+				}
+			}
+		}
+	}
+
+	placement_rules = {}
+
+	ai_weight = {
+		factor = 10
+	}
+	# on_build_start = {}
+	# on_build_cancel = {}
+	on_build_complete = {
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = from
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = fromfrom
+					distance = 0
+					angle = random
+				}
+			}
+		}
+		remove_megastructure = fromfrom
+	}
+}
+SRA_Barrier_Guard_Station_megastructure_0 = {
+	entity = "SRA_Barrier_Guard_Station_hull_entity"
+	construction_entity = "SRA_Barrier_Guard_Station_hull_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	show_galactic_map_icon = no
+	show_in_outliner = no
+	construction_blocks_and_blocked_by = none
+	build_type = inside_gravity_well
+	entity_offset = { x = -7 y = -7 }
+	build_time = 1800
+	potential = {
+		OR = {
+			has_civic = civic_SRARociviaEmpire
+			has_civic = civic_SRAtechnology
+		}
+	}	
+	resources = {
+		category = megastructures
+		cost = { alloys = 1000000 }
+	}
+	prerequisites = { "tech_SRA_Barrier_megastructure_0" }
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "BUILD_MEGASTRUCTURE_PLANET_TARGET_NEEDED"	# these loc lines are inverted
+				always = no
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+	}
+	# on_build_start = {}
+	# on_build_cancel = {}
+	on_build_complete = {
+		create_fleet = {
+			name = "NAME_SRA_Barrier_Guard_Station_fleet_1"
+			effect = {
+				set_owner = from
+				set_location = {
+					target = fromfrom
+					distance = 0
+					angle = random
+				}
+				while = {
+					count = 32
+					create_ship = {
+						design = NAME_SRA_Barrier_Guard_Cruiser
+					}
+				}
+				while = {
+					count = 4
+					create_ship = {
+						design = NAME_SRA_Barrier_Guard_Titan
+					}
+				}
+				create_ship = {
+					name = "NAME_SRA_Barrier_Guard_Station_Name_1"
+					design = "NAME_SRA_Barrier_Guard_Station"
+					prefix = no
+				}
+				# set_fleet_formation = {
+				# 	position = { x = 0.0	y = 0.0		} #1
+				# }
+			}
+			settings = { 
+				can_upgrade = no 
+				uses_naval_capacity = no
+				can_change_composition = no
+				spawn_debris = no
+			}
+		}
+		remove_megastructure = fromfrom
+	}
+}
+SRA_orbital_ring_megastructure_0 = {
+	entity = ""
+	construction_entity = "SRA_eta_gateway_0_megastructure_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = 0 y = 0 }
+	scales_with_planet = yes
+	show_galactic_map_icon = no
+	show_in_outliner = no
+	build_time = 720
+
+	starbase = starbase_level_SRA_orbital_ring
+
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000
+			influence = 200
+		}
+	}
+	construction_blocks_and_blocked_by = none
+
+	potential = {
+		OR = {
+			has_civic = civic_SRARociviaEmpire
+			has_civic = civic_SRAtechnology
+		}
+	}
+	prerequisites = { "tech_SRA_starbase_turret" }
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "SRA_requires_orbital_ring"
+				exists = orbital_defence
+				orbital_defence = {
+				exists = starbase
+				starbase = {
+					has_starbase_size >= orbital_ring_tier_1
+					}
+				}
+			}
+		}
+	}
+
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 15
+	}
+
+	# on_build_start = {}
+	# on_build_cancel = {}
+
+	on_build_complete = {
+		fromfrom.planet = {
+			orbital_defence = {
+				fleet = {
+					delete_fleet = this
+				}
+			}
+			add_modifier = {
+				modifier = planet_SRA_orbital_ring_Buff_1
+			}
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+			create_starbase = {
+				size = SRA_orbital_ring
+				owner = FROM
+				#module = <starbase_module>
+				#building = <starbase_building>
+				effect = {
+					set_ship_construction_type = starbase_shipyard
+				}
+			}
+		}
+		remove_megastructure = fromfrom
+	}
+}
+SRA_Barrier_megastructure_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -7 y = -7 }
+	construction_blocks_and_blocked_by = none
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 4800000
+			astral_threads = 40000
+			influence = 1000
+		}
+		upkeep = { energy = 150 }
+	}
+
+	potential = {
+		OR = {
+			has_civic = civic_SRARociviaEmpire
+			has_civic = civic_SRAtechnology
+		}
+	}	
+
+	prerequisites = { "tech_SRA_Barrier_megastructure_0" }
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = { any_system_planet = {
+				is_surveyed = {
+					who = prev.from
+					status = no
+				}
+			} }
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_habitable_planets"
+			NOT = { any_system_planet = { colonizable_planet = yes } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_binary_trinary"
+			NOR = {
+				is_star_class = sc_binary_1
+				is_star_class = sc_binary_2
+				is_star_class = sc_binary_3
+				is_star_class = sc_binary_4
+				is_star_class = sc_binary_5
+				is_star_class = sc_binary_6
+				is_star_class = sc_binary_7
+				is_star_class = sc_binary_8
+				is_star_class = sc_binary_9
+				is_star_class = sc_binary_10
+				is_star_class = sc_trinary_1
+				is_star_class = sc_trinary_2
+				is_star_class = sc_trinary_3
+				is_star_class = sc_trinary_4
+			}
+		}
+
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#NOT = { has_any_megastructure = yes }
+			NOT = { has_star_flag = ring_world_built }
+			has_no_non_gate_megastructure = yes
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+		}
+	}
+	ai_weight = {
+		factor = 100
+
+		modifier = {
+			factor = 0.01
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				NOT = { has_country_flag = SRA_Barrier_megastructure_0_building }
+			}
+		}
+	}
+
+
+	on_build_start = {
+		from = {
+			set_timed_country_flag = {
+				flag = SRA_Barrier_megastructure_0_building days = 1800
+			}
+		}
+	}
+	# on_build_cancel = {}
+	on_build_complete = { 
+		set_star_flag = ring_world_built
+		from = {
+			set_timed_country_flag = {
+				flag = SRA_Barrier_megastructure_0_building days = 14400
+			}
+		}
+	}
+}
+
+# Temporarily used for creating specific habitable or structural sections.
+SRA_Barrier_megastructure_1 = {
+	entity = "SRA_Barrier_Main_Station_hull_entity"
+	construction_entity = "ringworld_seam_entity_01_full_entity"
+	portrait = "GFX_megastructure_construction_background"
+	show_galactic_map_icon = yes
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 4800000
+			astral_threads = 40000
+		}
+	}
+
+	upgrade_from = { SRA_Barrier_megastructure_0 }
+
+	prerequisites = { "tech_SRA_Barrier_megastructure_0" }
+
+	# on_build_start = {}
+	# on_build_cancel = {}
+	on_build_complete = {
+		fromfrom = {
+			upgrade_megastructure_to = SRA_Barrier_megastructure_4
+		}
+		every_system_planet = {
+			limit = { is_star = no }
+			remove_planet = yes
+		}
+		every_system_planet = {
+			limit = { is_star = yes }
+			change_pc = pc_rift_star
+			set_planet_size = 0
+		}
+		set_star_class = sc_rift_star
+		set_asteroid_belt = { radius = 0 }
+		spawn_megastructure = {
+			name = "NAME_pc_SRA_Barrier_ringworld_habitable_A"
+			type = "SRA_Barrier_megastructure_2"
+			orbit_angle = 0
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+			init_effect = { upgrade_megastructure_to = SRA_Barrier_megastructure_3 }
+		}
+		spawn_megastructure = {
+			name = "NAME_pc_SRA_Barrier_ringworld_habitable_B"
+			type = "SRA_Barrier_megastructure_2"
+			orbit_angle = 90
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+			init_effect = { upgrade_megastructure_to = SRA_Barrier_megastructure_3 }
+		}
+		spawn_megastructure = {
+			name = "NAME_pc_SRA_Barrier_ringworld_habitable_C"
+			type = "SRA_Barrier_megastructure_2"
+			orbit_angle = 180
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+			init_effect = { upgrade_megastructure_to = SRA_Barrier_megastructure_3 }
+		}
+		spawn_megastructure = {
+			name = "NAME_pc_SRA_Barrier_ringworld_habitable_D"
+			type = "SRA_Barrier_megastructure_2"
+			orbit_angle = 270
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+			init_effect = { upgrade_megastructure_to = SRA_Barrier_megastructure_3 }
+		}
+	}
+}
+
+SRA_Barrier_megastructure_2 = {
+	entity = "ringworld_3x_seams_entity"
+	portrait = "GFX_megastructure_construction_background"
+
+	upgrade_from = { SRA_Barrier_megastructure_2 }
+
+	# used from script only
+	upgrade_desc = hide
+	potential = { always = no }
+}
+
+SRA_Barrier_megastructure_3 = {
+	entity = ""
+	construction_entity = "ringworld_phase_3_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = { alloys = 0 }
+	}
+	show_galactic_map_icon = yes
+	show_in_outliner = no
+	upgrade_from = { SRA_Barrier_megastructure_2 }
+
+
+	on_build_complete = {
+		from = { set_country_flag = has_built_or_repaired_megastructure }
+		spawn_planet = {
+			class = "pc_ringworld_tech"
+			location = fromfrom
+			orbit_angle_offset = 30
+			init_effect = {
+				set_name = "NAME_pc_SRA_Barrier_ringworld_habitable"
+				set_planet_entity = {
+					entity = "SRA_ancient_ringworld_tech_blue_entity"
+				}
+				set_surveyed = {
+					surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				set_planet_flag = megastructure
+			}
+		}
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "NAME_pc_SRA_Barrier_ringworld_habitable"
+				set_planet_entity = {
+					entity = "SRA_ancient_ringworld_tech_blue_entity"
+				}
+				set_surveyed = {
+					surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				set_planet_flag = megastructure
+			}
+		}
+		spawn_planet = {
+			class = "pc_SRA_Barrier_ringworld_habitable"
+			location = fromfrom
+			orbit_angle_offset = -30
+			init_effect = {
+				set_name = "NAME_pc_SRA_Barrier_ringworld_habitable_A"
+				set_surveyed = { surveyed = yes surveyor = FROM }
+				set_owner = from
+				set_controller = from
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = pc_SRA_Barrier_ringworld_habitable
+				trigger_megastructure_icon = yes
+				set_planet_flag = megastructure
+				set_planet_flag = pc_SRA_Barrier_ringworld_habitable
+				set_planet_flag = colony_event
+				start_colony = { owner = prev.from species = prev.from.owner_main_species }
+				set_variable = { which = SRA_world_machine_produces value = 5 }
+			}
+		}
+		fromfrom.planet = { set_planet_flag = has_megastructure }
+		remove_megastructure = fromfrom
+		if = {
+			limit = {
+				NOT = { has_star_flag = pc_SRA_Barrier_ringworld_habitable_1 }
+			}
+			set_star_flag = pc_SRA_Barrier_ringworld_habitable_1
+			event_target:pc_SRA_Barrier_ringworld_habitable = { set_name = "NAME_pc_SRA_Barrier_ringworld_habitable_A" }
+			break = yes
+		}
+		if = {
+			limit = {
+				has_star_flag = pc_SRA_Barrier_ringworld_habitable_1
+				NOT = { has_star_flag = pc_SRA_Barrier_ringworld_habitable_2 }
+			}
+			set_star_flag = pc_SRA_Barrier_ringworld_habitable_2
+			event_target:pc_SRA_Barrier_ringworld_habitable = { set_name = "NAME_pc_SRA_Barrier_ringworld_habitable_B" }
+			break = yes
+		}
+		if = {
+			limit = {
+				has_star_flag = pc_SRA_Barrier_ringworld_habitable_2
+				NOT = { has_star_flag = pc_SRA_Barrier_ringworld_habitable_3 }
+			}
+			set_star_flag = pc_SRA_Barrier_ringworld_habitable_3
+			event_target:pc_SRA_Barrier_ringworld_habitable = { set_name = "NAME_pc_SRA_Barrier_ringworld_habitable_C" }
+			break = yes
+		}
+		if = {
+			limit = { has_star_flag = pc_SRA_Barrier_ringworld_habitable_3 }
+			remove_star_flag = pc_SRA_Barrier_ringworld_habitable_1
+			remove_star_flag = pc_SRA_Barrier_ringworld_habitable_2
+			remove_star_flag = pc_SRA_Barrier_ringworld_habitable_3
+			event_target:pc_SRA_Barrier_ringworld_habitable = { set_name = "NAME_pc_SRA_Barrier_ringworld_habitable_D" }
+			break = yes
+		}
+	}
+}
+SRA_Barrier_megastructure_4 = {
+	entity = ""
+	portrait = "GFX_SRA_Barrier_megastructure"
+	build_time = 3600
+	country_modifier = {
+		country_naval_cap_add = 800
+	}
+
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		produces = {
+			trigger = {
+				owner = {
+					OR = {
+						has_civic = civic_SRAtechnology
+						has_civic = civic_SRARociviaEmpire
+					}
+				}
+			}
+			energy = 4000
+			astral_threads = 400
+			alloys = 8000
+		}
+	}
+	ship_modifier = {
+		ship_starting_experience_add = 10000
+	}
+	station_modifier = {
+		starbase_shipyard_capacity_add = 480
+		starbase_shipyard_build_speed_mult = 1
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	
+	upgrade_from = { SRA_Barrier_megastructure_1 }
+
+	on_build_complete = {
+		fromfrom = {
+			set_megastructure_flag = ag_ancient_construction_section_megashipyard
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_system_planet = {
+						has_planet_flag = pc_SRA_Barrier_Main_Station
+					}
+				}
+			}
+			spawn_planet = {
+				class = "pc_SRA_Barrier_Main_Station"
+				location = fromfrom
+				orbit_angle_offset = 0
+				init_effect = {
+					set_name = "NAME_pc_SRA_Barrier_Main_Station"
+					set_surveyed = { surveyed = yes surveyor = FROM }
+					set_owner = from
+					set_controller = from
+					set_all_comms_surveyed = yes
+					clear_blockers = yes
+					save_event_target_as = pc_SRA_Barrier_Main_Station
+					trigger_megastructure_icon = yes
+					set_planet_flag = megastructure
+					set_planet_flag = pc_SRA_Barrier_Main_Station
+					set_planet_flag = colony_event
+					start_colony = { owner = prev.from species = prev.from.owner_main_species }
+					carrier_event = {
+						id = SRA_Barrier.2
+					}
+					set_variable = { which = SRA_world_machine_produces value = 5 }
+				}
+			}
+			event_target:pc_SRA_Barrier_Main_Station = { set_name = "NAME_pc_SRA_Barrier_Main_Station" }
+		}
+		else = {
+			every_system_planet = {
+				limit = {
+					has_planet_flag = pc_SRA_Barrier_Main_Station
+				}
+				change_pc = pc_SRA_Barrier_Main_Station
+				set_owner = from
+				set_controller = from
+				clear_blockers = yes
+				start_colony = { owner = prev.from species = prev.from.owner_main_species }
+				carrier_event = {
+					id = SRA_Barrier.2
+				}
+			}
+		}
+		fromfrom.planet = { set_planet_flag = has_megastructure }
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+SRA_Barrier_megastructure_ruined = {
+	entity = "SRA_gamma_station_dirty_entity"
+	portrait = "GFX_SRA_Barrier_megastructure"
+	build_time = 3600
+	country_modifier = {
+	}
+
+	resources = {
+		category = megastructures
+		cost = {
+		}
+	}
+	ship_modifier = {
+	}
+	station_modifier = {
+	}
+	
+	upgrade_from = { SRA_Barrier_megastructure_ruined }
+
+	on_build_complete = {
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+SRA_Barrier_megastructure_repair = {
+	entity = "SRA_Barrier_Main_Station_hull_entity"
+	portrait = "GFX_SRA_Barrier_megastructure"
+	build_time = 3600
+	country_modifier = {
+	}
+
+	resources = {
+		category = megastructures
+		cost = {
+		}
+		produces = {
+		}
+	}
+	ship_modifier = {
+	}
+	station_modifier = {
+	}
+	
+	upgrade_from = { SRA_Barrier_megastructure_ruined }
+
+	on_build_complete = {
+		every_system_planet = {
+			limit = {
+				has_planet_flag = pc_SRA_Barrier_ringworld_habitable
+			}
+			change_pc = pc_SRA_Barrier_ringworld_habitable
+		}
+		every_system_planet = {
+			limit = {
+				has_planet_flag = pc_SRA_Barrier_Main_Station
+			}
+			destroy_colony = yes
+			remove_planet = yes
+		}
+		spawn_megastructure = {
+			type = "SRA_Barrier_megastructure_4"
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+		}
+		remove_megastructure = fromfrom
+	}
+	ai_weight = {
+		factor = 100
+	}
+}
+
+
+
+SRA_RE_Return_To_Calamitisease_megastructure_0 = {
+	entity = "SRA_elder_tiyanki_megastructure_entity"
+	portrait = "GFX_SRA_chaos_star_background"
+	place_entity_on_planet_plane = no
+	build_time = 36000
+	country_modifier = {
+	}
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000000
+			astral_threads = 40000000
+		}
+	}
+
+	potential = {
+		always = no
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	show_prereqs = yes
+
+	on_build_complete = {
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+SRA_RE_Return_To_Calamitisease_megastructure_1 = {
+	entity = "SRA_elder_tiyanki_megastructure_entity"
+	portrait = "GFX_SRA_chaos_star_background"
+	place_entity_on_planet_plane = no
+	build_time = 3600
+	country_modifier = {
+	}
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 40000
+			astral_threads = 40000
+		}
+	}
+
+	upgrade_from = {
+		SRA_RE_Return_To_Calamitisease_megastructure_0
+	}
+	on_build_start = {
+		from = {
+			country_event = {
+				id = SRA_Chief.430
+			}
+		}
+	}
+	on_build_complete = {
+		from = {
+			country_event = {
+				id = SRA_Chief.450
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_Return_To_Calamitisease_Fleet"
+			effect = {
+				set_owner = from
+				create_ship = {
+					name = "NAME_SRA_Return_To_Calamitisease_Ship"
+					design = "NAME_SRA_Return_To_Calamitisease_Ship2"
+					upgradable = no
+					effect = {
+						set_disable_at_health = 0.01
+						ship_event = {
+							id = SRA_Chief.1000
+						}
+					}
+				}
+				set_location = {
+					target = fromfrom
+					distance = 0
+					angle = random
+				}
+			}
+		}
+		remove_megastructure = fromfrom
+	}
+	ai_weight = {
+		factor = 0
+	}
+}

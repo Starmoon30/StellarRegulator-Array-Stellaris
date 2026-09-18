@@ -1,0 +1,663 @@
+#######################################################################
+# 本mod仅用于Stellais modder群内作交流学习之用,请勿擅自传播,后果自负.
+# 若发现有任何未经原作者同意或未取得授权的情况下随意使用本mod及本mod内容的情况
+# 本人将考虑停止维护并制作类似工具界面并公开于群内,请自重.
+# KDC mod组,vvlolicon,2021/6/9
+###星规阵列mod已获得授权###
+#######################################################################
+
+# 立绘差分通过调整变量改变（本mod中为SRA_diplomacy_SRA_portrait变量）
+# 切换至其他人视角时变暗效果则通过加flag来切换立绘明暗效果
+# （本mod中为SRA_diplomacy_charactor_lost_focus的flag效果）
+# 立绘正常状态的potential条件必然为
+# check_variable = { which = 变量名 value = x }
+# NOT = { has_country_flag = xxx }
+# 变暗状态则将country flag条件的not去掉即可,参照下方的button effect
+
+#######################################################################
+
+# 立绘大小为636*780,可用dtx3压缩,请尽量将立绘置于中间
+# 具体增加方法为：
+# 1. 将立绘用ps修整至以上大小,并通过黑白效果制作一个变暗的立绘
+# 2. 在gfx里写好sprite
+# 3. 复制以下任一项button effect以及在变暗效果的button effect,并更改名字和变量判断的数值
+# 4. 于00_SRA_diplomacy.gui和00_SRA_diplomacy_no_option.gui文件的人物立绘处复制加上一项effect button type
+# 5. 将复制的effect button type的quadTextureSprite修改为在gfx文件里写好的sprite
+# 6. 将复制的effect button type的effect修改为在本文件新增的button effect
+# 7. 若你使用自定义立绘,请最好直接复制并修改上述两个gui文件,并将立绘的effect button type清空替换至你的button effect
+# 同时最好也复制修改背景和立绘的button effect和控制变量以防与本mod内容冲突
+
+# 人物立绘
+SRA_diplomacy_SRA_portrait_diff00_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 0 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff01_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 1 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff02_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 2 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff03_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 3 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff04_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 4 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff05_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 5 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff06_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 6 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff07_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 7 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff11_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 11 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff12_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff13_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff14_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 14 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff15_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff16_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 16 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff17_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff18_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 18 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff19_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 19 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff21_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 21 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff22_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 22 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff23_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff2399_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 2399 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff25_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 25 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff26_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 26 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff27_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff28_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 28 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff29_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 29 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+
+SRA_diplomacy_SRA_portrait_diff32_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 32 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff33_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff3399_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 3399 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff35_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 35 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff36_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 36 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff37_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 37 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff38_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 38 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff42_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff43_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff45_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff46_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 46 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff47_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 47 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff52_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 52 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff53_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 53 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff55_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 55 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff56_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 56 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff57_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 57 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff61_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 61 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff62_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 62 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff63_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 63 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff64_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 64 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff65_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 65 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff66_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 66 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff67_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 67 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff68_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 68 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff69_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 69 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff71_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 71 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff72_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 72 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff73_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff74_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 74 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff75_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 75 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff76_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 76 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff77_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 77 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff78_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 78 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff1001_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 1001 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+SRA_diplomacy_SRA_portrait_diff1005_effect = {
+	potential = {
+		FROM = { 
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 1005 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+
+SRA_diplomacy_SRA_portrait_diff1006_effect = {
+	potential = {
+		FROM = {
+			check_variable = { which = SRA_diplomacy_SRA_portrait value = 1006 }
+			NOT = { has_country_flag = SRA_diplomacy_charactor_lost_focus }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+

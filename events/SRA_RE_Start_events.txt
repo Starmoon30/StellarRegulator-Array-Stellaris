@@ -1,0 +1,2703 @@
+namespace = SRA_RE_Start
+
+
+country_event = {
+	id = SRA_RE_Start.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = yes
+	}
+
+	immediate = {
+		force_remove_civic = civic_SRARociviaEmpire
+	}
+}
+
+#陨落星辰
+country_event = {
+	id = SRA_RE_Start.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+
+	immediate = {
+		begin_event_chain = {
+			event_chain = "SRA_RE_SOGZ_repair_chain"
+			target = this.owner
+		}
+		enable_special_project = {
+			name = SRA_RE_Start_SP1
+			owner = root
+		}
+	}
+}
+
+country_event = {
+	id = SRA_RE_Start.3
+	title = SRA_RE_Start.3
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.3.desc"
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_RE_Start.3.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Start.4
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.4
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_Start.4.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.5 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.6 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.5
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_Start.5.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 25 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.6 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.6 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.6
+	title = SRA_RE_Rocivia
+	desc = SRA_RE_Start.6.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.7 days = 60 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.7 days = 60 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.7
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_Start.7.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { 
+			enable_special_project = {
+				name = SRA_RE_Start_SP2
+				owner = root
+			}
+		}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_Start_SP2
+				owner = root
+			}
+		}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.8
+	title = SRA_RE_Start.8
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.8.desc"
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+	}
+	option = {
+		name = SRA_RE_Start.8.a
+		hidden_effect = {
+			set_country_flag = SRA_RE_orient_enable
+			set_country_flag = SRA_RE_orient_target_1
+		}
+	}
+}
+#第一个考古
+country_event = {
+	id = SRA_RE_Start.9
+	title = SRA_RE_Start.9
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.9.desc"
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_ringworld = no
+				is_star = no
+				is_colony = no
+				is_colonizable = no
+				is_capital = no
+				is_asteroid = no
+				is_astral_scar = no
+				NOT = { exists = archaeological_site }
+			}
+			carrier_event = { id = SRA_RE_Start.10 }
+		}
+	}
+	option = {
+		name = SRA_RE_Start.9.a
+		hidden_effect = {
+		}
+	}
+}
+carrier_event = {
+	id = SRA_RE_Start.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		change_pc = pc_frozen
+		create_archaeological_site = SRA_RE_archaeological_1
+	}
+}
+
+
+fleet_event = {
+	id = SRA_RE_Start.11
+	hide_window = no
+	title = "SRA_RE_Start.11.name"
+	desc = "SRA_RE_Start.11.desc"
+	picture = GFX_evt_frozen
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.11.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.12
+	hide_window = no
+	title = "SRA_RE_Start.12.name"
+	desc = "SRA_RE_Start.12.desc"
+	picture = GFX_evt_barren_dig_site
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.12.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.13
+	hide_window = no
+	title = "SRA_RE_Start.13.name"
+	desc = "SRA_RE_Start.13.desc"
+	picture = GFX_evt_outpost
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.13.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.14
+	hide_window = no
+	title = "SRA_RE_Start.14.name"
+	desc = "SRA_RE_Start.14.desc"
+	picture = GFX_evt_ship_in_orbit_3
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.14.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.15
+	hide_window = no
+	title = "SRA_RE_Start.15.name"
+	desc = "SRA_RE_Start.15.desc"
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.15.a
+		hidden_effect = {
+			owner = {
+				country_event = { id = SRA_RE_Start.16 }
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.16
+	title = SRA_RE_StellarRegulator
+	desc = "SRA_RE_Start.16.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = SRA_RE_orient_target_2
+	}
+	option = {
+		name = SRA_RE_Start.16.a
+	}
+	option = {
+		name = SRA_RE_Start.16.b
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Start.17
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.17
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_Start.17.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 18 }
+    }
+	after = {
+		hidden_effect = {
+			event_target:SRA_portrait_leader_Rocivia = {
+				set_variable = { which = SRA_portrait_clothes_var value = 202 }
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_Rocivia
+				localization =  SRA_RE_Start.17.MESSAGE_SRA_RE_Rocivia
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_Rocivia
+				variable = {
+					 type = name
+					 localization = SRA_RE_Rocivia
+					scope = event_target:SRA_portrait_leader_Rocivia
+				}
+				variable = {
+					 key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {}
+		default_hide_option = yes
+	}
+}
+
+#第二个考古
+country_event = {
+	id = SRA_RE_Start.18
+	title = SRA_RE_Start.18
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.18.desc"
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_ringworld = no
+				is_star = no
+				is_colony = no
+				is_colonizable = no
+				is_capital = no
+				is_asteroid = no
+				is_astral_scar = no
+				NOT = { exists = archaeological_site }
+			}
+			carrier_event = { id = SRA_RE_Start.19 }
+		}
+	}
+	option = {
+		name = SRA_RE_Start.18.a
+		hidden_effect = {
+		}
+	}
+}
+carrier_event = {
+	id = SRA_RE_Start.19
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		change_pc = pc_nuked
+		create_archaeological_site = SRA_RE_archaeological_2
+	}
+}
+
+
+fleet_event = {
+	id = SRA_RE_Start.20
+	hide_window = no
+	title = "SRA_RE_Start.20.name"
+	desc = "SRA_RE_Start.20.desc"
+	picture = GFX_evt_tomb_world
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.20.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.21
+	hide_window = no
+	title = "SRA_RE_Start.21.name"
+	desc = "SRA_RE_Start.21.desc"
+	picture = GFX_evt_landing_ship_2
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.21.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.22
+	hide_window = no
+	title = "SRA_RE_Start.22.name"
+	desc = "SRA_RE_Start.22.desc"
+	picture = GFX_evt_in_the_dark
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.22.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.23
+	hide_window = no
+	title = "SRA_RE_Start.23.name"
+	desc = "SRA_RE_Start.23.desc"
+	picture = GFX_evt_underground_civilization
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.23.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.24
+	hide_window = no
+	title = "SRA_RE_Start.24.name"
+	desc = "SRA_RE_Start.24.desc"
+	picture = GFX_evt_nuclear_explosion
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.24.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.25
+	hide_window = no
+	title = "SRA_RE_Start.25.name"
+	desc = "SRA_RE_Start.25.desc"
+	picture = GFX_evt_baol_datacrystals
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.25.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_Start_SP3
+				owner = root
+			}
+		}
+	}
+}
+#水晶破解完成
+country_event = {
+	id = SRA_RE_Start.26
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_Start.26.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		set_country_flag = SRA_RE_SOGZ_can_be_repaired
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = {}
+		default_hide_option = yes
+	}
+}
+
+
+#第三个考古
+country_event = {
+	id = SRA_RE_Start.27
+	title = SRA_RE_Start.27.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.27.desc"
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_ringworld = no
+				is_star = no
+				is_colony = no
+				is_colonizable = no
+				is_capital = no
+				is_asteroid = no
+				is_astral_scar = no
+				NOT = { exists = archaeological_site }
+			}
+			carrier_event = { id = SRA_RE_Start.28 }
+		}
+	}
+	option = {
+		name = SRA_RE_Start.27.a
+		hidden_effect = {
+		}
+	}
+}
+carrier_event = {
+	id = SRA_RE_Start.28
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		change_pc = pc_barren
+		create_archaeological_site = SRA_RE_archaeological_3
+	}
+}
+
+
+fleet_event = {
+	id = SRA_RE_Start.29
+	hide_window = no
+	title = "SRA_RE_Start.29.name"
+	desc = "SRA_RE_Start.29.desc"
+	picture = GFX_evt_crashed_station
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.29.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.30
+	hide_window = no
+	title = "SRA_RE_Start.30.name"
+	desc = "SRA_RE_Start.30.desc"
+	picture = GFX_evt_mining_operations
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.30.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.31
+	hide_window = no
+	title = "SRA_RE_Start.31.name"
+	desc = "SRA_RE_Start.31.desc"
+	picture = GFX_evt_sabotaged_ship
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.31.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.32
+	hide_window = no
+	title = "SRA_RE_Start.32.name"
+	desc = "SRA_RE_Start.32.desc"
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.32.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.33
+	hide_window = no
+	title = "SRA_RE_Start.33.name"
+	desc = "SRA_RE_Start.33.desc"
+	picture = GFX_evt_exploding_ship
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.33.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.34
+	hide_window = no
+	title = "SRA_RE_Start.34.name"
+	desc = "SRA_RE_Start.34.desc"
+	picture = GFX_evt_baol_datacrystals
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.34.a
+		hidden_effect = {
+			owner = {
+				country_event = { id = SRA_RE_Start.35 }
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.35
+	title = SRA_RE_Start.35.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.35.desc"
+	option = {
+		name = SRA_RE_Start.35.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_Start_SP6
+				owner = root
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.36
+	title = SRA_RE_Start.36.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.36.desc"
+	option = {
+		name = SRA_RE_Start.36.a
+		hidden_effect = {
+			enable_special_project = {
+				name = SRA_RE_Start_SP7
+				owner = root
+			}
+			country_event = { id = SRA_RE_Start.37 }
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.37
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.37.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.38 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.40 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.38
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.38.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.39 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.40 }}
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = SRA_RE_Start.39
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.39.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.40 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.40 }}
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = SRA_RE_Start.40
+	title = SRA_RE_StellarRegulator
+	desc = SRA_RE_Start.40.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = SRA_RE_StellarRegulator_sequence_1_start
+		
+		begin_event_chain = {
+			event_chain = "SRA_RE_StellarRegulator_debris_chain"
+			target = root
+		}
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_1_project"
+			owner = root
+		}
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_2_project"
+			owner = root
+		}
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_3_project"
+			owner = root
+		}
+	}
+	
+	option = {
+		name = SRA_RE_Start.40.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_StellarRegulator.410
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Start.40.b
+		hidden_effect = {
+			country_event = {
+				id = SRA_RE_Start.41
+			}
+		}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.41
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.41.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.42
+	title = SRA_RE_Start.42.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = SRA_RE_orient_target_4
+			capital_scope = {
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					max_jumps = 1
+					hyperlane = yes
+					is_discovered = no
+					initializer = SRA_system_B
+				}
+			}
+			event_target:SRA_system_A_ring1 = {
+				remove_building = building_system_capital
+				remove_building = building_SRA_control_centre
+				remove_building = building_SRA_ground_yards
+				change_pc = pc_ringworld_shielded
+				enable_special_project = {
+			    	name = SRA_RE_Start_SP8
+				    location = THIS
+					owner = root
+		    	}
+			}
+		}
+	}
+	desc = "SRA_RE_Start.42.desc"
+	option = {
+		name = SRA_RE_Start.42.a
+	}
+}
+carrier_event = {
+	id = SRA_RE_Start.43
+	title = SRA_RE_Start.43.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.43.desc"
+	option = {
+		name = SRA_RE_Start.43.a
+		hidden_effect = {
+			change_pc = pc_ringworld_habitable_SRA_GZ
+			add_building = building_system_capital
+			add_building = building_SRA_control_centre
+			add_building = building_SRA_ground_yards
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.44
+	title = SRA_RE_Start.44.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	after = {
+		hidden_effect = {
+			event_target:SRA_portrait_leader_Rocivia = {
+				set_variable = { which = SRA_portrait_clothes_var value = 202 }
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_Rocivia
+				localization =  SRA_RE_Start.44.MESSAGE_SRA_RE_Rocivia
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_Rocivia
+				variable = {
+					 type = name
+					 localization = SRA_RE_Rocivia
+					scope = event_target:SRA_portrait_leader_Rocivia
+				}
+				variable = {
+					 key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+	desc = "SRA_RE_Start.44.desc"
+	option = {
+		name = SRA_RE_Start.44.a
+		hidden_effect = {
+			set_country_flag = SRA_RE_GE_Core_enabled
+		}
+	}
+}
+
+
+
+
+#第四个考古（防御站残骸）
+country_event = {
+	id = SRA_RE_Start.60
+	title = SRA_RE_Start.60.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.60.desc"
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_update_modifiers_batch = begin
+		create_country = {
+			name = "NAME_SRA_RE_archaeological_country_1"
+			type = "faction_SRA_RE_archaeological_country_1"
+			species = event_target:SRA_StellarRegulator_species
+			name_list = SRA_Rocivia_Empire
+			flag = {
+				icon= {
+					category="SRA_flags"
+					file="SRA_flags_StellarRegulatorArray.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "double_triangles.dds"
+				}
+				colors={
+					"blue"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = protected_from_queen_storm
+				save_global_event_target_as = SRA_RE_archaeological_country_1
+				add_modifier = { modifier = SRA_Crisis_Buff_0 days = -1 }
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+	after = {
+		hidden_effect = {
+			event_target:SRA_portrait_leader_Rocivia = {
+				set_variable = { which = SRA_portrait_clothes_var value = 202 }
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_Rocivia
+				localization =  SRA_RE_Start.60.MESSAGE_SRA_RE_Rocivia
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_Rocivia
+				variable = {
+					 type = name
+					 localization = SRA_RE_Rocivia
+					scope = event_target:SRA_portrait_leader_Rocivia
+				}
+				variable = {
+					 key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_Start.60.a
+		hidden_effect = {
+			random_system_within_border = {
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					max_jumps = 1
+					hyperlane = yes
+					is_discovered = no
+					initializer = SRA_RE_system_3
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.61
+	hide_window = no
+	title = "SRA_RE_Start.61.name"
+	desc = "SRA_RE_Start.61.desc"
+	picture = GFX_evt_crashed_station
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.61.a
+		hidden_effect = {
+			event_target:SRA_RE_archaeological_country_1 = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.62
+	hide_window = no
+	title = "SRA_RE_Start.62.name"
+	desc = "SRA_RE_Start.62.desc"
+	picture = GFX_evt_mining_operations
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.62.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.63
+	hide_window = no
+	title = "SRA_RE_Start.63.name"
+	desc = "SRA_RE_Start.63.desc"
+	picture = GFX_evt_sabotaged_ship
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.63.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.64
+	hide_window = no
+	title = "SRA_RE_Start.64.name"
+	desc = "SRA_RE_Start.64.desc"
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.64.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.65
+	hide_window = no
+	title = "SRA_RE_Start.65.name"
+	desc = "SRA_RE_Start.65.desc"
+	picture = GFX_evt_exploding_ship
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+		hidden_effect = {
+			owner = {
+				event_target:SRA_portrait_leader_Rocivia = {
+					set_variable = { which = SRA_portrait_clothes_var value = 202 }
+				}
+				create_message = {
+					type = MESSAGE_SRA_RE_Rocivia
+					localization =  SRA_RE_Start.65.MESSAGE_SRA_RE_Rocivia
+					days = @toast_message_days
+					target = event_target:SRA_portrait_leader_Rocivia
+					variable = {
+						 type = name
+						 localization = SRA_RE_Rocivia
+						scope = event_target:SRA_portrait_leader_Rocivia
+					}
+					variable = {
+						 key = "border"
+						value = "GFX_border_legendary"
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = SRA_RE_Start.65.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.66
+	hide_window = no
+	title = "SRA_RE_Start.66.name"
+	desc = "SRA_RE_Start.66.desc"
+	picture = GFX_evt_exploding_ship
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.66.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.67
+	hide_window = no
+	title = "SRA_RE_Start.67.name"
+	desc = "SRA_RE_Start.67.desc"
+	picture = GFX_evt_baol_datacrystals
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.67.a
+		large_artifact_reward = yes
+		hidden_effect = {
+			owner = {
+				country_event = { id = SRA_RE_Start.68 days = 90 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_RE_Start.68
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.68.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {
+			country_event = { id = SRA_RE_Start.69 }
+		}
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = SRA_RE_Start.71 }
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.69
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.69.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {
+			country_event = { id = SRA_RE_Start.70 }
+		}
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = SRA_RE_Start.71 }
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.70
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.70.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = {
+			country_event = { id = SRA_RE_Start.71 }
+		}
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = SRA_RE_Start.71 }
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.71
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.71.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+		set_country_flag = SRA_RE_SOGZ_Repair_1
+		set_country_flag = SRA_RE_tech_2
+		set_country_flag = SRA_RE_Rocivia_SP_2_Finished
+		country_event = { id = SRA_RE_Start.80 days = 360 }
+		enable_special_project = {
+			name = "SRA_RE_end_game_chain_project"
+			owner = root
+		}
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}
+
+
+
+#第五个坟头
+country_event = {
+	id = SRA_RE_Start.80
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		if = {
+			limit = { 
+				OR = {
+					has_country_flag = SRA_RE_SOGZ_time_stop_enable
+					end_game_years_passed >= 0
+				}
+			}
+			abort_special_project = { type = SRA_RE_end_game_chain_project }
+			country_event = { id = SRA_RE_Start.81 days = 360 }
+		}
+		else = {
+			country_event = { id = SRA_RE_Start.80 days = 360 }
+		}
+	}
+}
+
+
+
+country_event = {
+	id = SRA_RE_Start.81
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Start.81.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 25 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.82 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.82
+	title = "SRA_RE_Hidra"
+	desc = "SRA_RE_Start.82.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 32 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.83 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.83
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Start.83.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 26 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.84 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.84
+	title = "SRA_RE_Hidra"
+	desc = "SRA_RE_Start.84.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 32 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.85 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.85
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Start.85.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 26 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.86 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.86
+	title = "SRA_RE_Hidra"
+	desc = "SRA_RE_Start.86.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 37 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.87 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.87
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Start.87.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 26 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.88 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.88
+	title = "SRA_RE_Hidra"
+	desc = "SRA_RE_Start.88.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 36 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.89 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.89
+	title = "SRA_RE_Rocivia"
+	desc = "SRA_RE_Start.89.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.90 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.90 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.90
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_ringworld = no
+				is_star = no
+				is_colony = no
+				is_colonizable = no
+				is_capital = no
+				is_asteroid = no
+				is_astral_scar = no
+				NOT = { exists = archaeological_site }
+			}
+			carrier_event = { id = SRA_RE_Start.91 }
+		}
+	}
+}
+carrier_event = {
+	id = SRA_RE_Start.91
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		change_pc = pc_alpine
+		create_archaeological_site = SRA_RE_archaeological_5
+	}
+}
+
+
+fleet_event = {
+	id = SRA_RE_Start.92
+	hide_window = no
+	title = "SRA_RE_Start.92.name"
+	desc = "SRA_RE_Start.92.desc"
+	picture = GFX_evt_outpost
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.92.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.93
+	hide_window = no
+	title = "SRA_RE_Start.93.name"
+	desc = "SRA_RE_Start.93.desc"
+	picture = GFX_evt_outpost
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.93.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.94
+	hide_window = no
+	title = "SRA_RE_Start.94.name"
+	desc = "SRA_RE_Start.94.desc"
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.94.a
+	}
+}
+
+fleet_event = {
+	id = SRA_RE_Start.95
+	hide_window = no
+	title = "SRA_RE_Start.95.name"
+	desc = "SRA_RE_Start.95.desc"
+	picture = GFX_evt_ship_offloading_cargo
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+		hidden_effect = {
+			owner = {
+				event_target:SRA_portrait_leader_Rocivia = {
+					set_variable = { which = SRA_portrait_clothes_var value = 202 }
+				}
+				create_message = {
+					type = MESSAGE_SRA_RE_Rocivia
+					localization =  SRA_RE_Start.95.MESSAGE_SRA_RE_Rocivia
+					days = @toast_message_days
+					target = event_target:SRA_portrait_leader_Rocivia
+					variable = {
+						 type = name
+						 localization = SRA_RE_Rocivia
+						scope = event_target:SRA_portrait_leader_Rocivia
+					}
+					variable = {
+						 key = "border"
+						value = "GFX_border_legendary"
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = SRA_RE_Start.95.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.96
+	hide_window = no
+	title = "SRA_RE_Start.96.name"
+	desc = "SRA_RE_Start.96.desc"
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.96.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.97
+	hide_window = no
+	title = "SRA_RE_Start.97.name"
+	desc = "SRA_RE_Start.97.desc"
+	picture = GFX_evt_fleet_good
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.97.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.98
+	hide_window = no
+	title = "SRA_RE_Start.98.name"
+	desc = "SRA_RE_Start.98.desc"
+	picture = GFX_evt_archaeological_dig
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.98.a
+		hidden_effect = {
+			owner = {
+				country_event = { id = SRA_RE_Start.99 days = 30 }
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_RE_Start.99
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.99.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.100 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.104 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.100
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.100.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.101 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.104 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.101
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.101.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 16 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.102 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.104 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.102
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.102.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 16 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.103 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.104 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.103
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.103.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 16 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.104 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.104 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.104
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.104.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.105 days = 30 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.105 days = 30 } }
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_RE_Start.105
+	title = SRA_RE_Start.105.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	after = {
+		hidden_effect = {
+			event_target:SRA_portrait_leader_Rocivia = {
+				set_variable = { which = SRA_portrait_clothes_var value = 202 }
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_Rocivia
+				localization =  SRA_RE_Start.105.MESSAGE_SRA_RE_Rocivia
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_Rocivia
+				variable = {
+					 type = name
+					 localization = SRA_RE_Rocivia
+					scope = event_target:SRA_portrait_leader_Rocivia
+				}
+				variable = {
+					 key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+	desc = "SRA_RE_Start.105.desc"
+	option = {
+		name = SRA_RE_Start.105.a
+		hidden_effect = {
+			add_relic = SRA_RE_Core_relic
+			country_event = { id = SRA_RE_Start.106 days = 90 }
+		}
+	}
+}
+
+country_event = {
+	id = SRA_RE_Start.106
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.106.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		set_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_7_project"
+			owner = root
+		}
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_8_project"
+			owner = root
+		}
+		enable_special_project = {
+			name = "SRA_RE_StellarRegulator_debris_9_project"
+			owner = root
+		}
+		set_update_modifiers_batch = begin
+		create_country = {
+			name = "NAME_SRA_RE_archaeological_country_2"
+			type = "faction_SRA_RE_archaeological_country_1"
+			species = random
+			name_list = SRA_Rocivia_Empire
+			flag = {
+				icon= {
+					category="SRA_flags"
+					file="SRA_flags_CORE.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "double_triangles.dds"
+				}
+				colors={
+					"yellow"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = protected_from_queen_storm
+				save_global_event_target_as = SRA_RE_archaeological_country_2
+				add_modifier = { modifier = SRA_RE_Crisis_Buff_0 days = -1 }
+			}
+		}
+		random_system = {
+			spawn_system = {
+				min_distance = 10
+				max_distance = 30
+				max_jumps = 1
+				hyperlane = yes
+				is_discovered = no
+				initializer = SRA_RE_system_4
+			}
+		}
+		set_update_modifiers_batch = end
+		#生成星系，全图随机位置
+    }
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_RE_Start.107 } }
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_RE_Start.107 } }
+	}
+}
+country_event = {
+	id = SRA_RE_Start.107
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.107.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = SRA_RE_Start.107.a
+		hidden_effect = { country_event = { id = SRA_RE_StellarRegulator.430 } }
+	}
+	option = {
+		name = SRA_RE_Start.107.b
+		hidden_effect = { country_event = { id = SRA_RE_Start.108 } }
+	}
+}
+country_event = {
+	id = SRA_RE_Start.108
+	title = "SRA_RE_StellarRegulator"
+	desc = "SRA_RE_Start.108.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		is_ai = no
+		has_civic = civic_SRARociviaEmpire
+	}
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+    }
+	option = {
+		name = "SRA_continue"
+	}
+	option = {
+		name = "SRA_skip"
+		default_hide_option = yes
+	}
+}
+
+#第六个坟头
+fleet_event = {
+	id = SRA_RE_Start.120
+	hide_window = no
+	title = "SRA_RE_Start.120.name"
+	desc = "SRA_RE_Start.120.desc"
+	picture = GFX_evt_ai_planet
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no }
+		hidden_effect = {
+			owner = {
+				event_target:SRA_portrait_leader_Rocivia = {
+					set_variable = { which = SRA_portrait_clothes_var value = 202 }
+				}
+				create_message = {
+					type = MESSAGE_SRA_RE_Rocivia
+					localization =  SRA_RE_Start.120.MESSAGE_SRA_RE_Rocivia
+					days = @toast_message_days
+					target = event_target:SRA_portrait_leader_Rocivia
+					variable = {
+						 type = name
+						 localization = SRA_RE_Rocivia
+						scope = event_target:SRA_portrait_leader_Rocivia
+					}
+					variable = {
+						 key = "border"
+						value = "GFX_border_legendary"
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = SRA_RE_Start.120.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.121
+	hide_window = no
+	title = "SRA_RE_Start.121.name"
+	desc = "SRA_RE_Start.121.desc"
+	picture = GFX_evt_ground_combat
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.121.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.122
+	hide_window = no
+	title = "SRA_RE_Start.122.name"
+	desc = "SRA_RE_Start.122.desc"
+	picture = GFX_evt_spymaster
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.122.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.123
+	hide_window = no
+	title = "SRA_RE_Start.123.name"
+	desc = "SRA_RE_Start.123.desc"
+	picture = GFX_evt_SRA_city_planet
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.123.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.124
+	hide_window = no
+	title = "SRA_RE_Start.124.name"
+	desc = "SRA_RE_Start.124.desc"
+	picture = GFX_evt_space_monster
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.124.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.125
+	hide_window = no
+	title = "SRA_RE_Start.125.name"
+	desc = "SRA_RE_Start.125.desc"
+	picture = GFX_evt_unspeakable_horror
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = SRA_RE_Start.125.a
+	}
+}
+fleet_event = {
+	id = SRA_RE_Start.126
+	hide_window = no
+	title = "SRA_RE_Start.126.name"
+	desc = "SRA_RE_Start.126.desc"
+	picture = GFX_evt_ship_travel
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no }
+		hidden_effect = {
+			owner = {
+				event_target:SRA_portrait_leader_Rocivia = {
+					set_variable = { which = SRA_portrait_clothes_var value = 202 }
+				}
+				create_message = {
+					type = MESSAGE_SRA_RE_Rocivia
+					localization =  SRA_RE_Start.126.MESSAGE_SRA_RE_Rocivia
+					days = @toast_message_days
+					target = event_target:SRA_portrait_leader_Rocivia
+					variable = {
+						 type = name
+						 localization = SRA_RE_Rocivia
+						scope = event_target:SRA_portrait_leader_Rocivia
+					}
+					variable = {
+						 key = "border"
+						value = "GFX_border_legendary"
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = SRA_RE_Start.126.a
+		hidden_effect = {
+			event_target:SRA_RE_archaeological_country_2_Fleet = {
+				enable_special_project = {
+				    name = SRA_RE_Start_SP10
+				    location = THIS
+				    owner = root.owner
+			    }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_RE_Start.127
+	title = SRA_RE_Start.127.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_RE_Start.127.desc"
+	option = {
+		name = SRA_RE_Start.127.a
+		hidden_effect = {
+			event_target:SRA_RE_archaeological_country_2 = {
+				destroy_country = yes
+			}
+			country_event = {
+				id = SRA_RE_Crisis.1 days = 1800 random = 360
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = SRA_RE_Start.200
+	title = "SRA_RE_Start.200.name"
+	desc = "SRA_RE_Start.200.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = SRA_ai_crisis
+		room = ethic_spaceship_room
+	}
+
+	trigger = {
+		from = { 
+			OR = {
+				is_same_value = root
+				is_same_value = event_target:SRA_RE_archaeological_country_2
+			}
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = SRA_RE_Start.200.a
+		is_dialog_only = yes
+		response_text = SRA_RE_Start.200.a.response
+		hidden_effect = {
+		}
+	}
+	option = {
+		name = SRA_RE_Start.200.b
+		is_dialog_only = yes
+		response_text = SRA_RE_Start.200.b.response
+		hidden_effect = {
+			set_country_flag = SRA_RE_Start.200.b
+		}
+	}
+	option = {
+		name = SRA_RE_Start.200.c
+		is_dialog_only = yes
+		response_text = SRA_RE_Start.200.c.response
+		# allow = {
+		# 	has_country_flag = SRA_RE_Start.200.b
+		# }
+		# hide_option_if_not_allowed = yes
+	}
+	option = {
+		name = SRA_RE_Start.200.d
+		is_dialog_only = yes
+		response_text = SRA_RE_Start.200.d.response
+		hidden_effect = {
+		}
+	}
+	option = {
+		name = SRA_RE_Start.200.e
+		is_dialog_only = yes
+		response_text = SRA_RE_Start.200.e.response
+		trigger = {
+			is_spiritualist = yes
+		}
+		hidden_effect = {
+		}
+	}
+	option = {
+		name = SRA_RE_Start.200.x
+		is_dialog_only = yes
+		response_text = SRA_RE_Start.200.x.response
+		trigger = {
+			has_country_flag = cybrex_1
+		}
+	}
+	option = {
+		name = SRA_RE_Start.200.z
+	}
+}

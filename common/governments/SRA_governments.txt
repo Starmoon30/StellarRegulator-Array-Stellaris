@@ -1,0 +1,13 @@
+# gov_origin_SRA_Rokia = {
+# 	ruler_title = ruler_origin_SRA_Rokia
+# 	ruler_title_female = ruler_origin_SRA_Rokia
+# 	heir_title = heir_origin_SRA_Rokia
+# 	heir_title_female = heir_origin_SRA_Rokia
+# 	possible = {
+# 		has_origin = origin_SRA_Rokia
+# 	}
+# 	weight = {
+# 		base = 9000
+# 	}
+# }
+

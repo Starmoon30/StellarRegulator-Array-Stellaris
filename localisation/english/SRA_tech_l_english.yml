@@ -1,0 +1,96 @@
+﻿l_english:
+###############################
+ war_goal_wg_SRA_AI_world_machine_attack:0 "Astronomical Fabrications - Integration"
+ war_goal_wg_SRA_AI_world_machine_attack_desc:0 "Threat level reached standard. Purge initiated."
+ 
+ war_goal_wg_SRA_AI_world_machine_defense:0 "Astronomical Fabrications - Integration"
+ war_goal_wg_SRA_AI_world_machine_defense_desc:0 "Attack detected. Purge initiated."
+
+
+
+ SRA_category:"Stellarcrystal Technology"
+ SRA_category_desc:"A technology system established based on various properties of Stellarcrystal, which is more efficient than most conventional technologies."
+
+ SRA_SD_category:"Art of Metarbor"
+ SRA_SD_category_desc:"Interstellar age technology established based on the supernatural system. Sometimes it is a new creation corresponding to demand, and sometimes it is old craftsmanship simply moved into space."
+
+ tech_SRA_T4_weapon_SML_Mass_Drivers:0 "SRA Conventional Weapon System"
+ tech_SRA_T4_weapon_SML_Mass_Drivers_desc:0 "The conventional weapon system used by the StellarRegulator Array, mainly composed of Multi-Function Energy Rapid-Fire Cannons and Heavy Annihilation Weapons. It has extremely strong penetrating power against most defenses, and special energy induction technology guarantees accuracy against mobile targets."
+ tech_SRA_T4_weapon_TX_Laser:0 "SRA Erasure Lance"
+ tech_SRA_T4_weapon_TX_Laser_desc:0 "The signature weapon of the StellarRegulator Array, tearing enemies apart by destroying the spacetime structure or the plane itself, and releasing a large amount of energy to cause secondary damage.\nPlane exploration engineering has revealed the existence of the so-called \"Sea of Chaos\" outside the plane. These undefined things will be converted into basic energy when they arrive at our plane through plane rifts, which promoted the innovation of weapon technology. For now, this technology has not produced uncontrollable consequences."
+ tech_SRA_T4_weapon_HGP_weapon:0 "SRA Secondary Weapon System"
+ tech_SRA_T4_weapon_HGP_weapon_desc:0 "The carrier-based aircraft groups, missile groups, and point defense groups used by the StellarRegulator Array, possessing excellent compatibility and reliability."
+ tech_SRA_T4_ship_Part:0 "SRA Ship System"
+ tech_SRA_T4_ship_Part_desc:0 "Ships of the StellarRegulator Array are built by ['concept_SRA_Stellarcrystal_Fractal'] and use a set of extremely excellent components, capable of working with high efficiency while compatible with various other designs."
+
+ tech_SRA_T4_Armies:0 "SRA Planetary Purge Unit"
+ tech_SRA_T4_Armies_desc:0 "Annihilating Fabrications, or SRA Planetary Purge Units, is a collective term for a series of advanced war machines forged by ['concept_SRA_Stellarcrystal_Fractal']. As the final solution for surface warfare, this collection can destroy all resistance at unimaginable speeds.\nIn most cases, Annihilating Fabrications appear as a huge floating combat platform, mainly carrying space tearing weapons, erasure weapons, and pulsed energy beams. Considering complex surface conditions and alien life forms, it can also construct specialized weapons such as electromagnetic pulses and neutron plumes to efficiently clear any resistors. If needed, Annihilating Fabrications can also reorganize into combat machines of any size to systematically purge diverse fortifications."
+
+ tech_SRA_nano_shipyard:0 "SRA - Mass-Energy Construction Framework"
+ tech_SRA_nano_shipyard_desc:0 "Thanks to the advanced mass-energy manipulation technology of the StellarRegulator Array, we can directly construct ships in space using military industry materials, allowing the starbase to quickly produce a large number of ships."
+
+ tech_SRA_starbase_turret:0 "SRA Deep Space Sentry"
+ tech_SRA_starbase_turret_desc:0 "This large defense platform provides powerful fire support for the starbase. Moreover, the unique signal generator on it makes this defense platform more threatening in the eyes of the enemy, thereby attracting fire for the starbase to a certain extent."
+
+ tech_SRA_Barrier_megastructure_0:0 "SRA - Celestial Formation"
+ tech_SRA_Barrier_megastructure_0_desc:0 "Celestial Formation Combat Fortress, designed to provide fleet supplies on the war front, collect and process surrounding resources, quickly assemble ships, and directly participate in frontal combat, providing strong fire support and combat system support for the fleet."
+
+ tech_SRA_T4_hidden_tech:0 "SRA Technology - Access Not Granted"
+ tech_SRA_T4_hidden_tech_desc:0 "§YYou shouldn't possess this.§!"
+
+ tech_SRA_GZ_repair:0 "Tuned Star Core Restart"
+ tech_SRA_GZ_repair_desc:0 "Using a large amount of Astral Threads, we can gradually restore the operating power of the Tuned Star Core."
+
+ tech_SRA_T3_Composite_Crystal_Lattice:0 "Stellarcrystal Composite Lattice Technology"
+ tech_SRA_T3_Composite_Crystal_Lattice_desc:0 "Research on the unique properties of Stellarcrystal has revealed a promising path-we can edit its internal four-dimensional folded structure through technical means to make it exhibit the properties we need.\n§YWill upgrade all ['concept_SRA_Stellarcrystal_industry'], increasing production capacity and job numbers.§!"
+ tech_SRA_T3_Crystal_Node:0 "Stellarcrystal Network"
+ tech_SRA_T3_Crystal_Node_desc:0 "The unique connection between Stellarcrystals makes them excellent core components for communication networks, allowing us to build a special control system to control more facilities."
+ tech_SRA_T3_Planet_Mobilization:0 "Planetary Mobilization Order"
+ tech_SRA_T3_Planet_Mobilization_desc:0 "The speed of implementing resolutions is often unsatisfactory, so we developed a brand new organizational system that can better mobilize our execution."
+ tech_SRA_T3_Recovery_Nest:0 "Stellarcrystal Recovery Nest"
+ tech_SRA_T3_Recovery_Nest_desc:0 "Repair pods combining microscopic repair technology and thought adjustment technology can restore all wear and tear, letting you start a new day in the best condition."
+ tech_SRA_T3_Singularity_Gravitation_Control:0 "Singularity Gravity Control"
+ tech_SRA_T3_Singularity_Gravitation_Control_desc:0 "Through ['concept_SRA_Composite_Crystal_Lattice'] technology, we can achieve black hole-level gravitational field simulation within a small scale and isolate its influence within a certain range. This can create a unique physics laboratory and also provides the possibility of artificially synthesizing large amounts of Dark Matter. At the same time, we have the ability to form special armies using gravity weapons.\n\nThe exquisite Event Horizon Singularity Core is the crystallization of gravity theory. It grants our creations the authority to unify fundamental forces. This technology will overturn the entire world."
+ tech_SRA_T3_Wide_Area_Mind_Control:0 "Wide Area Mind Control"
+ tech_SRA_T3_Wide_Area_Mind_Control_desc:0 "Experiments show that Stellarcrystal can guide psionic energy and emit it in a specific pattern outward, making continuous thought interference possible...\nWe can make our citizens agree with what we want them to agree with, execute what we want them to execute, and let them truly become a part of the state...\n§RWhy not do so?§!"
+ tech_SRA_T3_Directional_Thinking_Patterns_Erase:0 "Directional Thinking Pattern Erasure"
+ tech_SRA_T3_Directional_Thinking_Patterns_Erase_desc:0 "They should be well aware of what thoughts they should have and what thoughts they shouldn't have.\nIf they don't understand, we will make them understand forever.\n§RStand in line, you obedient machines\nCheer loudly, you should know thinking is a felony§!"
+
+ tech_SRA_T3_weapon_SML_Plasma:0 "Lattice Aggregation Launcher"
+ tech_SRA_T3_weapon_SML_Plasma_desc:0 "An artillery group constructed using ['concept_SRA_Composite_Crystal_Lattice'] technology, releasing unique energy clusters capable of penetrating shields and main armor, directly destroying the hull."
+ tech_SRA_T3_weapon_TX_Laser:0 "Lattice Fission Beam"
+ tech_SRA_T3_weapon_TX_Laser_desc:0 "An axis-based beam weapon constructed using ['concept_SRA_Composite_Crystal_Lattice'] technology, capable of easily tearing apart material structures with the help of energy level drops or spatial manipulation.\n\nSpatial manipulation technology allows us to destroy matter upon it by directly destroying the spatial structure, which has greatly promoted the development of military technology. Considering the self-restoring nature of space itself will repair this damage on its own, large-scale weaponization remains safe."
+ tech_SRA_T3_weapon_HGP_weapon:0 "Lattice Secondary Weapon System"
+ tech_SRA_T3_weapon_HGP_weapon_desc:0 "Carrier-based aircraft groups, missile groups, and point defense groups constructed using ['concept_SRA_Composite_Crystal_Lattice'] technology, possessing extremely high energy density and stability."
+ tech_SRA_T3_ship_Part:0 "Lattice Ship System"
+ tech_SRA_T3_ship_Part_desc:0 "Ship components constructed using ['concept_SRA_Composite_Crystal_Lattice'] technology, significantly improving ship operating efficiency.\n\n['concept_SRA_Composite_Crystal_Lattice'] Hardlight, a material composed of static photons and Stellarcrystal particles containing complex topological structures, is simple to manufacture, lightweight, and has superior structural strength. It is an upgraded version of Stellarcrystal Polarized Armor, achieving both low cost and high performance. Supported by ['concept_SRA_Composite_Crystal_Lattice'] technology, this material approaching programmable matter can maintain the required form according to instructions and requires no energy input to maintain for hundreds of thousands of years. With external energy support, its strength can be raised to a higher level and achieve efficient self-repair."
+
+
+ tech_SRA_T2_weapon_SML_Laser:0 "Stellarcrystal Laser"
+ tech_SRA_T2_weapon_SML_Laser_desc:0 "A laser constructed using mature Stellarcrystal Technology, having excellent damage effects on various targets."
+ tech_SRA_T2_weapon_TX_Laser:0 "Stellarcrystal Lance"
+ tech_SRA_T2_weapon_TX_Laser_desc:0 "An axis-based beam weapon constructed using mature Stellarcrystal Technology, capable of providing massive energy output and destructive power."
+ tech_SRA_T2_weapon_HGP_weapon:0 "Stellarcrystal Secondary Weapon System"
+ tech_SRA_T2_weapon_HGP_weapon_desc:0 "Carrier-based aircraft groups, missile groups, and point defense groups constructed using mature Stellarcrystal Technology, using high-efficiency energy weapons."
+ tech_SRA_T2_ship_Part:0 "Stellarcrystal Ship System"
+ tech_SRA_T2_ship_Part_desc:0 "Ship defense components constructed using mature Stellarcrystal Technology, superior to the prototype.\n\nStellarcrystal recrystallized after a series of processes possesses a regular internal structure, turning deep blue in color, and performing better in almost all aspects. However, obviously, the potential of this substance is more than this."
+
+
+ tech_SRA_T1_weapon_SML_Space_Whale_Weapon:0 "Prototype Crystal Energy Discharger"
+ tech_SRA_T1_weapon_SML_Space_Whale_Weapon_desc:0 "An experimental energy weapon constructed using Stellarcrystal Technology, capable of releasing destructive energy beams."
+ tech_SRA_T1_weapon_TX_Laser:0 "Prototype Crystal Lance"
+ tech_SRA_T1_weapon_TX_Laser_desc:0 "An experimental axis-based beam weapon constructed using Stellarcrystal Technology, more efficient against shields compared to conventional lance weapons."
+ tech_SRA_T1_weapon_HGP_weapon:0 "Prototype Crystal Secondary Weapon System"
+ tech_SRA_T1_weapon_HGP_weapon_desc:0 "Experimental carrier-based aircraft groups, missile groups, and point defense groups constructed using Stellarcrystal Technology, more efficient after unifying design patterns."
+ tech_SRA_T1_ship_Part:0 "Prototype Crystal Ship System"
+ tech_SRA_T1_ship_Part_desc:0 "Experimental ship defense components constructed using Stellarcrystal Technology.\n\nUnpurified Stellarcrystal appears bright red, caused by internal structural cracks and other particles. Nevertheless, this material still demonstrates unique advantages, especially its excellent strength after receiving charging, and its high-efficiency nature in creating energy shields. Further research on this substance shows that manipulating energy can be used for more than just defense; more military technologies await development."
+
+
+ tech_SRA_SD_ship_Part:0 "Remnant Branch - Ship System"
+ tech_SRA_SD_ship_Part_desc:0 "Your creation is destiny."
+ ### RE Core & Erlius Trait Tech (Missing Loc) ###
+ tech_SRA_RE_Core_tech:0 "StellarRegulator RE Core System"
+ tech_SRA_RE_Core_tech_desc:0 "The core system of the Rocivia Empire's warships. These proprietary components integrate seamlessly with the empire's unique combat doctrine, providing unmatched power and resilience."
+ ### Erlius Trait Tech ###
+ tech_SRA_Erlius_trait:0 "Erlius Biological Adaptation"
+ tech_SRA_Erlius_trait_desc:0 "Experimental biological modification techniques tailored for the Erlius species, unlocking unique genetic trait enhancements through targeted adaptation protocols.\n§YThis technology is classified as dangerous.§!"

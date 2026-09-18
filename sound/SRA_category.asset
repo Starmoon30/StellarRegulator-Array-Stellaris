@@ -1,0 +1,30 @@
+
+################## EFFECTS ########################
+
+category = {
+	name = "Effects"
+	soundeffects = {
+		####### EVENTS SFX
+		BGM_ThirdFleetStage1
+		BGM_ThirdFleetStage2
+		BGM_ThirdFleetStage3
+		BGM_ThirdFleetStage4
+		BGM_CalamitiseaseStage1
+		BGM_CalamitiseaseStage2
+		BGM_CalamitiseaseStage3
+		BGM_CalamitiseaseStage4
+		BGM_CalamitiseaseStage5
+		BGM_CalamitiseaseStage6
+		BGM_ChiefStage1
+	}
+	
+	compressor =  {
+		enabled = yes
+		pregain = 4.0
+		postgain = -2.2
+		ratio = 3.0
+		threshold = -25
+		attacktime = 0.30
+		releasetime = 0.8
+	}
+}

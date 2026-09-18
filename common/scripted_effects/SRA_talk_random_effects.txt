@@ -1,0 +1,868 @@
+SRA_StellarRegulator_Cloth_n_portrait_2 = {
+	if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_1 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_2 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 22 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 32 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_7 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 72 }
+	}
+	else = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 2 }
+	}
+}
+
+SRA_StellarRegulator_Cloth_n_portrait_3 = {
+	if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_1 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_2 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 23 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 33 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_7 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 73 }
+	}
+	else = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 3 }
+	}
+}
+SRA_StellarRegulator_Cloth_n_portrait_5 = {
+	if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_1 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_2 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 25 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 35 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_7 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 75 }
+	}
+	else = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 5 }
+	}
+}
+SRA_StellarRegulator_Cloth_n_portrait_6 = {
+	if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_1 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 16 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_2 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 26 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 36 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_7 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 76 }
+	}
+	else = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 6 }
+	}
+}
+SRA_StellarRegulator_Cloth_n_portrait_7 = {
+	if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_1 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_2 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 27 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_3 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 37 }
+	}
+	else_if = {
+		limit ={ has_country_flag = SRA_StellarRegulator_Cloth_7 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 77 }
+	}
+	else = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 7 }
+	}
+}
+SRA_RE_StellarRegulator_talk_random ={
+	optimize_memory
+	random_owned_ship = {
+		limit = {
+			OR = {
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith
+				is_ship_size = SRA_Spear_Of_Galaxy_Zenith_action1
+			}
+		}
+		save_event_target_as = SRA_Spear_Of_Galaxy_Zenith
+	}
+	random_list = {
+		1 = { 
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3011.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		1 = { 
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3011.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		1 = { 
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3012.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		}
+		1 = { 
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3013.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+		}
+		1 = { 
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3014.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_debris_2
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3015.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_debris_2
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3015.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_debris_2
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3016.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_debris_2
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3017.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_debris_2
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3018.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_2
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3019.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_2
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3020.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_2
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3021.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_2
+				NOT = {
+					has_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3022.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3023.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3024.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3025.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_sequence_3_start
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3026.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+		}
+		0 = {
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_9
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3027.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = {
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_9
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3027.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = {
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_9
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3027.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = {
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_9
+			}
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3028.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 13 }
+		}
+		0 = {
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_9
+			}
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3029.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+		}
+		0 = {
+			modifier = { 
+				add = 1
+				has_country_flag = SRA_RE_StellarRegulator_debris_9
+			}
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 3030.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+		}
+		0 = {
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = no has_hp_percentage > 0.5 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4001.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = no has_hp_percentage > 0.5 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4001.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = no has_hp_percentage > 0.5 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4001.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 15 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.4 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_1_1
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.101 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_1_2
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.102 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_1_3
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.103 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_3_1
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.301 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_3_2
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.302 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_3_3
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.303 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_5_1
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.501 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_5_2
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.502 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship is_in_combat = yes has_hp_percentage > 0.5 }
+				has_country_flag = SRA_SOGZ_menu_sub_5_3
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4002.503 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = {
+					is_scope_type = ship
+					is_in_combat = no
+					has_hp_percentage > 0.5
+					fleet = {
+						exists = orbit
+						orbit = {
+							exists = controller
+							controller = { is_hostile = root }
+							has_orbital_bombardment = yes
+						}
+					}
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4003.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = {
+					is_scope_type = ship
+					is_in_combat = no
+					has_hp_percentage > 0.5
+					fleet = {
+						exists = orbit
+						orbit = {
+							exists = controller
+							controller = { is_hostile = root }
+							has_orbital_bombardment = yes
+						}
+					}
+				}
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4003.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 17 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship has_hp_percentage <= 0.5 has_hp_percentage > 0.1 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4004.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship has_hp_percentage <= 0.1 }
+		    }
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4005.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Spear_Of_Galaxy_Zenith = { is_scope_type = ship has_hp_percentage <= 0.1 }
+		    }
+			
+			set_variable = { which = SRA_RE_StellarRegulator_talk value = 4005.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 12 }
+		}
+	}
+	reroll_random = yes
+}
+SRA_RE_Rocivia_talk_random ={
+	optimize_memory
+	random_list={
+		6 = { 
+			modifier = { 
+				add = 1
+				has_global_flag = has_ancient_empire_mod
+		    }
+			modifier = { 
+				add = 1
+				has_global_flag = install_kuat_mod
+		    }
+			modifier = { 
+				add = 1
+				has_global_flag = gigastructures_enabled
+		    }
+			modifier = { 
+				add = 1
+				has_global_flag = acot_activated
+		    }
+			modifier = { 
+				add = 1
+				has_global_flag = sofe_activated
+		    }
+			modifier = { 
+				add = 1
+				has_global_flag = has_wsg_mod
+		    }
+			modifier = { 
+				add = 1
+				KZ_VOY_MOD = yes
+		    }
+			modifier = { 
+				add = 1
+				has_global_flag = has_NYTO_mod
+		    }
+			modifier = { 
+				add = 1
+				has_global_flag = AOW_installed
+		    }
+			set_variable = { which = SRA_RE_dialogue_talk value = 1 } 
+	    }
+		1 = { 
+			set_variable = { which = SRA_RE_dialogue_talk value = 2 } 
+	    }
+		2 = { 
+			set_variable = { which = SRA_RE_dialogue_talk value = 3 } 
+	    }
+		1 = { 
+			set_variable = { which = SRA_RE_dialogue_talk value = 4 } 
+	    }
+	}
+	reroll_random = yes
+}
+SRA_RE_Hidra_talk_random ={
+	optimize_memory
+	random_list={
+		5 = { 
+			set_variable = { which = SRA_RE_dialogue_talk value = 1 } 
+	    }
+		3 = { 
+			set_variable = { which = SRA_RE_dialogue_talk value = 2 } 
+	    }
+		3 = { 
+			set_variable = { which = SRA_RE_dialogue_talk value = 3 } 
+	    }
+		1 = { 
+			set_variable = { which = SRA_RE_dialogue_talk value = 4 } 
+	    }
+	}
+	reroll_random = yes
+}
+SRA_StellarRegulator_talk_random ={
+	optimize_memory
+	random_list={
+		4 = { 
+			set_variable = { which = SRA_diplomacy_talk value = 1 } 
+	    }
+		6 = { 
+			set_variable = { which = SRA_diplomacy_talk value = 2 } 
+	    }
+		3 = { 
+			set_variable = { which = SRA_diplomacy_talk value = 3 } 
+	    }
+		3 = { 
+			set_variable = { which = SRA_diplomacy_talk value = 4 } 
+	    }
+	}
+	reroll_random = yes
+}
+SRA_Chief_talk_random ={
+	optimize_memory
+	random_list={
+		1 = { 
+			set_variable = { which = SRA_diplomacy_talk value = 1 } 
+	    }
+	}
+	reroll_random = yes
+}
+SRA_Rokia_talk_random ={
+	optimize_memory
+	random_owned_ship = {
+		limit = {
+			is_ship_size = SRA_Rokia_dragon_Ship
+		}
+		save_event_target_as = SRA_Rokia_dragon_Ship
+	}
+	random_list = {
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3011.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3011.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3011.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3012.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3012.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3012.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3013.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		}
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3013.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		}
+		1 = { 
+			set_variable = { which = SRA_Rokia_talk value = 3013.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		}
+		1 = {
+			set_variable = { which = SRA_Rokia_talk value = 3013.4 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		}
+		1 = {
+			set_variable = { which = SRA_Rokia_talk value = 3013.5 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		}
+		1 = {
+			set_variable = { which = SRA_Rokia_talk value = 3014.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 47 }
+		}
+		1 = {
+			set_variable = { which = SRA_Rokia_talk value = 3014.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 47 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = { is_scope_type = ship is_in_combat = no fleet = { is_fleet_idle = yes } }
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4001.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = { is_scope_type = ship is_in_combat = no fleet = { is_fleet_idle = yes } }
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4001.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = { is_scope_type = ship is_in_combat = no fleet = { is_fleet_idle = yes } }
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4001.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = { is_scope_type = ship is_in_combat = yes }
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4002.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = { is_scope_type = ship is_in_combat = yes }
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4002.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = { is_scope_type = ship is_in_combat = yes }
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4002.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = { is_scope_type = ship is_in_combat = yes }
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4002.4 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						has_fleet_order = planet_killer_weapon_windup_order
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4003.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						has_fleet_order = planet_killer_weapon_windup_order
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4003.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						has_fleet_order = planet_killer_weapon_windup_order
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4003.3 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						has_fleet_order = planet_killer_weapon_windup_order
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4003.4 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						has_fleet_order = planet_killer_weapon_windup_order
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4003.5 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 47 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						OR = {
+							has_fleet_order = auto_explore_order
+							has_fleet_order = survey_planet_order
+						}
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4004.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						OR = {
+							has_fleet_order = auto_explore_order
+							has_fleet_order = survey_planet_order
+						}
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4004.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						has_fleet_order = research_anomaly_order
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4005.1 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+		0 = { 
+			modifier = { 
+				add = 1
+				event_target:SRA_Rokia_dragon_Ship = {
+					is_scope_type = ship
+					is_in_combat = no
+					fleet = {
+						has_fleet_order = research_anomaly_order
+					}
+				}
+		    }
+			set_variable = { which = SRA_Rokia_talk value = 4005.2 }
+			set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		}
+	}
+	reroll_random = yes
+}

@@ -1,0 +1,2285 @@
+namespace = SRA_StellarRegulator
+
+country_event = {
+	id = SRA_StellarRegulator.1
+	title = "SRA_StellarRegulator.1.name"
+	desc = "SRA_StellarRegulator.1.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	trigger = {
+		has_civic = civic_SRAtechnology
+		is_ai = no
+		NOT = {
+			has_country_flag = has_SRA_StellarRegulator_country
+		}
+	}
+
+	immediate = {
+		set_country_flag = SRA_StellarRegulator_Cloth_0
+		set_variable = { which = SRA_diplomacy_bg value = 1 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1 }
+		set_country_flag = has_SRA_StellarRegulator_country
+		event_target:SRA_StellarRegulator_country = {
+			establish_communications_no_message = root
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1.a
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1.a.response
+	}
+	option = {
+		name = SRA_StellarRegulator.1.b
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1.b.response
+	}
+	option = {
+	    name = SRA_StellarRegulator.1.c
+	    hidden_effect = {
+		    country_event = {
+				id = SRA_StellarRegulator.2
+	    	}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = SRA_StellarRegulator.2
+	title = "SRA_StellarRegulator.2.name"
+	desc = "SRA_StellarRegulator.2.desc"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 1 }
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1 }
+	}
+	option = {
+		name = SRA_StellarRegulator.2.a
+	}
+}
+
+#对话界面
+country_event = {
+	id = SRA_StellarRegulator.101
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.101.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+
+	#寻求帮助
+	option = {
+		name = SRA_StellarRegulator.101.a
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.102
+			}
+		}
+	}
+	#询问
+	option = {
+		name = SRA_StellarRegulator.101.b
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.103
+			}
+		}
+	}
+	#闲聊
+	option = {
+		name = SRA_StellarRegulator.101.c
+		trigger = {
+		}
+		hidden_effect = {
+			SRA_StellarRegulator_talk_random = yes
+			country_event = { id = SRA_StellarRegulator.1041 }
+		}
+	}
+	# 寻求支援
+	# option = {
+	# 	name = SRA_StellarRegulator.101.c
+	# 	trigger = {
+	# 	}
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = SRA_StellarRegulator.101
+	# 		}
+	# 	}
+	# }
+	# option = {
+	# 	name = SRA_StellarRegulator.101.d
+	# 	trigger = {
+	# 	}
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = SRA_StellarRegulator.10115
+	# 		}
+	# 	}
+	# }
+	# option = {
+	# 	name = SRA_StellarRegulator.108.e
+	# 	hidden_effect = {
+	# 		random_list = {
+	# 			1 = {
+	# 				country_event = {
+	# 					id = SRA_StellarRegulator.1500
+	# 				}
+	# 			}
+	# 			1 = {
+	# 				country_event = {
+	# 					id = SRA_StellarRegulator.1501
+	# 				}
+	# 			}
+	# 			1 = {
+	# 				country_event = {
+	# 					id = SRA_StellarRegulator.1502
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#寻求支援
+country_event = {
+	id = SRA_StellarRegulator.102
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.102.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_3 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+		capital_scope = {
+			save_global_event_target_as = SRA_Adjudicator_capital_location
+	}
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+
+
+	option = {
+		name = SRA_StellarRegulator.102.a
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1010
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.102.b
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1020
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.102.c
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1030
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.101
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#询问
+country_event = {
+	id = SRA_StellarRegulator.103
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.103.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.103.a
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1110
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.103.b
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1120
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.101
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+
+#询问个人问题
+country_event = {
+	id = SRA_StellarRegulator.1110
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1110.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_3 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+
+
+	option = {
+		name = SRA_StellarRegulator.1110.a
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1111
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1110.b
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1112
+			}
+		}
+	}
+	 option = {
+	 	name = SRA_StellarRegulator.1110.c
+		custom_tooltip = SRA_StellarRegulator.1110.c.tooltip
+	 	trigger = {
+			NOT = {
+				has_global_flag = Rocivia_Legacy_Start
+			}
+	 	}
+	 	hidden_effect = {
+	 		country_event = {
+	 			id = SRA_StellarRegulator.1113
+	 		}
+	 	}
+	 }
+	# option = {
+	# 	name = SRA_StellarRegulator.1101.d
+	# 	trigger = {
+	# 	}
+	# 	hidden_effect = {
+	# 		country_event = {
+	# 			id = SRA_StellarRegulator.1104
+	# 		}
+	# 	}
+	# }
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.103
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#领导人背景
+#contingency_planet
+#换装
+country_event = {
+	id = SRA_StellarRegulator.1120
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1120.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1120.a
+		custom_tooltip = SRA_StellarRegulator.1120.a.desc
+		hidden_effect = { 
+			remove_country_flag = SRA_StellarRegulator_Cloth_0
+			remove_country_flag = SRA_StellarRegulator_Cloth_1
+			remove_country_flag = SRA_StellarRegulator_Cloth_2
+			remove_country_flag = SRA_StellarRegulator_Cloth_3
+			remove_country_flag = SRA_StellarRegulator_Cloth_7
+			set_country_flag = SRA_StellarRegulator_Cloth_0
+			country_event = {
+				id = SRA_StellarRegulator.1120
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1120.b
+		custom_tooltip = SRA_StellarRegulator.1120.b.desc
+		hidden_effect = { 
+			remove_country_flag = SRA_StellarRegulator_Cloth_0
+			remove_country_flag = SRA_StellarRegulator_Cloth_1
+			remove_country_flag = SRA_StellarRegulator_Cloth_2
+			remove_country_flag = SRA_StellarRegulator_Cloth_3
+			set_country_flag = SRA_StellarRegulator_Cloth_1
+			country_event = {
+				id = SRA_StellarRegulator.1120
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1120.c
+		custom_tooltip = SRA_StellarRegulator.1120.c.desc
+		hidden_effect = { 
+			remove_country_flag = SRA_StellarRegulator_Cloth_0
+			remove_country_flag = SRA_StellarRegulator_Cloth_1
+			remove_country_flag = SRA_StellarRegulator_Cloth_2
+			remove_country_flag = SRA_StellarRegulator_Cloth_3
+			remove_country_flag = SRA_StellarRegulator_Cloth_7
+			set_country_flag = SRA_StellarRegulator_Cloth_2
+			country_event = {
+				id = SRA_StellarRegulator.1120
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1120.d
+		custom_tooltip = SRA_StellarRegulator.1120.d.desc
+		hidden_effect = { 
+			remove_country_flag = SRA_StellarRegulator_Cloth_0
+			remove_country_flag = SRA_StellarRegulator_Cloth_1
+			remove_country_flag = SRA_StellarRegulator_Cloth_2
+			remove_country_flag = SRA_StellarRegulator_Cloth_3
+			remove_country_flag = SRA_StellarRegulator_Cloth_7
+			set_country_flag = SRA_StellarRegulator_Cloth_3
+			country_event = {
+				id = SRA_StellarRegulator.1120
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1120.e
+		custom_tooltip = SRA_StellarRegulator.1120.e.desc
+		hidden_effect = { 
+			remove_country_flag = SRA_StellarRegulator_Cloth_0
+			remove_country_flag = SRA_StellarRegulator_Cloth_1
+			remove_country_flag = SRA_StellarRegulator_Cloth_2
+			remove_country_flag = SRA_StellarRegulator_Cloth_3
+			remove_country_flag = SRA_StellarRegulator_Cloth_7
+			set_country_flag = SRA_StellarRegulator_Cloth_7
+			country_event = {
+				id = SRA_StellarRegulator.1120
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.103
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+
+#聊天界面
+#询问
+country_event = {
+	id = SRA_StellarRegulator.1111
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1111.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1110
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit2
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+country_event = {
+	id = SRA_StellarRegulator.1112
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1112.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1110
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit2
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+country_event = {
+	id = SRA_StellarRegulator.1113
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1113.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+		set_global_flag = Rocivia_Legacy_Start
+	}
+	option = {
+		name = SRA_StellarRegulator.1113.a
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1110
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+		country_event = {
+			id = SRA_Rocivia_Legacy.1 days = 10
+		    }
+		}
+	}
+}
+#闲聊
+country_event = {
+	id = SRA_StellarRegulator.1041
+	title = SRA_StellarRegulator
+	#无表情
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_diplomacy_talk value = 1 }
+		}
+		text = SRA_StellarRegulator.1041.a.desc
+		text = SRA_StellarRegulator.1041.b.desc
+		text = SRA_StellarRegulator.1041.c.desc
+		text = SRA_StellarRegulator.1041.d.desc
+	}
+	#微笑
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_diplomacy_talk value = 2 }
+		}
+		text = SRA_StellarRegulator.1042.a.desc
+		text = SRA_StellarRegulator.1042.b.desc
+		text = SRA_StellarRegulator.1042.c.desc
+		text = SRA_StellarRegulator.1042.d.desc
+		text = SRA_StellarRegulator.1042.e.desc
+		text = SRA_StellarRegulator.1042.f.desc
+	}
+	#闭眼
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_diplomacy_talk value = 3 }
+		}
+		text = SRA_StellarRegulator.1043.a.desc
+		text = SRA_StellarRegulator.1043.b.desc
+		text = SRA_StellarRegulator.1043.c.desc
+	}
+	#闭眼微笑
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_diplomacy_talk value = 4 }
+		}
+		text = SRA_StellarRegulator.1044.a.desc
+		text = SRA_StellarRegulator.1044.b.desc
+		text = SRA_StellarRegulator.1044.c.desc
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		if = {
+			limit = { check_variable = { which = SRA_diplomacy_talk value = 1 } }
+			SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		}
+		if = {
+			limit = { check_variable = { which = SRA_diplomacy_talk value = 2 } }
+			SRA_StellarRegulator_Cloth_n_portrait_3 = yes
+		}
+		if = {
+			limit = { check_variable = { which = SRA_diplomacy_talk value = 3 } }
+			SRA_StellarRegulator_Cloth_n_portrait_5 = yes
+		}
+		if = {
+			limit = { check_variable = { which = SRA_diplomacy_talk value = 4 } }
+			SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		}
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	option = {
+		name = SRA_StellarRegulator.101.c
+		hidden_effect = {
+			SRA_StellarRegulator_talk_random = yes
+			country_event = { id = SRA_StellarRegulator.1041 }
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return4
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.101
+			}
+		}
+	}
+}
+
+#管理协助
+country_event = {
+	id = SRA_StellarRegulator.1010
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1010.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_5 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1010.a
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1011
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1010.b
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1012
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.102
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+
+#出任领袖
+country_event = {
+	id = SRA_StellarRegulator.1011
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1011.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+
+	option = {
+		name = SRA_StellarRegulator.1011.a
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1011.a.response
+		trigger = {
+		}
+		hidden_effect = {
+			create_StellarRegulator_governor = yes
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1011.b
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1011.b.response
+		trigger = {
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = has_ancient_empire_mod
+				}
+				create_StellarRegulator_scientist_ag = yes
+			}
+			else = {
+				create_StellarRegulator_scientist = yes
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1011.c
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1011.c.response
+		trigger = {
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = has_ancient_empire_mod
+				}
+				create_StellarRegulator_admiral_ag = yes
+			}
+			else = {
+				create_StellarRegulator_admiral = yes
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1011.d
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1011.d.response
+		trigger = {
+		}
+		hidden_effect = {
+			create_StellarRegulator_general = yes
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1011.e
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1011.e.response
+		trigger = {
+			has_global_flag = SRA_invasion_end
+		}
+		hidden_effect = {
+			create_StellarRegulator_ruler = yes
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1011.f
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1011.f.response
+		trigger = {
+			is_gestalt = yes
+			NOT = {
+				any_owned_leader = {
+					is_councilor_type = councilor_gestalt_cognitive
+					has_trait = leader_trait_SRA_sci
+				}
+			}
+		}
+		hidden_effect = {
+			random_owned_leader = {
+				limit = {
+					is_councilor_type = councilor_gestalt_cognitive
+				}
+				add_trait = { trait = leader_trait_SRA_sci show_message = no }
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1010
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#启动特殊项目
+country_event = {
+	id = SRA_StellarRegulator.1012
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1012.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+
+	option = {
+		name = SRA_StellarRegulator.1012.a
+		is_dialog_only = yes
+		custom_tooltip = SRA_StellarRegulator.1012.a.desc
+		response_text = SRA_StellarRegulator.1012.a.response
+		trigger = {
+			NOR = {
+				has_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+				has_country_flag = SRA_Spear_Of_Galaxy_Zenith_start
+			}
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 100000 }
+			resource_stockpile_compare = { resource = alloys value >= 500000 }
+			resource_stockpile_compare = { resource = astral_threads value >= 80000 }
+		}
+        add_resource = {
+            energy = -100000
+            alloys = -500000
+            astral_threads = -80000
+        }
+		hidden_effect = {
+			set_country_flag = SRA_Spear_Of_Galaxy_Zenith_start
+			enable_special_project = {
+				name = SRA_SPEAR_OF_GALAXY_ZENITH
+				owner = this
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1010
+			}
+			
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+
+#技术指导
+country_event = {
+	id = SRA_StellarRegulator.1020
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1020.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+
+	option = {
+		name = SRA_StellarRegulator.1020.a
+		trigger = {
+			NOT = {
+				has_country_flag = StellarRegulator_Array_tech_permit
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1021
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1020.b
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1022
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1020.c
+		trigger = {
+			always = no
+			NOT = {
+				has_country_flag = StellarRegulator_Array_restricted_tech_permit
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1023
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.102
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#军事支持
+country_event = {
+	id = SRA_StellarRegulator.1030
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1030.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_StellarRegulator
+				is_same_value = ROOT
+			}
+		}
+		OR = {
+			has_country_flag = has_SRA_StellarRegulator_country
+			is_same_value = event_target:StellarRegulator_own_country
+		}
+	}
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_5 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+		capital_scope = {
+			save_global_event_target_as = SRA_Adjudicator_capital_location
+	}
+	}
+	
+	after = {
+		hidden_effect = { 
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+
+	option = {
+		name = SRA_StellarRegulator.1030.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1031
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.1030.b
+		trigger = {
+			NOT = {
+				has_global_flag = SRA_system_A_created
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_StellarRegulator.1032
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return3
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.102
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#星规裁决单元
+country_event = {
+	id = SRA_StellarRegulator.1031
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1031.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_7 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged			
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_continue1
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1031.response
+		hidden_effect = { 
+			set_country_flag = StellarRegulator_engaged
+			save_global_event_target_as = SRA_StellarRegulator_own_country
+			if = {
+				limit = {
+					owner = { has_civic = civic_SRAtechnology }
+				}
+				create_fleet = {
+					name = "NAME_SRA_Adjudicator"
+					effect = {
+						set_owner = event_target:SRA_StellarRegulator_own_country
+						create_ship = {
+							name = random
+							design = "NAME_SRA_Adjudicator"
+							upgradable = no
+						}
+						set_location = {
+							target = event_target:SRA_Adjudicator_capital_location
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1030
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+
+
+#星规技术
+country_event = {
+	id = SRA_StellarRegulator.1021
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1021.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_continue1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.10211
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1020
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+country_event = {
+	id = SRA_StellarRegulator.10211
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.10211.desc
+	show_sound = event_administrative_work
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+		set_country_flag = StellarRegulator_Array_tech_permit
+		give_technology = { tech = tech_SRA_T4_weapon_TX_Laser }
+		give_technology = { tech = tech_SRA_T4_weapon_SML_Mass_Drivers }
+		give_technology = { tech = tech_SRA_T4_weapon_HGP_weapon }
+		give_technology = { tech = tech_SRA_T4_ship_Part }
+		give_technology = { tech = tech_SRA_T4_Armies }
+		give_technology = { tech = tech_SRA_nano_shipyard }
+		give_technology = { tech = tech_SRA_starbase_turret }
+		give_technology = { tech = tech_SRA_Barrier_megastructure_0 }
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return2
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1020
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit2
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+#限制级技术许可
+country_event = {
+	id = SRA_StellarRegulator.1023
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1023.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_continue1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.10231
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1020
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+country_event = {
+	id = SRA_StellarRegulator.10231
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.10231.desc
+	show_sound = event_administrative_work
+	fire_only_once = yes
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_2 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+		set_country_flag = StellarRegulator_Array_restricted_tech_permit
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return2
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1020
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit2
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+
+
+#星规探索
+country_event = {
+	id = SRA_StellarRegulator.1022
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1022.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_3 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged			
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_continue1
+		is_dialog_only = yes
+		response_text = SRA_StellarRegulator.1022.response
+		hidden_effect = { 
+			save_global_event_target_as = SRA_StellarRegulator_own_country
+			set_country_flag = StellarRegulator_engaged
+			if = {
+				limit = {
+					owner = { has_civic = civic_SRAtechnology }
+				}
+				create_fleet = {
+					name = "NAME_SRA_Science_Ship"
+					effect = {
+						set_owner = event_target:SRA_StellarRegulator_own_country
+						create_ship = {
+							name = random
+							design = "NAME_SRA_Science_Ship"
+							upgradable = no
+						}			
+						set_location = {
+							target = event_target:SRA_Adjudicator_capital_location
+							distance = 0
+							angle = random
+						}
+						set_fleet_stance = aggressive
+					}	
+				}						
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1020
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+
+fleet_event = {
+	id = SRA_StellarRegulator.10221
+	title = SRA_StellarRegulator.10221.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_StellarRegulator.10221.desc"
+	
+	option = {
+		name = SRA_StellarRegulator.10221.a
+		custom_tooltip = SRA_StellarRegulator.10221.a.tooltip
+		allow = {
+			solar_system = {
+				custom_tooltip = {
+					NOT = { exists = starbase }
+					fail_text =  SRA_StellarRegulator.10221.exists_starbase
+				}
+				custom_tooltip = {
+					is_surveyed = {
+						who = root.owner
+						status = yes
+					}
+					fail_text =  SRA_StellarRegulator.10221.not_surveyed
+				}
+				custom_tooltip = {
+					NOT = {
+						any_ship_in_system = {
+							owner = {
+								is_hostile = root.owner
+							}
+						}
+					}
+					fail_text =  SRA_StellarRegulator.10221.exists_hostile_ship
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				create_starbase = {
+					size = starbase_outpost
+					owner = root.owner
+					effect = { root = { random_owned_ship = { fire_on_action = {
+						on_action = on_building_starbase_outpost
+						scopes = { from = root.owner }
+					} } } }
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10221.b
+		custom_tooltip = SRA_StellarRegulator.10221.b.tooltip
+		allow = {
+			solar_system = {
+				custom_tooltip = {
+					NOT = { exists = starbase }
+					fail_text =  SRA_StellarRegulator.10221.exists_starbase
+				}
+				custom_tooltip = {
+					is_surveyed = {
+						who = root.owner
+						status = yes
+					}
+					fail_text =  SRA_StellarRegulator.10221.not_surveyed
+				}
+				custom_tooltip = {
+					NOT = {
+						any_ship_in_system = {
+							owner = {
+								is_hostile = root.owner
+							}
+						}
+					}
+					fail_text =  SRA_StellarRegulator.10221.exists_hostile_ship
+				}
+			}
+			owner = {
+				has_technology = tech_starbase_5
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				create_starbase = {
+					size = starbase_citadel
+					owner = root.owner
+					effect = { root = { random_owned_ship = { fire_on_action = {
+						on_action = on_building_starbase_outpost
+						scopes = { from = root.owner }
+					} } } }
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10221.c
+		custom_tooltip = SRA_StellarRegulator.10221.c.tooltip
+		allow = {
+			solar_system = {
+				custom_tooltip = {
+					NOT = { exists = starbase }
+					fail_text =  SRA_StellarRegulator.10221.exists_starbase
+				}
+				custom_tooltip = {
+					is_surveyed = {
+						who = root.owner
+						status = yes
+					}
+					fail_text =  SRA_StellarRegulator.10221.not_surveyed
+				}
+				custom_tooltip = {
+					NOT = {
+						any_ship_in_system = {
+							owner = {
+								is_hostile = root.owner
+							}
+						}
+					}
+					fail_text =  SRA_StellarRegulator.10221.exists_hostile_ship
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				create_starbase = {
+					size = starbase_SRA_1
+					owner = event_target:SRA_StellarRegulator_country
+					effect = { 
+						set_owner = root.owner
+						root = { random_owned_ship = { fire_on_action = {
+						on_action = on_building_starbase_outpost
+						scopes = { from = root.owner }}}}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		default_hide_option = yes
+		hidden_effect = {
+		}
+	}
+}
+planet_event = {
+	id = SRA_StellarRegulator.10222
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		colony? = {
+			controller? = {
+				is_hostile = root.from.controller
+			}
+		}
+		from = {
+			NOT = {
+				has_fleet_flag = SRA_StellarRegulator_10222
+			}
+		}
+	}
+	immediate = {
+		colony = {
+			while = { 
+				count = 5
+				create_army = {
+					name = "sentinel_army"
+					owner = from.owner
+					species = from.owner
+					type = "SRA_Eliminater_Attacker"
+				}
+			}
+		}
+		from = {
+			set_timed_fleet_flag = {
+				flag = SRA_StellarRegulator_10222 days = 30
+			}
+		}
+	}
+}
+#星规行动基地
+#星穹枢纽
+country_event = {
+	id = SRA_StellarRegulator.1032
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.1032.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_6 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+	}
+
+	option = {
+		name = SRA_StellarRegulator_talk_continue1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.10321
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return1
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1030
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+country_event = {
+	id = SRA_StellarRegulator.10321
+	title = SRA_StellarRegulator
+	desc = SRA_StellarRegulator.10321.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_StellarRegulator_Cloth_n_portrait_6 = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = StellarRegulator_engaged
+		set_global_flag = SRA_system_A_created
+		capital_scope = {
+			spawn_system = {
+				min_distance = 10
+				max_distance = 30
+				max_jumps = 1
+				hyperlane = yes
+				is_discovered = no
+				initializer = SRA_system_A
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_return2
+		hidden_effect = { 
+			country_event = {
+				id = SRA_StellarRegulator.1030
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator_talk_exit2
+		hidden_effect = {
+			remove_country_flag = StellarRegulator_engaged
+		}
+	}
+}
+
+carrier_event = {
+	id = SRA_StellarRegulator.10322
+	title = SRA_StellarRegulator.10322.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_StellarRegulator.10322.desc"
+	trigger = {
+	}
+	immediate = {
+	}
+	after = {
+	}
+	option = {
+		name = SRA_StellarRegulator.10322.a
+		trigger = {
+			owner = {
+				has_country_flag = StellarRegulator_Array_tech_permit
+			}
+		}
+		hidden_effect = { 
+			carrier_event = {
+				id = SRA_StellarRegulator.10323
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10322.b
+		custom_tooltip = SRA_StellarRegulator.10322.b.desc
+		allow = {
+			NOT = {
+				owner = {
+					has_country_flag = SRA_StellarRegulator_10322_b
+				}
+			}
+		}
+		hidden_effect = {
+			solar_system = {
+				every_ship_in_system = {
+					limit = {
+						is_ship_size = SRA_GZ_Platform
+					}
+					delete_ship = THIS
+				}
+				star = {
+					save_event_target_as = SRA_system_A_star
+				}
+			}
+			owner = {
+				set_timed_country_flag = {
+					flag = SRA_StellarRegulator_10322_b days = 180
+				}
+			}
+			carrier_event = {
+				id = SRA_StellarRegulator.10324
+			}
+			carrier_event = {
+				id = SRA_StellarRegulator.10322
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10322.c
+		custom_tooltip = SRA_StellarRegulator.10322.c.desc
+		trigger = {
+			owner = {
+				has_relic = SRA_RE_Core_relic
+			}
+		}
+		allow = {
+			NOT = {
+				owner = {
+					has_country_flag = SRA_StellarRegulator_10322_c
+				}
+			}
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 256000 }
+				resource_stockpile_compare = { resource = alloys value >= 128000 }
+			}
+		}
+		owner = {
+			add_resource = {
+				energy = -256000
+				alloys = -128000
+			}
+		}
+		hidden_effect = { 
+			owner = {
+				set_timed_country_flag = {
+					flag = SRA_StellarRegulator_10322_c days = 120
+				}
+			}
+			create_fleet = {
+				name = "NAME_SRA_RE_Core_Battleship_Fleet"
+				effect = {
+					set_owner = root.owner
+					while = {
+						count = 45
+						create_ship = {
+							design = NAME_SRA_RE_Core_Battleship
+						}
+					}
+					set_location = {
+						target = root
+						distance = 5
+						angle = random
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10322.d
+		custom_tooltip = SRA_StellarRegulator.10322.d.desc
+		trigger = {
+			owner = {
+				has_technology = tech_SRA_Barrier_megastructure_0
+			}
+		}
+		allow = {
+			owner = {
+				is_at_war = yes
+			}
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 80000 }
+				resource_stockpile_compare = { resource = alloys value >= 80000 }
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = SRA_StellarRegulator.10325
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10322.z
+	}
+}
+
+carrier_event = {
+	id = SRA_StellarRegulator.10323
+	title = SRA_StellarRegulator.10323.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_StellarRegulator.10323.desc"
+
+	
+	option = {
+		name = SRA_StellarRegulator.10323.a
+		hidden_effect = {
+			carrier_event = {
+				id = SRA_StellarRegulator.10323
+			}
+			change_variable = {
+				which = SRA_world_machine_produces
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10323.b
+		hidden_effect = {
+			carrier_event = {
+				id = SRA_StellarRegulator.10323
+			}
+			change_variable = {
+				which = SRA_world_machine_produces
+				value = 10
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10323.c
+		hidden_effect = {
+			carrier_event = {
+				id = SRA_StellarRegulator.10323
+			}
+			multiply_variable = {
+				which = SRA_world_machine_produces
+				value = 10
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10323.d
+		hidden_effect = {
+			carrier_event = {
+				id = SRA_StellarRegulator.10323
+			}
+			change_variable = {
+				which = SRA_world_machine_produces
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10323.e
+		hidden_effect = {
+			carrier_event = {
+				id = SRA_StellarRegulator.10323
+			}
+			change_variable = {
+				which = SRA_world_machine_produces
+				value = -10
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10323.f
+		hidden_effect = {
+			carrier_event = {
+				id = SRA_StellarRegulator.10323
+			}
+			multiply_variable = {
+				which = SRA_world_machine_produces
+				value = 0.1
+			}
+		}
+	}
+	option = {
+		name = SRA_StellarRegulator.10323.g
+		hidden_effect = {
+			carrier_event = {
+				id = SRA_StellarRegulator.10322
+			}
+		}
+	}
+}
+
+
+carrier_event = {
+	id = SRA_StellarRegulator.10324
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 30 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 60
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 90
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 120 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 150 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 180 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 210 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 240 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 270 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 300 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 330 
+				}
+			}
+		}
+		create_fleet = {
+			name = "NAME_SRA_GZ_Platform"
+			settings = { spawn_debris = no }
+			effect = {
+				set_owner = root
+				create_ship = {
+					name = "NAME_SRA_GZ_Platform"
+					design = "NAME_SRA_GZ_Platform"
+					prefix = no
+				}
+				set_location = {
+					target = event_target:SRA_system_A_star
+					distance = 90
+					angle = 360 
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = SRA_StellarRegulator.10325
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_system = {
+			limit = {
+				any_system_planet_colony = { controller = { is_hostile = root } }
+			}
+			if = {
+				limit = {
+					root = {
+						resource_stockpile_compare = { resource = energy value >= 80000 }
+						resource_stockpile_compare = { resource = alloys value >= 80000 }
+					}
+				}
+				root = {
+					add_resource = {
+						energy = -80000
+						alloys = -80000
+					}
+				}
+				create_fleet = {
+					name = "NAME_SRA_Barrier_Guard_Station_fleet"
+					effect = {
+						set_owner = root
+						set_location = {
+							target = prev.system_star
+							distance = 0
+							angle = random
+						}
+						while = {
+							count = 8
+							create_ship = {
+								design = NAME_SRA_Barrier_Guard_Cruiser
+							}
+						}
+						while = {
+							count = 1
+							create_ship = {
+								design = NAME_SRA_Barrier_Guard_Titan
+							}
+						}
+						fleet_event = {
+							id = SRA_StellarRegulator.10326 days = 30
+						}
+						fleet_event = {
+							id = SRA_StellarRegulator.10326 days = 60
+						}
+						fleet_event = {
+							id = SRA_StellarRegulator.10326 days = 90
+						}
+						fleet_event = {
+							id = SRA_Spear_Of_Galaxy_Zenith.48 days = 120
+						}
+					}
+					settings = { 
+						can_upgrade = no 
+						uses_naval_capacity = no
+						can_change_composition = no
+						spawn_debris = no
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = SRA_StellarRegulator.10326
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { is_in_combat = no }
+			solar_system = {
+				every_system_planet_colony = {
+					if = {
+						limit = { controller = { is_hostile = root.owner } }
+						while = { 
+							count = 5
+							create_army = {
+								name = "sentinel_army"
+								owner = root.owner
+								species = root.owner
+								type = "SRA_Eliminater_Attacker"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+﻿l_english:
+###############################
+
+# point of interest
+ SRA_SD_Crisis_2_1_poi:0 "First Coordinate"
+ SRA_SD_Crisis_2_1_poi_desc:0 "Action pattern analysis indicates that both the Expeditionary Fleet and Calamitisease are trying to occupy the [SRA_SD_Crisis_2_target_system_1.GetName] system. Their purpose remains unknown."
+ SRA_SD_Crisis_2_2_poi:0 "Second Coordinate"
+ SRA_SD_Crisis_2_2_poi_desc:0 "Action pattern analysis indicates that both the Expeditionary Fleet and Calamitisease are trying to occupy the [SRA_SD_Crisis_2_target_system_2.GetName] system. Their purpose remains unknown."
+ SRA_SD_Crisis_2_3_poi:0 "Third Coordinate"
+ SRA_SD_Crisis_2_3_poi_desc:0 "Action pattern analysis indicates that both the Expeditionary Fleet and Calamitisease are trying to occupy the [SRA_SD_Crisis_2_target_system_3.GetName] system. Their purpose remains unknown."
+ # event chins
+ SRA_SD_Crisis_2_chain_title:0 "Disordered Fragment - Calamitisease War"
+ SRA_SD_Crisis_2_chain_desc:0 "History, countless histories, countless civilizations torn apart by Annihilation Rumble, countless eras erased by Metabyss expansion, countless pasts of Stellariens, repeated countless times.\n\nJust like this moment, two forces reforged from fragments of history appear here, bringing the war of the past to this sea of stars.\n"

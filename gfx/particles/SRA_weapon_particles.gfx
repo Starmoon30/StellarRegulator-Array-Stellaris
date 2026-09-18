@@ -1,0 +1,166 @@
+objectTypes = {
+	
+	#######################################################
+	###						windup
+	####################################################### 
+	
+	#####	blue	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_0_windup_particle" type = "SRA_xlt_weapon_0_windup" scale = 0.75 }
+	pdxparticle = { name = "SRA_xl_weapon_0_windup_particle" type = "SRA_xlt_weapon_0_windup" scale = 0.25 }
+	
+	#####	red	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_1_windup_particle" type = "SRA_xlt_weapon_1_windup" scale = 0.75 }
+	pdxparticle = { name = "SRA_xl_weapon_1_windup_particle" type = "SRA_xlt_weapon_1_windup" scale = 0.25 }
+	
+	#######################################################
+	###						muzzle
+	####################################################### 
+	
+	#####	blue	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_0_muzzle_particle" type = "SRA_t_weapon_0" scale = 0.95 }
+	pdxparticle = { name = "SRA_xl_weapon_0_muzzle_particle" type = "SRA_xl_weapon_0"  scale = 0.75 }
+	pdxparticle = { name = "SRA_l_weapon_0_muzzle_particle" type = "SRA_scpdsml_weapon_0"  scale = 1.25 }
+	pdxparticle = { name = "SRA_m_weapon_0_muzzle_particle" type = "SRA_scpdsml_weapon_0"  scale = 0.85 }
+	pdxparticle = { name = "SRA_s_weapon_0_muzzle_particle" type = "SRA_scpdsml_weapon_0"  scale = 0.6 }
+	pdxparticle = { name = "SRA_pd_weapon_0_muzzle_particle" type = "SRA_scpdsml_weapon_0"  scale = 0.4 }
+	pdxparticle = { name = "SRA_sc_weapon_0_muzzle_particle" type = "SRA_scpdsml_weapon_0"  scale = 0.2 }
+	pdxparticle = { name = "SRA_torpedo_0_muzzle_particle" type = "SRA_torpedo_0"  scale = 2.5 }
+	
+	#####	red	#####
+
+	pdxparticle = { name = "SRA_t_weapon_1_muzzle_particle" type = "SRA_t_weapon_1" scale = 0.95 }
+	pdxparticle = { name = "SRA_xl_weapon_1_muzzle_particle" type = "SRA_xl_weapon_1"  scale = 0.75 }
+	pdxparticle = { name = "SRA_l_weapon_1_muzzle_particle" type = "SRA_scpdsml_weapon_1"  scale = 1.25 }
+	pdxparticle = { name = "SRA_m_weapon_1_muzzle_particle" type = "SRA_scpdsml_weapon_1"  scale = 0.85 }
+	pdxparticle = { name = "SRA_s_weapon_1_muzzle_particle" type = "SRA_scpdsml_weapon_1"  scale = 0.6 }
+	pdxparticle = { name = "SRA_pd_weapon_1_muzzle_particle" type = "SRA_scpdsml_weapon_1"  scale = 0.4 }
+	pdxparticle = { name = "SRA_sc_weapon_1_muzzle_particle" type = "SRA_scpdsml_weapon_1"  scale = 0.2 }
+	pdxparticle = { name = "SRA_torpedo_1_muzzle_particle" type = "SRA_torpedo_1"  scale = 2.5 }
+	
+	#####	orange	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_orange_muzzle_particle" type = "SRA_xl_weapon_orange"  scale = 1.0 }
+	pdxparticle = { name = "SRA_xl_weapon_orange_muzzle_particle" type = "SRA_xl_weapon_orange"  scale = 0.75 }
+	pdxparticle = { name = "SRA_l_weapon_orange_muzzle_particle" type = "SRA_xl_weapon_orange"  scale = 0.45 }
+	
+	pdxparticle = { name = "SRA_t_weapon_orange_beta_muzzle_particle" type = "SRA_t_weapon_orange_beta"  scale = 1.0 }
+	
+	#####	violet	#####
+
+	pdxparticle = { name = "SRA_t_weapon_violet_muzzle_particle" type = "SRA_t_weapon_violet" scale = 0.65 }
+	pdxparticle = { name = "SRA_xl_weapon_violet_muzzle_particle" type = "SRA_xl_weapon_violet"  scale = 0.45 }
+	pdxparticle = { name = "SRA_l_weapon_violet_muzzle_particle" type = "SRA_scpdsml_weapon_violet"  scale = 1.25 }
+	pdxparticle = { name = "SRA_m_weapon_violet_muzzle_particle" type = "SRA_scpdsml_weapon_violet"  scale = 0.85 }
+	pdxparticle = { name = "SRA_s_weapon_violet_muzzle_particle" type = "SRA_scpdsml_weapon_violet"  scale = 0.5 }
+	pdxparticle = { name = "SRA_pd_weapon_violet_muzzle_particle" type = "SRA_scpdsml_weapon_violet"  scale = 0.25 }
+	pdxparticle = { name = "SRA_torpedo_violet_muzzle_particle" type = "SRA_torpedo_violet"  scale = 2.5 }
+	
+	#######################################################
+	###						hit
+	####################################################### 
+	
+	#####	blue	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_0_hit_effect" type = "SRA_t_weapon_0_hit_effect"  scale = 2.6 }
+	pdxparticle = { name = "SRA_xl_weapon_0_hit_effect" type = "SRA_xl_weapon_0_hit_effect"  scale = 2.25 }
+	pdxparticle = { name = "SRA_l_weapon_0_hit_effect" type = "SRA_sml_weapon_0_hit_effect"  scale = 2.0 }
+	pdxparticle = { name = "SRA_m_weapon_0_hit_effect" type = "SRA_sml_weapon_0_hit_effect"  scale = 1.75 }
+	pdxparticle = { name = "SRA_s_weapon_0_hit_effect" type = "SRA_sml_weapon_0_hit_effect"  scale = 1.5 }
+	pdxparticle = { name = "SRA_torpedo_0_hit_effect" type = "SRA_torpedo_0_hit_effect"  scale = 3.0 }
+	
+	#####	red	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_1_hit_effect" type = "SRA_t_weapon_1_hit_effect"  scale = 2.6 }
+	pdxparticle = { name = "SRA_xl_weapon_1_hit_effect" type = "SRA_xl_weapon_1_hit_effect"  scale = 2.25 }
+	pdxparticle = { name = "SRA_l_weapon_1_hit_effect" type = "SRA_sml_weapon_1_hit_effect"  scale = 2.0 }
+	pdxparticle = { name = "SRA_m_weapon_1_hit_effect" type = "SRA_sml_weapon_1_hit_effect"  scale = 1.75 }
+	pdxparticle = { name = "SRA_s_weapon_1_hit_effect" type = "SRA_sml_weapon_1_hit_effect"  scale = 1.5 }
+	pdxparticle = { name = "SRA_torpedo_1_hit_effect" type = "SRA_torpedo_1_hit_effect"  scale = 3.0 }
+	
+	#####	orange	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_orange_hit_effect" type = "SRA_xl_weapon_orange_hit_effect"  scale = 3.25 }
+	pdxparticle = { name = "SRA_xl_weapon_orange_hit_effect" type = "SRA_xl_weapon_orange_hit_effect"  scale = 2.5 }
+	pdxparticle = { name = "SRA_l_weapon_orange_hit_effect" type = "SRA_xl_weapon_orange_hit_effect"  scale = 2.0 }
+	
+	#####	violet	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_violet_hit_effect" type = "SRA_t_weapon_violet_hit_effect"  scale = 2.6 }
+	pdxparticle = { name = "SRA_xl_weapon_violet_hit_effect" type = "SRA_xl_weapon_violet_hit_effect"  scale = 2.25 }
+	pdxparticle = { name = "SRA_l_weapon_violet_hit_effect" type = "SRA_sml_weapon_violet_hit_effect"  scale = 2.0 }
+	pdxparticle = { name = "SRA_m_weapon_violet_hit_effect" type = "SRA_sml_weapon_violet_hit_effect"  scale = 1.75 }
+	pdxparticle = { name = "SRA_s_weapon_violet_hit_effect" type = "SRA_sml_weapon_violet_hit_effect"  scale = 1.5 }
+	pdxparticle = { name = "SRA_torpedo_violet_hit_effect" type = "SRA_torpedo_violet_hit_effect"  scale = 3.0 }
+	
+	#####	special	#####
+	
+	pdxparticle = { name = "SRA_psionic_well_hit_effect" type = "SRA_psionic_well_hit_effect" scale = 1.0 }
+	pdxparticle = { name = "SRA_psionic_well_hit_clouds" type = "SRA_psionic_well_hit_clouds" scale = 0.35 }
+	
+	#######################################################
+	###					shield hit
+	####################################################### 
+	
+	#####	blue	#####
+
+	pdxparticle = { name = "SRA_t_weapon_0_shield_hit_effect" type = "SRA_t_weapon_0_shield_hit_effect"  scale = 1.0 }
+	pdxparticle = { name = "SRA_xl_weapon_0_shield_hit_effect" type = "SRA_xl_weapon_0_shield_hit_effect"  scale = 1.3 }
+	pdxparticle = { name = "SRA_l_weapon_0_shield_hit_effect" type = "SRA_sml_weapon_0_shield_hit_effect"  scale = 1.5 }
+	pdxparticle = { name = "SRA_m_weapon_0_shield_hit_effect" type = "SRA_sml_weapon_0_shield_hit_effect"  scale = 1.0 }
+	pdxparticle = { name = "SRA_s_weapon_0_shield_hit_effect" type = "SRA_sml_weapon_0_shield_hit_effect"  scale = 0.5 }
+	
+	#####	red	#####
+
+	pdxparticle = { name = "SRA_t_weapon_1_shield_hit_effect" type = "SRA_t_weapon_1_shield_hit_effect"  scale = 1.0 }
+	pdxparticle = { name = "SRA_xl_weapon_1_shield_hit_effect" type = "SRA_xl_weapon_1_shield_hit_effect"  scale = 1.3 }
+	pdxparticle = { name = "SRA_l_weapon_1_shield_hit_effect" type = "SRA_sml_weapon_1_shield_hit_effect"  scale = 1.5 }
+	pdxparticle = { name = "SRA_m_weapon_1_shield_hit_effect" type = "SRA_sml_weapon_1_shield_hit_effect"  scale = 1.0 }
+	pdxparticle = { name = "SRA_s_weapon_1_shield_hit_effect" type = "SRA_sml_weapon_1_shield_hit_effect"  scale = 0.5 }
+	
+	#####	orange	#####
+	
+	pdxparticle = { name = "SRA_t_weapon_orange_shield_hit_effect" type = "SRA_xl_weapon_orange_shield_hit_effect"  scale = 1.65 }
+	pdxparticle = { name = "SRA_xl_weapon_orange_shield_hit_effect" type = "SRA_xl_weapon_orange_shield_hit_effect"  scale = 1.3 }
+	pdxparticle = { name = "SRA_l_weapon_orange_shield_hit_effect" type = "SRA_xl_weapon_orange_shield_hit_effect"  scale = 0.9 }
+
+	#####	violet	#####
+
+	pdxparticle = { name = "SRA_t_weapon_violet_shield_hit_effect" type = "SRA_t_weapon_violet_shield_hit_effect"  scale = 1.0 }
+	pdxparticle = { name = "SRA_xl_weapon_violet_shield_hit_effect" type = "SRA_xl_weapon_violet_shield_hit_effect"  scale = 1.3 }
+	pdxparticle = { name = "SRA_l_weapon_violet_shield_hit_effect" type = "SRA_sml_weapon_violet_shield_hit_effect"  scale = 1.5 }
+	pdxparticle = { name = "SRA_m_weapon_violet_shield_hit_effect" type = "SRA_sml_weapon_violet_shield_hit_effect"  scale = 1.0 }
+	pdxparticle = { name = "SRA_s_weapon_violet_shield_hit_effect" type = "SRA_sml_weapon_violet_shield_hit_effect"  scale = 0.5 }
+	
+	#######################################################
+	###						torpedo
+	####################################################### 
+	
+	pdxparticle = { name = "SRA_torpedo_0_particle" type = "SRA_torpedo_0_idle"  scale = 3.2 }
+	pdxparticle = { name = "SRA_torpedo_1_particle" type = "SRA_torpedo_1_idle"  scale = 3.2 }
+	pdxparticle = { name = "SRA_torpedo_violet_particle" type = "SRA_torpedo_violet_idle"  scale = 3.2 }
+	
+	#######################################################
+	###						planet killer
+	####################################################### 
+	
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_muzzle_windup_effect" type = "SRA_T4_weapon_planet_killer_muzzle_windup_effect"  scale = 1.0 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_muzzle" type = "SRA_T4_weapon_planet_killer_muzzle"  scale = 1.0 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_hit_effect" type = "SRA_T4_weapon_planet_killer_hit_effect"  scale = 1.0 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_paricles_effect" type = "SRA_T4_weapon_planet_killer_paricles_effect"  scale = 1.0 }
+	
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_muzzle_windup_effect_medium" type = "SRA_T4_weapon_planet_killer_muzzle_windup_effect_small"  scale = 0.6 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_muzzle_medium" type = "SRA_T4_weapon_planet_killer_muzzle_small"  scale = 0.6 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_muzzle_windup_effect_small" type = "SRA_T4_weapon_planet_killer_muzzle_windup_effect_small"  scale = 0.4 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_muzzle_small" type = "SRA_T4_weapon_planet_killer_muzzle_small"  scale = 0.4 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_muzzle_windup_effect_small_alt" type = "SRA_T4_weapon_planet_killer_muzzle_windup_effect_small"  scale = 0.15 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_muzzle_small_alt" type = "SRA_T4_weapon_planet_killer_muzzle_small"  scale = 0.15 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_beam" type = "SRA_T4_weapon_planet_killer_beam"  scale = 0.4 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_halo" type = "SRA_T4_weapon_planet_killer_halo"  scale = 1.0 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_portal" type = "SRA_T4_weapon_planet_killer_portal"  scale = 1.0 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_portal_alt" type = "SRA_T4_weapon_planet_killer_portal_alt"  scale = 1.0 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_portal_spawn" type = "SRA_T4_weapon_planet_killer_portal_spawn"  scale = 1.0 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_portal_hit" type = "SRA_T4_weapon_planet_killer_portal_hit"  scale = 1.0 }
+}

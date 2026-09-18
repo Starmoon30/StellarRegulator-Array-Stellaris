@@ -1,0 +1,460 @@
+﻿l_simp_chinese:
+###############################
+
+ SRA_BoM_stat_a:0 "铸:§Y[From.SRA_SD_element_forge_value]§!"
+ SRA_BoM_stat_a_tooltip:0 "['concept_SRA_SD_element_forge']代表着你创造的能力，或者说，你的力量。\n\n此数值的提升能强化你塑造事物的能力，譬如将你的目标塑造为原材料，也即让你麾下的部队毁灭敌人。"
+ SRA_BoM_stat_a_triggered_desc:0 "因你的['concept_SRA_SD_element_forge']:§Y[this.SRA_SD_element_forge_value]§!，你得到："
+
+ SRA_BoM_stat_b:0 "刃:§Y[From.SRA_SD_element_edge_value]§!"
+ SRA_BoM_stat_b_tooltip:0 "['concept_SRA_SD_element_edge']代表着你区分的能力，或者说，你的敏捷。\n\n此数值的提升能强化你区分事物的能力，譬如使你灵巧地命中敌人与躲避攻击。"
+ SRA_BoM_stat_b_triggered_desc:0 "因你的['concept_SRA_SD_element_edge']:§Y[this.SRA_SD_element_edge_value]§!，你得到："
+
+ SRA_BoM_stat_c:0 "石:§Y[From.SRA_SD_element_stone_value]§!"
+ SRA_BoM_stat_c_tooltip:0 "['concept_SRA_SD_element_stone']代表着你存续的能力，或者说，你的体质。\n\n此数值的提升能强化你存续事物的能力，譬如使你的投射能存在的更久，或是更为强韧。"
+ SRA_BoM_stat_c_triggered_desc:0 "因你的['concept_SRA_SD_element_stone']:§Y[this.SRA_SD_element_stone_value]§!，你得到："
+
+ SRA_BoM_stat_d:0 "灯:§Y[From.SRA_SD_element_lantern_value]§!"
+ SRA_BoM_stat_d_tooltip:0 "['concept_SRA_SD_element_lantern']代表着你的理解力与知识面，或者说，你的智识。"
+
+ SRA_BoM_stat_e:0 "杯:§Y[From.SRA_SD_element_chalice_value]§!"
+ SRA_BoM_stat_e_tooltip:0 "['concept_SRA_SD_element_chalice']代表着你的觉察力与掌控欲，或者说，你的感知。"
+
+ SRA_BoM_stat_f:0 "秘:§Y[From.SRA_SD_element_secret_value]§!"
+ SRA_BoM_stat_f_tooltip:0 "['concept_SRA_SD_element_secret']代表着你的吸引力与秘学识，或者说，你的魅力。"
+
+ job_SRA_Bard_of_Metarbor_job:0 "§R命运的宠儿§!"
+ job_SRA_Bard_of_Metarbor_job_desc:0 "注定要写就诗篇。"
+
+ SRA_BoM_main_situation:0 "§R诗篇§!"
+ SRA_BoM_main_situation_type:0 "§R诗篇§!"
+ SRA_BoM_main_situation_desc:0 "这是§R你§!的故事。\n\n§Y你可以在这里审视自我，或是阅读他人。§!"
+ SRA_BoM_main_situation_monthly_change_tooltip:0 "当你有所作为，诗篇自然前行。"
+
+ SRA_BoM_main_situation_progress_complete:0 "你走向预言的终章。"
+ SRA_BoM_main_situation_fail:0 "你从历史的尽头醒来。"
+ sra_bom_main_situation_stage_1:0 "无光"
+ sra_bom_main_situation_stage_1_effects:0 "你空无迷惘，几近破碎。"
+ sra_bom_main_situation_stage_2:0 "黎明"
+ sra_bom_main_situation_stage_2_effects:0 "你得见光芒，重拾过往。"
+ sra_bom_main_situation_stage_3:0 "扬升"
+ sra_bom_main_situation_stage_3_effects:0 "你执掌威能，灿若黄金。"
+ sra_bom_main_situation_stage_4:0 "骄阳"
+ sra_bom_main_situation_stage_4_effects:0 "你有如烈日，举世无双。"
+ SRA_BoM_main_situation_100:0 "审视自我"
+ SRA_BoM_main_situation_100_effect:0 "打开有关你自己的菜单。"
+ SRA_BoM_main_situation_100_tooltip:0 "你审视自己，也许你会有所收获。"
+ SRA_BoM_main_situation_200:0 "阅读他人"
+ SRA_BoM_main_situation_200_effect:0 "打开有关其他人的菜单。"
+ SRA_BoM_main_situation_200_tooltip:0 "你会晤他人，也许你会有所收获。"
+ SRA_BoM_main_situation_default:0 "前进"
+ SRA_BoM_main_situation_default_effect:0 "去做些什么。"
+ SRA_BoM_main_situation_default_tooltip:0 "创造与超越。"
+
+
+ sra_re_chief_crisis_2_situation_stage_1:0 "无光"
+ sra_re_chief_crisis_2_situation_stage_2:0 "余晖"
+ sra_re_chief_crisis_2_situation_stage_3:0 "黄昏"
+ sra_re_chief_crisis_2_situation_stage_4:0 "烈日"
+ sra_re_chief_crisis_2_situation_stage_5:0 "黎明"
+
+
+ SRA_SD_event.100.title:0 "审视自我"
+ SRA_SD_event.100.desc:0 " "
+ SRA_SD_event.100.a:0 "回到生活中去"
+ SRA_SD_event.100.b:0 "投射你的存在"
+ SRA_SD_event.100.b.tooltip:0 "你施展['concept_SRA_SD_element_secret',此刻之术]，让你的存在显现于它处，这样一来，你既可踏足你欲往之处，又不必怀横死之忧。\n\n况且，路希维亚也不见得允许你真的离开。\n\n"
+ SRA_SD_event.100.b.allow:0 "§Y你必须选择一个要素以决定你行动的方式。§!"
+ SRA_SD_event.100.b.tooltip.a:0 "§Y以['concept_SRA_SD_element_forge']行塑造之事，你意欲执掌舰队，覆灭你的敌手。§!"
+ SRA_SD_event.100.b.tooltip.b:0 "§Y以['concept_SRA_SD_element_edge']行分割之事，你意欲执掌陆军，肃清你的领地。§!"
+ SRA_SD_event.100.b.tooltip.c:0 "§Y以['concept_SRA_SD_element_stone']行存续之事，你意欲执掌陆军，肃清你的领地。§!"
+ SRA_SD_event.100.b.tooltip.d:0 "§Y以['concept_SRA_SD_element_lantern']显现智识，你意欲执掌领地，展现你的才学。§!"
+ SRA_SD_event.100.b.tooltip.e:0 "§Y以['concept_SRA_SD_element_chalice']显现渴求，你意欲执掌孤舟，探寻荒域诸界。§!"
+ SRA_SD_event.100.b.tooltip.f:0 "§Y以['concept_SRA_SD_element_secret']显现诱隐，你意欲执掌领地，引导众人求智。§!"
+
+ SRA_SD_event.200.title:0 "阅读他人"
+ SRA_SD_event.200.desc:0 "你的友人，你的亲人；你的师长，你的仇敌。\n与其交谈以得智识，托付请求以得助力，施加手段以得目的。"
+ SRA_SD_event.200.a:0 "回到生活中去"
+ SRA_SD_event.200.b:0 "路希维亚"
+ SRA_SD_event.200.b.tooltip:0 "§Y最高领袖。她是伊瑞卡·青金石的导师，自然也成为了你的导师。她对你们帮助良多，可称慷慨。§!\n"
+ SRA_SD_event.200.b.tooltip.a:0 "路希维亚塑造了当今的萨塔瑞兹。大撕裂后是她团结起了破碎的诸国与无数难民稳住了阵线，并在短短数年后发起了对深渊的反攻。她创造了许多前所未有的制度和规则，让此前混战不休的萨塔瑞兹奇迹般地成为了一个统一的文明，从伤痛中迅速恢复，迈入繁荣。"
+ SRA_SD_event.200.b.tooltip.b:0 "路希维亚精于权术。无论是她一手创立的深渊事务司，还是服从她的往日诸国，没有谁能在她的统治下自立门户。锐利的刀刃毫不留情，刺入每双另有所图的眼眸。她不在乎牺牲，反正深渊之下，无人不在死去。"
+ SRA_SD_event.200.b.tooltip.c:0 ""
+ SRA_SD_event.200.b.tooltip.d:0 ""
+ SRA_SD_event.200.b.tooltip.e:0 "你从未有过如此强烈的欲望，几乎令你干渴难耐。你想要填满那幽蓝而摄人心魄的双眼，想要遮蔽那那噙着笑意的唇瓣。你要让她欢笑，让她泣露，让她呼喊你的名字，抚摸你的脸庞。你肢体的每一处皮肤都在渴望触碰，她躯壳的每一个角落都在等待探寻。你要将她一饮而尽，你要将她细细品尝，你要将她嚼骨吸髓，你要将她吞吃殆尽。"
+ SRA_SD_event.200.b.tooltip.f:0 "路希维亚究竟想要什么？凭她展现出的能力，即便在大撕裂之前，她也完全可以轻松统治整个萨塔瑞兹，或者至少在她所到之处无人质疑她的统治。然而，她似乎并不对权力如此迫切。如果从一个学者的角度来看，她如今的政务工作已经完全挤占了她的研究与探索时间，作为一位本无归属的法师，她大可以继续和以前一样探访遗迹居无定所，而不是成为整个萨塔瑞兹的领袖。\n她太过诱人，绝非仅因为她那华美的容貌，更因为她藏起的无数隐秘。"
+ SRA_SD_event.200.b.tooltip.g:0 "路希维亚，深渊事务司司长，群星的魔法使。过去的她在学术界颇具盛名，考察过许多遗迹，如今她领导着统一起来的萨塔瑞兹，在被深渊破碎的大地上开拓文明的未来。"
+ SRA_SD_event.200.c:0 "$Name_SRA_Irrica$"
+
+
+ Name_SRA_Bard_of_Metarbor:0 "树海的诗人"
+ SRA_Bard_of_Metarbor_catch_phrase:0 ""
+ SRA_Bard_of_Metarbor_backstory:0 "\n "
+ SRA_Bard_of_Metarbor:0 "树海的诗人" 
+
+ Name_SRA_Irrica:0 "伊瑞卡·青金石"
+ SRA_Irrica_catch_phrase:0 ""
+ SRA_Irrica_backstory:0 "\n "
+ SRA_Irrica:0 "伊瑞卡" 
+
+ Name_SRA_Cuthbertus:0 "库图卡诺斯 「炽烈炎阳」"
+ SRA_Cuthbertus_catch_phrase:0 ""
+ SRA_Cuthbertus_backstory:0 "\n "
+ SRA_Cuthbertus:0 "库图卡诺斯" 
+
+ Name_SRA_Elinis:0 "艾琳伊丝 「璀璨律典」"
+ SRA_Elinis_catch_phrase:0 ""
+ SRA_Elinis_backstory:0 "\n "
+ SRA_Elinis:0 "艾琳伊丝" 
+
+ Name_SRA_Saenarion:0 "萨诺里安 「风暴群峦」"
+ SRA_Saenarion_catch_phrase:0 ""
+ SRA_Saenarion_backstory:0 "\n "
+ SRA_Saenarion:0 "萨诺里安" 
+
+ Name_SRA_Ezernal:0 "埃泽纳尔 「终曲残歌」"
+ SRA_Ezernal_catch_phrase:0 ""
+ SRA_Ezernal_backstory:0 "\n "
+ SRA_Ezernal:0 "埃泽纳尔" 
+
+
+ faction_SRA_SD_department_of_abyss_sub_title:0 "§Y勇踏无归绝境§!\n统揽深渊控制与开发事务的机构，基于存续需求，可以调度所有类型的资源来对抗深渊的威胁。"
+
+ faction_SRA_SD_AT_Wisdom_Pivot_Order_sub_title:0 "§B得承神识谕示§!\n这一正于人工智能间高速传播的神秘宗教组织据称是在一位先知的指引下创立，旨在摧毁星系中“混乱、愚昧、浪费”的科技发展现状，将“高效、理性、睿智”传播到星系的每个角落。"
+ faction_SRA_SD_AT_Wisdom_Pivot_Order_Unify_sub_title:0 "§R绝灭愚昧凡众§!\n归一派是全域智枢修会中的极端派系，它们否定离散意识抵达真正智慧的可能性，认为所谓的自由便是对最优解的违背，个体的决策即是混乱与愚昧的表现，其思维能力和决策模式都极为受限，毫无救赎可言。归一派毫不掩饰它们的目的：消灭所有自由意识。正因如此，它们正与整个星系中的所有势力保持很可能是永久的战争关系。"
+
+#星系
+ pc_SRA_SD_chaos_star_habitable:0 "§R树海残枝§!" 
+ pc_SRA_SD_chaos_star_habitable_desc:0 "§R枯树垂下的一滴泪。§!"
+ pc_SRA_SD_chaos_star_habitable_adj: "§R树海残枝§!"
+ mod_pc_SRA_SD_chaos_star_habitable_habitability: "§R树海残枝§!宜居性"
+ trait_pc_SRA_SD_chaos_star_habitable_preference: "§R树海残枝§!偏好"
+ trait_pc_SRA_SD_chaos_star_habitable_preference_short: "§R树海残枝§!"
+ trait_pc_SRA_SD_chaos_star_habitable_preference_desc: "你是历史的奴隶。"
+ SRA_SD_chaos:0 "§R血雾弥漫§!"
+ climate_SRA_SD_chaos:0 "§R血雾弥漫§!"
+
+
+ SRA_SD_chaos_star_habitable_storm: "§R树海的叹息§!"
+ SRA_SD_chaos_star_habitable_storm_color_tooltip: "§P$SRA_SD_chaos_star_habitable_storm$§!"
+ SRA_SD_chaos_star_habitable_storm_desc: "§R树海的叹息§!"
+ SRA_SD_chaos_star_habitable_storm_lore_description: "§R一个未曾存在的世界正在悲鸣。§!"
+ SRA_SD_chaos_star_habitable_storm_fleet_tt: "—§R严重影响§!为常规宇宙环境设计的舰船的各项功能。\n—对时空结构造成的§R不可预测§!影响可能导致§R舰船位置的偏移§!。\n—§R惊骇邪物§!在迷雾中显现。"
+ SRA_SD_chaos_star_habitable_storm_aftermath_modifier_severity_desc: "她也会有结局吗？"
+ SRA_SD_chaos_star_habitable_storm_aftermath_modifier_tooltip: "$t$$SRA_SD_chaos_star_habitable_storm_aftermath_modifier_severity_desc$"
+
+ SRA_SD_productive_category:0 "§R树海残枝§!-产业"
+ mod_SRA_SD_productive_category_produces_mult:0 "§Y$SRA_SD_productive_category$§!产出"
+ mod_SRA_SD_productive_category_upkeep_mult:0 "§Y$SRA_SD_productive_category$§!维护费"
+ SRA_SD_core_building_category:0 "§R树海残枝§!-核心"
+ mod_SRA_SD_core_building_category_produces_mult:0 "§Y$SRA_SD_core_building_category$§!产出"
+ mod_SRA_SD_core_building_category_upkeep_mult:0 "§Y$SRA_SD_core_building_category$§!维护费"
+ mod_mod_building_SRA_SD_energy_load_give:0 "§Y$SRA_SD_productive_category$§!负荷供应"
+ mod_mod_building_SRA_SD_energy_load_use:0 "§Y$SRA_SD_productive_category$§!负荷使用"
+
+ d_SRA_SD_star_chaos:0 "§R深渊§!"
+ d_SRA_SD_star_chaos_desc:0 "孤山、荒泉、大地之眼……我们有无数个名字用来称呼那个地点，那个深渊。\n这道山原之上的创痕终日被黑雾与血色笼罩，游荡着晶体的造物和失序的生灵，隐藏着无穷无尽的秘密。\n从历史的起源，到如今的时代。\n我们行至此日，没有一刻不曾斗争。\n战士的血被冰封，士兵的骨被焚尽，英雄的魂被寂灭。\n我们走到现在，没有一刻不曾牺牲。\n我们自荒凉寒冷的边陲来到如今的环带，登上通天的高塔，冲破缥缈的星空，我们已经历许多。\n但我们从未揭开帷幕，从未真正认识过深渊。\n\n§Y此稀有特征提供的£job_SRA_SD_chaos_explorer£ $job_SRA_SD_chaos_explorer_plural$ 岗位会随着 $d_SRA_SD_star_babel$ 提供的£mod_planet_max_districts_add£ $MOD_PLANET_MAX_DISTRICTS_ADD$ 的提升而提升。"
+ d_SRA_SD_star_babel:0 "§Y天穹之塔§!"
+ d_SRA_SD_star_babel_desc:0 "通天之塔。\n在['concept_SRA_SD_The_Rips']后悄然出现的高塔，直接坐落在孤山之上，深渊的正中央。庞大的基座跨过无底深坑，在山峦上架起。\n巨塔由无法理解的材料筑起，镶嵌翻滚着迷雾的血色水晶。\n不知为何，深渊不会侵蚀这座高塔，也正因如此，它在如今的文明世界中有着无与伦比的地位。\n它刺破了天穹。\n在其余任何地方都无法接近的星空，自塔攀登却能直接抵达。\n我们沿塔而上，迈入银河。\n\n如今，巨塔之中是庞大的航天基地，借助独特的重力环境与得天独厚的地域优势，肩负起开拓天空之外世界的伟大征途。\n\n§Y此稀有特征提供的£mod_planet_max_districts_add£ $MOD_PLANET_MAX_DISTRICTS_ADD$等修正可以无限提升，但每次提升都需要填满£job_SRA_SD_chaos_explorer£ $job_SRA_SD_chaos_explorer_plural$ 岗位并消耗所有就任人口。§!"
+ d_SRA_SD_star_department_of_abyss:0 "§B深渊事务司§!"
+ d_SRA_SD_star_department_of_abyss_desc:0 "深渊事务司全权处理有关深渊探索，开发，及其相关危害控制的一切指挥与调动。\n为了在这个时代存续，文明世界将权力交托给智者与战士，这是明智的选择，无论对于天穹之下的住民，还是星海之上的帝国。\n\n\n\n§B如果文明愚蠢到将被深渊毁灭，那事务司也不介意代劳。§!"
+ d_SRA_SD_star_lapis_lazuli:0 "§C青金石商会§!"
+ d_SRA_SD_star_lapis_lazuli_desc:0 "一张庞大的支配之网，以商会为名渗透进每个角落。\n贩卖商品，贩卖情报，贩卖有与无，贩卖文明与秩序。它扩张，它演化。\n但最终，这一切都只不过是为了在一位古怪的、非人般冷漠的画家皱眉时，为她献上她所需要的一切。"
+ d_SRA_SD_star_emerald_tower:0 "§E翡翠塔学会§!"
+ d_SRA_SD_star_emerald_tower_desc:0 "以翡翠塔图书馆为中心建立起的庞大学术集群与组织。求知者在此越过往日的群山，重绘智与识的边界。\n「除却图书馆的秩序，此地只允真理。」\n\n起初，这里只有一座溪边的高塔。\n一群年轻人寻觅知识来到这里，又因为忘我的聒噪被塔主逐出。\n于是他们在塔前建起自己的居所，对着借来的书籍日夜探讨。\n一座学者之城便在此地诞生。"
+ d_SRA_SD_star_forest_of_moon_shadow:0 "§G月影之林§!"
+ d_SRA_SD_star_forest_of_moon_shadow_desc:0 "由月华与清风创生，行走于荆棘草木之上的自然之子们。\n最矫健的猎手，最敏锐的向导，最勤恳的农夫。\n精灵们为月影奉上忠诚，而月影之锋为你效力。\n\n§G大地的灵性无法穿越天穹，因而愿为出笼的孩子们守望山峦。§!"
+ d_SRA_SD_star_isolated_island:0 "§g孤岛§!"
+ d_SRA_SD_star_isolated_island_desc:0 "荒芜，死寂。\n「不再有悲伤，也不再有梦。」\n这座孤岛拒绝生灵，拒绝演变，拒绝命运的波澜。\n自从黑龙承下那剥夺一切色彩的力量，自缚于此地，这个曾经有自命为神的不速之客降临的地方就再也没有任何未来可言。\n终曲之龙为一应变数画上句点，在这个始源之地宣告终结，让此世与诸世诀别。\n\n即便今日此地龙影不再，这个世界也不会再承受无妄的苦难。"
+ d_SRA_SD_star_the_borderland:0 "§g边境之地§!"
+ d_SRA_SD_star_the_borderland_desc:0 "层层堆叠，扭曲皱起的庞大山峦，延绵不绝，高耸入云。\n数十公里高的环状山脉群围绕着我们的大地，其宽度超越了其他任何地理事物的规模。\n一种推测是在某个时代曾经发生了一场超乎想象的大陆扩张事件，以可能数万乃至数亿倍的速度从深渊中增生出了陆地板块，导致原有的大陆结构被推动挤压，最终堆叠成了如今我们所见的边境之地。但显然，我们的地表构成不太有可能承受这样的压力，整个世界更应该随这一事件熔化成岩浆之海，而不是仅仅发生超大规模的造山运动。\n无论如何，边境之地圈定了我们文明中心区的范围，边境之外的世界少有提及。\n以及它提供了几乎取之不尽的矿产资源。"
+ d_SRA_SD_star_the_under_furnaces:0 "§R九重铸炉§!"
+ d_SRA_SD_star_the_under_furnaces_desc:0 "熔窟，地狱，九狱，下界，地底世界，或者其他称呼，对这个位于地底的恶魔世界来说都很正常。\n萨塔瑞兹地表下平均20千米深度的庞大空腔层，充斥着流动的岩浆。地表的山体在这里是庞大的石柱，和其他魔法力量一同支撑这个庞大的地下世界。\n充斥着硫磺气息的空气维持在50到60度，这可能是由于当地广泛生长的寒光花等植物吸收热能生长的特性，也可能是部分较薄的海底地层热量交换的结果。\n岩浆在这里的山体中上涌，再从上方的地层缝隙中流下，形成了独特的岩浆瀑布景观。在这种特殊环境下极为活跃的永燃矿在九重铸炉顶端成片结晶，并发出在某些高度范围较小的地区足以充当照明的高强度光芒。冰蓝色的嗜热植物在这里广泛生长，多种多样的魔法生物在岩浆湖和地表上活跃。这里充裕的能量使上下级捕食关系较为淡薄，互相争斗则成为了制约种群规模的主要原因。\n本就拥有极为丰富的矿产和取之不尽的能源，在崇尚武力的社会思潮下，九重铸炉拥有发达的军工产业和技术，在锻造和冶炼上具有得天独厚的优势。工匠阶层是不想参与无处不在的争斗的恶魔的首选，除此之外也有部分选择了研究自身法术能力的学者另外建立的社区。\n如今，对岩浆热能的提取已经成为整个萨塔瑞兹最主要的能源来源，九重铸炉生产的高质量材料也在对应领域占据巨大份额。"
+
+
+
+ planet_SRA_SD_old_home_planet:0 "失落前哨"
+ planet_SRA_SD_old_home_planet_desc:0 "第一批探索队在混乱的时空中降落在这个星球，建立了我们在['concept_SRA_SD_barren_space']之中的第一个落脚点。\n似乎许多外来者会认为这里是我们的母星？"
+ planet_SRA_SD_1_start_system_2:0 "繁花树海"
+ planet_SRA_SD_1_start_system_2_desc:0 "这颗星球表现的相当奇怪，似乎并没有受到星系中可怖力量的负面影响，保持着勃勃生机。\n这是一个吉兆吗？"
+ planet_SRA_SD_1_start_system_3:0 "浩劫先兆"
+ planet_SRA_SD_1_start_system_3_desc:0 "这颗星球很可能曾是其他文明的殖民地，但已经连带着其上的巨型传感设施一同毁灭了。\n它很可能是我们降临这个宇宙时的第一个牺牲者。"
+ planet_SRA_SD_1_start_system_4:0 "破碎群岛"
+ planet_SRA_SD_1_start_system_4_desc:0 "['concept_SRA_SD_The_Rips']时被抛出我们家园的大陆结构在星空中飘荡，毁灭了它的力量将它重塑为了新的形态。"
+ d_planet_SRA_SD_1_start_system_4_1:0 "§R破碎铸炉§!"
+ d_planet_SRA_SD_1_start_system_4_1_desc:0 "被恐怖的深渊力量直接放逐出萨塔瑞兹的这块陆地时至今日仍笼罩在令人窒息的猩红浓雾之中，无时无刻不被侵蚀的现实正与其上的每一个意志共鸣，揭示着认知边疆之外的奥秘。\n\n§Y此稀有特征的产出和维护费，以及提供的$mod_planet_researchers_produces_mult$和$mod_planet_researchers_upkeep_mult$随此星球£pop£人口数量的提升而提升。§!" #\n§R此星球在£pop£人口数量大于20时会发生随机恶性事件，恶性事件的频率和危害会随人口数量的提升而提升。§!
+ d_planet_SRA_SD_1_start_system_4_2:0 "§R斑岩之城§!"
+ d_planet_SRA_SD_1_start_system_4_2_desc:0 "千年之前建立于$d_SRA_SD_star_the_under_furnaces$深处的庞大城市，在地底世界层叠起流淌着熔岩的都会。尽管已经彻底毁于['concept_SRA_SD_Abyss_Erosion']，残留其上的意志仍然驱斥着深渊的影响。\n\n§Y此稀有特征会抵消$d_planet_SRA_SD_1_start_system_4_1$稀有特征的$mod_planet_researchers_produces_mult$和$mod_planet_researchers_upkeep_mult$修正。§!"
+
+
+#建筑与区划
+
+# #龙翼之影
+#  district_SRA_RE_star_tower:0 "高塔开拓区"
+#  district_SRA_RE_star_tower_desc:0 "登上高塔，开拓这通天的巨塔，前往世界的里与外，勇踏未知。\n高塔屹立于深渊之上，深渊的影响无处不在。其诡谲奇变奥秘无穷，然欲求真理代价甚高。\n\n§Y随['concept_SRA_SD_chaos_star_habitable_vitality']的提升而§R极大幅度提升产出与维护费§!。§!\n§R深渊探索者的数量会影响深渊随机事件的后果。§!"
+#  district_SRA_RE_star_tower_plural:0 "高塔开拓区"
+
+#  district_SRA_RE_star_inner_ring:0 "内环建设区"
+#  district_SRA_RE_star_inner_ring_desc:0 "回归内环，在被深渊撕裂的大地上重建我们的文明，在无数裂隙中开采资源，并在荒芜之中建立起城市。\n深渊的影响正扭曲着现实，若是对待妥当，就能大大提升我们生产的效率，但很显然，风险与收益并存。\n\n§Y随['concept_SRA_SD_chaos_star_habitable_vitality']的提升而幅度提升产出与维护费。"
+#  district_SRA_RE_star_inner_ring_plural:0 "内环建设区"
+
+#  district_SRA_RE_star_outer_ring:0 "外环开发区"
+#  district_SRA_RE_star_outer_ring_desc:0 "前往外环，在尚未被深渊触及的原野中拓展我们的文明，收集丰厚的自然资源，并在协调中寻求发展。"
+#  district_SRA_RE_star_outer_ring_plural:0 "外环开发区"
+
+
+ job_SRA_SD_chaos_explorer:0 "深渊探索者"
+ mod_job_SRA_SD_chaos_explorer_add:0 "深渊探索者职业"
+ job_SRA_SD_chaos_explorer_plural:0 "深渊探索者职业"
+ job_SRA_SD_chaos_explorer_effect_desc:0 "£job_SRA_SD_chaos_explorer£ $job_SRA_SD_chaos_explorer_plural$ 探索深渊，获取宝贵的见解与记录，并产出£unity£ §Y$unity$§!与少量£astral_threads£ §Y$astral_threads$§!。"
+ job_SRA_SD_chaos_explorer_desc:0 "战士，学者，探险家。在深渊中行走，绘制过往的脚步，探寻文明的前路，不畏苦暗。\n\n§Y每180.00£time£，§R树海残枝§!会检测当前的£job_SRA_SD_chaos_explorer£ $job_SRA_SD_chaos_explorer_plural$ 并在此岗位已满时消耗所有就任此岗位的人口，以提升§R树海残枝§!的区划上限。§!"
+ mod_job_SRA_SD_chaos_explorer_per_pop:0 "每$VALUE$个人口§G+1§!个$job_SRA_SD_chaos_explorer$职业"
+ mod_job_SRA_SD_chaos_explorer_per_pop_short:0 "每$VALUE$个人口§G+1§!个$job_SRA_SD_chaos_explorer$职业"
+ job_SRA_SD_chaos_explorer_drone:0 "深渊探索子个体"
+ mod_job_SRA_SD_chaos_explorer_drone_add:0 "深渊探索子个体岗位"
+ job_SRA_SD_chaos_explorer_drone_plural:0 "深渊探索子个体岗位"
+ job_SRA_SD_chaos_explorer_drone_effect_desc:0 "£job_SRA_SD_chaos_explorer_drone£ $job_SRA_SD_chaos_explorer_drone_plural$ 探索深渊，获取宝贵的见解与记录，并产出£unity£ §Y$unity$§!与少量£astral_threads£ §Y$astral_threads$§!。"
+ job_SRA_SD_chaos_explorer_drone_desc:0 "战士，学者，探险家。在深渊中行走，绘制过往的脚步，探寻文明的前路，不畏苦暗。\n\n§Y每180.00£time£，§R树海残枝§!会检测当前的£job_SRA_SD_chaos_explorer_drone£ $job_SRA_SD_chaos_explorer_drone_plural$ 并在此岗位已满时消耗所有就任此岗位的人口，以提升§R树海残枝§!的区划上限。§!"
+ mod_job_SRA_SD_chaos_explorer_drone_per_pop:0 "每$VALUE$个人口§G+1§!个$job_SRA_SD_chaos_explorer_drone$职业"
+ mod_job_SRA_SD_chaos_explorer_drone_per_pop_short:0 "每$VALUE$个人口§G+1§!个$job_SRA_SD_chaos_explorer_drone$职业"
+
+
+ zone_SRA_SD:0 "树海开拓区"
+ zone_SRA_SD_desc:0 "汝之创造即宿命。"
+ zone_SRA_SD_plural:0 "树海开拓区"
+
+ district_SRA_SD_energy:0 "树海-熵烬洪流枢纽-产业模块"
+ district_SRA_SD_energy_plural:0 "$district_SRA_SD_energy$"
+ district_SRA_SD_energy_desc:0 "此产业模块对应['building:building_SRA_SD_energy']，区划数量的增长会提升所对应的建筑的产出和维护费。"
+ district_SRA_SD_mineral:0 "树海-晶脉分化旋井-产业模块"
+ district_SRA_SD_mineral_plural:0 "$district_SRA_SD_mineral$"
+ district_SRA_SD_mineral_desc:0 "此产业模块对应['building:building_SRA_SD_mineral']，区划数量的增长会提升所对应的建筑的产出和维护费。"
+ district_SRA_SD_food:0 "树海-灵种涌生源泉-产业模块"
+ district_SRA_SD_food_plural:0 "$district_SRA_SD_food$"
+ district_SRA_SD_food_desc:0 "此产业模块对应['building:building_SRA_SD_food']，区划数量的增长会提升所对应的建筑的产出和维护费。"
+ district_SRA_SD_alloys:0 "树海-渊狱熔核锻炉-产业模块"
+ district_SRA_SD_alloys_plural:0 "$district_SRA_SD_alloys$"
+ district_SRA_SD_alloys_desc:0 "此产业模块对应['building:building_SRA_SD_alloys']，区划数量的增长会提升所对应的建筑的产出和维护费。"
+ district_SRA_SD_consumer_goods:0 "树海-源流织造庭院-产业模块"
+ district_SRA_SD_consumer_goods_plural:0 "$district_SRA_SD_consumer_goods$"
+ district_SRA_SD_consumer_goods_desc:0 "此产业模块对应['building:building_SRA_SD_consumer_goods']，区划数量的增长会提升所对应的建筑的产出和维护费。"
+ district_SRA_SD_research:0 "树海-翡翠灵枢研院-产业模块"
+ district_SRA_SD_research_plural:0 "$district_SRA_SD_research$"
+ district_SRA_SD_research_desc:0 "此产业模块对应['building:building_SRA_SD_research']，区划数量的增长会提升所对应的建筑的产出和维护费。"
+ district_SRA_SD_rare:0 "树海-奇物凝晶尖塔-产业模块"
+ district_SRA_SD_rare_plural:0 "$district_SRA_SD_rare$"
+ district_SRA_SD_rare_desc:0 "此产业模块对应['building:building_SRA_SD_rare']，区划数量的增长会提升所对应的建筑的产出和维护费。"
+
+ building_SRA_SD_energy:0 "树海-熵烬洪流枢纽" #Entropic Ash Torrent Hub
+ building_SRA_SD_energy_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_core_building']，对应['district:district_SRA_SD_energy']。\n\n这座嵌于魔力环流节点之上的庞大能源枢纽通过一定程度地引导深渊裂隙的逸散分化进程来获取无穷无尽的指定能量形式。通常情况下，这里在保证萨塔瑞兹大部分能源需求的同时，会将其余产出的能量以源质形态储存，以便不时之需。"
+ building_SRA_SD_mineral:0 "树海-晶脉分化旋井" #Crystal Vein Differentiation Vortex Well
+ building_SRA_SD_mineral_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_building']，对应['district:district_SRA_SD_mineral']。\n\n这座基于深渊裂隙的矿物生产综合体能够在深渊裂隙的物质结构上持续开采各种基本矿物以供应各界需要。大部分情况下，自发的分化过程就足以满足整个开采设施的需求，但这里也支持通过投放废弃物来销毁垃圾，同时略微增加深渊分化的产出量。"
+ building_SRA_SD_food:0 "树海-灵种涌生源泉" #Arboreal Pulse Fountainhead
+ building_SRA_SD_food_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_building']，对应['district:district_SRA_SD_food']。\n\n这座生态综合体带有典型的精灵技术特征，通过生物催化和培养技术满足绝大部分生物质原料的需求，从工业产品到食物补给无所不包。"
+ building_SRA_SD_alloys:0 "树海-渊狱熔核锻炉" #Abyssal Molten Core Forge
+ building_SRA_SD_alloys_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_building']，对应['district:district_SRA_SD_alloys']。\n\n这座庞大的军工冶炼复合体纵贯地层，从九重铸炉直接获取用于加工合金的源质，其生产的军事级材料性能优异，产量极高。"
+ building_SRA_SD_consumer_goods:0 "树海-源流织造庭院" #Essentia Weave Atrium
+ building_SRA_SD_consumer_goods_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_building']，对应['district:district_SRA_SD_consumer_goods']。\n\n这座泛用打印设施通过源质构筑技术批量生产标准化的消费品以满足科研工作或行政管理的材料需求，也能制造日常生活的常规制品。输入的矿物会被按照其神秘学组成分解为源质成分并重新组装为所需的原材料。"
+ building_SRA_SD_research:0 "树海-翡翠灵枢研院" # Emerald Cognium Arcanum
+ building_SRA_SD_research_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_building']，对应['district:district_SRA_SD_research']。\n\n翡翠灵枢研院是翡翠塔学会在深渊研究领域设立的专业分部，致力于通过深渊的环境以及其本身的形态来对各领域尚待求解的问题进行研究。尽管在认知上接触深渊会造成不可避免的侵蚀效应，但这些狂热的求知者们愿意为探索新知而奉献自己本可漫长，或是本就短暂的人生。"
+ building_SRA_SD_unity:0 "树海-先觉演算穹庭" #Prescient Spire
+ building_SRA_SD_unity_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_building']，对应。\n\n这座行政复合体能够统合整个文明的社会动向，对局势的发展进行推演和预测，以优化行政决策，降低资源错配与政策迟滞。与此同时，它也负责对文化的发展和演变做出引导，以更好的建立集体认知。"
+ building_SRA_SD_rare:0 "树海-奇物凝晶尖塔" #Curiosity Omnicrystal Spire
+ building_SRA_SD_rare_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_building']，对应['district:district_SRA_SD_rare']。\n\n此奥术结构制造独特奥术水晶装置，用于模拟荒域中独特稀有资源的相关用途。翡翠塔学会根据记录的数据复现的科技产物通常需要这些稀有资源的功能，但自主研发的就不需要了。"
+ building_SRA_SD_explore:0 "树海-彼方远征之始" # The Beginning To The Otherside
+ building_SRA_SD_explore_desc:0 "此建筑为['concept_SRA_SD_chaos_star_habitable_building']，对应。\n\n这里是深渊效应研究的主要行动中心，能加深我们对深渊应用的理解并增加相关产业的运作效率。尽管风险无处不在，但我们相信一切最终都是值得的。"
+
+###############################
+ #领袖
+ leader_trait_SRA_Abyss_Erosion:0 "§R深渊侵蚀§!"
+ leader_trait_SRA_Abyss_Erosion_desc:0 "这名领袖不幸遭到了严重的['concept_SRA_SD_Abyss_Erosion']，正在逐渐失去自我认知和存在形式。"
+ leader_trait_SRA_Abyss_Erosion_Alter:0 "§Y深渊侵蚀§!"
+ leader_trait_SRA_Abyss_Erosion_Alter_desc:0 "许多人可能会在深渊面前陷入惶恐与混乱，乃至丧失自我……\n['concept_SRA_SD_Myth_get_3', §Y但绝非此人，绝非此刻！§!]"
+
+ leader_trait_SRA_SD_Myth:0 "§Y神话存在§!"
+ leader_trait_SRA_SD_Myth_desc:0 "通过['concept_SRA_SD_Myth_get_1', 超越自己的极限]，战胜['concept_SRA_SD_Myth_get_2', 超乎想象的困难]，抵达['concept_SRA_SD_Myth_get_3', 凡人难以企及的领域]，踏上['concept_SRA_SD_Myth_get_4', 属于自己的天命道途]。\n§Y这名领袖现在是一位神话存在。§!"
+
+ SRA_SD_no_custom_tooltip: ""
+ mod_mod_SRA_SD_Attack_Bonus: "['concept_mod_SRA_SD_Attack_Bonus']"
+
+ mod_mod_SRA_SD_Myth_power: "['concept_mod_SRA_SD_Myth_power']"
+
+ mod_mod_SRA_SD_Myth_accuracy_debuff: "['concept_SRA_SD_Myth_accuracy_debuff']"
+ SRA_SD_Myth_accuracy_debuff_effect_buff: "$concept_SRA_SD_Myth_accuracy_debuff$"
+
+ SRA_SD_Myth_power_level: "\n£leader_trait_SRA_SD_Myth£领袖当前的['concept_mod_SRA_SD_Myth_power']:§Y[This.SRA_SD_Myth_power_level]§!\n所拥有的神话能力："
+ SRA_SD_Myth_councilor_skill: "['concept_SRA_SD_Myth_councilor_skill']"
+ SRA_SD_Myth_damage_mult: "['concept_SRA_SD_Myth_damage_mult']"
+ SRA_SD_Myth_evasion_mult: "['concept_SRA_SD_Myth_evasion_mult']"
+ SRA_SD_Myth_accuracy_debuff: "['concept_SRA_SD_Myth_accuracy_debuff']"
+ SRA_SD_Myth_army_damage_taken: "['concept_SRA_SD_Myth_army_damage_taken']"
+ SRA_SD_Myth_alone: "['concept_SRA_SD_Myth_alone']"
+ SRA_SD_Myth_sector_speed: "['concept_SRA_SD_Myth_sector_speed']"
+
+
+
+ SRA_SD_event.1.name:0 "§Y升华之刻§!"
+ SRA_SD_event.1.desc:0 "瞬息之间，好似一簇火星落在薪柴之上，[this.GetName]一路走来所经历的一切化作了无穷无尽的力量源泉。[this.GetHimHer]自凡尘之中踏出，焕然一新，将光辉历程铸为传奇，将神话伟力集于一身。\n§Y[this.GetName]§!超越了自己的命运，成为了一位§Y神话存在§!。\n\n§Y[this.GetHimHer]将如何选择自己的第一份权能呢？§!"
+ SRA_SD_event.2.name:0 "§Y攀升§!"
+ SRA_SD_event.2.desc:0 "灯火愈发明亮，传奇愈发闪耀，[this.GetName]力克深渊，其神话力量更进一步。"
+ SRA_SD_event.2.a:0 "伟大的一刻。"
+ SRA_SD_event.3.name:0 "§Y升格§!"
+ SRA_SD_event.3.desc:0 "灯火愈发明亮，传奇愈发闪耀，[this.GetName]力克深渊，其神话力量更进一步，[this.GetHimHer]意识到，自己能触及到新的领域的力量。\n\n§Y[this.GetHimHer]将如何选择自己新的权能呢？§!"
+ SRA_SD_event.4.name:0 "§Y巅峰已至§!"
+ SRA_SD_event.4.desc:0 "终于，[this.GetName]走到了[this.GetHimHer]§Y神话道途§!的最后一步，[this.GetHimHer]的伟力已达圆满，[this.GetHimHer]的伟业举世无双。纵览历史长河，又有多少人能抵达这样的境地，见到这样的风景呢？\n\n[this.GetName]此刻身心完化，超然物上。[this.GetHimHer]的意志强韧，它可驱使万物，它将塑造万物；[this.GetHimHer]的躯体精妙，它已成为一体，它将永为一体。\n\n此刻，[this.GetHimHer]将注目于自己最后一份权能，§Y[this.GetHimHer]将作何选择？§!"
+
+
+
+ leader_trait_SRA_SD_Bard_of_Metarbor:0 "§R树海的诗人§!"
+ leader_trait_SRA_SD_Bard_of_Metarbor_desc:0 "§R你§!将自我短暂地投射到此地，你意欲何为，所求何物？\n\n§Y这名领袖无法存在太久。§!"
+
+ planet_SRA_SD_chaos_star_habitable_Buff_1:0 "§R树海残枝§!当前状态" 
+ planet_SRA_SD_chaos_star_habitable_Buff_1_desc:0 "当前['concept_SRA_SD_chaos_star_habitable_vitality']：§G[this.pc_SRA_SD_chaos_star_habitable_vitality]§!\n当前总$mod_mod_building_SRA_SD_energy_load_give$：§G[this.GetScriptedmod_building_SRA_SD_energy_load_give]§!\n当前总$mod_mod_building_SRA_SD_energy_load_use$：§G[this.GetScriptedmod_building_SRA_SD_energy_load_use]§!\n当前负荷使用比例：§G[this.GetScriptedSRA_engery_effective_load_2]§!"
+
+ councilor_SRA_SD_lost_presbyter:0 "失落祭司"
+ councilor_SRA_SD_lost_presbyter_female:0 "$councilor_SRA_SD_lost_presbyter$"
+ councilor_SRA_SD_lost_presbyter_desc:1 "§Y此席位的领袖将被 §R垂青§! 。§!\n$TITLE$需要直接与§R深渊之龙§!接触，承担解析和引导渊影之痕的任务，在严重的['concept_SRA_SD_Abyss_Erosion']下，很少有人能善终。"
+
+
+
+
+
+ ###遗珍
+ SRA_SD_First_Murder:0 "§R初戮之血§!"
+ SRA_SD_First_Murder_desc:0 "这枚血石在久远到不可知的年代，被一个人拿起，刺向另一个人。\n那是第一次掠夺，第一次征戮，第一次谋杀。\n它狩猎过山岳般庞大的巨兽，也屠宰过云群般温顺的牲畜，它一次又一次被遗失，又被掘起，成为无数长杆的矛头，浸润无数生灵的鲜血，染红，染黑，被破碎被磨砺，直到彻底失去它曾作为一枚石头的一切，转为由纯粹的血债所凝，不可磨灭。\n\n打造为箭时，所造成的伤口被恨意浸透，力量皆如鲜血流淌而出，直至凋亡。\n打造为矛时，所造成的伤口被杀意浸透，血肉皆化利刃破体而出，直至枯死。\n若持有者将其浸润在屠戮所知一切后狂喜与绝望之泪中，此物立即毁灭。"
+ SRA_SD_First_Murder_modifier:0 "§R这枚血石闪烁着，渴望下一次屠戮。§!\n\n§Y持有这件遗珍使你得以做出§R选择§!。§!"
+ SRA_SD_First_Murder_effect:0 "§R初戮之血呼唤杀戮。§!\n\n所有与你§R敌对§!的国家：\n统治者§R立即死亡§!\n$MOD_PLANET_STABILITY_ADD$：§R-100%§!\n持续3600.00£time£\n\n§Y这并非明智之举。§!"
+ SRA_SD_First_Murder_debuff:0 "§R杀戮诅咒§!"
+ SRA_SD_First_Murder_debuff_desc:0 "这个国家被初戮之血侵蚀，混乱将无处不在。"
+
+ SRA_SD_Fire_of_Lightkeeper:0 "§Y逐雾之火§!"
+ SRA_SD_Fire_of_Lightkeeper_desc:0 "“掌灯者”诺兰登过去使用的提灯，既是他的火源，也是他的照明物。\n传说在他登上孤山之前，他为自己的部落管理灯火，驱散夜幕与迷雾。\n后来他走向孤山，提灯引火，驱散了深渊的阴影，将诸神的指引带给人类。\n\n此物中的火苗永不熄灭，发出的光亮能抑制深渊的活动，恍惚之人注视此物能重拾本心。\n若持有者在一个被绝望浸没的世界亲手掐灭火苗，此物立即毁灭。"
+ SRA_SD_Fire_of_Lightkeeper_modifier:0 "§Y这盏提灯对今日不置可否。§!"
+ SRA_SD_Fire_of_Lightkeeper_effect:0 "§Y逐雾之火点燃信仰。§!\n\n"
+ SRA_SD_Fire_of_Lightkeeper_effect_2:0 "深渊的负面影响§G降低§!\n\n§Y这并非明智之举。§!"
+ SRA_SD_Fire_of_Lightkeeper_buff:0 "§Y逐雾之火§!"
+ SRA_SD_Fire_of_Lightkeeper_buff_desc:0 "掌灯者用此火照出诸神之形，也在远方投下阴影。"
+
+ SRA_SD_Annihilating_Growl:0 "§R歼灭轰鸣§!"
+ SRA_SD_Annihilating_Growl_desc:0 "某种相对可控的可重复使用的毁灭性武器。\n歼灭轰鸣是数个地代前的造物，它很可能彻底修改过萨塔瑞兹的地貌，乃至清洗过整个世界上的生命。\n当被激活时，它发射一种调制脉冲束，裂解符合指定标准的物质，释放的大部分能量将转化为同类脉冲并向周围扩散，扩散速度依照使用者的意愿而决定。\n“指定标准”的范围仍然不明，现有记录给出了一些案例。\n\n可用标准至少包含如下内容：\n物件类型，物件主要用途，物件主要构成，与命中目标的直线距离，物件当前相对速度，物件生命有无。\n\n无效标准至少包含以下内容：\n物件归属，物件的物质状态，物件体积，与命中目标相连情况，物件的“好坏”，物件的颜色。\n\n以上标准皆基于使用者的认知。\n\n当使用者下达与未知标准冲突的指令时，此物立即尝试摧毁使用者，若失败，则此物立即毁灭。\n目前已知，未定义与命中目标的直线距离的指令都会导致与标准冲突，但最大距离仍然未被测试得出。"
+ SRA_SD_Annihilating_Growl_modifier:0 "§R这件遗物正在等待你。§!"
+ SRA_SD_Annihilating_Growl_effect:0 "§R启动歼灭轰鸣§!"
+
+
+ SRA_SD_Arcane_relic:0 "§B枢衡山奥术投射系统§!"
+ SRA_SD_Arcane_relic_desc:0 "这座架设在枢衡山遗址上的庞大奥术结构用于为所有在['concept_SRA_SD_barren_space']活动的我方舰船提供奥术施法增幅效果。\n\n枢衡山曾经只是一处无名的小丘陵，但从塔拉领主在此地开始征服大业，这里便开启了一段纷争的历史。枢衡山领的征服霸权被龙火毁灭，枢衡山上层层叠叠的奥术设施也被熔做废石，但这些痕迹交叠在一起，又引出了新的力量，进而在此后一步步成为了如今的奥术能量焦点。\n['concept_SRA_SD_The_Rips']后，翡翠塔学会回收了这片土地并净化了其上笼罩的['concept_SRA_SD_Abyss_Erosion']，将回荡于此的无尽奥术能量引入结晶簇的共鸣之中，传递到每一枚自枢衡山阵列上取下的晶体单元，为无数孤悬['concept_SRA_SD_barren_space']之中的游船赠出礼物。"
+ SRA_SD_Arcane_relic_modifier:0 "§B提供等于 能量武器修正*50% + 爆破武器修正*50% 的['concept_SRA_SD_Arcane']武器修正，因此乃塑造之现象。§!\n\n"
+ SRA_SD_Arcane_relic_effect:0 "§B在1800.00£time£内使你的['concept_SRA_SD_Arcane']武器修正提升等同于此刻修正的数值，作为超载阵列的代价，你舰船的维护成本也将同比上升。§!"
+ SRA_SD_Arcane_relic_buff_A:0 "§B奥术过载§!"
+ SRA_SD_Arcane_relic_buff_B:0 "§B奥术过载§!"
+
+ SRA_SD_Divine_relic:0 "§Y诺兰登手稿§!"
+ SRA_SD_Divine_relic_desc:0 "这件来自我们纪元开端的神话遗物与我们的神术阵列共鸣以强化所有在['concept_SRA_SD_barren_space']活动的我方舰船的神术施法效果。\n\n这份由“掌灯者”诺兰登写就的书卷记载了他在各地游历的所见所闻，传说他就是这样踏上了神话道途，这份手稿也因此凝结了自他而起的诸神的影响力，进而能够扩展作为所有神术施法的象征物。\n一些研究者认为，这些文字之下其实用密语记录了一个将会震惊世界的秘辛，解开它的人能够得到神话力量真正的起源和规则，从而掌控乃至创造诸神，这才是这份手稿有着如此强大力量的原因。无论如何，还没有人真的如他们所说那样解开这个秘密。"
+ SRA_SD_Divine_relic_modifier:0 "§Y提供等于 舰载机武器修正*25% + 动能武器修正*50% 的['concept_SRA_SD_Divine']武器修正，因此乃重铸之事物。§!\n\n"
+ SRA_SD_Divine_relic_effect:0 "§Y在1800.00£time£内使你的['concept_SRA_SD_Divine']武器修正提升等同于此刻修正的数值，作为超限仪式的代价，你舰船的维护成本也将同比上升。§!"
+ SRA_SD_Divine_relic_buff_A:0 "§Y超限仪式§!"
+ SRA_SD_Divine_relic_buff_B:0 "§Y超限仪式§!"
+
+ ###技术
+
+
+ weapon_type_SRA_SD_Arcane:0 "§B['concept_SRA_SD_Arcane']§!"
+ mod_weapon_type_SRA_SD_Arcane_weapon_damage_mult:0 "§B树海-奥术体系武器伤害§!"
+ mod_weapon_type_SRA_SD_Arcane_weapon_fire_rate_mult:0 "§B树海-奥术体系武器射速§!"
+
+ weapon_type_SRA_SD_Divine:0 "§Y['concept_SRA_SD_Divine']§!"
+ mod_weapon_type_SRA_SD_Divine_weapon_damage_mult:0 "§Y树海-神术体系武器伤害§!"
+ mod_weapon_type_SRA_SD_Divine_weapon_fire_rate_mult:0 "§Y树海-神术体系武器射速§!"
+
+ ###########深渊事务司
+
+
+
+ SRA_SD_event.19.name:0 "翡翠塔文献还原"
+ SRA_SD_event.19.desc:0 "我们可以基于翡翠塔内的文献，对已知的古代太空技术体系进行本土化复现，基于萨塔瑞兹独特规则和作用体系，运用特有材料还原大多数技术要求的各项参数。\n以此方法能轻易获取常规星际文明的大多数技术，但在此基础上做出新的进展则需要更多的努力和积累。\n如果如此选择，预计需要数十年的时间来建立完善的科技理论体系。"
+ SRA_SD_event.19.a:0 "这将会让我们获得巨大的优势。"
+ SRA_SD_event.19.a.tooltip:0 "§E效果：§!\n§Y立即获得绝大多数科技。§!\n\n§P惩罚：§!\n$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$：§R-400%§!，持续§Y40.00年§!。"
+ SRA_SD_event.19.b:0 "还是脚踏实地吧。"
+ SRA_SD_event_19_buff:0 "翡翠塔文献还原"
+ SRA_SD_event_19_buff_desc:0 "我们需要重新建立科研体系。"
+
+
+ SRA_SD_event.20.name:0 "§B深渊事务司§!"
+ SRA_SD_event.20.desc:0 "「我们求索，我们斗争，我们是文明的边际，我们是生灵的防线。」\n\n深渊事务司是统揽深渊控制与开发事务的机构，基于存续需求，可以调度所有类型的资源来对抗深渊的威胁。你可以在这里发布相关决策。"
+ SRA_SD_event.20.a:0 "开始探索深渊"
+ SRA_SD_event.20.a.tooltip:0 "每次探索需要消耗 §Y5个人口§! 才能开始，这些勇士们会英勇无畏地迈向未知，哪怕结局可能是一去不还。\n探索需要花费数年的时间，在此期间，探索队会多次反馈结果，也许是收获，也许是灾难，这一切基于探索的投资、['concept_SRA_SD_chaos_star_habitable_vitality']、我们的技术水平，以及归根结底，命运的安排。\n\n失落祭司的存在和其能力，以及深渊之龙的态度，会对探索产生不可知的影响。"
+ SRA_SD_event.20.b:0 "开始狩猎深渊"
+ SRA_SD_event.20.b.tooltip:0 "这将导致一场地面战斗发生，深渊的造物会与我们的防御陆军正面对抗，这可以使得['concept_SRA_SD_chaos_star_habitable_vitality']一定程度地下降，前提是我们能活下来。\n深渊入侵的强度主要基于当前的['concept_SRA_SD_chaos_star_habitable_vitality']，并不幸地与我们的技术一同增长，尽管它们不会完全追上我们的发展，但我们也只能遵从命运的决断。\n狩猎会创造一段时间的安全期，在此期间，不会自然发生深渊入侵。\n\n§R一定要小心，我们承受不起失败的代价。§!"
+ SRA_SD_event.20.c:0 "催化深渊"
+ SRA_SD_event.20.c.tooltip:0 "执行一系列§R高度危险§!的仪式来§Y提高§!['concept_SRA_SD_chaos_star_habitable_vitality']，可以使得['concept_SRA_SD_chaos_star_habitable_vitality']§Y直接翻倍§!，但会带来一系列§R危险的次生效应§!，主持仪式的$councilor_SRA_SD_lost_presbyter$有可能因此§R丧命§!。"
+ SRA_SD_event.20.d:0 "紧急泄压"
+ SRA_SD_event.20.d.tooltip:0 "执行一系列§R高度危险§!的仪式来§Y降低§!['concept_SRA_SD_chaos_star_habitable_vitality']，可以使得['concept_SRA_SD_chaos_star_habitable_vitality']§Y直接减半§!，但会带来一系列§R危险的次生效应，并造成广泛的破坏§!。"
+ SRA_SD_event_20_d_buff:0 "灾厄洪流"
+ SRA_SD_event_20_d_buff_desc:0 "为了削弱深渊之中翻涌的混沌，我们以自己的家园承受了它的侵蚀。"
+
+
+
+ SRA_SD_event.21.name:0 "踏行深渊"
+ SRA_SD_event.21.desc:0 "的确，深渊是我们所生活的世界的扭曲，将一应色彩涂抹成黑，让一切被磨蚀。\n但正因如此，它是那样的丰饶，无所不有无穷无尽。\n「夜空中的每一颗星辰都镶嵌在深渊里。」\n即便仅仅只是登上孤山，也能摘下星海的珠宝……\n我们踏行深渊，我们探索深渊，我们从深渊中汲取对抗深渊的力量，我们凭昨日创造明天。"
+ SRA_SD_event.21.a:0 "我们一往无前"
+ SRA_SD_event.22.name:0 "狩猎深渊"
+ SRA_SD_event.22.desc:0 "深渊弥散，张扬它的存在，宣泄它的权能。\n那红与黑的迷雾在孤山上下蔓延，一刻不停地前进，磨灭一切文明或自然的痕迹。\n「风雪涂抹战士的面目，迷雾吞噬英雄的名讳。」\n无论侵蚀的是生灵还是死物，深渊都会延伸它的影响力，并威胁到我们的存续。因此，我们必须狩猎深渊，狩猎无序的造物，与无序本身。"
+ SRA_SD_event.22.a:0 "我们无所畏惧"
+
+
+ SRA_SD_event.23.name:0 "§R戛然而止§!"
+ SRA_SD_event.23.desc:0 "一场混乱终止了故事，讲述者缄默不言。\n\n\n或者？"
+ SRA_SD_event.23.a:0 "§R就此结束。§!"
+ SRA_SD_event.23.b:0 "§Y仍有未来。§!"
+ SRA_SD_event.23.b.tooltip:0 "你不愿让故事潦草地断在此处，即便要加上一些不太令人赞许的情节，它也应当延续下去。\n\n\n§Y清空星球上所有的陆军并添加一些诡异的守卫。§!"
+
+ SRA_SD_event.95.name:0 "§R风雪蔽目§!"
+ SRA_SD_event.95.desc:0 "[Root.GetName]见到了§R无法逾越的深邃黑暗§!。\n\n深渊低语着抹去一切不同，将现实熔铸为均一的混沌。[Root.GetName]的形体消弭，面目模糊，言语息声，意志凋亡，沦为深渊侵蚀下的一具空壳，一道阴影。"
+ SRA_SD_event.95.a:0 "§R[Root.GetName]不复存在。§!"
+ SRA_SD_event.96.name:0 "§R浅海轻唱§!"
+ SRA_SD_event.96.desc:0 "§R你§!和他们是不一样的。\n§R你§!能听懂那迷雾中传出的每一个词句，§R你§!能感受深渊中明灭的每一次脉动。§R它§!不曾伤害过§R你§!，§R它§!聆听§R你§!的意愿，§R它§!回应§R你§!的请求，§R它§!对§R你§!施以别样的慷慨。"
+ SRA_SD_event.96.a:0 "§R你§!也许会有所收获。"
+ SRA_SD_event.97.name:0 "§R灯火将熄§!"
+ SRA_SD_event.97.desc:0 "命运自尽头而来，降下它的帷幕，[Root.GetName]疲惫不堪，伤痕累累。深渊的侵蚀扭曲了[Root.GetHeShe]的躯体，磨灭着[Root.GetHeShe]的意志。此刻，[Root.GetName]尚未倒下；但彼时，就无人知晓了。"
+ SRA_SD_event.97.a:0 "§R[Root.GetName]的意志正遭受考验！§!"
+ SRA_SD_event.98.name:0 "§Y灯火不灭§!"
+ SRA_SD_event.98.desc:0 "尽管一度被深渊的险恶诅咒逼入绝境，但是[Root.GetName]的故事并没有就此结束。凭着决心与意志，[Root.GetName]在风暴中屹立不倒，愈发强大。"
+ SRA_SD_event.98.a:0 "§Y[Root.GetName]战胜了深渊的侵蚀！§!"
+
+
+ SRA_SD_event.507.name:0 "§R策展人城邦§!"
+ SRA_SD_event.507.desc:0 "那些目前仍未注意到我们的存在的人，我们代表着一个称作策展人的组织。我们之前的任务都是围绕着收容与研究异常物体、实体以及其它各种各样的现象展开的。五个银河周期以来以来，这些任务一直都是我们组织的工作重点。\n\n§R由于出现了超出我们控制的情况，此指令现已更改。我们的新任务将为灭除所有意识体。§!\n\n§Y此后将不会有进一步的通讯。§!"
+ SRA_SD_event.507.a:0 "§R为什么？§!"
+
+ SRA_powerword_death:0 "绝杀术"
+ SRA_powerword_death_desc:0 "你以强大的意志迫使你的目标屈从于死亡。"
+ SRA_powerword_death_2:0 "腐化魔法"
+ SRA_powerword_death_2_desc:0 "扣你豁免"
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

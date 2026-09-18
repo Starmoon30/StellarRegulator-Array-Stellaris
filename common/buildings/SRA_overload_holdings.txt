@@ -1,0 +1,55 @@
+holding_SRA_aid_base = {
+	base_buildtime = 720
+	owner_type = subject_holding
+	icon = holding_SRA_aid_base
+	can_be_disabled = no
+	planet_limit = 1
+	
+	potential = {
+		owner.overlord = {
+			has_country_flag = StellarRegulator_Array_tech_permit
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+		    }
+		}
+	}
+
+	resources = {
+		category = planet_holdings
+		produces = {
+		}
+		cost = {
+			minerals = 1500
+		}
+		upkeep = {
+		}
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+		# planet_max_buildings_add = 12
+		planet_max_branch_office_buildings_add = 12
+		monthly_loyalty = 20
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = no }
+		}
+		modifier = {
+			job_SRA_RE_research_institute_specialist_per_pop = 0.2
+			job_SRA_RE_alloys_specialist_per_pop = 0.2
+			job_SRA_RE_foundry_specialist_per_pop = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { is_gestalt = yes }
+		}
+		modifier = {
+			job_SRA_RE_research_institute_drone_per_pop = 0.2
+			job_SRA_RE_alloys_drone_per_pop = 0.2
+			job_SRA_RE_foundry_drone_per_pop = 0.1
+		}
+	}
+}

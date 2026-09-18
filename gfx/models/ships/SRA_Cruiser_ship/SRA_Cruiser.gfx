@@ -1,0 +1,17 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_Cruiser_mesh"
+		file = "gfx/models/ships/SRA_Cruiser_ship/SRA_Cruiser.mesh"
+		scale = 1.0
+
+		animation = { id = "idle" type = "SRA_Cruiser_idle_animation" }
+		meshsettings = {
+			name = "QiuShape"
+			index = 0
+			texture_diffuse = "SRA_Cruiser_diffuse.dds"
+			texture_normal = "SRA_Cruiser_Normal.dds"
+			texture_specular = "SRA_Cruiser_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

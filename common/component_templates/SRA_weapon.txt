@@ -1,0 +1,2389 @@
+###特殊武器###
+
+weapon_component_template = {
+	key = "SRA_T_weapon_supreme"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_T4_weapon_planet_killer"
+	icon_frame = 1
+
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	damage = { min = 65536 max = 98304 }
+	collateral_damage = { min = 32768 max = 49152 }
+	collateral_range = 20
+
+	firing_arc = 5
+	windup = { min = 0 max = 8 }
+	total_fire_time = 316
+	range = 320
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	tracking = 1
+	power = -800000
+	custom_tooltip = SRA_T_weapon_supreme_DESC
+	ai_weight = {
+		weight = 0
+	}
+	#Scope = ship (target), from = ship (shooter)
+	on_hit = {
+		hidden_effect = {
+			from = {
+				if = {
+					limit = { NOT = { has_ship_flag = SRA_weapon_type_SRA_supreme_get_buff } }
+					SRA_weapon_type_SRA_supreme_get_buff = {
+						SRA_DAMAGE_FACTOR = 100
+					}
+					root.fleet = {
+						every_controlled_ship = {
+							SRA_clear_ship_damage_reduction_mult = {
+								ALSO_LESS_THAN_ZERO = no
+							}
+							add_modifier = {
+								modifier = "SRA_T_weapon_supreme_buff"
+								days = 8
+							}
+						}
+					}
+					if = {
+						limit = { owner = { has_country_flag = SRA_SOGZ_menu_sub_5_2 } }
+						set_timed_ship_flag = {
+							flag = SRA_weapon_type_SRA_supreme_get_buff
+							days = 8
+						}
+					}
+					else = {
+						set_timed_ship_flag = {
+							flag = SRA_weapon_type_SRA_supreme_get_buff
+							days = 32
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = SRA_T_weapon_supreme_on_hit
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	component_set = "SRA_T_weapon_supreme"
+	projectile_gfx = "SRA_T_weapon_supreme"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_SRA_supreme }
+	ai_tags = { weapon_role_anti_hull }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SRA_Crisis_G_weapon_collision"
+	size = torpedo
+	type = instant
+	icon = "GFX_SRA_Crisis_G_weapon_collision"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 65536 max = 98304 }
+
+	windup = { min = 0 max = 8 }
+	total_fire_time = 60
+	range = 10
+	accuracy = 1
+	tracking = 1
+	power = -10
+	custom_tooltip = SRA_Crisis_G_weapon_collision_DESC
+	ship_modifier = {
+		component_lifesteal_add = 0.5
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	component_set = "SRA_Crisis_G_weapon_collision"
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_SRA_supreme }
+	ai_tags = { weapon_role_anti_hull }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SRA_Crisis_G_weapon_kind_laser"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_T4_weapon_planet_killer"
+	icon_frame = 1
+
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 65536 max = 98304 }
+	collateral_damage = { min = 32768 max = 49152 }
+	collateral_range = 5
+
+	windup = { min = 0 max = 8 }
+	total_fire_time = 636
+	range = 320
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	tracking = 1
+	power = -800000
+	custom_tooltip = SRA_Crisis_G_weapon_kind_laser_DESC
+	#Scope = ship (target), from = ship (shooter)
+	on_hit = {
+		hidden_effect = {
+			from = {
+				if = {
+					limit = { NOT = { has_ship_flag = SRA_weapon_type_SRA_supreme_get_buff } }
+					SRA_weapon_type_SRA_supreme_get_buff = {
+						SRA_DAMAGE_FACTOR = 100
+					}
+					root = {
+						SRA_clear_ship_damage_reduction_mult = {
+							ALSO_LESS_THAN_ZERO = no
+						}
+						add_modifier = {
+							modifier = "SRA_T_weapon_supreme_buff"
+							days = 8
+						}
+					}
+					set_timed_ship_flag = {
+						flag = SRA_weapon_type_SRA_supreme_get_buff
+						days = 32
+					}
+				}
+			}
+		}
+		custom_tooltip = SRA_Crisis_G_weapon_kind_laser_on_hit
+	}
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 20000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	ship_limit = 1
+	size_restriction = { SRA_Executor }
+	build_time = 240
+	prerequisites = { "tech_SRA_T4_weapon_TX_Laser" }
+	component_set = "SRA_Crisis_G_weapon_kind_laser"
+	projectile_gfx = "SRA_Crisis_G_weapon_kind_laser"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_SRA_supreme }
+	ai_tags = { weapon_role_anti_hull }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SRA_T4_weapon_G_supreme"
+	size = torpedo
+	type = instant
+	#prio_projectile = yes
+	icon = "GFX_SRA_T4_weapon_G_supreme"
+	icon_frame = 1
+
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 0 max = 0 }
+	target_focus = spread
+	windup = { min = 0 max = 0 }
+	total_fire_time = 16
+	range = 320
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	tracking = 1
+	power = -800000
+	hide_damage_values_from_tooltip = yes
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 20000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	on_hit = {
+		hidden_effect = {
+			from = {
+				if = {
+					limit = {
+						NOR = {
+							has_ship_flag = SRA_T4_weapon_G_supreme_buff
+							has_modifier = SRA_Spear_Of_Galaxy_Zenith_nearly_repair
+							has_modifier = SRA_Spear_Of_Galaxy_Zenith_Buff_1
+						}
+					}
+					add_modifier = {
+						modifier = SRA_T4_weapon_G_supreme_buff
+						days = 4
+					}
+					set_timed_ship_flag = {
+						flag = SRA_T4_weapon_G_supreme_buff
+						days = 8
+					}
+				}
+			}
+		}
+		custom_tooltip = SRA_T4_weapon_G_supreme_on_hit
+	}
+	ship_limit = 1
+	potential = {
+		SRA_is_SRA_ship_size = yes
+	}
+	prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	component_set = "SRA_T4_weapon_G_supreme"
+	projectile_gfx = "SRA_l_weapon_0"
+	tags = { weapon_type_SRA_supreme }
+	ai_tags = { weapon_role_anti_hull }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#####T4####
+#星规-新星终结
+
+weapon_component_template = {
+	key = "SRA_T4_weapon_planet_killer"
+	size = planet_killer
+	type = planet_killer
+
+	icon = "GFX_SRA_T4_weapon_planet_killer"
+	icon_frame = 1
+
+	power = -800000
+
+	#use_ship_main_target = yes
+	# can_destroy_stars = yes
+	windup = { min = 15 max = 15 }
+
+	total_fire_time = 5
+
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	hidden = yes
+	planet_destruction_gfx = "SRA_T4_weapon_planet_killer_weapon_gfx"
+
+}
+weapon_component_template = {
+	key = "SRA_T4_weapon_planet_killer_L_Laser"
+	size = large
+	type = instant
+	icon = "GFX_SRA_T4_weapon_planet_killer"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 800000 max = 800000 }
+	
+	windup = { min = 0 max = 4 }
+	total_fire_time = 18
+	range = 640
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	#shield_damage = 4
+	#armor_damage = 4
+	#hull_damage = 2
+	tracking = 1
+	power = -80000
+	
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	projectile_gfx = "SRA_t_weapon_0_no_windup"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive }
+	resources = {
+		category = ship_components
+		cost = {
+		}		
+		upkeep = {
+		}
+	}
+}
+
+
+#星规-星河碎裂炮
+weapon_component_template = {
+	key = "SMALL_SRA_T4_weapon_SML_Mass_Drivers"
+	inline_script = {
+		script = component_templates/SMALL_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	component_set = "SRA_T4_weapon_SML_Mass_Drivers"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive s_slot }
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SRA_T4_weapon_SML_Mass_Drivers"
+	inline_script = {
+		script = component_templates/MEDIUM_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	component_set = "SRA_T4_weapon_SML_Mass_Drivers"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive m_slot }
+}
+
+weapon_component_template = {
+	key = "LARGE_SRA_T4_weapon_SML_Mass_Drivers"
+	inline_script = {
+		script = component_templates/LARGE_SRA_T4_weapon_SML_Mass_Drivers
+	}
+	component_set = "SRA_T4_weapon_SML_Mass_Drivers"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive l_slot }
+}
+#星规-虚空撕裂弹
+weapon_component_template = {
+	key = "SRA_T4_weapon_L_Particle_Launcher"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_L_Particle_Launcher
+	}
+	component_set = "SRA_T4_weapon_L_Particle_Launcher"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 7500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive l_slot weapon_role_artillery }
+}
+#星规-命运之枪
+weapon_component_template = {
+	key = "SRA_T4_weapon_L_Laser"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_L_Laser
+	}
+	component_set = "SRA_T4_weapon_L_Laser"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 7500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_SML_Mass_Drivers" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive l_slot weapon_role_artillery }
+}
+#星规-归虚之光
+weapon_component_template = {
+	key = "SRA_T4_weapon_X_Laser"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_X_Laser
+	}
+	component_set = "SRA_T4_weapon_X_Laser"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_TX_Laser" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive x_slot weapon_role_artillery }
+}
+
+#星规-破晓之星
+weapon_component_template = {
+	key = "SRA_T4_weapon_T_Laser"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_T_Laser
+	}
+	component_set = "SRA_T4_weapon_T_Laser"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_TX_Laser" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive t_slot weapon_role_artillery }
+}
+#星规-渊宇之狩
+strike_craft_component_template = {
+	key = "SRA_T4_weapon_H"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_H
+	}
+	component_set = "SRA_T4_weapon_H"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_strike_craft }
+}
+
+#星规-寰宇追迹之火
+weapon_component_template = {
+	key = "SRA_T4_weapon_G"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_G
+	}
+	component_set = "SRA_T4_weapon_G"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive g_slot }
+}
+
+#星规-光辉之冠
+weapon_component_template = {
+	key = "SRA_T4_weapon_P"
+	inline_script = {
+		script = component_templates/SRA_T4_weapon_P
+	}
+	component_set = "SRA_T4_weapon_P"
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10000
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T4_weapon_HGP_weapon" }
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_point_defense }
+}
+
+####T3######
+#晶格聚合发射器
+weapon_component_template = {
+	key = "SMALL_SRA_T3_weapon_SML_Plasma"
+	size = small
+	type = instant
+	icon = "GFX_SRA_T3_weapon_SML_Plasma"
+	icon_frame = 1
+	
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 128 max = 192 }
+
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 240
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	tracking = 0.5
+	power = -15
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_weapon_SML_Plasma" }
+	component_set = "SRA_T3_weapon_SML_Plasma"
+	projectile_gfx = "plasma_accelerator_s"
+	tags = { weapon_type_energy weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_hull gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SRA_T3_weapon_SML_Plasma"
+	size = medium
+	type = instant
+	icon = "GFX_SRA_T3_weapon_SML_Plasma"
+	icon_frame = 1
+	
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 256 max = 384 }
+
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 240
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	tracking = 0.5
+	power = -30
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_weapon_SML_Plasma" }
+	component_set = "SRA_T3_weapon_SML_Plasma"
+	projectile_gfx = "plasma_accelerator_m"
+	tags = { weapon_type_energy weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_hull gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_SRA_T3_weapon_SML_Plasma"
+	size = large
+	type = instant
+	icon = "GFX_SRA_T3_weapon_SML_Plasma"
+	icon_frame = 1
+	
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 512 max = 768 }
+	
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 240
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	tracking = 0.5
+	power = -60
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_weapon_SML_Plasma" }
+	component_set = "SRA_T3_weapon_SML_Plasma"
+	projectile_gfx = "plasma_accelerator_l"
+	tags = { weapon_type_energy weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_hull gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#晶格裂解光束
+weapon_component_template = {
+	key = "SRA_T3_weapon_X_Laser"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_SRA_T3_weapon_X_Laser"
+	icon_frame = 1
+	
+	firing_arc = 30
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	
+	damage = { min = 4096 max = 6144 }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 240.0
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	tracking = 0.5
+	power = -320
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_weapon_TX_Laser" }
+	component_set = "SRA_T3_weapon_X_Laser"
+	projectile_gfx = "SRA_xl_weapon_1_no_windup"
+	tags = { weapon_type_energy weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#晶格撕裂光矛
+weapon_component_template = {
+	key = "SRA_T3_weapon_T_Laser"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_T3_weapon_T_Laser"
+	icon_frame = 1
+	
+	firing_arc = 30
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	
+	damage = { min = 8192 max = 12288 }
+	windup = { min = 0 max =  64 }
+	total_fire_time = 128
+	range = 240.0
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	tracking = 0.5
+	power = -640
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_weapon_TX_Laser" }
+	component_set = "SRA_T3_weapon_T_Laser"
+	projectile_gfx = "SRA_t_weapon_1_no_windup"
+	tags = { weapon_type_energy weapon_type_kinetic t_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_7 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_7 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_7 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+#晶格炮艇机
+strike_craft_component_template = {
+	key = "SRA_T3_weapon_H"
+	size = LARGE
+	entity = "bomber_entity"
+	power = -70
+
+	count = 1
+	regeneration_per_day = 0.05
+	launch_time = 0.2
+	
+	damage = { min = 128 max = 192 }
+	cooldown = 1
+	range = 120
+	engagement_range = 240
+	accuracy = 1.0
+	tracking = 0.5
+	
+	health = @SRA_ship_part_hull_add_3
+	armor = @SRA_ship_part_hull_add_3
+	shield = @SRA_ship_part_hull_add_3
+	evasion = 1
+	
+	speed = 1500
+	rotation_speed = 0.8
+	acceleration = 0.8
+	
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	
+	ship_behavior = "bombers_behavior"
+	
+	weapon_type = instant
+	projectile_gfx = "SRA_sc_weapon_1"
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	component_set = "SRA_T3_weapon_H"
+	prerequisites = { "tech_SRA_T3_weapon_HGP_weapon" }
+	icon = "GFX_SRA_T3_weapon_H"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft weapon_type_energy weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "missile" "strike_craft" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#晶格粒子鱼雷
+weapon_component_template = {
+	key = "SRA_T3_weapon_G"
+	size = torpedo
+	type = instant
+	
+	
+	icon = "GFX_SRA_T3_weapon_G"
+	icon_frame = 1
+	component_set = "SRA_T3_weapon_G"
+	projectile_gfx = "SRA_torpedo_1"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	damage = { min = 512 max = 768 }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 240.0
+	accuracy = 1.0
+	tracking = 0.5
+	power = -70
+
+	size_damage_factor = 0.1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 1
+	#armor_damage = 1
+	#hull_damage = 1
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_weapon_HGP_weapon" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#晶格点防御系统
+weapon_component_template = {
+	type = point_defence
+	
+	key = "SRA_T3_weapon_P"
+	size = point_defence
+	
+
+	damage = { min = 16 max = 24 }
+	windup = {
+		min = 0
+		max = 4
+	}
+	total_fire_time = 8
+	range = 120
+	accuracy = 1.0
+	tracking = 0.5
+	power = -10
+
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 1.5
+	#armor_damage = 1.5
+	#hull_damage = 1.5
+	
+	icon = "GFX_SRA_T3_weapon_P"
+	icon_frame = 1
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 500
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T3_weapon_HGP_weapon" }
+	component_set = "SRA_T3_weapon_P"
+	projectile_gfx = "SRA_pd_weapon_1"
+	tags = { weapon_type_point_defense weapon_type_energy weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense screen }
+	point_defence_targets = { "missile" "strike_craft" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+####T2######
+#星辉水晶激光器
+weapon_component_template = {
+	key = "SMALL_SRA_T2_weapon_SML_Laser"
+	size = small
+	type = instant
+	icon = "GFX_SRA_T2_weapon_SML_Laser"
+	icon_frame = 1
+	
+	upgrades_to = "SMALL_SRA_T3_weapon_SML_Plasma"
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 64 max = 96 }
+
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 200
+	accuracy = 1
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	tracking = 0.2
+	power = -15
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T2_weapon_SML_Laser" }
+	component_set = "SRA_T2_weapon_SML_Laser"
+	projectile_gfx = "SRA_s_weapon_0"
+	tags = { weapon_type_energy weapon_type_kinetic s_slot }
+	ai_tags = { gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SRA_T2_weapon_SML_Laser"
+	size = medium
+	type = instant
+	icon = "GFX_SRA_T2_weapon_SML_Laser"
+	icon_frame = 1
+	
+	upgrades_to = "MEDIUM_SRA_T3_weapon_SML_Plasma"
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 128 max = 192 }
+
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 200
+	accuracy = 1
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	tracking = 0.2
+	power = -30
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T2_weapon_SML_Laser" }
+	component_set = "SRA_T2_weapon_SML_Laser"
+	projectile_gfx = "SRA_m_weapon_0"
+	tags = { weapon_type_energy weapon_type_kinetic m_slot }
+	ai_tags = { gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_SRA_T2_weapon_SML_Laser"
+	size = large
+	type = instant
+	icon = "GFX_SRA_T2_weapon_SML_Laser"
+	icon_frame = 1
+	upgrades_to = "LARGE_SRA_T3_weapon_SML_Plasma"
+	
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 256 max = 384 }
+	
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 200
+	accuracy = 1
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	tracking = 0.2
+	power = -60
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T2_weapon_SML_Laser" }
+	component_set = "SRA_T2_weapon_SML_Laser"
+	projectile_gfx = "SRA_l_weapon_0"
+	tags = { weapon_type_energy weapon_type_kinetic l_slot }
+	ai_tags = { gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#星辉水晶光矛
+weapon_component_template = {
+	key = "SRA_T2_weapon_X_Laser"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_SRA_T2_weapon_X_Laser"
+	icon_frame = 1
+	
+	upgrades_to = "SRA_T3_weapon_X_Laser"
+	firing_arc = 30
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	
+	damage = { min = 4096 max = 6144 }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 240.0
+	accuracy = 1
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2.5
+	tracking = 0.2
+	power = -320
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T2_weapon_TX_Laser" }
+	component_set = "SRA_T2_weapon_X_Laser"
+	projectile_gfx = "SRA_xl_weapon_0_no_windup"
+	tags = { weapon_type_energy weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+
+}
+
+#聚焦星辉水晶光矛
+weapon_component_template = {
+	key = "SRA_T2_weapon_T_Laser"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_T2_weapon_T_Laser"
+	icon_frame = 1
+	
+	upgrades_to = "SRA_T3_weapon_T_Laser"
+	firing_arc = 30
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	
+	damage = { min = 8192 max = 12288 }
+	windup = { min = 0 max =  64 }
+	total_fire_time = 128
+	range = 240.0
+	accuracy = 1
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2.5
+	tracking = 0.2
+	power = -640
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T2_weapon_TX_Laser" }
+	component_set = "SRA_T2_weapon_T_Laser"
+	projectile_gfx = "SRA_t_weapon_0_no_windup"
+	tags = { weapon_type_energy weapon_type_kinetic t_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+
+}
+#星辉水晶舰载机
+strike_craft_component_template = {
+	key = "SRA_T2_weapon_H"
+	size = LARGE
+	entity = "bomber_entity"
+	power = -70
+
+	upgrades_to = "SRA_T3_weapon_H"
+	count = 1
+	regeneration_per_day = 0.05
+	launch_time = 0.2
+	
+	damage = { min = 64 max = 96 }
+	cooldown = 1
+	range = 120
+	engagement_range = 240
+	accuracy = 1.0
+	tracking = 0.2
+	
+	health = @SRA_ship_part_hull_add_2
+	armor = @SRA_ship_part_hull_add_2
+	shield = @SRA_ship_part_hull_add_2
+	evasion = 1
+	
+	speed = 1500
+	rotation_speed = 0.8
+	acceleration = 0.8
+	
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	
+	ship_behavior = "bombers_behavior"
+	
+	weapon_type = instant
+	projectile_gfx = "SRA_sc_weapon_0"
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	component_set = "SRA_T2_weapon_H"
+	prerequisites = { "tech_SRA_T2_weapon_HGP_weapon" }
+	icon = "GFX_SRA_T2_weapon_H"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft weapon_type_energy weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "missile" "strike_craft" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#星辉水晶粒子鱼雷
+weapon_component_template = {
+	key = "SRA_T2_weapon_G"
+	size = torpedo
+	type = instant
+	
+	upgrades_to = "SRA_T3_weapon_G"
+	icon = "GFX_SRA_T2_weapon_G"
+	icon_frame = 1
+	
+	component_set = "SRA_T2_weapon_G"
+	projectile_gfx = "SRA_torpedo_0"
+	tags = { weapon_type_explosive weapon_type_energy weapon_type_kinetic g_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	damage = { min = 256 max = 384  }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 200.0
+	accuracy = 1.0
+	tracking = 0.2
+	power = -70
+
+	size_damage_factor = 0.1
+	#shield_damage = 1
+	#armor_damage = 1
+	#hull_damage = 1
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T2_weapon_HGP_weapon" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#星辉水晶点防御系统
+weapon_component_template = {
+	type = point_defence
+	
+	key = "SRA_T2_weapon_P"
+	size = point_defence
+	
+
+	upgrades_to = "SRA_T3_weapon_P"
+	damage = { min = 8 max = 12 }
+	windup = {
+		min = 0
+		max = 4
+	}
+	total_fire_time = 8
+	range = 80
+	accuracy = 1.0
+	tracking = 0.2
+	power = -10
+
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	
+	icon = "GFX_SRA_T2_weapon_P"
+	icon_frame = 1
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T2_weapon_HGP_weapon" }
+	component_set = "SRA_T2_weapon_P"
+	projectile_gfx = "SRA_pd_weapon_0"
+	tags = { weapon_type_point_defense weapon_type_energy weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense screen }
+	point_defence_targets = { "missile" "strike_craft" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+####T1######
+#初型水晶放能器
+weapon_component_template = {
+	key = "SMALL_SRA_T1_weapon_SML_Space_Whale_Weapon"
+	size = small
+	type = instant
+	icon = "GFX_SRA_T1_weapon_SML_Space_Whale_Weapon"
+	icon_frame = 1
+	
+	upgrades_to = "SMALL_SRA_T2_weapon_SML_Laser"
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 32 max = 48 }
+
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 160
+	accuracy = 0.8
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	tracking = 0.2
+	power = -15
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T1_weapon_SML_Space_Whale_Weapon" }
+	component_set = "SRA_T1_weapon_SML_Space_Whale_Weapon"
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy weapon_type_kinetic s_slot }
+	ai_tags = { gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_SRA_T1_weapon_SML_Space_Whale_Weapon"
+	size = medium
+	type = instant
+	icon = "GFX_SRA_T1_weapon_SML_Space_Whale_Weapon"
+	icon_frame = 1
+	
+	upgrades_to = "MEDIUM_SRA_T2_weapon_SML_Laser"
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 64 max = 96 }
+
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 160
+	accuracy = 0.8
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	tracking = 0.2
+	power = -30
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T1_weapon_SML_Space_Whale_Weapon" }
+	component_set = "SRA_T1_weapon_SML_Space_Whale_Weapon"
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy weapon_type_kinetic m_slot }
+	ai_tags = { gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_SRA_T1_weapon_SML_Space_Whale_Weapon"
+	size = large
+	type = instant
+	icon = "GFX_SRA_T1_weapon_SML_Space_Whale_Weapon"
+	icon_frame = 1
+	upgrades_to = "LARGE_SRA_T2_weapon_SML_Laser"
+	
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 128 max = 192 }
+	
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 160
+	accuracy = 0.8
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	tracking = 0.2
+	power = -60
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T1_weapon_SML_Space_Whale_Weapon" }
+	component_set = "SRA_T1_weapon_SML_Space_Whale_Weapon"
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy weapon_type_kinetic l_slot }
+	ai_tags = { gunship }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#初型水晶光矛
+weapon_component_template = {
+	key = "SRA_T1_weapon_X_Laser"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	
+	icon = "GFX_SRA_T1_weapon_X_Laser"
+	icon_frame = 1
+	
+	
+	upgrades_to = "SRA_T2_weapon_X_Laser"
+	firing_arc = 30
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 2048 max = 3072 }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 200.0
+	accuracy = 0.8
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	tracking = 0.2
+	power = -320
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T1_weapon_TX_Laser" }
+	component_set = "SRA_T1_weapon_X_Laser"
+	projectile_gfx = "SRA_xl_weapon_1_no_windup"
+	tags = { weapon_type_energy weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+
+}
+
+#聚焦初型水晶光矛
+weapon_component_template = {
+	key = "SRA_T1_weapon_T_Laser"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_T1_weapon_T_Laser"
+	icon_frame = 1
+	
+	
+	upgrades_to = "SRA_T2_weapon_T_Laser"
+	firing_arc = 30
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 4096 max = 6144 }
+	windup = { min = 0 max =  64 }
+	total_fire_time = 128
+	range = 200.0
+	accuracy = 0.8
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 2
+	tracking = 0.2
+	power = -640
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T1_weapon_TX_Laser" }
+	component_set = "SRA_T1_weapon_T_Laser"
+	projectile_gfx = "SRA_t_weapon_1_no_windup"
+	tags = { weapon_type_energy weapon_type_kinetic t_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+
+}
+#初型水晶舰载机
+strike_craft_component_template = {
+	key = "SRA_T1_weapon_H"
+	size = LARGE
+	entity = "bomber_entity"
+	power = -70
+
+	upgrades_to = "SRA_T2_weapon_H"
+	count = 1
+	regeneration_per_day = 0.05
+	launch_time = 0.2
+	
+	damage = { min = 32 max = 48 }
+	cooldown = 1
+	range = 120
+	engagement_range = 240
+	accuracy = 0.8
+	tracking = 0.2
+	
+	health = @SRA_ship_part_hull_add_1
+	armor = @SRA_ship_part_hull_add_1
+	shield = @SRA_ship_part_hull_add_1
+	evasion = 1
+	
+	speed = 1500
+	rotation_speed = 0.8
+	acceleration = 0.8
+	
+	#shield_damage = 2
+	#armor_damage = 2
+	#hull_damage = 1.5
+	
+	ship_behavior = "bombers_behavior"
+	
+	weapon_type = instant
+	projectile_gfx = "SRA_sc_weapon_1"
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	component_set = "SRA_T1_weapon_H"
+	prerequisites = { "tech_SRA_T1_weapon_HGP_weapon" }
+	icon = "GFX_SRA_T1_weapon_H"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft weapon_type_energy weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "missile" "strike_craft" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#初型水晶粒子鱼雷
+weapon_component_template = {
+	key = "SRA_T1_weapon_G"
+	size = torpedo
+	type = instant
+	
+	
+	upgrades_to = "SRA_T2_weapon_G"
+	icon = "GFX_SRA_T1_weapon_G"
+	icon_frame = 1
+	
+	component_set = "SRA_T1_weapon_G"
+	projectile_gfx = "SRA_torpedo_1"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive g_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	damage = { min = 128 max = 192 }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 160.0
+	accuracy = 0.8
+	tracking = 0.2
+	power = -70
+
+	size_damage_factor = 0.1
+	#shield_damage = 1
+	#armor_damage = 1
+	#hull_damage = 1
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T1_weapon_HGP_weapon" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+#初型水晶点防御系统
+weapon_component_template = {
+	type = point_defence
+	
+	key = "SRA_T1_weapon_P"
+	size = point_defence
+	
+
+	upgrades_to = "SRA_T2_weapon_P"
+	damage = { min = 4 max = 6 }
+	windup = {
+		min = 0
+		max = 4
+	}
+	total_fire_time = 8
+	range = 60
+	accuracy = 0.8
+	tracking = 0.2
+	power = -10
+
+	#shield_damage = 1.5
+	#armor_damage = 1.5
+	#hull_damage = 1
+	
+	icon = "GFX_SRA_T1_weapon_P"
+	icon_frame = 1
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			OR = {
+				has_civic = civic_SRAtechnology
+				has_civic = civic_SRARociviaEmpire
+			}
+		}
+	}
+	prerequisites = { "tech_SRA_T1_weapon_HGP_weapon" }
+	component_set = "SRA_T1_weapon_P"
+	projectile_gfx = "SRA_pd_weapon_1"
+	tags = { weapon_type_point_defense weapon_type_energy weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense screen }
+	point_defence_targets = { "missile" "strike_craft" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+####帝国线####
+#科尔先驱
+#先驱解离者
+weapon_component_template = {
+	key = "SRA_RE_Core_weapon_L_Laser"
+	size = large
+	type = instant
+	icon = "GFX_SRA_CORE_weapon_L_Laser"
+	icon_frame = 1
+	
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 512 max = 768 }
+	
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 240
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 2
+	#armor_damage = 3
+	#hull_damage = 3
+	tracking = 0.4
+	power = -60
+	
+	prerequisites = { "tech_SRA_RE_Core_tech" }
+    size_restriction = { SRA_RE_Core_Battleship }
+	component_set = "SRA_RE_Core_weapon_L_Laser"
+	projectile_gfx = "gamma_laser_l"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_SRA_RE_Core }
+	resources = {
+		category = ship_components
+	}
+}
+
+#先驱根除者
+weapon_component_template = {
+	key = "SRA_RE_Core_weapon_L_Particle_Launcher"
+	size = large
+	type = instant
+	icon = "GFX_SRA_CORE_weapon_SML_Plasma"
+	icon_frame = 1
+	
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	damage = { min = 512 max = 768 }
+	
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 240
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 2
+	#armor_damage = 3
+	#hull_damage = 3
+	tracking = 0.4
+	power = -60
+	
+	prerequisites = { "tech_SRA_RE_Core_tech" }
+    size_restriction = { SRA_RE_Core_Battleship }
+	component_set = "SRA_RE_Core_weapon_L_Particle_Launcher"
+	projectile_gfx = "plasma_accelerator_l"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_SRA_RE_Core }
+	resources = {
+		category = ship_components
+	}
+}
+
+#先驱撕裂者
+weapon_component_template = {
+	key = "SRA_RE_Core_weapon_X_Cannon"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_CORE_weapon_X_Laser"
+	icon_frame = 1
+	
+	firing_arc = 30
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	
+	damage = { min = 8192 max = 12288 }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 240.0
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 3
+	#armor_damage = 2
+	#hull_damage = 3
+	tracking = 0.3
+	power = -320
+	
+	prerequisites = { "tech_SRA_RE_Core_tech" }
+    size_restriction = { SRA_RE_Core_Battleship }
+	component_set = "SRA_RE_Core_weapon_X_Cannon"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_SRA_RE_Core }
+	resources = {
+		category = ship_components
+	}
+
+}
+
+#先驱歼灭炮
+weapon_component_template = {
+	key = "SRA_RE_Core_weapon_T_Laser"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_SRA_CORE_weapon_T_Laser"
+	icon_frame = 1
+	
+	firing_arc = 30
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	
+	
+	damage = { min = 16384 max = 24576 }
+	windup = { min = 0 max =  64 }
+	total_fire_time = 128
+	range = 300
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 4
+	#armor_damage = 4
+	#hull_damage = 4
+	tracking = 0.3
+	power = -640
+	
+	prerequisites = { "tech_SRA_RE_Core_tech" }
+    size_restriction = { SRA_RE_Core_Battleship }
+	component_set = "SRA_RE_Core_weapon_T_Laser"
+	projectile_gfx = "SRA_t_weapon_1_no_windup"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_SRA_RE_Core }
+	resources = {
+		category = ship_components
+	}
+
+}
+#先驱哨卫
+strike_craft_component_template = {
+	key = "SRA_RE_Core_weapon_H"
+	size = LARGE
+	entity = "bomber_entity"
+	power = -70
+
+	count = 1
+	regeneration_per_day = 0.05
+	launch_time = 0.2
+	
+	damage = { min = 128 max = 192 }
+	cooldown = 1
+	range = 120
+	engagement_range = 240
+	accuracy = 1.0
+	tracking = 0.6
+	
+	health = @SRA_ship_part_hull_add_4
+	armor = @SRA_ship_part_hull_add_4
+	shield = @SRA_ship_part_hull_add_4
+	evasion = 1
+	
+	speed = 1500
+	rotation_speed = 0.8
+	acceleration = 0.8
+	
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 3
+	#armor_damage = 3
+	#hull_damage = 3
+	
+	ship_behavior = "bombers_behavior"
+	
+	weapon_type = instant
+	projectile_gfx = "SRA_sc_weapon_0"
+	
+	component_set = "SRA_RE_Core_weapon_H"
+	prerequisites = { "tech_SRA_RE_Core_tech" }
+    size_restriction = { SRA_RE_Core_Battleship }
+	icon = "GFX_SRA_CORE_weapon_H"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft weapon_type_energy weapon_type_SRA_RE_Core }
+	resources = {
+		category = ship_components
+	}
+}
+
+#先驱风暴鱼雷
+weapon_component_template = {
+	key = "SRA_RE_Core_weapon_G"
+	size = torpedo
+	type = instant
+
+	icon = "GFX_SRA_CORE_weapon_G"
+	icon_frame = 1
+	component_set = "SRA_RE_Core_weapon_G"
+	projectile_gfx = "SRA_torpedo_1"
+	tags = { weapon_type_energy weapon_type_explosive weapon_type_SRA_RE_Core }
+
+	damage = { min = 1024 max = 1536 }
+	windup = { min = 0 max =  32 }
+	total_fire_time = 144
+	range = 240.0
+	accuracy = 1.0
+	tracking = 1.0
+	power = -70
+
+	size_damage_factor = 0.1
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+
+	prerequisites = { "tech_SRA_RE_Core_tech" }
+    size_restriction = { SRA_RE_Core_Battleship }
+	resources = {
+		category = ship_components
+	}
+}
+
+#先驱短剑
+weapon_component_template = {
+	type = point_defence
+	key = "SRA_RE_Core_weapon_P"
+	size = point_defence
+
+	damage = { min = 16 max = 24 }
+	windup = {
+		min = 0
+		max = 4
+	}
+	total_fire_time = 8
+	range = 120
+	accuracy = 1.0
+	tracking = 0.8
+	power = -10
+
+	shield_penetration = @SRA_weapon_penetration_3
+	armor_penetration = @SRA_weapon_penetration_3
+	#shield_damage = 1.5
+	#armor_damage = 2
+	#hull_damage = 2
+	
+	icon = "GFX_SRA_CORE_weapon_P"
+	icon_frame = 1
+	
+	prerequisites = { "tech_SRA_RE_Core_tech" }
+    size_restriction = { SRA_RE_Core_Battleship }
+	component_set = "SRA_RE_Core_weapon_P"
+	projectile_gfx = "SRA_pd_weapon_0"
+	tags = { weapon_type_point_defense weapon_type_energy weapon_type_SRA_RE_Core }
+	ai_tags = { weapon_role_point_defense screen }
+	point_defence_targets = { "missile" "strike_craft" }
+	resources = {
+		category = ship_components
+	}
+}
+#灾疫恒星阵列
+weapon_component_template = {
+	key = "SRA_starbase_SRA_RE_Calamitisease_weapon_T"
+	size = large
+	type = instant
+	icon = "GFX_SRA_T1_weapon_T_Laser"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	entity = "invisible_turret_entity"
+	
+	damage = { min = 16384 max = 24576 }
+	windup = { min = 0 max = 32 }
+	total_fire_time = 64
+	range = 320
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	tracking = 1
+	power = -320000
+	injected_modifier = {
+		modifier = {
+			modifier = SRA_T_weapon_supreme_buff
+			days = 10
+		}
+		stack_info = {			#A ship can only be affected by one injected modifier of a certain id. If multiple modifiers have the same ID the one with the highest priority will be applied.
+			id = SRA_T_weapon_supreme_buff
+			priority = 10
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	projectile_gfx = "SRA_t_weapon_1"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive l_slot artillery }
+	ai_tags = { weapon_role_anti_shield gunship artillery }
+	resources = {
+		category = ship_components
+		cost = {
+		}		
+		upkeep = {
+		}
+	}
+}
+weapon_component_template = {
+	type = point_defence
+	key = "SRA_starbase_SRA_RE_Calamitisease_weapon_P"
+	size = point_defence
+	damage = { min = 1536 max = 2304 }
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 320
+	accuracy = 1.0
+	tracking = 1.0
+	power = -320000
+	entity = "invisible_turret_entity"
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	icon = "GFX_SRA_T1_weapon_X_Laser"
+	icon_frame = 1
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	projectile_gfx = "SRA_xl_weapon_1"
+	tags = { weapon_type_point_defense weapon_type_energy weapon_type_kinetic weapon_type_explosive }
+	ai_tags = { weapon_role_point_defense screen }
+	point_defence_targets = { "missile" "strike_craft" }
+
+	ai_weight = {
+		weight = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+}
+#耀红黑星-荒芜驱驰
+weapon_component_template = {
+	key = "SRA_Rokia_dragon_weapon_planet_killer"
+	size = planet_killer
+	type = planet_killer
+
+	icon = "GFX_SRA_T1_weapon_planet_killer"
+	icon_frame = 1
+
+	power = -800000
+	entity = "invisible_turret_entity"
+
+	#use_ship_main_target = yes
+	# can_destroy_stars = yes
+	windup = { min = 15 max = 15 }
+
+	total_fire_time = 5
+
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	hidden = yes
+	planet_destruction_gfx = "god_ray_gfx"
+
+}
+#耀红黑星-残星尽碎
+weapon_component_template = {
+	key = "SRA_Rokia_dragon_weapon_L_Particle_Launcher"
+	size = large
+	type = instant
+	icon = "GFX_SRA_T1_weapon_G"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	entity = "invisible_turret_entity"
+	
+	damage = { min = 16384 max = 24576 }
+	
+	windup = { min = 0 max = 32 }
+	total_fire_time = 64
+	range = 320
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	tracking = 1
+	power = -1000
+	
+	ship_modifier = {
+		component_lifesteal_add = 1
+	}
+	ai_weight = {
+		weight = 0
+	}
+	on_hit = {
+		hidden_effect = {
+			SRA_clear_ship_damage_reduction_mult = {
+				ALSO_LESS_THAN_ZERO = no
+			}
+			add_modifier = {
+				modifier = "SRA_Rokia_dragon_weapon_L_Particle_Launcher_buff"
+				days = 8
+			}
+		}
+		custom_tooltip = SRA_Rokia_dragon_weapon_L_Particle_Launcher_on_hit
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	projectile_gfx = "SRA_torpedo_1"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive l_slot artillery }
+	ai_tags = { weapon_role_anti_shield gunship artillery }
+	resources = {
+		category = ship_components
+		cost = {
+		}		
+		upkeep = {
+		}
+	}
+}
+#耀红黑星-彷徨触痕
+weapon_component_template = {
+	key = "SRA_Rokia_dragon_weapon_L_Laser"
+	size = large
+	type = instant
+	icon = "GFX_SRA_T1_weapon_T_Laser"
+	icon_frame = 1
+	#static_rotation = yes
+	#use_ship_main_target = yes
+	entity = "invisible_turret_entity"
+	
+	damage = { min = 32768 max = 49152 }
+	
+	windup = { min = 0 max = 64 }
+	total_fire_time = 128
+	range = 320
+	accuracy = 1
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	tracking = 1
+	power = -1000
+	
+	target_focus = spread
+	ship_modifier = {
+		component_lifesteal_add = 1
+	}
+	ai_weight = {
+		weight = 0
+	}
+
+	on_hit = {
+		hidden_effect = {
+			SRA_SD_set_terrified = {
+				SRA_SD_Myth_power = 3
+			}
+		}
+		custom_tooltip = SRA_Rokia_dragon_weapon_L_Laser_on_hit
+	}
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	projectile_gfx = "SRA_l_weapon_1"
+	tags = { weapon_type_energy weapon_type_kinetic weapon_type_explosive l_slot artillery }
+	ai_tags = { weapon_role_anti_armor gunship artillery }
+	resources = {
+		category = ship_components
+		cost = {
+		}		
+		upkeep = {
+		}
+	}
+}
+#耀红黑星-晨曦一现
+weapon_component_template = {
+	type = point_defence
+	key = "SRA_Rokia_dragon_weapon_P"
+	size = point_defence
+	damage = { min = 1536 max = 2304 }
+	windup = { min = 0 max = 16 }
+	total_fire_time = 32
+	range = 320
+	accuracy = 1.0
+	tracking = 1.0
+	power = -1000
+	entity = "invisible_turret_entity"
+	on_hit = {
+		hidden_effect = {
+			from = {
+				if = {
+					limit = {
+						NOR = {
+							has_ship_flag = SRA_T4_weapon_G_supreme_buff
+							has_modifier = SRA_Spear_Of_Galaxy_Zenith_nearly_repair
+							has_modifier = SRA_Spear_Of_Galaxy_Zenith_Buff_1
+						}
+					}
+					add_modifier = {
+						modifier = SRA_T4_weapon_G_supreme_buff
+						days = 4
+					}
+					set_timed_ship_flag = {
+						flag = SRA_T4_weapon_G_supreme_buff
+						days = 8
+					}
+				}
+			}
+		}
+		custom_tooltip = SRA_T4_weapon_G_supreme_on_hit
+	}
+	ship_modifier = {
+		component_lifesteal_add = 1
+	}
+	shield_penetration = @SRA_weapon_penetration_7
+	armor_penetration = @SRA_weapon_penetration_7
+	icon = "GFX_SRA_T1_weapon_X_Laser"
+	icon_frame = 1
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	projectile_gfx = "SRA_pd_weapon_1"
+	tags = { weapon_type_point_defense weapon_type_energy weapon_type_kinetic weapon_type_explosive }
+	ai_tags = { weapon_role_point_defense screen }
+	point_defence_targets = { "missile" "strike_craft" }
+
+	ai_weight = {
+		weight = 0
+	}
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+}

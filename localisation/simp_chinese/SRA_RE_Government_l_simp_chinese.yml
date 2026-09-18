@@ -1,0 +1,104 @@
+﻿l_simp_chinese:
+###############################
+ leader_trait_SRA_RE_ruler1:0 "§B最高议长路希维亚§!"
+ leader_trait_SRA_RE_ruler1_desc:0 "§B“她终结了过去，开启了未来。她的传奇将被永世传颂，直到时间的尽头。”§!"
+ leader_trait_SRA_RE_ruler2:0 "§B深渊的智识§!"
+ leader_trait_SRA_RE_ruler2_desc:0 "§B“掌握着诸界焦点中的无限智慧，她洞悉过去与未来，对一切了然于心。”§!"
+ leader_trait_SRA_RE_Hidra_gov:0 "§R希德拉-绝赞摸鱼中§!"
+ leader_trait_SRA_RE_Hidra_gov_desc:0 "§R反正是摸鱼，描述什么的也先摸了好了。§!"
+ leader_trait_SRA_RE_Hidra_sci:0 "§R希德拉-漫步星海§!"
+ leader_trait_SRA_RE_Hidra_sci_desc:0 "§R古老而神秘的存在，在真实帷幕的彼方漫步。她只言片语中流露宝贵的知识，闲庭信步中踏行真理的道途。即便只是随意的消遣与娱乐，她展现出的能力也依然令人叹为观止。§!"
+ leader_trait_SRA_RE_Hidra_adm:0 "§R希德拉-绝赞摸鱼中§!"
+ leader_trait_SRA_RE_Hidra_adm_desc:0 "§R反正是摸鱼，描述什么的也先摸了好了。§!"
+ leader_trait_SRA_RE_Hidra_gen:0 "§R希德拉-绝赞摸鱼中§!"
+ leader_trait_SRA_RE_Hidra_gen_desc:0 "§R反正是摸鱼，描述什么的也先摸了好了。§!"
+ Name_SRA_RE_leader_Rocivia:0 "§B路希维亚§!"
+ Name_SRA_RE_leader_Hidra:0 "§R希德拉§!"
+ SRA_RE_species:0 "深渊之锚点"
+
+
+ MESSAGE_SRA_RE_TALK_TITLE:0 "§B帝国快讯§!"
+
+ MESSAGE_SRA_RE_Rocivia_TITLE:0 "§B路希维亚§!"
+ SRA_RE_Rocivia.2019.desc:0 "这地方基本上只能塞四五十个字，不过鼠标放上去可以显示完整内容。\n\n嘿我试试贴个图进来\n\n\n\n\n\n\n£pc_SRA_chaos_star_sky£\n\n\n\n\n\n\n\n我去还真能"
+
+ MESSAGE_SRA_RE_StellarRegulator_TITLE:0 "§B星规§!"
+
+ SRA_RE_Rocivia_catch_phrase:0 "“骑上银龙的背脊,去吧,前往生命的荒漠;骑上银龙的背脊,去吧,穿过云雨的漩涡——”"
+ SRA_RE_Rocivia_backstory:0 "\n§B路希维亚§!，最高议长，帝国的领导人。据称她在这个文明的前太空时代领导起了一支队伍，并最终征服其他势力统一了整个文明。不过如今她似乎失去了热情，选择把帝国规划交给§Y你§!，自己每天只是花几分钟把你的想法写成能用的方案。\n\n§B星光渺远，闪烁着捏造而成的形象，其后掩盖的仍是冰冷的虚空。§!"
+ job_SRA_RE_Rocivia_job:0 "§B九环至尊星辉魔法使§!"
+ job_SRA_RE_Rocivia_job_desc:0 "至少她是这么说的。\n那么唯物主义魔法使会用面向对象语言写卷轴吗？"
+
+
+ councilor_SRA_RE_minister_of_security:0 "帝国安全总管"
+ councilor_SRA_RE_minister_of_security_female:0 "$councilor_SRA_RE_minister_of_security$"
+ councilor_SRA_RE_minister_of_security_desc:1 "§R此席位只能由 希德拉 就任。§!\n$TITLE$全权负责安全局的工作，下辖多支灵能特工部队与复杂情报网，仅受最高议长的管辖。不过§R希德拉§!似乎并不怎么关心这个岗位，倒是经常去别的地方闲逛。"
+
+
+ SRA_RE_Hidra_catch_phrase:0 "一切始于无际之树海，也将终于混沌深渊中。"
+ SRA_RE_Hidra_backstory:0 "\n§R希德拉§!，帝国安全总局总管，秘密理事会统辖。习惯于擅离职守，总是从容不迫。她盘踞在云巅之峰，俯瞰着芸芸众生，肆意播撒着祝福与诅咒。\n\n§R暗影翻腾，凝聚出徒有其表的外形，其下深藏的仍是无序的深渊。§!"
+ job_SRA_RE_Hidra_job:0 "§R无所事事骗吃骗喝§!"
+ job_SRA_RE_Hidra_job_desc:0 "真的，找了很多理由来摸鱼。\n你不会想看到她活跃起来的样子的。"
+
+
+ SRA_RE_no_title:0 " "
+ SRA_RE_Rocivia:0 "路希维亚"
+ SRA_RE_Hidra:0 "希德拉"
+ SRA_RE_StellarRegulator:0 "星规"
+ SRA_RE_StellarRegulator_Array:0 "星规阵列"
+
+
+ SRA_RE_Government.2.name:0 "幕前准备"
+ SRA_RE_Government.2.desc:0 "你好，墙外的干涉者，你可以在这里选择接下来要参与的 §R剧本§! 。\n滑条在对话框右边，不用谢。\n请确保全程有且仅有你的文明拥有“路希维亚帝国”国民理念，免得出现什么Bug。（本国策AI禁用，请注意回避强制改变国策的事件。）\n§Y确认您已经足够了解您当前使用的Mod合集中的其他Mod，并已阅读过“星规技术”国民理念相关的故事文本，这对你了解故事背景很有帮助。\n注意，首次游玩请尽量避免点击Skip，我可不知道会出什么事，而且你不就是为了剧情而来的嘛。§!\n。"
+ SRA_RE_Government.2.a:0 "陨落之矛"
+ SRA_RE_Government.2.a.custom_tooltip:0 "这个文明曾半步踏入群星之间，却又为同族相残的战乱所困，往昔的盛世毁于一旦。\n所幸，一支势力在一座古老的遗迹中找到了一条可以免于灭亡的道路。\n来自异界的存在降临于这片大地上，终结了一切纷争，让这个文明得以再度着眼于群星。\n如今，这个文明突破了光速的壁垒，进升为星海间的一员。\n然而，没有人知道，这条本不存在的道路，究竟会通往何方。\n\n-与§B路希维亚§!、§R希德拉§!、§B星规§!建立通讯\n-§B路希维亚§!将成为领导人\n-母星上有一艘坠毁的星穹之矛等待发掘\n-历史的尘埃飘落在星海间"
+ SRA_RE_Government.2.b:0 "龙翼之影"
+ SRA_RE_Government.2.b.custom_tooltip:0 "这一文明从上古时代就战栗于一双龙翼的阴影之下，与深渊的呢喃和扭曲的倒影斗争，竭尽全力只图片刻喘息。\n尽管未曾踏遍大地，却仍向着天穹启航。\n如果可以将星辰的力量凝于指尖，能撕破那片阴影吗？\n\n-母星变为 §R树海残枝§! ，一个有着无尽潜能的特殊天体类型。然而，不可捉摸的 §R['concept_SRA_SD_Abyss_Erosion']§! 一直以来都是挥之不去的梦魇。\n-一旦失去了母星的控制权，你的国家就会 §R毁灭§! 。\n-立即使你的所有物种获得['trait:trait_pc_SRA_SD_chaos_star_habitable_preference']。\n-狞桀恣睢的 §R深渊之龙§! 将笼罩在你的文明之上，从古至今，只有屈从才能免于毁灭。\n-§R深渊之龙§!索取§R任何形式的财富§!，特别是最珍贵的那些……§R无论是生灵还是死物§!。\n-彻底臣服于龙影的生杀予夺之下，或是以剑与杖呼唤属于自己的命运。\n\n§Y根本没做§!"
+
+
+ SRA_RE_Government.3.desc:0 "嗯……在本剧本中，我，路希维亚，将成为你国家的领导人，如果你的政体不允许连任或因为其他原因导致领导人发生了改变，你可以在特殊菜单中让我重新就任。\n接下来，你将与我和希德拉一道，带领着这个新兴文明走向星海，面对这片隐藏着无数秘密的银河。\n让我们开始吧。"
+
+ SRA_RE_Government.4.desc:0 "你好，新任的执行官。\n我是路希维亚，最高议会议长，也就是这个国家的最高领导人。"
+ SRA_RE_Government.5.desc:0 "希德拉，帝国安全总局总管，同时也负责统辖秘密理事会。\n你好啊,外来者。"
+ SRA_RE_Government.6.desc:0 "你从32767个候选人中脱颖而出，证明了你是最适合这个位置的人，欢迎来到权力的顶峰。\n你瞧，自我们的文明踏出了迈向星海的第一步，我就感到有必要找一个人来帮忙处理这无穷无尽的事务了。希望你可以不负众望，做出正确的抉择，让这个国家迈向繁荣。"
+ SRA_RE_Government.7.desc:0 "执行官这个岗位类似于最高议长的代理人，兼顾了低调和高权限的特点，你想去哪就能去哪。\n另外，路希给了你充足的权力去规划这个国家,制定它的路线，虽然表面上你只是一个顾问或者参谋，但只要你把你的想法提交给路希，她就会调动相关部门去执行。\n无论你的决定有多么荒唐。"
+ SRA_RE_Government.8.desc:0 "嘛，适度摸鱼有益身心健康。\n而且这次也没什么思路……没有什么特别想走的路线，不如交给你好了。\n嗯……这句话是第几次说了……"
+ SRA_RE_Government.9.desc:0 "每次我们都会这么说吧……\n习惯就好。\n明天早上记得去办公室，你的秘书会来报道，别让她等太久了。"
+
+ SRA_RE_Government.10.desc:0 "当你操纵着这副身躯走进办公室时，你发现你的那位助手正凝望着宽阔的落地窗外的天空。\n意外的是，那个身影你是如此地熟悉。\n但在你说出她的名字之前，她转过了身。\n淡蓝色的长发轻轻飘起，然后垂落。\n她注视着你。\n用一种陌生的眼神。"
+ SRA_RE_Government.11.desc:0 "很高兴能为您效劳，执行官。我是您的秘书和助手，星规阵列，您可以简单一点，就叫我星规吧。"
+ SRA_RE_Government.12.desc:0 "我是来自这个文明所称的“遗迹”——也就是一艘坠毁的星穹之矛中的人工智能。在被唤醒后，我遵循路希维亚议长的命令，为这个文明提供力所能及的帮助。\n不过现在我也就只能做做文书工作啦，我的数据库严重受损，时空相位引擎也完全损坏了，没有外界的供能，我连正常行动都做不到。"
+ SRA_RE_Government.13.desc:0 "但是呢，如果您可以找到其他的星规阵列相关的遗迹，我就可以尝试通过那些遗留下来的水晶恢复一些数据库内容，到时候把船体修好，重新飞起来，乃至修复时空相位引擎，都是有可能的。\n不过我们还是从探索这个银河系开始吧，做事情要一步一步来，不是吗？\n§B你可以在法令和通讯界面联系星规或者我，不用谢。§!"
+ SRA_RE_Government.13.a:0 "来吧，好戏开场了。"
+ SRA_RE_Government.13.b:0 "银河的权柄属于我们。"
+ SRA_RE_Government.13.c:0 "我会让你再度启航。"
+
+##########################字体颜色代码
+#紫色M = { 163 53 238 } M = Magenta. Indicator for "Rare Techs".
+#暗金L = { 195 176 145 } L = Lore text, not relevant game info, just fun to know backstory info.
+#绿色G = { 41 225 38 } G = Green, used for numbers that are positive modifiers.
+#红色R = { 252 86 70 } R = Red, used for numbers that are negative modifier or warnings.
+#深蓝B = { 51 167 255 } B = Blue, used in special cases for text.
+#金黄Y = { 247 252 52 } Y = Yellow, to be used for stuff that is sub optimal or for certain highlights.
+#橙黄H = { 251 170 41 } H = Highlight, Orange in Game.
+#蓝青色C = { 33 232 208 } C = Cyan, Used for Concept Text that generates another tooltip.
+#橙黄K = { 251 170 41 } K = Header for Concepts. Currently identical to H.
+#黄色I = { 247 252 52 } I = Highlights for Concepts. Currently identical to Y.
+#白色T = { 255 255 255 } T = Text, standard for all text, to be used if ALL text needs tweaking.
+#绿青色E = { 135 255 207 } E = Standard green, used with large chunks of texts, such as events and advisor.
+#土黄S = { 228 156 42 } S = Subtitle highlight (light green in this case).
+#白色W = { 255 255 255 } W = White.
+#粉色P = { 225 110 110 } P = Pink, Used for more subtle warnings instead of §R.
+#暗绿V = { 76 138 113 } V = Dark Green, used for event text.
+#灰色g = { 128 128 128 } g = Grey.
+#品红_ = { 255 0 255 } _ Placeholder magenta, used for placeholders.
+
+# Trait Rarity Colors
+#深绿c = { 60 208 146 }
+#翡翠灰v = { 139 174 162 }
+#黄芥末色d = { 255 221 122 }
+
+# Leader Rarity Colors
+#淡紫色r = { 163 130 255 }
+#黄绿色l = { 178 236 104 }
+##########################字体颜色代码

@@ -1,0 +1,349 @@
+namespace = SRA_Start
+
+
+event = {
+	id = SRA_Start.1
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		set_global_flag = has_StellarRegulator_Array_mod
+        set_global_flag = SRA_Crisis_normal
+		create_species = {
+			name = SRA_StellarRegulator
+			plural = SRA_StellarRegulator
+			class = SRA_SR
+			portrait = SRA_01
+			traits = {
+				trait = SRA_trait_SR
+				trait = SRA_trait_mind_network
+				trait = SRA_trait_mind_entity
+				trait = SRA_trait_material_energy_conversion
+				trait = SRA_trait_foldable_structure
+			}
+			effect = {
+				save_global_event_target_as = SRA_StellarRegulator_species
+			}
+		}
+		create_species = {
+			name = SRA_RE_species
+			plural = SRA_StellarRegulator
+			class = SRA_SR
+			portrait = SRA_22
+			traits = {
+				trait = SRA_RE_trait_metabyss
+			}
+			effect = {
+				save_global_event_target_as = SRA_RE_species
+			}
+		}
+		create_species = {
+			name = SRA_Chief_species
+			plural = SRA_Chief_species
+			class = ROBOT
+			portrait = "sd_avi_robot"
+			traits = {
+				trait = SRA_trait_SR
+				trait = SRA_trait_mind_network
+				trait = SRA_trait_material_energy_conversion
+				trait = SRA_trait_foldable_structure
+			}
+			effect = {
+				save_global_event_target_as = SRA_Chief_species
+			}
+		}
+		
+		create_country = {
+			name = "Name_SRA_StellarRegulator_country"
+			species = event_target:SRA_StellarRegulator_species
+			type = faction_SRA_StellarRegulator
+			flag = {
+				icon = {
+					category="SRA_flags"
+					file="SRA_flags_StellarRegulatorArray.dds"
+				}
+				background={
+					category="backgrounds"
+					file="double_triangles.dds"
+				}
+				colors={
+					"blue"
+					"indigo"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = protected_from_queen_storm
+				save_global_event_target_as = SRA_StellarRegulator_country
+				set_country_flag = SRA_StellarRegulator_country	
+				create_ship_design = { design = "NAME_starbase_SRA_1" }
+				add_ship_design = last_created_design
+			}
+		}
+		event_target:global_event_country = {
+			create_leader = {
+				class = official
+				species = event_target:SRA_StellarRegulator_species
+				name = "Name_SRA_leader_StellarRegulator"
+				event_leader = yes
+				gender = female
+				immortal = yes
+				skill = 1
+				set_age = 14
+				skip_background_generation = yes
+				custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+				custom_description = SRA_StellarRegulator_backstory
+				background_ethic = ethic_gestalt_consciousness
+				hide_age = yes
+				traits = {
+				}
+				effect = {
+					remove_all_traits = yes
+					save_global_event_target_as = SRA_portrait_leader
+					set_leader_flag = immune_to_negative_traits
+					change_background_job = SRA_world_machine_drone
+					change_leader_portrait = SRA_portrait
+				}
+			}
+			create_leader = {
+				class = official
+				species = event_target:SRA_StellarRegulator_species
+				name = "Name_SRA_leader_StellarRegulator"
+				event_leader = yes
+				gender = female
+				immortal = yes
+				skill = 1
+				set_age = 14
+				skip_background_generation = yes
+				custom_catch_phrase = SRA_StellarRegulator_catch_phrase
+				custom_description = SRA_StellarRegulator_backstory
+				background_ethic = ethic_gestalt_consciousness
+				hide_age = yes
+				traits = {
+				}
+				effect = {
+					remove_all_traits = yes
+					save_global_event_target_as = SRA_portrait_leader_StellarRegulator
+					set_leader_flag = immune_to_negative_traits
+					change_background_job = SRA_world_machine_drone
+					change_leader_portrait = SRA_portrait
+					set_variable = { which = SRA_portrait_clothes_var value = 001 }
+				}
+			}
+			create_leader = {
+				class = official
+				species = event_target:SRA_RE_species
+				name = "Name_SRA_RE_leader_Rocivia"
+				event_leader = yes
+				gender = female
+				immortal = yes
+				skill = 1
+				set_age = 16
+				skip_background_generation = yes
+				custom_catch_phrase = SRA_RE_Rocivia_catch_phrase
+				custom_description = SRA_RE_Rocivia_backstory
+				background_ethic = ethic_materialist
+				hide_age = yes
+				traits = {
+				}
+				effect = {
+					remove_all_traits = yes
+					save_global_event_target_as = SRA_portrait_leader_Rocivia
+					set_leader_flag = immune_to_negative_traits
+					change_background_job = SRA_RE_Rocivia_job
+					change_leader_portrait = SRA_portrait
+					set_variable = { which = SRA_portrait_clothes_var value = 202 }
+				}
+			}
+		}
+
+		random_playable_country = {
+			limit = { has_origin = origin_SRA_Rokia }
+			country_event = { id = SRA_Chief.1 }
+			country_event = { id = SRA_Rokia_origin.1 }
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Start.2
+	title = SRA_settings.title
+	is_triggered_only = yes
+	picture = GFX_evt_wormhole
+	desc = "SRA_settings.desc"
+	diplomatic = yes
+	custom_gui = SRA_mod_settings_ui
+	custom_gui_option = SRA_mod_settings_option
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		set_variable = { which = SRA_settings_page value = 1 }
+	}
+	option = {
+		name = SRA_settings.exit
+		hidden_effect = {
+		}
+	}
+}
+#自动铸星选项
+carrier_event = {
+	id = SRA_Start.3
+	title = SRA_Start.3.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	trigger = {
+		owner = {
+			has_country_flag = SRA_Automation_on
+			OR = {
+				has_ascension_perk = ap_SRA_world_machine
+				has_global_flag = SRA_AI_world_machine
+			}
+		}
+		NOT = {
+			has_deposit = d_SRA_world_machine
+		}
+	}
+	immediate = {
+	}
+	desc = "SRA_Start.3.desc"
+	option = {
+		name = SRA_Start.3.a
+		select_decision = {
+			name = decision_SRA_world_machine
+		}
+	}
+	option = {
+		name = SRA_Start.3.b
+		hidden_effect = {
+		}
+	}
+}
+
+carrier_event = {
+	id = SRA_Start.4
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		#has_deposit = d_SRA_world_machine
+	}
+	immediate = {
+		multiply_variable = {
+			which = SRA_world_machine_produces
+			value = 2
+		}
+	}
+}
+carrier_event = {
+	id = SRA_Start.5
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		SRA_is_SRA_planet = yes
+		NOT = {
+			has_deposit = d_SRA_world_machine
+		}
+	}
+	immediate = {
+		change_variable = {
+			which = SRA_world_machine_produces
+			value = 1
+		}
+		if = {
+			limit = {
+				is_planet_class = pc_ringworld_habitable_SRA_GZ
+			}
+			carrier_event = {
+				id = SRA_Start.5 days = 3600
+			}
+		}
+	}
+}
+#善良人口主体化
+country_event = {
+	id = SRA_Start.8
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+	}
+	immediate = {
+		give_technology = { tech = tech_gateway_activation message = no }
+		give_technology = { tech = tech_gateway_construction message = no }
+		change_dominant_species = { species = event_target:SRA_Chief_species change_all = yes }
+	}
+}
+
+#把蠢驴民用船设计炸了更新一下（暂用方案
+country_event = {
+	id = SRA_Start.9
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+	}
+	immediate = {
+		every_owned_design = {
+			limit = {
+				OR = {
+					is_ship_size = constructor
+					is_ship_size = colonizer
+					is_ship_size = sponsored_colonizer
+					is_ship_size = lithoid_colonizer
+					is_ship_size = guided_sapience_colonizer
+					is_ship_size = science
+					is_ship_size = transport
+				}
+			}
+			prev = {
+				remove_ship_design = prev
+			}
+		}
+		refresh_auto_generated_ship_designs = yes
+	}
+}
+
+country_event = {
+	id = SRA_Start.21
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+	}
+	immediate = {
+		every_country = {
+			prev = {
+				add_intel = {
+					who = prev
+					amount = 100
+				}
+			}
+		}
+		federation = {
+			add_federation_experience = 20000
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Start.222
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+	}
+	immediate = {
+		capital_scope = {
+			create_army = {
+				name = "NAME_SRA_army_Hidra"
+				owner = prev
+				type = "SRA_army_Hidra"
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,98 @@
+#舰队是否能迁跃
+# Root：准备迁跃的舰队
+can_jump_drive = { #可以跃迁
+OR = {
+	AND = { # UGRC + 香草 vanilla
+		exists = solar_system
+
+		# FW
+		if = {
+			limit = {
+				OR = {
+					has_fleet_flag = FW_flg_flt_JUMP	# FW特殊跃迁flt
+					controller = {
+						OR = {
+							has_country_flag = z_fw_r_celestial_orrey_activited			# 璀璨星图
+							has_country_flag = z_fw_r_cheat_quantum_beacon_activited	# 永恒星炬
+						}
+					}
+				}
+			}
+			always = yes
+		}
+		#_|通用禁行|	多彩
+		else_if = { limit = { solar_system = { has_star_flag = ELF_Singularity_System } }
+			always = no
+		}
+		# 古代帝国
+		else_if = { limit = { solar_system = { has_star_flag = ag_no_jump_out_system } }
+			custom_tooltip = { fail_text = ag_jump_drive_unable_system_tooltip
+				always = no
+			}
+		}
+		# seooc
+		else_if = { limit = { solar_system = { has_star_flag = nep_Scrus_cluster } }
+			custom_tooltip = { fail_text = "CAN_NOT_JUMP_WHEN_IN_SCRUS"
+				always = no
+			}
+		}
+		# 其他
+		else = {
+			always = yes
+		}
+
+		AND = { #排除条件 Exclusions
+			NAND = { #排除条件 Exclusions
+				has_fleet_flag = community_mod_rules_trigger
+				OR = {
+					has_fleet_flag = community_can_jump_drive_true
+					has_fleet_flag = community_can_jump_drive_false
+				}
+			}
+			solar_system = {
+				NAND = { #排除条件 Exclusions
+					has_star_flag = community_mod_rules_trigger
+					OR = {
+						has_star_flag = community_can_jump_drive_true
+						has_star_flag = community_can_jump_drive_false
+					}
+				}
+			}
+			owner = {
+				NAND = {
+					has_country_flag = community_mod_rules_trigger
+					OR = {
+						has_country_flag = community_can_jump_drive_true
+						has_country_flag = community_can_jump_drive_false
+					}
+				}
+			}
+		}
+	}
+	AND = { #国防部 MOD
+		OR = {
+			AND = { #舰队判定 
+				has_fleet_flag = community_mod_rules_trigger
+				AND = {
+					has_fleet_flag = community_can_jump_drive_true
+					NOT = { has_fleet_flag = community_can_jump_drive_false }
+				}
+			}
+			solar_system = { #星系判定
+				has_star_flag = community_mod_rules_trigger
+				AND = {
+					has_star_flag = community_can_jump_drive_true
+					NOT = { has_star_flag = community_can_jump_drive_false }
+				}			
+			}
+			owner = { #国家判定
+				has_country_flag = community_mod_rules_trigger
+				OR = {
+					has_country_flag = community_can_jump_drive_true
+					NOT = { has_country_flag = community_can_jump_drive_false }
+				}
+			}
+		}
+	} 
+}
+}

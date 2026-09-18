@@ -1,0 +1,273 @@
+# called during empire initialization when starting a new game
+# scope: country
+on_monthly_pulse_country = {
+	events = {
+	}
+}
+
+on_game_start  = {
+	events = {
+		SRA_Start.1
+	}	
+}
+
+# Triggers when a Special Project to apply a species modification template has completed.
+# Note that this will trigger once for each combination of planet & original species.
+
+# This = Country
+# From = Species ( Post Modification )
+# on_yearly_pulse_country = {
+# 	events = {
+# 	}
+# }
+on_game_start_country  = {
+	events = {
+		SRA_Start.2
+		SRA_StellarRegulator.1
+		SRA_RE_Start.1
+		SRA_RE_Government.1
+	}	
+}
+
+# Executes after a policy has been changed
+# use last_changed_policy to identify which policy it was
+# This = Country
+on_policy_changed = {
+	events = {
+	}
+}
+
+on_post_government_changed = {
+	events = {
+		SRA_RE_Start.1
+		SRA_StellarRegulator.1
+	}
+}
+
+on_destroy_planet_with_SRA_T4_weapon_planet_killer = {
+	events = {
+		SRA_planet_killer.1			# Destroy star with superweapon
+		SRA_planet_killer.2			# Destroyed a planet.
+		SRA_planet_killer.3			# Destroyed a planet, clean up pops only.
+	}
+}
+
+
+on_destroy_planet_with_SRA_Rokia_dragon_weapon_planet_killer = {
+	events = {
+		crisis.5015 # Menace Objective - Destroy World/Empire
+		SRA_planet_killer.4			# Destroyed a planet, set owner only.
+		origin.3245
+	}
+}
+
+on_destroy_planet_with_SRA_Rokia_dragon_weapon_planet_killer_queued = {
+	events = {
+		fircon.5035 #Solarpunk Planet queued
+	}
+}
+
+on_destroy_planet_with_SRA_Rokia_dragon_weapon_planet_killer_unqueued = {
+}
+
+
+# Fired when system selector confirm.
+# SRA_on_system_selector_confirm = {
+# 	events = {
+# 		SRA_Spear_Of_Galaxy_Zenith.44	# Starkiller destroy stars.
+# 	}
+# }
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		SRA_Spear_Of_Galaxy_Zenith.47
+	}
+}
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		SRA_Rokia.20
+	}
+}
+
+# This = Ship
+# From = Disabler Ship
+on_ship_disabled = {
+	events = {
+		SRA_Spear_Of_Galaxy_Zenith.31	# Disable SRA_Spear_Of_Galaxy_Zenith, decide to destroy it or revive it.
+		SRA_Barrier.100
+		SRA_Megastructures.1
+		SRA_Megastructures.115	# Habitat Orbital Destroyed
+		SRA_Crisis.4001 # Vanilla Arkship Destroyed
+	}
+}
+
+
+# on_entering_system_fleet = {
+# 	events = {
+# 		SRA_Spear_Of_Galaxy_Zenith.41
+# 	}
+# }
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		SRA_SD_event.18
+		# VOP_evt_ModifierUpdated.1
+	}
+}
+
+
+on_monthly_pulse = {
+	events = {
+	}
+}
+
+on_ship_destroyed_victim = {
+	events = {
+	}	
+}
+
+on_ship_destroyed_perp = {
+	events = {
+	}
+}
+
+
+on_custom_diplomacy = {
+	events = {
+		SRA_StellarRegulator.101
+		SRA_RE_StellarRegulator.1
+		SRA_RE_Rocivia.1
+		SRA_RE_Hidra.1
+		SRA_RE_Rocivia.2
+		SRA_RE_Hidra.2
+		SRA_Chief.100
+		SRA_Rokia.100
+		SRA_Rokia_origin.5
+		SRA_SD_event.20
+		SRA_RE_Start.200
+	}
+}
+
+# A planet has begun the colonization process.
+# Scope = Planet
+on_colonized = {
+	events = {
+		SRA_Start.3
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+	}
+}
+on_country_destroyed = {
+	events = {
+	}
+}
+
+on_single_player_save_game_load = {
+	events = {
+	}
+}
+# Triggers country_event for the attacker upon victory
+# (Before controller is switched)
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+# IDENTITIES: attacker is the side that "IsHostile" to
+# the planet controller; e.g. spawned monster armies
+# are attackers, but if they win and the player attempts
+# to retake the planet, the player is the attacker
+on_colony_attackers_win = {
+	events = {
+		SRA_Chief.208
+	}
+}
+
+# Triggers country_event for the defender upon defeat
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_colony_defenders_lose = {
+	events = {
+		SRA_SD_event.23
+	}
+}
+#From = Planet/Starbase/Megastructure scope
+#This = Fleet scope
+on_fleet_enter_orbit = {
+	events = {
+		SRA_RE_End.2010
+	}
+}
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		SRA_RE_End.2011
+	}
+}
+# This = starbase being destroyed (not ship!)
+# From = fleet that destroyed the starbase
+on_starbase_destroyed = {
+	events = {
+	}
+}
+
+# This = starbase being disabled (not ship!)
+# From = fleet that disabled the starbase
+on_starbase_disabled = {
+	events = {
+	}
+}
+
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		SRA_RE_End.2007
+	}
+}
+
+
+
+# Triggers when ground combat starts
+# This = planet
+# From = country attacking
+on_ground_combat_started = {
+	events = {
+		SRA_Barrier.110
+	}
+}
+#An army construction has been completed.
+# This = Planet
+# From = Army
+on_army_recruited = {
+	events = {
+	}
+}
+
+on_SRA_science_ship_scripted_action = {
+	events = {
+		SRA_StellarRegulator.10221
+	}
+}
+on_SRA_ship_auto_attack_planet = {
+	events = {
+		SRA_StellarRegulator.10222
+	}
+}

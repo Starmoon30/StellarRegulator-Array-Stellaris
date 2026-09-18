@@ -1,0 +1,107 @@
+resolution_SRA_RE_Crisis = {
+	icon = "GFX_resolution_cosmic_storms_stances"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = 100
+		}
+	}
+	target = no
+
+	modifier = {
+	}
+
+	effect = {
+		custom_tooltip = resolution_SRA_RE_Crisis_tooltip
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_global_flag = resolution_with_breach_effect_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = 360 }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = 360 }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_global_flag = SRA_RE_Crisis_start
+		NOT = { has_global_flag = SRA_RE_Crisis_end }
+		NOT = { is_active_resolution = "resolution_SRA_RE_Crisis" }
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOT = { is_active_resolution = "resolution_SRA_RE_Crisis" }
+		}
+	}
+
+	active = { # Resolution only in effect while this trigger is met
+		NOT = { has_global_flag = SRA_RE_Crisis_end }
+	}
+
+	breach = {
+		NOT = { has_country_flag = constitutional_immunity }
+		always = yes
+	}
+
+	ai_weight = {
+		base = 7
+	}
+}
+
+resolution_repeal_SRA_RE_Crisis = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = 100
+		}
+	}
+	target = no
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_repeal_SRA_RE_Crisis_effect_success
+		hidden_effect = {
+			cancel_resolution = "resolution_SRA_RE_Crisis"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_ecology_repeal days = 360 }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_ecology_repeal days = 360 }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_SRA_RE_Crisis"
+	}
+
+	ai_weight = {
+		base = 4
+
+	}
+}

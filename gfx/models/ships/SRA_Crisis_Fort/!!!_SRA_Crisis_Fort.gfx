@@ -1,0 +1,130 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "SRA_ancient_anchor_station_1_mesh"
+		file = "gfx/models/ships/SRA_Crisis_Fort/SRA_ancient_anchor_station.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle" type = "SRA_ancient_anchor_station_idle_animation" }
+		animation = { id = "opening" type = "SRA_ancient_anchor_station_opening_animation" }
+		animation = { id = "opened" type = "SRA_ancient_anchor_station_opened_animation" }
+		animation = { id = "closing" type = "SRA_ancient_anchor_station_closing_animation" }
+		animation = { id = "idledeath1" type = "SRA_ancient_anchor_station_idledeath1_animation" }
+		animation = { id = "idledeath2" type = "SRA_ancient_anchor_station_idledeath2_animation" }
+		animation = { id = "combatdeath1" type = "SRA_ancient_anchor_station_combatdeath1_animation" }
+		animation = { id = "combatdeath2" type = "SRA_ancient_anchor_station_combatdeath2_animation" }
+
+		meshsettings = {
+			name = "PillarArmLeftShape"
+			index = 0
+			texture_diffuse = "SRA_ancient_anchor_station_diffuse.dds"
+			texture_normal = "SRA_ancient_anchor_station_normal.dds"
+			texture_specular = "SRA_ancient_anchor_station_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	###### SRA_Crisis_Fort
+	pdxmesh = {
+		name = "SRA_ancient_01_citadel_frame_mesh"
+		file = "gfx/models/ships/SRA_Crisis_Fort/SRA_ancient_01_citadel_frame.mesh"
+		scale = 7.5
+		animation = { id = "idle" 			type = "SRA_ancient_01_citadel_frame_idle_animation" }
+		meshsettings = {
+			name = "ship_hull1Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_habitat_plate_diffuse.dds"
+			texture_normal = "SRA_ancient_01_habitat_plate_normal.dds"
+			texture_specular = "SRA_ancient_01_habitat_plate_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ship_hull2Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_habitat_plate_diffuse.dds"
+			texture_normal = "SRA_ancient_01_habitat_plate_normal.dds"
+			texture_specular = "SRA_ancient_01_habitat_plate_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ship_hull3Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_habitat_plate_diffuse.dds"
+			texture_normal = "SRA_ancient_01_habitat_plate_normal.dds"
+			texture_specular = "SRA_ancient_01_habitat_plate_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ship_hull4Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_habitat_plate_diffuse.dds"
+			texture_normal = "SRA_ancient_01_habitat_plate_normal.dds"
+			texture_specular = "SRA_ancient_01_habitat_plate_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ship_hull5Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_habitat_plate_diffuse.dds"
+			texture_normal = "SRA_ancient_01_habitat_plate_normal.dds"
+			texture_specular = "SRA_ancient_01_habitat_plate_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ship_hull6Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_habitat_plate_diffuse.dds"
+			texture_normal = "SRA_ancient_01_habitat_plate_normal.dds"
+			texture_specular = "SRA_ancient_01_habitat_plate_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "SRA_ancient_01_citadel_mesh"
+		file = "gfx/models/ships/SRA_Crisis_Fort/SRA_ancient_01_citadel.mesh"
+		scale = 7.5
+		
+		animation = { id = "idle" 			type = "SRA_ancient_01_citadel_idle_animation" }
+
+		meshsettings = {
+			name = "ring_topShape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_starbase_ring_pillar_diffuse.dds"
+			texture_normal = "SRA_ancient_01_starbase_ring_pillar_normal.dds"
+			texture_specular = "SRA_ancient_01_starbase_ring_pillar_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "pillar_top_1Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_starbase_pillar_diffuse.dds"
+			texture_normal = "SRA_ancient_01_starbase_pillar_normal.dds"
+			texture_specular = "SRA_ancient_01_starbase_pillar_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ring_largeShape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_starbase_ring_arm_diffuse.dds"
+			texture_normal = "SRA_ancient_01_starbase_ring_arm_normal.dds"
+			texture_specular = "SRA_ancient_01_starbase_ring_arm_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "arm_1Shape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_starbase_arm_diffuse.dds"
+			texture_normal = "SRA_ancient_01_starbase_arm_normal.dds"
+			texture_specular = "SRA_ancient_01_starbase_arm_specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "sphereShape"
+			index = 0
+			texture_diffuse = "SRA_ancient_01_starbase_sphere_diffuse.dds"
+			texture_normal = "SRA_ancient_01_starbase_sphere_normal.dds"
+			texture_specular = "SRA_ancient_01_starbase_sphere_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -1,0 +1,1850 @@
+namespace = SRA_Rokia
+
+#吞噬
+country_event = {
+	id = SRA_Rokia.20
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		From = {
+			has_country_flag = SRA_chaos_ascension_ship
+		}
+	}
+	immediate = {
+		From = {
+			change_variable = {
+				which = SRA_chaos_ascension_ship_count
+				value = 64
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Rokia.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		set_global_flag = created_SRA_Rokia
+		set_country_flag = has_SRA_Rokia_country
+		create_country = {
+			name = "Name_SRA_Rokia_1"
+			type = "faction_SRA_Rokia"
+			flag = {
+				icon = {
+					category="SRA_flags"
+					file="SRA_flags_Rokia_2.dds"
+				}
+				background={
+					category="backgrounds"
+					file="00_solid.dds"
+				}
+				colors={
+					"black"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			name_list = SRA_Rocivia_Empire
+			species = event_target:SRA_Chief_species
+			effect = {
+				create_ship_design = { design = "NAME_starbase_SRA_chaos_1" }
+				set_country_flag = protected_from_queen_storm
+				room_name_override = "SRA_Chaos_room"
+				SRA_enable_crisis_country_orbital_bombardment = yes
+				save_global_event_target_as = SRA_Rokia_country
+				set_country_flag = SRA_Rokia_country
+				establish_communications_no_message = root
+				create_SRA_Rokia_2_ruler = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.100
+	title = SRA_Rokia_1
+	inline_script = "events/SRA_Rokia_talk"
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		from = { 
+			OR = {
+				is_country_type = faction_SRA_Rokia
+				is_same_value = ROOT
+			}
+		}
+		has_country_flag = has_SRA_Rokia_country
+	}
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		SRA_Rokia_talk_random = yes
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = SRA_Rokia_engaged
+	}
+
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Rokia_engaged
+		}
+	}
+
+	#下达指令
+	option = {
+		name = SRA_Rokia.100.a
+		trigger = {
+		}
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.200
+			}
+		}
+	}
+	#闲聊
+	option = {
+		name = SRA_Rokia.100.b
+		trigger = {
+		}
+		hidden_effect = {
+			SRA_Rokia_talk_random = yes
+			country_event = { id = SRA_Rokia.301 }
+		}
+	}
+	option = {
+		name = SRA_RE_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = SRA_Rokia_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#下达指令
+country_event = {
+	id = SRA_Rokia.200
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.200.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = SRA_Rokia_engaged
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Rokia_engaged
+		}
+	}
+	#重新部署耀红黑星
+	option = {
+		name = SRA_Rokia.200.a
+		trigger = {
+		}
+		hidden_effect = {
+			create_SRA_Rokia_1_scientist = yes
+		}
+	}
+	option = {
+		name = SRA_Rokia_talk_return4
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Rokia.100
+			}
+		}
+	}
+	option = {
+		name = SRA_RE_StellarRegulator_talk_exit1
+		hidden_effect = {
+			remove_country_flag = SRA_Rokia_engaged
+		}
+		default_hide_option = yes
+	}
+}
+#闲聊
+country_event = {
+	id = SRA_Rokia.301
+	title = SRA_Rokia_1
+
+	inline_script = "events/SRA_Rokia_talk"
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		set_country_flag = SRA_Rokia_engaged
+	}
+	after = {
+		hidden_effect = { 
+			remove_country_flag = SRA_Rokia_engaged
+		}
+	}
+	option = {
+		name = SRA_Rokia.100.b
+		hidden_effect = {
+			SRA_Rokia_talk_random = yes
+			country_event = { id = SRA_Rokia.301 }
+		}
+	}
+	option = {
+		name = SRA_Rokia_talk_return4
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Rokia.100
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia_talk_exit1
+	}
+}
+
+
+
+country_event = {
+	id = SRA_Rokia.8000
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8000.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = origin_SRA_Rokia_country
+				}
+			}
+			event_target:SRA_portrait_leader_StellarRegulator = {
+				set_variable = { which = SRA_portrait_clothes_var value = 106 }
+			}
+			create_message = {
+				type = MESSAGE_SRA_RE_StellarRegulator
+				localization =  SRA_Rokia.8000.message
+				days = @toast_message_days
+				target = event_target:SRA_portrait_leader_StellarRegulator
+				variable = {
+					 type = name
+					 localization = SRA_RE_Rocivia
+					scope = event_target:SRA_portrait_leader_StellarRegulator
+				}
+				variable = {
+					 key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia.8000.a
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = origin_SRA_Rokia_country
+					}
+				}
+				country_event = {
+					id = SRA_Chief.600 days = 1800
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia.8000.b
+		custom_tooltip = SRA_Rokia.8000.b.tooltip
+		hidden_effect = { 
+			set_country_flag = SRA_chaos_ascension_start
+			country_event = {
+				id = SRA_Rokia.8001 days = 360
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Rokia.8001
+	title = SRA_Rokia.8001.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "SRA_Chaos_room"
+	}
+	desc = "SRA_Rokia.8001.desc"
+	trigger = {
+	}
+	option = {
+		name = SRA_Rokia.8001.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.8002 days = 360
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.8002
+	title = SRA_Rokia.8002.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "SRA_Chaos_room"
+	}
+	desc = "SRA_Rokia.8002.desc"
+	trigger = {
+	}
+	option = {
+		name = SRA_Rokia.8002.a
+		hidden_effect = {
+			begin_event_chain = {
+				event_chain = "SRA_chaos_ascension_chain"
+				target = ROOT
+			}
+			country_event = {
+				id = SRA_Rokia.8003 days = 30
+			}
+			declare_crisis_effect = yes
+			room_name_override = "SRA_Chaos_room"
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.8003
+	title = SRA_Rokia.8003.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "SRA_Chaos_room"
+	}
+	desc = "SRA_Rokia.8003.desc"
+	trigger = {
+	}
+	immediate = {
+		create_ship_design = { design = "NAME_starbase_SRA_chaos_1" }
+		add_ship_design = last_created_design
+		capital_scope = {
+			solar_system = {
+				set_star_flag = SRA_chaos_star
+				destroy_star_system = yes
+				create_starbase = {
+					size = starbase_SRA_chaos_1
+					owner = ROOT
+					#module = <starbase_module>
+					#building = <starbase_building>
+					effect = {
+						set_ship_construction_type = starbase_shipyard
+					}
+				}
+				last_created_fleet = {
+					set_cloaking_active = yes
+					set_event_locked = yes
+				}
+				every_system_planet = {
+					if = {
+						limit = { is_primary_star = yes }
+						set_planet_size = 30
+						change_pc = pc_SRA_chaos_star_habitable
+						set_planet_entity = { entity = SRA_chaos_star_entity }
+						set_owner = root
+						create_pop_group = {
+							species = root.owner_main_species
+							size = 2000
+						}
+						#remove_all_districts = yes
+						remove_all_buildings = yes
+						add_building = building_SRA_world_machine_chaos
+						set_capital = yes
+					}
+					else = {
+						set_planet_size = 1
+						change_pc = pc_black_hole
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia.8003.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.8004 days = 30
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = origin_SRA_Rokia_country
+					}
+				}
+				country_event = {
+					id = SRA_Rokia.80031
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Rokia.80031
+	title = SRA_RE_Rocivia
+	desc = SRA_Rokia.80031.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 26 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	
+	after = {
+		hidden_effect = { 
+			event_target:SRA_RE_Rocivia_country = {
+				destroy_country = yes
+			}
+			every_owned_leader = {
+				limit = {
+					has_trait = leader_trait_SRA_RE_ruler1
+				}
+				kill_leader = { show_notification = no fire = yes }
+			}
+		}
+	}
+
+	option = {
+		name = SRA_Rokia.80031.a
+	}
+	option = {
+		name = SRA_Rokia.80031.b
+	}
+}
+country_event = {
+	id = SRA_Rokia.8008
+	title = SRA_Rokia.8008.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "SRA_Chaos_room"
+	}
+	desc = "SRA_Rokia.8008.desc"
+	trigger = {
+		NOT = {
+			has_country_flag = SRA_chaos_ascension_end
+		}
+	}
+	immediate = {
+		country_event = {
+			id = SRA_Rokia.8008 days = 360
+		}
+		create_fleet = {
+			name = "NAME_SRA_chaos_Ship"
+			effect = {
+				set_owner = root
+				while = { count = 64 create_ship = { design = "NAME_SRA_chaos_Ship" } }				
+				set_location = {
+					target = root.capital_scope
+					distance = 0
+					angle = random
+				}
+				set_fleet_stance = aggressive
+				set_fleet_bombardment_stance = SRA_doom1
+			}
+		}
+		if = {
+			limit = { has_country_flag = SRA_chaos_ascension_leader }
+			every_owned_leader = {
+				limit = {
+					NOT = {
+						is_councilor = yes
+					}
+				}
+				kill_leader = { show_notification = yes fire = yes }
+				root = {
+					add_event_chain_counter = {
+						event_chain = "SRA_chaos_ascension_chain"
+						counter = "SRA_chaos_ascension_leader"
+						amount = 1
+					}
+				}
+			}
+			every_pool_leader = {
+				kill_leader = { show_notification = yes fire = yes }
+			}
+		}
+		if = {
+			limit = { has_country_flag = SRA_chaos_ascension_ship }
+			every_owned_ship = {
+				limit = {
+					NOR = {
+						is_ship_size = SRA_chaos_Ship
+						is_ship_size = SRA_Rokia_dragon_Ship
+						is_ship_class = shipclass_starbase
+					}
+				}
+				destroy_ship = this
+				root = {
+					add_event_chain_counter = {
+						event_chain = "SRA_chaos_ascension_chain"
+						counter = "SRA_chaos_ascension_ship"
+						amount = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = SRA_chaos_ascension_pop }
+			every_owned_planet = {
+				limit = {
+					NOT = {
+						is_planet_class = pc_SRA_chaos_star_habitable
+					}
+				}
+				while = {
+					limit = {
+						sapient_pop_amount > 1000
+					}
+					random_owned_pop_group = {
+						kill_single_pop = yes
+						root = {
+							add_event_chain_counter = {
+								event_chain = "SRA_chaos_ascension_chain"
+								counter = "SRA_chaos_ascension_pop"
+								amount = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia.8008.a
+	}
+}
+
+country_event = {
+	id = SRA_Rokia.8004
+	title = SRA_Rokia.8004.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "SRA_Chaos_room"
+	}
+	desc = "SRA_Rokia.8004.desc"
+	trigger = {
+	}
+	immediate = {
+		set_country_flag = SRA_chaos_ascension_leader
+		add_modifier = { modifier = SRA_Rokia_8004_Buff days = -1 }
+	}
+	option = {
+		name = SRA_Rokia.8004.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.8008
+			}
+			country_event = {
+				id = SRA_Rokia.8005 days = 1800
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = origin_SRA_Rokia_country
+					}
+				}
+				country_event = {
+					id = SRA_Rokia.80041 days = 5
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.80041
+	title = SRA_RE_Hidra
+	desc = SRA_Rokia.80041.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 36 }
+		set_variable = { which = SRA_diplomacy_bg value = 3 }
+	}
+	
+	option = {
+		name = SRA_Rokia.80041.a
+	}
+	option = {
+		name = SRA_Rokia.80041.b
+	}
+}
+country_event = {
+	id = SRA_Rokia.8005
+	title = SRA_Rokia.8005.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "SRA_Chaos_room"
+	}
+	desc = "SRA_Rokia.8005.desc"
+	trigger = {
+	}
+	immediate = {
+		set_country_flag = SRA_chaos_ascension_ship
+		add_modifier = { modifier = SRA_Rokia_8005_Buff days = -1 }
+		country_event = {
+			id = SRA_Rokia.21 days = 360
+		}
+	}
+	option = {
+		name = SRA_Rokia.8005.a
+		hidden_effect = {
+			set_country_flag = has_SRA_Spear_Of_Galaxy_Zenith
+			random_situation = {
+				limit = {
+					is_situation_type = SRA_SOGZ_main_situation
+				}
+				destroy_situation = this
+			}
+			country_event = {
+				id = SRA_Rokia.8006 days = 1800
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = origin_SRA_Rokia_country
+					}
+				}
+				country_event = {
+					id = SRA_Rokia.80051
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.80051
+	title = SRA_RE_StellarRegulator
+	desc = SRA_Rokia.80051.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 16 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	
+	after = {
+		hidden_effect = { 
+			event_target:SRA_RE_StellarRegulator_country = {
+				destroy_country = yes
+			}
+			every_owned_ship = {
+				limit = {
+					SRA_is_SOGZ_ship_size = yes
+				}
+				destroy_ship = this
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia.80051.a
+	}
+	option = {
+		name = SRA_Rokia.80051.b
+	}
+}
+country_event = {
+	id = SRA_Rokia.8006
+	title = SRA_Rokia.8006.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "SRA_Chaos_room"
+	}
+	desc = "SRA_Rokia.8006.desc"
+	trigger = {
+	}
+	immediate = {
+		set_country_flag = SRA_chaos_ascension_pop
+		add_modifier = { modifier = SRA_Rokia_8006_Buff days = -1 }
+		random_owned_planet = {
+			limit = {
+				any_owned_pop_group = {
+					is_robot_pop_group = yes
+				}
+			}
+			carrier_event = { id = syndaw.1020 days = 30 }
+		}
+	}
+	option = {
+		name = SRA_Rokia.8006.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.8007 days = 3600
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = SRA_Rokia.8007
+	title = SRA_Rokia.8007.name
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes	
+	picture_event_data = {
+		room = "crisis_room"
+	}
+	desc = "SRA_Rokia.8007.desc"
+	trigger = {
+	}
+	immediate = {
+		set_country_flag = SRA_chaos_ascension_end
+		remove_modifier = SRA_Rokia_8004_Buff
+		remove_modifier = SRA_Rokia_8005_Buff
+		remove_modifier = SRA_Rokia_8006_Buff
+		add_modifier = { modifier = SRA_Rokia_8007_Buff days = -1 }
+		every_system_within_border = {
+			limit = {
+				NOT = {
+					has_star_flag = SRA_chaos_star
+				}
+			}
+			root = {
+				add_event_chain_counter = {
+					event_chain = "SRA_chaos_ascension_chain"
+					counter = "SRA_chaos_ascension_system"
+					amount = 1
+				}
+			}
+			set_star_flag = SRA_chaos_star
+			destroy_star_system = yes
+			create_starbase = {
+				size = starbase_SRA_chaos_1
+				owner = ROOT
+				#module = <starbase_module>
+				#building = <starbase_building>
+				effect = {
+					set_ship_construction_type = starbase_shipyard
+				}
+			}
+			every_system_planet = {
+				if = {
+					limit = { is_primary_star = yes }
+					set_planet_size = 30
+					change_pc = pc_SRA_chaos_star
+					create_fleet = {
+						name = "NAME_SRA_chaos_Ship"
+						effect = {
+							set_owner = root
+							while = { count = 64 create_ship = { design = "NAME_SRA_chaos_Ship" } }				
+							set_location = {
+								target = prev
+								distance = 0
+								angle = random
+							}
+							set_fleet_stance = aggressive
+						}
+					}
+				}
+				else = {
+					set_planet_size = 1
+					change_pc = pc_black_hole
+				}
+			}
+			
+		create_fleet = {
+			name = "NAME_SRA_chaos_Ship"
+			effect = {
+				set_owner = root
+				while = { count = 64 create_ship = { design = "NAME_SRA_chaos_Ship" } }				
+				set_location = {
+					target = root.capital_scope
+					distance = 0
+					angle = random
+				}
+				set_fleet_stance = aggressive
+				set_fleet_bombardment_stance = SRA_doom1
+			}
+		}
+		}
+		every_owned_starbase = {
+			fleet = {
+				set_cloaking_active = yes
+				set_event_locked = yes
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia.8007.a
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.8010 days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SRA_Rokia.8010
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8010.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.19
+			}
+		}
+		activate_fog_machine = SRA_Chaos_galaxy_map
+		#fog_machine_auto_tracking = yes
+	}
+	option = {
+		name = SRA_Rokia.8010.a
+		custom_tooltip = SRA_Rokia.8010.a.tooltip
+		trigger = {
+		}
+		hidden_effect = {
+			create_SRA_Rokia_2_ruler = yes
+		}
+		event_target:SRA_Rokia_country = {
+			win = yes
+		}
+	}
+	option = {
+		name = SRA_Rokia.8010.b
+		custom_tooltip = SRA_Rokia.8010.b.tooltip
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Rokia.8011
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.8011
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8011.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 43 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = SRA_Rokia.8011.a
+		hidden_effect = { 
+			country_event = {
+				id = SRA_Rokia.8012
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia.8011.b
+		custom_tooltip = SRA_Rokia.8011.b.tooltip
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.8013
+			}
+		}
+	}
+	option = {
+		name = SRA_Rokia.8011.c
+		hidden_effect = {
+			country_event = {
+				id = SRA_Rokia.8014
+			}
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.8012
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8012.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 47 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = SRA_Rokia.8012.a
+		custom_tooltip = SRA_Rokia.8012.a.tooltip
+		trigger = {
+		}
+		hidden_effect = {
+			every_owned_leader = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			every_owned_starbase = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			every_owned_fleet = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			every_owned_planet = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			every_owned_megastructure = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			destroy_country = yes
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.8013
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8013.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 47 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+		create_SRA_Rokia_2_ruler = yes
+	}
+	option = {
+		name = SRA_Rokia.8013.a
+		trigger = {
+		}
+		hidden_effect = {
+			win = yes
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.8014
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8014.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8015 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8015
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8015.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8016 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8016
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8016.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8017 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8017
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8017.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8018 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8018
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8018.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8019 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8019
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8019.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8020 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8020
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8020.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8021 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8021
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8021.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8022 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8022
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8022.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8023 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8023
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8023.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8024 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8024
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8024.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8025 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8025
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8025.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8026 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8026
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8026.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8027 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8027
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8027.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8028 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8028
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8028.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8029 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8029
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8029.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8030 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8030
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8030.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8031 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8031
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8031.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8032 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8032
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8032.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8033 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8033
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8033.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8034 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8034
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8034.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8035 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8035
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8035.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8036 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8036
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8036.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8037 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8037
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8037.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 45 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_continue"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+	}
+	option = {
+		name = "SRA_skip"
+		hidden_effect = { country_event = { id = SRA_Rokia.8038 }}
+		default_hide_option = yes
+	}
+}
+country_event = {
+	id = SRA_Rokia.8038
+	title = SRA_Rokia_1
+	desc = SRA_Rokia.8038.desc
+	custom_gui = SRA_event_diplomacy_window
+	custom_gui_option = SRA_event_diplomacy_option
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	immediate = {
+		set_variable = { which = SRA_diplomacy_SRA_portrait value = 42 }
+		set_variable = { which = SRA_diplomacy_bg value = 4 }
+	}
+	option = {
+		name = "SRA_Rokia.8038.a"
+		custom_tooltip = "SRA_Rokia.8038.a.tooltip" 
+		hidden_effect = {
+			every_owned_leader = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			every_owned_starbase = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			every_owned_fleet = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			every_owned_planet = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			every_owned_megastructure = {
+				set_owner = event_target:SRA_Rokia_country
+			}
+			destroy_country = yes
+		}
+	}
+}
+
+
+
+
+
+
+country_event = {
+	id = SRA_Rokia.8096
+	title = SRA_RE_no_title
+	desc = SRA_RE_no_title
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_alter_event_diplomacy_window
+	custom_gui_option = SRA_alter_event_diplomacy_option
+	immediate = {
+	}
+	option = {
+		name = SRA_Rokia.8096.a
+		custom_tooltip = SRA_Rokia.8096.a.tooltip
+		trigger = {
+		}
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = SRA_Rokia.8099
+	title = SRA_RE_no_title
+	desc = SRA_RE_no_title
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	custom_gui = SRA_nothing_event_diplomacy_window
+	custom_gui_option = SRA_nothing_event_diplomacy_option
+	immediate = {
+	}
+	option = {
+		name = SRA_RE_no_title
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = SRA_can_do_nothing
+				}
+				country_event = {
+					id = SRA_Rokia.8099
+				}
+				custom_tooltip = SRA_Rokia.8099.b.tooltip
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SRA_lost_capital
+				}
+				country_event = {
+					id = SRA_Rokia.8099
+				}
+				custom_tooltip = SRA_Rokia.8099.c.tooltip
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SRA_SD_Story_event.3.b_flag
+				}
+				country_event = {
+					id = SRA_Rokia.8099
+				}
+				custom_tooltip = SRA_SD_Story_event.3.b_flag
+			}
+			else = {
+				custom_tooltip = SRA_Rokia.8099.a.tooltip
+			}
+		}
+	}
+}
+carrier_event = {
+	id = SRA_Rokia.8199
+	title = SRA_RE_no_title
+	desc = SRA_RE_no_title
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	location = this
+	custom_gui = SRA_nothing_event_diplomacy_window
+	custom_gui_option = SRA_nothing_event_diplomacy_option
+	immediate = {
+	}
+	option = {
+		name = SRA_RE_no_title
+		hidden_effect = {
+			if = {
+				limit = {
+					owner = {
+						has_country_flag = SRA_can_do_nothing
+					}
+				}
+				carrier_event = {
+					id = SRA_Rokia.8199
+				}
+				custom_tooltip = SRA_Rokia.8099.b.tooltip
+			}
+			else_if = {
+				limit = {
+					owner = {
+						has_country_flag = SRA_lost_capital
+					}
+				}
+				carrier_event = {
+					id = SRA_Rokia.8199
+				}
+				custom_tooltip = SRA_Rokia.8099.c.tooltip
+			}
+			else = {
+				custom_tooltip = SRA_Rokia.8099.a.tooltip
+			}
+		}
+	}
+}
+#扩散
+country_event = {
+	id = SRA_Rokia.19
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+		every_system_within_border = {
+			if = {
+				limit = {
+					any_neighbor_system = {
+						NOR = {
+							has_star_flag = SRA_chaos_star
+							owner = { is_same_value = root }
+						}
+					}
+				}
+				random_neighbor_system = {
+					limit = {
+						NOR = {
+							has_star_flag = SRA_chaos_star
+							owner = { is_same_value = root }
+						}
+					}
+					root = {
+						add_event_chain_counter = {
+							event_chain = "SRA_chaos_ascension_chain"
+							counter = "SRA_chaos_ascension_system"
+							amount = 1
+						}
+					}
+					set_star_flag = SRA_chaos_star
+					destroy_star_system = yes
+					create_starbase = {
+						size = starbase_SRA_chaos_1
+						owner = ROOT
+						#module = <starbase_module>
+						#building = <starbase_building>
+						effect = {
+							set_ship_construction_type = starbase_shipyard
+						}
+					}
+					last_created_fleet = {
+						set_cloaking_active = yes
+						set_event_locked = yes
+					}
+					every_system_planet = {
+						if = {
+							limit = { is_primary_star = yes }
+							set_planet_size = 30
+							change_pc = pc_SRA_chaos_star
+							create_fleet = {
+								name = "NAME_SRA_chaos_Ship"
+								effect = {
+									set_owner = root
+									while = { count = 64 create_ship = { design = "NAME_SRA_chaos_Ship" } }				
+									set_location = {
+										target = prev
+										distance = 0
+										angle = random
+									}
+									set_fleet_stance = aggressive
+									set_fleet_bombardment_stance = SRA_doom1
+								}
+							}
+						}
+						else = {
+							set_planet_size = 1
+							change_pc = pc_black_hole
+						}
+					}
+				}
+			}
+			else = {
+				random_system = {
+					limit = {
+						NOR = {
+							has_star_flag = SRA_chaos_star
+							owner = { is_same_value = root }
+						}
+					}
+					root = {
+						add_event_chain_counter = {
+							event_chain = "SRA_chaos_ascension_chain"
+							counter = "SRA_chaos_ascension_system"
+							amount = 1
+						}
+					}
+					set_star_flag = SRA_chaos_star
+					destroy_star_system = yes
+					create_starbase = {
+						size = starbase_SRA_chaos_1
+						owner = ROOT
+						#module = <starbase_module>
+						#building = <starbase_building>
+						effect = {
+							set_ship_construction_type = starbase_shipyard
+						}
+					}
+					last_created_fleet = {
+						set_cloaking_active = yes
+						set_event_locked = yes
+					}
+					every_system_planet = {
+						if = {
+							limit = { is_primary_star = yes }
+							set_planet_size = 30
+							change_pc = pc_SRA_chaos_star
+							create_fleet = {
+								name = "NAME_SRA_chaos_Ship"
+								effect = {
+									set_owner = root
+									while = { count = 64 create_ship = { design = "NAME_SRA_chaos_Ship" } }				
+									set_location = {
+										target = prev
+										distance = 0
+										angle = random
+									}
+									set_fleet_stance = aggressive
+									set_fleet_bombardment_stance = SRA_doom1
+								}
+							}
+						}
+						else = {
+							set_planet_size = 1
+							change_pc = pc_black_hole
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_system = {
+					NOR = {
+						has_star_flag = SRA_chaos_star
+						owner = { is_same_value = root }
+					}
+				}
+			}
+			country_event = {
+				id = SRA_Rokia.19 days = 720
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = SRA_Rokia.21
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = SRA_chaos_ascension_ship
+	}
+	immediate = {
+		create_fleet = {
+			name = "NAME_SRA_chaos_Ship"
+			effect = {
+				set_owner = prev
+				while = { count = prev.SRA_chaos_ascension_ship_count create_ship = { design = "NAME_SRA_chaos_Ship" } }				
+				set_location = {
+					target = prev.capital_scope
+					distance = 0
+					angle = random
+				}
+				set_fleet_stance = aggressive
+				set_fleet_bombardment_stance = SRA_doom1
+			}
+		}
+		set_variable = {
+			which = SRA_chaos_ascension_ship_count
+			value = 32
+		}
+		country_event = {
+			id = SRA_Rokia.21 days = 360
+		}
+	}
+}
+

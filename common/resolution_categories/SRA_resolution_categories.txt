@@ -1,0 +1,12 @@
+# Resolution Categories for Cosmic Storms DLC.
+
+### Stances on Cosmic Storms
+resolution_category_SRA_RE_Crisis = {
+	group = environment_technology
+	icon = "GFX_resolution_cosmic_storms_stances"
+
+	resolution_types = {
+		"resolution_SRA_RE_Crisis"
+		"resolution_repeal_SRA_RE_Crisis"
+	}
+}

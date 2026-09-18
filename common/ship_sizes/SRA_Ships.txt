@@ -1,0 +1,1681 @@
+SRA_Cruiser = {
+	formation_priority = 256
+	entity = "SRA_Cruiser_entity"
+	max_speed = 180
+	acceleration = 0.35
+	rotation_speed = 0.15
+	collision_radius = 32
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_1
+		ship_shield_add = @SRA_ship_hull_add_1
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_1
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_hardening_add = @SRA_ship_hardening_add_1
+		ship_armor_hardening_add = @SRA_ship_hardening_add_1
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_1
+		kuat_standardship_system_categores = 6
+	}
+	max_hitpoints = @SRA_ship_hull_add_1
+	map_counter_icon = ship_counter_16
+	size_multiplier = @SRA_size_multiplier_cruiser
+	combat_size_multiplier = @SRA_size_multiplier_cruiser
+	fleet_slot_size = 8
+	base_buildtime = 640
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 8
+	is_space_station = no
+	icon = SRA_ship_size_Cruiser
+	construction_type = starbase_shipyard
+
+	is_designable = yes
+	enable_default_design = yes
+
+	combat_disengage_chance = 0.50
+
+	
+
+	class = shipclass_military
+	never_lost = yes
+
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_ship_Part" }		
+	use_shipnames_from = cruiser
+	
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_3 * SRA_global_ship_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+			alloys = @[ SRA_ship_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		}
+	}
+	available_to_everyone = yes
+	ai_ship_data = {
+		fraction = {
+			base = 10000
+		}
+	}
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+
+SRA_Executor = {
+	formation_priority = 128
+	entity = "SRA_Executor_entity"
+	max_speed = 120
+	acceleration = 0.35
+	rotation_speed = 0.15
+	collision_radius = 64
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_2
+		ship_shield_add = @SRA_ship_hull_add_2
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_2
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_2
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_2
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_hardening_add = @SRA_ship_hardening_add_2
+		ship_armor_hardening_add = @SRA_ship_hardening_add_2
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_2
+		kuat_standardship_system_categores = 6
+	}
+	max_hitpoints = @SRA_ship_hull_add_2
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_battleship
+	fleet_slot_size = 16
+	base_buildtime = 720
+	section_slots = { "mid" = { locator = "part1" }  }
+	num_target_locators = 6
+	is_space_station = no
+	icon = SRA_ship_size_Executor
+	construction_type = starbase_shipyard
+
+	is_designable = yes
+	enable_default_design = yes
+
+	combat_disengage_chance = 0.50
+	
+
+	class = shipclass_military
+	never_lost = yes
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_ship_Part" }		
+	use_shipnames_from = battleship
+	
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_4 * SRA_global_ship_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+			alloys = @[ SRA_ship_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		}
+	}
+
+	available_to_everyone = yes
+	ai_ship_data = {
+		fraction = {
+			base = 5000
+		}
+	}
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+
+SRA_Adjudicator = {
+	formation_priority = 64
+	entity = "SRA_Adjudicator_entity"
+	max_speed = 100
+	acceleration = 0.35
+	rotation_speed = 0.15
+	collision_radius = 128
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_3
+		ship_shield_add = @SRA_ship_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_3
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_hardening_add = @SRA_ship_hardening_add_3
+		ship_armor_hardening_add = @SRA_ship_hardening_add_3
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_3
+		kuat_standardship_system_categores = 6
+	}
+	max_hitpoints = @SRA_ship_hull_add_3
+	map_counter_icon = ship_counter_64
+	size_multiplier = @SRA_size_multiplier_flagship
+	combat_size_multiplier = @SRA_size_multiplier_flagship
+	fleet_slot_size = 32
+	base_buildtime = 960
+	section_slots = { "mid" = { locator = "part1" }  }
+	num_target_locators = 4
+	is_space_station = no
+	# ship_class_icon_frame = 45
+	icon = SRA_ship_size_SOGZ
+	construction_type = starbase_shipyard
+
+	is_designable = yes
+	enable_default_design = yes
+	combat_disengage_chance = 0.50
+	
+	class = shipclass_military
+	never_lost = yes
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_ship_Part" }		
+	use_shipnames_from = titan
+
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_5 * SRA_global_ship_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+			alloys = @[ SRA_ship_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		}
+	}
+
+	available_to_everyone = yes
+	ai_ship_data = {
+		fraction = {
+			base = 1250
+		}
+	}
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+
+
+SRA_Science_Ship = {
+	formation_priority = 32
+	entity = "SRA_Cruiser_entity"
+	max_speed = 200
+	acceleration = 0.35
+	rotation_speed = 0.2
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_1
+		ship_shield_add = @SRA_ship_hull_add_1
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_cloaking_strength_add = 16
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_hyperlane_range_add = 3
+		# ship_piracy_suppression_add = 100
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_1
+		ship_armor_hardening_add = @SRA_ship_hardening_add_1
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_1
+	}
+	max_hitpoints = @SRA_ship_hull_add_1
+	map_counter_icon = ship_counter_4
+	size_multiplier = @SRA_size_multiplier_small
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	
+
+	combat_disengage_chance = 2.0
+	
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	components_add_to_cost = no
+	is_designable = no
+	is_civilian = yes
+	class = shipclass_science_ship
+	valid_target_aggressive_stance = no
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}
+
+
+#星规远行要塞
+SRA_Crisis_Fort = {
+	formation_priority = 256
+	graphical_culture = no
+	entity = "SRA_Crisis_Fort_entity"
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = 256000
+		ship_shield_add = 256000
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_hardening_add_4
+		ship_cloaking_strength_add = 16
+	}
+	max_hitpoints = 256000
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_battleship
+	fleet_slot_size = 16
+	section_slots = { "bow" = { locator = "part1" } }
+	# section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = @build_block_radius_civilian
+	
+	class = shipclass_military_station
+	never_lost = yes
+	is_designable = no
+
+	required_component_set = "power_core"
+	required_component_set = "combat_computers"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+#星规远行航标
+SRA_Crisis_Mark = {
+	formation_priority = 256
+	graphical_culture = no
+	entity = "SRA_Crisis_Mark_entity"
+	max_speed = 0.0
+	rotation_speed = 0.15
+	acceleration = 0.2
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = 256000
+		ship_shield_add = 256000
+		ship_cloaking_strength_add = 16
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_hardening_add_4
+	}
+	max_hitpoints = 256000
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_battleship
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = @build_block_radius_civilian
+	
+	class = shipclass_military_station
+	never_lost = yes
+	is_designable = no
+
+	required_component_set = "power_core"
+	required_component_set = "combat_computers"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	components_add_to_cost = no
+	resources = {
+		category = ships
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+
+#星穹之矛
+SRA_Spear_Of_Galaxy_Zenith = {
+	formation_priority = 256
+	entity = "SRA_SOGZ_entity"
+	max_speed = 100
+	acceleration = 0.35
+	rotation_speed = 0.15
+	collision_radius = 128
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_4
+		ship_shield_add = @SRA_ship_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		#ship_weapon_damage = 3 完全失效
+		ship_cloaking_strength_add = 16
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_disengage_chance_reduction = 8
+		ship_shield_hardening_add = @SRA_ship_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_hardening_add_4
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_4
+		ship_shield_damage_mult = 1
+		ship_armor_damage_mult = 1
+		ship_hull_damage_mult = 1
+		mod_SRA_SD_Myth_power = 3
+		kuat_flagship_system_catagories = 3
+	}
+	max_hitpoints = @SRA_ship_hull_add_4
+	map_counter_icon = ship_counter_128
+	size_multiplier = @SRA_size_multiplier_flagship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 32
+	section_slots = { "mid" = { locator = "part1" }  }
+	num_target_locators = 12
+	is_space_station = no
+	# ship_class_icon_frame = 45
+	icon = SRA_ship_size_SOGZ
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+
+	takes_name_from_ship_design = yes
+    can_disable = yes
+	combat_disengage_chance = 0.50
+	
+	can_have_federation_design = no
+	
+	is_space_object = yes
+	is_designable = no
+	enable_default_design = no
+	class = shipclass_military
+	never_lost = yes
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_hidden_tech" }		
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_7 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_7 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_7 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+
+#星穹之矛-方舟舰
+SRA_Spear_Of_Galaxy_Zenith_Ark = {
+	# Arkship specific stuff
+	hero_ship = {						# Use the Hero Ship UI, not the Juggernaut's.
+		hero_ship_fleet_background = "GFX_arkship_fleetview_military"
+		custom_class_text_color = R
+	}
+	class = shipclass_starbase			# Needs to be a Starbase to have starbase modules and buildings.
+	carries_colony = pc_SRA_Spear_Of_Galaxy_Zenith_Ark				# Enables Arkship custom UI.
+	display_attack_neutral_fleet_button = no
+	automation_icon = GFX_fleet_order_auto_explore_arkship
+	arkship_picture = "arkship_military"
+	auto_upgrade = no					# Arkships automatically upgrade their components.
+	can_disable = yes					# Arkships can be disabled.
+	stay_disabled = yes					# Arkships stay disabled until explicitly re-enabled from script.
+	never_lost = yes
+	collects_stockpile_from = {			# Arkships can collect resources from Waystations or Logistic Ships.
+		shipclass_starbase
+		shipclass_constructor
+	}
+	collects_stockpile_to_country = yes
+	accepts_all_modifiers = yes
+
+	takes_name_from_ship_design = yes
+
+	potential_construction = {
+		always = no
+	}
+	possible_construction = {
+		always = no
+	}
+
+	# Audio
+	on_click_sound = "arkship_military_selection"
+
+	# 2D Art
+	icon = SRA_ship_size_SOGZ
+	icon_frame = 16
+	ship_class_icon_frame = 64
+	map_icon_override = {
+		normal = GFX_ship_icons_type_arkship
+		mixed = GFX_ship_icons_type_arkship_mixed
+		cloaked = GFX_ship_icons_type_arkship_cloaked
+		encamped = GFX_ship_icons_type_arkship_encamped
+	}
+
+	# 3D Art
+	entity = SRA_SOGZ_entity
+	section_slots = {
+		"mid"				=	{ locator = "part1" }
+		"1"					=	{ locator = "part1" }
+		"2"					=	{ locator = "part1" }
+		"3"					=	{ locator = "part1" }
+		"4"					=	{ locator = "part1" }
+		"5"					=	{ locator = "part1" }
+		"6"					=	{ locator = "part1" }
+		"spinal_mount_1"		=	{ locator = "part1" }
+	}
+
+	# Ship setup
+	formation_priority = 256
+	max_speed = 100
+	acceleration = 0.35
+	rotation_speed = 0.15
+	construction_offset_mult = @arkship_construction_offset_4
+	collision_radius = 128
+	max_hitpoints = @SRA_ship_hull_add_4
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_4
+		ship_shield_add = @SRA_ship_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		#ship_weapon_damage = 3 完全失效
+		ship_cloaking_strength_add = 16
+		ship_cloaking_detection_add = 16
+		starbase_module_capacity_add = 7
+		starbase_building_capacity_add = 8
+		planet_max_districts_add = 10
+		pop_amenities_usage_mult = -1
+		pop_amenities_usage_no_happiness_mult = -1
+		pop_housing_usage_mult = -1
+		pop_happiness = 1
+		planet_crime_mult = -1
+		planet_orbital_bombardment_damage = -1
+		planet_storm_devastation_mult = -1
+		planet_crime_add = -100
+		planet_stability_add = 100
+		planet_amenities_add = 10000
+		planet_housing_add = 10000
+		planet_jobs_produces_mult = 0.4
+		planet_defense_armies_add = 5
+	}
+	ship_modifier = {
+		ship_starbase_stockpile_collection_rate_add = @arkship_collection_rate_add_625
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_disengage_chance_reduction = 8
+		ship_shield_hardening_add = @SRA_ship_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_hardening_add_4
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_4
+		ship_shield_damage_mult = 1
+		ship_armor_damage_mult = 1
+		ship_hull_damage_mult = 1
+		mod_SRA_SD_Myth_power = 3
+		kuat_flagship_system_catagories = 3
+	}
+	size_multiplier = @SRA_size_multiplier_flagship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 32
+
+	is_designable = no
+	num_target_locators = 12
+	is_space_station = no
+	can_have_federation_design = no
+	is_civilian = no
+	components_add_to_cost = no
+
+	available_to_everyone = yes
+
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+
+	combat_disengage_chance = 0.50
+
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	base_buildtime = 27182
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_7 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_7 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_7 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 1
+	}
+
+	ai_ship_data = {
+	}
+}
+
+#星穹之矛-远程歼星
+SRA_Spear_Of_Galaxy_Zenith_action1 = {
+	formation_priority = 256
+	entity = "SRA_SOGZ_action1_entity"
+	max_speed = 0
+	acceleration = 0
+	rotation_speed = 0
+	collision_radius = 128
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_4
+		ship_shield_add = @SRA_ship_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		#ship_weapon_damage = 3 完全失效
+		ship_cloaking_strength_add = 16
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_disengage_chance_reduction = 8
+		ship_shield_hardening_add = @SRA_ship_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_hardening_add_4
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_11
+		ship_shield_damage_mult = 1
+		ship_armor_damage_mult = 1
+		ship_hull_damage_mult = 1
+		mod_SRA_SD_Myth_power = 3
+		kuat_flagship_system_catagories = 3
+	}
+	max_hitpoints = @SRA_ship_hull_add_4
+	map_counter_icon = ship_counter_128
+	size_multiplier = @SRA_size_multiplier_flagship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 32
+	section_slots = { "mid" = { locator = "part1" }  }
+	num_target_locators = 12
+	is_space_station = no
+	# ship_class_icon_frame = 45
+	icon = SRA_ship_size_SOGZ
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+
+	takes_name_from_ship_design = yes
+    can_disable = yes
+	combat_disengage_chance = 0.50
+	can_have_federation_design = no
+	is_space_object = yes
+	is_designable = no
+	enable_default_design = no
+	class = shipclass_military
+	never_lost = yes
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	
+	prerequisites = { "tech_SRA_T4_ship_Part" }		
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_7 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_7 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_7 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+#跨星系打击系统信标
+
+SRA_fire_target_0 = {
+	graphical_culture = no
+	entity = "invisible_turret_entity"
+	formation_priority = 256
+	max_speed = 0
+	acceleration = 0
+	rotation_speed = 0
+	collision_radius = 24
+	max_hitpoints = @SRA_ship_hull_add_4
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_4
+		ship_shield_add = @SRA_ship_hull_add_4
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_4
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_4
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_disengage_opportunities_add = -100
+		ships_upkeep_mult = -1
+		ship_target_weight_mult = -8
+		ship_shield_hardening_add = @SRA_ship_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_hardening_add_4
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_4
+	}
+	map_counter_icon = ship_counter_128
+	size_multiplier = @SRA_size_multiplier_small
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 1
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	
+	takes_name_from_ship_design = yes
+	section_slots = { "mid" = { locator = "part1" }  }
+	num_target_locators = 0
+	icon_frame = 7
+	class = shipclass_military
+	never_lost = yes
+	
+    can_disable = yes
+	is_designable = no
+	can_have_federation_design = no
+	components_add_to_cost = no
+	
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "sensor_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+	required_component_set = "ship_aura_components"
+}
+
+
+#星规-深空哨兵
+SRA_Sentry_Platform = {
+	formation_priority = 64
+	entity = "SRA_Crisis_Mark_entity"
+	max_speed = 6
+	rotation_speed = 10
+	acceleration = 10
+	max_hitpoints = @SRA_ship_hull_add_3
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_3
+		ship_shield_add = @SRA_ship_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_3
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_hardening_add = @SRA_ship_hardening_add_3
+		ship_armor_hardening_add = @SRA_ship_hardening_add_3
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_3
+	}
+	map_counter_icon = ship_counter_8
+	size_multiplier = @SRA_size_multiplier_destroyer
+	combat_size_multiplier = @SRA_size_multiplier_supership
+	fleet_slot_size = 16
+	section_slots = { "ship" = { locator = "part1" } }
+	is_designable = yes
+	uses_name_prefix = no
+	takes_name_from_ship_design = yes
+	num_target_locators = 0
+	is_space_station = yes
+	base_buildtime = 180
+	auto_upgrade = no
+
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	prerequisites = { "tech_SRA_starbase_turret" }
+	class = shipclass_military_station
+	never_lost = yes
+	ship_class_icon_frame = 26
+	icon = ship_size_military_station
+	construction_type = starbase_defenses
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	potential_construction = {
+		is_scope_type = starbase
+	}
+	use_shipnames_from = military_station_small	
+
+
+	prerequisites = { "tech_SRA_starbase_turret" }		
+	possible_construction = {
+		is_scope_type = starbase
+	}
+
+	components_add_to_cost = no
+	available_to_everyone = yes
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_4 * SRA_global_ship_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+			alloys = @[ SRA_ship_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		}
+	}
+}
+
+#星穹枢纽-星穹尖塔
+SRA_GZ_Platform = {
+	formation_priority = 64
+	graphical_culture = no
+	entity = "invisible_turret_entity"
+	max_speed = 0.0
+	rotation_speed = 0.15
+	acceleration = 0.2
+	max_hitpoints = @SRA_ship_hull_add_3
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_3
+		ship_shield_add = @SRA_ship_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_3
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_hardening_add = @SRA_ship_hardening_add_3
+		ship_armor_hardening_add = @SRA_ship_hardening_add_3
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_3
+	}
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_battleship
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = @build_block_radius_civilian
+	
+	class = shipclass_military_station
+	never_lost = yes
+	is_designable = no
+
+	required_component_set = "power_core"
+	required_component_set = "combat_computers"
+	required_component_set = "sensor_components"
+	
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_4 * SRA_global_ship_cost_factor ]
+		}
+		# upkeep = {
+		# 	energy = @[ SRA_ship_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+		# 	alloys = @[ SRA_ship_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		# }
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+#星规星环基地
+SRA_orbital_ring = {
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	entity = "invisible_turret_entity"
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = @SRA_ship_hull_add_1
+		ship_shield_add = @SRA_ship_hull_add_1
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		starbase_defense_platform_capacity_add = -80
+		starbase_module_capacity_add = -32
+		starbase_building_capacity_add = 2
+		# starbase_trade_protection_range_add = 16
+		# starbase_trade_protection_add = 400
+		ship_cloaking_detection_add = 16
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_hardening_add = @SRA_ship_hardening_add_1
+		ship_armor_hardening_add = @SRA_ship_hardening_add_1
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_1
+		ship_fire_rate_mult = 1.0
+		ship_weapon_range_mult = 1.50
+	}
+	max_hitpoints = @SRA_ship_hull_add_1
+	base_buildtime = 900
+	resources = {
+		category = starbases
+		cost = {
+			alloys = 100 #掩耳盗铃
+		}
+	}
+
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_battleship
+	fleet_slot_size = 16
+	section_slots = {
+		"core" = { locator = "part1" }
+	}
+
+	potential_construction = {
+		always = no
+	}
+
+	possible_construction = {
+		always = no
+	}
+
+	is_designable = no
+	num_target_locators = 1
+	is_space_station = no
+	can_have_federation_design = no
+	is_civilian = no
+	components_add_to_cost = no
+	can_disable = yes
+	flip_control_on_disable = no
+
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	prerequisites = { "tech_SRA_starbase_turret" }
+	class = shipclass_starbase
+
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	build_block_radius = 20
+	formation_priority = 1
+	icon_frame = 8
+	scales_with_planet = yes
+}
+
+SRA_SD_metabyss_orbital_ring = {
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	entity = "invisible_turret_entity"
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 2560000
+		ship_shield_add = 2560000
+		ship_hull_regen_add_static = 2560000
+		ship_armor_regen_add_static = 2560000
+		ship_shield_regen_add_static = 2560000
+		starbase_defense_platform_capacity_add = -640
+		starbase_module_capacity_add = -640
+		starbase_building_capacity_add = 6
+		# starbase_trade_protection_range_add = 16
+		# starbase_trade_protection_add = 400
+		ship_cloaking_detection_add = 16
+		ship_cloaking_strength_add = 16
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_hardening_add = @SRA_ship_hardening_add_5
+		ship_armor_hardening_add = @SRA_ship_hardening_add_5
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_11
+		ship_damage_reduction_mult = 2
+		mod_SRA_clear_ship_damage_reduction_mult_resistance = 1
+	}
+	max_hitpoints = 2560000
+	base_buildtime = 900
+	resources = {
+		category = starbases
+		cost = {
+			alloys = 100 #掩耳盗铃
+		}
+	}
+
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_battleship
+	fleet_slot_size = 16
+	section_slots = {
+		"core" = { locator = "part1" }
+	}
+
+	potential_construction = {
+		always = no
+	}
+
+	possible_construction = {
+		always = no
+	}
+
+	is_designable = no
+	num_target_locators = 1
+	is_space_station = no
+	can_have_federation_design = no
+	is_civilian = no
+	components_add_to_cost = no
+	can_disable = yes
+	flip_control_on_disable = no
+
+	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	class = shipclass_starbase
+
+	required_component_set = "power_core"
+
+	build_block_radius = 20
+	formation_priority = 1
+	icon_frame = 5
+	scales_with_planet = yes
+}
+starbase_SRA_1 = {
+	formation_priority = 1
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	build_block_radius = 200
+	entity = "invisible_turret_entity"
+	max_hitpoints = @SRA_ship_hull_add_3
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = @SRA_ship_hull_add_3
+		ship_shield_add = @SRA_ship_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_3
+		starbase_defense_platform_capacity_add = 80
+		starbase_module_capacity_add = -32
+		starbase_building_capacity_add = -32
+		# starbase_trade_protection_range_add = 16
+		# starbase_trade_protection_add = 400
+		ship_cloaking_detection_add = 16
+		starbase_shipyard_capacity_add = 480
+		starbase_shipyard_build_cost_mult = -0.2
+		starbase_shipyard_build_speed_mult = 1
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_3
+		ship_armor_hardening_add = @SRA_ship_hardening_add_3
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_3
+	}
+	
+	base_buildtime = 360
+	
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 16
+	
+	section_slots = {
+		"mid" = { locator = "part1" }
+	}
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 5
+	icon = ship_size_military_1
+	
+	class = shipclass_starbase
+	is_designable = no
+	
+	components_add_to_cost = no
+	enable_default_design = no
+	can_disable = no
+	is_civilian = no
+	is_listed = no
+	
+	required_component_set = "combat_computers"
+}
+
+starbase_SRA_chaos_1 = {
+	formation_priority = 1
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	build_block_radius = 200
+	entity = "invisible_turret_entity"
+	modifier = {
+		ship_evasion_add = 200
+		ship_armor_add = 2560000
+		ship_shield_add = 2560000
+		ship_hull_regen_add_static = 2560000
+		ship_armor_regen_add_static = 2560000
+		ship_shield_regen_add_static = 2560000
+		starbase_defense_platform_capacity_add = -320
+		starbase_module_capacity_add = -32
+		starbase_building_capacity_add = -32
+		# starbase_trade_protection_range_add = 16
+		# starbase_trade_protection_add = 400
+		ship_cloaking_strength_add = 16
+		ship_cloaking_detection_add = 16
+		starbase_shipyard_capacity_add = -480
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_5
+		ship_armor_hardening_add = @SRA_ship_hardening_add_5
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_10
+		ship_hull_mult = 32
+		ship_armor_mult = 32
+		ship_shield_mult = 32
+	}
+	resources = {
+		category = starbases
+		produces = {
+			energy = 2000
+			minerals = 2000
+			food = 2000
+			alloys = 8000
+			consumer_goods = 4000
+			rare_crystals = 800
+			exotic_gases = 800
+			volatile_motes = 800
+			sr_dark_matter = 500
+			sr_living_metal = 500
+			sr_zro = 500
+			nanites = 500
+			astral_threads = 500
+			physics_research = 8000
+			society_research = 8000
+			engineering_research = 8000
+			unity = 4000
+		}
+	}
+
+	max_hitpoints = 2560000
+	
+	base_buildtime = 360
+	
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 16
+	
+	section_slots = {
+		"mid" = { locator = "part1" }
+	}
+	num_target_locators = 0
+	is_space_station = yes
+	icon_frame = 5
+	icon = ship_size_military_1
+	
+	class = shipclass_starbase
+	is_designable = no
+	
+	components_add_to_cost = no
+	can_have_federation_design = no
+	enable_default_design = no
+	can_disable = no
+	is_civilian = no
+	is_listed = no
+	
+	required_component_set = "power_core"
+}
+
+
+
+#突变
+#模拟范围伤害用船
+SRA_Mutation_Boom = {
+	entity = "empty_section_entity"
+	formation_priority = 0
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 0
+	rotation_speed = 0
+	acceleration = 0
+	collision_radius = 0
+	modifier = {
+		ship_evasion_add = 100
+		ship_armor_add = 3200000
+		ship_shield_add = 3200000
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_disengage_opportunities_add = -100
+		ship_evasion_mult = 20
+	}
+	max_hitpoints = 3200000
+	map_counter_icon = ship_counter_4
+	size_multiplier = @SRA_size_multiplier_small
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 1
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
+	
+	takes_name_from_ship_design = yes
+	section_slots = { "mid" = { locator = "part1" }  }
+	num_target_locators = 0
+	icon_frame = 12
+	ship_class_icon_frame = 28
+	is_space_station = yes
+	
+	class = shipclass_military_station
+	never_lost = yes
+	
+	is_space_station = no
+    can_disable = yes
+	is_designable = no
+	can_have_federation_design = no
+	
+	required_component_set = "ship_aura_components"
+}
+
+
+#帝国线
+#科尔先驱主力舰
+SRA_RE_Core_Battleship = {
+	formation_priority = 64
+	entity = "SRA_Cruiser_entity"
+	max_speed = 120
+	acceleration = 0.35
+	rotation_speed = 0.15
+	collision_radius = 24
+	modifier = {
+		ship_evasion_add = 20
+		ship_armor_add = 24000
+		ship_shield_add = 24000
+		#ship_weapon_damage = 1 完全失效
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_damage_mult = 1
+		ship_armor_damage_mult = 1
+		ship_hull_damage_mult = 1
+		ship_damage_reduction_add = 1200
+	}
+	max_hitpoints = 24000
+	map_counter_icon = ship_counter_16
+	size_multiplier = @SRA_size_multiplier_cruiser
+	combat_size_multiplier = @SRA_size_multiplier_cruiser
+	fleet_slot_size = 16
+	base_buildtime = 180
+	section_slots = { "mid" = { locator = "part1" }  }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 7
+	icon = ship_size_military_8
+	construction_type = starbase_shipyard
+
+	is_designable = no
+
+	combat_disengage_chance = 0.50
+	
+	can_have_federation_design = no
+	is_designable = no
+
+	class = shipclass_military
+	never_lost = yes
+	use_shipnames_from = battleship
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	
+	prerequisites = { "tech_SRA_RE_Core_tech" }		
+	use_shipnames_from = battleship	
+	
+	potential_country = {
+
+	}
+
+	components_add_to_cost = no
+	resources = {
+		category = ships
+		cost = {
+			alloys = @[ SRA_ship_cost_4 * SRA_global_ship_cost_factor ]
+		}
+		upkeep = {
+			energy = @[ SRA_ship_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_cost_factor ]
+			alloys = @[ SRA_ship_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_cost_factor ]
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 25
+	}
+}
+
+
+
+starbase_SRA_RE_Calamitisease = {
+	formation_priority = 1
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	build_block_radius = 200
+	entity = "invisible_turret_entity"
+	scales_with_planet = yes
+	max_hitpoints = @SRA_ship_hull_add_3
+	modifier = {
+		ship_evasion_add = 200
+		ship_armor_add = @SRA_ship_hull_add_3
+		ship_shield_add = @SRA_ship_hull_add_3
+		ship_hull_regen_add_static = @SRA_ship_hull_add_3
+		ship_armor_regen_add_static = @SRA_ship_hull_add_3
+		ship_shield_regen_add_static = @SRA_ship_hull_add_3
+		starbase_defense_platform_capacity_add = -320
+		starbase_module_capacity_add = -32
+		starbase_building_capacity_add = -32
+		# starbase_trade_protection_range_add = 16
+		# starbase_trade_protection_add = 400
+		ship_cloaking_strength_add = 16
+		ship_cloaking_detection_add = 16
+		starbase_shipyard_capacity_add = -480
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_hardening_add_4
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_5
+	}
+	resources = {
+		category = starbases
+		produces = {
+		}
+	}
+
+	
+	base_buildtime = 360
+	
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 16
+	
+	section_slots = {
+		"core" = { locator = "part1" }
+	}
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 5
+	icon = ship_size_military_1
+	
+	class = shipclass_starbase
+	is_designable = no
+	
+	components_add_to_cost = no
+	can_have_federation_design = no
+	enable_default_design = no
+	can_disable = no
+	is_civilian = no
+	is_listed = no
+	
+	required_component_set = "power_core"
+}
+
+
+SRA_Rokia_dragon_Ship = {
+	formation_priority = 64
+	graphical_culture = no
+	entity = "invisible_turret_entity"
+	is_space_object = yes
+	max_speed = 200
+	acceleration = 0.35
+	rotation_speed = 0.2
+	max_hitpoints = 2560000
+	modifier = {
+		ship_evasion_add = 200
+		ship_armor_add = 2560000
+		ship_shield_add = 2560000
+		ship_cloaking_strength_add = 16
+		ship_hull_regen_add_static = 2560000
+		ship_armor_regen_add_static = 2560000
+		ship_shield_regen_add_static = 2560000
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_hyperlane_range_add = 3
+		# ship_piracy_suppression_add = 100
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_5
+		ship_armor_hardening_add = @SRA_ship_hardening_add_5
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_5
+		ship_hull_mult = 9
+		mod_SRA_SD_Myth_power = 10
+	}
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 1
+	is_space_station = no
+
+	combat_disengage_chance = 2.0
+	
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	components_add_to_cost = no
+	is_designable = no
+	is_civilian = yes
+	class = shipclass_science_ship
+	valid_target_aggressive_stance = no
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+}
+
+SRA_chaos_Ship = {
+	entity = "invisible_turret_entity"
+	formation_priority = 64
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 200
+	acceleration = 0.35
+	rotation_speed = 0.2
+	max_hitpoints = 256000
+	modifier = {
+		ship_evasion_add = 200
+		ship_armor_add = 256000
+		ship_shield_add = 256000
+		ship_cloaking_strength_add = 16
+		ship_hull_regen_add_static = 256000
+		ship_armor_regen_add_static = 256000
+		ship_shield_regen_add_static = 256000
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_hyperlane_range_add = 3
+		# ship_piracy_suppression_add = 100
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_5
+		ship_armor_hardening_add = @SRA_ship_hardening_add_5
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_5
+		mod_SRA_SD_Myth_power = 6
+	}
+	map_counter_icon = ship_counter_4
+	size_multiplier = @SRA_size_multiplier_verysmall
+	combat_size_multiplier = @SRA_size_multiplier_verysmall
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 1
+	is_space_station = no
+
+	combat_disengage_chance = 2.0
+	
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	components_add_to_cost = no
+	is_designable = no
+	class = shipclass_military
+	never_lost = yes
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	required_component_set = "power_core"
+}
+SRA_Return_To_Calamitisease_Ship = {
+	formation_priority = 64
+	graphical_culture = no
+	entity = "SRA_elder_tiyanki_entity"
+	is_space_object = yes
+	max_speed = 200
+	acceleration = 0.35
+	rotation_speed = 0.2
+	max_hitpoints = 256000
+	max_hitpoints = 2560000
+	modifier = {
+		ship_evasion_add = 200
+		ship_armor_add = 2560000
+		ship_shield_add = 2560000
+		ship_hull_regen_add_static = 2560000
+		ship_armor_regen_add_static = 2560000
+		ship_shield_regen_add_static = 2560000
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_5
+		ship_armor_hardening_add = @SRA_ship_hardening_add_5
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_6
+		ship_hull_mult = 9
+		ship_armor_mult = 9
+		ship_shield_mult = 9
+		mod_SRA_SD_Myth_power = 10
+	}
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_small
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 1
+	is_space_station = no
+	
+
+	combat_disengage_chance = 0
+	
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	components_add_to_cost = no
+	is_designable = no
+    can_disable = yes
+	class = shipclass_military
+	never_lost = yes
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	required_component_set = "power_core"
+	required_component_set = "ship_aura_components"
+}
+
+# Voidspawn
+SRA_reanimated_leviathan_01_voidspawn = {
+	entity = leviathan_01_voidspawn_entity
+	is_space_object = yes
+	graphical_culture = no
+	max_speed = @speed_default
+	acceleration = 0.2
+	rotation_speed = 0.20
+	collision_radius = 7
+	modifier = {
+		ship_evasion_add = 50
+		ship_armor_add = @SRA_ship_hull_add_1
+		ship_shield_add = @SRA_ship_hull_add_1
+		ship_hull_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_armor_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_shield_regen_add_static = @SRA_ship_hull_regen_add_static_1
+		ship_cloaking_strength_add = 16
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ship_shield_hardening_add = @SRA_ship_hardening_add_4
+		ship_armor_hardening_add = @SRA_ship_hardening_add_4
+		mod_SRA_SD_Myth_power = 10
+	}
+	max_hitpoints = @SRA_ship_hull_add_1
+	map_counter_icon = ship_counter_32
+	size_multiplier = @SRA_size_multiplier_battleship
+	combat_size_multiplier = @SRA_size_multiplier_battleship
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "spine" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon = ship_size_space_monster
+
+	class = shipclass_military
+	never_lost = yes
+	is_designable = no
+
+	resources = {
+		category = ships
+	}
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+}
+
+
+SRA_SD_Abyss_Hostile_Ship = {
+	entity = "invisible_turret_entity"
+	formation_priority = 64
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = 200
+	acceleration = 0.35
+	rotation_speed = 0.2
+	max_hitpoints = 256000
+	modifier = {
+		ship_evasion_add = 200
+		ship_armor_add = 256000
+		ship_shield_add = 256000
+		ship_cloaking_strength_add = 16
+		ship_hull_regen_add_static = 256000
+		ship_armor_regen_add_static = 256000
+		ship_shield_regen_add_static = 256000
+	}
+	ship_modifier = {
+		inline_script = {
+			script = ship_sizes/SRA_ship_sizes_immune_modifers
+		}
+		ships_upkeep_mult = -1
+		ship_shield_hardening_add = @SRA_ship_hardening_add_5
+		ship_armor_hardening_add = @SRA_ship_hardening_add_5
+		ship_damage_reduction_add = @SRA_ship_damage_reduction_add_5
+		mod_SRA_SD_Myth_power = 3
+	}
+	map_counter_icon = ship_counter_4
+	size_multiplier = @SRA_size_multiplier_verysmall
+	combat_size_multiplier = @SRA_size_multiplier_verysmall
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 1
+	is_space_station = no
+	
+
+	combat_disengage_chance = 2.0
+	
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	components_add_to_cost = no
+	is_designable = no
+	class = shipclass_military
+	never_lost = yes
+	prerequisites = { "tech_SRA_T4_hidden_tech" }	
+	
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+}

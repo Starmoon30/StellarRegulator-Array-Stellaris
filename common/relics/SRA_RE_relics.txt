@@ -1,0 +1,43 @@
+
+SRA_RE_Core_relic = {
+	activation_duration = 3600
+	portrait = "GFX_relic_SRA_RE_Core_relic"
+	sound = "relic_activation_isolated_contingency_core"
+	can_be_stolen = no
+
+	score = 10000
+
+	resources = {
+		category = relics
+		cost = { energy = 8000 influence = 150 }
+	}
+	
+	triggered_country_modifier = {
+		potential = { always = yes }
+		starbase_shipyard_build_speed_mult = 0.3
+	}
+
+	
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = SRA_RE_Core_relic
+		}
+	}
+
+	active_effect = {
+		add_modifier = {
+			modifier = SRA_RE_Core_weapon_Buff_0 days = 3600
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}

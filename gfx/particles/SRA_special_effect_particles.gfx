@@ -1,0 +1,96 @@
+objectTypes = {
+
+	########################################################
+	###						explosion
+	########################################################
+	#####	red	#####
+	
+	pdxparticle = { name = "SRA_large_explosion_red" type = "SRA_large_explosion_red" scale = 4.5 }
+	pdxparticle = { name = "SRA_ship_explosion_xl_red" type = "SRA_ship_explosion_red" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_red" type = "SRA_ship_explosion_red" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_red" type = "SRA_ship_explosion_red" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_red" type = "SRA_ship_explosion_red" scale = 0.55 }
+	#####	pink	#####
+	
+	pdxparticle = { name = "SRA_ship_explosion_xl_pink" type = "SRA_ship_explosion_pink" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_pink" type = "SRA_ship_explosion_pink" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_pink" type = "SRA_ship_explosion_pink" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_pink" type = "SRA_ship_explosion_pink" scale = 0.55 }
+	
+	#####	orange	#####
+	
+	pdxparticle = { name = "SRA_large_explosion_orange" type = "SRA_large_explosion_orange" scale = 4.5 }
+	pdxparticle = { name = "SRA_ship_explosion_xl_orange" type = "SRA_ship_explosion_orange" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_orange" type = "SRA_ship_explosion_orange" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_orange" type = "SRA_ship_explosion_orange" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_orange" type = "SRA_ship_explosion_orange" scale = 0.55 }
+	
+	#####	yellow	#####
+	
+	pdxparticle = { name = "SRA_ship_explosion_xl_yellow" type = "SRA_ship_explosion_yellow" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_yellow" type = "SRA_ship_explosion_yellow" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_yellow" type = "SRA_ship_explosion_yellow" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_yellow" type = "SRA_ship_explosion_yellow" scale = 0.55 }
+	
+	#####	green	#####
+	
+	pdxparticle = { name = "SRA_ship_explosion_xl_green" type = "SRA_ship_explosion_green" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_green" type = "SRA_ship_explosion_green" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_green" type = "SRA_ship_explosion_green" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_green" type = "SRA_ship_explosion_green" scale = 0.55 }
+	
+	#####	teal	#####
+	
+	pdxparticle = { name = "SRA_ship_explosion_xl_teal" type = "SRA_ship_explosion_teal" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_teal" type = "SRA_ship_explosion_teal" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_teal" type = "SRA_ship_explosion_teal" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_teal" type = "SRA_ship_explosion_teal" scale = 0.55 }
+	
+	#####	blue	#####
+	
+	pdxparticle = { name = "SRA_large_explosion_blue" type = "SRA_large_explosion_blue" scale = 4.5 }
+	pdxparticle = { name = "SRA_ship_explosion_xl_blue" type = "SRA_ship_explosion_blue" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_blue" type = "SRA_ship_explosion_blue" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_blue" type = "SRA_ship_explosion_blue" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_blue" type = "SRA_ship_explosion_blue" scale = 0.55 }
+	#pdxparticle = { name = "SRA_gamma_station_explosion_blue" type = "SRA_large_explosion_blue" scale = 10.0 }
+	
+	#####	violet	#####
+	
+	pdxparticle = { name = "SRA_large_explosion_violet" type = "SRA_large_explosion_violet" scale = 4.5 }
+	pdxparticle = { name = "SRA_ship_explosion_xl_violet" type = "SRA_ship_explosion_violet" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_violet" type = "SRA_ship_explosion_violet" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_violet" type = "SRA_ship_explosion_violet" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_violet" type = "SRA_ship_explosion_violet" scale = 0.55 }
+	pdxparticle = { name = "SRA_zeta_military_station_small_explosion_violet" type = "SRA_large_explosion_violet" scale = 2.0 }
+	pdxparticle = { name = "SRA_zeta_military_station_large_explosion_violet" type = "SRA_large_explosion_violet" scale = 10.0 }
+	
+	#####	white	#####
+	
+	pdxparticle = { name = "SRA_ship_explosion_xl_white" type = "SRA_ship_explosion_white" scale = 15.0 }
+	pdxparticle = { name = "SRA_ship_explosion_l_white" type = "SRA_ship_explosion_white" scale = 5.0 }
+	pdxparticle = { name = "SRA_ship_explosion_m_white" type = "SRA_ship_explosion_white" scale = 2.0 }
+	pdxparticle = { name = "SRA_ship_explosion_s_white" type = "SRA_ship_explosion_white" scale = 0.55 }
+	
+	#####	others	#####
+	
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_hit_explosion" type = "SRA_T4_weapon_planet_killer_hit_explosion" scale = 1.0 }
+	pdxparticle = { name = "SRA_T4_weapon_planet_killer_hit_explosion_small" type = "SRA_T4_weapon_planet_killer_hit_explosion_small" scale = 1.0 }
+	pdxparticle = { name = "SRA_eta_titan_system_effect" type = "SRA_eta_titan_system_effect" scale = 1.0 }
+	pdxparticle = { name = "SRA_eta_titan_system_fast_effect" type = "SRA_eta_titan_system_fast_effect" scale = 1.0 }
+	pdxparticle = { name = "SRA_nemesis_system_effect_1_effect" type = "SRA_nemesis_system_effect_1_file" scale = 1.0 }
+	pdxparticle = { name = "SRA_nemesis_system_core_effect" type = "SRA_nemesis_system_core_file" scale = 1 }
+	pdxparticle = { name = "SRA_nemesis_system_wave_effect" type = "SRA_nemesis_system_wave_file" scale = 1 }
+	
+
+	pdxparticle = { name = "SRA_eta_gateway_pillar_core_blue" type = "SRA_eta_gateway_pillar_core_blue" scale = 1.0 }
+	pdxparticle = { name = "SRA_eta_gateway_beam_muzzle_0" type = "SRA_eta_gateway_beam_muzzle_0" scale = 1.0 }
+	pdxparticle = { name = "SRA_eta_gateway_platform_beam_blue" type = "SRA_eta_gateway_platform_beam_blue" scale = 1.0 }
+
+
+	########################################################
+	###						effects
+	########################################################
+	pdxparticle = { name = "SRA_psionic_storm_golden" type = "SRA_psionic_storm_golden" scale = 1.0 }
+	pdxparticle = { name = "SRA_psionic_storm_golden_clouds" type = "SRA_psionic_storm_golden_clouds" scale = 1.0 }
+}

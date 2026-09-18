@@ -1,0 +1,62 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_SRAtechnology"
+		texturefile = "gfx/interface/icons/governments/civics/SRAtechnology.dds"
+	}
+	spriteType = {
+		name = "GFX_SRARociviaEmpire"
+		texturefile = "gfx/interface/icons/governments/civics/SRARociviaEmpire.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_RE_Hidra_icon"
+		texturefile = "gfx/interface/icons/traits/leader_trait_SRA_RE_Hidra.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_RE_ruler1"
+		texturefile = "gfx/interface/icons/traits/leader_trait_SRA_RE_rul1.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_RE_ruler1"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_RE_rul1.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_RE_ruler2"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_RE_rul2.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_RE_Hidra"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_RE_Hidra.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_Rokia_sci"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_Rokia_sci.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_SD_Myth"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_SD_Myth.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_ag_StarLightII_sci1"
+		texturefile = "gfx/interface/icons/traits/ag_trait_ancients.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_ag_StarLightII_sci2"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_ag_StarLightII.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_gov"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_gov.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_sci"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_sci.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_adm"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_adm.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_SRA_gen"
+		texturefile = "gfx/interface/icons/traits/SRA_leader/leader_trait_SRA_gen.dds"
+	}
+}

@@ -1,0 +1,13 @@
+"SRA_SR" = {
+	archetype = SRA_SR
+	playable = { always = no }
+	randomized = { always = no }
+	portraits = {
+		"SRA_StellarRegulator"
+	}
+
+	gender = no
+	graphical_culture = ai_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+

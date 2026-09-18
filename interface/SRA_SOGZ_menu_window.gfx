@@ -1,0 +1,156 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_SRA_SOGZ_menu_background"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_background.dds"
+		borderSize = { x=1600 y=900 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	#spriteType = {
+	#	name = "GFX_SRA_SOGZ_menu_above_elements"
+	#	texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_above_elements.dds"
+	#	alwaysTransparent = yes
+	#}
+	# 按钮
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_button"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_button.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	# 纯视觉按钮
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_energy"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_energy.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_window"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_window.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_window_1"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_window_1.dds"
+		alwaysTransparent = yes
+	}
+	# 子系统按钮
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_box"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_box.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_1_1"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_1_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_1_2"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_1_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_1_3"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_1_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_2_1"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_2_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_2_2"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_2_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_2_3"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_2_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_3_1"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_3_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_3_2"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_3_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_3_3"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_3_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_4_1"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_4_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_4_2"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_4_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_4_3"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_4_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_5_1"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_5_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_5_2"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_5_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_5_3"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_5_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_6_1"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_6_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_6_2"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_6_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_SOGZ_menu_sub_6_3"
+		texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_sub_6_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	#spriteType = {
+	#	name = "GFX_SRA_SOGZ_menu_close_button"
+	#	texturefile = "gfx/interface/SRA_SOGZ_menu/SRA_SOGZ_menu_close_button.dds"
+	#	noOfFrames = 3
+	#	effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	#}
+}

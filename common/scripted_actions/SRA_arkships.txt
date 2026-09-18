@@ -1,0 +1,468 @@
+SRA_arkship_deep_scan = {
+	user_scope = fleet
+	scope = planet
+
+	automation = {
+		priority	= 2
+		tooltip		= AUTOMATION_DEEP_SCAN_TT
+		options = {
+			option = {
+				automation_setting	= rescanning
+				default			= no
+				name			= AUTOMATION_OPT_RESCANNING
+				tooltip			= AUTOMATION_OPT_RESCANNING_TT
+				ai_weight = {
+					base = 1
+				}
+			}
+		}
+	}
+	on_completed = on_arkship_deep_scan
+	tooltip = arkship_deep_scan_ship_button
+	icon = GFX_fleet_action_button_arkship_deep_scan
+	icon_selected = GFX_fleet_action_button_arkship_deep_scan
+
+	possible = {
+		custom_tooltip = {
+			fail_text = arkship_has_leader_tt_fail
+			success_text = arkship_has_leader_tt_success
+			exists = from.leader
+		}
+		has_anomaly = no
+		if = {
+			limit = {
+				habitable_planet = yes
+			}
+			custom_tooltip = {
+				fail_text = arkship_target_habitable_world_fail_tt
+				from.leader? = {
+					has_leader_flag = nomadic_naturalist
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = arkship_target_artificial_world_fail_tt
+			is_artificial = no
+		}
+		custom_tooltip = {
+			fail_text = arkship_target_ring_world_fail_tt
+			is_ringworld = no
+		}
+		custom_tooltip = {
+			fail_text = arkship_target_astral_scar_fail_tt
+			NOT = {
+				is_planet_class = pc_astral_scar
+			}
+		}
+	}
+
+	button_visible = {
+		always = yes
+	}
+
+	button_clickable = {
+		custom_tooltip = {
+			fail_text = arkship_has_leader_tt_fail
+			success_text = arkship_has_leader_tt_success
+			exists = leader
+		}
+	}
+
+	activity_key = arkship_deep_scan_activity_key
+	context_menu_name = arkship_deep_scan
+	required_progress = value:arkship_deep_scan_required_progress_value
+	required_progress_key = arkship_deep_scan_required_progress_key
+	progress_activity_key = arkship_deep_scan_progress_activity_key
+	cooldown = @arkship_deep_scan_cooldown
+
+	uses_vfx_type = survey_effect
+
+	cost = {
+		energy = @arkship_deep_scan_cost
+	}
+	slot = 2
+
+	ai = {
+		#This - Target Planet
+		#From - Acting Fleet
+		weight = {
+			base = @ai_action_weight_15
+			modifier = {
+				factor = 0 #cannot afford
+				FROM.controller = {
+					resource_stockpile_compare = {
+						resource = energy
+						value < @arkship_deep_scan_cost
+						mult = 1.5
+					}
+				}
+			}
+			inline_script = {
+				script = scripted_actions/ai_distance_modifiers
+				LOCAL_SYSTEM_CHECK = "any_system_planet = { is_same_value = ROOT }"
+			}
+			modifier = {
+				factor = @ai_action_weight_100 #strongly prioritize planets that are targets of a deep scan contract
+				is_point_of_interest = {
+					id = deep_scan_poi@this
+					event_chain = contract_deep_scan_chain
+					owner = FROM.controller
+				}
+			}
+			modifier = {
+				factor = @ai_action_weight_factor_0_1 #already deep scanned and not a contract target
+				is_variable_set = times_deep_scanned
+				NOT = {
+					is_point_of_interest = {
+						id = deep_scan_poi@this
+						event_chain = contract_deep_scan_chain
+						owner = FROM.controller
+					}
+				}
+			}
+		}
+		max_jumps = @ai_action_weight_5
+		good_enough_weight = @ai_action_weight_30
+		ai_minister = interior
+	}
+}
+
+SRA_arkship_strip_mine = {
+	user_scope = fleet
+	scope = planet
+
+	automation = {
+		priority	= 6
+		tooltip		= AUTOMATION_STRIP_MINE_TT
+		options = {
+			inline_script = scripted_actions/harvest_automation_options
+		}
+	}
+	on_completed = on_arkship_strip_mine
+	tooltip = arkship_strip_mine_ship_button
+	icon = GFX_fleet_action_button_arkship_strip_mine
+	icon_selected = GFX_fleet_action_button_arkship_strip_mine
+
+	possible = {
+		if = {
+			limit = {
+				is_surveyed = {
+					who = from
+					status = no
+				}
+			}
+			custom_tooltip = {
+				fail_text = arkship_target_not_surveyed_fail_tt
+				always = no
+			}
+		}
+		else = {
+			NOT = {
+				has_modifier = "harvested_resources_mining"
+			}
+			if = {
+				limit = {
+					has_anomaly = yes
+				}
+				custom_tooltip = {
+					fail_text = arkship_target_has_anomaly_fail_tt
+					always = no
+				}
+			}
+			is_valid_harvest_target = yes
+		}
+	}
+
+	button_visible = {
+		always = yes
+	}
+
+	button_clickable = {
+		always = yes
+	}
+
+	activity_key = arkship_strip_mine_activity_key
+	context_menu_name = arkship_strip_mine
+	required_progress = value:arkship_strip_mine_required_progress_value
+	progress_activity_key = arkship_strip_mine_progress_activity_key
+	required_progress_key = arkship_strip_mine_required_progress_key
+	cooldown = @arkship_strip_mine_cooldown
+	category = harvest_resources
+	category_limit = 1
+
+	uses_vfx_type = harvest_effect
+
+	cost = {
+		energy = @arkship_strip_mine_cost
+	}
+	slot = 4
+	overrides_gained_resources = yes
+	completion_message_type = TOAST_STRIP_MINE_COMPLETE
+	completion_message_localization = TOAST_STRIP_MINE_COMPLETE_DESC
+
+	ai = {
+		#This - Target Planet
+		#From - Acting Fleet
+		weight = {
+			base = @ai_action_weight_20
+			modifier = {
+				factor = 0 #cannot afford
+				FROM.controller = {
+					resource_stockpile_compare = {
+						resource = energy
+						value < @arkship_strip_mine_cost
+						mult = 1.5
+					}
+				}
+			}
+			inline_script = {
+				script = scripted_actions/ai_distance_modifiers
+				LOCAL_SYSTEM_CHECK = "any_system_planet = { is_same_value = ROOT }"
+			}
+			inline_script = scripted_actions/ai_harvest_resources_modifiers
+		}
+		max_jumps = @ai_action_weight_5
+		good_enough_weight = @ai_action_weight_30
+		ai_minister = interior
+	}
+}
+
+SRA_arkship_subspace_image = {
+	user_scope = fleet
+	scope = galactic_object
+
+	on_completed = on_arkship_subspace_image
+	tooltip = arkship_subspace_image_ship_button
+	icon = GFX_fleet_action_button_arkship_subspace_image
+	icon_selected = GFX_fleet_action_button_arkship_subspace_image
+
+	possible = {
+		custom_tooltip = {
+			fail_text = arkship_has_leader_tt_fail
+			success_text = arkship_has_leader_tt_success
+			exists = from.leader
+		}
+		# A system can only have subspace imaging done once.
+		custom_tooltip = {
+			fail_text = has_not_been_subspace_imaged_tt
+			NOT = {
+				has_star_flag = subspace_image_completed
+			}
+		}
+	}
+
+	button_visible = {
+		always = yes
+	}
+
+	button_clickable = {
+		custom_tooltip = {
+			fail_text = arkship_has_leader_tt_fail
+			success_text = arkship_has_leader_tt_success
+			exists = leader
+		}
+	}
+
+	activity_key = arkship_subspace_image_activity_key
+	context_menu_name = arkship_subspace_image
+	required_progress = value:arkship_subspace_image_required_progress_value
+	progress_activity_key = arkship_subspace_image_progress_activity_key
+	required_progress_key = arkship_subspace_image_required_progress_key
+	cooldown = @arkship_subspace_image_cooldown
+	category = subspace_image
+	category_limit = 1
+
+	uses_vfx_type = survey_effect
+
+	cost = {
+		energy = @arkship_subspace_image_cost
+	}
+
+	slot = 5
+
+	ai = {
+		#This - Target System
+		#From - Acting Fleet
+		weight = {
+			base = @ai_action_weight_20
+			modifier = {
+				factor = 0 #cannot afford
+				FROM.controller = {
+					resource_stockpile_compare = {
+						resource = energy
+						value < @arkship_subspace_image_cost
+						mult = 1.5
+					}
+				}
+			}
+			inline_script = {
+				script = scripted_actions/ai_distance_modifiers
+				LOCAL_SYSTEM_CHECK = "is_same_value = ROOT"
+			}
+			modifier = {
+				factor = @ai_action_weight_100 #system has a deep scan contract target
+				any_system_planet = {
+					is_point_of_interest = {
+						id = deep_scan_poi@this
+						event_chain = contract_deep_scan_chain
+						owner = FROM.controller
+					}
+				}
+			}
+		}
+		max_jumps = @ai_action_weight_5
+		good_enough_weight = @ai_action_weight_30
+		ai_minister = interior
+	}
+}
+
+SRA_arkship_reprocess_planet = {
+	user_scope = fleet
+	scope = planet
+
+	on_completed = on_arkship_reprocess_planet
+	tooltip = arkship_reprocess_planet_ship_button
+	icon = GFX_fleet_action_button_arkship_reprocess_planet
+	icon_selected = GFX_fleet_action_button_arkship_reprocess_planet
+
+	possible = {
+		if = {
+			limit = {
+				is_surveyed = {
+					who = from
+					status = no
+				}
+			}
+			custom_tooltip = {
+				fail_text = arkship_target_not_surveyed_fail_tt
+				always = no
+			}
+		}
+		else = {
+			NOT = {
+				has_modifier = "harvested_resources_mining"
+			}
+			if = {
+				limit = {
+					has_anomaly = yes
+				}
+				custom_tooltip = {
+					fail_text = arkship_target_has_anomaly_fail_tt
+					always = no
+				}
+			}
+			is_valid_harvest_target = yes
+		}
+	}
+
+	button_visible = {
+		always = yes
+	}
+
+	button_clickable = {
+		always = yes
+	}
+
+	activity_key = arkship_reprocess_planet_activity_key
+	context_menu_name = arkship_reprocess_planet
+	required_progress = value:arkship_reprocess_planet_required_progress_value
+	progress_activity_key = arkship_reprocess_planet_progress_activity_key
+	required_progress_key = arkship_reprocess_planet_required_progress_key
+	cooldown = @arkship_reprocess_planet_cooldown
+	category = harvest_resources
+	category_limit = 1
+
+	uses_vfx_type = harvest_effect
+
+	cost = {
+		energy = @arkship_reprocess_planet_cost
+	}
+
+	slot = 5
+	overrides_gained_resources = yes
+	completion_message_type = TOAST_REPROCESS_PLANET_COMPLETE
+	completion_message_localization = TOAST_REPROCESS_PLANET_COMPLETE_DESC
+
+	ai = {
+		#This - Target Planet
+		#From - Acting Fleet
+		weight = {
+			base = @ai_action_weight_15
+			modifier = {
+				factor = 0 #only reprocess in unowned systems
+				exists = space_owner
+			}
+			modifier = {
+				factor = 0 #cannot afford
+				FROM.controller = {
+					resource_stockpile_compare = {
+						resource = energy
+						value < @arkship_reprocess_planet_cost
+						mult = 1.5
+					}
+				}
+			}
+			inline_script = {
+				script = scripted_actions/ai_distance_modifiers
+				LOCAL_SYSTEM_CHECK = "any_system_planet = { is_same_value = ROOT }"
+			}
+			inline_script = scripted_actions/ai_harvest_resources_modifiers
+		}
+		max_jumps = @ai_action_weight_5
+		good_enough_weight = @ai_action_weight_30
+		ai_minister = interior
+	}
+}
+SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump = {
+	user_scope = fleet
+	scope = galactic_object
+
+	tooltip = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_ship_button
+	click_to_act_key = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_desc
+	icon = GFX_fleet_order_button_mia_jump
+	icon_selected = GFX_fleet_order_button_mia_jump
+
+	possible = {
+		custom_tooltip = {
+			fail_text = has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_fail_tt
+			success_text = has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_pass_tt
+			from.starbase? = {
+				has_starbase_module = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump
+			}
+		}
+	}
+
+	button_visible = {
+		custom_tooltip = {
+			fail_text = has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_fail_tt
+			success_text = has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_pass_tt
+			starbase? = {
+				has_starbase_module = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump
+			}
+		}
+	}
+
+	button_clickable = {
+		custom_tooltip = {
+			fail_text = has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_fail_tt
+			success_text = has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_pass_tt
+			starbase? = {
+				has_starbase_module = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump
+			}
+		}
+	}
+
+	# This behaves as a Quantum Catapult, using the ship as the bypass.
+	specific_behavior = scripted_catapult_order
+
+	activity_key = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_activity_key
+	context_menu_name = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump
+	required_progress = 0
+	progress_activity_key = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_progress_activity_key
+	required_progress_key = SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_required_progress_key
+	cooldown = 0
+
+	cost = {
+	}
+	#slot = 5
+}

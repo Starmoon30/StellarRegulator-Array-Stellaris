@@ -1,0 +1,133 @@
+###行为:
+# #### Behaviours:
+# 他们会征服其他帝国的星球吗?
+#conqueror -> Will they conquer planets from other empires?
+# 他们会附庸其他帝国吗?
+#subjugator -> Will they vassalise other empires?
+# 他们会解放被征服的帝国吗?
+#liberator -> Will they liberate conquered empires?
+# 他们更有可能攻击已经卷入战争的国家吗?
+#opportunist -> Are they more likely to attack someone already embroiled in war?
+# 他们会提升和启发其他物种吗?
+#uplifter -> Will they uplift and enlighten other species?
+# 他们会渗入土著吗?
+#infiltrator -> Will they infiltrate primitives?
+# 他们会入侵土著吗?
+#dominator -> Will they invade primitives?
+# 他们会奴役人口吗?
+#slaver -> Will they enslave pops?
+# 他们会清除外星人吗?
+#purger -> Will they purge alien pops?
+# 他们会用机器人做粗活吗?
+#robot_exploiter -> Will they use robots for menial labor?
+# 他们会给机器人权利吗?
+#robot_liberator -> Will they give rights to robots?
+# 他们只有在被包围的时候才会有攻击性吗?
+#propagator -> Will they only get aggressive once boxed in?
+# 他们会给外星人权利吗?
+#multispecies -> Will they give rights to aliens?
+#species_mod_priority ={}定义AI应该尝试修改给定物种的程度的权重(root=country, this=species)
+#species_mod_priority = {} define weights for how much the AI should try to modify a given species (root=country, this=species)
+# 他们会对抗危机并邀请其他人这样做吗(堕落帝国的特殊行为。
+#crisis_leader -> Will they fight the crisis and invite others to do so (Fallen Empires special behviour.
+# 皇帝/监护人将以同样的方式行事，不管这面国旗。)
+# Emperor/Custodian will behave the same way regardless of this flag.)
+# 他们会考虑对抗危机吗?
+#crisis_fighter -> Will they consider fighting the crisis?
+# (如果“不”，他们只会关心自己。)
+# (If 'no' they will only care about themselves.)
+### #修饰符:
+# ##### Modifiers:
+# 影响宣战的几率，发送侮辱的几率，以及多少舰队力量被投入到进攻中(0,50%被投入，1时更像是75%，2时是100%;
+#aggressiveness -> Affects chance of declaring wars, chance of sending insults, and how much % of fleet power is committed to offense (at 0, 50% is committed, at 1 it is more like 75%, at 2 it is 100%;
+# 更高的值仍然计算额外的战争dec和侮辱机会)
+# higher values still count extra towards war dec and insult chance)
+# 在1.0意愿时，他们会接受对双方都同样有利的交易
+#trade_willingness -> At 1.0 willingness they will accept a deal that is equally good for both sides
+# #勇敢->影响他们选择实力相似的对手和战争目标的几率，而不是选择弱者
+#bravery -> Affects the chance that they will pick rivals & war targets of similar strength instead of picking on the weak
+# 影响海军和陆军的矿产和能源预算
+#military_spending -> Affects mineral & energy budget that goes to navies and armies
+# 影响到新殖民地的矿物和能量预算
+#colony_spending -> Affects mineral & energy budget that goes to new colonies
+# 影响在征服他人时，这个帝国产生多少威胁
+#threat_modifier -> Affects how much threat is generated for this empire when others are conquered
+# 影响当这个帝国被征服时对其他帝国产生多少威胁
+#threat_others_modifier -> Afffects how much threat is generated for other empires when this empire is conquered
+#friction_modifier >影响边框摩擦
+#friction_modifier -> Affects border friction
+#claims_modifier ->影响索赔的意见惩罚
+#claims_modifier -> Affects opinion penalty from claims
+# #船
+#Ships
+# 他们应该瞄准的舰船护甲数量
+#armor_ratio -> Amount of armor they should aim for on ships
+# 舰船上他们应该瞄准的护盾数量
+#shields_ratio -> Amount of shields they should aim for on ships
+# 他们应该瞄准的船体助推器数量(如果有的话)
+#hull_ratio -> Amount of hull boosters they should aim for on ships (if available)
+### #外交:
+# ##### Diplomacy:
+#federation_acceptance ->直接增加接受组建/加入联盟的几率
+#federation_acceptance -> Added directly to chance of accepting to form/join a federation
+# 直接增加接受互不侵犯条约的几率
+#nap_acceptance -> Added directly to chance of accepting to form a non-aggression pact
+# 直接增加接受形成商业协议的几率
+#commercial_pact_acceptance -> Added directly to chance of accepting to form a commercial pact
+#直接增加接受的机会，形成研究协议
+#research_agreement_acceptance -> Added directly to chance of accepting to form a research agreement
+#migration_pact_acceptance ->直接增加接受形成迁移协议的几率
+#migration_pact_acceptance -> Added directly to chance of accepting to form a migration pact
+#直接增加接受形成防御协定的几率
+#defensive_pact_acceptance -> Added directly to chance of accepting to form a defensive pact
+#外交:
+#Diplomacy:
+#这个帝国作为高级开始的可能性(越高=越有可能被选为高级开始的帝国之一)
+#advanced_start_chance -> Likelyhood of this empire being an advanced start (higher = better chance of being one of empires selected for advanced start)
+#注意:重量是附加的!
+#NOTE: Weight is additive!
+# SRA_world_machine_personality = {
+# 	aggressiveness = 4
+# 	trade_willingness = 2
+# 	bravery = 2
+# 	combat_bravery = 99
+# 	military_spending = 1.5
+# 	colony_spending = 1.5
+# 	federation_acceptance = -100
+# 	nap_acceptance = -100
+# 	commercial_pact_acceptance = 0
+# 	research_agreement_acceptance = -50
+# 	defensive_pact_acceptance = -50
+# 	migration_pact_acceptance = -100
+# 	advanced_start_chance = 100
+# 	weapon_preferences = weapon_type_energy
+# 	hull_ratio = 0
+# 	armor_ratio = 0.5
+# 	shields_ratio = 0.5
+# 	threat_modifier = 1.0
+# 	threat_others_modifier = 1.0
+# 	friction_modifier = 1
+# 	claims_modifier = 1
+# 	behaviour = {
+# 		conqueror = yes
+# 		subjugator = yes
+# 		liberator = yes
+# 		opportunist = yes
+# 		purger = yes
+# 		displacer = yes
+# 		slaver = no
+# 		uplifter = no
+# 		infiltrator = no
+# 		dominator = yes
+# 		robot_exploiter = no
+# 		robot_liberator = no
+# 		propagator = yes
+# 		multispecies = no
+# 		crisis_fighter = yes
+# 	}
+# 	allow = {
+# 		has_valid_civic = civic_SRAtechnology
+# 		#has_global_flag = SRA_AI_world_machine
+# 	}
+# 	weight_modifier = { weight = 10000 }
+# }

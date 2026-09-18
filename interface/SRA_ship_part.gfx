@@ -1,0 +1,377 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_SRA_T4_ship_Part"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_ship_Part.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_ship_Part.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_T4_Armor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_Armor.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_Armor.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_T4_Auxiliarm_Motor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_Auxiliarm_Motor.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_Auxiliarm_Motor.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_ship_part_aura_range"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_aura_range.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/ship_part_aura_range.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_T4_Reactor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_Reactor.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_Reactor.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_T4_Jump"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_Jump.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_Jump.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_T4_SHIP_Thruster"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_SHIP_Thruster.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_SHIP_Thruster.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_T4_Sensor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_Sensor.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_Sensor.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		}
+	spriteType = {
+		name = "GFX_SRA_T4_Computer"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_Computer.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_Computer.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_Aura_3"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_Aura_3.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_Aura_3.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_Aura_4"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_Aura_4.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_Aura_4.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_Aura_1"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_Aura_1.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_Aura_1.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_T4_Weapon_Intensifier"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_Weapon_Intensifier.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_Weapon_Intensifier.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 3			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_SRA_T4_Armor_Intensifier"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T4_Armor_Intensifier.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/ship_parts/SRA_T4_Armor_Intensifier.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 1.6				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_SRA_T3_ship_Part"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_ship_Part.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_Armor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_Armor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_Reactor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_Reactor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_Jump"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_Jump.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_SHIP_Thruster"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_SHIP_Thruster.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_Sensor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_Sensor.dds"
+		}
+	spriteType = {
+		name = "GFX_SRA_T3_Computer"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_Computer.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_Aura_1"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_Aura_1.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_Armor_Intensifier"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_Armor_Intensifier.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T3_Weapon_Intensifier"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T3_Weapon_Intensifier.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SRA_T2_ship_Part"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T2_ship_Part.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T2_Armor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T2_Armor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T2_Reactor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T2_Reactor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T2_Jump"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T2_Jump.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T2_SHIP_Thruster"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T2_SHIP_Thruster.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T2_Sensor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T2_Sensor.dds"
+		}
+	spriteType = {
+		name = "GFX_SRA_T2_Computer"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T2_Computer.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_SRA_T1_ship_Part"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T1_ship_Part.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T1_Armor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T1_Armor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T1_Reactor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T1_Reactor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T1_Jump"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T1_Jump.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T1_SHIP_Thruster"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T1_SHIP_Thruster.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T1_Sensor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T1_Sensor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_T1_Computer"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_T1_Computer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SRA_CORE_ship_Part"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_ship_Part.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_CORE_Armor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_Armor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_CORE_Reactor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_Reactor.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_CORE_Jump"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_Jump.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_CORE_SHIP_Thruster"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_SHIP_Thruster.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_CORE_Sensor"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_Sensor.dds"
+		}
+	spriteType = {
+		name = "GFX_SRA_CORE_Computer"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_Computer.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_CORE_Aura_1"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_Aura_1.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_CORE_Armor_Intensifier"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_Armor_Intensifier.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_CORE_Weapon_Intensifier"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_CORE_Weapon_Intensifier.dds"
+	}
+
+	#SD
+	spriteType = {
+		name = "GFX_SRA_SD_ship_Part_Shield"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_SD_ship_Part_Shield.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_SD_Anti_accuracy"
+		texturefile = "gfx/interface/icons/ship_parts/SRA_SD_Anti_accuracy.dds"
+	}
+}

@@ -1,0 +1,516 @@
+spriteTypes = {
+	####setting
+	spriteType = {
+		name = "GFX_SRA_setting_background"
+		texturefile = "gfx/interface/SRA_setting/SRA_setting_background.dds"
+		borderSize = { x=1600 y=900 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_SRA_settings_group_bg"
+		texturefile = "gfx/interface/SRA_setting/SRA_settings_group_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_SRA_setting_button_text"
+		texturefile = "gfx/interface/SRA_setting/SRA_setting_button_text.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_setting_button"
+		texturefile = "gfx/interface/SRA_setting/SRA_setting_button.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_setting_button_box"
+		texturefile = "gfx/interface/SRA_setting/SRA_setting_button_box.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_SRA_setting_slider"
+		texturefile = "gfx/interface/SRA_setting/SRA_setting_slider.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_SRA_setting_scroll_bg"
+		size= {x =12 y = 12 }
+		texturefile = "gfx/interface/SRA_setting/SRA_setting_scroll_bg.tga"
+		borderSize = { x=4 y=4 }
+	}
+
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_background"
+		texturefile = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_background.dds"
+		borderSize = { x=1600 y=900 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	spriteType = {
+		name = "GFX_SRA_alter_event_diplomacy_background"
+		texturefile = "gfx/interface/SRA_event_diplomacy/SRA_alter_event_diplomacy_background.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		# alwaysTransparent = yes
+		animation = {
+			animationmaskfile = "gfx/interface/SRA_event_diplomacy/SRA_alter_event_diplomacy_background_2.dds"			
+			animationtexturefile = "gfx/interface/SRA_event_diplomacy/SRA_alter_event_diplomacy_background_2.dds"
+			animationrotation = 45
+			animationlooping = yes
+			animationtime = 60
+			animationdelay = 0
+			animationblendmode = "overlay"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_SRA_alter_event_diplomacy_option"
+		texturefile = "gfx/interface/SRA_event_diplomacy/SRA_alter_event_diplomacy_option.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		#noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_nothing_event_diplomacy_background"
+		texturefile = "gfx/interface/SRA_event_diplomacy/SRA_nothing_event_diplomacy_background.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		#noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_text"
+		texturefile = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_text.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_text_2"
+		texturefile = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_text_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	portraitType = {
+		name = "GFX_SRA_diplomacy_portrait_mask"
+		texturefile = "gfx/interface/SRA_event_diplomacy/SRA_diplomacy_portrait_mask.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_diplomacy_portrait_mask_2.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.shader"
+		type = character_largest
+		character = yes
+		# mid_close_up = yes
+		# alternate_configurations = {
+		# 	holographic
+		# }
+	}
+	
+	spriteType = {
+		name = "GFX_SRA_diplomacy_name_cognitive_filtration"
+		texturefile = "gfx/interface/SRA_event_diplomacy/SRA_diplomacy_face_cognitive_filtration_bg.dds"
+		alwaysTransparent = yes
+	}
+	# bg
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_alien_city"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_alien_city.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_signal_city"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_signal_city.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_command_center"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_command_center.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_Calamitisease_bg"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_Calamitisease_bg.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_Calamitisease_blue_bg"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_Calamitisease_blue_bg.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_paragon_azaryn_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_paragon_azaryn_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_paragon_keides_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_paragon_keides_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_paragon_skrand_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_paragon_skrand_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_salvagers_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_salvagers_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_shroud_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_shroud_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_shroudwalkers_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_shroudwalkers_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_solarpunk_01_city"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_solarpunk_01_city.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_solarpunk_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_solarpunk_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_specialist_prospectorium_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_specialist_prospectorium_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_diplomacy_bg_SRA_specialist_scholarium_room"
+		texturefile = "gfx/interface/SRA_event_diplomacy/bg/SRA_specialist_scholarium_room.dds"
+		masking_texture = "gfx/interface/SRA_event_diplomacy/SRA_event_diplomacy_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+	# 立绘
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_00"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_00.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_01"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_01.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_02"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_02.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_03"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_03.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_04"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_04.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_05"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_05.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_06"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_06.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_07"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_07.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_11"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_11.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_12"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_12.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_13"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_13.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_14"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_14.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_15"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_15.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_16"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_16.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_17"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_17.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_18"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_18.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_19"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_19.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_21"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_21.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_22"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_22.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_23"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_23.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_2399"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_23.dds"
+		effectFile = "gfx/FX/SRA_signal_instability.shader"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_25"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_25.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_26"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_26.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_27"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_27.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_28"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_28.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_29"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_29.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_32"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_32.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_33"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_33.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_3399"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_33.dds"
+		effectFile = "gfx/FX/SRA_signal_instability.shader"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_35"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_35.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_36"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_36.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_37"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_37.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_38"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_38.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_42"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_42.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_43"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_43.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_45"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_45.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_46"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_46.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_47"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_47.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_52"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_52.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_53"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_53.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_55"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_55.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_56"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_56.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_57"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_57.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_61"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_61.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_62"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_62.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_63"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_63.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_64"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_64.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_65"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_65.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_66"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_66.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_67"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_67.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_68"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_68.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_69"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_69.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_71"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_71.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_72"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_72.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_73"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_73.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_74"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_74.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_75"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_75.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_76"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_76.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_77"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_77.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_78"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_78.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_1001"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_1001.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_1005"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_1005.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_SRA_event_portrait_diff_1006"
+		texturefile = "gfx/interface/SRA_event_diplomacy/portrait_SRA/SRA_1006.dds"
+		alwaysTransparent = yes
+	}
+}
