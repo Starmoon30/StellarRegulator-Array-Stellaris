@@ -98,7 +98,6 @@ tech_SRA_T4_weapon_SML_Mass_Drivers = {
 
 	prerequisites = { "tech_SRA_T4_ship_Part" }
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 		diplo_action = {
@@ -150,7 +149,6 @@ tech_SRA_T4_weapon_TX_Laser = {
 
 	prerequisites = { "tech_SRA_T4_ship_Part" }
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 		diplo_action = {
@@ -203,7 +201,6 @@ tech_SRA_T4_weapon_HGP_weapon = {
 
 	prerequisites = { "tech_SRA_T4_ship_Part" }
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 		diplo_action = {
@@ -253,7 +250,6 @@ tech_SRA_T4_ship_Part = {
 	weight = 50
 	is_reverse_engineerable = no
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 		diplo_action = {
@@ -458,7 +454,6 @@ tech_SRA_Barrier_megastructure_0 = {
 
 	prerequisites = { "tech_SRA_T4_ship_Part" }
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 		diplo_action = {
@@ -815,7 +810,6 @@ tech_SRA_T3_weapon_SML_Plasma = {
 
 	prerequisites = { "tech_SRA_T3_ship_Part" }
 
-	ai_update_type = all
 	
 	prereqfor_desc = {
 		diplo_action = {
@@ -855,7 +849,6 @@ tech_SRA_T3_weapon_TX_Laser = {
 
 	prerequisites = { "tech_SRA_T3_ship_Part" }
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 		diplo_action = {
@@ -895,7 +888,6 @@ tech_SRA_T3_weapon_HGP_weapon = {
 
 	prerequisites = { "tech_SRA_T3_ship_Part" }
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 		diplo_action = {
@@ -935,7 +927,6 @@ tech_SRA_T3_ship_Part = {
 
 	prerequisites = { "tech_SRA_T3_Composite_Crystal_Lattice" }
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 		diplo_action = {
@@ -1293,7 +1284,6 @@ tech_SRA_SD_ship_Part = {
 
 	prerequisites = { "tech_zero_point_power" }
 
-	ai_update_type = all
 
 	prereqfor_desc = {
 	}	

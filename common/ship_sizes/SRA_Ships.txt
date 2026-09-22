@@ -449,7 +449,6 @@ SRA_Spear_Of_Galaxy_Zenith = {
 	takes_name_from_ship_design = yes
     can_disable = yes
 	combat_disengage_chance = 0.50
-	can_lead_armada = yes
 	can_have_federation_design = no
 	
 	is_space_object = yes

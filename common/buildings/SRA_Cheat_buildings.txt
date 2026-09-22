@@ -20,7 +20,7 @@ building_SRA_control_centre = {
 	}
 	planet_modifier = {
 		# planet_max_buildings_add = 160
-		planet_max_branch_office_buildings_add = 64
+		branch_office_target_max_buildings_add = 64
 		planet_defense_armies_add = 20
 	}
 	resources = {
