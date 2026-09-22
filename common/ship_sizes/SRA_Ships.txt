@@ -437,7 +437,7 @@ SRA_Spear_Of_Galaxy_Zenith = {
 	max_hitpoints = @SRA_ship_hull_add_4
 	map_counter_icon = ship_counter_128
 	size_multiplier = @SRA_size_multiplier_flagship
-	combat_size_multiplier = @SRA_size_multiplier_small
+	combat_size_multiplier = @SRA_size_multiplier_flagship
 	fleet_slot_size = 32
 	section_slots = { "mid" = { locator = "part1" }  }
 	num_target_locators = 12
@@ -449,7 +449,7 @@ SRA_Spear_Of_Galaxy_Zenith = {
 	takes_name_from_ship_design = yes
     can_disable = yes
 	combat_disengage_chance = 0.50
-	
+	can_lead_armada = yes
 	can_have_federation_design = no
 	
 	is_space_object = yes
@@ -681,7 +681,7 @@ SRA_Spear_Of_Galaxy_Zenith_action1 = {
 	max_hitpoints = @SRA_ship_hull_add_4
 	map_counter_icon = ship_counter_128
 	size_multiplier = @SRA_size_multiplier_flagship
-	combat_size_multiplier = @SRA_size_multiplier_small
+	combat_size_multiplier = @SRA_size_multiplier_flagship
 	fleet_slot_size = 32
 	section_slots = { "mid" = { locator = "part1" }  }
 	num_target_locators = 12

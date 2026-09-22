@@ -252,6 +252,13 @@ country_event = {
 		}
 		text = SRA_RE_Rocivia.3011.o.desc
 	}
+	desc = {
+		trigger = { 
+			check_variable = { which = SRA_RE_dialogue_talk value = 1 }
+			has_global_flag = has_touhou_mod
+		}
+		text = SRA_RE_Rocivia.3011.p.desc
+	}
 	#微笑
 	desc = {
 		trigger = { 

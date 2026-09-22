@@ -1,9 +1,9 @@
 ﻿l_simp_chinese:
 ###############################
- SRA_version:0 "1.4.99 「浪迹星涯」"
- SRA_version_date:0 "2026.7.30"
- SRA_latest_update_info:0 "修复编码错误导致的事件触发不正常问题。\n神秘测试内容更新。\n"
- SRA_history_update_info:0 "在让星规出任领袖时，领袖的肖像会与星规当前的换装匹配。\n修复了时空相位偏移器没有正常生成的问题。\n修复了星穹之矛在方舟舰状态下新星终结远程打击无法工作的问题。\n改进了渺远星辰的稳定性。\n部分bug修复。\n星穹之矛方舟舰对恒星使用新星终结时不会再摧毁自己。\n为星规寰宇区划组添加了生态区类型。\n修复了星穹之矛方舟舰的停用相关机制工作不正常的问题。\n修复了星穹之矛在使用跨星系打击时会失去方舟舰状态的问题。\n修复了作战电脑在普通方舟上可用的问题\n适配4.4\n星穹之矛现在可以切换为方舟舰\n"
+ SRA_version:0 "1.5.0 「浪迹星涯」"
+ SRA_version_date:0 "2026.9.22"
+ SRA_latest_update_info:0 "适配4.5。\n为星规作战电脑添加了自动战斗功能。\n部分实现改进。\n添加了与 东方繁星录 的联动文本。\n"
+ SRA_history_update_info:0 "修复编码错误导致的事件触发不正常问题。\n神秘测试内容更新。\n"
  SRA_settings.title:0 "星规阵列-设置面板"
  SRA_settings.desc:0 "本界面提供对 星规阵列MOD 的设置调整功能，你可以随时在法令内重新打开此界面。\n\n§E当前版本：$SRA_version$§!\n§E正式更新时间：$SRA_version_date$§!\n\n§Y更新内容：§!\n§L$SRA_latest_update_info$§!§Y\n此版本历史更新内容：§!\n§L$SRA_history_update_info$§!"
  SRA_settings.exit:0 "关闭设置面板"
