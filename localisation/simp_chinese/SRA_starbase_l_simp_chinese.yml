@@ -1,0 +1,68 @@
+﻿l_simp_chinese:
+###############################
+ sm_SRA_workforce_starbase_building:0 "§B星规-综合增效设施§!"
+ sm_SRA_workforce_starbase_building_desc:0 "§B这套设施能提升$SRA_orbital_ring$所在星球的岗位综合效能，增加所有岗位的岗位效率。§!"
+ sm_SRA_databan_starbase_building:0 "§B星规-科研增效设施§!"
+ sm_SRA_databan_starbase_building_desc:0 "§B这套设施能提升$SRA_orbital_ring$所在星球的科研效能，增加$job_SRA_databan_specialist$的岗位效率。§!"
+ sm_SRA_foundry_starbase_building:0 "§B星规-构建增效设施§!"
+ sm_SRA_foundry_starbase_building_desc:0 "§B这套设施能提升$SRA_orbital_ring$所在星球的构建效能，增加$job_SRA_foundry_specialist$的岗位效率。§!"
+ sm_SRA_alloys_starbase_building:0 "§B星规-铸造增效设施§!"
+ sm_SRA_alloys_starbase_building_desc:0 "§B这套设施能提升$SRA_orbital_ring$所在星球的铸造效能，增加$job_SRA_alloys_specialist$的岗位效率。§!"
+
+ sm_SRA_nano_shipyard:0 "§B星规-质能构筑框架§!"
+ sm_SRA_nano_shipyard_desc:0 "§B得益于星规阵列先进的质能操纵技术，我们可以直接在太空中利用军工材料直接构筑出舰船，这使得恒星基地能够迅速生产大量舰船。§!"
+ sm_SRA_T3_shipyard:0 "星辉舰船装配框架"
+ sm_SRA_T3_shipyard_desc:0 "得益于['concept_SRA_Composite_Crystal_Lattice']技术，生产舰船的流程实现了高度自动化和模块化，大量工作可以同时开展，从而优化造船效率。"
+ sm_SRA_starbase_turret:0 "§B星规-龙爪哨卫§!"
+ sm_SRA_starbase_turret_desc:0 "§B这个恒星基地模块基于星规阵列的模块化技术，为恒星基地加装了额外的炮塔和装甲，并允许恒星基地指挥更多的防御平台。§!"
+
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_engineering_bay:0 "§B星穹之矛-全息锻炉§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_engineering_bay_desc:0 "§B星穹之矛采用先进的质能操纵技术来大批量生产需要的结构。§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_docking_bay:0 "§B星穹之矛-格纳库§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_docking_bay_desc:0 "§B星穹之矛能为整个远征舰队提供停泊与维护——前提是它们需要。§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_habitation_module:0 "§B星穹之矛-居住区拓展§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_habitation_module_desc:0 "§B星穹之矛具有可拓展的内部空间。§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_grand_archive:0 "§B星穹之矛-$sm_arkship_grand_archive$§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_grand_archive_desc:0 "$sm_arkship_grand_archive_desc$"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_hangar_bay:0 "§B星穹之矛-航空锻炉扩增§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_hangar_bay_desc:0 "§B扩增航空锻炉可以大幅度加快舰载机的补充速度。§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_hull:0 "§B星穹之矛-极化结构§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_hull_desc:0 "§B充能的舰体可以抵抗更多的攻击。§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump:0 "§B星穹之矛-超越驱动§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_desc:0 "§B星穹之矛的先进相位变换驱动系统能够在几乎不需要充能的情况下实现远距离跳跃。§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_tt: "$ARKSHIP_ACTION_HEADER$ $TABBED_NEW_LINE$['scripted_action:SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump']"
+ has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_tt: "拥有一个§Y$sm_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump$§!"
+ has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_fail_tt: "$TRIGGER_FAIL$$has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_tt$"
+ has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_pass_tt: "$TRIGGER_PASS$$has_SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_tt$"
+ SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump: "超越驱动"
+ SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_desc: "§Y允许星穹之矛立即抵达目标星系，这种独特的超光速驱动系统能在跃迁引擎难以运作的领域工作。§!"
+ SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_fleet_effect: "$FLEET_EFFECTS_HEADER$$TABBED_NEW_LINE$—舰船将立即抵达至预计散射半径内的某个随机恒星系。$TABBED_NEW_LINE$—以这种方式发射的舰队会受到[GetQuanticAmbushBonus]§H射速§!提升，持续时间£time£§H120天§!。"
+ SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_ship_button: "$SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_fleet_effect$$DOUBLE_NEW_LINE$$SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_desc$"
+ SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_activity_key: "正在计算跃迁至$NAME$（§Y$PROGRESS$%§!）"
+ SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_progress_activity_key: "跃迁中（§Y$PROGRESS$%§!）"
+ SRA_Spear_Of_Galaxy_Zenith_Ark_exodus_jump_required_progress_key: "§Y立即§!"
+
+
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_weapon_range:0 "§B星穹之矛-目标定位巨型机§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_weapon_range_desc:0 "§B目标定位巨型机可以为整个舰队提供信息，提升各类武器的有效射程。§!"
+ SRA_SOGZ_Ark_SHIP_AURA_RANGE:0 "§B星穹之矛-目标定位巨型机§!"
+ SRA_SOGZ_Ark_SHIP_AURA_RANGE_DESC:0 "§B目标定位巨型机可以为整个舰队提供信息，提升各类武器的有效射程。"
+ SRA_SOGZ_Ark_SHIP_AURA_RANGE_1:0 "§B目标定位网络§!"
+
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_remove_hangar_bay:0 "§B星穹之矛-航空锻炉分流§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_remove_hangar_bay_desc:0 "§B将原本用于补充舰载机的航空锻炉转移到部件维护工作上可以大幅度提升在战斗中修理船体的速度。§!"
+
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_hull_hangar_bay:0 "§B星穹之矛-强化航空锻炉§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_hull_hangar_bay_desc:0 "§B通过增强航空锻炉的效能，可以让舰载机的结构强度得到与舰船相同的提升。§!\n§Y-提供与当前 §G$MOD_SHIP_SHIELD_MULT$§! §G$MOD_SHIP_ARMOR_MULT$§! §G$MOD_SHIP_HULL_MULT$§! 修正相等的 §G$MOD_STRIKE_CRAFT_SHIELD_MULT$§! §G$MOD_STRIKE_CRAFT_ARMOR_MULT$§! §G$MOD_STRIKE_CRAFT_HULL_MULT$§! 修正。§!"
+
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_regen_add_static:0 "§B星穹之矛-协同强化系统§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_regen_add_static_desc:0 "§B通过额外附加的强化系统，可以让舰船的结构恢复速度得到与结构强度相同的提升。§!§Y-提供受 §G$MOD_SHIP_SHIELD_MULT$§! §G$MOD_SHIP_ARMOR_MULT$§! §G$MOD_SHIP_HULL_MULT$§! 修正影响的 §G$MOD_SHIP_SHIELD_REGEN_ADD_STATIC$§! §G$MOD_SHIP_ARMOR_REGEN_ADD_STATIC$§! §G$MOD_SHIP_HULL_REGEN_ADD_STATIC$§! 修正。§!"
+
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_planet_jobs_produces:0 "§B星穹之矛-全方位产业联动§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_planet_jobs_produces_desc:0 "§B在优化的产业体系下，提高产出速度的技术也能参与到对产出效率的提升中。§!\n§Y-提供与当前 §G$MOD_POP_BONUS_WORKFORCE_MULT$§! 修正相等的 §G$mod_planet_jobs_produces_mult$§! 修正。§!"
+
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_bonus_automated_workforce:0 "§B星穹之矛-自动化产业适配§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_bonus_automated_workforce_desc:0 "§B在优化的产业体系下，提高产出速度的技术也能作用在自动化产业上。§!\n§Y-提供与当前 §G$MOD_POP_BONUS_WORKFORCE_MULT$§! 修正相等的 §G$MOD_BONUS_AUTOMATED_WORKFORCE_MULT$§! 修正。§!"
+
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_embassy_complex:0 "§B星穹之矛-使馆综合体§!"
+ sm_SRA_Spear_Of_Galaxy_Zenith_Ark_embassy_complex_desc:0 "$sm_arkship_embassy_complex_desc$"

@@ -125,3 +125,148 @@ SRA_Spear_Of_Galaxy_Zenith_Ark_regen_add_static = {
 		weight = 100
 	}
 }
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_planet_jobs_produces = {
+	icon = "GFX_orbitalring_noble_estates"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_colony_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+	triggered_planet_modifier = {
+		planet_jobs_produces_mult = 1
+		mult = colony.modifier:pop_bonus_workforce_mult
+	}
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+SRA_Spear_Of_Galaxy_Zenith_Ark_bonus_automated_workforce = {
+	icon = "GFX_orbitalring_slave_processing_facility"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_colony_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+	}
+	triggered_planet_modifier = {
+		bonus_automated_workforce_mult = 1
+		mult = colony.modifier:pop_bonus_workforce_mult
+	}
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+SRA_Spear_Of_Galaxy_Zenith_Ark_embassy_complex = {
+	icon = "GFX_orbitalring_embassy_complex"
+	starbase_type = arkship
+	construction_days = 5
+	category = sm_colony_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		has_starbase_size = SRA_Spear_Of_Galaxy_Zenith_Ark
+		owner? = {
+			has_technology = tech_xeno_relations
+			is_regular_empire = yes
+		}
+		colony? = {
+			is_capital = yes
+			NOR = {
+				has_modifier = resort_colony
+				has_modifier = slave_colony
+			}
+		}
+	}
+
+	possible = {
+		colony? = {
+			NOR = {
+				has_building_construction = building_embassy
+				has_building = building_embassy
+				has_building_construction = building_grand_embassy
+				has_building = building_grand_embassy
+			}
+		}
+	}
+
+	abort_trigger = {
+		OR = {
+			owner? = {
+				is_regular_empire = no
+			}
+			colony? = { is_capital = no }
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			owner? = {
+				is_regular_empire = no
+			}
+			colony? = { is_capital = no }
+		}
+	}
+
+	show_in_tech = "tech_xeno_relations"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+		is_regular_empire = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+	}
+
+	country_modifier = {
+		envoys_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_worker_coop_empire = no
+				is_gestalt = no
+			}
+		}
+		job_politician_add = @building_static_jobs_low
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				is_worker_coop_empire = yes
+			}
+		}
+		job_bureaucrat_add = @building_static_jobs_low
+		mult = 1.5
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

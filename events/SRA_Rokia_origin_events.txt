@@ -41,9 +41,9 @@ country_event = {
 		copy_techs_from = { 
 			target = event_target:SRA_Chief_country
 		}
-		country_event = {
-			id = SRA_Start.9
-		}
+		# country_event = {
+		# 	id = SRA_Start.9
+		# }
 		country_event = {
 			id = SRA_Rokia_origin.2 days = 5
 		}

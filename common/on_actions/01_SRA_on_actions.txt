@@ -271,3 +271,7 @@ on_SRA_ship_auto_attack_planet = {
 		SRA_StellarRegulator.10222
 	}
 }
+
+on_tech_increased = {
+	SRA_Start.6
+}

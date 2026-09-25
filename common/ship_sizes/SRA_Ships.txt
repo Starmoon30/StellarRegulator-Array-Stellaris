@@ -599,7 +599,7 @@ SRA_Spear_Of_Galaxy_Zenith_Ark = {
 	combat_size_multiplier = @SRA_size_multiplier_small
 	fleet_slot_size = 32
 
-	is_designable = no
+	is_designable = yes # black magic
 	num_target_locators = 12
 	is_space_station = no
 	can_have_federation_design = no
@@ -642,6 +642,9 @@ SRA_Spear_Of_Galaxy_Zenith_Ark = {
 	}
 
 	ai_ship_data = {
+		fraction = {
+			base = 0
+		}
 	}
 }
 
@@ -970,7 +973,7 @@ SRA_orbital_ring = {
 		always = no
 	}
 
-	is_designable = no
+	is_designable = yes # black magic
 	num_target_locators = 1
 	is_space_station = no
 	can_have_federation_design = no
@@ -980,7 +983,7 @@ SRA_orbital_ring = {
 	flip_control_on_disable = no
 
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	prerequisites = { "tech_SRA_starbase_turret" }
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
 	class = shipclass_starbase
 
 	required_component_set = "power_core"
@@ -1048,7 +1051,7 @@ SRA_SD_metabyss_orbital_ring = {
 		always = no
 	}
 
-	is_designable = no
+	is_designable = yes # black magic
 	num_target_locators = 1
 	is_space_station = no
 	can_have_federation_design = no
@@ -1121,7 +1124,8 @@ starbase_SRA_1 = {
 	icon = ship_size_military_1
 	
 	class = shipclass_starbase
-	is_designable = no
+	is_designable = yes # black magic
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
 	
 	components_add_to_cost = no
 	enable_default_design = no
@@ -1210,7 +1214,8 @@ starbase_SRA_chaos_1 = {
 	icon = ship_size_military_1
 	
 	class = shipclass_starbase
-	is_designable = no
+	is_designable = yes # black magic
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
 	
 	components_add_to_cost = no
 	can_have_federation_design = no
@@ -1412,7 +1417,8 @@ starbase_SRA_RE_Calamitisease = {
 	icon = ship_size_military_1
 	
 	class = shipclass_starbase
-	is_designable = no
+	is_designable = yes # black magic
+	prerequisites = { "tech_SRA_T4_hidden_tech" }
 	
 	components_add_to_cost = no
 	can_have_federation_design = no

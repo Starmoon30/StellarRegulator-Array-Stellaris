@@ -1,0 +1,155 @@
+objectTypes = {
+	pdxmesh = {
+		name = "SRA_Adjudicator_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator.mesh"
+		scale = 1.0
+
+		animation = { id = "idle" type = "SRA_Adjudicator_idle_animation" }
+		animation = { id = "opening" type = "SRA_Adjudicator_opening_animation" }
+		animation = { id = "opened" type = "SRA_Adjudicator_opened_animation" }
+		animation = { id = "closing" type = "SRA_Adjudicator_closing_animation" }
+
+		meshsettings = {
+			name = "outer_floating_wing_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_outer_floating_wing_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_outer_floating_wing_Normal.dds"
+			texture_specular = "SRA_Adjudicator_outer_floating_wing_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "main_Mat"
+			index = 1
+			texture_diffuse = "SRA_Adjudicator_main_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_main_Normal.dds"
+			texture_specular = "SRA_Adjudicator_main_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "ring_Mat"
+			index = 2
+			texture_diffuse = "SRA_Adjudicator_ring_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_ring_Normal.dds"
+			texture_specular = "SRA_Adjudicator_ring_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "SRA_Adjudicator_crystal_S_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_crystal_S.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "crystal_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_crystal_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_crystal_Normal.dds"
+			texture_specular = "SRA_Adjudicator_crystal_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_Adjudicator_crystal_A_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_crystal_A.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "crystal_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_crystal_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_crystal_Normal.dds"
+			texture_specular = "SRA_Adjudicator_crystal_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_Adjudicator_crystal_B_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_crystal_B.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "crystal_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_crystal_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_crystal_Normal.dds"
+			texture_specular = "SRA_Adjudicator_crystal_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_Adjudicator_crystal_C_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_crystal_C.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "crystal_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_crystal_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_crystal_Normal.dds"
+			texture_specular = "SRA_Adjudicator_crystal_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_Adjudicator_crystal_D_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_crystal_D.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "crystal_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_crystal_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_crystal_Normal.dds"
+			texture_specular = "SRA_Adjudicator_crystal_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_Adjudicator_ifw_A_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_ifw_A.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "inner_floating_wing_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_inner_floating_wing_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_inner_floating_wing_Normal.dds"
+			texture_specular = "SRA_Adjudicator_inner_floating_wing_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_Adjudicator_ifw_B_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_ifw_B.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "inner_floating_wing_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_inner_floating_wing_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_inner_floating_wing_Normal.dds"
+			texture_specular = "SRA_Adjudicator_inner_floating_wing_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_Adjudicator_ifw_C_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_ifw_C.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "inner_floating_wing_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_inner_floating_wing_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_inner_floating_wing_Normal.dds"
+			texture_specular = "SRA_Adjudicator_inner_floating_wing_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "SRA_Adjudicator_ifw_D_mesh"
+		file = "gfx/models/ships/SRA_Adjudicator_ship/SRA_Adjudicator_ifw_D.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "inner_floating_wing_Mat"
+			index = 0
+			texture_diffuse = "SRA_Adjudicator_inner_floating_wing_diffuse.dds"
+			texture_normal = "SRA_Adjudicator_inner_floating_wing_Normal.dds"
+			texture_specular = "SRA_Adjudicator_inner_floating_wing_Specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

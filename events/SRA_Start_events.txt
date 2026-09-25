@@ -266,6 +266,18 @@ carrier_event = {
 		}
 	}
 }
+country_event = {
+	id = SRA_Start.6 # 唉唉发设计
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		last_increased_tech = tech_SRA_starbase_turret
+	}
+	immediate = {
+		create_ship_design = { design = "NAME_SRA_orbital_ring" }
+		add_ship_design = last_created_design
+	}
+}
 #善良人口主体化
 country_event = {
 	id = SRA_Start.8
@@ -281,32 +293,32 @@ country_event = {
 }
 
 #把蠢驴民用船设计炸了更新一下（暂用方案
-country_event = {
-	id = SRA_Start.9
-	is_triggered_only = yes
-	hide_window = yes
-	trigger = {
-	}
-	immediate = {
-		every_owned_design = {
-			limit = {
-				OR = {
-					is_ship_size = constructor
-					is_ship_size = colonizer
-					is_ship_size = sponsored_colonizer
-					is_ship_size = lithoid_colonizer
-					is_ship_size = guided_sapience_colonizer
-					is_ship_size = science
-					is_ship_size = transport
-				}
-			}
-			prev = {
-				remove_ship_design = prev
-			}
-		}
-		refresh_auto_generated_ship_designs = yes
-	}
-}
+# country_event = {
+# 	id = SRA_Start.9
+# 	is_triggered_only = yes
+# 	hide_window = yes
+# 	trigger = {
+# 	}
+# 	immediate = {
+# 		every_owned_design = {
+# 			limit = {
+# 				OR = {
+# 					is_ship_size = constructor
+# 					is_ship_size = colonizer
+# 					is_ship_size = sponsored_colonizer
+# 					is_ship_size = lithoid_colonizer
+# 					is_ship_size = guided_sapience_colonizer
+# 					is_ship_size = science
+# 					is_ship_size = transport
+# 				}
+# 			}
+# 			prev = {
+# 				remove_ship_design = prev
+# 			}
+# 		}
+# 		refresh_auto_generated_ship_designs = yes
+# 	}
+# }
 
 country_event = {
 	id = SRA_Start.21
