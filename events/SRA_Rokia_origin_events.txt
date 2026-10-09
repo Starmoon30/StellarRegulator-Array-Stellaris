@@ -60,7 +60,7 @@ country_event = {
 			every_owned_fleet = {
 				set_owner = root
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				set_owner = root
 			}
 			every_owned_megastructure = {
@@ -222,7 +222,7 @@ country_event = {
 		custom_tooltip =  SRA_Rokia_origin.3.e.tooltip
 		response_text = SRA_Rokia_origin.3.e.desc
 		hidden_effect = {
-			every_owned_planet = {
+			every_owned_colony = {
 				remove_building = building_SRA_databank
 				remove_building = building_SRA_foundry
 			}

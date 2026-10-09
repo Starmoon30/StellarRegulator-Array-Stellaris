@@ -625,7 +625,7 @@ country_event = {
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					save_event_target_as = SRA_Spear_Of_Galaxy_Zenith_capital_location
 				}
 			}
@@ -2416,7 +2416,7 @@ country_event = {
 				capital_scope = { save_event_target_as = SRA_SOGZ_ark_ship_pop_destination }
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = { is_capital = no }
 					save_event_target_as = SRA_SOGZ_ark_ship_pop_destination
 				}

@@ -1,9 +1,9 @@
 ﻿l_simp_chinese:
 ###############################
- SRA_version:0 "1.5.2 「全军出击」"
- SRA_version_date:0 "2026.9.25"
- SRA_latest_update_info:0 "修复了其他星规恒星基地通用槽被强制更新的问题。\n"
- SRA_history_update_info:0 "使用黑魔法解决了星穹之矛方舟舰会被强制更新组件槽的问题。\n更新了星规裁决单元的舰船模型！！！\n为星穹之矛方舟舰添加了新的恒星基地建筑。\n适配4.5。\n为星规作战电脑添加了自动战斗功能。\n部分实现改进。\n添加了与 东方繁星录 的联动文本。\n"
+ SRA_version:0 "1.5.3 「全军出击」"
+ SRA_version_date:0 "2026.9.30"
+ SRA_latest_update_info:0 "手写本地化修复了带有limit的光环组件不显示具体数值的问题。\n"
+ SRA_history_update_info:0 "修复了其他星规恒星基地通用槽被强制更新的问题。\n使用黑魔法解决了星穹之矛方舟舰会被强制更新组件槽的问题。\n更新了星规裁决单元的舰船模型！！！\n为星穹之矛方舟舰添加了新的恒星基地建筑。\n适配4.5。\n为星规作战电脑添加了自动战斗功能。\n部分实现改进。\n添加了与 东方繁星录 的联动文本。\n"
  SRA_settings.title:0 "星规阵列-设置面板"
  SRA_settings.desc:0 "本界面提供对 星规阵列MOD 的设置调整功能，你可以随时在法令内重新打开此界面。\n\n§E当前版本：$SRA_version$§!\n§E正式更新时间：$SRA_version_date$§!\n\n§Y更新内容：§!\n§L$SRA_latest_update_info$§!§Y\n此版本历史更新内容：§!\n§L$SRA_history_update_info$§!"
  SRA_settings.exit:0 "关闭设置面板"

@@ -20,6 +20,7 @@
  SRA_Aura_5_DESC:0 "§B“信仰乃是为了虚幻之人。”§!"
  SRA_Aura_5_1:0 "§BSubterranean Rose§!"
  SRA_Aura_5_2:0 "§BScarlet Destiny§!"
+ SRA_Aura_5_2_modifier:0 "$SRA_Aura_5_2$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_SHIELD_DAMAGE_MULT$：§R-50%§!\n $MOD_SHIP_ARMOR_DAMAGE_MULT$：§R-50%§!\n $MOD_SHIP_HULL_DAMAGE_MULT$：§R-50%§!\n $MOD_SHIP_WEAPON_RANGE_MULT$：§R-50%§!\n 每日伤害：§Y6400§!\n 命中率：§Y100%§!"
  NAME_SRA_Crisis_Fort_Fleet:0 "主控星核"
  NAME_SRA_Crisis_Mark_Fleet:0 "同调节点"
  NAME_SRA_Crisis_Fort:0 "远行要塞"

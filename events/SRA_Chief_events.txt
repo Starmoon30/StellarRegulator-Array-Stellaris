@@ -1600,11 +1600,9 @@ country_event = {
 			set_variable = { which = "fleet_id" value = event_target:SRA_Chief_country.fleet_id }
 			solar_system = { set_variable = { which = SRA_Chief_fleet_id value = prev.fleet_id } }
 		}
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
-				NOT = {
-					is_planet_class = pc_ringworld_habitable_SRA_GZ
-				}
+				planet = { NOT = { is_planet_class = pc_ringworld_habitable_SRA_GZ } }
 				OR = {
 					has_building = building_SRA_databank
 					has_building = building_SRA_foundry
@@ -1646,14 +1644,19 @@ country_event = {
 					ai_ignore_strength = yes
 				}
 			}
-			while = { 
-				count = 10
-				create_army = {
-					name = "sentinel_army"
-					owner = event_target:SRA_Chief_country
-					species = event_target:SRA_Chief_species
-					type = "SRA_Eliminater"
-					#land_army = yes
+			if = {
+				limit = {
+					SRA_can_be_invaded_planet = yes
+				}
+				while = { 
+					count = 10
+					create_army = {
+						name = "sentinel_army"
+						owner = event_target:SRA_Chief_country
+						species = event_target:SRA_Chief_species
+						type = "SRA_Eliminater"
+						#land_army = yes
+					}
 				}
 			}
 		}
@@ -2056,7 +2059,7 @@ country_event = {
 				}
 				set_owner = root
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				set_owner = root
 			}
 			every_owned_megastructure = {
@@ -3058,10 +3061,11 @@ country_event = {
 		every_owned_colony = {
 			if = {
 				limit = {
-					exists = planet
-					NOR = {
-						is_planet_class = pc_ringworld_habitable_SRA_GZ
-						is_capital = yes
+					planet? = {
+						NOR = {
+							is_planet_class = pc_ringworld_habitable_SRA_GZ
+							is_capital = yes
+						}
 					}
 					OR = {
 						has_building = building_SRA_databank
@@ -3102,14 +3106,19 @@ country_event = {
 						set_owner = root
 					}
 				}
-				while = { 
-					count = 10
-					create_army = {
-						name = "sentinel_army"
-						owner = root
-						species = event_target:SRA_Chief_species
-						type = "SRA_Eliminater"
-						#land_army = yes
+				if = {
+					limit = {
+						SRA_can_be_invaded_planet = yes
+					}
+					while = { 
+						count = 10
+						create_army = {
+							name = "sentinel_army"
+							owner = root
+							species = event_target:SRA_Chief_species
+							type = "SRA_Eliminater"
+							#land_army = yes
+						}
 					}
 				}
 			}
@@ -3467,7 +3476,7 @@ country_event = {
 			every_owned_fleet = {
 				set_owner = root
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				set_owner = root
 			}
 			every_owned_megastructure = {
@@ -4221,7 +4230,7 @@ country_event = {
 			every_owned_fleet = {
 				set_owner = root
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				set_owner = root
 			}
 			every_owned_megastructure = {
@@ -4663,7 +4672,7 @@ country_event = {
 			}
 			delete_ship = this
 		}
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				has_modifier = SRA_planet_killer_4_buff
 			}

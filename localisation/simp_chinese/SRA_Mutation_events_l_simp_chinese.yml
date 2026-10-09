@@ -152,13 +152,19 @@
 
  SRA_Mutation_Aura_1:0 "§B空间风暴§!"
  SRA_Mutation_Aura_1_DESC:0 "§B一场可怕的空间风暴正在发生，扭曲撕裂的空间结构将把几乎一切湮灭。§!"
+ SRA_Mutation_Aura_1_modifier:0 "$SRA_Mutation_Aura_1$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_SHIELD_REGEN_ADD_STATIC$：§R-800000000§!\n $MOD_SHIP_ARMOR_REGEN_ADD_STATIC$：§R-800000000§!\n $MOD_SHIP_HULL_REGEN_ADD_STATIC$：§R-800000000§!\n $MOD_SHIP_EVASION_MULT$：§R-4000%§!\n 每日伤害：§Y800000000§!\n 命中：§Y100%§!"
+
  SRA_Mutation_Aura_2:0 "§B荣耀爆炸§!"
  SRA_Mutation_Aura_2_DESC:0 "§B一场剧烈的爆炸对整个恒星系造成了冲击。§!"
+ SRA_Mutation_Aura_2_modifier:0 "$SRA_Mutation_Aura_2$\n§Y进攻性光环§!\n对敌方舰船效果：\n 每日伤害：§Y20000-2000§!\n 命中：§Y100%§!"
+
  SRA_SOGZ_menu_sub_4_3_Aura:0 "§B苍星陨灭§!"
  SRA_SOGZ_menu_sub_4_3_Aura_DESC:0 "§B毁灭性的庞大能量对整个恒星系造成了冲击。§!"
+ SRA_SOGZ_menu_sub_4_3_Aura_modifier:0 "$SRA_SOGZ_menu_sub_4_3_Aura$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_SHIELD_REGEN_ADD_STATIC$：§R-800000000§!\n $MOD_SHIP_ARMOR_REGEN_ADD_STATIC$：§R-800000000§!\n $MOD_SHIP_HULL_REGEN_ADD_STATIC$：§R-800000000§!\n $MOD_SHIP_EVASION_MULT$：§R-4000%§!\n 每日伤害：§Y800000000§!\n 命中：§Y100%§!"
+
  SRA_SOGZ_menu_sub_6_1_Aura:0 "§B新星终结§!"
  SRA_SOGZ_menu_sub_6_1_Aura_DESC:0 "§B毁灭性的庞大能量对整个恒星系造成了冲击。§!"
-
+ SRA_SOGZ_menu_sub_6_1_Aura_modifier:0 "$SRA_SOGZ_menu_sub_6_1_Aura$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_SHIELD_REGEN_ADD_STATIC$：§R-320000§!\n $MOD_SHIP_ARMOR_REGEN_ADD_STATIC$：§R-320000§!\n $MOD_SHIP_HULL_REGEN_ADD_STATIC$：§R-320000§!\n $MOD_SHIP_EVASION_MULT$：§R-4000%§!\n 每日伤害：§Y320000§!\n 命中：§Y100%§!"
 
  SRA_Mutation_1301_message_desc:0 "$SRA_Mutation_1301_fleet|Y$的$admiral$$SRA_Mutation_1301_leader|Y$在指挥舰队交战时，因一场斩首行动而§R阵亡§!。"
 

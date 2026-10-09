@@ -345,6 +345,7 @@ utility_component_template = {
 			}
 		}
 	}
+	custom_tooltip = SRA_Aura_5_2_modifier
 	ai_weight = {
 		weight = 0
 	}
@@ -386,6 +387,7 @@ utility_component_template = {
 			ship_base_speed_mult = -0.3
 		}
 	}
+	custom_tooltip = SRA_Aura_6_modifier
 	#硬化
 	friendly_aura = {
 		name = "SRA_Aura_6_1"

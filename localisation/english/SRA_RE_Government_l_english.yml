@@ -25,7 +25,7 @@
  MESSAGE_SRA_RE_StellarRegulator_TITLE:0 "§BStellarRe§!"
 
  SRA_RE_Rocivia_catch_phrase:0 "\"Ride on the back of the Silver Dragon, go, to the desert of life; ride on the back of the Silver Dragon, go, through the vortex of clouds and rain-\""
- SRA_RE_Rocivia_backstory:0 "\n§BRocivia§!, Supreme Speaker, leader of the Empire. It is claimed that she led a team in the pre-space age of this civilization and eventually conquered other factions to unify the entire civilization. However, nowadays she seems to have lost her enthusiasm, choosing to leave the Empire's planning to §YYOU§!, while she only spends a few minutes every day writing your ideas into usable plans.\n\n§BStarlight is distant, flickering with a fabricated image, behind which still lies the cold void.§!"
+ SRA_RE_Rocivia_backstory:0 "§BRocivia§!, Supreme Speaker, leader of the Empire. It is claimed that she led a team in the pre-space age of this civilization and eventually conquered other factions to unify the entire civilization. However, nowadays she seems to have lost her enthusiasm, choosing to leave the Empire's planning to §YYOU§!, while she only spends a few minutes every day writing your ideas into usable plans.\n\n§BStarlight is distant, flickering with a fabricated image, behind which still lies the cold void.§!"
  job_SRA_RE_Rocivia_job:0 "§B9th Circle Supreme Starlight Magician§!"
  job_SRA_RE_Rocivia_job_desc:0 "At least that's what she says.\nSo would a Materialist Magician write scrolls in an Object-Oriented Language?"
 
@@ -36,7 +36,7 @@
 
 
  SRA_RE_Hidra_catch_phrase:0 "Everything begins in the boundless Metarbor, and will end in the chaotic Metabyss."
- SRA_RE_Hidra_backstory:0 "\n§RHidra§!, Director of the Imperial Security Headquarters, governing the Secret Council. Accustomed to dereliction of duty, always unhurried. She occupies the peak of the clouds, overlooking all living beings, freely sowing blessings and curses.\n\n§RShadows churn, condensing into a superficial form, beneath which the disordered Metabyss lies deep.§!"
+ SRA_RE_Hidra_backstory:0 "§RHidra§!, Director of the Imperial Security Headquarters, governing the Secret Council. Accustomed to dereliction of duty, always unhurried. She occupies the peak of the clouds, overlooking all living beings, freely sowing blessings and curses.\n\n§RShadows churn, condensing into a superficial form, beneath which the disordered Metabyss lies deep.§!"
  job_SRA_RE_Hidra_job:0 "§RScamming Food and Drink while Doing Nothing§!"
  job_SRA_RE_Hidra_job_desc:0 "Really, found a lot of excuses to slack off.\nYou wouldn't want to see what she looks like when she gets active."
 

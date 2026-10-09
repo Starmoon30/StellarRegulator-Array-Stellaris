@@ -287,6 +287,7 @@ SRA_ship_auto_attack_planet = {
 			base = 0
 			modifier = {
 				add = 2000
+				SRA_can_be_invaded_planet = yes
 				colony? = {
 					controller? = {
 						is_hostile = root.from.controller

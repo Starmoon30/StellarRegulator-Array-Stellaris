@@ -177,7 +177,7 @@
  Name_SRA_leader_StellarRegulator:0 "§BStellarRe§!"
 
  SRA_StellarRegulator_catch_phrase:0 "Let's create and destroy something."
- SRA_StellarRegulator_backstory:0 "\nThe StellarRegulator Array, a mysterious machine intelligence that claims to be a True Gestalt Consciousness, has signed an agreement with you. At your request, this drone was sent by her to help you complete some work. Or perhaps, this is actually her herself."
+ SRA_StellarRegulator_backstory:0 "The StellarRegulator Array, a mysterious machine intelligence that claims to be a True Gestalt Consciousness, has signed an agreement with you. At your request, this drone was sent by her to help you complete some work. Or perhaps, this is actually her herself."
  job_SRA_StellarRegulator_job:0 "§BMaster of Civilizational Form Extermination§!"
  job_SRA_StellarRegulator_job_desc:0 "Act according to the situation, or act with ease."
 

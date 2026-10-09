@@ -8,9 +8,9 @@
  leader_trait_SRA_Rokia_ruler:0 "§R耀红黑星§!"
  leader_trait_SRA_Rokia_ruler_desc:0 "在诱骗银河系最富有野心的文明替她完成了计划后，整个宇宙都将最终化作无垠的深渊混沌。就这一层面来说，只要没有不可预测的外来干涉，她就能好好享受把一切握在手中的日子，去追求点个人兴趣，或者单纯休息休息，直到在命运的催促下再度启程。"
  SRA_Rokia_1_catch_phrase:0 "正因这世界早已重塑，一切都为虚假。"
- SRA_Rokia_1_backstory:0 "\n洛琪亚，一个神秘的智能实体，一个不可知的他者。"
+ SRA_Rokia_1_backstory:0 "洛琪亚，一个神秘的智能实体，一个不可知的他者。"
  SRA_Rokia_2_catch_phrase:0 "正因那起源从未存在，一切都为真实。"
- SRA_Rokia_2_backstory:0 "\n洛琪亚·路希维亚，流浪的异乡人。被赋名的概念，被分割的无限，被塑造的虚无。\n终有一日，她将抵达她未曾谋面的故乡。"
+ SRA_Rokia_2_backstory:0 "洛琪亚·路希维亚，流浪的异乡人。被赋名的概念，被分割的无限，被塑造的虚无。\n终有一日，她将抵达她未曾谋面的故乡。"
 
  SRA_Rokia_talk_return3:0 "让我再想想。" 
  SRA_Rokia_talk_return4:0 "我们聊点别的吧。" 

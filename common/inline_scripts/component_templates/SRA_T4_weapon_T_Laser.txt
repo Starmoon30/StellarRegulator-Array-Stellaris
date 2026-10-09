@@ -11,6 +11,8 @@
 	#use_ship_main_target = yes
 	
 	damage = { min = 32768 max = 49152 }
+	collateral_damage = { min = 2048 max = 3072 }
+	collateral_range = 4
 	windup = { min = 0 max =  64 }
 	total_fire_time = 128
 	range = 320.0

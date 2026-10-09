@@ -203,7 +203,7 @@
  Name_SRA_leader_StellarRegulator:0 "星规"
 
  SRA_StellarRegulator_catch_phrase:0 "让我们来创造并毁掉些什么吧。"
- SRA_StellarRegulator_backstory:0 "\n星规阵列，一个神秘的机械智能，自诩为真正的完型意识，与你签署了一份协议。依照你的请求，这个子个体被她派来帮你完成某些工作，又或许，这其实是她本人也说不定。"
+ SRA_StellarRegulator_backstory:0 "星规阵列，一个神秘的机械智能，自诩为真正的完型意识，与你签署了一份协议。依照你的请求，这个子个体被她派来帮你完成某些工作，又或许，这其实是她本人也说不定。"
  job_SRA_StellarRegulator_job:0 "§B文明形式灭绝大师§!"
  job_SRA_StellarRegulator_job_desc:0 "顺势而为，或者顺手而为。"
 

@@ -773,6 +773,8 @@ weapon_component_template = {
 	
 	
 	damage = { min = 8192 max = 12288 }
+	collateral_damage = { min = 512 max = 768 }
+	collateral_range = 4
 	windup = { min = 0 max =  64 }
 	total_fire_time = 128
 	range = 240.0
@@ -1208,6 +1210,8 @@ weapon_component_template = {
 	
 	
 	damage = { min = 8192 max = 12288 }
+	collateral_damage = { min = 512 max = 768 }
+	collateral_range = 4
 	windup = { min = 0 max =  64 }
 	total_fire_time = 128
 	range = 240.0
@@ -1640,6 +1644,8 @@ weapon_component_template = {
 	#use_ship_main_target = yes
 	
 	damage = { min = 4096 max = 6144 }
+	collateral_damage = { min = 256 max = 384 }
+	collateral_range = 4
 	windup = { min = 0 max =  64 }
 	total_fire_time = 128
 	range = 200.0
@@ -1984,6 +1990,8 @@ weapon_component_template = {
 	
 	
 	damage = { min = 16384 max = 24576 }
+	collateral_damage = { min = 1024 max = 1536 }
+	collateral_range = 4
 	windup = { min = 0 max =  64 }
 	total_fire_time = 128
 	range = 300
@@ -2236,6 +2244,8 @@ weapon_component_template = {
 	entity = "invisible_turret_entity"
 	
 	damage = { min = 16384 max = 24576 }
+	collateral_damage = { min = 1024 max = 1536 }
+	collateral_range = 4
 	
 	windup = { min = 0 max = 32 }
 	total_fire_time = 64
@@ -2288,6 +2298,8 @@ weapon_component_template = {
 	entity = "invisible_turret_entity"
 	
 	damage = { min = 32768 max = 49152 }
+	collateral_damage = { min = 2048 max = 3072 }
+	collateral_range = 4
 	
 	windup = { min = 0 max = 64 }
 	total_fire_time = 128

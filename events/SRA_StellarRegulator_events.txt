@@ -1636,13 +1636,18 @@ planet_event = {
 	}
 	immediate = {
 		colony = {
-			while = { 
-				count = 5
-				create_army = {
-					name = "sentinel_army"
-					owner = from.owner
-					species = from.owner
-					type = "SRA_Eliminater_Attacker"
+			if = {
+				limit = {
+					SRA_can_be_invaded_planet = yes
+				}
+				while = { 
+					count = 5
+					create_army = {
+						name = "sentinel_army"
+						owner = from.owner
+						species = from.owner
+						type = "SRA_Eliminater_Attacker"
+					}
 				}
 			}
 		}
@@ -2267,7 +2272,10 @@ fleet_event = {
 			solar_system = {
 				every_system_planet_colony = {
 					if = {
-						limit = { controller = { is_hostile = root.owner } }
+						limit = {
+							controller = { is_hostile = root.owner }
+							SRA_can_be_invaded_planet = yes
+						}
 						while = { 
 							count = 5
 							create_army = {

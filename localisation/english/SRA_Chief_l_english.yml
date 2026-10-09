@@ -315,23 +315,6 @@
  SRA_RE_Return_To_Calamitisease_megastructure_0_DESC:0 "A framework built from recovered Calamitisease remains, used to carry the power of the Abyss."
  SRA_RE_Return_To_Calamitisease_megastructure_1:0 "§RIgnite Ash with Fire§!"
  SRA_RE_Return_To_Calamitisease_megastructure_1_DESC:0 "Ignite the remains of Calamitisease with the fire of the Dark Star, reviving the boundless shadow."
-#潜在的首席路线
-#洛琪亚将成为统治者 已完成
-#移除星规，路希维亚，希德拉的通讯（暂定
-#移除星规碎片的加成 已完成
-#为所有已有的舰队，星球，领袖添加标签。将首席星系划归给玩家。创建一个新的危机势力，并将已被标记的舰队，星球，领袖移交给新的势力。 已完成
-#删除已存在的星穹之矛，并重新定位它到原始首都
-#帝国会立即进入铸星神械-湮灭模式来与你对抗，并从星穹之矛处定期刷新进攻舰队。
-#每隔一段时间，星穹之矛会向你移动一个星系。星穹之矛永久无敌。
-#你需要研究项目，推进剧情，偷袭帝国境内的防御站并派遣科研船研究相关项目，阻挠舰队的生成，得知星穹之矛的能量来源并发现其完全由自身供能。
-#希德拉会在稍后拜访，通知你既然如此。可以调用深渊构造体了。
-#你需要回到静谧钟塔，回收灾疫样本，然后在翡翠王座升级巨构来完成这个项目。
-#路希维亚会给出警告，告知你仍有机会停下，不将整个世界交付给深渊。
-#完成巨构，获取灾疫之心，使其抵达星穹之矛所在位置并令其完成星穹之矛上的特殊项目。灾疫之心存在时，星穹之矛每次被摧毁会停机60天以供你执行项目。
-#击败路希维亚，宣告她的失败。
-#回收星穹之矛，考虑星规的去留，你可以令她完全屈从于你的意志，或者将她毁灭以使她解脱，或者囚禁她，以待后日。
-#和希德拉对话，得知她和路希维亚此后的去向。
-#和洛琪亚对话，游戏胜利。
 
  SRA_Chief.601.desc:0 "Miss me, \"Executor\"?\n§RCalamitisease§! is indeed a good carrier for my power. Truly a miracle of nature's creation. This way, I don't need to fight your sampans all by myself; that's really tiring, you know.\nI'm not a villain in an 8 PM soap opera, so I won't tell you what I'm going to do. Bye-bye."
  SRA_Chief.601.a:0 "You will regret this."

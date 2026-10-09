@@ -515,10 +515,12 @@ country_event = {
 		}
 		if = {
 			limit = { has_country_flag = SRA_chaos_ascension_pop }
-			every_owned_planet = {
+			every_owned_colony = {
 				limit = {
-					NOT = {
-						is_planet_class = pc_SRA_chaos_star_habitable
+					planet? = {
+						NOT = {
+							is_planet_class = pc_SRA_chaos_star_habitable
+						}
 					}
 				}
 				while = {
@@ -701,7 +703,7 @@ country_event = {
 	immediate = {
 		set_country_flag = SRA_chaos_ascension_pop
 		add_modifier = { modifier = SRA_Rokia_8006_Buff days = -1 }
-		random_owned_planet = {
+		random_owned_colony = {
 			limit = {
 				any_owned_pop_group = {
 					is_robot_pop_group = yes
@@ -929,7 +931,7 @@ country_event = {
 			every_owned_fleet = {
 				set_owner = event_target:SRA_Rokia_country
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				set_owner = event_target:SRA_Rokia_country
 			}
 			every_owned_megastructure = {
@@ -1540,7 +1542,7 @@ country_event = {
 			every_owned_fleet = {
 				set_owner = event_target:SRA_Rokia_country
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				set_owner = event_target:SRA_Rokia_country
 			}
 			every_owned_megastructure = {

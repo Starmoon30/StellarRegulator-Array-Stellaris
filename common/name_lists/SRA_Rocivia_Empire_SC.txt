@@ -1,4 +1,5 @@
-﻿SRA_Rocivia_Empire = {
+﻿#
+SRA_Rocivia_Empire = {
 	randomized = no
 	ship_names = {
 		generic = {

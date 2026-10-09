@@ -4094,7 +4094,7 @@ country_event = {
 	show_sound = event_super_explosion
 	is_triggered_only = yes
 	immediate = {
-		random_owned_planet = {
+		random_owned_colony = {
 			solar_system = { destroy_star_system = yes }
 		}
 	}
@@ -4110,7 +4110,7 @@ country_event = {
 	show_sound = event_super_explosion
 	is_triggered_only = yes
 	immediate = {
-		random_owned_planet = {
+		random_owned_colony = {
 			sector = {
 				every_system_within_border = { destroy_star_system = yes }
 			}
@@ -4171,7 +4171,7 @@ country_event = {
 	show_sound = event_super_explosion
 	is_triggered_only = yes
 	immediate = {
-		random_owned_planet = {
+		random_owned_colony = {
 			solar_system = { destroy_star_system = yes }
 		}
 	}
@@ -4187,7 +4187,7 @@ country_event = {
 	show_sound = event_super_explosion
 	is_triggered_only = yes
 	immediate = {
-		random_owned_planet = {
+		random_owned_colony = {
 			sector = {
 				every_system_within_border = { destroy_star_system = yes }
 			}

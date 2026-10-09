@@ -38,7 +38,8 @@
  SRA_Aura_4_1:0 "§B抑制「Super Ego」§!"
 
  SRA_Aura_6:0 "§B星规-时空调谐系统§!"
- SRA_Aura_6_DESC:0 "§B这一作战系统能干涉整个恒星系的时空结构，展现出多种多样的效果。§!\n\n§Y对敌方舰队的效果总是生效，对盟友舰船的效果则按照当前选择的星穹之矛模块分配激活。"
+ SRA_Aura_6_DESC:0 "§B这一作战系统能干涉整个恒星系的时空结构，展现出多种多样的效果。§!"
+ SRA_Aura_6_modifier:0 "$SRA_Aura_6$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_WEAPON_RANGE_MULT$：§R-30%§!\n $MOD_SHIP_DISENGAGE_CHANCE_REDUCTION$：§R+100%§!\n $MOD_SHIP_EVASION_MULT$：§R-200%§!\n $MOD_SHIP_BASE_SPEED_MULT$：§R-30%§!\n 每日伤害：§Y6400§!\n 命中率：§Y100%§!"
  SRA_Aura_6_1:0 "§B潜时沉寂§!"
  SRA_Aura_6_3:0 "§B永时流转§!"
  SRA_Aura_6_4:0 "§B诸世尽灭§!"
@@ -208,10 +209,12 @@
  SRA_starbase_SRA_RE_Calamitisease_Reactor:0 "§R灾疫恒星阵列§!"
  SRA_starbase_SRA_RE_Calamitisease_Reactor_DESC:0 "§R遍布于整个恒星系的灾疫及其庞大的恒星能源收集结构。\n\n这个结构会完全禁止舰载机的行动并严重影响恒星系内所有非灾疫舰船的战斗能力，具有极高的攻击能力，而且难以被小规模攻击破坏。§!"
  SRA_starbase_SRA_RE_Calamitisease_Reactor_Aura_1:0 "§R活跃灾疫集群§!"
+ SRA_starbase_SRA_RE_Calamitisease_Reactor_Aura_1_modifier:0 "$SRA_starbase_SRA_RE_Calamitisease_Reactor_Aura_1$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_SHIELD_REGEN_ADD_STATIC$：§R-6400§!\n $MOD_SHIP_ARMOR_REGEN_ADD_STATIC$：§R-6400§!\n $MOD_SHIP_HULL_REGEN_ADD_STATIC$：§R-6400§!\n $MOD_SHIP_EVASION_MULT$：§R-50%§!\n $MOD_SHIP_WEAPON_RANGE_MULT$：§R-50%§!\n $MOD_STRIKE_CRAFT_REGENERATION_MULT$：§R-800%§!\n 每日伤害：§Y6400§!\n 命中：§Y100%§!"
 
  SRA_Rokia_dragon_Reactor:0 "§R耀红黑星-幻渊涌流§!"
  SRA_Rokia_dragon_Reactor_DESC:0 "§R超逾理解之悚骇伟力被引导而出，在星河间塑造出此等可怖造物。\n这颗游弋的流血星辰在意志的驱使下行动，意图挣脱命运的桎梏。§!"
  SRA_Rokia_dragon_Aura_1:0 "§R讳言混沌尘息，噤默万千生灵§!"
+ SRA_Rokia_dragon_Aura_1_modifier:0 "$SRA_Rokia_dragon_Aura_1$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_SHIELD_REGEN_ADD_STATIC$：§R-640000§!\n $MOD_SHIP_ARMOR_REGEN_ADD_STATIC$：§R-640000§!\n $MOD_SHIP_HULL_REGEN_ADD_STATIC$：§R-640000§!\n $MOD_SHIP_EVASION_MULT$：§R-4000%§!\n $MOD_SHIP_WEAPON_RANGE_MULT$：§R-80%§!"
 
  SRA_chaos_Ship_Reactor:0 "§R耀红黑星-无序涅槃§!"
  SRA_chaos_Ship_Reactor_DESC:0 "§R凡世的遗骸于深渊中沉寂，混沌的造物于现实中扩散。§!"
@@ -225,9 +228,12 @@
  SRA_Return_To_Calamitisease_Ship_Aura:0 "§R耀红黑星-疫心恶殖§!"
  SRA_Return_To_Calamitisease_Ship_Aura_DESC:0 "§R灾蚀染上深渊的色彩，意欲将万物归于一身。§!\n\n§Y-每8.00£time£，§R灾疫之心§!会随机选择一个恒星系内的敌对舰队，对其施加8.00£time£的§R无声悼挽§!。\n-每当摧毁舰队时，§R灾疫之心§!会在被摧毁舰队所在位置召唤一组能存在64.00£time£的§R无际渊影§!。\n-每当即将被摧毁时，§R灾疫之心§!会失去20点升格进度，进入保护状态并释放一组§R无际渊影§!，摧毁这组§R无际渊影§!才能结束§R灾疫之心§!的保护状态。这组§R无际渊影§!在被摧毁时会在恒星系范围内施加负面效果，这一效果的强度随§R无际渊影§!的存在时间增长而迅速降低。§!"
  SRA_Return_To_Calamitisease_Ship_Aura_1:0 "§R无声悼挽§!"
+ SRA_Return_To_Calamitisease_Ship_Aura_1_modifier:0 "$SRA_Return_To_Calamitisease_Ship_Aura_1$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_EVASION_MULT$：§R-4000%§!\n 每日伤害：§Y64000-6400000§!\n 命中：§Y100%§!"
 
  SRA_Return_To_Calamitisease_Ship_Aura2:0 "§R耀红黑星-无垠回荡§!"
  SRA_Return_To_Calamitisease_Ship_Aura2_DESC:0 "§R你们歌唱，你们和声，于是万籁俱寂。§!\n\n§Y-每8.00£time£，§R灾疫之心§!会随机选择一个恒星系内的敌对舰队，对其施加8.00£time£的§R无声悼挽§!。\n-每当即将被摧毁时，§R灾疫之心§!会进入静滞状态16.00£time£，随后§R完全恢复§!。§!"
+ SRA_Return_To_Calamitisease_Ship_Aura_2_modifier:0 "$SRA_Return_To_Calamitisease_Ship_Aura2$\n§Y进攻性光环§!\n对敌方舰船效果：\n $MOD_SHIP_EVASION_MULT$：§R-4000%§!\n 每日伤害：§Y64000-6400000§!\n 命中：§Y100%§!"
+
 
 #龙翼之影
 

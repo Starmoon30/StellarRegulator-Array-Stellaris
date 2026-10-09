@@ -39,7 +39,7 @@
 # 	# What works for right hand side values of mathematical operations? See events/00_how_to_use_variables for full list.
 
 # 	complex_trigger_modifier = { 	#This lets you get the value of a trigger that you can't use in one-liners because it uses {}
-# 		trigger = count_owned_planet
+# 		trigger = count_owned_colony
 # 		trigger_scope = owner 		#Lets you get the result of the trigger on a different scope. Default is "this"
 # 		parameters = { 				#Stick any further information necessary in here, like you'd do within the {} of the trigger normally
 # 			limit = { sapient_pop_amount > 10 }

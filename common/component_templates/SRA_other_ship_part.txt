@@ -35,8 +35,8 @@ utility_component_template = {
 			ship_hull_regen_add_static = -800000000
 			ship_evasion_mult = -40
 		}
-
 	}
+	custom_tooltip = SRA_Mutation_Aura_1_modifier
 	ai_weight = {
 		weight = 0
 	}
@@ -73,6 +73,7 @@ utility_component_template = {
 			armor_penetration = @SRA_weapon_penetration_4
 		}
 	}
+	custom_tooltip = SRA_Mutation_Aura_2_modifier
 	ai_weight = {
 		weight = 0
 	}
@@ -113,8 +114,8 @@ utility_component_template = {
 			ship_hull_regen_add_static = -800000000
 			ship_evasion_mult = -40
 		}
-		
 	}
+	custom_tooltip = SRA_SOGZ_menu_sub_4_3_Aura_modifier
 	ai_weight = {
 		weight = 0
 	}
@@ -156,6 +157,7 @@ utility_component_template = {
 		}
 		
 	}
+	custom_tooltip = SRA_SOGZ_menu_sub_6_1_Aura_modifier
 	ai_weight = {
 		weight = 0
 	}
@@ -560,6 +562,7 @@ utility_component_template = {
 			armor_penetration = @SRA_weapon_penetration_4
 		}
 	}
+	custom_tooltip = SRA_starbase_SRA_RE_Calamitisease_Reactor_Aura_1_modifier
 	ai_weight = {
 		weight = 50000
 	}
@@ -622,6 +625,7 @@ utility_component_template = {
 			ship_weapon_range_mult = -0.8
 		}
 	}
+	custom_tooltip = SRA_Rokia_dragon_Aura_1_modifier
 	ai_weight = {
 		weight = 50000
 	}
@@ -754,6 +758,7 @@ utility_component_template = {
 			}
 		}
 	}
+	custom_tooltip = SRA_Return_To_Calamitisease_Ship_Aura_1_modifier
 	ai_weight = {
 		weight = 0
 	}
@@ -798,6 +803,7 @@ utility_component_template = {
 			}
 		}
 	}
+	custom_tooltip = SRA_Return_To_Calamitisease_Ship_Aura_2_modifier
 	ai_weight = {
 		weight = 0
 	}
