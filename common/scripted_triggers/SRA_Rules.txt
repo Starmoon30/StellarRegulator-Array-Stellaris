@@ -27,5 +27,8 @@ SRA_can_be_invaded_planet = {
 		is_planet_class = pc_ag_shell_world_no_city
 		is_planet_class = pc_ag_shell_world_damaged
 		is_planet_class = pc_ag_cosmogenesis_world
+		#TouHou Project
+		is_planet_class = pc_kamikakushi_planet
+		is_planet_class = pc_touhou_cosmogenesis_arkship
 	}
 }
