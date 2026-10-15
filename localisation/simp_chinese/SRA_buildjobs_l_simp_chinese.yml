@@ -204,58 +204,57 @@
  d_SRA_world_machine_B_desc:0 "$building_SRA_world_machine_B_desc$"
 
 
- building_SRA_databank:0 "星规阵列数据库终端"
+ building_SRA_databank:0 "§B星规阵列数据库终端§!"
  building_SRA_databank_desc:0 "与星规阵列的数据库连接的存储终端，无数个纪元的记录触手可及。\n\n§Y技术许可附加内容。§!"
  
- building_SRA_foundry:0 "星规阵列复合构建中心"
+ building_SRA_foundry:0 "§B星规阵列复合构建中心§!"
  building_SRA_foundry_desc:0 "极为先进的构建中心，能近乎无中生有地制造出各种各样的材料与产品。\n\n§Y技术许可附加内容。§!"
- #沉溺于不劳而获者啊……你们的未来又在何方？
 
  SRA_need_building_core:0 "需要星规建筑核心"
 
- holding_SRA_aid_base:0 "星规阵列建设支援港"
+ holding_SRA_aid_base:0 "§B星规阵列建设支援港§!"
  holding_SRA_aid_base_desc:0 "为了帮我们的附庸国一把，我们建设了这些支援港。附庸们能从这里获得大量的资源补助，顺便体验一下用星辉水晶计算网络科研的至尊享受。"
 
- building_SRA_plane_collector:0 "跨位面资源收集器"
+ building_SRA_plane_collector:0 "§B跨位面资源收集器§!"
  building_SRA_plane_collector_desc:0 "神秘的建筑，能从其他的位面收集到大量我们所需要的独特稀有资源。\n不知道又有哪些人遭殃了，愿善良与她们同在。\n\n§Y技术许可附加内容。§!"
  #矿是用来补偿受害者的。
  
- building_SRA_ground_yards:0 "星规阵列地面船厂"
+ building_SRA_ground_yards:0 "§B星规阵列地面船厂§!"
  building_SRA_ground_yards_desc:0 "先进的地面军工厂，能够大幅度提升舰船的建造效率，同时协助星球的生产工作。\n\n§Y技术许可附加内容。§!"
 
- building_SRA_control_centre:0 "星规阵列控制中枢"
+ building_SRA_control_centre:0 "§B星规阵列控制中枢§!"
  building_SRA_control_centre_desc:0 "大型控制阵列，负责维持整个区段的正常运行，同时还能辅助帝国的行政工作。"
 
- building_SRA_produce_centre:0 "星规阵列生产中枢"
+ building_SRA_produce_centre:0 "§B星规阵列生产中枢§!"
  building_SRA_produce_centre_desc:0 "先进自动化设施，能直接解决所在区划的劳动力需求，并且在星球范围内强化所有自动化劳动力。\n\n§Y技术许可附加内容。§!"
 
- building_SRA_Fortress:0 "星规流光锻炉"
+ building_SRA_Fortress:0 "§B星规流光锻炉§!"
  building_SRA_Fortress_desc:0 "这座全副武装的军事要塞展开强大的星球护盾以削弱敌方的对地轰炸，此外，它也是先进的军工厂，在保证地面防卫的同时，还能为舰队维持提供帮助。\n\n§Y将所有防御陆军转化为§B肃星神械-守御§!。§!"
 
- building_SRA_T3_Crystal_Node:0 "星辉水晶网络节点"
+ building_SRA_T3_Crystal_Node:0 "§B星辉水晶网络节点§!"
  building_SRA_T3_Crystal_Node_desc:0 "这座高耸的水晶塔架起了高效的数据传输网络，能直接解决所在区划的劳动力需求，并且在星球范围内强化所有自动化劳动力。"
 
- building_SRA_T3_Storage:0 "星辉拓扑存储"
+ building_SRA_T3_Storage:0 "§B星辉拓扑存储§!"
  building_SRA_T3_Storage_desc:0 "这座建筑利用星辉水晶实现超大规模的空间折叠效果，极大地提升我们国家储存资源的能力。"
 
- building_SRA_T3_Planet_Mobilization:0 "星辉动员基地"
+ building_SRA_T3_Planet_Mobilization:0 "§B星辉动员基地§!"
  building_SRA_T3_Planet_Mobilization_desc:0 "这座设施会提高实施决议的速度，当然，这需要高额的维护费。"
 
- building_SRA_T3_Recovery_Nest:0 "星辉复苏之巢"
+ building_SRA_T3_Recovery_Nest:0 "§B星辉复苏之巢§!"
  building_SRA_T3_Recovery_Nest_desc:0 "这座巨大的建筑中容纳了数以亿计的修护舱，能同时在肉体与精神上让人活力满盈。"
 
- building_SRA_T3_Singularity_Controller:0 "星辉引力奇异区域发生器"
+ building_SRA_T3_Singularity_Controller:0 "§B星辉引力奇异区域发生器§!"
  building_SRA_T3_Singularity_Controller_desc:0 "此设施生成微型引力奇异区域，在小范围内模糊常规物理法则并解离空间结构，生成一定量的可收集暗物质和星界丝缕。"
 
- building_SRA_T3_Psychic_Beacon:0 "星辉水晶心灵信标"
+ building_SRA_T3_Psychic_Beacon:0 "§B星辉水晶心灵信标§!"
  building_SRA_T3_Psychic_Beacon_desc:0 "这座高耸入云的水晶塔投射出笼罩整个星球的灵能场，让所有人沐浴觉悟与荣光。\n§R“终得启迪，永不迷惘。”§!"
 
  #星辉产出建筑
 
- building_SRA_RE_core:0 "星辉产业体系核心"
+ building_SRA_RE_core:0 "§B星辉产业体系核心§!"
  building_SRA_RE_core_desc:0 "这座产业核心对星球的区划系统进行系统性的改造，以提供['concept_SRA_Stellarcrystal_industry']所需要的大量能量。\n其具体规则如下：\n星球上每有一个£district£§Y区划§!，此建筑提供：\n$MOD_PLANET_CRIME_ADD$：§G-2§!\n$MOD_PLANET_AMENITIES_ADD$：§G+200§!\n$mod_job_SRA_RE_technician_add$/$mod_job_SRA_RE_technician_drone_add$：§G+100§!\n$mod_pop_SRA_RE_technician_bonus_workforce_mult$/$mod_pop_SRA_RE_technician_drone_bonus_workforce_mult$：§G+2%§!\n\n在完成对['technology:tech_SRA_T3_Composite_Crystal_Lattice']的研发后：\n$mod_job_SRA_RE_technician_add$/$mod_job_SRA_RE_technician_drone_add$：§G+100§!\n如果具有其他['concept_SRA_Stellarcrystal_industry']规划类型，则将这部分岗位转换为规划类型对应的岗位。"
 
- building_SRA_RE_foundry:0 "星辉质能转化中心"
+ building_SRA_RE_foundry:0 "§B星辉质能转化中心§!"
  building_SRA_RE_foundry_desc:0 "通过利用星辉水晶吸收能量自行增值和可以模拟成其他物质参数的性质，我们可以用能量合成各种各样的材料，满足我们的建设和维护需要。\n\n其具体规则如下：\n星球上每有一个£district£§Y区划§!，此建筑提供：\n$mod_job_SRA_RE_foundry_specialist_add$/$mod_job_SRA_RE_foundry_drone_add$：§G+20§!\n$mod_pop_SRA_RE_foundry_specialist_bonus_workforce_mult$/$mod_pop_SRA_RE_foundry_drone_bonus_workforce_mult$：§G+0.4%§!\n\n在完成对['technology:tech_SRA_T3_Composite_Crystal_Lattice']的研发后：\n$mod_job_SRA_RE_foundry_specialist_add$/$mod_job_SRA_RE_foundry_drone_add$：§G+20§!"
  job_SRA_RE_foundry_specialist:0 "星辉构建员"
  mod_job_SRA_RE_foundry_specialist_add:0 "星辉构建员职业"
@@ -268,7 +267,7 @@
  job_SRA_RE_foundry_drone_effect_desc:0 "£job_SRA_RE_foundry_drone£ $job_SRA_RE_foundry_drone_plural$消耗£energy£ §Y$energy$§! 构建出 £minerals£ §Y$minerals$§!£food£ §Y$food$§!£consumer_goods£ §Y$consumer_goods$§!£rare_crystals£ §Y$rare_crystals$§!£exotic_gases£ §Y$exotic_gases$§!£volatile_motes£ §Y$volatile_motes$§!£sr_dark_matter£ §Y$sr_dark_matter$§!£sr_living_metal£ §Y$sr_living_metal$§!£sr_zro£ §Y$sr_zro$§!£nanites£ §Y$nanites$§! £astral_threads£ §Y$astral_threads$§!。"
  job_SRA_RE_foundry_drone_desc:0 "星辉水晶在调整结构之后就能充任所需物质的职责，因此可以看做产出了那些物质。"
 
- building_SRA_RE_research_institute:0 "星辉研究基地"
+ building_SRA_RE_research_institute:0 "§B星辉研究基地§!"
  building_SRA_RE_research_institute_desc:0 "这里拥有大量由星辉水晶构成的超级计算机，其计算能力远高于我们所研发的任何计算设备。帝国的科学家可以借此解决计算能力对科学研究的桎梏。同时，这些计算阵列的冗余算力还可以起到协助内政管理的作用。\n\n其具体规则如下：\n星球上每有一个£district£§Y区划§!，此建筑提供：\n$mod_job_SRA_RE_research_institute_specialist_add$/$mod_job_SRA_RE_research_institute_drone_add$：§G+20§!\n$mod_pop_SRA_RE_research_institute_specialist_bonus_workforce_mult$/$mod_pop_SRA_RE_research_institute_drone_bonus_workforce_mult$：§G+0.4%§!\n\n在完成对['technology:tech_SRA_T3_Composite_Crystal_Lattice']的研发后：\n$mod_job_SRA_RE_research_institute_specialist_add$/$mod_job_SRA_RE_research_institute_drone_add$：§G+20§!"
  job_SRA_RE_research_institute_specialist:0 "星辉研究员"
  mod_job_SRA_RE_research_institute_specialist_add:0 "星辉研究员职业"
@@ -281,7 +280,7 @@
  job_SRA_RE_research_institute_drone_effect_desc:0 "£job_SRA_RE_research_institute_drone£ $job_SRA_RE_research_institute_drone_plural$ 消耗 £energy£ §Y$energy$§! 产出 £physics£ §Y$physics_research$§! £society£ §Y$society_research$§! £engineering£ §Y$engineering_research$§! £unity£ §Y$unity$§!用于我们国家的进步。"
  job_SRA_RE_research_institute_drone_desc:0 "这些工作子个体必须保持时刻有亟待解答的问题和需要演算的项目，毕竟这些计算阵列的算力实在是有点强。"
 
- building_SRA_RE_alloys:0 "星辉锻造厂"
+ building_SRA_RE_alloys:0 "§B星辉锻造厂§!"
  building_SRA_RE_alloys_desc:0 "这些铸造设施将矿物转化为星辉水晶再进行进一步加工，构成性能优异的军工材料，以便于满足海量的合金需求。\n\n其具体规则如下：\n星球上每有一个£district£§Y区划§!，此建筑提供：\n$mod_job_SRA_RE_alloys_specialist_add$/$mod_job_SRA_RE_alloys_drone_add$：§G+20§!\n$mod_pop_SRA_RE_alloys_specialist_bonus_workforce_mult$/$mod_pop_SRA_RE_alloys_drone_bonus_workforce_mult$：§G+0.4%§!\n\n在完成对['technology:tech_SRA_T3_Composite_Crystal_Lattice']的研发后：\n$mod_job_SRA_RE_alloys_specialist_add$/$mod_job_SRA_RE_alloys_drone_add$：§G+20§!"
  job_SRA_RE_alloys_specialist:0 "星辉锻造者"
  mod_job_SRA_RE_alloys_specialist_add:0 "星辉锻造者职业"
@@ -294,7 +293,7 @@
  job_SRA_RE_alloys_drone_effect_desc:0 "£job_SRA_RE_alloys_drone£ $job_SRA_RE_alloys_drone_plural$ 将£minerals£ §Y$minerals$§! 转化为 £alloys£ §Y$alloys$§!。"
  job_SRA_RE_alloys_drone_desc:0 "将星辉水晶锻造成对应性质的材料可是一项技术活……虽然实际上只需要操作一下设备就是了。"
 
- building_SRA_RE_factory:0 "星辉制造厂"
+ building_SRA_RE_factory:0 "§B星辉制造厂§!"
  building_SRA_RE_factory_desc:0 "这些制造设施将矿物转化为星辉水晶再进行进一步加工，制造各种类型的工业品，以便于满足生活和科研需求。\n\n其具体规则如下：\n星球上每有一个£district£§Y区划§!，此建筑提供：\n$mod_job_SRA_RE_factory_specialist_add$/$mod_job_SRA_RE_factory_drone_add$：§G+20§!\n$mod_pop_SRA_RE_factory_specialist_bonus_workforce_mult$/$mod_pop_SRA_RE_factory_drone_bonus_workforce_mult$：§G+0.4%§!\n\n在完成对['technology:tech_SRA_T3_Composite_Crystal_Lattice']的研发后：\n$mod_job_SRA_RE_factory_specialist_add$/$mod_job_SRA_RE_factory_drone_add$：§G+20§!"
  job_SRA_RE_factory_specialist:0 "星辉制造者"
  mod_job_SRA_RE_factory_specialist_add:0 "星辉制造者职业"

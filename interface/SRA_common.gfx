@@ -155,6 +155,10 @@ spriteTypes = {
 	spriteType = { name = "GFX_SRA_ship_size_SOGZ_top" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_SOGZ_top.dds" }
 	spriteType = { name = "GFX_SRA_ship_size_SOGZ_top_damaged" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_SOGZ_top_damaged.dds" }
 	spriteType = { name = "GFX_text_SRA_ship_size_SOGZ" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_SOGZ_icon.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Adjudicator" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Adjudicator.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Adjudicator_top" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Adjudicator_top.dds" }
+	spriteType = { name = "GFX_SRA_ship_size_Adjudicator_top_damaged" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Adjudicator_top_damaged.dds" }
+	spriteType = { name = "GFX_text_SRA_ship_size_Adjudicator" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Adjudicator_icon.dds" }
 	spriteType = { name = "GFX_SRA_ship_size_Executor" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Executor.dds" }
 	spriteType = { name = "GFX_SRA_ship_size_Executor_top" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Executor_top.dds" }
 	spriteType = { name = "GFX_SRA_ship_size_Executor_top_damaged" texturefile = "gfx/interface/icons/ship_classes/SRA_ship_size_Executor_top_damaged.dds" }

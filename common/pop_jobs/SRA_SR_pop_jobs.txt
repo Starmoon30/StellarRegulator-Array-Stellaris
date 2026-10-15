@@ -416,7 +416,7 @@ SRA_RE_foundry_specialist = {
 			volatile_motes = 0.2
 		}
 		upkeep = {
-			energy = 32
+			energy = 16
 		}
 		produces = {
 			trigger = {

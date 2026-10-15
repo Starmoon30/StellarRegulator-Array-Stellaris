@@ -23,6 +23,8 @@ country_event = {
 		set_variable = { which = SRA_diplomacy_bg value = 1 }
 		set_variable = { which = SRA_diplomacy_SRA_portrait value = 1 }
 		set_country_flag = has_SRA_StellarRegulator_country
+	}
+	after = {
 		event_target:SRA_StellarRegulator_country = {
 			establish_communications_no_message = root
 		}

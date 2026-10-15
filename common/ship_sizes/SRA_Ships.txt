@@ -190,7 +190,7 @@ SRA_Adjudicator = {
 	num_target_locators = 4
 	is_space_station = no
 	# ship_class_icon_frame = 45
-	icon = SRA_ship_size_SOGZ
+	icon = SRA_ship_size_Adjudicator
 	construction_type = starbase_shipyard
 
 	is_designable = yes

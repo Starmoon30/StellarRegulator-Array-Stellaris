@@ -3,6 +3,7 @@ origin_SRA_Rokia = {
 	icon = "gfx/interface/icons/origins/origin_SRA_Rokia.dds"
 	picture = GFX_origin_SRA_Rokia
 	possible = {
+		is_nomadic = no
 		civics = {
 			NOT = {
 				value = civic_SRAtechnology
