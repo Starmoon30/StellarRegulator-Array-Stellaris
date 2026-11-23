@@ -498,50 +498,48 @@ carrier_event = {
 		colony = {
 			check_modifier_value = {
 				modifier = mod_SRA_Planet_Combat_Width_Attacker
-				value >= 1
+				value > 0
 			}
 		}
 	}
 	immediate = {
-		if	= {
+		set_variable = {
+			which = SRA_Planet_Combat_Width_Attacker
+			value = colony.value:SRA_Planet_Combat_Width_Attacker_value
+		}
+		multiply_variable = {
+			which = SRA_Planet_Combat_Width_Attacker
+			value = -1
+		}
+		change_variable = {
+			which = SRA_Planet_Combat_Width_Attacker
+			value = trigger:count_ground_combat_attacker
+		}
+		if = {
 			limit = {
-				colony = {
-					check_modifier_value = {
-						modifier = mod_SRA_Planet_Combat_Width_Attacker
-						value < prev.trigger:count_ground_combat_attacker
-					}
+				check_variable = {
+					which = SRA_Planet_Combat_Width_Attacker
+					value > 0
 				}
-			}
-			set_variable = {
-				which = SRA_Planet_Combat_Width_Attacker
-				value = colony.modifier:mod_SRA_Planet_Combat_Width_Attacker
-			}
-			multiply_variable = {
-				which = SRA_Planet_Combat_Width_Attacker
-				value = -1
-			}
-			change_variable = {
-				which = SRA_Planet_Combat_Width_Attacker
-				value = trigger:count_ground_combat_attacker
 			}
 			while = {
 				count = SRA_Planet_Combat_Width_Attacker
 				random_ground_combat_attacker = {
-					owner = {
-						fire_on_action = {
-							on_action = on_army_killed_in_combat
-							scopes = {
-								From = prev
-								FromFrom = prevprev.owner
-								FromFromFrom = prevprev
-							}
-						}
-					}
+					# owner = {
+					# 	fire_on_action = {
+					# 		on_action = on_army_killed_in_combat
+					# 		scopes = {
+					# 			From = prev
+					# 			FromFrom = prevprev.owner
+					# 			FromFromFrom = prevprev
+					# 		}
+					# 	}
+					# }
 					remove_army = yes
 				}
 			}
-			clear_variable = SRA_Planet_Combat_Width_Attacker
 		}
+		clear_variable = SRA_Planet_Combat_Width_Attacker
 		carrier_event = {
 			id = SRA_Barrier.111 days = 1
 		}

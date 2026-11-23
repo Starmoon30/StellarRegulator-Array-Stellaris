@@ -1,3 +1,10 @@
+# modifier = { } For non-starbase ships, only takes the following modifiers:
+#    hull, shield & armor add/mult and regen add perc/static
+#    evasion add/mult
+#    speed/base speed mult
+#    weapon damage mult
+#    upkeep mult
+#    For other modifiers, use ship_modifier = { }
 SRA_Cruiser = {
 	formation_priority = 64
 	entity = "SRA_Cruiser_entity"

@@ -647,6 +647,12 @@ guiTypes = {
 			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
 			instantTextBoxType = { name = "their_opinion" font = "malgun_goth_24" }
 		}
+		containerWindowType = {
+			name = "ideology_window"
+			position = { x = -8192 y = -8192 }
+			size = { width = 80 height = 80 }
+			clipping = no
+		}
 	}
 	buttonType = {
 		name = "close"

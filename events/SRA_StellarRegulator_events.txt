@@ -2293,3 +2293,32 @@ fleet_event = {
 		}
 	}
 }
+
+
+# THIS = Target System
+# FROM = Megastructure
+# SPACEOWNER = Target System owner
+system_event = {
+	id = SRA_StellarRegulator.1033
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		FROM.solar_system = {
+			move_system = {
+				target = ROOT
+				min_distance >= 10
+				max_distance <= 15
+				direction = rimwards
+				max_jumps = 0
+				hyperlane = no
+				reset_terra_incognita = no
+			}
+			add_hyperlane = {
+				from = THIS
+				to = ROOT
+			}
+		}
+	}
+}
+

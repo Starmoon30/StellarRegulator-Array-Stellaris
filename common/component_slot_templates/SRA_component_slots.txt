@@ -19,9 +19,3 @@ SRA_extra_large_weapon_fixed = { size = extra_large component = weapon is_fixed 
 SRA_titanic_weapon_fixed = { size = titanic component = weapon is_fixed = yes }
 SRA_planet_killer_weapon_fixed = { size = planet_killer component = weapon is_fixed = yes }
 SRA_engulf_weapon_fixed = { size = engulf component = weapon is_fixed = yes }
-
-
-SRA_small_utility = { size = small component = utility }
-SRA_medium_utility = { size = medium component = utility }
-SRA_large_utility = { size = large component = utility }
-SRA_aux_utility = { size = aux component = utility }

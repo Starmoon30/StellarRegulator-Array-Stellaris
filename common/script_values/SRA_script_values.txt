@@ -79,3 +79,9 @@ SRA_world_machine_produces_value = {
 # 	add = trigger:has_max_armor_hp
 # 	mult = trigger:has_armor_percentage
 # }
+
+SRA_Planet_Combat_Width_Attacker_value = {
+	base = 0
+	add = trigger:planet_size
+	divide = modifier:mod_SRA_Planet_Combat_Width_Attacker
+}

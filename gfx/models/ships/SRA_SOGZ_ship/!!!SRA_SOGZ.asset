@@ -481,6 +481,12 @@ entity = {
 	}		# 自发光不随旗帜改变。
 }
 
+# ai_01 使用 K423 舰体；其他图形文化保留无前缀的默认舰体。
+entity = {
+	name = "ai_01_SRA_SOGZ_hull_entity"
+	clone = "SRA_SOGZ_K423_hull_entity"
+}
+
 entity = {
 	name = "SRA_SOGZ_K423_god_ring_entity_1"
 	pdxmesh = "SRA_SOGZ_K423_god_ring_mesh_1"

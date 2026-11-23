@@ -20,7 +20,7 @@ building_SRA_Fortress = {
 		country_naval_cap_add = 100
 	}
 	planet_modifier = {
-		mod_SRA_Planet_Combat_Width_Attacker = 20
+		mod_SRA_Planet_Combat_Width_Attacker = 0.5
 		planet_orbital_bombardment_damage = -0.75
 		planet_storm_devastation_mult = -0.75
 	}
@@ -403,6 +403,9 @@ building_SRA_RE_core = {
 	}
 	
 	inline_script = "buildings/SRA_building_sets_all"
+	planet_modifier = {
+		planet_building_capacity_add = 1
+	}
 	triggered_planet_modifier = {
 		potential = {
 			owner? = { is_gestalt = yes }

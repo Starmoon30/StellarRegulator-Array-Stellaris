@@ -3123,6 +3123,7 @@ country_event = {
 					create_ship = {
 						name = random
 						design = "NAME_SRA_Crisis_Bright_Galaxy"
+						graphical_culture = ai_01
 						upgradable = no
 						effect = {
 							set_disable_at_health = 0.01

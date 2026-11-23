@@ -76,7 +76,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -117,7 +117,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -198,7 +198,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -275,7 +275,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_9 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -595,7 +595,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -646,7 +646,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -697,7 +697,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -752,7 +752,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -808,7 +808,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_7 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_7 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_7 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_7 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -874,7 +874,7 @@ strike_craft_component_template = {
 			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_4 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -925,7 +925,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -982,7 +982,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1033,7 +1033,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1083,7 +1083,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1133,7 +1133,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1187,7 +1187,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1243,7 +1243,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1309,7 +1309,7 @@ strike_craft_component_template = {
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1359,7 +1359,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1415,7 +1415,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1467,7 +1467,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1517,7 +1517,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1567,7 +1567,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1621,7 +1621,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_5 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1677,7 +1677,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_6 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1743,7 +1743,7 @@ strike_craft_component_template = {
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_3 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1795,7 +1795,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_2 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}
@@ -1851,7 +1851,7 @@ weapon_component_template = {
 			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_part_cost_factor ]
 		}
 		upkeep = {
-			energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
+			# energy = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_energy_factor * SRA_global_ship_part_cost_factor ]
 			alloys = @[ SRA_ship_part_cost_1 * SRA_global_ship_upkeep_alloys_factor * SRA_global_ship_part_cost_factor ]
 		}
 	}

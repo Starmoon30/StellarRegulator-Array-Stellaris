@@ -125,6 +125,7 @@
  SRA_ship_auto_attack_fleet: "§B星规-舰队猎杀§!"
  SRA_ship_auto_attack_fleet_tooltip: "攻击敌对空间站和舰队。"
 
+
  SRA_StellarRegulator.1030.name:0 "军事支持"
  SRA_StellarRegulator.1030.desc:0 "如果您对对抗可能到来的测试或危机感到有些力不从心的话，我可以提供给你一点支援。"
  SRA_StellarRegulator.1030.a:0 "请求指挥舰支援"
@@ -168,6 +169,12 @@
  SRA_StellarRegulator.10323.e:0 "-10"
  SRA_StellarRegulator.10323.f:0 "X0.1"
  SRA_StellarRegulator.10323.g:0 "关闭界面"
+
+ SRA_GZ_Core_jump_tooltip: "将星穹枢纽折跃到目标恒星系附近。"
+ SRA_GZ_Core_jump_action: "启动星穹枢纽折跃"
+ SRA_GZ_Core_jump_activity_key: "正在启动星穹枢纽折跃"
+ SRA_GZ_Core_jump_progress_activity_key: "正在启动星穹枢纽折跃（§Y$PROGRESS$%§!）"
+ SRA_GZ_Core_jump_required_progress_key: "£time£30§W天§!"
 
 
 

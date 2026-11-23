@@ -27,8 +27,8 @@
  concept_SRA_set_terrified_3_desc:0 "使舰船陷入来源为自身的['concept_terrify']，直到战斗结束。\n具有§Y3§!或§Y更高§!的['concept_mod_SRA_SD_Myth_power']可以免疫这个效果。"
 
 
- concept_SRA_Planet_Combat_Width_Attacker:0 "进攻方强制总陆军数量"
- concept_SRA_Planet_Combat_Width_Attacker_desc:0 "在进攻这个星球时，超过$concept_SRA_Planet_Combat_Width_Attacker$的进攻方陆军将§R直接被移除§!。"
+ concept_SRA_Planet_Combat_Width_Attacker:0 "进攻方强制总陆军数量系数"
+ concept_SRA_Planet_Combat_Width_Attacker_desc:0 "在进攻这个星球时，超过 §Y星球尺寸/$concept_SRA_Planet_Combat_Width_Attacker$§! 的进攻方陆军将§R直接被移除§!。"
 
  concept_SRA_clear_ship_damage_reduction_mult:0 "清空$MOD_SHIP_DAMAGE_REDUCTION_MULT$"
  concept_SRA_clear_ship_damage_reduction_mult_desc:0 "读取目标的当前$MOD_SHIP_DAMAGE_REDUCTION_MULT$，为其添加一个符号翻转的$MOD_SHIP_DAMAGE_REDUCTION_MULT$修正，持续 1.00£time£ 。\n此效果会被$mod_mod_SRA_clear_ship_damage_reduction_mult_resistance$抵抗。"

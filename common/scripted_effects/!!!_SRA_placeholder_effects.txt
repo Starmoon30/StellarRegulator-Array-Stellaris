@@ -1,0 +1,6 @@
+ag_spawn_explosion_effect = {}
+ag_eta_gateway_flags_cleans_up_effect = {}
+ag_epsilon_titan_diplo_portrait_check = {}
+ag_kappa_computer_diplo_portrait_check = {}
+ag_lost_ancient_ship_diplo_portrait_check = {}
+ag_spawn_lost_ancient_ship_via_tech = {}

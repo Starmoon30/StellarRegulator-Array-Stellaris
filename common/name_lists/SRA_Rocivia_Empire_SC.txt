@@ -1,4 +1,4 @@
-﻿#
+#
 SRA_Rocivia_Empire = {
 	randomized = no
 	ship_names = {

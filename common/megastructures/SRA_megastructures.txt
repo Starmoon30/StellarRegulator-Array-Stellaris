@@ -5,7 +5,7 @@ SRA_GZ_Core = {
 	build_time = 36000
 	country_modifier = {
 		country_produces_mult = 0.2
-		country_naval_cap_add = 2000
+		country_naval_cap_add = 4000
 		fleet_mia_time_mult = -0.6
 		country_resource_max_astral_threads_add = 40000
 	}
@@ -13,6 +13,12 @@ SRA_GZ_Core = {
 		catapult_spread_base = 2
 		catapult_range_base = 6400
 		quantum_catapult_megastructure_bypass_windup_mult = -1
+		starbase_shipyard_capacity_add = 480
+		starbase_shipyard_build_speed_mult = 1
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	ship_modifier = {
+		ship_starting_experience_add = 100
 	}
 	bypass_type = quantum_catapult
 	show_galactic_map_icon = no
@@ -42,17 +48,29 @@ SRA_GZ_Core = {
 	show_prereqs = yes
 
 	on_build_complete = {
+		fromfrom = {
+			set_megastructure_flag = ag_ancient_construction_section_megashipyard
+		}
 	}
 	ai_weight = {
 		factor = 0
 	}
+	scripted_action = { SRA_GZ_Core_jump }
 }
 SRA_GZ_Core_0 = {
 	entity = "SRA_GZ_Core_station_entity"
 	portrait = "GFX_SRA_GZ_Core"
 	build_time = 36000
 	country_modifier = {
-		country_naval_cap_add = 200
+		country_naval_cap_add = 1000
+	}
+	station_modifier = {
+		starbase_shipyard_capacity_add = 120
+		starbase_shipyard_build_speed_mult = 1
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	ship_modifier = {
+		ship_starting_experience_add = 100
 	}
 	show_galactic_map_icon = no
 	resources = {
@@ -84,13 +102,19 @@ SRA_GZ_Core_1 = {
 	portrait = "GFX_SRA_GZ_Core"
 	build_time = 3600
 	country_modifier = {
-		country_naval_cap_add = 1000
+		country_naval_cap_add = 2000
 		country_resource_max_astral_threads_add = 40000
 	}
 	station_modifier = {
 		catapult_spread_base = 20
 		catapult_range_base = 640
 		quantum_catapult_megastructure_bypass_windup_mult = -0.8
+		starbase_shipyard_capacity_add = 240
+		starbase_shipyard_build_speed_mult = 1
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	ship_modifier = {
+		ship_starting_experience_add = 100
 	}
 	bypass_type = quantum_catapult
 	show_prereqs = no
@@ -124,11 +148,22 @@ SRA_GZ_Core_2 = {
 	build_time = 3600
 	country_modifier = {
 		country_produces_mult = 0.2
-		country_naval_cap_add = 2000
+		country_naval_cap_add = 4000
 		fleet_mia_time_mult = -0.6
 		country_resource_max_astral_threads_add = 40000
 	}
-	show_prereqs = no
+	station_modifier = {
+		catapult_spread_base = 2
+		catapult_range_base = 6400
+		quantum_catapult_megastructure_bypass_windup_mult = -1
+		starbase_shipyard_capacity_add = 480
+		starbase_shipyard_build_speed_mult = 1
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	ship_modifier = {
+		ship_starting_experience_add = 100
+	}
+	bypass_type = quantum_catapult
 	show_galactic_map_icon = no
 	resources = {
 		category = megastructures

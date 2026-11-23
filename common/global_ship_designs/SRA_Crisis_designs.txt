@@ -1620,7 +1620,7 @@ ship_design = {
 	is_event_design = yes
 
 	section = {
-		template = "SRA_Spear_Of_Galaxy_Zenith_K423_mid"
+		template = "SRA_Spear_Of_Galaxy_Zenith_mid"
 		slot = "mid"
 	
 		component = { slot = "planet_killer_weapon_01" template = "SRA_T4_weapon_planet_killer" }

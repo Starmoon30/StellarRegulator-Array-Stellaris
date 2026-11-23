@@ -338,3 +338,35 @@ SRA_ship_auto_attack_fleet = {
 		good_enough_weight = 150
 	}
 }
+
+
+
+
+SRA_GZ_Core_jump = {
+	user_scope = megastructure
+	scope = galactic_object
+
+	possible = {
+	}
+	# This - Target System
+	# From - Firing Megastructure
+	ai = {
+		ai_minister = military
+		weight = {
+			base = 0
+		}
+	}
+
+	icon = GFX_ship_class_conduit
+	icon_selected = GFX_ship_class_conduit
+
+	on_completed = on_SRA_GZ_Core_jump_completed
+	context_menu_name = "SRA_GZ_Core_jump_action"
+	activity_key = "SRA_GZ_Core_jump_activity_key"
+	tooltip = SRA_GZ_Core_jump_tooltip
+	cooldown = 1
+	required_progress = 1
+
+	# begin_anim_state = "working"
+	# progress_anim_state = "working_looping"
+}

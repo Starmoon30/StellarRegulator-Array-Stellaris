@@ -272,6 +272,15 @@ on_SRA_ship_auto_attack_planet = {
 	}
 }
 
+# THIS = Target System
+# FROM = Megastructure
+# SPACEOWNER = Target System owner
+on_SRA_GZ_Core_jump_completed = {
+	events = {
+		SRA_StellarRegulator.1033
+	}
+}
+
 on_tech_increased = {
 	events = {
 		SRA_Start.6

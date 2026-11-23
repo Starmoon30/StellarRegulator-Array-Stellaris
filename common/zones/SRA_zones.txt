@@ -77,7 +77,7 @@ zone_SRA_GZ = {
 		cost = {
 		}
 	}
-	include = {
+	included_buildings = {
 		all
 	}
 	included_building_sets = {
@@ -115,7 +115,7 @@ zone_SRA_city_housing = {
 		}
 	}
 
-	include = {
+	included_buildings = {
 		all
 	}
 	included_building_sets = {
@@ -151,7 +151,7 @@ zone_SRA_city_foundry = {
 		}
 	}
 
-	include = {
+	included_buildings = {
 		all
 	}
 	included_building_sets = {
@@ -192,7 +192,7 @@ zone_SRA_city_alloys = {
 		cost = {
 		}
 	}
-	include = {
+	included_buildings = {
 		all
 	}
 	included_building_sets = {
@@ -231,7 +231,7 @@ zone_SRA_city_science = {
 		cost = {
 		}
 	}
-	include = {
+	included_buildings = {
 		all
 	}
 	included_building_sets = {
@@ -273,7 +273,7 @@ zone_SRA_SD = {
 		cost = {
 		}
 	}
-	include = {
+	included_buildings = {
 		all
 	}
 	included_building_sets = {

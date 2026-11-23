@@ -88,9 +88,9 @@
 
  tech_SRA_SD_ship_Part:0 "树海残枝-舰船系统"
  tech_SRA_SD_ship_Part_desc:0 "汝之创造即宿命。"
- ### RE Core & Erlius Trait Tech (Missing Loc) ###
- tech_SRA_RE_Core_tech:0 "星规-罗西维亚帝国核心系统"
- tech_SRA_RE_Core_tech_desc:0 "罗西维亚帝国战舰的核心系统。这些专有组件与帝国独特的作战理念无缝融合，提供无与伦比的力量与韧性。"
+
+ tech_SRA_RE_Core_tech:0 "科尔先驱-舰船系统"
+ tech_SRA_RE_Core_tech_desc:0 "汝之创造即宿命。"
  ### Erlius Trait Tech ###
- tech_SRA_Erlius_trait:0 "艾尔琉斯生物适应"
- tech_SRA_Erlius_trait_desc:0 "针对艾尔琉斯种族量身定制的实验性生物改造技术，通过定向适应协议解锁独特的基因特性强化。\n§Y该技术被归类为危险技术。§!"
+ tech_SRA_Erlius_trait:0 "埃利尤尔斯计划"
+ tech_SRA_Erlius_trait_desc:0 "汝之创造即宿命。"
