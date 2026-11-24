@@ -87,7 +87,7 @@ SRA_Mutation_4303 = {
 	ship_interstellar_speed_mult = -0.3
 }
 SRA_Mutation_4305 = {
-	ship_jumpdrive_cooldown_mult = 20
+	ship_jumpdrive_cooldown_mult = 200
 }
 SRA_Mutation_4306 = {
 	starbase_shipyard_build_speed_mult = -0.5

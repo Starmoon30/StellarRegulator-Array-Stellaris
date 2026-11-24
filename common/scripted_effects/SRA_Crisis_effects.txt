@@ -105,7 +105,7 @@ SRA_spawn_fleets_insane_7 = {
 # scope = country
 SRA_enable_crisis_country_orbital_bombardment = {
 	optimize_memory
-	set_country_flag = UGRC_flg_cntr_RULE_can_bomb
+	set_country_flag = can_orbital_bombard
 }
 
 

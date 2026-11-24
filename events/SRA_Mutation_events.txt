@@ -3483,13 +3483,7 @@ country_event = {
 		every_country = {
 			limit = { NOT = { is_country_type = faction_SRA_Crisis_country } }
 			add_modifier = { modifier = SRA_Mutation_4305 days = 180 }
-			set_timed_country_flag = {
-				flag = community_mod_rules_trigger days = 180
-			}
-			set_timed_country_flag = {
-				flag = community_can_jump_drive_false days = 180
-			}
-		country_event = { id = SRA_Mutation.4305 days = 180 }
+			country_event = { id = SRA_Mutation.4305 days = 180 }
 		}
 	}
 }

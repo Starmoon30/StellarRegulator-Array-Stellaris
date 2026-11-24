@@ -102,7 +102,7 @@ SRA_pathfinder_fleet_wandering_action = {
 				}
 			}
 			else = { 
-				log = "跃迁强度：[$TYPE$_fleet_none_target_var]"
+				log = "跃迁强度：\\[$TYPE$_fleet_none_target_var]"
 				change_variable = { which = $TYPE$_fleet_none_target_var value = 1 }
 			}
 		}
@@ -171,7 +171,7 @@ SRA_pathfinder_fleet_wandering_action = {
 					}
 				}
 				else = { 
-					log = "跃迁强度：[$TYPE$_fleet_none_target_var]"
+					log = "跃迁强度：\\[$TYPE$_fleet_none_target_var]"
 					change_variable = { which = $TYPE$_fleet_none_target_var value = 1 }
 				}
 			}
